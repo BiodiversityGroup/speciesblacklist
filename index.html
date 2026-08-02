@@ -62,6 +62,14 @@
     --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
     --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     --pad:clamp(1rem,4vw,2.5rem);
+    /* Type scale. Ratio ~1.28, with a deliberate jump to --fs-display so the
+       hero carries real weight against an otherwise dense, tabular page. */
+    --fs-micro:.68rem; --fs-small:.78rem; --fs-body:.9rem; --fs-base:1rem;
+    --fs-lede:1.16rem; --fs-h3:1.05rem; --fs-h2:1.4rem;
+    --fs-quote:clamp(1.25rem,2.7vw,1.9rem);
+    --fs-display:clamp(1.9rem,5.2vw,3.1rem);
+    /* Spacing rhythm, 8px base — every gap below is drawn from this. */
+    --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s5:3rem; --s6:4rem;
   }
   @media (prefers-color-scheme:dark) {
     :root {
@@ -126,8 +134,60 @@
   section.view[hidden] { display:none; }
 
   /* ---- cover sheet ------------------------------------------------------ */
-  .lede { font-size:1.16rem; color:var(--ink-2); margin:.9rem 0 0; }
+  .lede { font-size:var(--fs-lede); color:var(--ink-2); margin:.9rem 0 0; }
   .lede strong { color:var(--ink); font-weight:600; }
+
+  /* ---- hero: the field -------------------------------------------------- */
+  /* One mark per species, 2,408 of them, coloured by restriction tier. The mass
+     is the argument: a register of the overlooked, drawn at the scale of the
+     overlooking. Canvas rather than DOM because 2,408 nodes is wasteful and
+     because crisp sub-pixel marks need devicePixelRatio scaling. No photography
+     anywhere on this page — most of these animals have never been photographed,
+     and that absence is the subject. */
+  .hero { border-bottom:1px solid var(--rule); background:var(--surface);
+          padding:var(--s5) 0 var(--s4); }
+  .hero h2 { font-size:var(--fs-display); letter-spacing:-.025em; max-width:24ch;
+             margin-top:var(--s1); }
+  .hero .lede { max-width:56ch; }
+
+  .field-wrap { margin:var(--s5) 0 0; }
+  .field-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:var(--s1) var(--s3);
+                margin-bottom:var(--s2); }
+  .field-head .eyebrow { margin:0; }
+  .field-legend { display:flex; gap:var(--s2); flex-wrap:wrap; margin-left:auto;
+                  font-family:var(--sans); font-size:var(--fs-micro); color:var(--ink-3); }
+  .field-legend span { display:flex; align-items:center; gap:.35rem; }
+  .field-legend i { width:9px; height:9px; border-radius:1px; flex:0 0 9px; }
+  #field { display:block; width:100%; height:auto; cursor:crosshair; }
+  .field-note { font-family:var(--sans); font-size:var(--fs-micro); color:var(--ink-3);
+                margin:var(--s1) 0 0; }
+  #fieldTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
+              transition:opacity .12s; background:var(--ink); color:var(--ground);
+              font-family:var(--sans); font-size:var(--fs-small); padding:.4rem .6rem;
+              border-radius:3px; max-width:280px; line-height:1.35;
+              box-shadow:0 4px 14px rgb(0 0 0 / .22); }
+  #fieldTip b { display:block; font-weight:600; }
+  #fieldTip i { font-family:var(--mono); font-style:normal; opacity:.8; font-size:.72rem; }
+
+  /* ---- featured evidence ------------------------------------------------ */
+  /* The most persuasive material in the corpus is Richardson's own prose, so it
+     is set at display size rather than buried in a table cell. */
+  .feature { border-top:1px solid var(--rule); margin-top:var(--s5);
+             padding-top:var(--s4); }
+  .feature blockquote { font-size:var(--fs-quote); line-height:1.4; margin:var(--s2) 0 0;
+                        max-width:44ch; text-wrap:pretty; letter-spacing:-.012em;
+                        transition:opacity .5s; }
+  .feature blockquote::before { content:"“"; color:var(--t4); margin-right:.1em; }
+  .feature blockquote::after  { content:"”"; color:var(--t4); }
+  .feature figcaption { font-family:var(--sans); font-size:var(--fs-small);
+                        color:var(--ink-3); margin-top:var(--s2);
+                        display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
+                        transition:opacity .5s; }
+  .feature figcaption .sci { color:var(--ink-2); }
+  .feature.fading blockquote, .feature.fading figcaption { opacity:0; }
+  @media (prefers-reduced-motion:reduce) {
+    .feature blockquote, .feature figcaption { transition:none; }
+  }
 
   .counts { display:grid; gap:1px; background:var(--rule);
             grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -189,8 +249,10 @@
   .bar.t1 .bf{background:var(--t1)}
 
   /* ---- filter rail ------------------------------------------------------ */
+  /* Sticky so the filters stay reachable while scrolling 2,400 rows. */
   .filters { display:flex; flex-wrap:wrap; gap:.6rem; align-items:center;
-             padding:.9rem 0 1rem; border-bottom:1px solid var(--rule); }
+             padding:.9rem 0 1rem; border-bottom:1px solid var(--rule);
+             position:sticky; top:0; z-index:5; background:var(--ground); }
   .filters input[type=search], .filters select {
     font-family:var(--sans); font-size:.83rem; padding:.45rem .6rem;
     background:var(--surface); color:var(--ink); border:1px solid var(--rule-2);
@@ -223,8 +285,19 @@
   .sev.t3{background:var(--t3)} .sev.t2{background:var(--t2)} .sev.t1{background:var(--t1)}
   .cell-name b { font-weight:600; }
   .cell-name .sci { display:block; font-size:.82rem; color:var(--ink-2); margin-top:.1rem; }
-  .tiercell { font-family:var(--mono); font-variant-numeric:tabular-nums;
-              font-weight:600; white-space:nowrap; }
+  /* Severity as a filled chip rather than a bare digit, so the ramp is legible at
+     a glance down the column. The number stays inside it — the ramp's lighter
+     steps fall under 3:1 against the surface, so colour never carries the value
+     on its own. */
+  .tierchip { display:inline-flex; align-items:center; justify-content:center;
+              width:26px; height:22px; border-radius:3px; font-family:var(--mono);
+              font-size:.8rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .tierchip.t5{background:var(--t5);color:#fff} .tierchip.t4{background:var(--t4);color:#fff}
+  .tierchip.t3{background:var(--t3);color:#fff} .tierchip.t2{background:var(--t2);color:#1a1206}
+  .tierchip.t1{background:var(--t1);color:#1a1206}
+  :root[data-theme="dark"] .tierchip.t5, :root[data-theme="dark"] .tierchip.t4 { color:#fff; }
+  :root[data-theme="dark"] .tierchip.t3, :root[data-theme="dark"] .tierchip.t2,
+  :root[data-theme="dark"] .tierchip.t1 { color:#14100a; }
   .tag { font-family:var(--sans); font-size:.68rem; padding:.15rem .42rem;
          border:1px solid var(--rule-2); border-radius:2px; color:var(--ink-2);
          white-space:nowrap; }
@@ -301,22 +374,39 @@
 </div></nav>
 
 <!-- ============================== OVERVIEW ============================== -->
-<section class="view wrap" id="v-overview">
-  <div class="prose">
+<section class="view" id="v-overview">
+ <div class="hero">
+  <div class="wrap">
     <p class="eyebrow">What this is</p>
-    <h2 style="font-size:clamp(1.35rem,3vw,1.75rem);margin-top:.4rem">
-      A species can be lost without ever having been counted as at risk.</h2>
+    <h2>A species can be lost without ever having been counted as at risk.</h2>
     <p class="lede">The IUCN Red List is the world's authority on extinction risk, and
       it has two blind spots. Some species are assessed and come back
       <strong>Data Deficient</strong> — IUCN looked, and there was not enough
       information to say. Others are <strong>Not Evaluated</strong> — nobody has
       looked at all. In practice both are treated as though the species were safe.</p>
-    <p class="lede">This register holds vertebrates in that gap for which a
-      peer-reviewed reference already documents an alarmingly thin record — often a
-      single river, sometimes a single specimen collected once, a century ago, and
-      never found again.</p>
-  </div>
 
+    <div class="field-wrap">
+      <div class="field-head">
+        <p class="eyebrow">Every species in the register, one mark each</p>
+        <div class="field-legend" id="fieldLegend"></div>
+      </div>
+      <canvas id="field" role="img"
+              aria-label="A dense field of marks, one for each of the 2,408 species in
+              the register, shaded by how narrowly restricted its published record is.
+              The same data is listed in full under The register tab."></canvas>
+      <p class="field-note">Hover a mark to name the species; select one to open its
+        record. Darker means a thinner record.</p>
+    </div>
+
+    <figure class="feature" id="feature">
+      <p class="eyebrow">What the record actually says</p>
+      <blockquote id="fqQuote"></blockquote>
+      <figcaption id="fqCap"></figcaption>
+    </figure>
+  </div>
+ </div>
+
+ <div class="wrap">
   <div class="counts" id="counts"></div>
 
   <div class="warn">
@@ -355,7 +445,9 @@
       </div>
     </div>
   </div>
+ </div>
 </section>
+<div id="fieldTip" aria-hidden="true"></div>
 
 <!-- ============================== REGISTER ============================== -->
 <section class="view wrap" id="v-register" hidden>
@@ -530,12 +622,19 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
   ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-/* theme toggle: cycles auto -> light -> dark */
+/* theme toggle: cycles auto -> light -> dark.
+   The field is painted into a canvas, so it does not inherit a CSS variable
+   change the way the rest of the page does — it has to be repainted explicitly,
+   both when the toggle is used and when the OS preference flips underneath us. */
 $("#theme").onclick = () => {
   const r = document.documentElement, cur = r.getAttribute("data-theme");
   r.setAttribute("data-theme", cur === "light" ? "dark" : "light");
   if (cur === "dark") r.removeAttribute("data-theme");
+  if (typeof drawField === "function" && DATA) drawField();
 };
+matchMedia("(prefers-color-scheme:dark)").addEventListener("change", () => {
+  if (typeof drawField === "function" && DATA) drawField();
+});
 
 /* tabs */
 document.querySelectorAll('.navbar button').forEach(b => b.onclick = () => {
@@ -633,6 +732,10 @@ function boot() {
   Object.keys(DATA.classes).forEach(k =>
     cs.insertAdjacentHTML("beforeend", `<option>${esc(k)}</option>`));
 
+  drawField();
+  startFeature();
+  addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(drawField, 150); });
+
   ["#q", "#fClass", "#fList"].forEach(s => $(s).oninput = apply);
   ["#cPri", "#cSil"].forEach(s => $(s).onclick = e => {
     const b = e.currentTarget;
@@ -641,6 +744,130 @@ function boot() {
   });
   $("#more").onclick = () => draw(true);
   apply();
+}
+
+/* ---------- the field: one mark per species ------------------------------ */
+/* Marks are laid out in reading order over DATA.species, which is already sorted
+   by tier descending — so the darkest band at the top IS the priority stratum,
+   and its share of the whole block is visible without a caption. */
+let rz, cells = [], PITCH = 9, GAP = 2;
+
+/* Pitch is derived, not fixed. A fixed 9px pitch made the block 576px tall on a
+   375px screen — the field stopped reading as one mass and became a wall to
+   scroll past. Solving rows*p ≈ TARGET_H for p keeps it a consistent band at any
+   width: p = sqrt(TARGET_H * W / N). */
+const TARGET_H = 190;
+function pitchFor(cssW, n) {
+  const p = Math.round(Math.sqrt(TARGET_H * cssW / n));
+  return Math.max(3, Math.min(10, p));
+}
+
+function tierColor(t) {
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue("--t" + t).trim();
+}
+
+function drawField() {
+  const cv = $("#field"), sp = DATA.species;
+  if (!cv || !sp.length) return;
+  const cssW = cv.parentElement.clientWidth;
+  PITCH = pitchFor(cssW, sp.length);
+  GAP = PITCH >= 7 ? 2 : 1;
+  const cols = Math.max(24, Math.floor(cssW / PITCH));
+  const rows = Math.ceil(sp.length / cols);
+  const cssH = rows * PITCH;
+  const dpr = Math.min(devicePixelRatio || 1, 2);
+  cv.width = Math.round(cssW * dpr);
+  cv.height = Math.round(cssH * dpr);
+  cv.style.height = cssH + "px";
+  const g = cv.getContext("2d");
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, cssW, cssH);
+
+  const colors = {1: tierColor(1), 2: tierColor(2), 3: tierColor(3),
+                  4: tierColor(4), 5: tierColor(5)};
+  const size = PITCH - GAP;
+  cells = [];
+  sp.forEach((s, i) => {
+    const x = (i % cols) * PITCH, y = Math.floor(i / cols) * PITCH;
+    g.fillStyle = colors[s.t] || colors[1];
+    g.fillRect(x, y, size, size);
+    cells.push({x, y, size, s});
+  });
+  fieldGeom = {cols, cssW, cssH};
+
+  const counts = DATA.tier_counts;
+  $("#fieldLegend").innerHTML = [5, 4, 3, 2, 1].map(t =>
+    `<span><i style="background:var(--t${t})"></i>tier ${t}${t >= 4 ? " priority" : ""}
+     <span style="font-family:var(--mono)">${(counts[t] || 0).toLocaleString()}</span></span>`
+  ).join("");
+}
+
+let fieldGeom = null;
+function hitTest(ev) {
+  const cv = $("#field"), r = cv.getBoundingClientRect();
+  const x = ev.clientX - r.left, y = ev.clientY - r.top;
+  if (!fieldGeom) return null;
+  const col = Math.floor(x / PITCH), row = Math.floor(y / PITCH);
+  if (col < 0 || col >= fieldGeom.cols || row < 0) return null;
+  const i = row * fieldGeom.cols + col;
+  return cells[i] || null;
+}
+
+(function wireField() {
+  const cv = $("#field"), tip = $("#fieldTip");
+  if (!cv) return;
+  cv.addEventListener("mousemove", ev => {
+    const hit = hitTest(ev);
+    if (!hit) { tip.style.opacity = 0; return; }
+    const s = hit.s;
+    tip.innerHTML = `<b>${esc(s.v || s.n)}</b><i>${esc(s.n)}</i>
+      <span style="opacity:.75">tier ${s.t} · ${esc(s.c)}${
+        s.l === "ne" ? " · never assessed" : ""}</span>`;
+    tip.style.opacity = 1;
+    const pad = 14;
+    let left = ev.clientX + pad, top = ev.clientY + pad;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    if (left + w > innerWidth - 8) left = ev.clientX - w - pad;
+    if (top + h > innerHeight - 8) top = ev.clientY - h - pad;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  });
+  cv.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+  cv.addEventListener("click", ev => {
+    const hit = hitTest(ev);
+    if (!hit) return;
+    // jump straight into the register with that one species isolated
+    document.querySelector('[data-v="register"]').click();
+    $("#q").value = hit.s.n;
+    $("#q").dispatchEvent(new Event("input"));
+    const first = $("#tbody tr.sp");
+    if (first) toggle(first);
+  });
+})();
+
+/* ---------- featured evidence ------------------------------------------- */
+/* Real tier-5 records only: the single-specimen cases are where the prose does
+   the most work, and they are the honest face of the argument. */
+let fqPool = [], fqAt = 0;
+function startFeature() {
+  fqPool = DATA.species.filter(s =>
+    s.t === 5 && s.e && s.e.length > 60 && s.e.length < 210 && s.v);
+  if (!fqPool.length) { $("#feature").hidden = true; return; }
+  showFeature();
+  const still = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  if (!still && fqPool.length > 1) setInterval(nextFeature, 9000);
+}
+function showFeature() {
+  const s = fqPool[fqAt % fqPool.length];
+  $("#fqQuote").textContent = s.e.replace(/\s*\.\s*$/, ".");
+  $("#fqCap").innerHTML = `<i class="sci">${esc(s.n)}</i>
+    <span>·</span><span>${esc(s.c)}</span><span>·</span>
+    <span>${s.l === "ne" ? "never assessed by IUCN" : "IUCN: Data Deficient"}</span>`;
+}
+function nextFeature() {
+  const f = $("#feature");
+  f.classList.add("fading");
+  setTimeout(() => { fqAt++; showFeature(); f.classList.remove("fading"); }, 500);
 }
 
 function apply() {
@@ -665,7 +892,7 @@ function draw(append) {
       <td class="sev t${s.t}"></td>
       <td class="cell-name"><b>${esc(s.v || s.n)}</b><i class="sci">${esc(s.n)}</i></td>
       <td style="font-family:var(--sans);font-size:.82rem;color:var(--ink-2)">${esc(s.c)}</td>
-      <td class="tiercell" style="color:var(--t${s.t})">${s.t}</td>
+      <td><span class="tierchip t${s.t}" title="${esc(DATA.tiers[s.t])}">${s.t}</span></td>
       <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.b)}</td>
       <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.s || "—")}</td>
       <td>${s.t >= 4 ? '<span class="tag pri">Priority</span> ' : ""}${
