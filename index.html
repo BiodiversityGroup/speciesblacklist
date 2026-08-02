@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Species Black List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A register of vertebrate species that the IUCN Red List records as Data Deficient or has never assessed, ranked by how narrowly restricted the published record says they are.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://speciesblacklist.org/">
+
+<!-- Shared-link previews. The advocacy case for this register travels by link,
+     so a bare URL with no card is a wasted send. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Biodiversity Group">
+<meta property="og:url" content="https://speciesblacklist.org/">
+<meta property="og:title" content="The Species Black List">
+<meta property="og:description" content="2,372 vertebrates the IUCN Red List records as Data Deficient, and 36 it has never assessed. Ranked by how narrowly restricted the published record says they are — and tested against IUCN's own reassessments.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Species Black List">
+<meta name="twitter:description" content="Vertebrates the Red List cannot yet speak for, ranked by restriction and tested against IUCN's own reassessments.">
+
+<!-- Dataset markup so Google Dataset Search can surface this to the researchers
+     who would actually use it. Worth more than ordinary SEO for a register. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "The Species Black List",
+  "alternateName": "Data Deficient and unassessed vertebrates, ranked by geographic restriction",
+  "description": "A register of 2,372 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 36 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritised research agenda.",
+  "url": "https://speciesblacklist.org/",
+  "keywords": ["extinction risk","IUCN Red List","Data Deficient","conservation prioritisation","vertebrates","biodiversity assessment gap","Criterion B"],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Organization", "name": "The Biodiversity Group",
+              "url": "https://biodiversitygroup.org"},
+  "isBasedOn": [
+    {"@type": "Dataset", "name": "The IUCN Red List of Threatened Species, Version 2026-1",
+     "url": "https://www.iucnredlist.org", "identifier": "https://doi.org/10.15468/0qnb58"},
+    {"@type": "Book", "name": "Threatened and Recently Extinct Vertebrates of the World: A Biogeographic Approach",
+     "author": {"@type": "Person", "name": "Matthew Richardson"},
+     "publisher": {"@type": "Organization", "name": "Cambridge University Press"},
+     "datePublished": "2023"}
+  ],
+  "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json",
+                    "contentUrl": "https://speciesblacklist.org/data.json"}],
+  "measurementTechnique": "Text classification of published range statements into restriction tiers, cross-referenced against the IUCN Red List and verified against the GBIF backbone taxonomy",
+  "variableMeasured": "Geographic restriction tier (1-5)"
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing:border-box; }
+  body { margin:0; }
+  /* ---- tokens: cool institutional ground, warm data ---------------------- */
+  :root {
+    --ground:#EDEEF0; --surface:#F7F8F9; --surface-2:#E4E6EA;
+    --ink:#171A21; --ink-2:#4A5260; --ink-3:#767E8C;
+    --rule:#D3D7DE; --rule-2:#C0C6D0;
+    --accent:#3B4E8C; --accent-soft:#E3E7F3;
+    --t1:#D9C08A; --t2:#C99B4F; --t3:#B4762B; --t4:#90501A; --t5:#6B300F;
+    --serif:Georgia,"Palatino Linotype",Palatino,"Book Antiqua",ui-serif,serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --pad:clamp(1rem,4vw,2.5rem);
+  }
+  @media (prefers-color-scheme:dark) {
+    :root {
+      --ground:#12141A; --surface:#191C23; --surface-2:#22262F;
+      --ink:#E6E8EC; --ink-2:#A2AAB8; --ink-3:#79818F;
+      --rule:#2A2F39; --rule-2:#3A404C;
+      --accent:#8FA3E0; --accent-soft:#232A3D;
+      --t1:#EBD4A6; --t2:#DCB068; --t3:#C98A3C; --t4:#B4682A; --t5:#9A4C1C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#12141A; --surface:#191C23; --surface-2:#22262F;
+    --ink:#E6E8EC; --ink-2:#A2AAB8; --ink-3:#79818F;
+    --rule:#2A2F39; --rule-2:#3A404C;
+    --accent:#8FA3E0; --accent-soft:#232A3D;
+    --t1:#EBD4A6; --t2:#DCB068; --t3:#C98A3C; --t4:#B4682A; --t5:#9A4C1C;
+  }
+  :root[data-theme="light"] {
+    --ground:#EDEEF0; --surface:#F7F8F9; --surface-2:#E4E6EA;
+    --ink:#171A21; --ink-2:#4A5260; --ink-3:#767E8C;
+    --rule:#D3D7DE; --rule-2:#C0C6D0;
+    --accent:#3B4E8C; --accent-soft:#E3E7F3;
+    --t1:#D9C08A; --t2:#C99B4F; --t3:#B4762B; --t4:#90501A; --t5:#6B300F;
+  }
+
+  body { background:var(--ground); color:var(--ink); font-family:var(--serif);
+         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 var(--pad); }
+  .prose { max-width:66ch; }
+  h1,h2,h3 { font-weight:600; text-wrap:balance; line-height:1.2; margin:0; }
+  a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+  :focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:2px; }
+  .num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
+  .sci { font-family:var(--mono); font-style:normal; }
+  .eyebrow { font-family:var(--sans); font-size:.68rem; font-weight:600;
+             letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3); }
+
+  /* ---- masthead: a register header, ruled ------------------------------- */
+  .mast { border-bottom:2px solid var(--ink); background:var(--surface); }
+  .mast-in { display:flex; flex-wrap:wrap; align-items:flex-end; gap:1rem 2rem;
+             padding:1.6rem 0 1.1rem; }
+  .mast h1 { font-size:clamp(1.5rem,3.6vw,2.1rem); letter-spacing:-.015em; }
+  .mast .sub { font-family:var(--sans); font-size:.8rem; color:var(--ink-2);
+               margin-top:.3rem; }
+  .mast-right { margin-left:auto; display:flex; gap:.5rem; align-items:center; }
+  .ghost { font-family:var(--sans); font-size:.75rem; padding:.4rem .7rem;
+           background:none; border:1px solid var(--rule-2); border-radius:2px;
+           color:var(--ink-2); cursor:pointer; }
+  .ghost:hover { border-color:var(--accent); color:var(--accent); }
+
+  /* ---- nav tabs --------------------------------------------------------- */
+  nav { border-bottom:1px solid var(--rule); background:var(--surface); }
+  .navbar { display:flex; gap:0; overflow-x:auto; }
+  .navbar button { font-family:var(--sans); font-size:.82rem; font-weight:500;
+    padding:.75rem 1.05rem; background:none; border:0; border-bottom:2px solid transparent;
+    color:var(--ink-2); cursor:pointer; white-space:nowrap; }
+  .navbar button:hover { color:var(--ink); }
+  .navbar button[aria-selected="true"] { color:var(--ink); border-bottom-color:var(--accent);
+    font-weight:600; }
+
+  section.view { padding:2.2rem 0 4rem; }
+  section.view[hidden] { display:none; }
+
+  /* ---- cover sheet ------------------------------------------------------ */
+  .lede { font-size:1.16rem; color:var(--ink-2); margin:.9rem 0 0; }
+  .lede strong { color:var(--ink); font-weight:600; }
+
+  .counts { display:grid; gap:1px; background:var(--rule);
+            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+            border:1px solid var(--rule); margin:2.2rem 0; }
+  .count { background:var(--surface); padding:1.1rem 1.2rem; }
+  .count b { display:block; font-family:var(--mono); font-size:2rem; font-weight:600;
+             letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+  .count span { font-family:var(--sans); font-size:.74rem; color:var(--ink-2);
+                display:block; margin-top:.15rem; }
+
+  .panel { background:var(--surface); border:1px solid var(--rule); padding:1.5rem var(--pad);
+           margin:2rem 0; }
+  .panel h3 { font-size:1.05rem; margin-bottom:.2rem; }
+
+  /* ---- validation dot plot --------------------------------------------- */
+  .plot { margin:1.4rem 0 .4rem; }
+  /* The rate label gets its own grid column. Absolutely positioning it past the
+     end of the track pushed the whole page sideways at 375px. */
+  .prow { display:grid; grid-template-columns:minmax(68px,auto) 1fr auto; gap:.7rem;
+          align-items:center; padding:.55rem 0; }
+  .plab { font-family:var(--sans); font-size:.78rem; color:var(--ink-2); text-align:right; }
+  .ptrack { position:relative; height:26px; min-width:0; }
+  .ptrack::before { content:""; position:absolute; inset:auto 0 50% 0; height:1px;
+                    background:var(--rule); transform:translateY(50%); }
+  .ci { position:absolute; top:50%; height:6px; transform:translateY(-50%);
+        background:var(--surface-2); border:1px solid var(--rule-2); border-radius:3px; }
+  .dot { position:absolute; top:50%; width:13px; height:13px; border-radius:50%;
+         transform:translate(-50%,-50%); border:2px solid var(--surface); }
+  .dot.hi { background:var(--t5); } .dot.lo { background:var(--t2); }
+  .pval { font-family:var(--mono); font-size:.82rem; font-weight:600;
+          font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; }
+  .baseline { position:absolute; top:0; bottom:0; width:1px; background:var(--ink-3); }
+  /* baseline is named in the caption below, not in a floating label that can
+     overflow the track on a narrow screen */
+  .blegend { font-family:var(--sans); font-size:.72rem; color:var(--ink-3);
+             display:flex; align-items:center; gap:.4rem; margin:.5rem 0 0;
+             padding-left:calc(68px + .7rem); }
+  .blegend i { display:inline-block; width:1px; height:11px; background:var(--ink-3);
+               flex:0 0 1px; }
+  .axis { display:flex; justify-content:space-between; font-family:var(--mono);
+          font-size:.7rem; color:var(--ink-3); border-top:1px solid var(--rule);
+          padding-top:.35rem; margin-left:calc(68px + .7rem); }
+  .stat { font-family:var(--sans); font-size:.82rem; color:var(--ink-2); margin-top:1rem; }
+  .stat code { font-family:var(--mono); background:var(--surface-2); padding:.1rem .3rem;
+               border-radius:2px; font-size:.8rem; }
+
+  /* ---- bar rows (class / tier) ----------------------------------------- */
+  .bars { display:grid; gap:.42rem; margin-top:1rem; }
+  .bar { display:grid; grid-template-columns:minmax(120px,auto) 1fr minmax(48px,auto);
+         gap:.8rem; align-items:center; font-size:.85rem; }
+  .bar .bl { font-family:var(--sans); color:var(--ink-2); }
+  .bar .bt { height:14px; background:var(--surface-2); position:relative; }
+  .bar .bf { position:absolute; inset:0 auto 0 0; border-radius:0 3px 3px 0;
+             background:var(--accent); }
+  .bar .bv { font-family:var(--mono); font-variant-numeric:tabular-nums;
+             text-align:right; color:var(--ink-2); }
+  .bar.t5 .bf{background:var(--t5)} .bar.t4 .bf{background:var(--t4)}
+  .bar.t3 .bf{background:var(--t3)} .bar.t2 .bf{background:var(--t2)}
+  .bar.t1 .bf{background:var(--t1)}
+
+  /* ---- filter rail ------------------------------------------------------ */
+  .filters { display:flex; flex-wrap:wrap; gap:.6rem; align-items:center;
+             padding:.9rem 0 1rem; border-bottom:1px solid var(--rule); }
+  .filters input[type=search], .filters select {
+    font-family:var(--sans); font-size:.83rem; padding:.45rem .6rem;
+    background:var(--surface); color:var(--ink); border:1px solid var(--rule-2);
+    border-radius:2px; }
+  .filters input[type=search] { min-width:min(280px,100%); flex:1 1 220px; }
+  .chipset { display:flex; gap:.3rem; flex-wrap:wrap; }
+  .chip { font-family:var(--sans); font-size:.76rem; padding:.38rem .62rem;
+          background:var(--surface); border:1px solid var(--rule-2); border-radius:2px;
+          color:var(--ink-2); cursor:pointer; }
+  .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent);
+          color:#fff; font-weight:600; }
+  :root[data-theme="dark"] .chip[aria-pressed="true"],
+  :root:not([data-theme="light"]) .chip[aria-pressed="true"] { color:var(--ground); }
+  .resultline { font-family:var(--sans); font-size:.8rem; color:var(--ink-3);
+                padding:.8rem 0; display:flex; gap:1rem; flex-wrap:wrap; }
+
+  /* ---- register table --------------------------------------------------- */
+  .tablewrap { overflow-x:auto; border:1px solid var(--rule); background:var(--surface); }
+  table { border-collapse:collapse; width:100%; min-width:720px; }
+  thead th { font-family:var(--sans); font-size:.68rem; font-weight:600;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3);
+    text-align:left; padding:.6rem .8rem; border-bottom:1px solid var(--rule-2);
+    background:var(--surface); position:sticky; top:0; z-index:2; }
+  tbody td { padding:.6rem .8rem; border-bottom:1px solid var(--rule);
+             vertical-align:top; font-size:.9rem; }
+  tbody tr.sp { cursor:pointer; }
+  tbody tr.sp:hover td { background:var(--accent-soft); }
+  .sev { width:4px; padding:0 !important; }
+  .sev.t5{background:var(--t5)} .sev.t4{background:var(--t4)}
+  .sev.t3{background:var(--t3)} .sev.t2{background:var(--t2)} .sev.t1{background:var(--t1)}
+  .cell-name b { font-weight:600; }
+  .cell-name .sci { display:block; font-size:.82rem; color:var(--ink-2); margin-top:.1rem; }
+  .tiercell { font-family:var(--mono); font-variant-numeric:tabular-nums;
+              font-weight:600; white-space:nowrap; }
+  .tag { font-family:var(--sans); font-size:.68rem; padding:.15rem .42rem;
+         border:1px solid var(--rule-2); border-radius:2px; color:var(--ink-2);
+         white-space:nowrap; }
+  .tag.pri { border-color:var(--t4); color:var(--t4); font-weight:600; }
+  .tag.ne  { border-color:var(--accent); color:var(--accent); font-weight:600; }
+
+  /* ---- detail row ------------------------------------------------------- */
+  tr.detail td { background:var(--surface-2); padding:1.1rem 1.2rem; }
+  .quote { font-size:1rem; line-height:1.55; border-left:3px solid var(--t4);
+           padding-left:.9rem; margin:0 0 1rem; max-width:70ch; }
+  .kv { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+        gap:.8rem 1.6rem; font-family:var(--sans); font-size:.82rem; }
+  .kv div span { display:block; color:var(--ink-3); font-size:.68rem;
+                 text-transform:uppercase; letter-spacing:.07em; }
+  .desc-note { font-family:var(--sans); font-size:.76rem; color:var(--ink-3);
+               margin-top:.9rem; padding-top:.7rem; border-top:1px solid var(--rule-2);
+               max-width:70ch; }
+  .more { font-family:var(--sans); font-size:.83rem; margin:1.2rem auto 0; display:block;
+          padding:.6rem 1.4rem; background:var(--surface); border:1px solid var(--rule-2);
+          border-radius:2px; color:var(--ink); cursor:pointer; }
+  .more:hover { border-color:var(--accent); color:var(--accent); }
+
+  /* ---- provenance callout ---------------------------------------------- */
+  .warn { border:1px solid var(--t4); border-left-width:4px; background:var(--surface);
+          padding:1.1rem 1.3rem; margin:1.6rem 0; max-width:74ch; }
+  .warn h3 { font-size:.95rem; color:var(--t4); margin-bottom:.35rem; }
+  .warn p { font-family:var(--sans); font-size:.85rem; margin:.4rem 0 0; color:var(--ink-2); }
+
+  .methods h2 { font-size:1.3rem; margin:2.4rem 0 .6rem; }
+  .methods h3 { font-size:1rem; margin:1.6rem 0 .3rem; }
+  .methods p, .methods li { color:var(--ink-2); }
+  .methods p { margin:.7rem 0; }
+  .methods ul { margin:.7rem 0; padding-left:1.3rem; }
+  .methods li { margin:.35rem 0; }
+  .methods strong { color:var(--ink); }
+  .ftable { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.86rem;
+            min-width:0; }
+  .ftable th, .ftable td { text-align:left; padding:.45rem .7rem;
+            border-bottom:1px solid var(--rule); }
+  .ftable th { font-family:var(--sans); font-size:.68rem; text-transform:uppercase;
+            letter-spacing:.07em; color:var(--ink-3); }
+  .ftable td:first-child { font-family:var(--mono); font-size:.82rem; }
+
+  footer { border-top:1px solid var(--rule); background:var(--surface);
+           padding:1.6rem 0 2.4rem; font-family:var(--sans); font-size:.78rem;
+           color:var(--ink-3); }
+  footer p { margin:.35rem 0; max-width:80ch; }
+
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap mast-in">
+    <div>
+      <p class="eyebrow">The Biodiversity Group</p>
+      <h1>The Species Black List</h1>
+      <p class="sub">Vertebrates the Red List cannot yet speak for &middot;
+        IUCN v2026&#8209;1</p>
+    </div>
+    <div class="mast-right">
+      <button class="ghost" id="theme">Theme</button>
+      <a class="ghost" href="data.json" download style="text-decoration:none">Download data</a>
+    </div>
+  </div>
+</header>
+
+<nav><div class="wrap navbar" role="tablist">
+  <button role="tab" aria-selected="true"  data-v="overview">Overview</button>
+  <button role="tab" aria-selected="false" data-v="register">The register</button>
+  <button role="tab" aria-selected="false" data-v="sites">Sites</button>
+  <button role="tab" aria-selected="false" data-v="methods">Methods &amp; limits</button>
+</div></nav>
+
+<!-- ============================== OVERVIEW ============================== -->
+<section class="view wrap" id="v-overview">
+  <div class="prose">
+    <p class="eyebrow">What this is</p>
+    <h2 style="font-size:clamp(1.35rem,3vw,1.75rem);margin-top:.4rem">
+      A species can be lost without ever having been counted as at risk.</h2>
+    <p class="lede">The IUCN Red List is the world's authority on extinction risk, and
+      it has two blind spots. Some species are assessed and come back
+      <strong>Data Deficient</strong> — IUCN looked, and there was not enough
+      information to say. Others are <strong>Not Evaluated</strong> — nobody has
+      looked at all. In practice both are treated as though the species were safe.</p>
+    <p class="lede">This register holds vertebrates in that gap for which a
+      peer-reviewed reference already documents an alarmingly thin record — often a
+      single river, sometimes a single specimen collected once, a century ago, and
+      never found again.</p>
+  </div>
+
+  <div class="counts" id="counts"></div>
+
+  <div class="warn">
+    <h3>Read the ranking before you use it</h3>
+    <p>Data Deficient status on its own predicts very little. Of the species here that
+      IUCN has since reassessed, the group as a whole came out threatened at roughly
+      the ordinary all-species rate. The <strong>narrowly restricted subset is
+      different</strong>, and that distinction — not the Data Deficient label — is
+      what this register is for.</p>
+  </div>
+
+  <div class="panel">
+    <p class="eyebrow">Held-out test</p>
+    <h3>Does the ranking predict IUCN's own verdict?</h3>
+    <p style="font-family:var(--sans);font-size:.87rem;color:var(--ink-2);margin:.5rem 0 0;
+       max-width:70ch">Between the previous data and v2026&#8209;1, IUCN independently
+      reassessed <span class="num">108</span> of these species and gave each a real
+      category. The ranking rules never saw those outcomes, so they work as an answer
+      key. Share reassessed as threatened or extinct:</p>
+    <div class="plot" id="plot"></div>
+    <p class="stat" id="pstat"></p>
+  </div>
+
+  <div class="panel">
+    <p class="eyebrow">Composition</p>
+    <h3>Where the gap falls</h3>
+    <div style="display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+         margin-top:1.1rem">
+      <div>
+        <p class="eyebrow" style="font-size:.64rem">By class</p>
+        <div class="bars" id="barsClass"></div>
+      </div>
+      <div>
+        <p class="eyebrow" style="font-size:.64rem">By restriction tier</p>
+        <div class="bars" id="barsTier"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== REGISTER ============================== -->
+<section class="view wrap" id="v-register" hidden>
+  <div class="prose" style="margin-bottom:.5rem">
+    <h2 style="font-size:1.4rem">The register</h2>
+    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0">
+      Every row carries the sentence it was judged on. Select a species to read it.</p>
+  </div>
+
+  <div class="filters">
+    <input type="search" id="q" placeholder="Search name, species, or locality&hellip;"
+           aria-label="Search the register">
+    <select id="fClass" aria-label="Filter by class"><option value="">All classes</option></select>
+    <select id="fList" aria-label="Filter by list">
+      <option value="">Both lists</option>
+      <option value="dd">Data Deficient</option>
+      <option value="ne">Never assessed</option>
+    </select>
+    <div class="chipset">
+      <button class="chip" id="cPri" aria-pressed="false">Priority only</button>
+      <button class="chip" id="cSil" aria-pressed="false">No recent record</button>
+    </div>
+  </div>
+
+  <p class="resultline" id="resultline"></p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th class="sev" aria-hidden="true"></th>
+        <th>Species</th><th>Class</th><th>Tier</th><th>Basis</th><th>Locality</th><th></th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <button class="more" id="more" hidden>Show more</button>
+</section>
+
+<!-- ================================ SITES =============================== -->
+<section class="view wrap" id="v-sites" hidden>
+  <div class="prose">
+    <h2 style="font-size:1.4rem">Localities holding several gap species</h2>
+    <p style="margin:.6rem 0 0;color:var(--ink-2)">The source is organised
+      geographically, so species cluster by place. Where a single locality carries
+      many of them, one protected area could cover the lot — the cheapest form of
+      conservation available.</p>
+    <p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-3);margin:.9rem 0 0">
+      Caveat: these localities are extracted at inconsistent grain. Some are a single
+      named river, some an entire ocean basin. Treat the small, specific ones as
+      actionable and the broad ones as an artefact of the source.</p>
+  </div>
+  <div class="bars" id="barsSites" style="margin-top:1.6rem"></div>
+</section>
+
+<!-- =============================== METHODS ============================== -->
+<section class="view wrap methods" id="v-methods" hidden>
+  <div class="prose">
+    <h2 style="margin-top:0">Methods &amp; limits</h2>
+
+    <div class="warn">
+      <h3>Who called these species "priority"</h3>
+      <p>Nobody with a specialist's authority. The ranking is produced by a
+        text-classification rule that reads the source's own range statements and
+        sorts them by severity. <strong>No taxonomist or conservation biologist has
+        reviewed the individual species.</strong> What has been tested is the rule's
+        average behaviour against IUCN's independent reassessments — a statement about
+        the group, not about any one row.</p>
+      <p>These are not Red List assessments and must not be cited as such. They are a
+        prioritised research agenda: an argument about where to look.</p>
+    </div>
+
+    <h3>Sources</h3>
+    <table class="ftable">
+      <tr><th>Evidence of risk</th><td>Matthew Richardson, <em>Threatened and Recently
+        Extinct Vertebrates of the World: A Biogeographic Approach</em>, Cambridge
+        University Press, 2023. Vertebrates only — the scope follows the book's.</td></tr>
+      <tr><th>Extinction risk</th><td>IUCN Red List v2026&#8209;1, 178,011 taxa,
+        via GBIF's Darwin Core mirror (accessed 2026&#8209;07&#8209;28).</td></tr>
+      <tr><th>Taxonomy</th><td>GBIF Backbone, for synonym resolution and for
+        independent verification of assessment status.</td></tr>
+    </table>
+
+    <h3>How the ranking works</h3>
+    <p>Restriction is the axis because IUCN <strong>Criterion B</strong> allows a
+      species to qualify as threatened on a small range plus evidence of decline:
+      area of occupancy under 2,000&nbsp;km² for Vulnerable, 500 for Endangered, 10 for
+      Critically Endangered. A species known only from its type locality sits, on its
+      face, inside the Critically Endangered envelope. Tiers 4 and 5 are the
+      <strong>priority</strong> stratum.</p>
+    <table class="ftable" id="tierTable">
+      <thead><tr><th>Tier</th><th>Basis</th><th>Species</th></tr></thead><tbody></tbody>
+    </table>
+    <p>No area of occupancy has been computed. A priority flag argues that Criterion B
+      <em>should be evaluated</em>; it is not a finding that it is met.</p>
+
+    <h3>What the test showed</h3>
+    <p id="valprose"></p>
+    <p>The priority rate lands close to the 56% that Borgelt et al. (2022,
+      <em>Communications Biology</em>) predicted for Data Deficient species generally —
+      which suggests that figure belongs to the narrowly restricted subset, and that an
+      unranked list dilutes a real signal with vague-range species.</p>
+    <p>Two caveats belong with that number whenever it is quoted. The top stratum
+      rests on <span class="num">19</span> species, which is thin. And IUCN reassesses
+      where data has appeared, which probably favours species that turned out to be
+      more widespread — a bias running against the finding rather than creating it.
+      Separately, the five tiers were defined before any outcome was seen, but the
+      decision to split them at 4 was made after, which inflates the significance
+      somewhat.</p>
+
+    <h3>What was discarded</h3>
+    <p>An earlier composite score added points for a species not having been recorded
+      recently and for threats named at its locality. Testing destroyed it: the
+      composite was non-monotonic, and naming a site-level threat turned out
+      <em>inversely</em> associated with being threatened. The reason is legible in
+      hindsight — broad, well-documented regions attract threat prose but hold
+      wide-ranging species, while a genuine type-locality endemic gets one terse line.
+      Those fields survive on each record as description, and are not ranked on.</p>
+
+    <h3>Why the never-assessed list is short</h3>
+    <p>Proving that IUCN has <em>never</em> assessed a species is much harder than it
+      looks, because the two sources disagree about naming constantly. Deciding it by
+      failing to find a name produced a false-positive rate near 90%. Four distinct
+      failure modes had to be closed:</p>
+    <table class="ftable">
+      <thead><tr><th>Failure</th><th>Example</th></tr></thead><tbody>
+      <tr><td>Genus reassigned</td><td><span class="sci">Amblyopsis rosae</span> is IUCN's
+        <span class="sci">Troglichthys rosae</span> (Near Threatened)</td></tr>
+      <tr><td>Genus and family reassigned</td><td><span class="sci">Aphanius iberus</span> is
+        IUCN's <span class="sci">Apricaphanius iberus</span></td></tr>
+      <tr><td>Homonym within an order</td><td><span class="sci">Sinosuthora przewalskii</span>,
+        an Asian parrotbill, matching <span class="sci">Grallaria przewalskii</span>, a South
+        American antpitta</td></tr>
+      <tr><td>Rank change</td><td><span class="sci">Cyanoramphus cookii</span>, in fact
+        Least Concern</td></tr>
+      </tbody></table>
+    <p>Species known only from pre-1500 remains were also removed. The Red List covers
+      extinctions from 1500 AD onward, so those fall outside its remit by policy rather
+      than by neglect — counting them as coverage gaps would be a category error.</p>
+
+    <h3>Limits worth stating plainly</h3>
+    <ul>
+      <li><strong>Vertebrates only.</strong> Invertebrates, plants and fungi are where
+        the assessment gap is worst — invertebrates are 97% of animals and about a
+        third of animal assessments — and this register says nothing about them.</li>
+      <li><strong>One source.</strong> Everything rests on a single author's synthesis.
+        No second corpus corroborates the range statements.</li>
+      <li><strong>Restriction is read from prose, not from range data.</strong></li>
+      <li><strong>Localities vary in grain</strong>, from one river to an ocean basin.</li>
+    </ul>
+
+    <h3>Why this matters for funding and policy</h3>
+    <p>Target 4 of the Kunming-Montreal Global Biodiversity Framework commits
+      governments to halting the extinction of <em>known threatened species</em> — a
+      phrase that excludes both categories in this register by definition. Under 3.5%
+      of Mohamed bin Zayed Species Conservation Fund awards have gone to Data Deficient
+      taxa, and under 1% at the People's Trust for Endangered Species. IUCN's own
+      guidance says Data Deficient species should get the same attention as threatened
+      ones, and it is not followed.</p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p><strong>Cite the underlying data as:</strong> IUCN (2026). The IUCN Red List of
+    Threatened Species. Version 2026&#8209;1. iucnredlist.org —
+    doi:10.15468/0qnb58, accessed via GBIF.org. IUCN Red List Terms of Use apply.</p>
+  <p>Species accounts derive from Richardson, M. (2023) <em>Threatened and Recently
+    Extinct Vertebrates of the World</em>, Cambridge University Press.</p>
+  <p id="builtline"></p>
+</div></footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* theme toggle: cycles auto -> light -> dark */
+$("#theme").onclick = () => {
+  const r = document.documentElement, cur = r.getAttribute("data-theme");
+  r.setAttribute("data-theme", cur === "light" ? "dark" : "light");
+  if (cur === "dark") r.removeAttribute("data-theme");
+};
+
+/* tabs */
+document.querySelectorAll('.navbar button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.navbar button').forEach(x =>
+    x.setAttribute("aria-selected", x === b));
+  document.querySelectorAll('section.view').forEach(s =>
+    s.hidden = s.id !== "v-" + b.dataset.v);
+  window.scrollTo({top: 0, behavior: "instant"});
+});
+
+let DATA, rows = [], shown = 0;
+const PAGE = 200;
+
+fetch("data.json").then(r => r.json()).then(d => { DATA = d; boot(); })
+  .catch(() => { $("#counts").innerHTML =
+    '<div class="count"><span>Could not load data.json — is it beside index.html?</span></div>'; });
+
+function boot() {
+  const m = DATA.meta, c = m.counts, v = m.validation;
+
+  /* --- counts --- */
+  $("#counts").innerHTML = [
+    [c.dd.toLocaleString(), "Data Deficient — IUCN looked, and could not say"],
+    [c.priority_dd.toLocaleString(), "of those in the priority stratum (tier 4–5)"],
+    [String(c.ne), "Never assessed by IUCN at all"],
+    [v.high.rate + "%", "of reassessed priority species proved threatened"],
+  ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
+
+  /* --- validation dot plot: one axis, 0–80%, baseline reference --- */
+  const MAX = 80, pos = x => (x / MAX * 100) + "%";
+  const prow = (label, g, cls) => `
+    <div class="prow">
+      <div class="plab">${label}<br><span style="color:var(--ink-3);font-size:.72rem">
+        n=${g.n}</span></div>
+      <div class="ptrack">
+        <div class="baseline" style="left:${pos(v.baseline_all_species)}"
+             title="all assessed species ~${v.baseline_all_species}%"></div>
+        <div class="ci" style="left:${pos(g.lo)};width:${pos(g.hi - g.lo)}"
+             title="95% confidence interval ${g.lo}–${g.hi}%"></div>
+        <div class="dot ${cls}" style="left:${pos(g.rate)}"
+             title="${g.threatened} of ${g.n} = ${g.rate}%"></div>
+      </div>
+      <div class="pval" style="color:var(--${cls === "hi" ? "t5" : "t2"})">${g.rate}%</div>
+    </div>`;
+  $("#plot").innerHTML = `
+    ${prow("Priority<br>tier 4–5", v.high, "hi")}
+    ${prow("Rest<br>tier 1–3", v.low, "lo")}
+    <div class="axis"><span>0%</span><span>40%</span><span>80%</span></div>
+    <p class="blegend"><i></i> vertical rule marks the all-species rate,
+      ~${v.baseline_all_species}%</p>`;
+  $("#pstat").innerHTML = `Fisher exact two-sided <code>p = ${v.p}</code>,
+    odds ratio <code>${v.odds_ratio}</code>. Bars show 95% confidence intervals;
+    they overlap only slightly, and the priority group is about
+    <strong>2.6&times;</strong> more likely to prove threatened.`;
+
+  /* --- composition bars: magnitude, so one hue, not eight --- */
+  const maxC = Math.max(...Object.values(DATA.classes));
+  $("#barsClass").innerHTML = Object.entries(DATA.classes).map(([k, n]) => `
+    <div class="bar"><div class="bl">${esc(k)}</div>
+      <div class="bt"><div class="bf" style="width:${n / maxC * 100}%"></div></div>
+      <div class="bv">${n.toLocaleString()}</div></div>`).join("");
+
+  const maxT = Math.max(...Object.values(DATA.tier_counts));
+  $("#barsTier").innerHTML = [5, 4, 3, 2, 1].map(t => {
+    const n = DATA.tier_counts[t] || 0;
+    return `<div class="bar t${t}"><div class="bl">Tier ${t}${t >= 4 ? " ·&nbsp;priority" : ""}</div>
+      <div class="bt"><div class="bf" style="width:${n / maxT * 100}%"></div></div>
+      <div class="bv">${n.toLocaleString()}</div></div>`;
+  }).join("");
+
+  const maxS = DATA.sites[0]?.count || 1;
+  $("#barsSites").innerHTML = DATA.sites.map(s => `
+    <div class="bar" style="grid-template-columns:minmax(200px,32%) 1fr minmax(40px,auto)">
+      <div class="bl">${esc(s.name)}</div>
+      <div class="bt"><div class="bf" style="width:${s.count / maxS * 100}%"></div></div>
+      <div class="bv">${s.count}</div></div>`).join("");
+
+  $("#tierTable tbody").innerHTML = [5, 4, 3, 2, 1].map(t => `
+    <tr><td>${t}${t >= 4 ? " ·&nbsp;priority" : ""}</td><td>${esc(DATA.tiers[t])}</td>
+    <td class="num">${(DATA.tier_counts[t] || 0).toLocaleString()}</td></tr>`).join("");
+
+  $("#valprose").innerHTML = `Taken as one undifferentiated group, the
+    <span class="num">${v.all.n}</span> reassessed species proved threatened at
+    <strong>${v.all.rate}%</strong> — indistinguishable from the ordinary all-species
+    rate of about ${v.baseline_all_species}%. Split by restriction, the priority
+    stratum proved threatened at <strong>${v.high.rate}%</strong>
+    (${v.high.threatened}/${v.high.n}) against <strong>${v.low.rate}%</strong>
+    (${v.low.threatened}/${v.low.n}) for the rest.`;
+
+  $("#builtline").textContent =
+    `Register built ${m.built} against Red List v${m.redlist_version}. `
+    + `${DATA.species.length.toLocaleString()} species accounts.`;
+
+  const cs = $("#fClass");
+  Object.keys(DATA.classes).forEach(k =>
+    cs.insertAdjacentHTML("beforeend", `<option>${esc(k)}</option>`));
+
+  ["#q", "#fClass", "#fList"].forEach(s => $(s).oninput = apply);
+  ["#cPri", "#cSil"].forEach(s => $(s).onclick = e => {
+    const b = e.currentTarget;
+    b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true");
+    apply();
+  });
+  $("#more").onclick = () => draw(true);
+  apply();
+}
+
+function apply() {
+  const q = $("#q").value.trim().toLowerCase(),
+        cl = $("#fClass").value, li = $("#fList").value,
+        pri = $("#cPri").getAttribute("aria-pressed") === "true",
+        sil = $("#cSil").getAttribute("aria-pressed") === "true";
+  rows = DATA.species.filter(s =>
+    (!cl || s.c === cl) && (!li || s.l === li) && (!pri || s.t >= 4) && (!sil || s.sil) &&
+    (!q || s.n.toLowerCase().includes(q) || (s.v || "").toLowerCase().includes(q)
+        || (s.s || "").toLowerCase().includes(q)));
+  shown = 0;
+  $("#tbody").innerHTML = "";
+  draw(false);
+}
+
+function draw(append) {
+  const slice = rows.slice(shown, shown + PAGE);
+  $("#tbody").insertAdjacentHTML("beforeend", slice.map((s, i) => {
+    const idx = shown + i;
+    return `<tr class="sp" data-i="${idx}" tabindex="0">
+      <td class="sev t${s.t}"></td>
+      <td class="cell-name"><b>${esc(s.v || s.n)}</b><i class="sci">${esc(s.n)}</i></td>
+      <td style="font-family:var(--sans);font-size:.82rem;color:var(--ink-2)">${esc(s.c)}</td>
+      <td class="tiercell" style="color:var(--t${s.t})">${s.t}</td>
+      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.b)}</td>
+      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.s || "—")}</td>
+      <td>${s.t >= 4 ? '<span class="tag pri">Priority</span> ' : ""}${
+           s.l === "ne" ? '<span class="tag ne">Never assessed</span>' : ""}</td></tr>`;
+  }).join(""));
+  shown += slice.length;
+  $("#more").hidden = shown >= rows.length;
+  $("#more").textContent = `Show more (${(rows.length - shown).toLocaleString()} remaining)`;
+  $("#resultline").innerHTML =
+    `<span><strong class="num">${rows.length.toLocaleString()}</strong> species match</span>
+     <span>showing ${shown.toLocaleString()}</span>
+     <span class="num">${rows.filter(r => r.t >= 4).length.toLocaleString()} in the priority stratum</span>`;
+}
+
+/* row -> detail, toggled in place */
+$("#tbody").addEventListener("click", e => toggle(e.target.closest("tr.sp")));
+$("#tbody").addEventListener("keydown", e => {
+  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(e.target.closest("tr.sp")); }
+});
+
+function toggle(tr) {
+  if (!tr) return;
+  const nx = tr.nextElementSibling;
+  if (nx && nx.classList.contains("detail")) { nx.remove(); return; }
+  document.querySelectorAll("tr.detail").forEach(d => d.remove());
+  const s = rows[+tr.dataset.i], flags = [];
+  if (s.sil) flags.push("no recent record");
+  if (s.pa) flags.push("locality includes a protected area");
+  if (s.thr.length) flags.push("threats named at locality: " + s.thr.join(", "));
+  tr.insertAdjacentHTML("afterend", `<tr class="detail"><td colspan="7">
+    <p class="quote">${esc(s.e)}</p>
+    <div class="kv">
+      <div><span>Scientific name</span><i class="sci">${esc(s.n)}</i></div>
+      <div><span>As IUCN records it</span><i class="sci">${esc(s.iucn)}</i></div>
+      <div><span>Status</span>${s.l === "ne" ? "Never assessed" : "Data Deficient"}</div>
+      <div><span>Restriction tier</span>${s.t} — ${esc(s.b)}</div>
+      <div><span>Locality</span>${esc(s.s || "not specified")}</div>
+      <div><span>Look up</span>
+        <a href="https://www.iucnredlist.org/search?query=${encodeURIComponent(s.n)}"
+           target="_blank" rel="noopener">IUCN</a> ·
+        <a href="https://www.gbif.org/species/search?q=${encodeURIComponent(s.n)}"
+           target="_blank" rel="noopener">GBIF</a></div>
+    </div>
+    ${flags.length ? `<p class="desc-note"><strong>Description only:</strong>
+      ${esc(flags.join("; "))}. These fields were tested as predictors of threat and
+      did not hold — naming a site threat was in fact inversely associated. They are
+      shown for context and are not ranked on.</p>` : ""}
+  </td></tr>`);
+}
+</script>
+</body>
+</html>

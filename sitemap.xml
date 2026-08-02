@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Single-page app: one indexable URL. The four views are client-side tabs, not
+     separate documents, so there is nothing else to list. If the register is ever
+     split into per-species URLs, regenerate this from data.json. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://speciesblacklist.org/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
