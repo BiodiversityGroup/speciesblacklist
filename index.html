@@ -126,8 +126,16 @@
   .mast { border-bottom:2px solid var(--ink); background:var(--surface); }
   /* Utility row carries the brand link and controls, so the title block below
      can be centred without the buttons fighting it for the optical centre. */
-  .utility { display:flex; align-items:center; gap:var(--s2); flex-wrap:wrap;
-             padding:.8rem 0 0; }
+  /* Three tracks so the brand sits on the true page centre regardless of how wide
+     the controls are; an even flex row would push it off-centre. */
+  .utility { display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
+             gap:var(--s2); padding:.8rem 0 0; }
+  .utility .brand { grid-column:2; justify-self:center; }
+  .utility .mast-right { grid-column:3; justify-self:end; }
+  @media (max-width:620px) {
+    .utility { grid-template-columns:1fr; justify-items:center; gap:.6rem; }
+    .utility .brand, .utility .mast-right { grid-column:1; justify-self:center; }
+  }
   /* The Methods page has its own .prose children in places; keep them wide too. */
   .methods .prose { max-width:none; }
   .brand { display:inline-flex; align-items:center; gap:.55rem; text-decoration:none;
@@ -143,7 +151,9 @@
   .mast h1 { font-size:clamp(1.6rem,4vw,2.4rem); letter-spacing:-.02em; }
   .mast .sub { font-family:var(--sans); font-size:.85rem; color:var(--ink-2);
                margin-top:.45rem; }
-  .mast-right { margin-left:auto; display:flex; gap:.5rem; align-items:center; }
+  /* No margin-left:auto — an auto margin beats justify-self on a grid item, which
+     kept the controls pinned right when the row stacks on a phone. */
+  .mast-right { display:flex; gap:.5rem; align-items:center; }
   .ghost { font-family:var(--sans); font-size:.75rem; padding:.4rem .7rem;
            background:none; border:1px solid var(--rule-2); border-radius:2px;
            color:var(--ink-2); cursor:pointer; }
@@ -358,6 +368,8 @@
           color:var(--ink-2); cursor:pointer; }
   .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent);
           color:#fff; font-weight:600; }
+  .chip.clear { border-style:dashed; color:var(--t4); border-color:var(--t4); }
+  .chip.clear:hover { background:var(--t4); color:var(--ground); border-style:solid; }
   :root[data-theme="dark"] .chip[aria-pressed="true"],
   :root:not([data-theme="light"]) .chip[aria-pressed="true"] { color:var(--ground); }
   .resultline { font-family:var(--sans); font-size:.8rem; color:var(--ink-3);
@@ -470,9 +482,9 @@
 
 <nav><div class="wrap navbar" role="tablist">
   <button role="tab" aria-selected="true"  data-v="overview">Overview</button>
-  <button role="tab" aria-selected="false" data-v="register">The register</button>
+  <button role="tab" aria-selected="false" data-v="register">The Register</button>
   <button role="tab" aria-selected="false" data-v="sites">Sites</button>
-  <button role="tab" aria-selected="false" data-v="methods">Methods &amp; limits</button>
+  <button role="tab" aria-selected="false" data-v="methods">Methods &amp; Limits</button>
 </div></nav>
 
 <!-- ============================== OVERVIEW ============================== -->
@@ -604,6 +616,7 @@
     <div class="chipset">
       <button class="chip" id="cPri" aria-pressed="false">Priority only</button>
       <button class="chip" id="cSil" aria-pressed="false">No recent record</button>
+      <button class="chip clear" id="cClear" hidden>Clear filters</button>
     </div>
   </div>
 
@@ -793,7 +806,21 @@ document.querySelectorAll('.navbar button').forEach(b => b.onclick = () => {
   document.querySelectorAll('section.view').forEach(s =>
     s.hidden = s.id !== "v-" + b.dataset.v);
   window.scrollTo({top: 0, behavior: "instant"});
+  // Reaching the register from the menu always shows the whole register.
+  // Without this, clicking a mark in the field leaves its species name in the
+  // search box, so a later visit via the menu showed a single row.
+  // The field's own handler sets its filter AFTER switching tabs, so that path
+  // still isolates one species.
+  if (b.dataset.v === "register" && DATA) resetFilters();
 });
+
+function resetFilters() {
+  $("#q").value = "";
+  $("#fClass").value = "";
+  $("#fList").value = "";
+  ["#cPri", "#cSil"].forEach(s => $(s).setAttribute("aria-pressed", "false"));
+  apply();
+}
 
 let DATA, rows = [], shown = 0;
 const PAGE = 200;
@@ -903,6 +930,7 @@ function boot() {
     apply();
   });
   $("#more").onclick = () => draw(true);
+  $("#cClear").onclick = resetFilters;
   apply();
 }
 
@@ -1047,6 +1075,9 @@ function apply() {
   shown = 0;
   $("#tbody").innerHTML = "";
   draw(false);
+  // Surface an escape hatch only when something is actually filtering.
+  const active = q || cl || li || pri || sil;
+  $("#cClear").hidden = !active;
 }
 
 function draw(append) {
