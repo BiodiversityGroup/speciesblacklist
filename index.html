@@ -263,6 +263,35 @@
   .tierhelp dd { margin:0; color:var(--ink-2); }
   .tierhelp .note { margin:var(--s2) 0 0; color:var(--ink-3); }
 
+  /* ---- map page --------------------------------------------------------- */
+  /* Canvas, not SVG: the density grid is thousands of cells and repaints on every
+     layer change, and the land basemap is ~4k vertices. */
+  .maplayers { display:flex; flex-wrap:wrap; gap:.35rem; margin:var(--s3) 0 var(--s2); }
+  .maplayers button { font-family:var(--sans); font-size:var(--fs-small);
+    padding:.42rem .7rem; background:var(--surface); border:1px solid var(--rule-2);
+    border-radius:2px; color:var(--ink-2); cursor:pointer; display:flex;
+    align-items:center; gap:.4rem; }
+  .maplayers button:hover { border-color:var(--accent); color:var(--ink); }
+  .maplayers button[aria-pressed="true"] { border-color:var(--ink); color:var(--ink);
+    font-weight:600; background:var(--surface-2); }
+  .maplayers button i { width:10px; height:10px; border-radius:2px; flex:0 0 10px; }
+  .maplayers .n { font-family:var(--mono); font-size:.72rem; color:var(--ink-3); }
+
+  .mapwrap { border:1px solid var(--rule); background:var(--surface); overflow:hidden; }
+  #mapCanvas { display:block; width:100%; height:auto; cursor:crosshair; }
+  .maplegend { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
+               font-family:var(--sans); font-size:var(--fs-micro); color:var(--ink-3);
+               margin:var(--s2) 0 0; }
+  .maplegend .ramp { display:flex; }
+  .maplegend .ramp i { width:26px; height:11px; }
+  .mapstats { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
+              margin:var(--s2) 0 0; }
+  .mapstats strong { color:var(--ink); }
+  #mapTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
+            transition:opacity .12s; background:var(--ink); color:var(--ground);
+            font-family:var(--sans); font-size:var(--fs-small); padding:.4rem .6rem;
+            border-radius:3px; line-height:1.35; }
+
   /* ---- sites page ------------------------------------------------------- */
   .siteshead { font-size:var(--fs-h2); margin:var(--s5) 0 var(--s1); }
   .siteslede { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
@@ -533,6 +562,7 @@
 <nav><div class="wrap navbar" role="tablist">
   <button role="tab" aria-selected="true"  data-v="overview">Overview</button>
   <button role="tab" aria-selected="false" data-v="register">The Register</button>
+  <button role="tab" aria-selected="false" data-v="map">Map</button>
   <button role="tab" aria-selected="false" data-v="sites">Sites</button>
   <button role="tab" aria-selected="false" data-v="methods">Methods &amp; Limits</button>
 </div></nav>
@@ -684,6 +714,41 @@
   <button class="more" id="more" hidden>Show more</button>
 </section>
 
+<!-- ================================= MAP ================================ -->
+<section class="view wrap" id="v-map" hidden>
+  <div class="prose">
+    <h2 style="font-size:var(--fs-h2)">Where the record actually is</h2>
+    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0">
+      Density of georeferenced specimen and observation records for the species in
+      this register, drawn from GBIF. Switch layers to isolate a single restriction
+      tier or view them together.</p>
+  </div>
+
+  <div class="warn" style="margin-top:var(--s3)">
+    <h3>This maps collecting effort as much as biology</h3>
+    <p>A dense patch means <strong>records exist there</strong>, which is not the same
+      as species being concentrated there. Georeferenced records cluster around
+      institutions, expeditions and coastlines that somebody surveyed. Read the map as
+      a picture of where the evidence sits, not of where the risk is.</p>
+    <p>These are point records, <strong>not range maps</strong>, and they come from a
+      different source than the localities on the Sites page — so the two will not
+      correspond exactly. Individual records can also be plain wrong; GBIF's own
+      flagged coordinate errors are excluded, but some survive. That is why this shows
+      density rather than authoritative dots.</p>
+  </div>
+
+  <div class="maplayers" id="mapLayers"></div>
+
+  <div class="mapwrap">
+    <canvas id="mapCanvas" role="img"
+            aria-label="World density map of georeferenced records for species in the
+            register. The same data is available as a table under The Register."></canvas>
+  </div>
+  <div class="maplegend" id="mapLegend"></div>
+  <p class="mapstats" id="mapStats"></p>
+  <div id="mapTip" aria-hidden="true"></div>
+</section>
+
 <!-- ================================ SITES =============================== -->
 <section class="view wrap" id="v-sites" hidden>
   <div class="prose">
@@ -752,6 +817,8 @@
         via GBIF's Darwin Core mirror (accessed 2026&#8209;07&#8209;28).</td></tr>
       <tr><th>Taxonomy</th><td>GBIF Backbone, for synonym resolution and for
         independent verification of assessment status.</td></tr>
+      <tr><th>Map points</th><td>GBIF georeferenced occurrence records, queried by
+        strict taxon key. Basemap is Natural Earth 110m land (public domain).</td></tr>
     </table>
 
     <h3>What a restriction tier is</h3>
@@ -790,6 +857,41 @@
       Separately, the five tiers were defined before any outcome was seen, but the
       decision to split them at 4 was made after, which inflates the significance
       somewhat.</p>
+
+    <h3>How the map is built, and what it is not</h3>
+    <p>The register stores localities as text taken from Richardson's prose — "The Mano
+      River", "Arrowsmith Bank", "Espiritu Santo". Those were <strong>not</strong> run
+      through a gazetteer to make the map: place-name geocoding is ambiguous exactly
+      where this corpus is ambiguous, and a map that confidently places a species in
+      the wrong ocean is worse than no map. The points are real georeferenced specimen
+      and observation records from <strong>GBIF</strong>, queried per species.</p>
+    <p>One trap governed that query, and it is the same species of error that wrecked
+      the first never-assessed list. GBIF's free-text name search must not be used,
+      because many of these names are synonyms and it silently returns records of the
+      <em>accepted</em> species instead:</p>
+    <table class="ftable">
+      <tr><th><span class="sci">Anampses viridis</span>, free-text search</th>
+          <td class="num">3,071 records</td><td>centroid inland in New South Wales</td></tr>
+      <tr><th><span class="sci">Anampses viridis</span>, strict taxon key</th>
+          <td class="num">3 records</td><td>all at Réunion</td></tr>
+    </table>
+    <p>The book describes that species as known from a single specimen; the 3,071 belong
+      to <span class="sci">Anampses caeruleopunctatus</span>, its widespread senior
+      synonym. Every name is therefore resolved to a GBIF usage key by strict match
+      first, and records are pulled by taxon key. Records GBIF itself flags as having
+      bad coordinates are excluded, and points are capped at 30 per species so
+      well-collected species cannot dominate the surface.</p>
+    <p><strong>What the map is not.</strong> Not range maps — these are point records.
+      Not a picture of where risk is concentrated — it maps collecting effort at least
+      as much as biology, because georeferenced records cluster where institutions and
+      expeditions have worked. And not the same basis as the Sites page, which comes
+      from the book rather than from GBIF, so the two will not correspond exactly.
+      Some bad coordinates survive the filtering, which is why the page shows density
+      rather than authoritative dots.</p>
+    <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
+      the <span class="num">2,408</span> species here, <span class="num">943</span>
+      have no georeferenced record anywhere in GBIF. They are the least visible members
+      of an already invisible group, and they are absent from the map entirely.</p>
 
     <h3>What was discarded</h3>
     <p>An earlier composite score added points for a species not having been recorded
@@ -857,11 +959,16 @@ $("#theme").onclick = () => {
   const r = document.documentElement, cur = r.getAttribute("data-theme");
   r.setAttribute("data-theme", cur === "light" ? "dark" : "light");
   if (cur === "dark") r.removeAttribute("data-theme");
-  if (typeof drawField === "function" && DATA) drawField();
+  repaintCanvases();
 };
-matchMedia("(prefers-color-scheme:dark)").addEventListener("change", () => {
-  if (typeof drawField === "function" && DATA) drawField();
-});
+matchMedia("(prefers-color-scheme:dark)").addEventListener("change", repaintCanvases);
+
+/* Both the field and the map are painted into canvases, so neither inherits a CSS
+   variable change the way the DOM does — each needs an explicit repaint. */
+function repaintCanvases() {
+  if (typeof DATA !== "undefined" && DATA && typeof drawField === "function") drawField();
+  if (typeof MAP !== "undefined" && MAP && !$("#v-map").hidden) drawMap();
+}
 
 /* tabs */
 document.querySelectorAll('.navbar button').forEach(b => b.onclick = () => {
@@ -876,6 +983,9 @@ document.querySelectorAll('.navbar button').forEach(b => b.onclick = () => {
   // The field's own handler sets its filter AFTER switching tabs, so that path
   // still isolates one species.
   if (b.dataset.v === "register" && DATA) resetFilters();
+  // map.json is fetched on first visit only, then drawn — a hidden canvas has no
+  // width, so it must be drawn after the section becomes visible.
+  if (b.dataset.v === "map") ensureMap().then(ok => { if (ok) drawMap(); });
 });
 
 let siteFilter = "";
@@ -1008,7 +1118,13 @@ function boot() {
 
   drawField();
   startFeature();
-  addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(drawField, 150); });
+  addEventListener("resize", () => {
+    clearTimeout(rz);
+    rz = setTimeout(() => {
+      drawField();
+      if (MAP && !$("#v-map").hidden) drawMap();
+    }, 150);
+  });
 
   ["#q", "#fClass", "#fList"].forEach(s => $(s).oninput = apply);
   ["#cPri", "#cSil"].forEach(s => $(s).onclick = e => {
@@ -1150,6 +1266,154 @@ function nextFeature() {
   f.classList.add("fading");
   setTimeout(() => { fqAt++; showFeature(); f.classList.remove("fading"); }, 500);
 }
+
+/* ---------- map: density of georeferenced records ------------------------ */
+/* Loaded lazily on first visit — map.json is a separate request so the register
+   is not held up by geometry nobody has asked for yet. */
+let MAP = null, mapLayer = "all", mapCells = [], mapGeom = null;
+
+function mapColor(t) {
+  return t === "all" ? getComputedStyle(document.documentElement)
+                        .getPropertyValue("--accent").trim()
+                     : tierColor(t);
+}
+
+async function ensureMap() {
+  if (MAP) return true;
+  try {
+    MAP = await fetch("map.json").then(r => r.json());
+  } catch (e) {
+    $("#mapStats").textContent = "Could not load map.json.";
+    return false;
+  }
+  const st = MAP.stats;
+  $("#mapLayers").innerHTML = [
+    ["all", "All tiers", st.species_mapped],
+    ...[5, 4, 3, 2, 1].map(t => [String(t), "Tier " + t, st.mapped_by_tier[t] || 0]),
+  ].map(([k, label, n]) => `
+    <button data-layer="${k}" aria-pressed="${k === mapLayer}">
+      <i style="background:${k === "all" ? "var(--accent)" : `var(--t${k})`}"></i>
+      ${label}<span class="n">${n.toLocaleString()}</span></button>`).join("");
+  $("#mapLayers").addEventListener("click", e => {
+    const b = e.target.closest("button[data-layer]");
+    if (!b) return;
+    mapLayer = b.dataset.layer;
+    $("#mapLayers").querySelectorAll("button").forEach(x =>
+      x.setAttribute("aria-pressed", x === b));
+    drawMap();
+  });
+  $("#mapStats").innerHTML =
+    `<strong>${st.species_mapped.toLocaleString()}</strong> of
+     ${st.species_total.toLocaleString()} species have at least one georeferenced
+     record, plotted from <strong>${st.points.toLocaleString()}</strong> points
+     (capped at ${st.max_points_per_species} per species so well-collected species
+     cannot dominate the surface).
+     <strong>${st.species_unmapped.toLocaleString()}</strong> species have none at
+     all — no coordinates exist for them anywhere in GBIF, which makes them the least
+     visible of an already invisible group.`;
+  return true;
+}
+
+/* Equirectangular. Honest about area distortion, and the right choice here because
+   the point is comparing longitude bands, not measuring area. */
+function drawMap() {
+  const cv = $("#mapCanvas");
+  if (!MAP || !cv) return;
+  const cssW = cv.parentElement.clientWidth;
+  const cssH = Math.round(cssW / 2);              // 360x180 degrees
+  const dpr = Math.min(devicePixelRatio || 1, 2);
+  cv.width = Math.round(cssW * dpr);
+  cv.height = Math.round(cssH * dpr);
+  cv.style.height = cssH + "px";
+  const g = cv.getContext("2d");
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, cssW, cssH);
+  const X = lo => (lo + 180) / 360 * cssW;
+  const Y = la => (90 - la) / 180 * cssH;
+  mapGeom = {cssW, cssH};
+
+  const cs = getComputedStyle(document.documentElement);
+  const rule = cs.getPropertyValue("--rule").trim();
+  const surf2 = cs.getPropertyValue("--surface-2").trim();
+
+  // graticule every 30 degrees, recessive
+  g.strokeStyle = rule; g.lineWidth = 1;
+  for (let lo = -180; lo <= 180; lo += 30) {
+    g.beginPath(); g.moveTo(X(lo), 0); g.lineTo(X(lo), cssH); g.stroke();
+  }
+  for (let la = -60; la <= 60; la += 30) {
+    g.beginPath(); g.moveTo(0, Y(la)); g.lineTo(cssW, Y(la)); g.stroke();
+  }
+
+  // Land as flat fill plus a hairline: it is a backdrop and must never compete with
+  // the data, but fill alone gave almost no separation from the ocean, so the
+  // outline carries the coastline and the fill stays quiet.
+  g.fillStyle = surf2;
+  g.strokeStyle = cs.getPropertyValue("--rule-2").trim();
+  g.lineWidth = 1;
+  MAP.land.forEach(ring => {
+    g.beginPath();
+    ring.forEach(([lo, la], i) => i ? g.lineTo(X(lo), Y(la)) : g.moveTo(X(lo), Y(la)));
+    g.closePath(); g.fill(); g.stroke();
+  });
+
+  // bin into equal-degree cells, then shade by count: a heat map, one hue, so
+  // magnitude reads as magnitude
+  const CELL = cssW > 700 ? 2.5 : 4;              // degrees
+  const bins = new Map();
+  const want = mapLayer === "all" ? null : +mapLayer;
+  let n = 0;
+  for (const [lo, la, t] of MAP.points) {
+    if (want !== null && t !== want) continue;
+    n++;
+    const k = Math.floor((lo + 180) / CELL) + "," + Math.floor((90 - la) / CELL);
+    bins.set(k, (bins.get(k) || 0) + 1);
+  }
+  const max = Math.max(1, ...bins.values());
+  const base = mapColor(mapLayer);
+  mapCells = [];
+  const w = CELL / 360 * cssW, h = CELL / 180 * cssH;
+  bins.forEach((count, k) => {
+    const [cx, cy] = k.split(",").map(Number);
+    const x = cx * w, y = cy * h;
+    // sqrt so a single record is still visible next to a hundred
+    g.globalAlpha = 0.22 + 0.78 * Math.sqrt(count / max);
+    g.fillStyle = base;
+    g.fillRect(x, y, Math.ceil(w), Math.ceil(h));
+    mapCells.push({x, y, w, h, count,
+                   lo: cx * CELL - 180, la: 90 - cy * CELL});
+  });
+  g.globalAlpha = 1;
+
+  $("#mapLegend").innerHTML = `
+    <span>fewer records</span>
+    <span class="ramp">${[0.15, 0.35, 0.55, 0.78, 1].map(a =>
+      `<i style="background:${base};opacity:${0.22 + 0.78 * a}"></i>`).join("")}</span>
+    <span>more &nbsp;·&nbsp; densest cell: ${max.toLocaleString()} records &nbsp;·&nbsp;
+      ${n.toLocaleString()} points in this layer &nbsp;·&nbsp; ${CELL}° cells,
+      equirectangular</span>`;
+}
+
+(function wireMap() {
+  const cv = $("#mapCanvas"), tip = $("#mapTip");
+  if (!cv) return;
+  cv.addEventListener("mousemove", ev => {
+    const r = cv.getBoundingClientRect();
+    const x = ev.clientX - r.left, y = ev.clientY - r.top;
+    const hit = mapCells.find(c => x >= c.x && x < c.x + c.w && y >= c.y && y < c.y + c.h);
+    if (!hit) { tip.style.opacity = 0; return; }
+    const ns = n => (n < 0 ? Math.abs(n).toFixed(0) + "°S" : n.toFixed(0) + "°N");
+    const ew = n => (n < 0 ? Math.abs(n).toFixed(0) + "°W" : n.toFixed(0) + "°E");
+    tip.innerHTML = `<b>${hit.count.toLocaleString()} record${
+      hit.count === 1 ? "" : "s"}</b> ${ns(hit.la)} ${ew(hit.lo)}`;
+    tip.style.opacity = 1;
+    let left = ev.clientX + 14, top = ev.clientY + 14;
+    if (left + tip.offsetWidth > innerWidth - 8) left = ev.clientX - tip.offsetWidth - 14;
+    if (top + tip.offsetHeight > innerHeight - 8) top = ev.clientY - tip.offsetHeight - 14;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  });
+  cv.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+})();
 
 function apply() {
   const q = $("#q").value.trim().toLowerCase(),
