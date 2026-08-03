@@ -352,11 +352,11 @@
   /* ---- featured evidence ------------------------------------------------ */
   /* The most persuasive material in the corpus is Richardson's own prose, so it
      is set at display size rather than buried in a table cell. */
-  /* Now the first thing on the page: a real record opens the argument, and the
-     headline below it reads as the interpretation. */
-  /* figure carries a 40px UA side margin, which pulled this in from the column. */
-  .feature { border-bottom:1px solid var(--rule); margin:0 0 var(--s4);
-             padding-bottom:var(--s4); text-align:center; }
+  /* Sits under the opening statement: the reader gets the framing, then a real
+     record as its evidence. `margin:0` because figure carries a 40px UA side
+     margin that otherwise pulls it in from the column. */
+  .feature { border-top:1px solid var(--rule); margin:var(--s4) 0 0;
+             padding-top:var(--s4); text-align:center; }
   .feature blockquote { font-size:var(--fs-quote); line-height:1.4;
                         margin:var(--s2) auto 0; max-width:52ch; text-wrap:pretty;
                         letter-spacing:-.012em; transition:opacity .5s; }
@@ -571,12 +571,6 @@
 <section class="view" id="v-overview">
  <div class="hero">
   <div class="wrap">
-    <figure class="feature" id="feature">
-      <p class="eyebrow">What the record actually says</p>
-      <blockquote id="fqQuote"></blockquote>
-      <figcaption id="fqCap"></figcaption>
-    </figure>
-
     <div class="intro">
       <p class="eyebrow">What this is</p>
       <h2>A species can be lost without ever having been counted as at risk.</h2>
@@ -586,6 +580,12 @@
         information to say. Others are <strong>Not Evaluated</strong> — nobody has
         looked at all. In practice both are treated as though the species were safe.</p>
     </div>
+
+    <figure class="feature" id="feature">
+      <p class="eyebrow">What the record actually says</p>
+      <blockquote id="fqQuote"></blockquote>
+      <figcaption id="fqCap"></figcaption>
+    </figure>
 
     <div class="stakes">
       <h3>Why it matters that these species have no category</h3>
