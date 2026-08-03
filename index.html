@@ -7,6 +7,7 @@
 <meta name="description" content="A register of vertebrate species that the IUCN Red List records as Data Deficient or has never assessed, ranked by how narrowly restricted the published record says they are.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://speciesblacklist.org/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 
 <!-- Shared-link previews. The advocacy case for this register travels by link,
      so a bare URL with no card is a wasted send. -->
@@ -151,6 +152,15 @@
   .brand:hover img { opacity:.75; }
 
   .mast-title { text-align:center; padding-top:var(--s3); padding-bottom:var(--s3); }
+  /* Horizontal lockup, centred as a group so the optical centre is the pair rather
+     than the wordmark alone. */
+  .lockup { display:flex; align-items:center; justify-content:center; gap:.85rem; }
+  .lockup .logomark { width:clamp(34px,5vw,52px); height:auto; flex:0 0 auto;
+                      color:var(--ink); }
+  @media (max-width:520px) {
+    .lockup { gap:.6rem; }
+    .lockup .logomark { width:30px; }
+  }
   .mast h1 { font-size:clamp(1.6rem,4vw,2.4rem); letter-spacing:-.02em; }
   .mast .sub { font-family:var(--sans); font-size:.85rem; color:var(--ink-2);
                margin-top:.45rem; }
@@ -568,7 +578,21 @@
     </div>
   </div>
   <div class="wrap mast-title">
-    <h1>The Species Black List</h1>
+    <div class="lockup">
+      <!-- Inline rather than <img> so the mark can use currentColor and the theme
+           variables directly: one copy of the geometry, correct in both themes,
+           no JS. The blank fourth entry is the whole idea of the register. -->
+      <svg class="logomark" viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="currentColor">
+          <rect x="3" y="4"  width="26" height="4" rx="1.2"/>
+          <rect x="3" y="11" width="20" height="4" rx="1.2"/>
+          <rect x="3" y="18" width="23" height="4" rx="1.2"/>
+        </g>
+        <rect x="3.85" y="25.85" width="15.3" height="4.3" rx="1.4"
+              fill="none" stroke="var(--t3)" stroke-width="1.7"/>
+      </svg>
+      <h1>The Species Black List</h1>
+    </div>
     <p class="sub">Vertebrates the Red List cannot yet speak for &middot;
       IUCN v2026&#8209;1</p>
   </div>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"
+     role="img" aria-label="The Species Black List">
+  <title>The Species Black List</title>
+  <!-- Standalone file, so page CSS variables cannot reach it: the theme response
+       has to live inside the SVG. Browser chrome may be light or dark and we do not
+       get to know which, so both are declared. -->
+  <style>
+    .ink { fill:#171A21 }
+    .gap { fill:none; stroke:#B4762B; stroke-width:2.4 }
+    @media (prefers-color-scheme:dark) {
+      .ink { fill:#E6E8EC }
+      .gap { stroke:#DCB068 }
+    }
+  </style>
+  <!-- three written entries -->
+  <g class="ink">
+    <rect x="3" y="4"  width="26" height="4.5" rx="1"/>
+    <rect x="3" y="12" width="20" height="4.5" rx="1"/>
+    <rect x="3" y="20" width="23" height="4.5" rx="1"/>
+  </g>
+  <!-- and the one left blank -->
+  <rect class="gap" x="4.2" y="27.2" width="14.6" height="3.6" rx="1"/>
+</svg>
