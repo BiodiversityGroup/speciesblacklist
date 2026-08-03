@@ -266,7 +266,20 @@
   /* ---- map page --------------------------------------------------------- */
   /* Canvas, not SVG: the density grid is thousands of cells and repaints on every
      layer change, and the land basemap is ~4k vertices. */
-  .maplayers { display:flex; flex-wrap:wrap; gap:.35rem; margin:var(--s3) 0 var(--s2); }
+  /* Two independent axes: which SOURCE is shown, and which TIER is isolated. Kept
+     as separate control groups because they are not alternatives to each other. */
+  .mapsource { display:flex; flex-wrap:wrap; gap:.35rem; align-items:center;
+               margin:var(--s3) 0 0; }
+  .mapsource .eyebrow { margin:0 .3rem 0 0; }
+  .mapsource button { font-family:var(--sans); font-size:var(--fs-small);
+    padding:.42rem .7rem; background:var(--surface); border:1px solid var(--rule-2);
+    border-radius:2px; color:var(--ink-3); cursor:pointer; }
+  .mapsource button[aria-pressed="true"] { color:var(--ink); border-color:var(--ink);
+    font-weight:600; background:var(--surface-2); }
+  .mapcaveat { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-3);
+               margin:var(--s2) 0 0; line-height:1.5; max-width:none; }
+  .mapcaveat strong { color:var(--ink-2); }
+  .maplayers { display:flex; flex-wrap:wrap; gap:.35rem; margin:var(--s2) 0 var(--s2); }
   .maplayers button { font-family:var(--sans); font-size:var(--fs-small);
     padding:.42rem .7rem; background:var(--surface); border:1px solid var(--rule-2);
     border-radius:2px; color:var(--ink-2); cursor:pointer; display:flex;
@@ -739,6 +752,13 @@
       density rather than authoritative dots.</p>
   </div>
 
+  <div class="mapsource">
+    <span class="eyebrow">Show</span>
+    <button id="srcGbif"  aria-pressed="true">Specimen records</button>
+    <button id="srcLoc"   aria-pressed="true">Localities (cross-checked)</button>
+    <button id="srcLocU"  aria-pressed="false">+ unverified localities</button>
+  </div>
+  <p class="mapcaveat" id="mapCaveat"></p>
   <div class="maplayers" id="mapLayers"></div>
 
   <div class="mapwrap">
@@ -917,6 +937,32 @@
       from the book rather than from GBIF, so the two will not correspond exactly.
       Some bad coordinates survive the filtering, which is why the page shows density
       rather than authoritative dots.</p>
+    <h4 style="font-size:.95rem;margin:1.4rem 0 .3rem">Geocoding the locality names</h4>
+    <p>The register's place names are also plotted, as rings, because refusing to look
+      up "Salween River" while happily printing it was inconsistent. But a gazetteer
+      answers any string, and two checks are needed, not one.</p>
+    <p><strong>Type agreement</strong> catches the obvious failures: asked for "The
+      Cordillera Central", Nominatim returns a <em>university</em> in Baguio. A name
+      ending "River" must come back as a waterway, "Island" as an island; buildings,
+      roads and campuses are rejected outright. That removed 295 of 889 candidates.</p>
+    <p><strong>But type agreement cannot see a same-type homonym</strong>, and those are
+      common. "Congo River" resolved to a real river of that name in Sierra Leone,
+      4,000&nbsp;km from the Congo, passing cleanly as river/river. "Dunk Island"
+      resolved near Sydney rather than Queensland. So each geocode is then measured
+      against the GBIF records of the species that sit at that locality — an
+      independent witness already held:</p>
+    <table class="ftable">
+      <tr><th>Agree within 500&nbsp;km — plotted</th><td class="num">279</td></tr>
+      <tr><th>Disagree by more — discarded</th><td class="num">83</td></tr>
+      <tr><th>No species with records to check against — off by default</th><td class="num">161</td></tr>
+    </table>
+    <p><strong>Nearly one in four checkable geocodes was wrong by more than
+      500&nbsp;km</strong>, and none of those errors was detectable from the name or the
+      feature type alone. That rate is the reason the unverified 161 are not plotted by
+      default: there is no reason to think they are cleaner, and they cannot be tested.
+      The validated rings add <span class="num">95</span> species that have no
+      georeferenced record of their own — modest, but every one is corroborated.</p>
+
     <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
       the <span class="num">2,408</span> species here, <span class="num">943</span>
       have no georeferenced record anywhere in GBIF. They are the least visible members
@@ -1320,7 +1366,21 @@ function nextFeature() {
 /* ---------- map: density of georeferenced records ------------------------ */
 /* Loaded lazily on first visit — map.json is a separate request so the register
    is not held up by geometry nobody has asked for yet. */
-let MAP = null, mapLayer = "all", mapCells = [], mapGeom = null;
+let MAP = null, GEO = null, mapLayer = "all", mapCells = [], mapDots = [], mapGeom = null;
+let showGbif = true, showLoc = true, showLocU = false;
+
+/* Per-locality tier breakdown, computed from the register so the locality overlay
+   honours the same tier filter as the density surface. */
+let locTiers = null;
+function buildLocTiers() {
+  locTiers = {};
+  DATA.species.forEach(s => {
+    if (!s.s) return;
+    (locTiers[s.s] = locTiers[s.s] || {total: 0})[s.t] =
+      (locTiers[s.s][s.t] || 0) + 1;
+    locTiers[s.s].total++;
+  });
+}
 
 function mapColor(t) {
   return t === "all" ? getComputedStyle(document.documentElement)
@@ -1336,6 +1396,31 @@ async function ensureMap() {
     $("#mapStats").textContent = "Could not load map.json.";
     return false;
   }
+  // geo.json is optional: if geocoding has not been run the map still works,
+  // it just has no locality overlay.
+  try { GEO = await fetch("geo.json").then(r => r.json()); } catch (e) { GEO = null; }
+  buildLocTiers();
+  if (!GEO) { ["#srcLoc", "#srcLocU"].forEach(x => { $(x).disabled = true;
+              $(x).setAttribute("aria-pressed", "false"); });
+              showLoc = showLocU = false; }
+  ["#srcGbif", "#srcLoc", "#srcLocU"].forEach(sel => $(sel).onclick = () => {
+    const b = $(sel), on = b.getAttribute("aria-pressed") !== "true";
+    b.setAttribute("aria-pressed", on);
+    if (sel === "#srcGbif") showGbif = on;
+    else if (sel === "#srcLoc") showLoc = on;
+    else showLocU = on;
+    drawMap();
+  });
+  const ck = GEO ? GEO.check : {};
+  $("#mapCaveat").innerHTML = GEO ? `Locality points are gazetteer lookups of the
+    place names in the register, each then measured against the GBIF records of the
+    species that sit there. <strong>${ck.validated || 0}</strong> agree and are
+    plotted; <strong>${ck.contradicted || 0}</strong> disagreed by more than
+    ${GEO.threshold_km}&nbsp;km and are discarded — "Congo River" resolved to a real
+    river of that name in Sierra Leone, 4,000&nbsp;km from the Congo, and passed a
+    type check as river/river. <strong>${ck.unverified || 0}</strong> have no species
+    with records to check against, so they cannot be verified either way; those are
+    off by default.` : "";
   const st = MAP.stats;
   $("#mapLayers").innerHTML = [
     ["all", "All tiers", st.species_mapped],
@@ -1423,25 +1508,61 @@ function drawMap() {
   const base = mapColor(mapLayer);
   mapCells = [];
   const w = CELL / 360 * cssW, h = CELL / 180 * cssH;
-  bins.forEach((count, k) => {
-    const [cx, cy] = k.split(",").map(Number);
-    const x = cx * w, y = cy * h;
-    // sqrt so a single record is still visible next to a hundred
-    g.globalAlpha = 0.22 + 0.78 * Math.sqrt(count / max);
-    g.fillStyle = base;
-    g.fillRect(x, y, Math.ceil(w), Math.ceil(h));
-    mapCells.push({x, y, w, h, count,
-                   lo: cx * CELL - 180, la: 90 - cy * CELL});
-  });
-  g.globalAlpha = 1;
+  if (showGbif) {
+    bins.forEach((count, k) => {
+      const [cx, cy] = k.split(",").map(Number);
+      const x = cx * w, y = cy * h;
+      // sqrt so a single record is still visible next to a hundred
+      g.globalAlpha = 0.22 + 0.78 * Math.sqrt(count / max);
+      g.fillStyle = base;
+      g.fillRect(x, y, Math.ceil(w), Math.ceil(h));
+      mapCells.push({x, y, w, h, count,
+                     lo: cx * CELL - 180, la: 90 - cy * CELL});
+    });
+    g.globalAlpha = 1;
+  }
 
-  $("#mapLegend").innerHTML = `
-    <span>fewer records</span>
+  /* Locality overlay. Each circle is ONE named place holding N species, which is a
+     different quantity from a count of records — so it is drawn as a proportional
+     ring rather than folded into the density surface, where it would double-count
+     and hide which provenance produced what. */
+  mapDots = [];
+  let locCount = 0, locSpecies = 0;
+  if (showLoc && GEO) {
+    Object.entries(GEO.localities).forEach(([name, L]) => {
+      if (L.check === "validated" ? !showLoc : !showLocU) return;
+      const tiers = locTiers[name];
+      if (!tiers) return;
+      const n = want === null ? tiers.total : (tiers[want] || 0);
+      if (!n) return;
+      locCount++; locSpecies += n;
+      const x = X(L.lon), y = Y(L.lat);
+      const rad = Math.min(13, 2.6 + Math.sqrt(n) * 1.9);
+      const unver = L.check !== "validated";
+      g.beginPath(); g.arc(x, y, rad, 0, Math.PI * 2);
+      g.fillStyle = base; g.globalAlpha = unver ? 0.07 : 0.2; g.fill();
+      g.globalAlpha = 1; g.lineWidth = 1.5; g.strokeStyle = base;
+      g.setLineDash(unver ? [3, 3] : []);
+      g.stroke(); g.setLineDash([]);
+      mapDots.push({x, y, r: rad, name, n, kind: L.kind, check: L.check});
+    });
+  }
+
+  $("#mapCounts") && ($("#mapCounts").textContent = "");
+
+  const parts = [];
+  if (showGbif) parts.push(`<span>fewer records</span>
     <span class="ramp">${[0.15, 0.35, 0.55, 0.78, 1].map(a =>
       `<i style="background:${base};opacity:${0.22 + 0.78 * a}"></i>`).join("")}</span>
-    <span>more &nbsp;·&nbsp; densest cell: ${max.toLocaleString()} records &nbsp;·&nbsp;
-      ${n.toLocaleString()} points in this layer &nbsp;·&nbsp; ${CELL}° cells,
-      equirectangular</span>`;
+    <span>more — shaded cells are specimen records
+      (densest ${max.toLocaleString()}, ${n.toLocaleString()} points, ${CELL}° cells)</span>`);
+  if (showLoc && GEO) parts.push(`<span style="display:flex;align-items:center;gap:.4rem">
+      <svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6"
+        fill="${base}" fill-opacity="0.2" stroke="${base}" stroke-width="1.5"/></svg>
+      rings are named localities, sized by species
+      (${locCount.toLocaleString()} places, ${locSpecies.toLocaleString()} species)</span>`);
+  parts.push("<span>equirectangular</span>");
+  $("#mapLegend").innerHTML = parts.join('<span style="opacity:.4">·</span>');
 }
 
 (function wireMap() {
@@ -1450,12 +1571,22 @@ function drawMap() {
   cv.addEventListener("mousemove", ev => {
     const r = cv.getBoundingClientRect();
     const x = ev.clientX - r.left, y = ev.clientY - r.top;
-    const hit = mapCells.find(c => x >= c.x && x < c.x + c.w && y >= c.y && y < c.y + c.h);
-    if (!hit) { tip.style.opacity = 0; return; }
+    // a locality ring wins over the cell beneath it: it is the more specific thing
+    const dot = mapDots.find(d => Math.hypot(x - d.x, y - d.y) <= d.r + 2);
+    const hit = dot || mapCells.find(c =>
+      x >= c.x && x < c.x + c.w && y >= c.y && y < c.y + c.h);
+    if (!hit) { tip.style.opacity = 0; cv.style.cursor = "crosshair"; return; }
+    cv.style.cursor = dot ? "pointer" : "crosshair";
     const ns = n => (n < 0 ? Math.abs(n).toFixed(0) + "°S" : n.toFixed(0) + "°N");
     const ew = n => (n < 0 ? Math.abs(n).toFixed(0) + "°W" : n.toFixed(0) + "°E");
-    tip.innerHTML = `<b>${hit.count.toLocaleString()} record${
-      hit.count === 1 ? "" : "s"}</b> ${ns(hit.la)} ${ew(hit.lo)}`;
+    tip.innerHTML = dot
+      ? `<b>${esc(dot.name)}</b>${dot.n.toLocaleString()} species in this layer
+         <span style="opacity:.7">· ${esc(dot.kind)}${
+           dot.check === "validated" ? " · cross-checked against records"
+             : " · UNVERIFIED location"}</span>
+         <span style="opacity:.7">· select to open in register</span>`
+      : `<b>${hit.count.toLocaleString()} record${hit.count === 1 ? "" : "s"}</b>
+         ${ns(hit.la)} ${ew(hit.lo)}`;
     tip.style.opacity = 1;
     let left = ev.clientX + 14, top = ev.clientY + 14;
     if (left + tip.offsetWidth > innerWidth - 8) left = ev.clientX - tip.offsetWidth - 14;
@@ -1463,6 +1594,22 @@ function drawMap() {
     tip.style.left = left + "px"; tip.style.top = top + "px";
   });
   cv.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+  cv.addEventListener("click", ev => {
+    const r = cv.getBoundingClientRect();
+    const x = ev.clientX - r.left, y = ev.clientY - r.top;
+    const dot = mapDots.find(d => Math.hypot(x - d.x, y - d.y) <= d.r + 2);
+    if (!dot) return;
+    document.querySelector('[data-v="register"]').click();
+    siteFilter = dot.name;
+    apply();
+  });
+})();
+
+/* #mapTip carries two lines for locality hits, so let the label break. */
+(function tipStyle() {
+  const s = document.createElement("style");
+  s.textContent = "#mapTip span{display:block}#mapTip b{display:block}";
+  document.head.appendChild(s);
 })();
 
 function apply() {
