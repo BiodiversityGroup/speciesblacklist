@@ -134,12 +134,9 @@
            color:var(--ink-2); font-family:var(--sans); font-size:var(--fs-small);
            font-weight:600; letter-spacing:.01em; }
   .brand:hover { color:var(--accent); }
-  /* The asset is a white frog on transparency, so it disappears on the light
-     surface. Inverting it to ink keeps one file serving both themes. */
-  .brand img { display:block; height:32px; width:auto; filter:invert(1) brightness(.18); }
-  @media (prefers-color-scheme:dark) { .brand img { filter:none; } }
-  :root[data-theme="dark"]  .brand img { filter:none; }
-  :root[data-theme="light"] .brand img { filter:invert(1) brightness(.18); }
+  /* Kept as the original white asset, unmodified, by request. Note this means it
+     has almost no contrast against the light theme's --surface masthead. */
+  .brand img { display:block; height:32px; width:auto; }
   .brand:hover img { opacity:.75; }
 
   .mast-title { text-align:center; padding:var(--s3) 0 var(--s3); }
@@ -181,6 +178,12 @@
   .hero h2 { font-size:var(--fs-display); letter-spacing:-.025em; max-width:24ch;
              margin-top:var(--s1); }
   .hero .lede { max-width:56ch; }
+
+  /* The opening statement is centred; the stakes block and the field below it
+     stay left-aligned, so the measure constraints need auto side margins rather
+     than a blanket rule on the hero. */
+  .intro { text-align:center; }
+  .intro h2, .intro .lede { margin-left:auto; margin-right:auto; }
 
   .field-wrap { margin:var(--s5) 0 0; }
   .field-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:var(--s1) var(--s3);
@@ -264,16 +267,16 @@
      headline below it reads as the interpretation. */
   /* figure carries a 40px UA side margin, which pulled this in from the column. */
   .feature { border-bottom:1px solid var(--rule); margin:0 0 var(--s4);
-             padding-bottom:var(--s4); }
-  .feature blockquote { font-size:var(--fs-quote); line-height:1.4; margin:var(--s2) 0 0;
-                        max-width:52ch; text-wrap:pretty; letter-spacing:-.012em;
-                        transition:opacity .5s; }
+             padding-bottom:var(--s4); text-align:center; }
+  .feature blockquote { font-size:var(--fs-quote); line-height:1.4;
+                        margin:var(--s2) auto 0; max-width:52ch; text-wrap:pretty;
+                        letter-spacing:-.012em; transition:opacity .5s; }
   .feature blockquote::before { content:"“"; color:var(--t4); margin-right:.1em; }
   .feature blockquote::after  { content:"”"; color:var(--t4); }
   .feature figcaption { font-family:var(--sans); font-size:var(--fs-small);
                         color:var(--ink-3); margin-top:var(--s2);
-                        display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
-                        transition:opacity .5s; }
+                        display:flex; align-items:center; justify-content:center;
+                        gap:.5rem; flex-wrap:wrap; transition:opacity .5s; }
   .feature figcaption .sci { color:var(--ink-2); }
   .feature.fading blockquote, .feature.fading figcaption { opacity:0; }
   @media (prefers-reduced-motion:reduce) {
@@ -482,13 +485,15 @@
       <figcaption id="fqCap"></figcaption>
     </figure>
 
-    <p class="eyebrow">What this is</p>
-    <h2>A species can be lost without ever having been counted as at risk.</h2>
-    <p class="lede">The IUCN Red List is the world's authority on extinction risk, and
-      it has two blind spots. Some species are assessed and come back
-      <strong>Data Deficient</strong> — IUCN looked, and there was not enough
-      information to say. Others are <strong>Not Evaluated</strong> — nobody has
-      looked at all. In practice both are treated as though the species were safe.</p>
+    <div class="intro">
+      <p class="eyebrow">What this is</p>
+      <h2>A species can be lost without ever having been counted as at risk.</h2>
+      <p class="lede">The IUCN Red List is the world's authority on extinction risk, and
+        it has two blind spots. Some species are assessed and come back
+        <strong>Data Deficient</strong> — IUCN looked, and there was not enough
+        information to say. Others are <strong>Not Evaluated</strong> — nobody has
+        looked at all. In practice both are treated as though the species were safe.</p>
+    </div>
 
     <div class="stakes">
       <h3>Why it matters that these species have no category</h3>
