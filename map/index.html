@@ -1718,17 +1718,24 @@ function drawMap() {
   const max = Math.max(1, ...bins.values());
   const base = mapColor(mapLayer);
   mapCells = [];
-  const w = CELL / 360 * cssW, h = CELL / 180 * cssH;
+  // Cells must go through the same projection as everything else. Deriving their
+  // position straight from the bin index ignored the pan/zoom transform, so while
+  // the coastlines zoomed the cells stayed in their unzoomed layout and merely
+  // shrank as CELL shrank — a miniature world of specks over a zoomed basemap.
+  // Because CELL scales as base/k, w and h stay constant in screen pixels.
+  const w = CELL / 360 * cssW * view.k, h = CELL / 180 * cssH * view.k;
   if (showGbif) {
     bins.forEach((count, k) => {
       const [cx, cy] = k.split(",").map(Number);
-      const x = cx * w, y = cy * h;
+      const lo = cx * CELL - 180, la = 90 - cy * CELL;
+      const x = X(lo), y = Y(la);
+      // skip what is scrolled out of frame instead of painting off-canvas
+      if (x + w < 0 || x > cssW || y + h < 0 || y > cssH) return;
       // sqrt so a single record is still visible next to a hundred
       g.globalAlpha = 0.22 + 0.78 * Math.sqrt(count / max);
       g.fillStyle = base;
       g.fillRect(x, y, Math.ceil(w), Math.ceil(h));
-      mapCells.push({x, y, w, h, count, species: binSp.get(k),
-                     lo: cx * CELL - 180, la: 90 - cy * CELL});
+      mapCells.push({x, y, w, h, count, species: binSp.get(k), lo, la});
     });
     g.globalAlpha = 1;
   }
