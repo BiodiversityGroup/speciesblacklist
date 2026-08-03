@@ -15,16 +15,86 @@ only binomials is needlessly hostile to non-taxonomists.
 Outputs: site/data.json
          site/index.html is hand-authored, not generated
 """
-import csv, json, os, re, collections
+import csv, json, os, re, collections, importlib.util
 
 csv.field_size_limit(10 ** 9)
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJ = os.path.dirname(HERE)
 BUILD = os.path.join(PROJ, "build_2026")
 SITE = os.path.join(PROJ, "site")
+BOOK = os.path.join(PROJ, "Threatened and Recently-Extinct Vertebrates.txt")
 
 # "The Marsa el At combtooth blenny (Adelotremus leptus) is known only from ..."
 VERNACULAR = re.compile(r"([A-Z][^()]{2,70}?)\s*\(([A-Z][a-z]+ [a-z]+)\)")
+
+# --- site metadata ----------------------------------------------------------
+# The bare site strings were unusable on their own. Three separate faults:
+#
+#   * '“Miombo”' kept the book's curly quotes, because Richardson is
+#     *defining* the word, not naming a place.
+#   * 'Terra firma', 'The cerrado', 'Lowland rainforests' are habitat TYPES that
+#     the extractor treated as localities. They are still useful groupings but
+#     must not be presented as places you could go and survey.
+#   * 'Espiritu Santo', 'Luzon', 'Palawan', 'Manus' are real places whose names
+#     are ambiguous worldwide.
+#
+# The fix for the last one is deliberately NOT to attach country names myself --
+# inferring geography is how you end up confidently placing Espiritu Santo in the
+# wrong ocean. Richardson's own opening sentence almost always says where it is
+# ("Espiritu Santo is the largest of the Vanuatu Islands"), so that sentence is
+# carried through as the site's context line and the reader gets the source's
+# words rather than my inference.
+
+# A block that defines a term is describing a habitat, not naming a locality.
+HABITAT_DEF = re.compile(
+    r"literally means|is the vernacular word|refers to (a |the )?(type|kind|forest|"
+    r"woodland|habitat|vegetation)|is a (type|kind|term|word|name for a)|"
+    r"are characterized by|is the term|denotes", re.I)
+# Names that are plainly a habitat rather than a place, even without a definition.
+HABITAT_NAME = re.compile(
+    r"^(the )?(terra firma|cerrado|caatinga|miombo|campo|chaco|p[aá]ramo|"
+    r"lowland rainforests?|scattered patches|montane forests?|mangroves?|"
+    r"cloud forests?|dry forests?|coastal forests?|savanna)", re.I)
+
+
+def clean_site(name):
+    """Strip the book's quotation marks and stray leading clauses off a site name."""
+    n = (name or "").strip()
+    n = n.strip("“”‘’\"'")
+    # 'Located in the southeastern Philippines, Mindanao' -> 'Mindanao'
+    m = re.match(r"^(?:Located|Situated|Lying|Found)\b[^,]*,\s*(.+)$", n, re.I)
+    if m:
+        n = m.group(1).strip()
+    return n.strip().rstrip(",")
+
+
+def first_sentence(block_text, site):
+    """Richardson's opening sentence for a locality: the geographic context."""
+    for sent in re.split(r"(?<=[.;])\s+", block_text):
+        s = " ".join(sent.split())
+        # skip the sentence if it is really a species record
+        if "(" in s and re.search(r"\([A-Z][a-z]+ [a-z]+\)", s):
+            continue
+        if len(s) > 20:
+            return s
+    return ""
+
+
+def build_site_meta():
+    """raw site string -> {name, context, habitat} using the book's own prose."""
+    spec = importlib.util.spec_from_file_location(
+        "extract", os.path.join(HERE, "03_extract_and_score.py"))
+    ex = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ex)
+    meta = {}
+    for site, text in ex.blocks():
+        if not site or site in meta:
+            continue
+        ctx = first_sentence(text, site)
+        name = clean_site(site)
+        habitat = bool(HABITAT_DEF.search(ctx)) or bool(HABITAT_NAME.match(name))
+        meta[site] = {"name": name, "context": ctx, "habitat": habitat}
+    return meta
 
 
 def vernacular_for(binomial, sentence):
@@ -76,7 +146,18 @@ def main():
     named = sum(1 for s in species if s["v"])
     print(f"species: {len(species):,}  (common name recovered for {named:,})")
 
+    # Rewrite each species' site to its cleaned display name so the register and
+    # the sites page agree, and so a filter on one matches the other.
+    smeta = build_site_meta()
+    for s in species:
+        m = smeta.get(s["s"])
+        s["s"] = m["name"] if m else clean_site(s["s"])
+
     sites = collections.Counter(s["s"] for s in species if s["s"])
+    # collapse the metadata onto cleaned names
+    by_name = {}
+    for raw, m in smeta.items():
+        by_name.setdefault(m["name"], m)
     payload = {
         "meta": {
             "redlist_version": "2026-1",
@@ -116,7 +197,13 @@ def main():
         "classes": dict(collections.Counter(s["c"] for s in species).most_common()),
         "tier_counts": dict(sorted(collections.Counter(
             s["t"] for s in species).items(), reverse=True)),
-        "sites": [{"name": n, "count": c} for n, c in sites.most_common() if c >= 3],
+        # Each site carries the book's own opening sentence as context, so an
+        # ambiguous name like "Espiritu Santo" is disambiguated by the source
+        # rather than by inference, and habitat types are labelled as such.
+        "sites": [{"name": n, "count": c,
+                   "context": (by_name.get(n) or {}).get("context", ""),
+                   "habitat": bool((by_name.get(n) or {}).get("habitat"))}
+                  for n, c in sites.most_common() if c >= 3],
         "species": sorted(species, key=lambda s: (-s["t"], s["c"], s["n"])),
     }
 

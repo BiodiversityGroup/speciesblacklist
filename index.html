@@ -76,7 +76,10 @@
     --serif:Georgia,"Palatino Linotype",Palatino,"Book Antiqua",ui-serif,serif;
     --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
     --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-    --pad:clamp(1rem,4vw,2.5rem);
+    /* 1.35rem floor rather than 1rem: at 375px the register table, the sites
+       list and the methods tables were all sitting ~16px off the edge, which
+       reads as touching it once each of them has its own border. */
+    --pad:clamp(1.35rem,4vw,2.5rem);
     /* Type scale. Ratio ~1.28, with a deliberate jump to --fs-display so the
        hero carries real weight against an otherwise dense, tabular page. */
     --fs-micro:.68rem; --fs-small:.78rem; --fs-body:.9rem; --fs-base:1rem;
@@ -129,7 +132,7 @@
   /* Three tracks so the brand sits on the true page centre regardless of how wide
      the controls are; an even flex row would push it off-centre. */
   .utility { display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
-             gap:var(--s2); padding:.8rem 0 0; }
+             gap:var(--s2); padding-top:.8rem; }
   .utility .brand { grid-column:2; justify-self:center; }
   .utility .mast-right { grid-column:3; justify-self:end; }
   @media (max-width:620px) {
@@ -147,7 +150,7 @@
   .brand img { display:block; height:32px; width:auto; }
   .brand:hover img { opacity:.75; }
 
-  .mast-title { text-align:center; padding:var(--s3) 0 var(--s3); }
+  .mast-title { text-align:center; padding-top:var(--s3); padding-bottom:var(--s3); }
   .mast h1 { font-size:clamp(1.6rem,4vw,2.4rem); letter-spacing:-.02em; }
   .mast .sub { font-family:var(--sans); font-size:.85rem; color:var(--ink-2);
                margin-top:.45rem; }
@@ -176,7 +179,10 @@
   .navbar button[aria-selected="true"] { color:var(--ink); border-bottom-color:var(--accent);
     font-weight:600; }
 
-  section.view { padding:2.2rem 0 4rem; }
+  /* Longhand: a `padding` shorthand here would zero the horizontal padding
+     .wrap supplies, which left the register, sites and methods pages flush
+     against the screen edge on a phone. */
+  section.view { padding-top:2.2rem; padding-bottom:4rem; }
   section.view[hidden] { display:none; }
 
   /* ---- cover sheet ------------------------------------------------------ */
@@ -256,6 +262,40 @@
   .tierhelp dt { display:flex; align-items:center; gap:.5rem; }
   .tierhelp dd { margin:0; color:var(--ink-2); }
   .tierhelp .note { margin:var(--s2) 0 0; color:var(--ink-3); }
+
+  /* ---- sites page ------------------------------------------------------- */
+  .siteshead { font-size:var(--fs-h2); margin:var(--s5) 0 var(--s1); }
+  .siteslede { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
+               margin:0 0 var(--s3); }
+  .sitelist { display:grid; gap:1px; background:var(--rule);
+              border:1px solid var(--rule); }
+  .siterow { display:grid; grid-template-columns:1fr auto auto; gap:var(--s2);
+             align-items:center; background:var(--surface); border:0; width:100%;
+             text-align:left; padding:.75rem var(--s2); font:inherit; color:inherit; }
+  button.siterow { cursor:pointer; }
+  button.siterow:hover { background:var(--accent-soft); }
+  button.siterow:hover .sname { color:var(--accent); }
+  .siterow .sname { font-family:var(--sans); font-size:var(--fs-body); font-weight:600; }
+  .siterow .sctx { font-family:var(--sans); font-size:var(--fs-small);
+                   color:var(--ink-3); margin-top:.15rem; line-height:1.45; }
+  .siterow .scount { font-family:var(--mono); font-size:var(--fs-small);
+                     font-variant-numeric:tabular-nums; color:var(--ink-2);
+                     white-space:nowrap; }
+  .siterow .sgo { font-family:var(--sans); font-size:var(--fs-micro);
+                  color:var(--ink-3); white-space:nowrap; }
+  button.siterow:hover .sgo { color:var(--accent); }
+  @media (max-width:620px) {
+    .siterow { grid-template-columns:1fr auto; }
+    .siterow .sgo { display:none; }
+  }
+  /* Active site filter, shown in the register's filter bar. */
+  .sitechip { font-family:var(--sans); font-size:var(--fs-small);
+              display:inline-flex; align-items:center; gap:.4rem; padding:.35rem .6rem;
+              background:var(--accent); color:#fff; border-radius:2px; border:0;
+              cursor:pointer; font-weight:600; }
+  :root[data-theme="dark"] .sitechip,
+  :root:not([data-theme="light"]) .sitechip { color:var(--ground); }
+  .sitechip::after { content:"×"; font-size:1rem; line-height:1; }
 
   /* ---- stakes, stated on the first screen ------------------------------- */
   /* This was previously the last section of the deepest page. It is the reason
@@ -623,6 +663,7 @@
     <div class="chipset">
       <button class="chip" id="cPri" aria-pressed="false">Priority only</button>
       <button class="chip" id="cSil" aria-pressed="false">No recent record</button>
+      <button class="sitechip" id="siteChip" hidden></button>
       <button class="chip clear" id="cClear" hidden>Clear filters</button>
     </div>
   </div>
@@ -653,7 +694,20 @@
       named river, some an entire ocean basin. Treat the small, specific ones as
       actionable and the broad ones as an artefact of the source.</p>
   </div>
-  <div class="bars" id="barsSites" style="margin-top:1.6rem"></div>
+
+  <h3 class="siteshead">Localities</h3>
+  <p class="siteslede">Each line carries Richardson's own description, which is what
+    disambiguates a name like <em>Espiritu Santo</em> or <em>Cordillera Central</em> —
+    both of which occur more than once in the world, and one of which occurs twice in
+    this book. Select a locality to open its species in the register.</p>
+  <div id="siteList"></div>
+
+  <h3 class="siteshead">Habitat types</h3>
+  <p class="siteslede">These are not places. They are habitat categories the source
+    defines and then groups species under — <em>terra firma</em> forest, <em>cerrado</em>,
+    <em>miombo</em> woodland. They are kept because the groupings are real, but no
+    protected area can be drawn around them.</p>
+  <div id="habList"></div>
 </section>
 
 <!-- =============================== METHODS ============================== -->
@@ -821,10 +875,13 @@ document.querySelectorAll('.navbar button').forEach(b => b.onclick = () => {
   if (b.dataset.v === "register" && DATA) resetFilters();
 });
 
+let siteFilter = "";
+
 function resetFilters() {
   $("#q").value = "";
   $("#fClass").value = "";
   $("#fList").value = "";
+  siteFilter = "";
   ["#cPri", "#cSil"].forEach(s => $(s).setAttribute("aria-pressed", "false"));
   apply();
 }
@@ -889,12 +946,32 @@ function boot() {
       <div class="bv">${n.toLocaleString()}</div></div>`;
   }).join("");
 
-  const maxS = DATA.sites[0]?.count || 1;
-  $("#barsSites").innerHTML = DATA.sites.map(s => `
-    <div class="bar" style="grid-template-columns:minmax(200px,32%) 1fr minmax(40px,auto)">
-      <div class="bl">${esc(s.name)}</div>
-      <div class="bt"><div class="bf" style="width:${s.count / maxS * 100}%"></div></div>
-      <div class="bv">${s.count}</div></div>`).join("");
+  // Localities are actionable, so they are buttons into the register. Habitat
+  // types are not places you can survey, so they render as inert rows.
+  const siteRow = (s, clickable) => `
+    <${clickable ? "button" : "div"} class="siterow"${
+      clickable ? ` data-site="${esc(s.name)}"` : ""}>
+      <span><span class="sname">${esc(s.name)}</span>${
+        s.context ? `<span class="sctx">${esc(s.context)}</span>` : ""}</span>
+      <span class="scount">${s.count} species</span>
+      ${clickable ? '<span class="sgo">open in register &rarr;</span>' : ""}
+    </${clickable ? "button" : "div"}>`;
+
+  const locs = DATA.sites.filter(s => !s.habitat);
+  const habs = DATA.sites.filter(s => s.habitat);
+  $("#siteList").innerHTML = `<div class="sitelist">${
+    locs.map(s => siteRow(s, true)).join("")}</div>`;
+  $("#habList").innerHTML = `<div class="sitelist">${
+    habs.map(s => siteRow(s, false)).join("")}</div>`;
+
+  $("#siteList").addEventListener("click", e => {
+    const b = e.target.closest("button.siterow");
+    if (!b) return;
+    // switch tabs first — the nav handler resets filters — then apply the site
+    document.querySelector('[data-v="register"]').click();
+    siteFilter = b.dataset.site;
+    apply();
+  });
 
   $("#tierhelpBody").innerHTML = `<dl>${[5, 4, 3, 2, 1].map(t => `
       <dt><span class="tierchip t${t}">${t}</span>${t >= 4
@@ -938,6 +1015,7 @@ function boot() {
   });
   $("#more").onclick = () => draw(true);
   $("#cClear").onclick = resetFilters;
+  $("#siteChip").onclick = () => { siteFilter = ""; apply(); };
   apply();
 }
 
@@ -1077,13 +1155,19 @@ function apply() {
         sil = $("#cSil").getAttribute("aria-pressed") === "true";
   rows = DATA.species.filter(s =>
     (!cl || s.c === cl) && (!li || s.l === li) && (!pri || s.t >= 4) && (!sil || s.sil) &&
+    (!siteFilter || s.s === siteFilter) &&
     (!q || s.n.toLowerCase().includes(q) || (s.v || "").toLowerCase().includes(q)
         || (s.s || "").toLowerCase().includes(q)));
   shown = 0;
   $("#tbody").innerHTML = "";
   draw(false);
+  // Show the active locality as a dismissible chip, so arriving from the Sites
+  // page never looks like an unexplained short list.
+  const sc = $("#siteChip");
+  sc.hidden = !siteFilter;
+  sc.textContent = siteFilter ? "Locality: " + siteFilter : "";
   // Surface an escape hatch only when something is actually filtering.
-  const active = q || cl || li || pri || sil;
+  const active = q || cl || li || pri || sil || siteFilter;
   $("#cClear").hidden = !active;
 }
 
