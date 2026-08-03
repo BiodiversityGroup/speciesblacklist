@@ -161,10 +161,17 @@
 
   /* ---- nav tabs --------------------------------------------------------- */
   nav { border-bottom:1px solid var(--rule); background:var(--surface); }
-  .navbar { display:flex; gap:0; overflow-x:auto; justify-content:center; }
+  /* Wraps rather than scrolls. `justify-content:center` plus `overflow-x:auto`
+     is a trap: once the tabs overflow, the first one sits off the left edge and
+     cannot be scrolled back to. Wrapping keeps every tab reachable at any width
+     and removes the horizontal scroll entirely. */
+  .navbar { display:flex; gap:0; flex-wrap:wrap; justify-content:center; }
   .navbar button { font-family:var(--sans); font-size:1rem; font-weight:500;
     padding:.95rem 1.5rem; background:none; border:0; border-bottom:2px solid transparent;
     color:var(--ink-2); cursor:pointer; white-space:nowrap; }
+  @media (max-width:620px) {
+    .navbar button { font-size:.88rem; padding:.6rem .75rem; }
+  }
   .navbar button:hover { color:var(--ink); }
   .navbar button[aria-selected="true"] { color:var(--ink); border-bottom-color:var(--accent);
     font-weight:600; }
