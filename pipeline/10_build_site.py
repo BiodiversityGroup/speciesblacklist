@@ -15,7 +15,7 @@ only binomials is needlessly hostile to non-taxonomists.
 Outputs: site/data.json
          site/index.html is hand-authored, not generated
 """
-import csv, json, os, re, collections, importlib.util
+import csv, json, os, re, sys, collections, importlib.util
 
 csv.field_size_limit(10 ** 9)
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -152,8 +152,30 @@ def main():
     for s in species:
         m = smeta.get(s["s"])
         s["s"] = m["name"] if m else clean_site(s["s"])
+        s["sk"] = "block" if s["s"] else ""
+
+    # Script 03 only records a locality when the species sits inside one of
+    # Richardson's locality-headed paragraphs. That left 81% of the register with no
+    # locality even though the place is named in the species' own sentence. Recover
+    # those from the evidence text -- extraction from the source, never geocoding.
+    sys.path.insert(0, HERE)
+    from _locality import locality_from_evidence
+    recovered = 0
+    for s in species:
+        if s["s"]:
+            continue
+        name, kind = locality_from_evidence(s["e"], s.get("v", ""), s["n"])
+        if name:
+            s["s"], s["sk"] = name, "inline"
+            recovered += 1
+    have = sum(1 for s in species if s["s"])
+    print(f"localities: {have-recovered:,} from locality paragraphs "
+          f"+ {recovered:,} recovered from evidence sentences = {have:,} "
+          f"({100*have/len(species):.0f}% of the register)")
 
     sites = collections.Counter(s["s"] for s in species if s["s"])
+    inline_share = collections.Counter(s["s"] for s in species
+                                       if s["s"] and s["sk"] == "inline")
     # collapse the metadata onto cleaned names
     by_name = {}
     for raw, m in smeta.items():
@@ -202,7 +224,10 @@ def main():
         # rather than by inference, and habitat types are labelled as such.
         "sites": [{"name": n, "count": c,
                    "context": (by_name.get(n) or {}).get("context", ""),
-                   "habitat": bool((by_name.get(n) or {}).get("habitat"))}
+                   "habitat": bool((by_name.get(n) or {}).get("habitat")),
+                   # how many of this site's species were recovered from their own
+                   # evidence sentence rather than a locality paragraph
+                   "inline": inline_share.get(n, 0)}
                   for n, c in sites.most_common() if c >= 3],
         "species": sorted(species, key=lambda s: (-s["t"], s["c"], s["n"])),
     }

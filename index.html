@@ -310,6 +310,8 @@
                     font-weight:600; }
   .siterow .sctx { display:block; font-family:var(--sans); font-size:var(--fs-small);
                    color:var(--ink-3); margin-top:.2rem; line-height:1.45; }
+  /* provenance note reads as metadata, not as the book's prose */
+  .siterow .sctx.prov { font-style:italic; opacity:.8; }
   .siterow .scount { font-family:var(--mono); font-size:var(--fs-small);
                      font-variant-numeric:tabular-nums; color:var(--ink-2);
                      white-space:nowrap; }
@@ -761,13 +763,18 @@
       Caveat: these localities are extracted at inconsistent grain. Some are a single
       named river, some an entire ocean basin. Treat the small, specific ones as
       actionable and the broad ones as an artefact of the source.</p>
+    <p id="sitesCoverage" style="font-family:var(--sans);font-size:.82rem;
+       color:var(--ink-3);margin:.6rem 0 0"></p>
   </div>
 
   <h3 class="siteshead">Localities</h3>
-  <p class="siteslede">Each line carries Richardson's own description, which is what
-    disambiguates a name like <em>Espiritu Santo</em> or <em>Cordillera Central</em> —
-    both of which occur more than once in the world, and one of which occurs twice in
-    this book. Select a locality to open its species in the register.</p>
+  <p class="siteslede">Where a locality has an account of its own in the book, that
+    account's opening sentence is shown — which is what disambiguates a name like
+    <em>Espiritu Santo</em> or <em>Cordillera Central</em>, both of which occur more
+    than once in the world and one of which occurs twice in this book. The rest were
+    recovered from the species' own records, where the place is named in the entry
+    itself; those lines say so. Nothing here is geocoded or inferred. Select a locality
+    to open its species in the register.</p>
   <div id="siteList"></div>
 
   <h3 class="siteshead">Habitat types</h3>
@@ -857,6 +864,28 @@
       Separately, the five tiers were defined before any outcome was seen, but the
       decision to split them at 4 was made after, which inflates the significance
       somewhat.</p>
+
+    <h3>Where localities come from</h3>
+    <p>A locality is recorded two ways, and the Sites page distinguishes them.</p>
+    <p><strong>From a locality account.</strong> Richardson organises the book
+      geographically, so most species sit inside a paragraph introduced by a place.
+      That place, and its opening sentence, are attached to every species in the
+      paragraph. This is the stronger provenance and it covers
+      <span class="num">450</span> species.</p>
+    <p><strong>From the species entry itself.</strong> Where a species is not inside a
+      locality account, the place is very often named in its own sentence anyway —
+      <em>"collected from the upper Pungwe River"</em>, <em>"collected off
+      Mauritius"</em>. Pattern extraction over those sentences recovers a locality for
+      a further <span class="num">999</span> species, taking coverage from
+      <strong>19% to 60%</strong> of the register and the site list from 42 to 102.
+      Clusters that were entirely invisible before appear this way — the Gulf of
+      California holds 19 species, none of which had a locality until now.</p>
+    <p>Named physical features (<em>Salween River</em>, <em>Gulf of Panama</em>,
+      <em>Mount Kinabalu</em>) are preferred over a bare capitalised word after a
+      preposition, and a capture is rejected if it collides with the species' own
+      common name or genus. <strong>Nothing is geocoded and nothing is inferred</strong>
+      — if the sentence names no place, the species keeps no locality, which is why 959
+      still have none.</p>
 
     <h3>How the map is built, and what it is not</h3>
     <p>The register stores localities as text taken from Richardson's prose — "The Mano
@@ -1061,14 +1090,35 @@ function boot() {
 
   // Localities are actionable, so they are buttons into the register. Habitat
   // types are not places you can survey, so they render as inert rows.
-  const siteRow = (s, clickable) => `
-    <${clickable ? "button" : "div"} class="siterow"${
+  // Where the book gives a locality paragraph we show its opening sentence. Where
+  // the site was recovered from the species' own records instead, we say so rather
+  // than leaving the line blank and implying the same provenance.
+  const siteRow = (s, clickable) => {
+    const sub = s.context
+      ? `<span class="sctx">${esc(s.context)}</span>`
+      : (s.inline
+          ? `<span class="sctx prov">Named in ${s.inline === s.count
+              ? "the species records" : s.inline + " of the species records"},
+              not in a locality account of its own.</span>`
+          : "");
+    return `<${clickable ? "button" : "div"} class="siterow"${
       clickable ? ` data-site="${esc(s.name)}"` : ""}>
-      <span><span class="sname">${esc(s.name)}</span>${
-        s.context ? `<span class="sctx">${esc(s.context)}</span>` : ""}</span>
+      <span><span class="sname">${esc(s.name)}</span>${sub}</span>
       <span class="scount">${s.count} species</span>
       ${clickable ? '<span class="sgo">open in register &rarr;</span>' : ""}
     </${clickable ? "button" : "div"}>`;
+  };
+
+  const withLoc = DATA.species.filter(s => s.s).length;
+  const inlineN = DATA.species.filter(s => s.sk === "inline").length;
+  $("#sitesCoverage").innerHTML =
+    `Coverage: <strong style="color:var(--ink-2)">${withLoc.toLocaleString()}</strong>
+     of ${DATA.species.length.toLocaleString()} species carry a locality
+     (${Math.round(100 * withLoc / DATA.species.length)}%) —
+     ${(withLoc - inlineN).toLocaleString()} from the book's locality accounts and
+     ${inlineN.toLocaleString()} recovered from the species entries themselves. The
+     remaining ${(DATA.species.length - withLoc).toLocaleString()} name no place
+     specific enough to record.`;
 
   const locs = DATA.sites.filter(s => !s.habitat);
   const habs = DATA.sites.filter(s => s.habitat);
