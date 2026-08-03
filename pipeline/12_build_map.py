@@ -29,7 +29,12 @@ having bad coordinates. Even then bad points survive (a Brazilian sea bass with 
 record off Malaysia), so the page presents density, never a single authoritative
 dot, and says so.
 
-Outputs: site/map.json  { land: [[lon,lat],...], points: [[lon,lat,tier,list]] }
+Each point carries the INDEX of the species it belongs to, not just its tier, so a
+click on the map can name the species in a cell and hand them to the register. The
+index costs less than repeating the tier and list flags per point, which are looked
+up from the register payload instead.
+
+Outputs: site/map.json  { land: [[lon,lat],...], names: [...], points: [[lon,lat,i]] }
 """
 import json, math, os, queue, statistics, threading, urllib.parse, urllib.request
 
@@ -158,17 +163,21 @@ def main():
         [t.start() for t in ts]; [t.join() for t in ts]
         json.dump(cache, open(CACHE, "w", encoding="utf-8"))
 
-    # points tagged with tier and list, so the page can layer them
-    points, mapped, unmapped = [], 0, []
+    # Points reference their species by index into `names`. Tier and list flags are
+    # not repeated per point -- the page already holds them in data.json and can
+    # look them up, and carrying identity is what makes a cell clickable.
+    names, points, mapped, unmapped = [], [], 0, []
     for s in species:
         c = cache.get(s["n"]) or {}
         pts = c.get("pts") or []
         if not pts:
             unmapped.append(s["n"])
             continue
+        idx = len(names)
+        names.append(s["n"])
         mapped += 1
         for lo, la in pts:
-            points.append([lo, la, s["t"], 1 if s["l"] == "ne" else 0])
+            points.append([lo, la, idx])
 
     print(f"\nmappable species : {mapped:,} / {len(species):,}")
     print(f"unmappable       : {len(unmapped):,} (no georeferenced GBIF record)")
@@ -185,6 +194,7 @@ def main():
 
     out = {
         "land": rings,
+        "names": names,
         "points": points,
         "stats": {
             "species_total": len(species),

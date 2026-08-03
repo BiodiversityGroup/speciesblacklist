@@ -736,6 +736,7 @@
       <button class="chip" id="cPri" aria-pressed="false">Priority only</button>
       <button class="chip" id="cSil" aria-pressed="false">No recent record</button>
       <button class="sitechip" id="siteChip" hidden></button>
+      <button class="sitechip" id="cellChip" hidden></button>
       <button class="chip clear" id="cClear" hidden>Clear filters</button>
     </div>
   </div>
@@ -760,7 +761,8 @@
     <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0">
       Density of georeferenced specimen and observation records for the species in
       this register, drawn from GBIF. Switch layers to isolate a single restriction
-      tier or view them together.</p>
+      tier or view them together. <strong>Select any shaded cell or locality ring to
+      open its species in the register.</strong></p>
   </div>
 
   <div class="warn" style="margin-top:var(--s3)">
@@ -1088,12 +1090,16 @@ document.querySelectorAll('.navbar button').forEach(b => b.onclick = () => {
 });
 
 let siteFilter = "";
+/* Set of species names handed over by a click on a map cell. Kept separate from the
+   text search because it is an explicit list, not a pattern. */
+let cellFilter = null, cellLabel = "";
 
 function resetFilters() {
   $("#q").value = "";
   $("#fClass").value = "";
   $("#fList").value = "";
   siteFilter = "";
+  cellFilter = null; cellLabel = "";
   ["#cPri", "#cSil"].forEach(s => $(s).setAttribute("aria-pressed", "false"));
   apply();
 }
@@ -1255,6 +1261,7 @@ function boot() {
   $("#more").onclick = () => draw(true);
   $("#cClear").onclick = resetFilters;
   $("#siteChip").onclick = () => { siteFilter = ""; apply(); };
+  $("#cellChip").onclick = () => { cellFilter = null; cellLabel = ""; apply(); };
   apply();
 }
 
@@ -1395,8 +1402,10 @@ let showGbif = true, showLoc = true, showLocU = false;
 
 /* Per-locality tier breakdown, computed from the register so the locality overlay
    honours the same tier filter as the density surface. */
-let locTiers = null;
+let locTiers = null, nameTier = null;
 function buildLocTiers() {
+  nameTier = {};
+  DATA.species.forEach(s => { nameTier[s.n] = s.t; });
   locTiers = {};
   DATA.species.forEach(s => {
     if (!s.s) return;
@@ -1519,14 +1528,18 @@ function drawMap() {
   // bin into equal-degree cells, then shade by count: a heat map, one hue, so
   // magnitude reads as magnitude
   const CELL = cssW > 700 ? 2.5 : 4;              // degrees
-  const bins = new Map();
+  const bins = new Map(), binSp = new Map();
   const want = mapLayer === "all" ? null : +mapLayer;
   let n = 0;
-  for (const [lo, la, t] of MAP.points) {
-    if (want !== null && t !== want) continue;
+  for (const [lo, la, i] of MAP.points) {
+    const nm = MAP.names[i];
+    if (want !== null && nameTier[nm] !== want) continue;
     n++;
     const k = Math.floor((lo + 180) / CELL) + "," + Math.floor((90 - la) / CELL);
     bins.set(k, (bins.get(k) || 0) + 1);
+    let set = binSp.get(k);
+    if (!set) binSp.set(k, set = new Set());
+    set.add(nm);
   }
   const max = Math.max(1, ...bins.values());
   const base = mapColor(mapLayer);
@@ -1540,7 +1553,7 @@ function drawMap() {
       g.globalAlpha = 0.22 + 0.78 * Math.sqrt(count / max);
       g.fillStyle = base;
       g.fillRect(x, y, Math.ceil(w), Math.ceil(h));
-      mapCells.push({x, y, w, h, count,
+      mapCells.push({x, y, w, h, count, species: binSp.get(k),
                      lo: cx * CELL - 180, la: 90 - cy * CELL});
     });
     g.globalAlpha = 1;
@@ -1600,7 +1613,7 @@ function drawMap() {
     const hit = dot || mapCells.find(c =>
       x >= c.x && x < c.x + c.w && y >= c.y && y < c.y + c.h);
     if (!hit) { tip.style.opacity = 0; cv.style.cursor = "crosshair"; return; }
-    cv.style.cursor = dot ? "pointer" : "crosshair";
+    cv.style.cursor = "pointer";
     const ns = n => (n < 0 ? Math.abs(n).toFixed(0) + "°S" : n.toFixed(0) + "°N");
     const ew = n => (n < 0 ? Math.abs(n).toFixed(0) + "°W" : n.toFixed(0) + "°E");
     tip.innerHTML = dot
@@ -1610,7 +1623,9 @@ function drawMap() {
              : " · UNVERIFIED location"}</span>
          <span style="opacity:.7">· select to open in register</span>`
       : `<b>${hit.count.toLocaleString()} record${hit.count === 1 ? "" : "s"}</b>
-         ${ns(hit.la)} ${ew(hit.lo)}`;
+         ${(hit.species ? hit.species.size : 0).toLocaleString()} species
+         · ${ns(hit.la)} ${ew(hit.lo)}
+         <span style="opacity:.7">select to open in register</span>`;
     tip.style.opacity = 1;
     let left = ev.clientX + 14, top = ev.clientY + 14;
     if (left + tip.offsetWidth > innerWidth - 8) left = ev.clientX - tip.offsetWidth - 14;
@@ -1621,10 +1636,21 @@ function drawMap() {
   cv.addEventListener("click", ev => {
     const r = cv.getBoundingClientRect();
     const x = ev.clientX - r.left, y = ev.clientY - r.top;
+    // a locality ring wins over the cell under it, matching the hover precedence
     const dot = mapDots.find(d => Math.hypot(x - d.x, y - d.y) <= d.r + 2);
-    if (!dot) return;
-    document.querySelector('[data-v="register"]').click();
-    siteFilter = dot.name;
+    const cell = dot ? null : mapCells.find(c =>
+      x >= c.x && x < c.x + c.w && y >= c.y && y < c.y + c.h);
+    if (!dot && !cell) return;
+    document.querySelector('[data-v="register"]').click();   // resets filters first
+    if (dot) {
+      siteFilter = dot.name;
+    } else if (cell && cell.species && cell.species.size) {
+      const ns = n => (n < 0 ? Math.abs(n).toFixed(0) + "°S" : n.toFixed(0) + "°N");
+      const ew = n => (n < 0 ? Math.abs(n).toFixed(0) + "°W" : n.toFixed(0) + "°E");
+      cellFilter = cell.species;
+      cellLabel = `Map cell ${ns(cell.la)} ${ew(cell.lo)} · `
+                + `${cell.species.size} species`;
+    }
     apply();
   });
 })();
@@ -1644,6 +1670,7 @@ function apply() {
   rows = DATA.species.filter(s =>
     (!cl || s.c === cl) && (!li || s.l === li) && (!pri || s.t >= 4) && (!sil || s.sil) &&
     (!siteFilter || s.s === siteFilter) &&
+    (!cellFilter || cellFilter.has(s.n)) &&
     (!q || s.n.toLowerCase().includes(q) || (s.v || "").toLowerCase().includes(q)
         || (s.s || "").toLowerCase().includes(q)));
   shown = 0;
@@ -1654,8 +1681,11 @@ function apply() {
   const sc = $("#siteChip");
   sc.hidden = !siteFilter;
   sc.textContent = siteFilter ? "Locality: " + siteFilter : "";
+  const cc = $("#cellChip");
+  cc.hidden = !cellFilter;
+  cc.textContent = cellFilter ? cellLabel : "";
   // Surface an escape hatch only when something is actually filtering.
-  const active = q || cl || li || pri || sil || siteFilter;
+  const active = q || cl || li || pri || sil || siteFilter || cellFilter;
   $("#cClear").hidden = !active;
 }
 
