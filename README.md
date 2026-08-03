@@ -53,13 +53,15 @@ Treat it as a prioritised research agenda: an argument about where to look.
 ```
 index.html      the site (self-contained; no build step, no dependencies)
 data.json       2,408 species accounts
+og-image.png    the shared-link preview card, drawn from data.json
 METHODS.md      full method, validation, and limitations
 pipeline/       the scripts that build it, in run order
 ```
 
 `pipeline/` is included so the result can be checked rather than taken on trust. It
-needs only the Python standard library. The IUCN source archive and intermediate build
-files are not committed — see `METHODS.md` for how to fetch them and re-run.
+needs only the Python standard library, except `11_make_og.py`, which draws the
+preview card and needs Pillow. The IUCN source archive and intermediate build files
+are not committed — see `METHODS.md` for how to fetch them and re-run.
 
 ## Sources
 
