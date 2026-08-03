@@ -303,8 +303,23 @@
   .maplayers button i { width:10px; height:10px; border-radius:2px; flex:0 0 10px; }
   .maplayers .n { font-family:var(--mono); font-size:.72rem; color:var(--ink-3); }
 
-  .mapwrap { border:1px solid var(--rule); background:var(--surface); overflow:hidden; }
-  #mapCanvas { display:block; width:100%; height:auto; cursor:crosshair; }
+  .mapwrap { border:1px solid var(--rule); background:var(--surface); overflow:hidden;
+             position:relative; }
+  /* touch-action:none so a one-finger drag pans the map instead of scrolling the
+     page, which is what a map is expected to do. The map is short enough that the
+     page is still easy to scroll past on either side of it. */
+  #mapCanvas { display:block; width:100%; height:auto; cursor:grab;
+               touch-action:none; }
+  #mapCanvas.dragging { cursor:grabbing; }
+  .mapzoom { position:absolute; top:.5rem; right:.5rem; z-index:2; display:flex;
+             flex-direction:column; gap:.25rem; }
+  .mapzoom button { font-family:var(--sans); font-size:.9rem; line-height:1;
+    width:30px; height:30px; display:grid; place-items:center; cursor:pointer;
+    background:var(--surface); color:var(--ink-2); border:1px solid var(--rule-2);
+    border-radius:3px; }
+  .mapzoom button#zReset { font-size:.6rem; width:auto; padding:0 .4rem; }
+  .mapzoom button:hover { border-color:var(--accent); color:var(--accent); }
+  .mapzoom button[disabled] { opacity:.4; cursor:default; }
   .maplegend { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
                font-family:var(--sans); font-size:var(--fs-micro); color:var(--ink-3);
                margin:var(--s2) 0 0; }
@@ -765,7 +780,9 @@
       Density of georeferenced specimen and observation records for the species in
       this register, drawn from GBIF. Switch layers to isolate a single restriction
       tier or view them together. <strong>Select any shaded cell or locality ring to
-      open its species in the register.</strong></p>
+      open its species in the register.</strong> Scroll or pinch to zoom, drag to
+      pan; cells subdivide as you zoom in, so finer clusters resolve rather than
+      the same blocks getting bigger.</p>
   </div>
 
   <div class="warn" style="margin-top:var(--s3)">
@@ -791,6 +808,11 @@
   <div class="maplayers" id="mapLayers"></div>
 
   <div class="mapwrap">
+    <div class="mapzoom">
+      <button id="zIn"    aria-label="Zoom in">+</button>
+      <button id="zOut"   aria-label="Zoom out">&minus;</button>
+      <button id="zReset" aria-label="Reset zoom" title="Reset">Reset</button>
+    </div>
     <canvas id="mapCanvas" role="img"
             aria-label="World density map of georeferenced records for species in the
             register. The same data is available as a table under The Register."></canvas>
@@ -1388,6 +1410,86 @@ function hitTest(ev) {
     tip.style.left = left + "px"; tip.style.top = top + "px";
   });
   cv.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+
+  /* ---- zoom and pan --------------------------------------------------------
+     One pointer drags, two pinch. Pointer events cover mouse, touch and pen with
+     one code path. A drag must not also fire the click that opens the register, so
+     movement past a small threshold disarms it. */
+  const pointers = new Map();
+  let dragged = false, pinchStart = null;
+
+  const canvasPt = ev => {
+    const r = cv.getBoundingClientRect();
+    return {x: ev.clientX - r.left, y: ev.clientY - r.top};
+  };
+
+  cv.addEventListener("pointerdown", ev => {
+    // setPointerCapture throws NotFoundError if the id is not an active pointer,
+    // which would abort the handler and leave the gesture untracked. Capture is a
+    // nicety; tracking is not.
+    try { cv.setPointerCapture(ev.pointerId); } catch (e) { /* keep going */ }
+    pointers.set(ev.pointerId, canvasPt(ev));
+    dragged = false;
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      pinchStart = {d: Math.hypot(a.x - b.x, a.y - b.y), k: view.k};
+    }
+    cv.classList.add("dragging");
+  });
+
+  cv.addEventListener("pointermove", ev => {
+    if (!pointers.has(ev.pointerId)) return;
+    const prev = pointers.get(ev.pointerId), now = canvasPt(ev);
+    pointers.set(ev.pointerId, now);
+
+    if (pointers.size === 2 && pinchStart) {
+      const [a, b] = [...pointers.values()];
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (pinchStart.d > 8) {
+        const mid = {x: (a.x + b.x) / 2, y: (a.y + b.y) / 2};
+        const target = pinchStart.k * (d / pinchStart.d);
+        zoomAt(mid.x, mid.y, target / view.k);
+      }
+      dragged = true;
+      return;
+    }
+    const dx = now.x - prev.x, dy = now.y - prev.y;
+    if (Math.abs(dx) + Math.abs(dy) > 2) dragged = true;
+    if (view.k === 1) return;                 // nothing to pan at full extent
+    view.tx += dx; view.ty += dy;
+    requestDraw();
+  });
+
+  const endPointer = ev => {
+    pointers.delete(ev.pointerId);
+    if (pointers.size < 2) pinchStart = null;
+    if (pointers.size === 0) cv.classList.remove("dragging");
+  };
+  cv.addEventListener("pointerup", endPointer);
+  cv.addEventListener("pointercancel", endPointer);
+
+  cv.addEventListener("wheel", ev => {
+    ev.preventDefault();
+    const p = canvasPt(ev);
+    zoomAt(p.x, p.y, Math.exp(-ev.deltaY * 0.0015));
+  }, {passive: false});
+
+  cv.addEventListener("dblclick", ev => {
+    ev.preventDefault();
+    const p = canvasPt(ev);
+    zoomAt(p.x, p.y, 2);
+  });
+
+  const zoomBtn = (sel, fn) => $(sel) && ($(sel).onclick = () => {
+    const cssW = cv.getBoundingClientRect().width;
+    fn(cssW / 2, parseFloat(cv.style.height) / 2);
+  });
+  zoomBtn("#zIn",  (x, y) => zoomAt(x, y, 1.6));
+  zoomBtn("#zOut", (x, y) => zoomAt(x, y, 1 / 1.6));
+  $("#zReset") && ($("#zReset").onclick = () => {
+    view = {k: 1, tx: 0, ty: 0};
+    requestDraw();
+  });
   cv.addEventListener("click", ev => {
     const hit = hitTest(ev);
     if (!hit) return;
@@ -1429,6 +1531,41 @@ function nextFeature() {
 /* Loaded lazily on first visit — map.json is a separate request so the register
    is not held up by geometry nobody has asked for yet. */
 let MAP = null, GEO = null, mapLayer = "all", mapCells = [], mapDots = [], mapGeom = null;
+/* Zoom/pan state. k is the scale, tx/ty the translation in CSS pixels. The world at
+   scale k is (cssW*k) x (cssH*k) and the canvas is a window onto it. */
+let view = {k: 1, tx: 0, ty: 0};
+const K_MIN = 1, K_MAX = 64;
+
+function clampView(cssW, cssH) {
+  view.k = Math.min(K_MAX, Math.max(K_MIN, view.k));
+  // never allow empty space at an edge
+  view.tx = Math.min(0, Math.max(cssW - cssW * view.k, view.tx));
+  view.ty = Math.min(0, Math.max(cssH - cssH * view.k, view.ty));
+}
+
+/* Zoom about a fixed point in canvas space, so the feature under the cursor or the
+   pinch midpoint stays put — the thing that makes zooming feel like zooming. */
+function zoomAt(px, py, factor) {
+  const cv = $("#mapCanvas"); if (!cv) return;
+  const cssW = cv.getBoundingClientRect().width, cssH = parseFloat(cv.style.height);
+  const k0 = view.k;
+  view.k = Math.min(K_MAX, Math.max(K_MIN, k0 * factor));
+  const r = view.k / k0;
+  view.tx = px - (px - view.tx) * r;
+  view.ty = py - (py - view.ty) * r;
+  clampView(cssW, cssH);
+  requestDraw();
+}
+
+/* Coalesce redraws on a timer rather than requestAnimationFrame. rAF does not fire
+   in a hidden or non-compositing tab, so a draw queued behind a boolean guard would
+   leave that guard set forever and the map would never redraw again -- not even
+   after the tab became visible. A timeout always fires, so the queue cannot wedge. */
+let drawTimer = null;
+function requestDraw() {
+  if (drawTimer) return;
+  drawTimer = setTimeout(() => { drawTimer = null; drawMap(); }, 16);
+}
 let showGbif = true, showLoc = true, showLocU = false;
 
 /* Per-locality tier breakdown, computed from the register so the locality overlay
@@ -1527,13 +1664,17 @@ function drawMap() {
   const g = cv.getContext("2d");
   g.setTransform(dpr, 0, 0, dpr, 0, 0);
   g.clearRect(0, 0, cssW, cssH);
-  const X = lo => (lo + 180) / 360 * cssW;
-  const Y = la => (90 - la) / 180 * cssH;
+  clampView(cssW, cssH);
+  const X = lo => (lo + 180) / 360 * cssW * view.k + view.tx;
+  const Y = la => (90 - la) / 180 * cssH * view.k + view.ty;
   mapGeom = {cssW, cssH};
 
   const cs = getComputedStyle(document.documentElement);
   const rule = cs.getPropertyValue("--rule").trim();
   const surf2 = cs.getPropertyValue("--surface-2").trim();
+
+  g.save();
+  g.beginPath(); g.rect(0, 0, cssW, cssH); g.clip();
 
   // graticule every 30 degrees, recessive
   g.strokeStyle = rule; g.lineWidth = 1;
@@ -1558,7 +1699,9 @@ function drawMap() {
 
   // bin into equal-degree cells, then shade by count: a heat map, one hue, so
   // magnitude reads as magnitude
-  const CELL = cssW > 700 ? 2.5 : 4;              // degrees
+  // Cells shrink as you zoom, so zooming in resolves finer structure instead of
+  // just magnifying the same blocks. Floored so the bin count stays sane.
+  const CELL = Math.max(0.08, (cssW > 700 ? 2.5 : 4) / view.k);
   const bins = new Map(), binSp = new Map();
   const want = mapLayer === "all" ? null : +mapLayer;
   let n = 0;
@@ -1618,6 +1761,8 @@ function drawMap() {
 
   $("#mapCounts") && ($("#mapCounts").textContent = "");
 
+  g.restore();
+
   const parts = [];
   if (showGbif) parts.push(`<span>fewer records</span>
     <span class="ramp">${[0.15, 0.35, 0.55, 0.78, 1].map(a =>
@@ -1629,7 +1774,14 @@ function drawMap() {
         fill="${base}" fill-opacity="0.2" stroke="${base}" stroke-width="1.5"/></svg>
       rings are named localities, sized by species
       (${locCount.toLocaleString()} places, ${locSpecies.toLocaleString()} species)</span>`);
-  parts.push("<span>equirectangular</span>");
+  const zi = $("#zIn"), zo = $("#zOut"), zr = $("#zReset");
+  if (zi) zi.disabled = view.k >= K_MAX;
+  if (zo) zo.disabled = view.k <= K_MIN;
+  if (zr) zr.disabled = view.k === K_MIN && view.tx === 0 && view.ty === 0;
+
+  parts.push(`<span>equirectangular${view.k > 1
+    ? ` · zoom ${view.k.toFixed(1)}× · ${CELL.toFixed(CELL < 1 ? 2 : 1)}° cells`
+    : ""}</span>`);
   $("#mapLegend").innerHTML = parts.join('<span style="opacity:.4">·</span>');
 }
 
@@ -1664,7 +1816,88 @@ function drawMap() {
     tip.style.left = left + "px"; tip.style.top = top + "px";
   });
   cv.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+
+  /* ---- zoom and pan --------------------------------------------------------
+     One pointer drags, two pinch. Pointer events cover mouse, touch and pen with
+     one code path. A drag must not also fire the click that opens the register, so
+     movement past a small threshold disarms it. */
+  const pointers = new Map();
+  let dragged = false, pinchStart = null;
+
+  const canvasPt = ev => {
+    const r = cv.getBoundingClientRect();
+    return {x: ev.clientX - r.left, y: ev.clientY - r.top};
+  };
+
+  cv.addEventListener("pointerdown", ev => {
+    // setPointerCapture throws NotFoundError if the id is not an active pointer,
+    // which would abort the handler and leave the gesture untracked. Capture is a
+    // nicety; tracking is not.
+    try { cv.setPointerCapture(ev.pointerId); } catch (e) { /* keep going */ }
+    pointers.set(ev.pointerId, canvasPt(ev));
+    dragged = false;
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      pinchStart = {d: Math.hypot(a.x - b.x, a.y - b.y), k: view.k};
+    }
+    cv.classList.add("dragging");
+  });
+
+  cv.addEventListener("pointermove", ev => {
+    if (!pointers.has(ev.pointerId)) return;
+    const prev = pointers.get(ev.pointerId), now = canvasPt(ev);
+    pointers.set(ev.pointerId, now);
+
+    if (pointers.size === 2 && pinchStart) {
+      const [a, b] = [...pointers.values()];
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (pinchStart.d > 8) {
+        const mid = {x: (a.x + b.x) / 2, y: (a.y + b.y) / 2};
+        const target = pinchStart.k * (d / pinchStart.d);
+        zoomAt(mid.x, mid.y, target / view.k);
+      }
+      dragged = true;
+      return;
+    }
+    const dx = now.x - prev.x, dy = now.y - prev.y;
+    if (Math.abs(dx) + Math.abs(dy) > 2) dragged = true;
+    if (view.k === 1) return;                 // nothing to pan at full extent
+    view.tx += dx; view.ty += dy;
+    requestDraw();
+  });
+
+  const endPointer = ev => {
+    pointers.delete(ev.pointerId);
+    if (pointers.size < 2) pinchStart = null;
+    if (pointers.size === 0) cv.classList.remove("dragging");
+  };
+  cv.addEventListener("pointerup", endPointer);
+  cv.addEventListener("pointercancel", endPointer);
+
+  cv.addEventListener("wheel", ev => {
+    ev.preventDefault();
+    const p = canvasPt(ev);
+    zoomAt(p.x, p.y, Math.exp(-ev.deltaY * 0.0015));
+  }, {passive: false});
+
+  cv.addEventListener("dblclick", ev => {
+    ev.preventDefault();
+    const p = canvasPt(ev);
+    zoomAt(p.x, p.y, 2);
+  });
+
+  const zoomBtn = (sel, fn) => $(sel) && ($(sel).onclick = () => {
+    const cssW = cv.getBoundingClientRect().width;
+    fn(cssW / 2, parseFloat(cv.style.height) / 2);
+  });
+  zoomBtn("#zIn",  (x, y) => zoomAt(x, y, 1.6));
+  zoomBtn("#zOut", (x, y) => zoomAt(x, y, 1 / 1.6));
+  $("#zReset") && ($("#zReset").onclick = () => {
+    view = {k: 1, tx: 0, ty: 0};
+    requestDraw();
+  });
   cv.addEventListener("click", ev => {
+    if (dragged) { dragged = false; return; }   // a pan is not a selection
     const r = cv.getBoundingClientRect();
     const x = ev.clientX - r.left, y = ev.clientY - r.top;
     // a locality ring wins over the cell under it, matching the hover precedence
