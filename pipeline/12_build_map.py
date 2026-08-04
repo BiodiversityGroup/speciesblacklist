@@ -36,7 +36,7 @@ up from the register payload instead.
 
 Outputs: site/map.json  { land: [[lon,lat],...], names: [...], points: [[lon,lat,i]] }
 """
-import json, math, os, queue, statistics, threading, urllib.parse, urllib.request
+import json, math, os, queue, statistics, threading, time, urllib.error, urllib.parse, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJ = os.path.dirname(HERE)
@@ -49,15 +49,25 @@ LAND_URL = ("https://raw.githubusercontent.com/nvkelso/natural-earth-vector/"
             "master/geojson/ne_110m_land.geojson")
 
 
-def get(url, tries=3):
+def get(url, tries=6):
+    """Retry with exponential backoff. GBIF returns 429 under concurrency, and the
+    first version retried three times with no delay -- which is barely a retry at
+    all against a rate limiter, so 399 of 2,408 species (16.6%) ended up erroring."""
+    delay = 1.0
     for i in range(tries):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA),
-                                        timeout=45) as r:
+                                        timeout=60) as r:
                 return json.loads(r.read().decode())
+        except urllib.error.HTTPError as e:
+            # 429/5xx are worth waiting out; a 404 never will be
+            if e.code not in (429, 500, 502, 503, 504) or i == tries - 1:
+                raise
         except Exception:
             if i == tries - 1:
                 raise
+        time.sleep(delay)
+        delay *= 2
     return None
 
 
@@ -139,6 +149,17 @@ def main():
     todo = [s["n"] for s in species if s["n"] not in cache]
     print(f"occurrences: {len(species)-len(todo):,} cached, {len(todo):,} to fetch")
 
+    # Purge previously cached failures so they are retried rather than inherited.
+    stale = [k for k, v in cache.items() if v.get("err") or
+             (v.get("key") is None and v.get("count") == 0 and not v.get("pts")
+              and "err" in v)]
+    for k in stale:
+        del cache[k]
+    if stale:
+        print(f"  discarding {len(stale):,} cached failures so they are retried")
+    todo = [s["n"] for s in species if s["n"] not in cache]
+
+    failed = []
     if todo:
         q, lock, done = queue.Queue(), threading.Lock(), [0]
         for n in todo:
@@ -153,15 +174,26 @@ def main():
                 try:
                     res = occurrences(n)
                 except Exception as e:
-                    res = {"key": None, "count": 0, "pts": [], "err": str(e)}
+                    # Do NOT cache a failure. Caching one is indistinguishable from
+                    # "this species genuinely has no records", and it makes the miss
+                    # permanent because every later run sees a cache hit.
+                    with lock:
+                        failed.append((n, str(e)[:60]))
+                        done[0] += 1
+                    continue
                 with lock:
                     cache[n] = res
                     done[0] += 1
                     if done[0] % 200 == 0:
                         print(f"   {done[0]:,}/{len(todo):,}")
-        ts = [threading.Thread(target=worker, daemon=True) for _ in range(8)]
+        ts = [threading.Thread(target=worker, daemon=True) for _ in range(4)]
         [t.start() for t in ts]; [t.join() for t in ts]
         json.dump(cache, open(CACHE, "w", encoding="utf-8"))
+        if failed:
+            print(f"  WARNING: {len(failed):,} still failing after retries; they are "
+                  f"absent from the cache and will be retried next run")
+            for n, e in failed[:5]:
+                print(f"     {n}: {e}")
 
     # Points reference their species by index into `names`. Tier and list flags are
     # not repeated per point -- the page already holds them in data.json and can

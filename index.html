@@ -499,6 +499,8 @@
     background:var(--surface); color:var(--ink); border:1px solid var(--rule-2);
     border-radius:2px; }
   .filters input[type=search] { min-width:min(280px,100%); flex:1 1 220px; }
+  /* the tier labels are long, so cap the select and let it ellipsise */
+  .filters select#fTier { max-width:min(320px,100%); }
   .chipset { display:flex; gap:.3rem; flex-wrap:wrap; }
   .chip { font-family:var(--sans); font-size:.76rem; padding:.38rem .62rem;
           background:var(--surface); border:1px solid var(--rule-2); border-radius:2px;
@@ -765,6 +767,9 @@
       <option value="dd">Data Deficient</option>
       <option value="ne">Never assessed</option>
     </select>
+    <select id="fTier" aria-label="Filter by restriction tier">
+      <option value="">All tiers</option>
+    </select>
     <div class="chipset">
       <button class="chip" id="cPri" aria-pressed="false">Priority only</button>
       <button class="chip" id="cSil" aria-pressed="false">No recent record</button>
@@ -1023,21 +1028,30 @@
       against the GBIF records of the species that sit at that locality — an
       independent witness already held:</p>
     <table class="ftable">
-      <tr><th>Agree within 500&nbsp;km — plotted</th><td class="num">279</td></tr>
-      <tr><th>Disagree by more — discarded</th><td class="num">83</td></tr>
-      <tr><th>No species with records to check against — off by default</th><td class="num">161</td></tr>
+      <tr><th>Agree within 500&nbsp;km — plotted</th><td class="num">315</td></tr>
+      <tr><th>Disagree by more — discarded</th><td class="num">89</td></tr>
+      <tr><th>No species with records to check against — off by default</th><td class="num">119</td></tr>
     </table>
-    <p><strong>Nearly one in four checkable geocodes was wrong by more than
+    <p><strong>Around one in five checkable geocodes was wrong by more than
       500&nbsp;km</strong>, and none of those errors was detectable from the name or the
-      feature type alone. That rate is the reason the unverified 161 are not plotted by
+      feature type alone. That rate is the reason the unverified 119 are not plotted by
       default: there is no reason to think they are cleaner, and they cannot be tested.
-      The validated rings add <span class="num">95</span> species that have no
+      The validated rings add <span class="num">66</span> species that have no
       georeferenced record of their own — modest, but every one is corroborated.</p>
 
     <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
-      the <span class="num">2,408</span> species here, <span class="num">943</span>
-      have no georeferenced record anywhere in GBIF. They are the least visible members
-      of an already invisible group, and they are absent from the map entirely.</p>
+      the <span class="num">2,408</span> species here, <span class="num">629</span>
+      have no georeferenced record anywhere in GBIF, and <span class="num">563</span>
+      cannot be placed even by a cross-checked locality. They are the least visible
+      members of an already invisible group, and they are absent from the map.</p>
+    <p>An earlier version of this page said 943 rather than 629. That figure was wrong:
+      the occurrence fetch had been running eight concurrent requests, GBIF answered
+      <span class="num">399</span> of them with HTTP 429, and the script cached those
+      failures as though they were results — so re-running never retried them and
+      16.6% of the register was silently recorded as having no records. Because the
+      register is sorted by tier, the failures landed disproportionately on tier 1,
+      which appeared to be 3.6% mappable when it is in fact 80%. The fetcher now backs
+      off exponentially, uses four threads, and never caches a failure.</p>
 
     <h3>What was discarded</h3>
     <p>An earlier composite score added points for a species not having been recorded
@@ -1155,8 +1169,6 @@ document.querySelectorAll('.navbar [role="tab"]').forEach(a => a.onclick = ev =>
 });
 addEventListener("popstate", () => showView(viewForPath(location.pathname), false));
 
-// First pass: make the right section visible immediately, before data arrives.
-showView(viewForPath(location.pathname), false);
 
 let siteFilter = "";
 /* Set of species names handed over by a click on a map cell. Kept separate from the
@@ -1167,6 +1179,7 @@ function resetFilters() {
   $("#q").value = "";
   $("#fClass").value = "";
   $("#fList").value = "";
+  $("#fTier").value = "";
   siteFilter = "";
   cellFilter = null; cellLabel = "";
   ["#cPri", "#cSil"].forEach(s => $(s).setAttribute("aria-pressed", "false"));
@@ -1175,6 +1188,13 @@ function resetFilters() {
 
 let DATA, rows = [], shown = 0;
 const PAGE = 200;
+
+/* First pass: make the right section visible before the data arrives. This must sit
+   AFTER the `let DATA` above. Called any earlier, showView's register branch reads
+   DATA inside its temporal dead zone, throws, and kills the rest of the script --
+   which broke a direct load of /register/ outright while every view still worked if
+   you arrived by clicking, because by then DATA was initialised. */
+showView(viewForPath(location.pathname), false);
 
 fetch("/data.json").then(r => r.json()).then(d => { DATA = d; boot(); })
   .catch(() => { $("#counts").innerHTML =
@@ -1311,6 +1331,12 @@ function boot() {
   Object.keys(DATA.classes).forEach(k =>
     cs.insertAdjacentHTML("beforeend", `<option>${esc(k)}</option>`));
 
+  // Built from DATA.tiers so the labels match the key on the overview exactly.
+  const ts = $("#fTier");
+  [5, 4, 3, 2, 1].forEach(t => ts.insertAdjacentHTML("beforeend",
+    `<option value="${t}">Tier ${t}${t >= 4 ? " · priority" : ""} — ${
+      esc(DATA.tiers[t])} (${(DATA.tier_counts[t] || 0).toLocaleString()})</option>`));
+
   // Second pass, now that DATA exists: this is what actually initialises the map
   // for someone who landed directly on /map/.
   showView(viewForPath(location.pathname), false);
@@ -1325,7 +1351,7 @@ function boot() {
     }, 150);
   });
 
-  ["#q", "#fClass", "#fList"].forEach(s => $(s).oninput = apply);
+  ["#q", "#fClass", "#fList", "#fTier"].forEach(s => $(s).oninput = apply);
   ["#cPri", "#cSil"].forEach(s => $(s).onclick = e => {
     const b = e.currentTarget;
     b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true");
@@ -1956,10 +1982,12 @@ function drawMap() {
 function apply() {
   const q = $("#q").value.trim().toLowerCase(),
         cl = $("#fClass").value, li = $("#fList").value,
+        ti = $("#fTier").value,
         pri = $("#cPri").getAttribute("aria-pressed") === "true",
         sil = $("#cSil").getAttribute("aria-pressed") === "true";
   rows = DATA.species.filter(s =>
-    (!cl || s.c === cl) && (!li || s.l === li) && (!pri || s.t >= 4) && (!sil || s.sil) &&
+    (!cl || s.c === cl) && (!li || s.l === li) && (!ti || s.t === +ti) &&
+    (!pri || s.t >= 4) && (!sil || s.sil) &&
     (!siteFilter || s.s === siteFilter) &&
     (!cellFilter || cellFilter.has(s.n)) &&
     (!q || s.n.toLowerCase().includes(q) || (s.v || "").toLowerCase().includes(q)
@@ -1976,7 +2004,7 @@ function apply() {
   cc.hidden = !cellFilter;
   cc.textContent = cellFilter ? cellLabel : "";
   // Surface an escape hatch only when something is actually filtering.
-  const active = q || cl || li || pri || sil || siteFilter || cellFilter;
+  const active = q || cl || li || ti || pri || sil || siteFilter || cellFilter;
   $("#cClear").hidden = !active;
 }
 
