@@ -14,7 +14,7 @@ Cambridge University Press reference documents most of them as narrowly restrict
 often to a single river or a single collecting event. Ranked by how severe that
 restriction is.
 
-**List 2 — Not Evaluated: 35 species.** IUCN has never assessed these at all, yet the
+**List 2 — Not Evaluated: 31 species.** IUCN has never assessed these at all, yet the
 same reference treats them as threatened or recently extinct. Small because the claim
 is hard to make safely — see §5.
 
@@ -479,12 +479,25 @@ is **zero** for every outcome, and:
 | non-threatened outcomes | **74 / 101** |
 | threatened outcomes | **26 / 39** |
 
-**This is the substantive finding, and it broadly vindicates the concern.** These
-reassessments are mostly not driven by new research on the species; they cite newer general
-literature — regional checklists, habitat datasets, taxonomic revisions — and reach a verdict.
-What rescues the comparison is that **the pattern is symmetric**: 73% of non-threatened
-outcomes and 67% of threatened ones look the same way. It is a property of how sparse-data
-assessment is done, not a bias that inflates one arm.
+**This broadly vindicates the concern, with one qualification that has to come first.**
+
+A citation count measures what an assessment *cites*, not what its authors *knew*. Red List
+assessments are written by specialist groups whose members hold unpublished material —
+museum series, survey notes, field seasons, correspondence, regional expertise that never
+becomes a paper. An assessment resting on that is properly evidenced and will still show zero
+species-specific citations. IUCN would say exactly this, and it would be right; the numbers
+below cannot distinguish "no evidence" from "evidence that was never published". Nor should
+they be read as a criticism of assessors working with what the literature gives them.
+
+What the numbers *do* support is narrower and still worth stating: these reassessments are
+mostly not driven by **new published research on the species**, so a reader should not treat
+a move out of Data Deficient as proof that the underlying knowledge gap closed. They cite
+newer general literature — regional checklists, habitat datasets, taxonomic revisions — and
+reach a verdict.
+
+And what rescues this project's comparison is that **the pattern is symmetric**: 73% of
+non-threatened outcomes and 67% of threatened ones look the same way. Whatever it reflects, it
+is a property of how sparse-data assessment works rather than a bias that inflates one arm.
 
 Restricting the test to outcomes with species-specific new evidence keeps the effect:
 
@@ -499,10 +512,19 @@ every unevidenced non-threatened call is wrong — which implies 79% of the low-
 stratum is threatened against a 28% base rate. That is not a credible world. Between the
 published row and that one, the effect survives.
 
-**A second, independent gain: List 2 is now verified by the Red List's own API.** For all 35
-Not Evaluated species, IUCN has no Global assessment — 26 return no taxon record at all, and
-9 return a taxon record with zero assessments of any scope. Absence of assessment is now a
-positive finding from the assessing body rather than a failure to find a name in an export.
+**A correction to an earlier claim about List 2.** This section previously said the API had
+"verified" all 35 Not Evaluated species, on the grounds that 26 returned no taxon record and 9
+returned a record with zero assessments. **That was an overstatement, and it was wrong for at
+least one species.** A 404 from the taxon endpoint means only that the queried name string is
+not in the API's index — not that IUCN has never assessed the animal. *Aphanius iberus*
+returned a 404 while IUCN carries the same fish as *Apricaphanius iberus*, Near Threatened.
+
+This is the project's own documented failure mode — the one recorded for *Amblyopsis rosae*
+and *Cyanoramphus cookii* — reappearing in a new guise, and the audit walked into it while
+claiming to have closed it. What actually closes it is a test on **taxonomic authority**
+(§5), which caught that species and no other. So the API strengthens the List 2 evidence
+without verifying it: a taxon record with zero assessments is genuine corroboration, but the
+absence of a record proves nothing on its own.
 
 The older proxy below is kept because it measures something different — whether material
 exists at all, rather than whether it was cited.
@@ -622,8 +644,34 @@ Attrition on the NE list, stage by stage:
 368  unique after deduplication on accepted name           (05)
 153  survive the genus/family/homonym audit                (06)
  43  survive independent GBIF verification                 (08)  -110
- 35  after removing pre-1500 extinctions                   (08)   -8
+ 31  after removing pre-1500 extinctions and domesticated forms (08) -12
 ```
+
+**Two further exclusions, added after a readiness review of List 2.**
+
+*Aphanius iberus* reached the published list as "never assessed" while IUCN carries the same
+fish as **Apricaphanius iberus, Near Threatened** — same epithet, same describer, different
+genus. Three tests were tried before one worked. Matching the epithet alone gives ten hits
+across the list, nine of them coincidences between unrelated animals (a chameleon against a
+skink, a goral against a dolphin). Requiring the **family** to agree fails because the two
+bodies disagree about the family — GBIF files this fish in Cyprinodontidae, IUCN in
+Aphaniidae. Requiring the **GBIF taxon key** to agree fails because GBIF treats both names as
+accepted species with separate keys. What works is the **taxonomic authority**: both are
+"(Valenciennes, 1846)", one nominal taxon under two generic placements, while the coincidences
+differ. Author and year travel with a name through every generic revision, which is the
+property the test needs. It caught that species and no other.
+
+*Bubalus bubalis*, *Camelus bactrianus*, *Lama glama* and *Vicugna pacos* — the domestic water
+buffalo, Bactrian camel, llama and alpaca — were split off as **domesticated forms**. IUCN
+assesses wild taxa; the domesticated animal is outside its remit by policy, and the wild
+ancestor is assessed separately (*Bubalus arnee* is Endangered, with nine assessments, while
+*Bubalus bubalis* has none). All four had been picked up from passages about humans
+*introducing livestock* — "the Spanish introduced pigs, dogs, chickens ... and water buffalo"
+— rather than from species accounts. Listing them as coverage gaps is the same category error
+as listing a Pleistocene bear, so they are handled the same way, in
+`ne_domesticated.csv` with the reason recorded.
+
+List 2 therefore falls from 35 to **31**. Both checks now run on every build.
 
 **A cumulative false-positive rate near 90%.** Any future work asserting that a
 species is unassessed must clear script 08 before the claim leaves the building.
@@ -639,7 +687,7 @@ methodological result here and it is structural, not luck:
 > taxonomies disagree about placement constantly. Absence needs a curated
 > cross-reference, and name matching is not one.
 
-Practical consequence: List 1 can be quoted with confidence. List 2 is 35 species,
+Practical consequence: List 1 can be quoted with confidence. List 2 is 31 species,
 each individually verified, and should never be regenerated by name matching alone.
 
 **Pre-1500 extinctions are out of scope, not neglected.** Richardson covers species
@@ -672,9 +720,9 @@ those. Named physical features are preferred over a bare capitalised word after 
 preposition, and a capture is rejected when it collides with the species' own common
 name or genus.
 
-Coverage went from **19% to 60%** of the register (1,732 of 3,066) and the site list from
+Coverage went from **19% to 60%** of the register (1,732 of 3,062) and the site list from
 42 to 102. Clusters that were entirely invisible appeared — the Gulf of California holds
-19 species, none of which had a locality before. **1,334 still have none**, because their
+19 species, none of which had a locality before. **1,330 still have none**, because their
 sentence names no place specific enough to record. Nothing is invented to fill that gap.
 
 A later audit of the recovered localities found two more classes of defect in the captured strings, both
@@ -738,7 +786,7 @@ locality and realm agree by construction rather than by luck.
 | Neotropical | 641 |
 | Patagonian | 48 |
 | Antarctic | 1 |
-| Oceanic | 683 |
+| Oceanic | 682 |
 
 All 3,066 species are assigned; none are blank. The fourteen are close to the
 zoogeographic realms of Holt et al. (2013), with marine and polar realms added.
@@ -785,7 +833,7 @@ number is what exposed the bug. The fetcher now backs off exponentially, uses fo
 threads, and **never caches a failure** — a cached failure is indistinguishable from a
 genuine absence and makes the miss permanent.
 
-Corrected: **2,261 of 3,066** species mappable from **21,906** points; **805** have no
+Corrected: **2,257 of 3,062** species mappable from **21,786** points; **805** have no
 georeferenced record anywhere in GBIF.
 
 ### Geocoding the locality names, with two independent checks
@@ -815,7 +863,7 @@ errors was detectable from the name or the feature type. That rate is why the un
 126 are not shown by default. The validated rings add **78** species that have no
 georeferenced record of their own.
 
-**Total placeable: 2,339 of 3,066 (76%). 727 cannot be placed at all.**
+**Total placeable: 2,335 of 3,062 (76%). 727 cannot be placed at all.**
 
 The map shows density, never authoritative dots, and states plainly that it maps
 collecting effort at least as much as biology.
@@ -871,7 +919,7 @@ build script asserts that rather than trusting it.
 8. **The map maps collecting effort.** Density clusters where institutions and
    expeditions have worked, so it is a picture of where the evidence sits rather than
    where risk is concentrated.
-9. **1,334 species have no locality and 727 cannot be placed at all.** Both numbers are
+9. **1,330 species have no locality and 727 cannot be placed at all.** Both numbers are
    published rather than rounded away, because the least documented species are the ones
    the register exists to surface.
 10. **67 localities name two places and are deliberately never mapped.** *"Athi and Tana
@@ -927,6 +975,17 @@ build script asserts that rather than trusting it.
 wording supports only a 0/2 versus 6/13 split, which is nothing. Either a larger
 reassessment cohort or an external habitat/depth join would settle it. Until then the tier
 numbers should be read as evidence types, not as a risk ordering.
+
+**Nine Data Deficient species may sit under a superseded genus, and the test cannot say
+which.** Applying the authority check to List 1 turns up nine species whose epithet, family
+and authority all match a non-DD name in another genus — for instance *Ristella travancorica*
+against *Kaestlea travancorica* (Least Concern), a genuine generic move. But the test has a
+false-positive mode that these cases expose: *Perochirus guentheri* matches **two** different
+accepted names, which no true synonym can, because Boulenger described several geckos named
+*guentheri* in 1885. The same happens wherever an epithet honours a person or a place —
+*whiteheadi*, *luluae*. Some of the nine are real and some are coincidences and separating
+them needs a taxonomist, not a regex. All nine are tier 1 or 2, so **none is in the priority
+stratum**; the figure is 0.3% of List 1 and is recorded rather than acted on.
 
 **Two species share a sentence the corpus never terminated.** *Micrurus camilae* and
 *Emmochliophis fugleri* sit in one run-on sentence with no period between their accounts, so

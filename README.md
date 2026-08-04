@@ -18,7 +18,7 @@ taxa. This register is an attempt to say which of those species most deserve a l
 | Data Deficient | **3,031** species |
 | of those, priority stratum | **1,123** (tier 3–5) |
 | coverage of IUCN's DD vertebrates | **35%** (3,031 of 8,659) |
-| Never assessed by IUCN | **35** |
+| Never assessed by IUCN | **31** |
 | Red List version | v2026-1 (accessed 2026-07-28) |
 
 ## The ranking is tested, not asserted

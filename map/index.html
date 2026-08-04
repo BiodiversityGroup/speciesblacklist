@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="The Biodiversity Group">
 <meta property="og:url" content="https://speciesblacklist.org/map/">
 <meta property="og:title" content="Map — The Species Black List">
-<meta property="og:description" content="3,031 vertebrates the IUCN Red List records as Data Deficient, and 35 it has never assessed. Ranked by how narrowly restricted the published record says they are — and tested against IUCN's own reassessments.">
+<meta property="og:description" content="3,031 vertebrates the IUCN Red List records as Data Deficient, and 31 it has never assessed. Ranked by how narrowly restricted the published record says they are — and tested against IUCN's own reassessments.">
 <!-- The card is the register itself: masthead, one real tier-5 record, the field
      of 2,407 marks, the headline figures. No photography, for the same reason
      there is none on the page. Drawn by pipeline/11_make_og.py from data.json,
@@ -24,7 +24,7 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,407 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 3,031 Data Deficient, 1,123 in the priority stratum, 35 never assessed, 53.6% of reassessed priority species proved threatened.">
+<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,407 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 3,031 Data Deficient, 1,123 in the priority stratum, 31 never assessed, 53.6% of reassessed priority species proved threatened.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Species Black List">
 <meta name="twitter:description" content="Vertebrates the Red List cannot yet speak for, ranked by restriction and tested against IUCN's own reassessments.">
@@ -39,7 +39,7 @@
   "@type": "Dataset",
   "name": "The Species Black List",
   "alternateName": "Data Deficient and unassessed vertebrates, ranked by geographic restriction",
-  "description": "A register of 3,031 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 35 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritised research agenda.",
+  "description": "A register of 3,031 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 31 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritised research agenda.",
   "url": "https://speciesblacklist.org/",
   "keywords": ["extinction risk","IUCN Red List","Data Deficient","conservation prioritisation","vertebrates","biodiversity assessment gap","Criterion B"],
   "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -1061,7 +1061,7 @@
       preposition, and a capture is rejected if it collides with the species' own
       common name or genus. <strong>The place is only ever taken from the text, never
       guessed</strong> — if the sentence names no place, the species keeps no locality,
-      which is why <span class="num">1,334</span> still have none.</p>
+      which is why <span class="num">1,330</span> still have none.</p>
     <p>These names are then looked up in a gazetteer to place them on the map, which
       is a separate step with its own failure modes and its own verification — see
       <em>Geocoding the locality names</em> below. Nothing in the register or on the
@@ -1138,7 +1138,7 @@
       from the gazetteer, and the evidence sentence shows both places.</p>
 
     <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
-      the <span class="num">3,066</span> species here, <span class="num">805</span>
+      the <span class="num">3,062</span> species here, <span class="num">805</span>
       have no georeferenced record anywhere in GBIF, and <span class="num">727</span>
       cannot be placed even by a cross-checked locality. They are the least visible
       members of an already invisible group, and they are absent from the map.</p>
@@ -1201,6 +1201,15 @@
     doi:10.15468/0qnb58, accessed via GBIF.org. IUCN Red List Terms of Use apply.</p>
   <p>Species accounts derive from Richardson, M. (2023) <em>Threatened and Recently
     Extinct Vertebrates of the World</em>, Cambridge University Press.</p>
+  <p><strong>Found an error? Please tell us.</strong> This register makes checkable claims
+    about individual species, and some of them will be wrong — a name IUCN holds under a
+    genus we did not look for, a locality read out of the wrong clause, a taxon that should
+    not be here at all. Corrections are the most useful thing anyone can send:
+    <a href="mailto:business@biodiversitygroup.org?subject=Species%20Black%20List%20correction">business@biodiversitygroup.org</a>,
+    or open an issue at
+    <a href="https://github.com/BiodiversityGroup/speciesblacklist">github.com/BiodiversityGroup/speciesblacklist</a>.
+    Every exclusion this project has already made is published with its reason rather than
+    quietly dropped, and corrections are handled the same way.</p>
   <p id="builtline"></p>
 </div></footer>
 
@@ -1458,8 +1467,11 @@ function boot() {
     (${v.low.threatened}/${v.low.n}) for the rest.`;
 
   $("#builtline").textContent =
-    `Register built ${m.built} against Red List v${m.redlist_version}. `
-    + `${DATA.species.length.toLocaleString()} species accounts.`;
+    `Register built ${m.built} against IUCN Red List v${m.redlist_version}, `
+    + `accessed ${m.redlist_accessed}. `
+    + `${DATA.species.length.toLocaleString()} species accounts. `
+    + `Anyone re-checking a claim against a later Red List release should expect `
+    + `movement: that movement is the point.`;
 
   const cs = $("#fClass");
   Object.keys(DATA.classes).forEach(k =>
