@@ -24,7 +24,7 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,408 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 2,372 Data Deficient, 795 in the priority stratum, 36 never assessed, 52.6% of reassessed priority species proved threatened.">
+<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,408 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 2,372 Data Deficient, 813 in the priority stratum, 36 never assessed, 52.6% of reassessed priority species proved threatened.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Species Black List">
 <meta name="twitter:description" content="Vertebrates the Red List cannot yet speak for, ranked by restriction and tested against IUCN's own reassessments.">
@@ -1020,7 +1020,9 @@
     <p><strong>Type agreement</strong> catches the obvious failures: asked for "The
       Cordillera Central", Nominatim returns a <em>university</em> in Baguio. A name
       ending "River" must come back as a waterway, "Island" as an island; buildings,
-      roads and campuses are rejected outright. That removed 295 of 889 candidates.</p>
+      roads and campuses are rejected outright. That removed
+      <span class="num" id="geoRejected">—</span> of
+      <span class="num" id="geoCandidates">—</span> candidates.</p>
     <p><strong>But type agreement cannot see a same-type homonym</strong>, and those are
       common. "Congo River" resolved to a real river of that name in Sierra Leone,
       4,000&nbsp;km from the Congo, passing cleanly as river/river. "Dunk Island"
@@ -1028,16 +1030,27 @@
       against the GBIF records of the species that sit at that locality — an
       independent witness already held:</p>
     <table class="ftable">
-      <tr><th>Agree within 500&nbsp;km — plotted</th><td class="num">315</td></tr>
-      <tr><th>Disagree by more — discarded</th><td class="num">89</td></tr>
-      <tr><th>No species with records to check against — off by default</th><td class="num">119</td></tr>
+      <tr><th>Agree within 500&nbsp;km — plotted</th>
+          <td class="num" id="geoValidated">—</td></tr>
+      <tr><th>Disagree by more — discarded</th>
+          <td class="num" id="geoContradicted">—</td></tr>
+      <tr><th>No species with records to check against — off by default</th>
+          <td class="num" id="geoUnverified">—</td></tr>
     </table>
     <p><strong>Around one in five checkable geocodes was wrong by more than
       500&nbsp;km</strong>, and none of those errors was detectable from the name or the
-      feature type alone. That rate is the reason the unverified 119 are not plotted by
+      feature type alone. That rate is the reason the unverified
+      <span class="num" id="geoUnverified2">—</span> are not plotted by
       default: there is no reason to think they are cleaner, and they cannot be tested.
-      The validated rings add <span class="num">66</span> species that have no
-      georeferenced record of their own — modest, but every one is corroborated.</p>
+      The validated rings add <span class="num" id="geoNewly">—</span> species that have
+      no georeferenced record of their own — modest, but every one is corroborated.</p>
+    <p><strong>A locality naming two places is kept but never plotted.</strong>
+      <span class="num" id="geoCompound">—</span> strings in the register are compounds
+      — "Athi and Tana River", "Caroline and Marshall Islands". There is no single
+      coordinate for them, and every way of reducing one to a single place either drops
+      the noun that identified it ("Caroline") or manufactures somewhere that does not
+      exist ("Oman and Masirah Island" → "Oman Island"). They are left whole, excluded
+      from the gazetteer, and the evidence sentence shows both places.</p>
 
     <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
       the <span class="num">2,408</span> species here, <span class="num">629</span>
@@ -1196,7 +1209,14 @@ const PAGE = 200;
    you arrived by clicking, because by then DATA was initialised. */
 showView(viewForPath(location.pathname), false);
 
-fetch("/data.json").then(r => r.json()).then(d => { DATA = d; boot(); })
+/* The payloads are regenerated on every rebuild but keep the same filenames, so a
+   returning visitor can be served a cached copy inside a page that is otherwise new.
+   That is not hypothetical — it happened in testing, and the map's tier layers showed
+   counts that disagreed with the register. data.json revalidates against its ETag (a
+   304 when unchanged, so effectively free) and carries the build stamp that versions
+   the other two payloads. */
+const stamped = p => p + "?v=" + encodeURIComponent(DATA.meta.built);
+fetch("/data.json", { cache: "no-cache" }).then(r => r.json()).then(d => { DATA = d; boot(); })
   .catch(() => { $("#counts").innerHTML =
     '<div class="count"><span>Could not load data.json — is it beside index.html?</span></div>'; });
 
@@ -1210,6 +1230,28 @@ function boot() {
     [String(c.ne), "Never assessed by IUCN at all"],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
+
+  /* --- geocode verification figures, read from geo.json rather than typed in.
+         Hardcoded, these drifted the moment the geocoder was re-run (315/89/119 in
+         the prose vs 317/88/118 in the data), which is the same class of error the
+         cross-check exists to catch. Only fetched on the page that has the table. --- */
+  if ($("#geoValidated")) {
+    const n = x => (x || 0).toLocaleString();
+    $("#geoCompound").textContent = n(c.compound_localities);
+    fetch(stamped("/geo.json")).then(r => r.json()).then(g => {
+      const k = g.check || {}, st = g.stats || {};
+      const cand = Object.values(st).reduce((a, b) => a + b, 0);
+      // everything the type/extent checks refused: wrong class, no acceptable result,
+      // or a bounding box too large for a centroid to mean anything
+      const rej = cand - (st.verified || 0) - (st["no-type-expectation"] || 0);
+      $("#geoCandidates").textContent = n(cand);
+      $("#geoRejected").textContent = n(rej);
+      $("#geoValidated").textContent = n(k.validated);
+      $("#geoContradicted").textContent = n(k.contradicted);
+      $("#geoUnverified").textContent = $("#geoUnverified2").textContent = n(k.unverified);
+      $("#geoNewly").textContent = n(g.newly_placed);
+    }).catch(() => {});
+  }
 
   /* --- validation dot plot: one axis, 0–80%, baseline reference --- */
   const MAX = 80, pos = x => (x / MAX * 100) + "%";
@@ -1638,14 +1680,15 @@ function mapColor(t) {
 async function ensureMap() {
   if (MAP) return true;
   try {
-    MAP = await fetch("/map.json").then(r => r.json());
+    MAP = await fetch(stamped("/map.json")).then(r => r.json());
   } catch (e) {
     $("#mapStats").textContent = "Could not load map.json.";
     return false;
   }
   // geo.json is optional: if geocoding has not been run the map still works,
   // it just has no locality overlay.
-  try { GEO = await fetch("/geo.json").then(r => r.json()); } catch (e) { GEO = null; }
+  try { GEO = await fetch(stamped("/geo.json")).then(r => r.json()); }
+  catch (e) { GEO = null; }
   buildLocTiers();
   if (!GEO) { ["#srcLoc", "#srcLocU"].forEach(x => { $(x).disabled = true;
               $(x).setAttribute("aria-pressed", "false"); });

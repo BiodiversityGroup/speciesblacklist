@@ -8,7 +8,7 @@
 
 Two claims, deliberately kept separate because they are not equally strong.
 
-**List 1 — Data Deficient: 2,372 species**, of which **795 are tranche A**, the
+**List 1 — Data Deficient: 2,372 species**, of which **813 are tranche A**, the
 validated priority stratum. IUCN has assessed these and returned *we don't know*. A
 Cambridge University Press reference documents most of them as narrowly restricted,
 often to a single river or a single collecting event. Ranked by how severe that
@@ -71,7 +71,8 @@ GBIF responses are cached, so reruns are free.
 | `12_build_map.py` | Fetches georeferenced GBIF occurrence points per species plus the Natural Earth basemap → `site/map.json`. |
 | `13_geocode_localities.py` | Geocodes the locality names and cross-checks each against real records → `site/geo.json`. |
 | `14_build_pages.py` | Writes the four sub-pages from `site/index.html` and regenerates the sitemap. **Run after any edit to index.html.** |
-| `_locality.py` | Shared: recovers a locality from a species' own evidence sentence. |
+| `15_check_figures.py` | Anchored check that every figure in the prose still matches the data. Non-zero exit gates the deploy. |
+| `_locality.py` | Shared: recovers a locality from a species' own evidence sentence, and flags the compound names that must never be geocoded. |
 | `_common.py` | Shared: class normalisation. |
 
 The 21 MB source archive is treated as a cache artifact and kept out of Dropbox. Pass
@@ -154,6 +155,38 @@ wide-ranging species, while a genuine type-locality endemic gets one terse line.
 Historical silence pointed the right way but on n=6 (OR 1.46), far too thin to rank
 on. Both survive in the output as descriptive columns. **Ranking is on restriction
 tier alone.**
+
+### The tier patterns were widened after the validation was run — disclosed
+
+This matters enough to state plainly rather than bury. The held-out test above was run
+first. A later audit then found the tier patterns were **under-matching**: the book
+phrases a restriction many ways, and the patterns covered only *"known only from"* and
+*"confined to"*. Two rounds of widening followed:
+
+| Round | What was being missed | Tier 1 before → after |
+|---|---|---|
+| 1 | *"known for certain only from"* (26 cases), *"only definitely known from"*, *"known from a few localities"* | 279 → 245 |
+| 2 | a varied or absent preposition: *"known only **by** a single specimen"*, *"known only **in** a small area"*, *"known only two localities"*, *"known only its original collection"* | 245 → 227 |
+
+Changing a classifier after seeing its test result is how test sets get quietly tuned,
+so the guard is this: **the published validation figures did not move, either time.**
+Tier 4–5 stayed at 10/19 = 52.6%, tier 1–3 at 20.2%, p = 0.0075, OR 4.38. Both rounds
+moved species *within* the collapsed tier 1–3 group and none across the 4–5 boundary the
+headline rests on. The result cannot be an artefact of the widening — had it been, it
+would have changed when the patterns did.
+
+The widenings are corrections to the *code*, not the *definitions*. Tier 4 was defined in
+advance as "a single named site"; *"known for certain only from the Mahananda River"*
+plainly satisfies that as written, and failing to match it was a bug. The tier definitions
+are unchanged from before the test was run. What did change is the register: tranche A
+grew from 795 to **813** as restrictions the patterns had missed were recognised.
+
+A residual false-positive risk was checked rather than assumed. Requiring *"only"* or an
+explicit certainty word is what keeps the widened pattern from matching a bare *"is known
+from the Amazon basin"*, which would collapse tier 2 into a catch-all; and restricting the
+optional preposition to *from / by / in / at* is what keeps *"is only known **to** occur
+seasonally"* out. Only 3 sentences in the whole corpus use the prepositionless form, and
+all 3 were inspected individually.
 
 ---
 
@@ -238,6 +271,13 @@ Coverage went from **19% to 60%** of the register (1,449 of 2,408) and the site 
 19 species, none of which had a locality before. **959 still have none**, because their
 sentence names no place specific enough to record. Nothing is invented to fill that gap.
 
+A later audit of the 999 found two more classes of defect in the captured strings, both
+now handled. **Ten captures ended on a conjunction** — *"Madagascar and the"*, *"Panama
+and"* — because the pattern's connector list let a capture stop mid-phrase; three of them
+had reached the map. Those are repaired to the first place. **Fifty-three name two places**
+and are handled differently: they are left exactly as they are and simply never geocoded,
+for the reason given in limitation 10.
+
 Three faults in the original site strings were fixed at the same time:
 
 - `"Miombo"` kept the book's quotation marks, because Richardson was *defining* the word
@@ -299,7 +339,7 @@ geocoded — but one check is not enough.
 *Type agreement* catches the obvious failures: asked for "The Cordillera Central",
 Nominatim returns a **university** in Baguio. Names ending *River* must resolve as
 waterways, *Island* as islands; buildings, roads and campuses are rejected outright.
-That removed 295 of 889 candidates.
+That removed 313 of 836 candidates.
 
 *But type agreement cannot see a same-type homonym*, and those are common. "Congo River"
 resolved to a real river of that name in **Sierra Leone**, 4,000 km from the Congo,
@@ -309,13 +349,13 @@ at that locality — an independent witness already held:
 
 | | |
 |---|---|
-| Agree within 500 km — plotted | **315** |
-| Disagree by more — discarded | **89** |
-| No records to check against — off by default | **119** |
+| Agree within 500 km — plotted | **317** |
+| Disagree by more — discarded | **88** |
+| No records to check against — off by default | **118** |
 
 About one in five checkable geocodes was wrong by more than 500 km, and none of those
 errors was detectable from the name or the feature type. That rate is why the unverified
-119 are not shown by default. The validated rings add **66** species that have no
+118 are not shown by default. The validated rings add **66** species that have no
 georeferenced record of their own.
 
 **Total placeable: 1,845 of 2,408 (77%). 563 cannot be placed at all.**
@@ -363,18 +403,27 @@ build script asserts that rather than trusting it.
 6. **Tier 2 of the audit will have residual homonyms.** GBIF confirmation removes most
    but the rank is coarse; every tier-2 demotion is written out for inspection.
 7. **Tier 1 is a weak-evidence bucket, not a severity one.** It means the extractor found
-   no restriction statement, and inspection shows it holds a mix of genuinely widespread
-   species, restrictions phrased in ways the patterns miss (*"only definitely known
-   from"*, *"known for certain only from"* — at least 40 of 279), and sentences that are
-   about the species but say nothing about range. It has the **lowest** validated
-   threatened rate of any tier, 3/20 = 15%. Widening the patterns would move real
-   restrictions out of tier 1 and is the clearest remaining improvement.
+   no restriction statement — not that the species is widespread. Two rounds of pattern
+   widening (§4) have taken it from 279 species to **227** by recognising phrasings that
+   were being missed, and repeated auditing now finds only a handful left: 6 of 245 at the
+   last check, 0 of 227 after the second round. What remains is a genuine mix of
+   wide-ranging species and sentences that discuss the species without describing its
+   range. It has the **lowest** validated threatened rate of any tier (3/17 = 18%), which
+   is the evidence that it is not hiding a large body of restricted species — but a tier-1
+   species is *unranked*, not *safe*, and should never be read as the latter.
 8. **The map maps collecting effort.** Density clusters where institutions and
    expeditions have worked, so it is a picture of where the evidence sits rather than
    where risk is concentrated.
 9. **959 species have no locality and 563 cannot be placed at all.** Both numbers are
    published rather than rounded away, because the least documented species are the ones
    the register exists to surface.
+10. **53 localities name two places and are deliberately never mapped.** *"Athi and Tana
+    River"*, *"Caroline and Marshall Islands"*. They are kept whole in the register and
+    withheld from the gazetteer, because every reduction to one place either discards the
+    noun that identified it (*"Caroline"*) or invents a location outright — *"Oman and
+    Masirah Island"* reduces to *"Oman Island"*, and *"Turkana and the Omo River"* to
+    *"Turkana River"*, neither of which exists. A true but coarse locality is preferable
+    to a precise-sounding fiction, and the evidence sentence names both places anyway.
 
 ---
 
@@ -395,6 +444,7 @@ python scripts/11_make_og.py          # needs Pillow
 python scripts/12_build_map.py
 python scripts/13_geocode_localities.py
 python scripts/14_build_pages.py
+python scripts/15_check_figures.py   # exits non-zero if the prose has drifted
 ```
 
 Standard library only apart from `11_make_og.py`, which needs Pillow. That matters on
