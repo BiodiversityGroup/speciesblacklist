@@ -8,7 +8,7 @@
 
 Two claims, deliberately kept separate because they are not equally strong.
 
-**List 1 — Data Deficient: 2,372 species**, of which **813 are tranche A**, the
+**List 1 — Data Deficient: 2,372 species**, of which **843 are tranche A**, the
 validated priority stratum. IUCN has assessed these and returned *we don't know*. A
 Cambridge University Press reference documents most of them as narrowly restricted,
 often to a single river or a single collecting event. Ranked by how severe that
@@ -69,6 +69,14 @@ IUCN Red List Terms of Use apply and a copy sits in each of the legacy export fo
 Scripts in `scripts/`, outputs in `build_2026/`. Run in order; all are idempotent and
 GBIF responses are cached, so reruns are free.
 
+Idempotence was not free. 08 and 09 originally read the same published list they
+rewrote, so a second run read a list from which its own exclusions had already been
+removed, found nothing left to exclude, and overwrote `prehistoric_extinctions.csv` with
+just that run's single finding — deleting the record of the other seven. The exclusion
+logs *are* the audit trail, so a rerun quietly truncating them is a correctness bug, not
+untidiness. 07 now writes candidate files and 08/09 own the published ones; verified
+stable over four consecutive runs.
+
 | Script | Does |
 |---|---|
 | `01_build_iucn_index.py` | Parses the DwC-A into a flat name → category index. Carries family and order, without which the audit in 06 cannot run. |
@@ -77,9 +85,9 @@ GBIF responses are cached, so reruns are free.
 | `04_validate_score.py` | Tests the score against species IUCN reassessed independently. **Run this before trusting anything downstream.** |
 | `05_triage_unmatched.py` | Resolves names absent from IUCN against the GBIF backbone. |
 | `06_audit_false_negatives.py` | Catches species IUCN files under a different genus or family. |
-| `07_assemble.py` | Builds both lists. |
-| `08_verify_ne.py` | Independent confirmation of the NE list; splits off pre-1500 extinctions. |
-| `09_verify_dd.py` | Same verification applied to the DD list. |
+| `07_assemble.py` | Builds both lists, as `dd_candidates.csv` / `ne_candidates.csv`. |
+| `08_verify_ne.py` | Independent confirmation of the NE list; splits off pre-1500 extinctions. Reads 07's candidates and **owns** the published `SPECIES_BLACK_LIST_ne.csv`. |
+| `09_verify_dd.py` | Same verification applied to the DD list, and owns `SPECIES_BLACK_LIST_dd.csv`. |
 | `10_build_site.py` | Builds `site/data.json`: register payload, recovered common names, cleaned localities, site metadata. |
 | `11_make_og.py` | Draws the shared-link preview card. **Needs Pillow** — the only script with a third-party dependency. |
 | `12_build_map.py` | Fetches georeferenced GBIF occurrence points per species plus the Natural Earth basemap → `site/map.json`. |
@@ -87,7 +95,7 @@ GBIF responses are cached, so reruns are free.
 | `14_build_pages.py` | Writes the four sub-pages from `site/index.html` and regenerates the sitemap. **Run after any edit to index.html.** |
 | `15_check_figures.py` | Anchored check that every figure in the prose still matches the data. Non-zero exit gates the deploy. |
 | `_locality.py` | Shared: recovers a locality from a species' own evidence sentence, and flags the compound names that must never be geocoded. |
-| `_common.py` | Shared: class normalisation. |
+| `_common.py` | Shared: class normalisation, and the sentence splitter. Segmentation lives here because 03, 04, 07 and 10 all divide the same corpus — and 04 is the held-out test, so if they disagree the test scores a classifier that is not the published one. |
 
 The 21 MB source archive is treated as a cache artifact and kept out of Dropbox. Pass
 its path to script 01, or drop it in `%TEMP%`.
@@ -181,19 +189,24 @@ phrases a restriction many ways, and the patterns covered only *"known only from
 |---|---|---|
 | 1 | *"known for certain only from"* (26 cases), *"only definitely known from"*, *"known from a few localities"* | 279 → 245 |
 | 2 | a varied or absent preposition: *"known only **by** a single specimen"*, *"known only **in** a small area"*, *"known only two localities"*, *"known only its original collection"* | 245 → 227 |
+| 3 | not a pattern at all — the **sentence splitter** cut at an abbreviated genus, so *"the Assam perch (B. | assamensis) are both known only from…"* lost its restriction to the discarded half | 226 → 147 |
 
 Changing a classifier after seeing its test result is how test sets get quietly tuned,
-so the guard is this: **the published validation figures did not move, either time.**
-Tier 4–5 stayed at 10/19 = 52.6%, tier 1–3 at 20.2%, p = 0.0075, OR 4.38. Both rounds
-moved species *within* the collapsed tier 1–3 group and none across the 4–5 boundary the
-headline rests on. The result cannot be an artefact of the widening — had it been, it
-would have changed when the patterns did.
+so the guard is this: **the published validation figures did not move, in any of the
+three rounds.**
+Tier 4–5 stayed at 10/19 = 52.6%, tier 1–3 at 20.2%, p = 0.0075, OR 4.38 every time.
+Each round moved species *within* the collapsed tier 1–3 group and none across the 4–5
+boundary the headline rests on. Round 3 is the strongest form of that check, because it
+changed the segmentation of the validation set itself (its tier 2 went 69 → 75) and the
+collapsed result still did not budge. The result cannot be an artefact of the fixes — had
+it been, it would have changed when they landed.
 
 The widenings are corrections to the *code*, not the *definitions*. Tier 4 was defined in
 advance as "a single named site"; *"known for certain only from the Mahananda River"*
 plainly satisfies that as written, and failing to match it was a bug. The tier definitions
 are unchanged from before the test was run. What did change is the register: tranche A
-grew from 795 to **813** as restrictions the patterns had missed were recognised.
+grew from 795 to **843** across the three rounds, as restrictions the code had been
+missing were recognised.
 
 A residual false-positive risk was checked rather than assumed. Requiring *"only"* or an
 explicit certainty word is what keeps the widened pattern from matching a bare *"is known
@@ -209,8 +222,8 @@ result; together they set how hard it can be leaned on.
 
 **1. The tested sample is not a random draw from the register.** IUCN does not choose
 which DD species to resolve at random — a reassessment follows funding, a specialist
-group, or somebody's fieldwork. The 108 are **17.6% tier 4–5 against 34.3% in the
-register** (Fisher p = 0.0002). Reassessment effort is going disproportionately to the
+group, or somebody's fieldwork. The 108 are **17.6% tier 4–5 against 35.5% in the
+register** (Fisher p = 0.00007). Reassessment effort is going disproportionately to the
 vague-range species and leaving the narrowly restricted ones unresolved. That is itself a
 finding in the project's favour, and it means the tier 4–5 rate is estimated on a stratum
 IUCN sampled non-randomly. Whether the 19 they happened to pick were already suspected of
@@ -234,7 +247,7 @@ significant, and tier ≥3 tests **better** than the published tier ≥4 (OR 5.2
 vs OR 4.38, p = 0.0075). Tranche A is 4–5 because Criterion B's area-of-occupancy
 thresholds motivate it a priori, not because it maximised the statistic — had the cut been
 chosen to fit the test, tier ≥3 would have been picked. Bonferroni across all four cuts
-leaves the result significant (0.0018 → 0.007). The corollary is that **tier 3 is a
+leaves the result significant (0.0018 → 0.0072). The corollary is that **tier 3 is a
 defensible candidate for inclusion in the priority stratum** and is currently excluded on
 theoretical rather than empirical grounds.
 
@@ -309,19 +322,19 @@ Recorded two ways, and the site distinguishes them.
 species sit inside a paragraph introduced by a place. That place, and its opening
 sentence, attach to every species in the paragraph. The stronger provenance.
 
-**From the species entry itself (999 species).** Where a species is not inside a
+**From the species entry itself (1,037 species).** Where a species is not inside a
 locality account, the place is usually named in its own sentence anyway — *"collected
 from the upper Pungwe River"*, *"collected off Mauritius"*. `_locality.py` extracts
 those. Named physical features are preferred over a bare capitalised word after a
 preposition, and a capture is rejected when it collides with the species' own common
 name or genus.
 
-Coverage went from **19% to 60%** of the register (1,448 of 2,407) and the site list from
+Coverage went from **19% to 60%** of the register (1,486 of 2,407) and the site list from
 42 to 102. Clusters that were entirely invisible appeared — the Gulf of California holds
-19 species, none of which had a locality before. **959 still have none**, because their
+19 species, none of which had a locality before. **921 still have none**, because their
 sentence names no place specific enough to record. Nothing is invented to fill that gap.
 
-A later audit of the 999 found two more classes of defect in the captured strings, both
+A later audit of the recovered localities found two more classes of defect in the captured strings, both
 now handled. **Ten captures ended on a conjunction** — *"Madagascar and the"*, *"Panama
 and"* — because the pattern's connector list let a capture stop mid-phrase; three of them
 had reached the map. Those are repaired to the first place. **Fifty-three name two places**
@@ -389,7 +402,7 @@ geocoded — but one check is not enough.
 *Type agreement* catches the obvious failures: asked for "The Cordillera Central",
 Nominatim returns a **university** in Baguio. Names ending *River* must resolve as
 waterways, *Island* as islands; buildings, roads and campuses are rejected outright.
-That removed 313 of 836 candidates.
+That removed 321 of 856 candidates.
 
 *But type agreement cannot see a same-type homonym*, and those are common. "Congo River"
 resolved to a real river of that name in **Sierra Leone**, 4,000 km from the Congo,
@@ -399,16 +412,16 @@ at that locality — an independent witness already held:
 
 | | |
 |---|---|
-| Agree within 500 km — plotted | **317** |
-| Disagree by more — discarded | **88** |
-| No records to check against — off by default | **118** |
+| Agree within 500 km — plotted | **319** |
+| Disagree by more — discarded | **94** |
+| No records to check against — off by default | **122** |
 
 About one in five checkable geocodes was wrong by more than 500 km, and none of those
 errors was detectable from the name or the feature type. That rate is why the unverified
-118 are not shown by default. The validated rings add **66** species that have no
+122 are not shown by default. The validated rings add **70** species that have no
 georeferenced record of their own.
 
-**Total placeable: 1,844 of 2,407 (77%). 563 cannot be placed at all.**
+**Total placeable: 1,848 of 2,407 (77%). 559 cannot be placed at all.**
 
 The map shows density, never authoritative dots, and states plainly that it maps
 collecting effort at least as much as biology.
@@ -453,18 +466,18 @@ build script asserts that rather than trusting it.
 6. **Tier 2 of the audit will have residual homonyms.** GBIF confirmation removes most
    but the rank is coarse; every tier-2 demotion is written out for inspection.
 7. **Tier 1 is a weak-evidence bucket, not a severity one.** It means the extractor found
-   no restriction statement — not that the species is widespread. Two rounds of pattern
-   widening (§4) have taken it from 279 species to **227** by recognising phrasings that
-   were being missed, and repeated auditing now finds only a handful left: 6 of 245 at the
-   last check, 0 of 227 after the second round. What remains is a genuine mix of
-   wide-ranging species and sentences that discuss the species without describing its
-   range. It has the **lowest** validated threatened rate of any tier (3/17 = 18%), which
-   is the evidence that it is not hiding a large body of restricted species — but a tier-1
-   species is *unranked*, not *safe*, and should never be read as the latter.
+   no restriction statement — not that the species is widespread. Three rounds of fixes
+   (§4) have taken it from 279 species to **147**: two of pattern widening, then one that
+   was not about patterns at all but about sentence segmentation, which alone accounted for
+   79 species. Each round was found by auditing the tier, and each time the residue looked
+   clean before the next mechanism was noticed — so the honest statement is that tier 1 has
+   been wrong three times and may still hide a fourth mechanism. What remains is a genuine
+   mix of wide-ranging species and sentences that discuss a species without describing its
+   range. A tier-1 species is *unranked*, not *safe*, and must never be read as the latter.
 8. **The map maps collecting effort.** Density clusters where institutions and
    expeditions have worked, so it is a picture of where the evidence sits rather than
    where risk is concentrated.
-9. **959 species have no locality and 563 cannot be placed at all.** Both numbers are
+9. **921 species have no locality and 559 cannot be placed at all.** Both numbers are
    published rather than rounded away, because the least documented species are the ones
    the register exists to surface.
 10. **53 localities name two places and are deliberately never mapped.** *"Athi and Tana
@@ -476,17 +489,17 @@ build script asserts that rather than trusting it.
     to a precise-sounding fiction, and the evidence sentence names both places anyway.
 11. **"Validated" means within 500 km, which is coarse for a single-site endemic.** Half
     the plotted localities agree with a real record to within 50 km and 17% to within
-    10 km, but **55 of 317 agree only to more than 200 km** — for a species whose whole
-    claim is one river, that can be the wrong watershed. Worse, for **67 of the 317 the
+    10 km, but **55 of 319 agree only to more than 200 km** — for a species whose whole
+    claim is one river, that can be the wrong watershed. Worse, for **67 of the 319 the
     witness records are themselves spread over more than 1,000 km** (large marine
     features, mostly: the Gulf of Guinea, the Bay of Biscay), so a 500 km test could not
     have failed however wrong the coordinate was. Those points are corroborated only in
-    the weak sense that nothing contradicted them. A further **59 carry no feature noun
+    the weak sense that nothing contradicted them. A further **60 carry no feature noun
     the type-check recognises** (*Espiritu Santo*, *Luzon*) and passed on distance alone.
 12. **The tier 3/4 boundary is not cleanly separable by pattern.** Tier 4 is tested before
     tier 3 and its alternation contains *river*, so *"confined to the Kapuas River
     drainage"* — a basin the size of a country — scores as "a single named site". Between
-    58 and 67 tier-4 species are drainage-scale by the published definition, roughly 8% of
+    73 and 83 tier-4 species are drainage-scale by the published definition, roughly 9% of
     tranche A. A further 29 that mention a basin are correctly tier 4 (*"a single locality
     within the Ganges River drainage"*), so the fix is not a blanket reclassification. See
     the open question at the end of this section.
@@ -502,7 +515,7 @@ build script asserts that rather than trusting it.
 ### Open question the audit did not settle
 
 Limitation 12 is a real mismatch between the published tier table and the code, and fixing
-it would move **tranche A from 813 to roughly 750 (−8%)**, with the held-out result
+it would move **tranche A from 843 to roughly 765 (−9%)**, with the held-out result
 weakening but surviving (OR 4.38 → 3.74, p 0.0075 → 0.0173). Because that changes a
 headline figure and the editorial meaning of "priority", it is recorded here rather than
 applied unilaterally. Note that tier ≥3 as a *set* is unaffected by the reordering, so
