@@ -88,6 +88,50 @@ judged to be at risk, ranked by how narrowly restricted the published record is,
 ranking independently tested.** Extending coverage now requires a second corpus, not better
 extraction.
 
+### How long the blanks have stood
+
+The Red List export says a species *is* Data Deficient. It does not say since when, and the
+two are very different claims: a species first assessed in 2023 awaits its first proper look,
+while one assessed in 2000 and re-affirmed Data Deficient three times since has been examined
+repeatedly by people who each concluded there was nothing to conclude. Only the API exposes
+this, and it reframes the register.
+
+| | |
+|---|---|
+| median years Data Deficient | **16** |
+| Data Deficient for 10+ years | 2,856 of 2,973 (96%) |
+| Data Deficient for 20+ years | **469** |
+| longest | 32 years |
+| assessed more than once, still Data Deficient | **1,343 (45%)** |
+| median time IUCN has taken to actually resolve a DD listing | 16 years |
+| register species already past that median | **1,003** |
+
+**The re-affirmation figure is the one that matters.** 1,343 species have been assessed
+more than once and left Data Deficient — 234 of them three times, and nine species four or
+more. Those are not backlog awaiting a first assessment; they are cases where the Red List
+has looked, and looked again, and had nothing to say. That is the population this register
+exists to name.
+
+The duration is also strikingly uniform. A preliminary run on an incomplete subset suggested
+the priority tiers had waited longer; on the full data they have not — the median is 16 years
+in every tier from 1 to 5. **The neglect is systemic rather than concentrated in the
+narrowly-restricted species**, which weakens one argument the project might have made and is
+recorded because it was tested.
+
+**Method, and two caveats.** `/red_list_categories/DD` is paginated and returns every
+assessment ever placed in Data Deficient, superseded ones included — 35,678 assessments over
+357 pages, which replaced 3,031 per-species history calls that the rate limit would have
+turned into a four-hour job. Duration is then the span from a species' earliest Data Deficient
+assessment to v2026-1.
+
+First caveat: working from Data Deficient assessments alone cannot see a *non*-DD assessment
+sitting between two DD ones, so a species that went DD → LC → DD would read as one
+continuous gap. Checked against the 1,262 register species whose full histories were also
+fetched, the first-DD year agrees for 1,258 (99.7%) and exactly one span is broken that way.
+Second caveat: 58 of 3,031 register species could not be matched to a swept
+assessment under either their book name or their verified IUCN name, and carry no duration.
+They are shown as "—" rather than assumed.
+
 Both lists exist because Data Deficient and Not Evaluated species are excluded from
 conservation in practice and, in one case, by treaty language. Target 4 of the
 Kunming-Montreal Global Biodiversity Framework commits to halting the extinction of
@@ -153,7 +197,8 @@ stable over four consecutive runs.
 | `14_build_pages.py` | Writes the four sub-pages from `site/index.html` and regenerates the sitemap. **Run after any edit to index.html.** |
 | `15_check_figures.py` | Anchored check that every figure in the prose still matches the data. Non-zero exit gates the deploy. |
 | `16_outcome_sensitivity.py` | Tests how much the held-out result depends on trusting IUCN's non-threatened outcomes (§4a). Needs network; results cached. |
-| `17_iucn_history.py` | Pulls assessment histories and per-assessment reference lists from the IUCN API v4 (§4a). Needs `.iucn_token` at the project root — gitignored, never written to output. |
+| `17_iucn_history.py` | Pulls assessment histories, per-assessment reference lists, and the full Data Deficient assessment sweep from the IUCN API v4 (§4a). Needs `.iucn_token` at the project root — gitignored, never written to output. |
+| `18_dd_duration.py` | Turns the sweep into per-species Data Deficient durations and re-affirmation counts (§1). |
 | `_locality.py` | Shared: recovers a locality from a species' own evidence sentence, and flags the compound names that must never be geocoded. |
 | `_common.py` | Shared: class normalisation, and the sentence splitter. Segmentation lives here because 03, 04, 07 and 10 all divide the same corpus — and 04 is the held-out test, so if they disagree the test scores a classifier that is not the published one. |
 
@@ -810,7 +855,11 @@ build script asserts that rather than trusting it.
     p 0.0016 → 0.0091). The narrow slot is doing real work — a bare *"the X River"* is a
     tighter claim than a qualified phrase — so the four misses stay, recorded rather than
     fixed at that price.
-14. **One taxon in the register may not be a real species.** *Pseudonovibos spiralis*, the
+14. **58 species carry no Data Deficient duration.** They could not be matched to a swept
+    assessment under either name form, so the register shows "—" for them rather than
+    guessing. They are disproportionately the taxonomic-audit recoveries, whose IUCN name
+    differs from the book's.
+15. **One taxon in the register may not be a real species.** *Pseudonovibos spiralis*, the
     khting-vor, is known only from twisted horns that Richardson himself notes "may perhaps
     be nothing more than artificially-crafted cattle horns". It is genuinely unassessed, so
     it satisfies the NE list's criterion literally, but IUCN's silence here reflects
@@ -832,7 +881,7 @@ numbers should be read as evidence types, not as a risk ordering.
 one takes the other's tier-5 phrase. No sentence splitter can recover a boundary that is not
 in the source; this needs a manual correction to the input text.
 
-**A probable non-taxon is ranked** — see limitation 14.
+**A probable non-taxon is ranked** — see limitation 15.
 
 **Two thirds of IUCN's Data Deficient vertebrates are outside the corpus entirely** (§1).
 Every one the corpus names is now included, so further coverage has to come from a second

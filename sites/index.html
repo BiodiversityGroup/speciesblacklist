@@ -723,6 +723,17 @@
       <span class="num">5,628</span> are never named in it at all. So the right reading is
       "of the Data Deficient vertebrates with a usable published range statement, these are
       the most narrowly restricted" — not "these are the ones that matter most".</p>
+    <p><strong>How long is a blank allowed to stand?</strong> The Red List export says
+      only that a species is Data Deficient now. Its assessment history, pulled from IUCN's
+      API, says since when — and the answer reframes the register. The median species here
+      has been Data Deficient for <span class="num">16</span> years;
+      <span class="num">469</span> have held the label for twenty years or more. And
+      <span class="num">1,343</span> of them — 45% — have been assessed more
+      than once, meaning IUCN returned, looked again, and wrote Data Deficient a second or
+      third time. Those are not species awaiting a first look. For scale, the median time
+      IUCN has actually taken to resolve a Data Deficient listing is
+      <span class="num">16</span> years, so
+      <span class="num">1,003</span> species in this register are already past it.</p>
     <p><strong>The species outside were screened out, not overlooked.</strong> Richardson
       takes an explicit position on the Data Deficient category: most of it, in his
       judgement, is junior synonyms or valid species not in immediate danger, while
@@ -815,6 +826,13 @@
       <option value="dd">Data Deficient</option>
       <option value="ne">Never assessed</option>
     </select>
+    <select id="fDur" aria-label="Filter by how long the species has been Data Deficient">
+      <option value="">Any duration</option>
+      <option value="10">Data Deficient 10+ years</option>
+      <option value="15">Data Deficient 15+ years</option>
+      <option value="20">Data Deficient 20+ years</option>
+      <option value="re">Re-affirmed Data Deficient at least once</option>
+    </select>
     <select id="fTier" aria-label="Filter by restriction tier">
       <option value="">All tiers</option>
     </select>
@@ -832,7 +850,7 @@
     <table>
       <thead><tr>
         <th class="sev" aria-hidden="true"></th>
-        <th>Species</th><th>Class</th><th>Tier</th><th>Basis</th><th>Locality</th><th></th>
+        <th>Species</th><th>Class</th><th>Tier</th><th>Basis</th><th>Locality</th><th title="Years listed Data Deficient, and how many times IUCN has assessed it and written Data Deficient again">DD&nbsp;since</th><th></th>
       </tr></thead>
       <tbody id="tbody"></tbody>
     </table>
@@ -1244,6 +1262,7 @@ function resetFilters() {
   $("#fClass").value = "";
   $("#fList").value = "";
   $("#fTier").value = "";
+  $("#fDur").value = "";
   siteFilter = "";
   cellFilter = null; cellLabel = "";
   ["#cPri", "#cSil"].forEach(s => $(s).setAttribute("aria-pressed", "false"));
@@ -1449,7 +1468,7 @@ function boot() {
     }, 150);
   });
 
-  ["#q", "#fClass", "#fList", "#fTier"].forEach(s => $(s).oninput = apply);
+  ["#q", "#fClass", "#fList", "#fTier", "#fDur"].forEach(s => $(s).oninput = apply);
   ["#cPri", "#cSil"].forEach(s => $(s).onclick = e => {
     const b = e.currentTarget;
     b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true");
@@ -2083,10 +2102,12 @@ function apply() {
   const q = $("#q").value.trim().toLowerCase(),
         cl = $("#fClass").value, li = $("#fList").value,
         ti = $("#fTier").value,
+        du = $("#fDur").value,
         pri = $("#cPri").getAttribute("aria-pressed") === "true",
         sil = $("#cSil").getAttribute("aria-pressed") === "true";
   rows = DATA.species.filter(s =>
     (!cl || s.c === cl) && (!li || s.l === li) && (!ti || s.t === +ti) &&
+    (!du || (du === "re" ? (s.ddr || 0) > 1 : (s.ddy || 0) >= +du)) &&
     (!pri || s.t >= PRI) && (!sil || s.sil) &&
     (!siteFilter || s.s === siteFilter) &&
     (!cellFilter || cellFilter.has(s.n)) &&
@@ -2119,6 +2140,9 @@ function draw(append) {
       <td><span class="tierchip t${s.t}" title="${esc(DATA.tiers[s.t])}">${s.t}</span></td>
       <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.b)}</td>
       <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.s || "—")}</td>
+      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2);white-space:nowrap">${
+        s.dds ? `${s.dds} <span style="color:var(--ink-3)">(${s.ddy}\u00a0yr${
+          s.ddr > 1 ? `, ${s.ddr}\u00d7` : ""})</span>` : "—"}</td>
       <td>${s.t >= PRI ? '<span class="tag pri">Priority</span> ' : ""}${
            s.l === "ne" ? '<span class="tag ne">Never assessed</span>' : ""}</td></tr>`;
   }).join(""));
