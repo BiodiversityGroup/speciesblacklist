@@ -151,6 +151,7 @@ stable over four consecutive runs.
 | `13_geocode_localities.py` | Geocodes the locality names and cross-checks each against real records → `site/geo.json`. |
 | `14_build_pages.py` | Writes the four sub-pages from `site/index.html` and regenerates the sitemap. **Run after any edit to index.html.** |
 | `15_check_figures.py` | Anchored check that every figure in the prose still matches the data. Non-zero exit gates the deploy. |
+| `16_outcome_sensitivity.py` | Tests how much the held-out result depends on trusting IUCN's non-threatened outcomes (§4a). Needs network; results cached. |
 | `_locality.py` | Shared: recovers a locality from a species' own evidence sentence, and flags the compound names that must never be geocoded. |
 | `_common.py` | Shared: class normalisation, and the sentence splitter. Segmentation lives here because 03, 04, 07 and 10 all divide the same corpus — and 04 is the held-out test, so if they disagree the test scores a classifier that is not the published one. |
 
@@ -353,13 +354,88 @@ being threatened cannot be tested from here.
 statement of the result is the interval 36–70%, not the point estimate**, and "53.6%"
 should never be quoted to one decimal without it.
 
-**3. Predictor and outcome are not independent sources.** Richardson compiled from the
-primary literature and specialist-group material; an assessor writing the same species'
-account draws on the same papers and may well have read Richardson. So this is agreement
-between two readings of one literature, not a blind prediction against ground truth. The
-time order is sound — every outcome postdates the January 2022 manuscript, so no answer
-leaked into the predictor — which is what makes the test worth running. But
-*"predicts IUCN's own verdict"* overstates it; *"agrees with"* is accurate.
+**3. Predictor and outcome are not independent sources, and the outcome is partly expert
+consensus rather than evidence.** Richardson compiled from the primary literature and
+specialist-group material; an assessor writing the same species' account draws on the same
+papers and may well have read Richardson. So this is agreement between two readings of one
+literature, not a blind prediction against ground truth. The time order is sound — every
+outcome postdates the January 2022 manuscript, so no answer leaked into the predictor —
+which is what makes the test worth running. But *"predicts IUCN's own verdict"* overstates
+it; *"agrees with"* is accurate.
+
+The second half of that heading is the sharper problem, and it was raised in review rather
+than found here. **IUCN has been actively working the Data Deficient and Not Evaluated
+backlog down through specialist-group consensus, not new fieldwork.** The Tortoise and
+Freshwater Turtle Specialist Group states its own process: it prepared draft assessments for
+the 102 turtle species that were unevaluated as of the 2011 Red List, handling it "through
+multiple consensus-building workshops and consultations", and those drafts then went onto the
+Red List (Turtle Taxonomy Working Group 2011, *Chelonian Research Monographs* 5). Turtle
+Data Deficient listings fell from 36 in 2011 to 10 in the September 2024 download.
+
+If a species is moved to Least Concern because no specialist reported a threat, it is
+evidentially still Data Deficient — and this project would score it as a confirmed negative.
+So a chunk of what is being called ground truth may be a second expert opinion about the same
+sparse records. That does not invalidate the test, but it does mean the test measures
+**agreement between two expert readings** more than it measures agreement with reality.
+Section 4a quantifies how much of the result depends on trusting those calls.
+
+Worth noting on the same page: the TFTSG's own estimate, adjusting for the predicted threat
+level of Data Deficient turtles, was that **52% of all turtles are threatened** — a third
+independent figure in the same range as this project's 53.6% and Borgelt et al.'s 56%.
+
+### 4a. How much of the result depends on trusting the non-threatened outcomes?
+
+Run by `16_outcome_sensitivity.py`. Two attempts to detect unevidenced listings from the
+**rationale text** of the 2024 download were abandoned as unreliable: a keyword rule flagged
+35% of Least Concern and Near Threatened vertebrates, but its hits were mostly assessments
+that did present evidence ("widespread, inconspicuous species not subject to specific
+exploitation"); a corrected rule requiring the absence of any positive distributional claim
+gave 3.7%, yet still flagged the swordfish and found no turtles at all. Fluent prose reads
+the same whether or not anything sits behind it. **No figure from that approach is
+published.** The 2026 assessments cannot be read at all — the GBIF-mirrored archive carries
+taxonomy, distribution and vernacular names only, and assessment history needs an IUCN API
+token.
+
+What can be used is an independent witness already held: how much material exists for the
+species. A Least Concern call on a species with two records worldwide has no visible basis
+whatever its rationale says.
+
+| Outcome | n | median GBIF records | median preserved specimens | ≤5 records |
+|---|---|---|---|---|
+| LC | 81 | 23 | 14 | 8 |
+| NT | 20 | 18 | 16 | 4 |
+| VU | 9 | 32 | 22 | 3 |
+| EN | 21 | 11 | 5 | 8 |
+| CR | 7 | **3** | **2** | 5 |
+
+**The pattern is the opposite of the one feared.** The species IUCN moved to Least Concern
+are the better-documented ones; the species it moved to Critically Endangered are the ones
+known from almost nothing — which is what one would expect, since a tiny alarming record is
+what drives a CR listing. Recomputing the headline while discarding the thinnest
+non-threatened calls:
+
+| Treatment | priority | rest | OR | p |
+|---|---|---|---|---|
+| **as published** | 15/28 = 53.6% | 24/112 = 21.4% | 4.23 | 0.0016 |
+| drop non-threatened with ≤5 records | 15/24 = 62.5% | 24/104 = 23.1% | 5.56 | 0.0004 |
+| drop non-threatened with ≤20 records | 15/21 = 71.4% | 24/69 = 34.8% | 4.69 | 0.0050 |
+| if every thin non-threatened call were really threatened | 19/28 = 67.9% | 32/112 = 28.6% | 5.28 | 0.0003 |
+
+Every treatment leaves the result intact or stronger, and **the published row is the most
+conservative of the four.** So the concern is real for the Red List in general and does not
+threaten this particular result: correcting unevidenced Least Concern calls would raise the
+priority stratum's rate, not lower it.
+
+The residual risk this does not cover: GBIF record counts measure whether material exists,
+not whether the assessor consulted it, and a species can be genuinely widespread with few
+digitised records. This is a bound on the problem, not a resolution of it.
+
+**4b. The Not Evaluated list is exposed to the same process.** The 35 species on List 2 are
+candidates for exactly this treatment — cleared to Least Concern by consensus without new
+survey. If that happens they will leave this register without anyone having looked for them,
+which is the outcome the register exists to prevent.
+
+---
 
 **4. The chosen cut is not the strongest one.** Of the four monotone cut points, two are
 significant, and tier ≥3 tests **better** than the published tier ≥4 (OR 5.25, p = 0.0018
