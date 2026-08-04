@@ -117,8 +117,21 @@
   body { background:var(--ground); color:var(--ink); font-family:var(--serif);
          font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
   .wrap { max-width:1180px; margin:0 auto; padding:0 var(--pad); }
-  .prose { max-width:66ch; }
-  h1,h2,h3 { font-weight:600; text-wrap:balance; line-height:1.2; margin:0; }
+  /* Centre the measure column too. A centred heading inside a left-aligned 66ch
+     column lands left of the page's centre line, which reads as a mistake rather
+     than as centring. */
+  .prose { max-width:66ch; margin-inline:auto; }
+  /* All titles centred. Body prose stays left-aligned — centred running text is
+     genuinely hard to read, and the ragged left edge would hurt the tables and
+     evidence sentences that make up most of this site. Headings inside a bordered
+     callout are also centred, since the request was for consistency across every
+     title rather than only the page-level ones. */
+  h1,h2,h3,h4 { font-weight:600; text-wrap:balance; line-height:1.2; margin:0;
+                text-align:center; }
+  /* Kicker labels sit directly above a title, so they centre with it. The ones
+     used as UI labels (the field header, the map source row) are exempted below. */
+  .eyebrow { text-align:center; }
+  .field-head .eyebrow, .mapsource .eyebrow, .tierkey .eyebrow { text-align:left; }
   a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
   :focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:2px; }
   .num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
@@ -376,7 +389,9 @@
   /* This was previously the last section of the deepest page. It is the reason
      the register exists, so it now sits directly under the lede. */
   .stakes { margin:var(--s4) 0 0; border-left:3px solid var(--accent);
-            padding:var(--s1) 0 var(--s1) var(--s3); }
+            /* symmetric horizontal padding, or the centred heading sits ~14px
+               right of the section's centre line */
+            padding:var(--s1) var(--s3); }
   .stakes h3 { font-size:var(--fs-h3); margin-bottom:var(--s1); }
   .stakes p { font-family:var(--sans); font-size:var(--fs-body); color:var(--ink-2);
               margin:var(--s1) 0 0; line-height:1.55; }
@@ -954,9 +969,14 @@
     <p>Named physical features (<em>Salween River</em>, <em>Gulf of Panama</em>,
       <em>Mount Kinabalu</em>) are preferred over a bare capitalised word after a
       preposition, and a capture is rejected if it collides with the species' own
-      common name or genus. <strong>Nothing is geocoded and nothing is inferred</strong>
-      — if the sentence names no place, the species keeps no locality, which is why 959
-      still have none.</p>
+      common name or genus. <strong>The place is only ever taken from the text, never
+      guessed</strong> — if the sentence names no place, the species keeps no locality,
+      which is why <span class="num">959</span> still have none.</p>
+    <p>These names are then looked up in a gazetteer to place them on the map, which
+      is a separate step with its own failure modes and its own verification — see
+      <em>Geocoding the locality names</em> below. Nothing in the register or on the
+      Sites page depends on that lookup: those show the name the source gave, and the
+      coordinates exist only for the map.</p>
 
     <h3>How the map is built, and what it is not</h3>
     <p>The register stores localities as text taken from Richardson's prose — "The Mano
