@@ -547,6 +547,15 @@
          border:1px solid var(--rule-2); border-radius:2px; color:var(--ink-2);
          white-space:nowrap; }
   .tag.pri { border-color:var(--t4); color:var(--t4); font-weight:600; }
+  #tbl thead th[data-sort] { cursor:pointer; user-select:none; position:relative;
+    padding-right:1.15rem; }
+  #tbl thead th[data-sort]:hover, #tbl thead th[data-sort]:focus-visible {
+    color:var(--accent); }
+  #tbl thead th[data-sort]::after { content:"\2195"; position:absolute; right:.35rem;
+    opacity:.28; font-size:.8em; }
+  #tbl thead th[data-sort].sorted { color:var(--accent); }
+  #tbl thead th[data-sort][data-dir="up"]::after { content:"\2191"; opacity:1; }
+  #tbl thead th[data-sort][data-dir="down"]::after { content:"\2193"; opacity:1; }
   .tag.ne  { border-color:var(--accent); color:var(--accent); font-weight:600; }
 
   /* ---- detail row ------------------------------------------------------- */
@@ -826,6 +835,9 @@
       <option value="dd">Data Deficient</option>
       <option value="ne">Never assessed</option>
     </select>
+    <select id="fRealm" aria-label="Filter by biogeographic realm">
+      <option value="">All realms</option>
+    </select>
     <select id="fDur" aria-label="Filter by how long the species has been Data Deficient">
       <option value="">Any duration</option>
       <option value="10">Data Deficient 10+ years</option>
@@ -847,10 +859,14 @@
 
   <p class="resultline" id="resultline"></p>
   <div class="tablewrap">
-    <table>
+    <table id="tbl">
       <thead><tr>
         <th class="sev" aria-hidden="true"></th>
-        <th>Species</th><th>Class</th><th>Tier</th><th>Basis</th><th>Locality</th><th title="Years listed Data Deficient, and how many times IUCN has assessed it and written Data Deficient again">DD&nbsp;since</th><th></th>
+        <th data-sort="name">Species</th><th data-sort="c">Class</th>
+        <th data-sort="t">Tier</th><th data-sort="b">Basis</th>
+        <th data-sort="s">Locality</th>
+        <th data-sort="r" title="Biogeographic realm, from the corpus's own structure">Realm</th>
+        <th data-sort="ddy" title="Years listed Data Deficient, and how many times IUCN has assessed it and written Data Deficient again">DD&nbsp;since</th><th></th>
       </tr></thead>
       <tbody id="tbody"></tbody>
     </table>
@@ -1263,6 +1279,7 @@ function resetFilters() {
   $("#fList").value = "";
   $("#fTier").value = "";
   $("#fDur").value = "";
+  $("#fRealm").value = "";
   siteFilter = "";
   cellFilter = null; cellLabel = "";
   ["#cPri", "#cSil"].forEach(s => $(s).setAttribute("aria-pressed", "false"));
@@ -1468,7 +1485,32 @@ function boot() {
     }, 150);
   });
 
-  ["#q", "#fClass", "#fList", "#fTier", "#fDur"].forEach(s => $(s).oninput = apply);
+  const rcount = {};
+  DATA.species.forEach(s => { if (s.r) rcount[s.r] = (rcount[s.r] || 0) + 1; });
+  (DATA.meta.realms || []).forEach(r => {
+    if (!rcount[r]) return;
+    const o = document.createElement("option");
+    o.value = r;
+    o.textContent = `${r} (${rcount[r].toLocaleString()})`;
+    $("#fRealm").appendChild(o);
+  });
+  ["#q", "#fClass", "#fList", "#fTier", "#fDur", "#fRealm"].forEach(s => $(s).oninput = apply);
+  // Heading click sorts; same heading again reverses; a third click is still a reverse,
+  // not a reset, because "unsorted" is not a state a reader can see or wants back.
+  document.querySelectorAll("#tbl thead th[data-sort]").forEach(th => {
+    th.tabIndex = 0;
+    th.setAttribute("role", "columnheader");
+    const go = () => {
+      const k = th.dataset.sort;
+      if (sortKey === k) sortDir = -sortDir;
+      else { sortKey = k; sortDir = SORT_NUMERIC.has(k) ? -1 : 1; }
+      apply();
+    };
+    th.onclick = go;
+    th.onkeydown = e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
+    };
+  });
   ["#cPri", "#cSil"].forEach(s => $(s).onclick = e => {
     const b = e.currentTarget;
     b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true");
@@ -2098,21 +2140,61 @@ function drawMap() {
   document.head.appendChild(s);
 })();
 
+/* Sorting. Default is the register's editorial order -- tier descending, then class,
+   then name -- which is what the list has always shown; clicking a heading overrides it and
+   clicking the same heading again reverses. Numeric columns sort numerically and blanks sink
+   to the bottom in both directions, because a missing locality is not "less than" Amazonas
+   and should not lead the list either way. */
+let sortKey = null, sortDir = 1;
+const SORT_NUMERIC = new Set(["t", "ddy"]);
+
+function sortRows(arr) {
+  if (!sortKey) {
+    return arr.sort((a, b) => (b.t - a.t) || a.c.localeCompare(b.c)
+                              || a.n.localeCompare(b.n));
+  }
+  const num = SORT_NUMERIC.has(sortKey);
+  const val = s => sortKey === "name" ? (s.v || s.n) : s[sortKey];
+  return arr.sort((a, b) => {
+    const x = val(a), y = val(b);
+    const xe = x === undefined || x === null || x === "";
+    const ye = y === undefined || y === null || y === "";
+    if (xe && ye) return a.n.localeCompare(b.n);
+    if (xe) return 1;            // blanks last, whichever direction
+    if (ye) return -1;
+    const c = num ? (x - y) : String(x).localeCompare(String(y));
+    return (c || a.n.localeCompare(b.n)) * sortDir;
+  });
+}
+
+function markSortHeaders() {
+  document.querySelectorAll("#tbl thead th[data-sort]").forEach(th => {
+    const on = th.dataset.sort === sortKey;
+    th.setAttribute("aria-sort", on ? (sortDir > 0 ? "ascending" : "descending") : "none");
+    th.classList.toggle("sorted", on);
+    th.dataset.dir = on ? (sortDir > 0 ? "up" : "down") : "";
+  });
+}
+
 function apply() {
   const q = $("#q").value.trim().toLowerCase(),
         cl = $("#fClass").value, li = $("#fList").value,
         ti = $("#fTier").value,
         du = $("#fDur").value,
+        rl = $("#fRealm").value,
         pri = $("#cPri").getAttribute("aria-pressed") === "true",
         sil = $("#cSil").getAttribute("aria-pressed") === "true";
   rows = DATA.species.filter(s =>
     (!cl || s.c === cl) && (!li || s.l === li) && (!ti || s.t === +ti) &&
     (!du || (du === "re" ? (s.ddr || 0) > 1 : (s.ddy || 0) >= +du)) &&
+    (!rl || s.r === rl) &&
     (!pri || s.t >= PRI) && (!sil || s.sil) &&
     (!siteFilter || s.s === siteFilter) &&
     (!cellFilter || cellFilter.has(s.n)) &&
     (!q || s.n.toLowerCase().includes(q) || (s.v || "").toLowerCase().includes(q)
         || (s.s || "").toLowerCase().includes(q)));
+  sortRows(rows);
+  markSortHeaders();
   shown = 0;
   $("#tbody").innerHTML = "";
   draw(false);
@@ -2125,7 +2207,7 @@ function apply() {
   cc.hidden = !cellFilter;
   cc.textContent = cellFilter ? cellLabel : "";
   // Surface an escape hatch only when something is actually filtering.
-  const active = q || cl || li || ti || pri || sil || siteFilter || cellFilter;
+  const active = q || cl || li || ti || du || rl || pri || sil || siteFilter || cellFilter;
   $("#cClear").hidden = !active;
 }
 
@@ -2140,6 +2222,7 @@ function draw(append) {
       <td><span class="tierchip t${s.t}" title="${esc(DATA.tiers[s.t])}">${s.t}</span></td>
       <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.b)}</td>
       <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.s || "—")}</td>
+      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.r || "—")}</td>
       <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2);white-space:nowrap">${
         s.dds ? `${s.dds} <span style="color:var(--ink-3)">(${s.ddy}\u00a0yr${
           s.ddr > 1 ? `, ${s.ddr}\u00d7` : ""})</span>` : "—"}</td>

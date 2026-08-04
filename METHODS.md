@@ -199,6 +199,7 @@ stable over four consecutive runs.
 | `16_outcome_sensitivity.py` | Tests how much the held-out result depends on trusting IUCN's non-threatened outcomes (§4a). Needs network; results cached. |
 | `17_iucn_history.py` | Pulls assessment histories, per-assessment reference lists, and the full Data Deficient assessment sweep from the IUCN API v4 (§4a). Needs `.iucn_token` at the project root — gitignored, never written to output. |
 | `18_dd_duration.py` | Turns the sweep into per-species Data Deficient durations and re-affirmation counts (§1). |
+| `19_assign_realms.py` | Assigns each species the corpus's own biogeographic realm by document position (§6a). No network. |
 | `_locality.py` | Shared: recovers a locality from a species' own evidence sentence, and flags the compound names that must never be geocoded. |
 | `_common.py` | Shared: class normalisation, and the sentence splitter. Segmentation lives here because 03, 04, 07 and 10 all divide the same corpus — and 04 is the held-out test, so if they disagree the test scores a classifier that is not the published one. |
 
@@ -696,6 +697,57 @@ Ambiguous names (*Espiritu Santo*, *Luzon*, *Cordillera Central*) carry Richards
 opening sentence as context rather than a country name inferred by me. That restraint
 earned its keep: this *Cordillera Central* is in Luzon, and a **different** range of the
 same name appears elsewhere in the book.
+
+### Which region framework, and why not IUCN's
+
+The register groups species by **biogeographic realm, taken from the corpus's own
+structure**. Three candidates were considered and this one is not a compromise — it is
+better on every axis that matters here.
+
+**IUCN's own `biogeographical_realms`** was the obvious first choice: authoritative,
+per-species, from the assessing body. It fails on coverage. It uses the six terrestrial
+realms — Palearctic, Afrotropical, Australasian, Indomalayan, Neotropical, Nearctic — and a
+marine species is assigned none, because a realm in that scheme is a land construct. Of 140
+sampled assessments only 89 carried one. This register is half ray-finned fishes; a third of
+it would have been blank, and the blanks would not be random.
+
+**WWF/Olson or Udvardy realms applied from coordinates or country lists** was rejected
+outright. That is inferring geography, which this project does not do anywhere else — the
+same rule that stopped locality names being geocoded without a cross-check (§6).
+
+**Richardson's realms** win. The book is subtitled *A Biogeographic Approach* and its entire
+structure is a walk through fourteen realms; every species account physically sits under one
+of them. So the assignment is the source's own, nothing is inferred, coverage is complete by
+construction, and — decisively — the fourteen include **Oceanic** and **Antarctic**, which is
+exactly the ground IUCN's six cannot cover. Oceanic turns out to be the *largest* realm in
+the register. It is also the same hierarchy the `site` column was already extracted from, so
+locality and realm agree by construction rather than by luck.
+
+| Realm | Register species |
+|---|---|
+| Arctic | 2 |
+| Palearctic | 283 |
+| Afrotropical | 564 |
+| Madagascan | 72 |
+| Indo-Malaysian | 531 |
+| Papua-Melanesian | 186 |
+| Australian | 9 |
+| Polynesian | 12 |
+| Nearctic | 22 |
+| Caribbean | 12 |
+| Neotropical | 641 |
+| Patagonian | 48 |
+| Antarctic | 1 |
+| Oceanic | 683 |
+
+All 3,066 species are assigned; none are blank. The fourteen are close to the
+zoogeographic realms of Holt et al. (2013), with marine and polar realms added.
+
+**Assignment is by document position, not interpretation.** The fourteen appear as standalone
+heading lines at increasing offsets; a species takes the realm whose heading most recently
+precedes the evidence sentence script 03 selected for it. Where a species is discussed under
+more than one realm, that sentence decides — the same sentence the register displays and
+scores, so the realm always matches the evidence shown rather than contradicting it.
 
 ---
 
