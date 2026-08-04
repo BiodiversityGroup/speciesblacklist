@@ -41,11 +41,52 @@ the accounting closes:
 
 So the honest statement is narrow and checkable: **every Data Deficient vertebrate this
 corpus names is in the register, and two thirds of IUCN's DD vertebrates are not in the
-corpus at all.** This is **a ranked subset, not a census of the problem.** Nothing here
-licenses "these are the DD vertebrates that matter most" — only "of the DD vertebrates with
-a usable published range statement, these are the most narrowly restricted." The 5,695
-outside are not judged lower priority; they are unexamined, and extending the corpus is the
-largest single improvement available to this project.
+corpus at all.**
+
+### The 5,695 outside were screened out, not overlooked
+
+An earlier draft of this section called them "unexamined". That is also wrong, and it
+matters more than the arithmetic did. Richardson discusses the Data Deficient category
+directly, and takes a position on it: he judges that most DD forms are junior synonyms or
+valid species not in immediate danger, while holding that genuinely threatened species get
+"dumped here and forgotten" for want of follow-up research (Richardson 2023, introduction).
+So he screens the category rather than importing it. His stated rule for admitting a DD
+species is a restriction test — a valid species known from, say, a single museum specimen
+from a small patch of forest since built over, which he is "willing to make the leap" is
+probably extinct or extremely threatened.
+
+**That screen is visible in the data.** He kept 28% of IUCN's DD ray-finned fishes but 72%
+of DD birds, and the orders he kept least of are the deep-sea groups:
+
+| Order kept least | kept |
+|---|---|
+| Stomiiformes (dragonfishes) | 6/107 = 6% |
+| Clupeiformes (herrings) | 11/120 = 9% |
+| Pleuronectiformes (flatfishes) | 30/321 = 9% |
+| Lophiiformes (anglerfishes) | 11/101 = 11% |
+| Ophidiiformes (cusk-eels) | 21/190 = 11% |
+
+He says why: many deep-sea fishes are naturally very rare yet stable, so rarity alone is
+not a threat criterion. The groups he kept most of are freshwater and terrestrial —
+Osteoglossiformes 68%, Rajiformes 54%, Rodentia 52%, caecilians 52%, frogs 48%.
+
+Two consequences, and they point in opposite directions:
+
+**Against over-reading the register.** The corpus is pre-filtered on the very trait the
+register ranks — which is why **92% of its records state some restriction**. The register
+therefore does not *discover* that narrow ranges predict risk among DD species at large. It
+operationalises a screen one expert applied by judgment, and then tests that screen against
+IUCN's later verdicts. That test is still real: the outcomes are held out and postdate the
+January 2022 manuscript. But the tier distribution is a property of a curated sample, not of
+the Data Deficient category.
+
+**Against over-reading the omissions.** Read-across to the 5,695 is invalid in *both*
+directions. They are not unexamined, and they are not demonstrably safe either: one
+author's judgement, made without the follow-up research he says the category lacks, is not
+an assessment. What can be said is narrow — the register is **the DD vertebrates one expert
+judged to be at risk, ranked by how narrowly restricted the published record is, with that
+ranking independently tested.** Extending coverage now requires a second corpus, not better
+extraction.
 
 Both lists exist because Data Deficient and Not Evaluated species are excluded from
 conservation in practice and, in one case, by treaty language. Target 4 of the
@@ -215,17 +256,35 @@ tier 4 stays inside tier 3–5, so **the priority list no longer depends on the 
 regex boundary at all** — a distinction the data cannot support and which was, until this
 audit, being drawn incorrectly for 73 species.
 
-**Tier 5 is the awkward result and it is not dismissed here.** At 40% it sits below both
-tier 4 and tier 3, so the scale is not monotonic where it is supposed to be strongest. The
-difference is not significant on this n (tier 5 vs tier 4, p = 0.23), but the direction has
-a mechanism: *"known only from a single specimen"* measures **survey effort as much as
-range size**. For a cave fish the two coincide; for a deep-sea snailfish trawled once, one
-specimen is evidence of a barely-sampled ocean, not a small range. The corpus wording lets
-this be probed only weakly — tier-5 species whose sentence carries deep-sea or offshore
-language came out 0/2 against 6/13 for the rest, which is far too thin to claim, and only
-5% of register tier-5 species use such wording. So the mechanism is plausible, untested,
-and stated as a caution: **tier 5 should not be read as "worse than tier 4"**, and the tier
-numbering is a description of evidence type, not a validated risk ordering.
+**Tier 5 is the awkward result, and most of it turns out to be composition.** At 40% it
+sits below tier 4 (70%) and tier 3 (67%), which would mean the scale is not monotonic where
+it is supposed to be strongest. The difference is not significant on this n (p = 0.23), and
+adjusting for taxonomic class mostly dissolves it. Threatened rates differ sharply by class
+in the labelled set — amphibians 8/13, ray-finned fishes 19/67, reptiles 0/7 — and tier 4
+happened to draw four Critically Endangered amphibians while tier 5 drew eight fishes.
+Scoring each tier against the rate its own class mix predicts:
+
+| Tier | observed | expected from class mix | obs / exp |
+|---|---|---|---|
+| 5 | 6/15 | 4.3 | 1.41 |
+| 4 | 7/10 | 4.2 | 1.66 |
+| 3 | 2/3 | 0.9 | 2.35 |
+| 2 | 19/97 | 26.3 | **0.72** |
+| 1 | 5/15 | 3.3 | 1.50 |
+| **Tier 3–5** | **15/28** | **9.3** | **1.61** |
+| Tier 1–2 | 24/112 | 29.7 | 0.81 |
+
+Tier 5 and tier 4 are 1.41 and 1.66 once class is accounted for, not 40% and 70%. So the
+non-monotonicity is mostly small-sample class imbalance rather than a property of the tiers.
+The 3–5 versus 1–2 contrast survives the same adjustment (1.61 vs 0.81), which is the result
+the boundary rests on.
+
+A real mechanism does exist and the corpus author names it: rarity alone is not a threat
+criterion, because many deep-sea fishes are naturally very rare yet stable. But it cannot be
+the explanation here — such species are 9% of register tier 5 and just 2 of the 15 tested
+(both Least Concern). Stated as a caution rather than a finding: **tier 5 should not be read
+as "worse than tier 4"**, tier 1 is not cleanly low-risk either (obs/exp 1.50 on n=15), and
+the tier numbering describes evidence type, not a validated risk ordering.
 
 ### What validation killed
 
