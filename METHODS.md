@@ -111,6 +111,7 @@ where assessment effort would most likely convert a blank into a threatened list
 | Extinction risk | IUCN Red List **v2026-1**, obtained as a Darwin Core Archive from GBIF's mirror (`hosted-datasets.gbif.org/datasets/iucn/iucn-latest.zip`, published 2026-07-28). 178,011 taxa. No API key required. |
 | Taxonomic backbone | GBIF Backbone Taxonomy via the public `species/match` API, for synonym resolution and higher classification. |
 | Independent verification | GBIF's curated backbone-to-IUCN linkage (`species/{key}/iucnRedListCategory`), which is built independently of name-string matching. |
+| Assessment history and citations | IUCN Red List **API v4** (`api.iucnredlist.org/api/v4`), for per-taxon assessment history and each assessment's own reference list. Requires a token. This is what makes "did the reassessment rest on anything new?" countable — see §4a. |
 
 **Required citation** when any of this is published:
 > IUCN (2026). *The IUCN Red List of Threatened Species.* Version 2026-1.
@@ -152,6 +153,7 @@ stable over four consecutive runs.
 | `14_build_pages.py` | Writes the four sub-pages from `site/index.html` and regenerates the sitemap. **Run after any edit to index.html.** |
 | `15_check_figures.py` | Anchored check that every figure in the prose still matches the data. Non-zero exit gates the deploy. |
 | `16_outcome_sensitivity.py` | Tests how much the held-out result depends on trusting IUCN's non-threatened outcomes (§4a). Needs network; results cached. |
+| `17_iucn_history.py` | Pulls assessment histories and per-assessment reference lists from the IUCN API v4 (§4a). Needs `.iucn_token` at the project root — gitignored, never written to output. |
 | `_locality.py` | Shared: recovers a locality from a species' own evidence sentence, and flags the compound names that must never be geocoded. |
 | `_common.py` | Shared: class normalisation, and the sentence splitter. Segmentation lives here because 03, 04, 07 and 10 all divide the same corpus — and 04 is the held-out test, so if they disagree the test scores a classifier that is not the published one. |
 
@@ -385,20 +387,79 @@ independent figure in the same range as this project's 53.6% and Borgelt et al.'
 
 ### 4a. How much of the result depends on trusting the non-threatened outcomes?
 
-Run by `16_outcome_sensitivity.py`. Two attempts to detect unevidenced listings from the
-**rationale text** of the 2024 download were abandoned as unreliable: a keyword rule flagged
-35% of Least Concern and Near Threatened vertebrates, but its hits were mostly assessments
-that did present evidence ("widespread, inconspicuous species not subject to specific
-exploitation"); a corrected rule requiring the absence of any positive distributional claim
-gave 3.7%, yet still flagged the swordfish and found no turtles at all. Fluent prose reads
-the same whether or not anything sits behind it. **No figure from that approach is
-published.** The 2026 assessments cannot be read at all — the GBIF-mirrored archive carries
-taxonomy, distribution and vernacular names only, and assessment history needs an IUCN API
-token.
+Run by `16_outcome_sensitivity.py` and `17_iucn_history.py`.
 
-What can be used is an independent witness already held: how much material exists for the
-species. A Least Concern call on a species with two records worldwide has no visible basis
-whatever its rationale says.
+**First, an approach that failed, recorded because the failure is informative.** Two attempts
+to detect unevidenced listings from the **rationale text** of the 2024 download were
+abandoned: a keyword rule flagged 35% of Least Concern and Near Threatened vertebrates, but
+its hits were mostly assessments that did present evidence ("widespread, inconspicuous
+species not subject to specific exploitation"); a corrected rule requiring the absence of any
+positive distributional claim gave 3.7%, yet still flagged the swordfish and found no turtles
+at all. Fluent prose reads the same whether or not anything sits behind it. No figure from
+that approach is published.
+
+**The IUCN Red List API v4 settles it properly**, because every assessment carries its own
+reference list with publication years, and every taxon carries its full assessment history.
+That converts the question from a judgement about prose into a count:
+
+> does the assessment that replaced the Data Deficient listing cite anything published
+> after that listing?
+
+Three results, and the third is the one that matters.
+
+**1. The labelled set is confirmed independently.** All **140** validation species have a Data
+Deficient assessment in their API history and at least two Global assessments — so the
+DD → reassessed transition this project inferred from two Red List snapshots is real in every
+case. That is a check the snapshots alone could not provide.
+
+**2. Every reassessment cites something newer. None is a bare recategorisation.**
+
+| Outcome | n | median references | median published after the DD listing | citing nothing newer |
+|---|---|---|---|---|
+| LC | 81 | 7 | 4 | **0** |
+| NT | 20 | 9 | 2 | **0** |
+| EN | 21 | 11 | 5 | **0** |
+| CR | 7 | 6 | 4 | **0** |
+
+So the strongest form of the worry — a category changed with no new literature at all behind
+it — does not occur here: 0 of 140.
+
+**3. But almost none of that new literature is about the species itself.** Counting only
+post-DD references whose title or citation actually names the species or its genus, the median
+is **zero** for every outcome, and:
+
+| | citing no species-specific new source |
+|---|---|
+| non-threatened outcomes | **74 / 101** |
+| threatened outcomes | **26 / 39** |
+
+**This is the substantive finding, and it broadly vindicates the concern.** These
+reassessments are mostly not driven by new research on the species; they cite newer general
+literature — regional checklists, habitat datasets, taxonomic revisions — and reach a verdict.
+What rescues the comparison is that **the pattern is symmetric**: 73% of non-threatened
+outcomes and 67% of threatened ones look the same way. It is a property of how sparse-data
+assessment is done, not a bias that inflates one arm.
+
+Restricting the test to outcomes with species-specific new evidence keeps the effect:
+
+| Treatment | priority | rest | OR | p |
+|---|---|---|---|---|
+| as published | 15/28 = 53.6% | 24/112 = 21.4% | 4.23 | 0.0016 |
+| **only non-threatened calls with species-specific new evidence** | **15/18 = 83.3%** | **24/48 = 50.0%** | **5.00** | **0.0231** |
+| if every unevidenced non-threatened call were really threatened | 25/28 = 89.3% | 88/112 = 78.6% | 2.27 | 0.2855 |
+
+The last row is the honest limit of this: the result *can* be broken, but only by assuming
+every unevidenced non-threatened call is wrong — which implies 79% of the low-restriction
+stratum is threatened against a 28% base rate. That is not a credible world. Between the
+published row and that one, the effect survives.
+
+**A second, independent gain: List 2 is now verified by the Red List's own API.** For all 35
+Not Evaluated species, IUCN has no Global assessment — 26 return no taxon record at all, and
+9 return a taxon record with zero assessments of any scope. Absence of assessment is now a
+positive finding from the assessing body rather than a failure to find a name in an export.
+
+The older proxy below is kept because it measures something different — whether material
+exists at all, rather than whether it was cited.
 
 | Outcome | n | median GBIF records | median preserved specimens | ≤5 records |
 |---|---|---|---|---|
@@ -469,10 +530,12 @@ previous one. If it does, the species was resolved and should leave. If it cites
 newer than the assessment it replaces, the category changed and the knowledge did not, and
 the species belongs on a watch list rather than off the register.
 
-That check is mechanisable and is the intended next step for `16_outcome_sensitivity.py`: the
-IUCN Red List API v4 returns each assessment's own reference list and full assessment history
-per taxon, which makes "does this reassessment rest on anything new?" a countable question
-rather than a judgement about prose. §4a explains why the prose itself cannot answer it.
+That check is now mechanised, not aspirational. `17_iucn_history.py` pulls each taxon's
+assessment history and each assessment's reference list from the IUCN API, so at every release
+the question "does this reassessment cite anything published since the one it replaced, and is
+any of it about this species?" can be answered for every species that moves. §4a reports what
+that instrument found on the current labelled set, and why the rationale prose could not
+answer it.
 
 ---
 
