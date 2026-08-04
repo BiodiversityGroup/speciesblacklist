@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="The Biodiversity Group">
 <meta property="og:url" content="https://speciesblacklist.org/sites/">
 <meta property="og:title" content="Sites — The Species Black List">
-<meta property="og:description" content="2,372 vertebrates the IUCN Red List records as Data Deficient, and 35 it has never assessed. Ranked by how narrowly restricted the published record says they are — and tested against IUCN's own reassessments.">
+<meta property="og:description" content="3,031 vertebrates the IUCN Red List records as Data Deficient, and 35 it has never assessed. Ranked by how narrowly restricted the published record says they are — and tested against IUCN's own reassessments.">
 <!-- The card is the register itself: masthead, one real tier-5 record, the field
      of 2,407 marks, the headline figures. No photography, for the same reason
      there is none on the page. Drawn by pipeline/11_make_og.py from data.json,
@@ -24,7 +24,7 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,407 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 2,372 Data Deficient, 843 in the priority stratum, 35 never assessed, 52.6% of reassessed priority species proved threatened.">
+<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,407 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 3,031 Data Deficient, 1,123 in the priority stratum, 35 never assessed, 52.6% of reassessed priority species proved threatened.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Species Black List">
 <meta name="twitter:description" content="Vertebrates the Red List cannot yet speak for, ranked by restriction and tested against IUCN's own reassessments.">
@@ -39,7 +39,7 @@
   "@type": "Dataset",
   "name": "The Species Black List",
   "alternateName": "Data Deficient and unassessed vertebrates, ranked by geographic restriction",
-  "description": "A register of 2,372 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 35 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritised research agenda.",
+  "description": "A register of 3,031 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 35 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritised research agenda.",
   "url": "https://speciesblacklist.org/",
   "keywords": ["extinction risk","IUCN Red List","Data Deficient","conservation prioritisation","vertebrates","biodiversity assessment gap","Criterion B"],
   "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -694,8 +694,9 @@
           record is. That is the only thing the tier measures, and it is the axis the
           whole register is ranked on — a smaller known range is what would make a
           species qualify as threatened under IUCN <strong>Criterion B</strong>.
-          <strong>Tiers 4 and 5 are the priority stratum</strong>, the group whose
-          ranking has been tested against IUCN's own reassessments.</p>
+          <strong>Tiers 3, 4 and 5 are the priority stratum</strong>, the group whose
+          ranking has been tested against IUCN's own reassessments. The tested
+          break in risk falls between tier 2 and tier 3, not higher up.</p>
         <ul id="tierlist"></ul>
       </div>
     </div>
@@ -714,12 +715,15 @@
       what this register is for.</p>
     <p><strong>This is a ranked subset, not a census.</strong> IUCN v2026&#8209;1 holds
       <span class="num">8,659</span> Data Deficient species in vertebrate classes; this
-      register covers <span class="num">2,372</span> of them —
-      <span class="num">27%</span>. The method needs a published sentence describing each
-      species' range, and the corpus behind it is one reference work. So the right reading
-      is "of the Data Deficient vertebrates with a usable published range statement, these
-      are the most narrowly restricted" — not "these are the ones that matter most". The
-      other <span class="num">6,287</span> are unexamined here, not judged safe.</p>
+      register covers <span class="num">3,031</span> of them —
+      <span class="num">35%</span>. The method needs a published sentence describing each
+      species' range, and the corpus behind it is one reference work. Of the
+      <span class="num">2,964</span> Data Deficient vertebrates that corpus names,
+      <strong>every one is in the register</strong>; the other
+      <span class="num">5,628</span> are never named in it at all. So the right reading is
+      "of the Data Deficient vertebrates with a usable published range statement, these are
+      the most narrowly restricted" — not "these are the ones that matter most". The species
+      outside are unexamined here, not judged safe.</p>
   </div>
 
   <div class="panel">
@@ -947,8 +951,11 @@
       area of occupancy under 2,000&nbsp;km² for Vulnerable, 500 for Endangered, 10 for
       Critically Endangered. A species known only from its type locality sits, on its
       face, inside the Critically Endangered envelope. That is why a narrow record is
-      worth ranking on. <strong>Tiers 4 and 5 together are the priority stratum</strong>,
-      and they are the only part of the ranking that has been tested.</p>
+      worth ranking on. <strong>Tiers 3, 4 and 5 together are the priority stratum</strong>,
+      and they are the only part of the ranking that has been tested. The boundary
+      sits there because that is where the tested risk actually jumps — tier 2 came
+      out threatened at 20%, tier 3 at 67% — and not because the top of the scale
+      is the most severe: it is not, see Methods.</p>
     <table class="ftable" id="tierTable">
       <thead><tr><th>Tier</th><th>Basis</th><th>Species</th></tr></thead><tbody></tbody>
     </table>
@@ -975,12 +982,12 @@
       geographically, so most species sit inside a paragraph introduced by a place.
       That place, and its opening sentence, are attached to every species in the
       paragraph. This is the stronger provenance and it covers
-      <span class="num">449</span> species.</p>
+      <span class="num">519</span> species.</p>
     <p><strong>From the species entry itself.</strong> Where a species is not inside a
       locality account, the place is very often named in its own sentence anyway —
       <em>"collected from the upper Pungwe River"</em>, <em>"collected off
       Mauritius"</em>. Pattern extraction over those sentences recovers a locality for
-      a further <span class="num">1,037</span> species, taking coverage from
+      a further <span class="num">1,213</span> species, taking coverage from
       <strong>19% to 60%</strong> of the register and the site list from 42 to 102.
       Clusters that were entirely invisible before appear this way — the Gulf of
       California holds 19 species, none of which had a locality until now.</p>
@@ -989,7 +996,7 @@
       preposition, and a capture is rejected if it collides with the species' own
       common name or genus. <strong>The place is only ever taken from the text, never
       guessed</strong> — if the sentence names no place, the species keeps no locality,
-      which is why <span class="num">921</span> still have none.</p>
+      which is why <span class="num">1,334</span> still have none.</p>
     <p>These names are then looked up in a gazetteer to place them on the map, which
       is a separate step with its own failure modes and its own verification — see
       <em>Geocoding the locality names</em> below. Nothing in the register or on the
@@ -1066,8 +1073,8 @@
       from the gazetteer, and the evidence sentence shows both places.</p>
 
     <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
-      the <span class="num">2,407</span> species here, <span class="num">629</span>
-      have no georeferenced record anywhere in GBIF, and <span class="num">559</span>
+      the <span class="num">3,066</span> species here, <span class="num">805</span>
+      have no georeferenced record anywhere in GBIF, and <span class="num">727</span>
       cannot be placed even by a cross-checked locality. They are the least visible
       members of an already invisible group, and they are absent from the map.</p>
     <p>An earlier version of this page said 943 rather than 629. That figure was wrong:
@@ -1235,11 +1242,16 @@ fetch("/data.json", { cache: "no-cache" }).then(r => r.json()).then(d => { DATA 
 
 function boot() {
   const m = DATA.meta, c = m.counts, v = m.validation;
+  /* Lowest tier counted as priority. Read from the payload so the page and
+     the pipeline cannot drift apart -- the same threshold was hardcoded in
+     seven places here and in five scripts, and a partial edit is exactly how
+     tier 3 ended up in both sides of a 2x2 during the move to 3-5. */
+  PRI = c.priority_tier || 4;
 
   /* --- counts --- */
   $("#counts").innerHTML = [
     [c.dd.toLocaleString(), "Data Deficient — IUCN looked, and could not say"],
-    [c.priority_dd.toLocaleString(), "of those in the priority stratum (tier 4–5)"],
+    [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
     [String(c.ne), "Never assessed by IUCN at all"],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
@@ -1303,7 +1315,7 @@ function boot() {
   const maxT = Math.max(...Object.values(DATA.tier_counts));
   $("#barsTier").innerHTML = [5, 4, 3, 2, 1].map(t => {
     const n = DATA.tier_counts[t] || 0;
-    return `<div class="bar t${t}"><div class="bl">Tier ${t}${t >= 4 ? " ·&nbsp;priority" : ""}</div>
+    return `<div class="bar t${t}"><div class="bl">Tier ${t}${t >= PRI ? " ·&nbsp;priority" : ""}</div>
       <div class="bt"><div class="bf" style="width:${n / maxT * 100}%"></div></div>
       <div class="bv">${n.toLocaleString()}</div></div>`;
   }).join("");
@@ -1357,7 +1369,7 @@ function boot() {
   });
 
   $("#tierhelpBody").innerHTML = `<dl>${[5, 4, 3, 2, 1].map(t => `
-      <dt><span class="tierchip t${t}">${t}</span>${t >= 4
+      <dt><span class="tierchip t${t}">${t}</span>${t >= PRI
         ? '<span style="color:var(--accent);font-weight:600">priority</span>' : ""}</dt>
       <dd>${esc(DATA.tiers[t])}
         <span style="color:var(--ink-3)">— ${(DATA.tier_counts[t] || 0).toLocaleString()}
@@ -1367,7 +1379,7 @@ function boot() {
       where 52.6% proved threatened against 20.2% for the rest.</p>`;
 
   $("#tierTable tbody").innerHTML = [5, 4, 3, 2, 1].map(t => `
-    <tr><td>${t}${t >= 4 ? " ·&nbsp;priority" : ""}</td><td>${esc(DATA.tiers[t])}</td>
+    <tr><td>${t}${t >= PRI ? " ·&nbsp;priority" : ""}</td><td>${esc(DATA.tiers[t])}</td>
     <td class="num">${(DATA.tier_counts[t] || 0).toLocaleString()}</td></tr>`).join("");
 
   $("#valprose").innerHTML = `Taken as one undifferentiated group, the
@@ -1389,7 +1401,7 @@ function boot() {
   // Built from DATA.tiers so the labels match the key on the overview exactly.
   const ts = $("#fTier");
   [5, 4, 3, 2, 1].forEach(t => ts.insertAdjacentHTML("beforeend",
-    `<option value="${t}">Tier ${t}${t >= 4 ? " · priority" : ""} — ${
+    `<option value="${t}">Tier ${t}${t >= PRI ? " · priority" : ""} — ${
       esc(DATA.tiers[t])} (${(DATA.tier_counts[t] || 0).toLocaleString()})</option>`));
 
   // Second pass, now that DATA exists: this is what actually initialises the map
@@ -1473,7 +1485,7 @@ function drawField() {
   // here can never drift from the wording the scoring actually used.
   const counts = DATA.tier_counts;
   $("#tierlist").innerHTML = [5, 4, 3, 2, 1].map(t => `
-    <li class="${t >= 4 ? "pri" : ""}">
+    <li class="${t >= PRI ? "pri" : ""}">
       <span class="swatch" style="background:var(--t${t})" aria-hidden="true"></span>
       <span class="tname">Tier ${t}</span>
       <span class="tdef">${esc(DATA.tiers[t])}</span>
@@ -1631,6 +1643,7 @@ function nextFeature() {
 /* ---------- map: density of georeferenced records ------------------------ */
 /* Loaded lazily on first visit — map.json is a separate request so the register
    is not held up by geometry nobody has asked for yet. */
+let PRI = 4;
 let MAP = null, GEO = null, mapLayer = "all", mapCells = [], mapDots = [], mapGeom = null;
 /* Zoom/pan state. k is the scale, tx/ty the translation in CSS pixels. The world at
    scale k is (cssW*k) x (cssH*k) and the canvas is a window onto it. */
@@ -2043,7 +2056,7 @@ function apply() {
         sil = $("#cSil").getAttribute("aria-pressed") === "true";
   rows = DATA.species.filter(s =>
     (!cl || s.c === cl) && (!li || s.l === li) && (!ti || s.t === +ti) &&
-    (!pri || s.t >= 4) && (!sil || s.sil) &&
+    (!pri || s.t >= PRI) && (!sil || s.sil) &&
     (!siteFilter || s.s === siteFilter) &&
     (!cellFilter || cellFilter.has(s.n)) &&
     (!q || s.n.toLowerCase().includes(q) || (s.v || "").toLowerCase().includes(q)
@@ -2075,7 +2088,7 @@ function draw(append) {
       <td><span class="tierchip t${s.t}" title="${esc(DATA.tiers[s.t])}">${s.t}</span></td>
       <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.b)}</td>
       <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.s || "—")}</td>
-      <td>${s.t >= 4 ? '<span class="tag pri">Priority</span> ' : ""}${
+      <td>${s.t >= PRI ? '<span class="tag pri">Priority</span> ' : ""}${
            s.l === "ne" ? '<span class="tag ne">Never assessed</span>' : ""}</td></tr>`;
   }).join(""));
   shown += slice.length;
@@ -2084,7 +2097,7 @@ function draw(append) {
   $("#resultline").innerHTML =
     `<span><strong class="num">${rows.length.toLocaleString()}</strong> species match</span>
      <span>showing ${shown.toLocaleString()}</span>
-     <span class="num">${rows.filter(r => r.t >= 4).length.toLocaleString()} in the priority stratum</span>`;
+     <span class="num">${rows.filter(r => r.t >= PRI).length.toLocaleString()} in the priority stratum</span>`;
 }
 
 /* row -> detail, toggled in place */

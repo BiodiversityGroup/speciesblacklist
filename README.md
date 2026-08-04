@@ -15,24 +15,24 @@ taxa. This register is an attempt to say which of those species most deserve a l
 
 | | |
 |---|---|
-| Data Deficient | **2,372** species |
-| of those, priority stratum | **843** |
-| coverage of IUCN's DD vertebrates | **27%** (2,372 of 8,659) |
+| Data Deficient | **3,031** species |
+| of those, priority stratum | **1,123** (tier 3–5) |
+| coverage of IUCN's DD vertebrates | **35%** (3,031 of 8,659) |
 | Never assessed by IUCN | **35** |
 | Red List version | v2026-1 (accessed 2026-07-28) |
 
 ## The ranking is tested, not asserted
 
-Between the previous data and v2026-1, IUCN independently reassessed **108** of these
+Between the previous data and v2026-1, IUCN independently reassessed **140** of these
 species. Those outcomes are a held-out answer key the ranking rules never saw.
 
 | | n | proved threatened or extinct |
 |---|---|---|
-| Priority (restriction tier 4–5) | 19 | **52.6%** (95% CI 32–73%) |
-| Rest (tier 1–3) | 89 | 20.2% (95% CI 13–30%) |
-| All 108, undifferentiated | 108 | 25.9% |
+| Priority (restriction tier 3–5) | 28 | **53.6%** (95% CI 36–70%) |
+| Rest (tier 1–2) | 112 | 21.4% (95% CI 15–30%) |
+| All 140, undifferentiated | 140 | 27.9% |
 
-Fisher exact two-sided **p = 0.0075**, odds ratio **4.38**.
+Fisher exact two-sided **p = 0.0016**, odds ratio **4.23**.
 
 Read that honestly: taken as one flat group, these species proved threatened at about
 the ordinary all-species rate. **Data Deficient status by itself predicts very

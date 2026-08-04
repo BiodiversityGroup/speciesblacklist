@@ -8,7 +8,7 @@
 
 Two claims, deliberately kept separate because they are not equally strong.
 
-**List 1 — Data Deficient: 2,372 species**, of which **843 are tranche A**, the
+**List 1 — Data Deficient: 3,031 species**, of which **1,123 are tranche A**, the
 validated priority stratum. IUCN has assessed these and returned *we don't know*. A
 Cambridge University Press reference documents most of them as narrowly restricted,
 often to a single river or a single collecting event. Ranked by how severe that
@@ -21,16 +21,31 @@ is hard to make safely — see §5.
 ### What the register is a sample OF
 
 This belongs before any figure above is quoted. **IUCN v2026-1 holds 8,659 Data Deficient
-species in vertebrate classes. This register covers 2,372 of them — 27%.** The gap is not
-a pipeline loss; it is the scope of the corpus. The register holds the DD vertebrates that
-Richardson (2023) documents, because the method depends on having a published sentence
-describing each species' range, and the book is what supplies that sentence.
+species in vertebrate classes. This register covers 3,031 of them — 35%.**
 
-So this is **a ranked subset, not a census of the problem.** Nothing here licenses "these
-are the DD vertebrates that matter most" — only "of the DD vertebrates with a usable
-published range statement, these are the most narrowly restricted." The other ~6,300 are
-not judged lower priority; they are unexamined. Extending the corpus is the largest single
-improvement available to this project.
+The remainder is accounted for exactly, because an earlier version of this section got it
+wrong. The claim was that the missing species lay outside the corpus. Checking it rather
+than asserting it — pull every binomial out of the book and intersect with IUCN's DD list —
+showed that 521 of them were named in the book and lost by the pipeline, because the name
+list it worked from held full binomials only and Richardson names hundreds of species
+solely as an abbreviated congener (*"A. leurolepis"*). Those are now recovered (§6), and
+the accounting closes:
+
+| | |
+|---|---|
+| IUCN DD vertebrates, v2026-1 | 8,659 |
+| named anywhere in the corpus | 2,964 |
+| of those, in the register | **2,964 — all of them** |
+| never named in the corpus | 5,695 (66%) |
+| register total, incl. synonym and rank recoveries | 3,031 |
+
+So the honest statement is narrow and checkable: **every Data Deficient vertebrate this
+corpus names is in the register, and two thirds of IUCN's DD vertebrates are not in the
+corpus at all.** This is **a ranked subset, not a census of the problem.** Nothing here
+licenses "these are the DD vertebrates that matter most" — only "of the DD vertebrates with
+a usable published range statement, these are the most narrowly restricted." The 5,695
+outside are not judged lower priority; they are unexamined, and extending the corpus is the
+largest single improvement available to this project.
 
 Both lists exist because Data Deficient and Not Evaluated species are excluded from
 conservation in practice and, in one case, by treaty language. Target 4 of the
@@ -80,7 +95,8 @@ stable over four consecutive runs.
 | Script | Does |
 |---|---|
 | `01_build_iucn_index.py` | Parses the DwC-A into a flat name → category index. Carries family and order, without which the audit in 06 cannot run. |
-| `02_refresh_and_diff.py` | Cross-references the 9,162 book names against v2026-1 and diffs against the September 2024 baseline. |
+| `02a_expand_corpus.py` | Resolves the corpus's abbreviated genus names and recovers the species reachable only that way. **Run before 02** — it supplies 3,430 names the 2024 list lacks. |
+| `02_refresh_and_diff.py` | Cross-references the 12,592 book names against v2026-1 and diffs against the September 2024 baseline. |
 | `03_extract_and_score.py` | Re-extracts evidence using the book's biogeographic structure and scores geographic restriction. |
 | `04_validate_score.py` | Tests the score against species IUCN reassessed independently. **Run this before trusting anything downstream.** |
 | `05_triage_unmatched.py` | Resolves names absent from IUCN against the GBIF backbone. |
@@ -119,7 +135,7 @@ The Luhoho shellear (Parakneria kissi) is confined to the Luhoho River.
 The locality paragraph carries the place and its threats; the species line carries
 the restriction. Keeping only the species line discards half the evidence, so the
 rebuilt extraction keeps the whole block and records which site each species belongs
-to. All 2,372 DD species were located in the text.
+to. All 3,031 DD species were located in the text.
 
 Restriction is the primary axis because IUCN **Criterion B** lets a species qualify
 as threatened on a small range plus decline or fragmentation: area of occupancy under
@@ -127,44 +143,89 @@ as threatened on a small range plus decline or fragmentation: area of occupancy 
 *known only from its type locality* sits prima facie inside the CR envelope for B2.
 That is the strongest defensible claim this corpus can make.
 
-Tiers, strongest first:
+The tiers describe **what kind of range statement the record contains**, from narrowest
+to broadest. They are numbered, but see the validation below: the numbering is *not* a
+validated severity order at the top of the scale.
 
-| Tier | Basis |
-|---|---|
-| 5 | Type locality, original collection, or a single specimen |
-| 4 | A single named site — one river, cave, spring, island, massif |
-| 3 | A single drainage, archipelago, or mountain range |
-| 2 | Restricted, extent unclear |
-| 1 | No restriction statement |
+| Tier | Basis | Priority |
+|---|---|---|
+| 5 | Type locality, original collection, or a single specimen | yes |
+| 4 | A single named site — one river, cave, spring, island, massif | yes |
+| 3 | A single drainage, archipelago, or mountain range | yes |
+| 2 | Restricted, extent unclear | no |
+| 1 | No restriction statement | no |
+
+Tier order is decided by testing tier 3 **before** tier 4, because tier 4's wording list
+contains *river* and would otherwise claim *"confined to the Kapuas River drainage"* — a
+basin the size of a country — as "a single named site". A drainage named only as context
+for a real point (*"a single locality within the Ganges River drainage"*) still scores 4.
 
 ### The validation
 
-Between the 2024 export and v2026-1, IUCN independently reassessed **108** of the
-book's DD species. Those 108 are a held-out labelled set the scoring rules never saw.
+Between the 2024 export and v2026-1, IUCN independently reassessed **140** of the book's
+DD species. Those 140 are a held-out labelled set the scoring rules never saw.
 
 | | n | threatened or extinct | 95% CI |
 |---|---|---|---|
-| **Tier 4–5** | 19 | **52.6%** | 32–73% |
-| Tier 1–3 | 89 | 20.2% | 13–30% |
-| *All 108* | *108* | *25.9%* | *19–35%* |
+| **Tier 3–5** (priority) | 28 | **53.6%** | 36–70% |
+| Tier 1–2 | 112 | 21.4% | 15–30% |
+| *All 140* | *140* | *27.9%* | *21–36%* |
 
-**Fisher exact two-sided p = 0.0075, odds ratio 4.38.**
+**Fisher exact two-sided p = 0.0016, odds ratio 4.23.**
 
-Two things follow. First, restriction severity genuinely predicts IUCN's own verdict.
-Second, the tier 4–5 rate lands on the 56% that Borgelt et al. (2022, *Communications
-Biology*) predicted for DD species generally — which suggests that figure belongs to
-the narrowly restricted subset, and that a flat DD list dilutes a real signal with
-vague-range species.
+Two things follow. First, restriction severity does agree with IUCN's own verdict.
+Second, the tier 3–5 rate lands on the 56% that Borgelt et al. (2022, *Communications
+Biology*) predicted for DD species generally — which suggests that figure belongs to the
+narrowly restricted subset, and that a flat DD list dilutes a real signal with vague-range
+species.
 
-Read the base rate honestly: taken flat, the 108 came out threatened at 25.9%, which
-is the ordinary all-species rate of roughly 28%. **The unranked premise does not
-hold.** The ranking is what makes the list defensible, not the DD status by itself.
+Read the base rate honestly: taken flat, the 140 came out threatened at 27.9%, which is
+the ordinary all-species rate of roughly 28%. **The unranked premise does not hold.** The
+ranking is what makes the list defensible, not the DD status by itself.
 
-Caveats worth stating whenever the result is quoted: n=19 in the top stratum is
-small, and the reassessed cohort is not a random sample of DD species — IUCN
-reassesses where data has appeared, which likely favours species that turned out to
-be more widespread. That bias runs against the tier 4–5 finding rather than
-manufacturing it.
+### Where the boundary sits, and why it is not at the top of the scale
+
+The priority stratum is tiers 3–5. That is an empirical choice, and the reason is visible
+only when the tiers are read individually rather than collapsed:
+
+| Tier | n | threatened | 95% CI |
+|---|---|---|---|
+| 5 — type locality / single specimen | 15 | **40%** | 20–64% |
+| 4 — single named site | 10 | **70%** | 40–89% |
+| 3 — single drainage / archipelago | 3 | **67%** | 21–94% |
+| 2 — restricted, extent unclear | 97 | **20%** | 13–29% |
+| 1 — no restriction statement | 15 | **33%** | 15–58% |
+
+**The discontinuity is between tier 2 and tier 3 — 20% to 67% — not between 3 and 4.**
+There is no evidence that a single named site carries more risk than a single drainage
+(70% vs 67%). Testing all four available cut points says the same thing:
+
+| Cut | priority | rest | OR | p |
+|---|---|---|---|---|
+| tier ≥5 | 6/15 = 40.0% | 33/125 | 1.86 | 0.3594 |
+| tier ≥4 | 13/25 = 52.0% | 26/115 | 3.71 | 0.0057 |
+| **tier ≥3** | **15/28 = 53.6%** | **24/112** | **4.23** | **0.0016** |
+| tier ≥2 | 34/125 = 27.2% | 5/15 | 0.75 | 0.7609 |
+
+Tier ≥3 wins on every measure — higher rate, higher odds ratio, smaller p, larger tested
+n — and it survives Bonferroni across all four cuts (0.0016 × 4 = 0.0064).
+
+It has one further property that decided the matter. A species moved between tier 3 and
+tier 4 stays inside tier 3–5, so **the priority list no longer depends on the tier 3/4
+regex boundary at all** — a distinction the data cannot support and which was, until this
+audit, being drawn incorrectly for 73 species.
+
+**Tier 5 is the awkward result and it is not dismissed here.** At 40% it sits below both
+tier 4 and tier 3, so the scale is not monotonic where it is supposed to be strongest. The
+difference is not significant on this n (tier 5 vs tier 4, p = 0.23), but the direction has
+a mechanism: *"known only from a single specimen"* measures **survey effort as much as
+range size**. For a cave fish the two coincide; for a deep-sea snailfish trawled once, one
+specimen is evidence of a barely-sampled ocean, not a small range. The corpus wording lets
+this be probed only weakly — tier-5 species whose sentence carries deep-sea or offshore
+language came out 0/2 against 6/13 for the rest, which is far too thin to claim, and only
+5% of register tier-5 species use such wording. So the mechanism is plausible, untested,
+and stated as a caution: **tier 5 should not be read as "worse than tier 4"**, and the tier
+numbering is a description of evidence type, not a validated risk ordering.
 
 ### What validation killed
 
@@ -222,16 +283,15 @@ result; together they set how hard it can be leaned on.
 
 **1. The tested sample is not a random draw from the register.** IUCN does not choose
 which DD species to resolve at random — a reassessment follows funding, a specialist
-group, or somebody's fieldwork. The 108 are **17.6% tier 4–5 against 35.5% in the
-register** (Fisher p = 0.00007). Reassessment effort is going disproportionately to the
+group, or somebody's fieldwork. The 140 are **20.0% tier 3–5 against 37.1% in the
+register** (Fisher p = 0.00003). Reassessment effort is going disproportionately to the
 vague-range species and leaving the narrowly restricted ones unresolved. That is itself a
 finding in the project's favour, and it means the tier 4–5 rate is estimated on a stratum
 IUCN sampled non-randomly. Whether the 19 they happened to pick were already suspected of
 being threatened cannot be tested from here.
 
-**2. It rests on 19 species.** One species is worth 5.3 percentage points. Relabel two and
-the rate moves ~11 points; relabel three the wrong way and p passes 0.05. **The honest
-statement of the result is the interval 32–73%, not the point estimate**, and "52.6%"
+**2. It rests on 28 species.** One species is worth 3.6 percentage points. **The honest
+statement of the result is the interval 36–70%, not the point estimate**, and "53.6%"
 should never be quoted to one decimal without it.
 
 **3. Predictor and outcome are not independent sources.** Richardson compiled from the
@@ -318,20 +378,20 @@ it grew from 2,305 to 2,372 while the NE list shrank.
 
 Recorded two ways, and the site distinguishes them.
 
-**From a locality account (449 species).** Richardson organises geographically, so most
+**From a locality account (519 species).** Richardson organises geographically, so most
 species sit inside a paragraph introduced by a place. That place, and its opening
 sentence, attach to every species in the paragraph. The stronger provenance.
 
-**From the species entry itself (1,037 species).** Where a species is not inside a
+**From the species entry itself (1,213 species).** Where a species is not inside a
 locality account, the place is usually named in its own sentence anyway — *"collected
 from the upper Pungwe River"*, *"collected off Mauritius"*. `_locality.py` extracts
 those. Named physical features are preferred over a bare capitalised word after a
 preposition, and a capture is rejected when it collides with the species' own common
 name or genus.
 
-Coverage went from **19% to 60%** of the register (1,486 of 2,407) and the site list from
+Coverage went from **19% to 60%** of the register (1,732 of 3,066) and the site list from
 42 to 102. Clusters that were entirely invisible appeared — the Gulf of California holds
-19 species, none of which had a locality before. **921 still have none**, because their
+19 species, none of which had a locality before. **1,334 still have none**, because their
 sentence names no place specific enough to record. Nothing is invented to fill that gap.
 
 A later audit of the recovered localities found two more classes of defect in the captured strings, both
@@ -391,7 +451,7 @@ number is what exposed the bug. The fetcher now backs off exponentially, uses fo
 threads, and **never caches a failure** — a cached failure is indistinguishable from a
 genuine absence and makes the miss permanent.
 
-Corrected: **1,778 of 2,407** species mappable from **17,068** points; **629** have no
+Corrected: **2,261 of 3,066** species mappable from **21,906** points; **805** have no
 georeferenced record anywhere in GBIF.
 
 ### Geocoding the locality names, with two independent checks
@@ -402,7 +462,7 @@ geocoded — but one check is not enough.
 *Type agreement* catches the obvious failures: asked for "The Cordillera Central",
 Nominatim returns a **university** in Baguio. Names ending *River* must resolve as
 waterways, *Island* as islands; buildings, roads and campuses are rejected outright.
-That removed 321 of 856 candidates.
+That removed 354 of 929 candidates.
 
 *But type agreement cannot see a same-type homonym*, and those are common. "Congo River"
 resolved to a real river of that name in **Sierra Leone**, 4,000 km from the Congo,
@@ -412,16 +472,16 @@ at that locality — an independent witness already held:
 
 | | |
 |---|---|
-| Agree within 500 km — plotted | **319** |
-| Disagree by more — discarded | **94** |
-| No records to check against — off by default | **122** |
+| Agree within 500 km — plotted | **339** |
+| Disagree by more — discarded | **110** |
+| No records to check against — off by default | **126** |
 
 About one in five checkable geocodes was wrong by more than 500 km, and none of those
 errors was detectable from the name or the feature type. That rate is why the unverified
-122 are not shown by default. The validated rings add **70** species that have no
+126 are not shown by default. The validated rings add **78** species that have no
 georeferenced record of their own.
 
-**Total placeable: 1,848 of 2,407 (77%). 559 cannot be placed at all.**
+**Total placeable: 2,339 of 3,066 (76%). 727 cannot be placed at all.**
 
 The map shows density, never authoritative dots, and states plainly that it maps
 collecting effort at least as much as biology.
@@ -455,10 +515,10 @@ build script asserts that rather than trusting it.
 2. **Single source.** Everything rests on one author's synthesis. Richardson is
    credible and peer-reviewed, but no second corpus corroborates the restriction
    statements.
-3. **n=19 in the validated stratum.** The tier 4–5 result is significant but thin.
+3. **n=28 in the validated stratum.** The tier 3–5 result is significant but thin.
    The next Red List release adds labels and should be used to re-run script 04.
 4. **Restriction is inferred from prose, not from range data.** No area of occupancy
-   has been computed. Tier 4–5 is an argument that Criterion B *should be evaluated*,
+   has been computed. Tier 3–5 is an argument that Criterion B *should be evaluated*,
    not a finding that it is met.
 5. **Sites are inconsistent in grain.** Extracted localities run from a single named
    river to the entire Tropical Atlantic. Site-level clustering in the output needs a
@@ -477,33 +537,43 @@ build script asserts that rather than trusting it.
 8. **The map maps collecting effort.** Density clusters where institutions and
    expeditions have worked, so it is a picture of where the evidence sits rather than
    where risk is concentrated.
-9. **921 species have no locality and 559 cannot be placed at all.** Both numbers are
+9. **1,334 species have no locality and 727 cannot be placed at all.** Both numbers are
    published rather than rounded away, because the least documented species are the ones
    the register exists to surface.
-10. **53 localities name two places and are deliberately never mapped.** *"Athi and Tana
+10. **67 localities name two places and are deliberately never mapped.** *"Athi and Tana
     River"*, *"Caroline and Marshall Islands"*. They are kept whole in the register and
     withheld from the gazetteer, because every reduction to one place either discards the
     noun that identified it (*"Caroline"*) or invents a location outright — *"Oman and
     Masirah Island"* reduces to *"Oman Island"*, and *"Turkana and the Omo River"* to
     *"Turkana River"*, neither of which exists. A true but coarse locality is preferable
     to a precise-sounding fiction, and the evidence sentence names both places anyway.
-11. **"Validated" means within 500 km, which is coarse for a single-site endemic.** Half
+11. **"Validated" means within 500 km, which is coarse for a single-site endemic.** About half
     the plotted localities agree with a real record to within 50 km and 17% to within
-    10 km, but **55 of 319 agree only to more than 200 km** — for a species whose whole
-    claim is one river, that can be the wrong watershed. Worse, for **67 of the 319 the
+    10 km, but **60 of 339 agree only to more than 200 km** — for a species whose whole
+    claim is one river, that can be the wrong watershed. Worse, for **72 of the 339 the
     witness records are themselves spread over more than 1,000 km** (large marine
     features, mostly: the Gulf of Guinea, the Bay of Biscay), so a 500 km test could not
     have failed however wrong the coordinate was. Those points are corroborated only in
-    the weak sense that nothing contradicted them. A further **60 carry no feature noun
+    the weak sense that nothing contradicted them. A further **74 carry no feature noun
     the type-check recognises** (*Espiritu Santo*, *Luzon*) and passed on distance alone.
-12. **The tier 3/4 boundary is not cleanly separable by pattern.** Tier 4 is tested before
-    tier 3 and its alternation contains *river*, so *"confined to the Kapuas River
-    drainage"* — a basin the size of a country — scores as "a single named site". Between
-    73 and 83 tier-4 species are drainage-scale by the published definition, roughly 9% of
-    tranche A. A further 29 that mention a basin are correctly tier 4 (*"a single locality
-    within the Ganges River drainage"*), so the fix is not a blanket reclassification. See
-    the open question at the end of this section.
-13. **One taxon in the register may not be a real species.** *Pseudonovibos spiralis*, the
+12. **The tier 3/4 boundary is not cleanly separable by pattern — now fixed, but it was
+    wrong.** Tier 4 used to be tested before tier 3, and its alternation contains *river*,
+    so *"confined to the Kapuas River drainage"* — a basin the size of a country — scored as
+    "a single named site". 73 species were misclassified against the published table. Tier 3
+    is now tested first, with a tempered pattern so a basin named as context for a real
+    point (*"a single locality within the Ganges River drainage"*, 29 species) still scores
+    4. The change no longer moves anything in or out of the priority stratum, because the
+    boundary is at 2|3 — which is part of why it was put there.
+13. **Four single-site endemics sit in tier 2, and widening the pattern to reach them
+    made things worse.** Tier 4's slot before the feature noun holds one word, so a
+    multi-word place name — *"the Suoi Rut stream"*, *"La Quebradona creek"* — does not
+    match. Widening it to three words was tried and the held-out set rejected it: it moved
+    94 species from tier 2 into tier 4, of which 7 were in the labelled set and only 1 came
+    out threatened, dropping the priority stratum from 53.6% to 45.7% (OR 4.23 → 3.00,
+    p 0.0016 → 0.0091). The narrow slot is doing real work — a bare *"the X River"* is a
+    tighter claim than a qualified phrase — so the four misses stay, recorded rather than
+    fixed at that price.
+14. **One taxon in the register may not be a real species.** *Pseudonovibos spiralis*, the
     khting-vor, is known only from twisted horns that Richardson himself notes "may perhaps
     be nothing more than artificially-crafted cattle horns". It is genuinely unassessed, so
     it satisfies the NE list's criterion literally, but IUCN's silence here reflects
@@ -512,15 +582,24 @@ build script asserts that rather than trusting it.
     exist. Two further entries (*Apus sladeniae*, *Varanus telenesetes*) are described as
     "mysterious" but are valid taxa that IUCN lists as DD.
 
-### Open question the audit did not settle
+### What is still open
 
-Limitation 12 is a real mismatch between the published tier table and the code, and fixing
-it would move **tranche A from 843 to roughly 765 (−9%)**, with the held-out result
-weakening but surviving (OR 4.38 → 3.74, p 0.0075 → 0.0173). Because that changes a
-headline figure and the editorial meaning of "priority", it is recorded here rather than
-applied unilaterally. Note that tier ≥3 as a *set* is unaffected by the reordering, so
-adopting tier 3–5 as tranche A (see §4, qualification 4) would make the boundary question
-largely moot and rests on the stronger test result.
+**Tier 5's underperformance is unexplained.** At 40% it sits below tier 4 (70%) and tier 3
+(67%), and the survey-effort mechanism proposed in §4 is plausible but untested — the corpus
+wording supports only a 0/2 versus 6/13 split, which is nothing. Either a larger
+reassessment cohort or an external habitat/depth join would settle it. Until then the tier
+numbers should be read as evidence types, not as a risk ordering.
+
+**Two species share a sentence the corpus never terminated.** *Micrurus camilae* and
+*Emmochliophis fugleri* sit in one run-on sentence with no period between their accounts, so
+one takes the other's tier-5 phrase. No sentence splitter can recover a boundary that is not
+in the source; this needs a manual correction to the input text.
+
+**A probable non-taxon is ranked** — see limitation 14.
+
+**Two thirds of IUCN's Data Deficient vertebrates are outside the corpus entirely** (§1).
+Every one the corpus names is now included, so further coverage has to come from a second
+source, not from better extraction.
 
 ---
 
@@ -577,5 +656,5 @@ Website payloads, in `site/`:
 
 Re-download the archive and rerun. Script 02's diff becomes a fresh labelled set, and
 script 04 re-tests the ranking against it. The validation gets stronger with each
-release, and if a future release contradicts the tier 4–5 result, that has to be
+release, and if a future release contradicts the tier 3–5 result, that has to be
 reported rather than explained away.
