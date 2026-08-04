@@ -15,21 +15,21 @@
 <meta property="og:site_name" content="The Biodiversity Group">
 <meta property="og:url" content="https://speciesblacklist.org/map/">
 <meta property="og:title" content="Map — The Species Black List">
-<meta property="og:description" content="2,372 vertebrates the IUCN Red List records as Data Deficient, and 36 it has never assessed. Ranked by how narrowly restricted the published record says they are — and tested against IUCN's own reassessments.">
+<meta property="og:description" content="2,372 vertebrates the IUCN Red List records as Data Deficient, and 35 it has never assessed. Ranked by how narrowly restricted the published record says they are — and tested against IUCN's own reassessments.">
 <!-- The card is the register itself: masthead, one real tier-5 record, the field
-     of 2,408 marks, the headline figures. No photography, for the same reason
+     of 2,407 marks, the headline figures. No photography, for the same reason
      there is none on the page. Drawn by pipeline/11_make_og.py from data.json,
      so the marks and the counts cannot drift from the data they stand for. -->
 <meta property="og:image" content="https://speciesblacklist.org/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,408 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 2,372 Data Deficient, 813 in the priority stratum, 36 never assessed, 52.6% of reassessed priority species proved threatened.">
+<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,407 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 2,372 Data Deficient, 813 in the priority stratum, 35 never assessed, 52.6% of reassessed priority species proved threatened.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Species Black List">
 <meta name="twitter:description" content="Vertebrates the Red List cannot yet speak for, ranked by restriction and tested against IUCN's own reassessments.">
 <meta name="twitter:image" content="https://speciesblacklist.org/og-image.png">
-<meta name="twitter:image:alt" content="The register's headline figures over a field of 2,408 marks, one per species, shaded by how narrowly restricted each published record is.">
+<meta name="twitter:image:alt" content="The register's headline figures over a field of 2,407 marks, one per species, shaded by how narrowly restricted each published record is.">
 
 <!-- Dataset markup so Google Dataset Search can surface this to the researchers
      who would actually use it. Worth more than ordinary SEO for a register. -->
@@ -39,7 +39,7 @@
   "@type": "Dataset",
   "name": "The Species Black List",
   "alternateName": "Data Deficient and unassessed vertebrates, ranked by geographic restriction",
-  "description": "A register of 2,372 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 36 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritised research agenda.",
+  "description": "A register of 2,372 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 35 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritised research agenda.",
   "url": "https://speciesblacklist.org/",
   "keywords": ["extinction risk","IUCN Red List","Data Deficient","conservation prioritisation","vertebrates","biodiversity assessment gap","Criterion B"],
   "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -216,9 +216,9 @@
   .lede strong { color:var(--ink); font-weight:600; }
 
   /* ---- hero: the field -------------------------------------------------- */
-  /* One mark per species, 2,408 of them, coloured by restriction tier. The mass
+  /* One mark per species, 2,407 of them, coloured by restriction tier. The mass
      is the argument: a register of the overlooked, drawn at the scale of the
-     overlooking. Canvas rather than DOM because 2,408 nodes is wasteful and
+     overlooking. Canvas rather than DOM because 2,407 nodes is wasteful and
      because crisp sub-pixel marks need devicePixelRatio scaling. No photography
      anywhere on this page — most of these animals have never been photographed,
      and that absence is the subject. */
@@ -681,7 +681,7 @@
         <p class="eyebrow">Every species in the register, one mark each</p>
       </div>
       <canvas id="field" role="img"
-              aria-label="A dense field of marks, one for each of the 2,408 species in
+              aria-label="A dense field of marks, one for each of the 2,407 species in
               the register, shaded by how narrowly restricted its published record is.
               The same data is listed in full under The register tab."></canvas>
       <p class="field-note">Hover a mark to name the species; select one to open its
@@ -712,16 +712,29 @@
       the ordinary all-species rate. The <strong>narrowly restricted subset is
       different</strong>, and that distinction — not the Data Deficient label — is
       what this register is for.</p>
+    <p><strong>This is a ranked subset, not a census.</strong> IUCN v2026&#8209;1 holds
+      <span class="num">8,659</span> Data Deficient species in vertebrate classes; this
+      register covers <span class="num">2,372</span> of them —
+      <span class="num">27%</span>. The method needs a published sentence describing each
+      species' range, and the corpus behind it is one reference work. So the right reading
+      is "of the Data Deficient vertebrates with a usable published range statement, these
+      are the most narrowly restricted" — not "these are the ones that matter most". The
+      other <span class="num">6,287</span> are unexamined here, not judged safe.</p>
   </div>
 
   <div class="panel">
     <p class="eyebrow">Held-out test</p>
-    <h3>Does the ranking predict IUCN's own verdict?</h3>
+    <h3>Does the ranking agree with IUCN's own verdict?</h3>
     <p style="font-family:var(--sans);font-size:.87rem;color:var(--ink-2);margin:.5rem 0 0;
        ">Between the previous data and v2026&#8209;1, IUCN independently
       reassessed <span class="num">108</span> of these species and gave each a real
       category. The ranking rules never saw those outcomes, so they work as an answer
-      key. Share reassessed as threatened or extinct:</p>
+      key. Two caveats belong with the result: it rests on
+      <span class="num">19</span> species in the priority stratum, so the interval
+      matters more than the point estimate; and both the ranking and the assessment
+      draw on the same primary literature, so this is agreement between two readings
+      of one evidence base rather than a blind prediction.
+      Share reassessed as threatened or extinct:</p>
     <div class="plot" id="plot"></div>
     <p class="stat" id="pstat"></p>
   </div>
@@ -962,7 +975,7 @@
       geographically, so most species sit inside a paragraph introduced by a place.
       That place, and its opening sentence, are attached to every species in the
       paragraph. This is the stronger provenance and it covers
-      <span class="num">450</span> species.</p>
+      <span class="num">449</span> species.</p>
     <p><strong>From the species entry itself.</strong> Where a species is not inside a
       locality account, the place is very often named in its own sentence anyway —
       <em>"collected from the upper Pungwe River"</em>, <em>"collected off
@@ -1053,7 +1066,7 @@
       from the gazetteer, and the evidence sentence shows both places.</p>
 
     <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
-      the <span class="num">2,408</span> species here, <span class="num">629</span>
+      the <span class="num">2,407</span> species here, <span class="num">629</span>
       have no georeferenced record anywhere in GBIF, and <span class="num">563</span>
       cannot be placed even by a cross-checked locality. They are the least visible
       members of an already invisible group, and they are absent from the map.</p>

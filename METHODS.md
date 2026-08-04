@@ -14,9 +14,23 @@ Cambridge University Press reference documents most of them as narrowly restrict
 often to a single river or a single collecting event. Ranked by how severe that
 restriction is.
 
-**List 2 — Not Evaluated: 36 species.** IUCN has never assessed these at all, yet the
+**List 2 — Not Evaluated: 35 species.** IUCN has never assessed these at all, yet the
 same reference treats them as threatened or recently extinct. Small because the claim
 is hard to make safely — see §5.
+
+### What the register is a sample OF
+
+This belongs before any figure above is quoted. **IUCN v2026-1 holds 8,659 Data Deficient
+species in vertebrate classes. This register covers 2,372 of them — 27%.** The gap is not
+a pipeline loss; it is the scope of the corpus. The register holds the DD vertebrates that
+Richardson (2023) documents, because the method depends on having a published sentence
+describing each species' range, and the book is what supplies that sentence.
+
+So this is **a ranked subset, not a census of the problem.** Nothing here licenses "these
+are the DD vertebrates that matter most" — only "of the DD vertebrates with a usable
+published range statement, these are the most narrowly restricted." The other ~6,300 are
+not judged lower priority; they are unexamined. Extending the corpus is the largest single
+improvement available to this project.
 
 Both lists exist because Data Deficient and Not Evaluated species are excluded from
 conservation in practice and, in one case, by treaty language. Target 4 of the
@@ -188,6 +202,42 @@ optional preposition to *from / by / in / at* is what keeps *"is only known **to
 seasonally"* out. Only 3 sentences in the whole corpus use the prepositionless form, and
 all 3 were inspected individually.
 
+### What the validation does NOT establish
+
+Four qualifications, each measured rather than asserted. None of them overturns the
+result; together they set how hard it can be leaned on.
+
+**1. The tested sample is not a random draw from the register.** IUCN does not choose
+which DD species to resolve at random — a reassessment follows funding, a specialist
+group, or somebody's fieldwork. The 108 are **17.6% tier 4–5 against 34.3% in the
+register** (Fisher p = 0.0002). Reassessment effort is going disproportionately to the
+vague-range species and leaving the narrowly restricted ones unresolved. That is itself a
+finding in the project's favour, and it means the tier 4–5 rate is estimated on a stratum
+IUCN sampled non-randomly. Whether the 19 they happened to pick were already suspected of
+being threatened cannot be tested from here.
+
+**2. It rests on 19 species.** One species is worth 5.3 percentage points. Relabel two and
+the rate moves ~11 points; relabel three the wrong way and p passes 0.05. **The honest
+statement of the result is the interval 32–73%, not the point estimate**, and "52.6%"
+should never be quoted to one decimal without it.
+
+**3. Predictor and outcome are not independent sources.** Richardson compiled from the
+primary literature and specialist-group material; an assessor writing the same species'
+account draws on the same papers and may well have read Richardson. So this is agreement
+between two readings of one literature, not a blind prediction against ground truth. The
+time order is sound — every outcome postdates the January 2022 manuscript, so no answer
+leaked into the predictor — which is what makes the test worth running. But
+*"predicts IUCN's own verdict"* overstates it; *"agrees with"* is accurate.
+
+**4. The chosen cut is not the strongest one.** Of the four monotone cut points, two are
+significant, and tier ≥3 tests **better** than the published tier ≥4 (OR 5.25, p = 0.0018
+vs OR 4.38, p = 0.0075). Tranche A is 4–5 because Criterion B's area-of-occupancy
+thresholds motivate it a priori, not because it maximised the statistic — had the cut been
+chosen to fit the test, tier ≥3 would have been picked. Bonferroni across all four cuts
+leaves the result significant (0.0018 → 0.007). The corollary is that **tier 3 is a
+defensible candidate for inclusion in the priority stratum** and is currently excluded on
+theoretical rather than empirical grounds.
+
 ---
 
 ## 5. Corrections to the 2024 analysis
@@ -216,7 +266,7 @@ Attrition on the NE list, stage by stage:
 368  unique after deduplication on accepted name           (05)
 153  survive the genus/family/homonym audit                (06)
  43  survive independent GBIF verification                 (08)  -110
- 36  after removing pre-1500 extinctions                   (08)   -7
+ 35  after removing pre-1500 extinctions                   (08)   -8
 ```
 
 **A cumulative false-positive rate near 90%.** Any future work asserting that a
@@ -233,7 +283,7 @@ methodological result here and it is structural, not luck:
 > taxonomies disagree about placement constantly. Absence needs a curated
 > cross-reference, and name matching is not one.
 
-Practical consequence: List 1 can be quoted with confidence. List 2 is 36 species,
+Practical consequence: List 1 can be quoted with confidence. List 2 is 35 species,
 each individually verified, and should never be regenerated by name matching alone.
 
 **Pre-1500 extinctions are out of scope, not neglected.** Richardson covers species
@@ -255,7 +305,7 @@ it grew from 2,305 to 2,372 while the NE list shrank.
 
 Recorded two ways, and the site distinguishes them.
 
-**From a locality account (450 species).** Richardson organises geographically, so most
+**From a locality account (449 species).** Richardson organises geographically, so most
 species sit inside a paragraph introduced by a place. That place, and its opening
 sentence, attach to every species in the paragraph. The stronger provenance.
 
@@ -266,7 +316,7 @@ those. Named physical features are preferred over a bare capitalised word after 
 preposition, and a capture is rejected when it collides with the species' own common
 name or genus.
 
-Coverage went from **19% to 60%** of the register (1,449 of 2,408) and the site list from
+Coverage went from **19% to 60%** of the register (1,448 of 2,407) and the site list from
 42 to 102. Clusters that were entirely invisible appeared — the Gulf of California holds
 19 species, none of which had a locality before. **959 still have none**, because their
 sentence names no place specific enough to record. Nothing is invented to fill that gap.
@@ -318,7 +368,7 @@ per species.
 ### A rate-limit bug that corrupted the figures
 
 The first run used eight concurrent threads and retried three times with no delay. GBIF
-answered **399 of 2,408 requests with HTTP 429**, and the script cached those failures as
+answered **399 of the 2,408 requests made at the time with HTTP 429**, and the script cached those failures as
 though they were results — so re-running never retried them, and 16.6% of the register
 was silently recorded as having no records.
 
@@ -328,7 +378,7 @@ number is what exposed the bug. The fetcher now backs off exponentially, uses fo
 threads, and **never caches a failure** — a cached failure is indistinguishable from a
 genuine absence and makes the miss permanent.
 
-Corrected: **1,779 of 2,408** species mappable from **17,098** points; **629** have no
+Corrected: **1,778 of 2,407** species mappable from **17,068** points; **629** have no
 georeferenced record anywhere in GBIF.
 
 ### Geocoding the locality names, with two independent checks
@@ -358,7 +408,7 @@ errors was detectable from the name or the feature type. That rate is why the un
 118 are not shown by default. The validated rings add **66** species that have no
 georeferenced record of their own.
 
-**Total placeable: 1,845 of 2,408 (77%). 563 cannot be placed at all.**
+**Total placeable: 1,844 of 2,407 (77%). 563 cannot be placed at all.**
 
 The map shows density, never authoritative dots, and states plainly that it maps
 collecting effort at least as much as biology.
@@ -424,6 +474,40 @@ build script asserts that rather than trusting it.
     Masirah Island"* reduces to *"Oman Island"*, and *"Turkana and the Omo River"* to
     *"Turkana River"*, neither of which exists. A true but coarse locality is preferable
     to a precise-sounding fiction, and the evidence sentence names both places anyway.
+11. **"Validated" means within 500 km, which is coarse for a single-site endemic.** Half
+    the plotted localities agree with a real record to within 50 km and 17% to within
+    10 km, but **55 of 317 agree only to more than 200 km** — for a species whose whole
+    claim is one river, that can be the wrong watershed. Worse, for **67 of the 317 the
+    witness records are themselves spread over more than 1,000 km** (large marine
+    features, mostly: the Gulf of Guinea, the Bay of Biscay), so a 500 km test could not
+    have failed however wrong the coordinate was. Those points are corroborated only in
+    the weak sense that nothing contradicted them. A further **59 carry no feature noun
+    the type-check recognises** (*Espiritu Santo*, *Luzon*) and passed on distance alone.
+12. **The tier 3/4 boundary is not cleanly separable by pattern.** Tier 4 is tested before
+    tier 3 and its alternation contains *river*, so *"confined to the Kapuas River
+    drainage"* — a basin the size of a country — scores as "a single named site". Between
+    58 and 67 tier-4 species are drainage-scale by the published definition, roughly 8% of
+    tranche A. A further 29 that mention a basin are correctly tier 4 (*"a single locality
+    within the Ganges River drainage"*), so the fix is not a blanket reclassification. See
+    the open question at the end of this section.
+13. **One taxon in the register may not be a real species.** *Pseudonovibos spiralis*, the
+    khting-vor, is known only from twisted horns that Richardson himself notes "may perhaps
+    be nothing more than artificially-crafted cattle horns". It is genuinely unassessed, so
+    it satisfies the NE list's criterion literally, but IUCN's silence here reflects
+    doubtful validity rather than neglect. Its evidence sentence is displayed in full, so a
+    reader sees the caveat; it is nonetheless ranked alongside species that certainly
+    exist. Two further entries (*Apus sladeniae*, *Varanus telenesetes*) are described as
+    "mysterious" but are valid taxa that IUCN lists as DD.
+
+### Open question the audit did not settle
+
+Limitation 12 is a real mismatch between the published tier table and the code, and fixing
+it would move **tranche A from 813 to roughly 750 (−8%)**, with the held-out result
+weakening but surviving (OR 4.38 → 3.74, p 0.0075 → 0.0173). Because that changes a
+headline figure and the editorial meaning of "priority", it is recorded here rather than
+applied unilaterally. Note that tier ≥3 as a *set* is unaffected by the reordering, so
+adopting tier 3–5 as tranche A (see §4, qualification 4) would make the boundary question
+largely moot and rests on the stronger test result.
 
 ---
 
@@ -470,8 +554,8 @@ Website payloads, in `site/`:
 | File | Contents |
 |---|---|
 | `index.html` | The whole application, self-contained; source for the sub-pages |
-| `data.json` | 2,408 species accounts, tiers, sites, validation figures |
-| `map.json` | 17,098 occurrence points, species names, Natural Earth land |
+| `data.json` | 2,407 species accounts, tiers, sites, validation figures |
+| `map.json` | 17,068 occurrence points, species names, Natural Earth land |
 | `geo.json` | Geocoded localities with their cross-check verdict |
 | `favicon.svg`, `brand/mark.svg` | The original logomark |
 | `register/`, `map/`, `sites/`, `methods/` | Generated by `14_build_pages.py` — do not hand-edit |
