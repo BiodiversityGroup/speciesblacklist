@@ -430,10 +430,49 @@ The residual risk this does not cover: GBIF record counts measure whether materi
 not whether the assessor consulted it, and a species can be genuinely widespread with few
 digitised records. This is a bound on the problem, not a resolution of it.
 
-**4b. The Not Evaluated list is exposed to the same process.** The 35 species on List 2 are
-candidates for exactly this treatment — cleared to Least Concern by consensus without new
-survey. If that happens they will leave this register without anyone having looked for them,
-which is the outcome the register exists to prevent.
+**4b. Both lists are exposed to the same process, and this is the thing to watch.**
+
+The backlog-clearing described above does not only affect the historical record used for
+validation. It is a live mechanism, and it acts on the species in this register. A Data
+Deficient or Not Evaluated species can be moved to Least Concern because a specialist group
+reached consensus that no threat is known — and it then disappears from every list that
+selects on those categories, including this one, without anyone having gone to look for it.
+**That is precisely the outcome the register exists to prevent, and it would look like
+success.**
+
+The exposure is not evenly spread:
+
+| | species | in the priority stratum (tier 3–5) |
+|---|---|---|
+| List 1 — Data Deficient | 3,031 | 1,123 |
+| List 2 — Not Evaluated | 35 | **8** |
+
+List 2 is the more acute case, because "never assessed" is a category IUCN is actively
+retiring rather than one that persists. The eight priority-stratum species on it are the ones
+whose removal would cost the most:
+
+| Tier | Class | Species |
+|---|---|---|
+| 5 | Amphibia | *Fejervarya schlueteri* |
+| 5 | Aves | *Caprimulgus centralasicus* |
+| 5 | Chondrichthyes | *Heteronarce prabhui* |
+| 5 | Reptilia | *Hypsiglena unaocularus* |
+| 4 | Actinopterygii | *Afronemacheilus kaffa* |
+| 4 | Actinopterygii | *Danakilia dinicolai* |
+| 4 | Actinopterygii | *Haplochromis adolphifrederici* |
+| 4 | Actinopterygii | *Paracobitis erhaiensis* |
+
+**What to check at each Red List release.** Not "did anything leave the register" — things
+leaving is expected — but *on what basis*. For every species that moves out of DD or NE to
+LC or NT, the question is whether the new assessment cites evidence published since the
+previous one. If it does, the species was resolved and should leave. If it cites nothing
+newer than the assessment it replaces, the category changed and the knowledge did not, and
+the species belongs on a watch list rather than off the register.
+
+That check is mechanisable and is the intended next step for `16_outcome_sensitivity.py`: the
+IUCN Red List API v4 returns each assessment's own reference list and full assessment history
+per taxon, which makes "does this reassessment rest on anything new?" a countable question
+rather than a judgement about prose. §4a explains why the prose itself cannot answer it.
 
 ---
 
