@@ -8,7 +8,7 @@
 
 Two claims, deliberately kept separate because they are not equally strong.
 
-**List 1 — Data Deficient: 3,031 species**, of which **1,123 are tranche A**, the
+**List 1 — Data Deficient: 3,031 species**, of which **1,124 are tranche A**, the
 validated priority stratum. IUCN has assessed these and returned *we don't know*. A
 Cambridge University Press reference documents most of them as narrowly restricted,
 often to a single river or a single collecting event. Ranked by how severe that
@@ -99,16 +99,15 @@ this, and it reframes the register.
 | | |
 |---|---|
 | median years Data Deficient | **16** |
-| Data Deficient for 10+ years | 2,856 of 2,973 (96%) |
-| Data Deficient for 20+ years | **469** |
+| Data Deficient for 10+ years | 2,901 of 3,021 (96%) |
+| Data Deficient for 20+ years | **481** |
 | longest | 32 years |
-| assessed more than once, still Data Deficient | **1,343 (45%)** |
+| assessed more than once, still Data Deficient | **1,351 (45%)** |
 | median time IUCN has taken to actually resolve a DD listing | 16 years |
-| register species already past that median | **1,003** |
+| register species already past that median | **1,020** |
 
-**The re-affirmation figure is the one that matters.** 1,343 species have been assessed
-more than once and left Data Deficient — 234 of them three times, and nine species four or
-more. Those are not backlog awaiting a first assessment; they are cases where the Red List
+**The re-affirmation figure is the one that matters.** 1,351 species have been assessed
+more than once and left Data Deficient — 234 of them three times, and 76 four or more times. Those are not backlog awaiting a first assessment; they are cases where the Red List
 has looked, and looked again, and had nothing to say. That is the population this register
 exists to name.
 
@@ -118,19 +117,34 @@ in every tier from 1 to 5. **The neglect is systemic rather than concentrated in
 narrowly-restricted species**, which weakens one argument the project might have made and is
 recorded because it was tested.
 
-**Method, and two caveats.** `/red_list_categories/DD` is paginated and returns every
-assessment ever placed in Data Deficient, superseded ones included — 35,678 assessments over
-357 pages, which replaced 3,031 per-species history calls that the rate limit would have
-turned into a four-hour job. Duration is then the span from a species' earliest Data Deficient
-assessment to v2026-1.
+**Method, and what an audit had to correct in it.** `/red_list_categories/DD` is paginated
+and returns every assessment ever placed in Data Deficient, superseded ones included — 35,678
+assessments over 357 pages, which replaced 3,031 per-species history calls that the rate limit
+would have turned into a four-hour job. Duration is the span from a species' earliest Data
+Deficient assessment to v2026-1.
 
-First caveat: working from Data Deficient assessments alone cannot see a *non*-DD assessment
-sitting between two DD ones, so a species that went DD → LC → DD would read as one
-continuous gap. Checked against the 1,262 register species whose full histories were also
-fetched, the first-DD year agrees for 1,258 (99.7%) and exactly one span is broken that way.
-Second caveat: 58 of 3,031 register species could not be matched to a swept
-assessment under either their book name or their verified IUCN name, and carry no duration.
-They are shown as "—" rather than assumed.
+Three defects were found in that path after it first published, all of them in the join rather
+than the data:
+
+**Regional assessments were being counted.** The sweep returns every scope, and 2,949 of the
+35,678 assessments (8.3%) are regional — Europe, Mediterranean, Persian Gulf, Pan-Africa. The
+per-species path excludes those on the stated grounds that treating a regional assessment as a
+reassessment would invent a transition that never happened, and this path was not obeying the
+same rule. Counting them stretched durations and inflated the re-affirmation rate.
+
+**58 species were silently dropped.** All 58 were species recovered by the false-negative
+audit, which carry IUCN's name in a different column (*Megaelosia bocainensis* is IUCN's
+*Phantasmarana bocainensis*); the join checked only one of the three name columns. Coverage is
+now 3,021 of 3,031, and the residual 10 are shown as "—" rather than assumed.
+
+**Joining on name rather than taxon id is the remaining known weakness.** A name can carry
+assessments belonging to a superseded taxon id: *Alsodes monticola* has three swept DD
+assessments, but two of them belong to a retired `sis_taxon_id` and the current taxon has only
+the 2019 one. Measured against the 1,262 register species whose authoritative per-taxon
+histories were also fetched, the first-DD year agrees for 1,258 (99.7%) — but the assessment
+*count* agrees for only 82.7%, understating re-affirmations for 214 species and overstating
+for 4. **The published re-affirmation figure is therefore conservative.** Exactly one span is
+broken by an intervening non-DD assessment.
 
 Both lists exist because Data Deficient and Not Evaluated species are excluded from
 conservation in practice and, in one case, by treaty language. Target 4 of the
@@ -573,7 +587,7 @@ The exposure is not evenly spread:
 
 | | species | in the priority stratum (tier 3–5) |
 |---|---|---|
-| List 1 — Data Deficient | 3,031 | 1,123 |
+| List 1 — Data Deficient | 3,031 | 1,124 |
 | List 2 — Not Evaluated | 35 | **8** |
 
 List 2 is the more acute case, because "never assessed" is a category IUCN is actively
