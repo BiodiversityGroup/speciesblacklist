@@ -99,15 +99,15 @@ this, and it reframes the register.
 | | |
 |---|---|
 | median years Data Deficient | **16** |
-| Data Deficient for 10+ years | 2,901 of 3,021 (96%) |
-| Data Deficient for 20+ years | **481** |
+| Data Deficient for 10+ years | 2,889 of 3,021 (96%) |
+| Data Deficient for 20+ years | **475** |
 | longest | 32 years |
-| assessed more than once, still Data Deficient | **1,351 (45%)** |
+| assessed more than once, still Data Deficient | **1,210 (40%)** |
 | median time IUCN has taken to actually resolve a DD listing | 16 years |
-| register species already past that median | **1,020** |
+| register species already past that median | **1,011** |
 
-**The re-affirmation figure is the one that matters.** 1,351 species have been assessed
-more than once and left Data Deficient — 234 of them three times, and 76 four or more times. Those are not backlog awaiting a first assessment; they are cases where the Red List
+**The re-affirmation figure is the one that matters.** 1,210 species have been assessed
+more than once and left Data Deficient — 179 of them three times, and 51 four or more times. Those are not backlog awaiting a first assessment; they are cases where the Red List
 has looked, and looked again, and had nothing to say. That is the population this register
 exists to name.
 
@@ -137,14 +137,23 @@ audit, which carry IUCN's name in a different column (*Megaelosia bocainensis* i
 *Phantasmarana bocainensis*); the join checked only one of the three name columns. Coverage is
 now 3,021 of 3,031, and the residual 10 are shown as "—" rather than assumed.
 
-**Joining on name rather than taxon id is the remaining known weakness.** A name can carry
-assessments belonging to a superseded taxon id: *Alsodes monticola* has three swept DD
-assessments, but two of them belong to a retired `sis_taxon_id` and the current taxon has only
-the 2019 one. Measured against the 1,262 register species whose authoritative per-taxon
-histories were also fetched, the first-DD year agrees for 1,258 (99.7%) — but the assessment
-*count* agrees for only 82.7%, understating re-affirmations for 214 species and overstating
-for 4. **The published re-affirmation figure is therefore conservative.** Exactly one span is
-broken by an intervening non-DD assessment.
+**Joining on name rather than taxon id was the last weakness, and it has been removed.** A
+name can carry assessments belonging to a superseded taxon id: *Alsodes monticola* has three
+swept DD assessments, but two belong to a retired `sis_taxon_id` and the current taxon has only
+the 2019 one. Per-taxon histories have now been fetched for every register species, so 3,020 of
+3,021 durations come from the taxon endpoint directly and the sweep survives only as a fallback
+(1 species) and as the source of the population-level figures. First-DD year now agrees with the
+authoritative history for 2,964 of 2,964 cross-checked species; 6 spans are broken by an
+intervening non-DD assessment.
+
+**A directional claim in an earlier version of this section was wrong, and the correction is
+worth stating.** It said the name join made the re-affirmation figure *conservative*, reasoning
+from a partial comparison in which the sweep undercounted 214 species and overcounted 4. On the
+full data the opposite is true: the name join was **overstating** re-affirmations, because a
+name string collects assessments from retired taxon ids more often than it loses assessments
+filed under an older name. The figure fell from 1,351 (45%) to **1,210 (40%)** when the
+authoritative histories replaced it. The honest lesson is that a direction inferred from a
+subset should not be published as if it were measured on the whole.
 
 Both lists exist because Data Deficient and Not Evaluated species are excluded from
 conservation in practice and, in one case, by treaty language. Target 4 of the
