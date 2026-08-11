@@ -19,6 +19,8 @@ import csv, json, os, re, sys, collections, importlib.util
 
 csv.field_size_limit(10 ** 9)
 HERE = os.path.dirname(os.path.abspath(__file__))
+import sys; sys.path.insert(0, HERE)
+from _common import sentences
 PROJ = os.path.dirname(HERE)
 BUILD = os.path.join(PROJ, "build_2026")
 SITE = os.path.join(PROJ, "site")
@@ -70,7 +72,7 @@ def clean_site(name):
 
 def first_sentence(block_text, site):
     """Richardson's opening sentence for a locality: the geographic context."""
-    for sent in re.split(r"(?<=[.;])\s+", block_text):
+    for sent in sentences(block_text):
         s = " ".join(sent.split())
         # skip the sentence if it is really a species record
         if "(" in s and re.search(r"\([A-Z][a-z]+ [a-z]+\)", s):
@@ -114,6 +116,43 @@ def rows(fn):
     return list(csv.DictReader(open(p, encoding="utf-8"))) if os.path.exists(p) else []
 
 
+def dd_duration():
+    """Per-species Data Deficient duration from 18_dd_duration.py, if it has run.
+
+    Optional: the site degrades to not showing durations rather than failing, because this
+    is the only part of the pipeline that needs an IUCN API token.
+    """
+    p = os.path.join(BUILD, "dd_duration.json")
+    if not os.path.exists(p):
+        print("  (no dd_duration.json -- durations omitted; run 17 ddsweep + 18)")
+        return {}, {}
+    d = json.load(open(p, encoding="utf-8"))
+    return d.get("per_species") or {}, d
+
+
+def realms():
+    """Corpus-assigned biogeographic realm per species (19_assign_realms.py).
+
+    Optional, like the duration data: absent means the column renders as "—" rather
+    than the build failing.
+    """
+    p = os.path.join(BUILD, "species_realm.json")
+    if not os.path.exists(p):
+        print("  (no species_realm.json -- realms omitted; run 19_assign_realms.py)")
+        return {}, []
+    d = json.load(open(p, encoding="utf-8"))
+    return d.get("per_species") or {}, d.get("realms") or []
+
+
+def validation():
+    """The held-out result as 04 computed it. Refuses to guess if 04 has not run."""
+    p = os.path.join(BUILD, "validation.json")
+    if not os.path.exists(p):
+        raise SystemExit("validation.json is missing -- run 04_validate_score.py first. "
+                         "The site will not be built with a stale or invented result.")
+    return json.load(open(p, encoding="utf-8"))
+
+
 def main():
     os.makedirs(SITE, exist_ok=True)
 
@@ -143,6 +182,29 @@ def main():
             "sil": False, "thr": [], "pa": False,
         })
 
+    # Biogeographic realm, taken from the corpus's own structure -- see 19.
+    rlm, realm_order = realms()
+    for sp_ in species:
+        r = rlm.get(sp_["n"])
+        if r:
+            sp_["r"] = r
+    if rlm:
+        print(f"realm attached to {sum(1 for x in species if x.get('r')):,} species")
+
+    # How long has each species been Data Deficient? Only the API knows; see 18.
+    dur, dur_meta = dd_duration()
+    n_dur = 0
+    for sp_ in species:
+        d = dur.get(sp_["n"])
+        if d:
+            sp_["ddy"] = d["years"]            # years in the current DD run
+            sp_["dds"] = d["dd_since"]         # year first assessed DD
+            sp_["ddr"] = d["reaffirmations"]   # times IUCN wrote DD for it
+            n_dur += 1
+    if dur:
+        print(f"DD duration attached to {n_dur:,} species "
+              f"(median {dur_meta.get('median_years')} yr)")
+
     named = sum(1 for s in species if s["v"])
     print(f"species: {len(species):,}  (common name recovered for {named:,})")
 
@@ -159,7 +221,7 @@ def main():
     # locality even though the place is named in the species' own sentence. Recover
     # those from the evidence text -- extraction from the source, never geocoding.
     sys.path.insert(0, HERE)
-    from _locality import locality_from_evidence
+    from _locality import locality_from_evidence, is_compound
     recovered = 0
     for s in species:
         if s["s"]:
@@ -187,27 +249,34 @@ def main():
             "corpus": "Richardson, M. (2023) Threatened and Recently Extinct "
                       "Vertebrates of the World: A Biogeographic Approach. "
                       "Cambridge University Press.",
-            "built": "2026-08-02",
+            "built": "2026-08-03",
             "counts": {
                 "dd": sum(1 for s in species if s["l"] == "dd"),
                 "ne": sum(1 for s in species if s["l"] == "ne"),
                 # DD-only priority is the figure to quote beside the validation
                 # rate, because the held-out test was run on DD species alone.
+                # Threshold is tier >=3: see 03 for why the boundary is 2|3.
+                "priority_tier": 3,
                 "priority_dd": sum(1 for s in species
-                                   if s["t"] >= 4 and s["l"] == "dd"),
-                "priority_all": sum(1 for s in species if s["t"] >= 4),
+                                   if s["t"] >= 3 and s["l"] == "dd"),
+                "priority_all": sum(1 for s in species if s["t"] >= 3),
                 "prehistoric": len(rows("prehistoric_extinctions.csv")),
+                # localities naming two places. Kept whole but never geocoded, so the
+                # Methods page can state the count without hardcoding it.
+                "compound_localities": len({s["s"] for s in species
+                                            if s["s"] and is_compound(s["s"])}),
             },
-            # the held-out test from script 04 -- the site must show this honestly
-            "validation": {
-                "n_labelled": 108,
-                "high": {"n": 19, "threatened": 10, "rate": 52.6, "lo": 32, "hi": 73},
-                "low": {"n": 89, "threatened": 18, "rate": 20.2, "lo": 13, "hi": 30},
-                "all": {"n": 108, "rate": 25.9, "lo": 19, "hi": 35},
-                "p": 0.0075, "odds_ratio": 4.38,
-                "baseline_all_species": 28,
-                "borgelt_prediction": 56,
-            },
+            # The held-out test, read straight from what 04 computed. These figures were
+            # hardcoded here until an audit caught the consequence: the corpus expansion
+            # took the labelled set from 108 to 139, 04 reported the new result, and the
+            # site went on publishing n=108 / 52.6% / p=0.0075 -- a validation result no
+            # validator had produced. Never retype a computed number.
+            "validation": validation(),
+            # neglect duration -- see 18_dd_duration.py. Empty if 18 has not run.
+            "duration": {k: v for k, v in (dur_meta or {}).items()
+                         if k != "per_species"},
+            # the realm vocabulary, in the corpus's own order, for the filter
+            "realms": realm_order,
         },
         "tiers": {
             5: "Type locality, original collection, or a single specimen",

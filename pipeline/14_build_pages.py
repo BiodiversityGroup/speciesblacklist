@@ -46,8 +46,14 @@ PAGES = [
      "A register of vertebrate species that the IUCN Red List records as Data "
      "Deficient or has never assessed, ranked by how narrowly restricted the "
      "published record says they are."),
+    # 2026-08-08: this description had gone stale, quoting a register total of 2,408 when
+    # the register holds 3,062 (3,031 Data Deficient + 31 never assessed). It was live as
+    # the /register/ meta description -- the snippet Google shows -- so the wrong figure
+    # was published where nobody browsing the site would ever see it. 15_check_figures.py
+    # anchored figures in index.html and METHODS.md but never looked in here; it now
+    # covers this file too, and the mutation self-test confirms the check can fail.
     ("register", "The Register — The Species Black List",
-     "All 2,408 species in the register, searchable and filterable by class, "
+     "All 3,062 species in the register, searchable and filterable by class, "
      "restriction tier and locality, each with the evidence sentence it was judged on."),
     ("map", "Map — The Species Black List",
      "Density of georeferenced specimen records for Data Deficient and unassessed "
@@ -58,11 +64,21 @@ PAGES = [
     ("methods", "Methods & Limits — The Species Black List",
      "How the ranking is built and validated against IUCN's own reassessments, what "
      "was discarded, and the limits of the register stated plainly."),
+    # A SEPARATE search effort, not part of the register. The register is a sample of one
+    # corpus and its ranking is validated against IUCN's later reassessments; this list
+    # comes from a taxonomic checklist and answers a different question -- who is missing
+    # from the Red List entirely because they were described too recently or split out of
+    # an assessed parent. The two must not be summed or presented as one list. See
+    # REPTILE_PILOT.md.
+    ("new-species", "Described but Never Assessed — The Species Black List",
+     "Reptile species described since 2015 that the IUCN Red List has never assessed, "
+     "each verified individually against the Red List API and graded by how far the "
+     "evidence for a narrow range can be trusted."),
 ]
 
 # Anything the sub-pages load must be root-absolute or it resolves into /register/.
-MUST_BE_ABSOLUTE = ["/data.json", "/map.json", "/geo.json", "/favicon.svg",
-                    "/tbg-frog.png"]
+MUST_BE_ABSOLUTE = ["/data.json", "/map.json", "/geo.json", "/reptiles.json",
+                    "/favicon.svg", "/tbg-frog.png"]
 
 
 def main():

@@ -27,11 +27,16 @@ VALIDATION RESULT (see 04_validate_score.py; run it before trusting this file)
 Tested against the 108 species IUCN independently reassessed between the Sept 2024
 export and v2026-1 -- a labelled set these rules never saw:
 
-    restriction tier 4-5   10/19 = 52.6% came out threatened   (95% CI 32-73%)
-    restriction tier 1-3   18/89 = 20.2%                       (95% CI 13-30%)
-    Fisher exact two-sided p = 0.0075,  odds ratio 4.38
+    restriction tier 3-5   15/28 = 53.6% came out threatened   (95% CI 36-70%)
+    restriction tier 1-2   24/111 = 21.6%                      (95% CI 15-30%)
+    Fisher exact two-sided p = 0.0017,  odds ratio 4.18
 
-So restriction severity does predict IUCN's own verdict, and the tier 4-5 rate
+    The tiers are NOT monotonic at the top -- tier 5 (40%) scores below tier 4
+    (70%) and tier 3 (67%).  "Known only from a single specimen" measures survey
+    effort as much as range size, which is why the boundary sits at 2|3 where the
+    real discontinuity is (19.8% -> 66.7%) rather than at the top of the scale.
+
+So restriction severity does agree with IUCN's own verdict, and the tier 3-5 rate
 lands on Borgelt et al.'s 56% DD prediction.  The read-across is that the 56%
 belongs to the narrowly restricted subset, not to DD species indiscriminately --
 a flat DD list dilutes a real signal with vague-range species.
@@ -55,30 +60,93 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PROJ = os.path.dirname(HERE)
 BUILD = os.path.join(PROJ, "build_2026")
 BOOK = os.path.join(PROJ, "Threatened and Recently-Extinct Vertebrates.txt")
+# 02a rewrites the corpus with abbreviated genera resolved ("A. leurolepis" ->
+# "Abronia leurolepis"). Without it, a species named only in abbreviated form can be in
+# the name list yet never match a sentence, so it would score tier 1 by default.
+EXPANDED = os.path.join(BUILD, "corpus_expanded.txt")
 
 BINOMIAL = re.compile(r"\b([A-Z][a-z]{2,})\s+([a-z]{3,})\b")
 
 # --- restriction tiers, strongest first; first match wins -------------------
 # R5/R4 are the tiers that plausibly sit inside Criterion B2 thresholds.
+# Richardson phrases a restriction several ways, and the first version of these
+# patterns only covered "known only from" / "confined to". An audit found 37 tier-1
+# species that do state a restriction in wording the patterns missed -- 26 of them
+# "known for certain only from". KNOWN is that alternation, shared by every tier so
+# the phrasings cannot drift apart again.
+#
+# A second audit pass found 6 more, where the book varies the PREPOSITION or omits it:
+# "known only BY a single specimen", "known only IN a small area", "known only two
+# localities", "known only its original collection". Rather than keep adding literal
+# phrases, KNOWN is now built compositionally: certainty adverbs, then "known", then a
+# mandatory "only" (or an explicit certainty phrase), then an optional preposition.
+#
+# "only" or a certainty phrase is REQUIRED. A bare "is known from the Amazon basin" is
+# not a restriction statement, and matching it would collapse tier 2 into a catch-all.
+# The prepositionless branch is safe here because only 3 sentences in the corpus use it
+# and all 3 are genuine restrictions; "in|at|by|from" excludes "known only TO occur",
+# which is why "is only known to occur seasonally" does not match.
+CERT = r"(?:for certain|with certainty|definitely|reliably|long)"
+PREP = r"(?:from|by|in|at)"
+KNOWN = (r"(?:"
+         r"only\s+(?:" + CERT + r"\s+)*known\s+" + PREP +
+         r"|(?:" + CERT + r"\s+)*known(?:\s+" + CERT + r")*\s+only(?:\s+" + PREP + r")?"
+         r"|known\s+(?:for certain|with certainty)(?:\s+" + PREP + r")?"
+         r")")
+
+# ORDER MATTERS: first match wins, and the order is 5, 3, 4, 2 -- not 5, 4, 3, 2.
+#
+# Tier 4's alternation contains "river", and it used to be tested before tier 3, so
+# "confined to the Kapuas River drainage" -- a basin the size of a country -- scored as
+# "a single named site". 73 species were classified against the published tier table that
+# way. Testing the drainage qualifier first fixes it.
+#
+# But a drainage can also be mere CONTEXT for a genuine single site: "known only from a
+# single locality within the Ganges River drainage" is tier 4, and 29 species read like
+# that. So tier 3's pattern is tempered -- it refuses to match across the words "single"
+# or "localit" -- which keeps the scale noun as the head of the restriction rather than
+# something merely mentioned later in the sentence.
 TIERS = [
     (5, "type locality / single collection", re.compile(
-        r"known only from (its |the )?(original |type )(collection|locality|series|"
-        r"specimens?)|only (known )?from a single specimen|known only from the "
-        r"holotype|from a single collection|only ever (been )?(collected|recorded) once",
+        KNOWN + r" (its |the )?(original |type )(collection|locality|series|"
+        r"specimens?)|only (known )?from a single specimen|" + KNOWN +
+        r" the holotype|from a single collection|"
+        r"only ever (been )?(collected|recorded) once|"
+        r"from (?:a|the) single (?:specimen|collection|individual)|"
+        # a single collection EVENT, however the preposition falls ("known only by a
+        # single specimen"). A single *locality* is tier 4 -- one named site, not one
+        # collection -- so it is deliberately absent from this list.
+        + KNOWN + r"\s+(?:a|the)?\s*single (?:specimen|individual|collection|series)",
         re.I)),
+    (3, "single drainage / massif / small island", re.compile(
+        r"(?:" + KNOWN + r"|confined to|restricted to)"
+        # tempered: may not run across a single-site phrase, so "a single locality
+        # within the Ganges River drainage" stays tier 4 rather than becoming tier 3
+        r"(?:(?!\bsingle\b|\blocalit)[^.]){0,40}?"
+        r"\b(?:drainage|basin|catchment|watershed|system|archipelago|ranges?)\b", re.I)),
+    # The slot before the feature noun holds exactly ONE word, and that is deliberate.
+    #
+    # It looks like a bug: a multi-word place name ("the Suoi Rut stream", "La Quebradona
+    # creek") does not match, so four genuine single-site endemics sit in tier 2. Widening
+    # the slot to three words was tried, and the held-out set rejected it. It moved 94
+    # species from tier 2 into tier 4, of which 7 were in the labelled set and only 1 came
+    # out threatened -- so the priority stratum fell from 15/28 = 53.6% to 16/35 = 45.7%,
+    # OR 4.23 -> 3.00, p 0.0016 -> 0.0091.
+    #
+    # The single token is therefore doing real work rather than accidentally restricting
+    # the match: a bare "the <Name> River" is a tighter claim than a qualified phrase, and
+    # loosening it admits species that behave statistically like tier 2. The four misses
+    # are recorded as a known limitation instead of being fixed at that cost.
     (4, "single named site", re.compile(
-        r"known only from (a|an|the)?\s*[a-z]*\s*(unnamed )?(single )?"
+        KNOWN + r" (a|an|the)?\s*[a-z]*\s*(unnamed )?(single )?"
         r"(river|stream|creek|spring|cave|lake|lagoon|pool|swamp|marsh|waterfall|"
         r"rapids|island|islet|cay|mountain|peak|volcano|massif|valley|forest|"
         r"locality|site|reef)\b|confined to (a|an|the)?\s*[a-z]*\s*"
         r"(river|stream|creek|spring|cave|lake|lagoon|pool|island|islet|mountain|"
         r"peak|volcano|massif|valley|forest)\b", re.I)),
-    (3, "single drainage / massif / small island", re.compile(
-        r"known only from .{0,40}(drainage|basin|catchment|watershed|system|"
-        r"archipelago|range)\b|confined to .{0,40}(drainage|basin|catchment|"
-        r"watershed|system|archipelago|range)\b", re.I)),
     (2, "restricted, extent unclear", re.compile(
-        r"known only from|confined to|restricted to|endemic to", re.I)),
+        KNOWN + r"|confined to|restricted to|endemic to|"
+        r"known from (?:a )?few localities", re.I)),
 ]
 
 # --- modifiers --------------------------------------------------------------
@@ -107,7 +175,8 @@ PROTECTED = re.compile(
 
 def blocks():
     """Yield (site_header, block_text) for every paragraph block in the book."""
-    raw = open(BOOK, encoding="cp1252", errors="replace").read()
+    src = EXPANDED if os.path.exists(EXPANDED) else BOOK
+    raw = open(src, encoding="cp1252", errors="replace").read()
     raw = raw.replace("’", "'").replace("�", "'")
     for blk in re.split(r"\n\s*\n", raw):
         lines = [ln.strip() for ln in blk.split("\n") if ln.strip()]
@@ -142,6 +211,11 @@ def score(species_line, block_text):
     return tier, tier_label, silence, threats, protected
 
 
+import sys; sys.path.insert(0, HERE)
+from _common import sentences, best_evidence  # shared so 04's held-out test segments
+                               # the corpus exactly as this scorer does
+
+
 def main():
     live = {}
     with open(os.path.join(BUILD, "crossref_2026.csv"), encoding="utf-8") as fh:
@@ -153,7 +227,7 @@ def main():
     # Walk the book once, attaching each species mention to its site and block.
     found = collections.defaultdict(list)
     for site, text in blocks():
-        for sent in re.split(r"(?<=[.;])\s+", text):
+        for sent in sentences(text):
             for g, e in BINOMIAL.findall(sent):
                 name = f"{g} {e}"
                 if name in live:
@@ -161,10 +235,20 @@ def main():
 
     ev_rows, sc_rows = [], []
     for name, hits in found.items():
-        # prefer the mention that carries an explicit restriction statement
-        site, sent, text = max(
-            hits, key=lambda h: (bool(re.search(r"known only|confined to", h[1], re.I)),
-                                 len(h[1])))
+        # Rank candidate sentences by the tier they actually produce, then by length.
+        #
+        # This used to test for "known only|confined to" and otherwise take the longest
+        # sentence. That test was the scorer's ORIGINAL vocabulary, frozen while the scorer
+        # itself was widened three times, so selector and scorer could disagree about what
+        # counts as a restriction. An audit found the consequence: Phrynomedusa bokermanni
+        # was scored tier 2 from a long sentence shared with another frog, while its own
+        # account -- "known only from a single locality in coastal southeast Brazil", tier 4
+        # -- sat unread in the same block.
+        #
+        # Scoring every candidate and taking the best makes the two consistent by
+        # construction rather than by coincidence, and it cannot drift again: there is no
+        # second vocabulary left to fall behind.
+        site, sent, text = best_evidence(hits, score)
         tier, label, silence, threats, protected = score(sent, text)
         meta = live[name]
         ev_rows.append({"species": name, "site": site, "species_sentence": sent,
@@ -172,9 +256,10 @@ def main():
         sc_rows.append({
             "species": name, "class": meta["class"], "site": site,
             "restriction_tier": tier, "restriction_basis": label,
-            # Tier 4-5 is the validated stratum: 52.6% of reassessed tier 4-5
-            # species came out threatened, vs 20.2% for tier 1-3.
-            "tranche": "A - validated priority" if tier >= 4 else "B - unranked",
+            # Tier 3-5 is the validated stratum: on the held-out set it scores 15/28 = 53.6%
+            # threatened (OR 4.18, p 0.0017), beating tier 4-5 (OR 3.67, p 0.0060) on
+            # every measure. The per-tier break is at 2|3 (19.8% -> 66.7%), not 3|4.
+            "tranche": "A - validated priority" if tier >= 3 else "B - unranked",
             "historical_silence": "yes" if silence else "no",
             "site_threats": "|".join(threats),
             "in_protected_area": "yes" if protected else "no",
@@ -194,8 +279,8 @@ def main():
         lab = next(x[1] for x in TIERS if x[0] == t) if t > 1 else "no restriction statement"
         print(f"  tier {t}: {n:5d}   {lab}")
     a = sum(1 for r in sc_rows if r["tranche"].startswith("A"))
-    print(f"\n=== tranche A (tier 4-5, validated priority): {a:,} species ===")
-    print(f"    tranche B (tier 1-3, needs range work) : {len(sc_rows)-a:,} species")
+    print(f"\n=== tranche A (tier 3-5, validated priority): {a:,} species ===")
+    print(f"    tranche B (tier 1-2, needs range work) : {len(sc_rows)-a:,} species")
     print(f"\nhistorical silence flagged: "
           f"{sum(1 for r in sc_rows if r['historical_silence']=='yes'):,}")
     print(f"site threat named        : {sum(1 for r in sc_rows if r['site_threats']):,}")

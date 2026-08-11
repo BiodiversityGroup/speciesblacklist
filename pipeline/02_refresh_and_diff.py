@@ -70,10 +70,26 @@ def load_2024():
 
 
 def book_names():
+    """The 2024 name list, plus the species only reachable through an abbreviation.
+
+    latin_species_names.csv holds full binomials only. Richardson names many species
+    solely as an abbreviated congener ("A. leurolepis"), and 651 of those are IUCN Data
+    Deficient vertebrates -- the register's core target, invisible to this pipeline until
+    02a resolved them. Merging them here is what lets 03 score them at all.
+    """
     with open(os.path.join(PROJ, "latin_species_names.csv"),
               encoding="utf-8-sig") as fh:
         rows = list(csv.reader(fh))[1:]
-    return sorted({r[0].strip() for r in rows if r and r[0].strip()})
+    names = {r[0].strip() for r in rows if r and r[0].strip()}
+    base = len(names)
+    p = os.path.join(BUILD, "recovered_names.csv")
+    if os.path.exists(p):
+        with open(p, encoding="utf-8") as fh:
+            names |= {r[0].strip() for r in list(csv.reader(fh))[1:]
+                      if r and r[0].strip()}
+        print(f"book names: {base:,} from the 2024 list + "
+              f"{len(names)-base:,} recovered from abbreviations = {len(names):,}")
+    return sorted(names)
 
 
 def main():

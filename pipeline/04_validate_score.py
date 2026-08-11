@@ -12,9 +12,11 @@ not at all.  Reported alongside is the base rate, so the score has to beat it.
 
 Output: build_2026/validation_report.txt
 """
-import csv, os, re, collections, importlib.util
+import csv, json, os, re, collections, importlib.util
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+import sys; sys.path.insert(0, HERE)
+from _common import sentences, best_evidence
 PROJ = os.path.dirname(HERE)
 BUILD = os.path.join(PROJ, "build_2026")
 
@@ -55,7 +57,7 @@ def main():
 
     found = collections.defaultdict(list)
     for site, text in ex.blocks():
-        for sent in re.split(r"(?<=[.;])\s+", text):
+        for sent in sentences(text):
             for g, e in ex.BINOMIAL.findall(sent):
                 n = f"{g} {e}"
                 if n in moved:
@@ -63,8 +65,7 @@ def main():
 
     scored = []
     for n, hits in found.items():
-        site, sent, text = max(hits, key=lambda h: (
-            bool(re.search(r"known only|confined to", h[1], re.I)), len(h[1])))
+        site, sent, text = best_evidence(hits, ex.score)
         tier, label, silence, threats, prot = ex.score(sent, text)
         scored.append({"species": n, "outcome": moved[n],
                        "threatened": moved[n] in THREATENED, "tier": tier,
@@ -97,10 +98,15 @@ def main():
         say(f"{t:<6}{len(g):>5}{k:>12}{100*k/len(g):>8.0f}%   "
             f"{100*lo:.0f}-{100*hi:.0f}%")
 
-    say("\n--- collapsed: high restriction (tier 4-5) vs rest ---")
-    hi_g = [r for r in scored if r["tier"] >= 4]
-    lo_g = [r for r in scored if r["tier"] < 4]
-    for lbl, g in (("tier 4-5", hi_g), ("tier 1-3", lo_g)):
+    say("\n--- collapsed: high restriction (tier 3-5) vs rest ---")
+    # One boundary drives both groups, so they cannot overlap. They did once: hi was
+    # moved to >=3 while lo was left at <4, which counted tier 3 in both and quietly
+    # inflated n from 139 to 142.
+    CUT = 3
+    hi_g = [r for r in scored if r["tier"] >= CUT]
+    lo_g = [r for r in scored if r["tier"] < CUT]
+    assert len(hi_g) + len(lo_g) == len(scored), "collapsed groups must partition the set"
+    for lbl, g in (("tier 3-5", hi_g), ("tier 1-2", lo_g)):
         if g:
             k = sum(1 for r in g if r["threatened"])
             a, b = wilson(k, len(g))
@@ -112,6 +118,11 @@ def main():
     c, d = sum(1 for r in lo_g if r["threatened"]), sum(1 for r in lo_g if not r["threatened"])
     say(f"\n  odds ratio {(a*d)/(b*c):.2f}, Fisher exact two-sided "
         f"p = {fisher(a, b, c, d):.4f}")
+    # Freeze the 2x2 under names nothing else reuses. `c` is rebound by the outcome
+    # tally further down ("for c, n in Counter(...)"), which silently turned it into an
+    # outcome string; the JSON payload below then tried to divide by "LC".
+    TAB = {"hi_k": a, "hi_n": a + b, "lo_k": c, "lo_n": c + d,
+           "p": fisher(a, b, c, d), "or": (a * d) / (b * c)}
 
     say("\n--- modifiers in isolation (these are why the composite was dropped) ---")
     for lbl, key in (("historical silence", "silence"), ("site threat named", "threats")):
@@ -121,9 +132,42 @@ def main():
                 k = sum(1 for r in g if r["threatened"])
                 say(f"  {lbl} = {str(val):<5} {k:>3}/{len(g):<4} = {100*k/len(g):>5.1f}%")
 
-    say("\n--- where the tier 4-5 species actually landed ---")
+    say("\n--- where the tier 3-5 species actually landed ---")
     for c, n in collections.Counter(r["outcome"] for r in hi_g).most_common():
         say(f"  {n:>3}  {c}")
+
+    # Emit the numbers as DATA, not only as prose. They used to be retyped by hand into
+    # 10_build_site.py, which meant the site could publish a validation result the
+    # validator had never produced -- and did: the page still said n=108 / 52.6% after the
+    # corpus expansion took the labelled set to 139. The site now reads this file.
+    n_thr = sum(1 for r in scored if r["threatened"])
+    payload = {
+        "n_labelled": len(scored),
+        "cut": CUT,
+        "high": {"n": TAB["hi_n"], "threatened": TAB["hi_k"],
+                 "rate": round(100 * TAB["hi_k"] / TAB["hi_n"], 1),
+                 "lo": round(100 * wilson(TAB["hi_k"], TAB["hi_n"])[0]),
+                 "hi": round(100 * wilson(TAB["hi_k"], TAB["hi_n"])[1])},
+        "low": {"n": TAB["lo_n"], "threatened": TAB["lo_k"],
+               "rate": round(100 * TAB["lo_k"] / TAB["lo_n"], 1),
+               "lo": round(100 * wilson(TAB["lo_k"], TAB["lo_n"])[0]),
+               "hi": round(100 * wilson(TAB["lo_k"], TAB["lo_n"])[1])},
+        "all": {"n": len(scored), "rate": round(100 * n_thr / len(scored), 1),
+                "lo": round(100 * wilson(n_thr, len(scored))[0]),
+                "hi": round(100 * wilson(n_thr, len(scored))[1])},
+        "by_tier": {str(t): {"n": sum(1 for r in scored if r["tier"] == t),
+                             "threatened": sum(1 for r in scored
+                                               if r["tier"] == t and r["threatened"])}
+                    for t in (5, 4, 3, 2, 1)},
+        "p": round(TAB["p"], 4),
+        "odds_ratio": round(TAB["or"], 2),
+        "baseline_all_species": 28,
+        "borgelt_prediction": 56,
+    }
+    with open(os.path.join(BUILD, "validation.json"), "w", encoding="utf-8") as fh:
+        json.dump(payload, fh, indent=1)
+    print(f"\nwrote validation.json  (n={payload['n_labelled']}, cut=tier>={CUT}, "
+          f"high {payload['high']['rate']}%, p={payload['p']})")
 
     with open(os.path.join(BUILD, "validation_report.txt"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(out) + "\n")

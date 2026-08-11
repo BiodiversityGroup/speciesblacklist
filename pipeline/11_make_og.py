@@ -177,7 +177,7 @@ C_TOP = FIELD_BOT + 26
 C_BOT = C_TOP + 104
 cells = [
     (f"{c['dd']:,}", "Data Deficient \u2014 IUCN looked, and could not say"),
-    (f"{c['priority_dd']:,}", "of those in the priority stratum (tier 4\u20135)"),
+    (f"{c['priority_dd']:,}", "of those in the priority stratum (tier 3\u20135)"),
     (f"{c['ne']}", "never assessed by IUCN at all"),
     (f"{v['high']['rate']}%", "of reassessed priority species proved threatened"),
 ]

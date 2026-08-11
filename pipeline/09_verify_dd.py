@@ -36,7 +36,7 @@ v = importlib.util.module_from_spec(spec); spec.loader.exec_module(v)
 
 
 def main():
-    dd = list(csv.DictReader(open(os.path.join(BUILD, "SPECIES_BLACK_LIST_dd.csv"),
+    dd = list(csv.DictReader(open(os.path.join(BUILD, "dd_candidates.csv"),
                                   encoding="utf-8")))
     # species script 08 pulled out of the NE list that are really DD
     recovered = []
@@ -51,7 +51,7 @@ def main():
                     "restriction_tier": r["restriction_tier"],
                     "restriction_basis": r["restriction_basis"],
                     "tranche": "A - validated priority"
-                               if int(r["restriction_tier"]) >= 4 else "B - unranked",
+                               if int(r["restriction_tier"]) >= 3 else "B - unranked",
                     "site": r["site"], "recovered_from_ne_audit": "yes",
                     "historical_silence": "", "site_threats": "",
                     "in_protected_area": "", "evidence": r["evidence"]})
@@ -113,8 +113,8 @@ def main():
     print(f"  >>> VERIFIED DATA DEFICIENT: {len(keep):,}")
     print("     ", dict(collections.Counter(r["verification"] for r in keep).most_common()))
     a = sum(1 for r in keep if r["tranche"].startswith("A"))
-    print(f"\n  tranche A (tier 4-5, validated): {a:,}")
-    print(f"  tranche B (tier 1-3)           : {len(keep)-a:,}")
+    print(f"\n  tranche A (tier 3-5, validated): {a:,}")
+    print(f"  tranche B (tier 1-2)           : {len(keep)-a:,}")
 
 
 if __name__ == "__main__":

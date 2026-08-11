@@ -68,20 +68,63 @@ BAD_START = re.compile(r"^(?:" + "|".join(sorted(STOP, key=len, reverse=True)) +
                        re.I)
 
 
-def clean(s):
-    """Collapse the runs of whitespace the .doc conversion left behind."""
+# Place names that genuinely contain "and" and must not be split.
+COMPOUND_OK = re.compile(
+    r"^(?:Wallis and Futuna|Antigua and Barbuda|Trinidad and Tobago|"
+    r"Turks and Caicos|Sao Tome and Principe|S[aã]o Tom[eé] and Pr[ií]ncipe|"
+    r"Saint Vincent and the Grenadines|Bosnia and Herzegovina|"
+    r"Heard and McDonald)", re.I)
+
+
+def squash(s):
+    """Whitespace only. Safe to run on a whole sentence."""
     return " ".join((s or "").split()).strip(" ,.;:")
+
+
+def clean(s):
+    """Normalise a captured PLACE NAME. Never call this on a sentence.
+
+    squash() is the sentence-safe version; this one is place-name-specific.
+    """
+    n = squash(s)
+    # Never end on a dangling connector: 'Madagascar and the' -> 'Madagascar'.
+    # The connector list let a capture stop mid-conjunction; audit found 10 of these.
+    n = re.sub(r"\s+(?:and|or|y|and the|or the)$", "", n, flags=re.I).strip(" ,")
+    return n.strip(" ,.;:")
+
+
+def is_compound(name):
+    """True when the string names two places rather than one.
+
+    Audit found 55: 'Athi and Tana River', 'Caroline and Marshall Islands'. They are
+    LEFT INTACT rather than split, and merely withheld from geocoding, because every
+    way of reducing them invents something:
+
+        take the first component      'Caroline and Marshall Islands' -> 'Caroline'
+                                      loses the noun that identified it
+        carry the shared feature noun 'Oman and Masirah Island' -> 'Oman Island'
+                                      'Turkana and the Omo River' -> 'Turkana River'
+                                      fabricates places that do not exist
+
+    A true-but-coarse locality beats a precise-sounding fiction, and the evidence
+    sentence is shown in full anyway, so the reader sees both places.
+    """
+    # clean() first, so a capture merely ENDING on a connector ('Madagascar and the')
+    # is repaired to one place rather than misread as two.
+    n = clean(name)
+    return bool(re.search(r"\s+and\s+", n, re.I)) and not COMPOUND_OK.match(n)
 
 
 def locality_from_evidence(evidence, vernacular="", binomial=""):
     """(name, kind) or (None, None). kind is 'feature' or 'bare'."""
-    e = clean(evidence)
+    e = squash(evidence)          # sentence-safe; clean() would truncate at "and"
     if not e:
         return None, None
     # Drop the parenthetical binomial so the species' own name cannot be captured.
     e = re.sub(r"\([^)]*\)", " ", e)
     vern = (vernacular or "").lower()
-    genus = (binomial or " ").split()[0].lower()
+    # " ".split() is [], not [""], so indexing a blank binomial raises IndexError.
+    genus = next(iter((binomial or "").split()), "\0").lower()
 
     for kind, pat in PATTERNS:
         for m in re.finditer(pat, e):

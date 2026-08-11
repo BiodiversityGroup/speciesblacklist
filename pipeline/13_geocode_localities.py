@@ -135,9 +135,16 @@ def main():
     locs = collections.Counter(s["s"] for s in data["species"] if s["s"])
     # habitat types are not places; never send them to a gazetteer
     habitat = {s["name"] for s in data["sites"] if s.get("habitat")}
+    # A string naming two places ('Athi and Tana River') has no single coordinate, so
+    # it is withheld rather than reduced -- every reduction either drops the noun that
+    # identified it or fabricates a place. Three such strings previously reached the
+    # map. See _locality.is_compound for the reasoning.
+    sys.path.insert(0, HERE)
+    from _locality import is_compound
     # sentence fragments that leaked out of the header extractor are not places
     targets = [l for l in locs
                if l not in habitat and len(l) <= 48 and l.count(" ") <= 5
+               and not is_compound(l)
                and not re.search(r"\b(is|are|runs|surrounds|covers|lies|means)\b", l)]
     print(f"distinct localities: {len(locs):,}  ->  geocoding {len(targets):,} "
           f"(dropped {len(locs)-len(targets)} habitat types and sentence fragments)")
