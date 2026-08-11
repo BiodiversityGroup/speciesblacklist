@@ -1,23 +1,23 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 142,
-"raw_items": 251,
+"stories": 141,
+"raw_items": 252,
 "with_species": 81,
-"distinct_species": 149,
-"distinct_species_firm": 26,
+"distinct_species": 150,
+"distinct_species_firm": 25,
 "multi_species_cards": 31,
-"with_image": 122,
+"with_image": 121,
 "syndicated": 58,
-"on_tbg_list": 28,
+"on_tbg_list": 29,
 "on_list_breakdown": {
-"on our lost-species list": 24,
+"on our lost-species list": 25,
 "on the Black List": 4
 },
 "undated": 0,
 "newest": "Wed, 29 Jul 2026",
 "tracked_names": 6709,
-"image_local": 117,
+"image_local": 116,
 "archived": 16
 },
 "cards": [
@@ -1000,11 +1000,12 @@
 {
 "title": "Citizen science rediscovers rare South African moth - news",
 "species": [
+"Axiodes insciata",
 "Drepanogynis insciata",
 "Campephilus principalis"
 ],
 "species_firm": [
-"Drepanogynis insciata"
+"Axiodes insciata"
 ],
 "on_list": "Lost Species",
 "detail": "Bird, long-lost, last seen 1944",
@@ -1359,11 +1360,12 @@
 "title": "Killifish, Once Presumed Extinct, Rediscovered After 20 Years in a Remote Pond",
 "species": [
 "Cynopoecilus melanotaenia",
+"Aphyolebias claudiae",
 "Moema claudiae"
 ],
 "species_firm": [
 "Cynopoecilus melanotaenia",
-"Moema claudiae"
+"Aphyolebias claudiae"
 ],
 "on_list": "Lost Species",
 "detail": "Fish, long-lost",
@@ -1436,13 +1438,14 @@
 {
 "title": "Back from the dead: \u201cExtinct\u201d fish rediscovered in a remote Bolivian pond after 20 years",
 "species": [
+"Aphyolebias claudiae",
 "Moema claudiae"
 ],
 "species_firm": [
-"Moema claudiae"
+"Aphyolebias claudiae"
 ],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Fish, lost, last seen 2003",
 "publisher": "ScienceDaily",
 "date": "Thu, 25 Dec 2025",
 "ts": 1766649600,
@@ -2093,12 +2096,10 @@
 {
 "title": "Extinct-in-the-wild plant rediscovered in Sri Lanka thanks to social media - news",
 "species": [
-"Doona ovalifolia",
-"Shorea ovalifolia"
+"Doona ovalifolia"
 ],
 "species_firm": [
-"Doona ovalifolia",
-"Shorea ovalifolia"
+"Doona ovalifolia"
 ],
 "on_list": "",
 "detail": "",
@@ -2889,7 +2890,27 @@
 "also": []
 },
 {
-"title": "Track-a-mole: Sniffer dog and eDNA help \u2018rediscover\u2019 South African golden mole - news",
+"title": "Blind golden mole that swims through the sand rediscovered in SA",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Mail & Guardian",
+"date": "Wed, 27 Dec 2023",
+"ts": 1703664000,
+"first_seen": "2026-08-10",
+"link": "https://mg.co.za/the-green-guardian/2023-12-27-blind-golden-mole-that-swims-through-the-sand-rediscovered-in-sa/",
+"image": "/rd-img/70c71650309862ce.webp",
+"wayback": "",
+"desc": "The search for De Winton\u2019s mole involved  sniffer dog Jessie and collecting the mole\u2019s DNA from the sand",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "\u2018More precious than gold\u2019: How a long lost mole was rediscovered with the help of a border collie",
 "species": [
 "Cryptochloris wintoni",
 "Cryptochloris zyli"
@@ -2899,35 +2920,6 @@
 ],
 "on_list": "Lost Species",
 "detail": "Mammal, long-lost, last seen 1937",
-"publisher": "Conservation news",
-"date": "Wed, 29 Nov 2023",
-"ts": 1701244800,
-"first_seen": "2026-08-10",
-"link": "https://news.mongabay.com/2023/11/track-a-mole-sniffer-dog-and-edna-help-rediscover-south-african-golden-mole/",
-"image": "/rd-img/748b0a29cf82a6c8.jpg",
-"wayback": "",
-"desc": "Scientists have uncovered gold in the dunes of South Africa\u2019s northwest coast: the De Winton\u2019s golden mole, a species not seen by scientists since 1936. Like moles in general, De Winton\u2019s golden mole (Cryptochloris wintoni) is blind and lives largely undergrou",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
-"also": [
-{
-"publisher": "Mail & Guardian",
-"link": "https://mg.co.za/the-green-guardian/2023-12-27-blind-golden-mole-that-swims-through-the-sand-rediscovered-in-sa/"
-},
-{
-"publisher": "Metro",
-"link": "https://metro.co.uk/2023/11/30/golden-mole-missing-80-years-rediscovered-south-africa-19906928/"
-}
-]
-},
-{
-"title": "\u2018More precious than gold\u2019: How a long lost mole was rediscovered with the help of a border collie",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
 "publisher": "euronews",
 "date": "Wed, 29 Nov 2023",
 "ts": 1701244800,
@@ -2939,8 +2931,17 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 4,
+"also": [
+{
+"publisher": "euronews",
+"link": "https://www.euronews.com/green/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-"
+},
+{
+"publisher": "Conservation news",
+"link": "https://news.mongabay.com/2023/11/track-a-mole-sniffer-dog-and-edna-help-rediscover-south-african-golden-mole/"
+}
+]
 },
 {
 "title": "VIDEO: Attenborough's long-beaked echidna rediscovered - ABC News & Headlines",
@@ -3108,8 +3109,12 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
+{
+"publisher": "Audubon",
+"link": "https://www.audubon.org/news/like-finding-unicorn-researchers-rediscover-black-naped-pheasant-pigeon-bird"
+},
 {
 "publisher": "Business Insider",
 "link": "https://www.businessinsider.com/papua-new-guinea-bird-lost-to-science-140-years-rediscovered-2022-11"
@@ -3133,26 +3138,6 @@
 "image": "/rd-img/c2db9df2db16b116.jpg",
 "wayback": "",
 "desc": "The label on a specimen of Afzelius\u2019s crab, a species last seen in 1796, simply said \u2018Sierra Leone\u2019. Scientists headed to the country to see if they could find the land-dwelling crustacean",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "\u2018Like Finding a Unicorn\u2019: Researchers Rediscover the Black-Naped Pheasant-Pigeon, a Bird Lost to Science for 140 Years",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Audubon",
-"date": "Thu, 17 Nov 2022",
-"ts": 1668672000,
-"first_seen": "2026-08-10",
-"link": "https://www.audubon.org/news/like-finding-unicorn-researchers-rediscover-black-naped-pheasant-pigeon-bird",
-"image": "/rd-img/18e9c7a8cf0a86b5.jpg",
-"wayback": "",
-"desc": "A successful expedition in Papua New Guinea captured photos and video of the chicken-size pigeon, highlighting the value of local ecological knowledge as scientists seek out other long-missing...",
 "citation": "",
 "kind": "",
 "note": "",

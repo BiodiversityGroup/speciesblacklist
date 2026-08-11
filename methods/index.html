@@ -1230,11 +1230,6 @@
 
   <div id="rdCounts" class="counts"></div>
 
-  <p class="ntmore">
-    <a href="#rd-about">Where these come from, and what they do and don&rsquo;t prove
-      &darr;</a>
-  </p>
-
   <h3 class="siteshead">The finds</h3>
   <p class="rdorder">Newest first. Search looks at the species name, the headline, the
     summary and the outlet &mdash; try a species, a country or a news outlet.</p>
@@ -1859,8 +1854,7 @@ function rdBoot() {
     ["Finds reported", c.stories.toLocaleString(),
      "one card each; the same find from several outlets is shown once"],
     ["Species named", (c.distinct_species || 0).toLocaleString(),
-     `every name checked against a global species database; ${
-       (c.distinct_species_firm || 0)} named in a headline or by two outlets`],
+     "every name checked against a global species database"],
     ["Ones we were already watching", (c.on_tbg_list || 0).toLocaleString(), listSub],
     ["Widely covered", (c.syndicated || 0).toLocaleString(),
      "picked up by two or more outlets"]
