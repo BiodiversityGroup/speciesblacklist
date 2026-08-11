@@ -695,9 +695,17 @@
     border:1px solid var(--rule-2); color:var(--ink-2); }
   .rdtag-list { background:var(--accent-soft); color:var(--accent);
     border-color:var(--accent); }
-  /* a card with no image must look chosen, not broken: the kicker rule stands
-     in for the missing thumbnail so the grid keeps a consistent top edge */
-  .rdcard.noimg .rdbody { border-top:3px solid var(--rule-2); }
+  /* A card with no image must look chosen, not broken. Sixteen of these can never get
+     a preview -- the publisher refuses automated requests, or the article has already
+     been deleted, and no archive snapshot exists either. So the text-only card is styled
+     as its own thing rather than as a picture card missing its picture: a heavier accent
+     rule where the image would be, and the headline given room to carry the card. */
+  .rdcard.noimg .rdbody { border-top:3px solid var(--accent);
+    padding-top:1.1rem; }
+  .rdcard.noimg .rdtitle { font-size:1.06rem; }
+  /* explains the absence instead of leaving a gap the reader has to interpret */
+  .rdnopreview { font-family:var(--sans); font-size:.68rem; color:var(--ink-3);
+    margin:.1rem 0 0; font-style:italic; }
   .rdorder { font-family:var(--sans); font-size:.82rem; color:var(--ink-3);
     margin:.2rem 0 .8rem; }
   /* says what a paper actually reports, where that differs from what the page is
@@ -1933,7 +1941,11 @@ function rdRender() {
                 : ""}</p>`;
           })()}
           <h4 class="rdtitle">${esc(c.title)}</h4>
-          ${c.desc ? `<p class="rddesc">${esc(c.desc)}</p>` : ""}
+          ${c.desc ? `<p class="rddesc">${esc(c.desc)}</p>`
+            : `<p class="rdnopreview">${c.wayback
+                ? "This outlet supplies no summary — read it via the archived copy below."
+                : "This outlet supplies no summary, and the page cannot be read \
+automatically."}</p>`}
           ${c.note ? `<p class="rdnote">${esc(c.note)}</p>` : ""}
           <p class="rdmeta">
             ${c.kind ? `<span class="rdtag rdtag-kind">${esc(c.kind)}</span>` : ""}

@@ -1,24 +1,24 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 140,
-"raw_items": 252,
-"with_species": 78,
-"distinct_species": 152,
-"distinct_species_firm": 25,
-"multi_species_cards": 31,
-"with_image": 122,
-"syndicated": 57,
-"on_tbg_list": 26,
+"stories": 133,
+"raw_items": 265,
+"with_species": 76,
+"distinct_species": 142,
+"distinct_species_firm": 26,
+"multi_species_cards": 30,
+"with_image": 117,
+"syndicated": 61,
+"on_tbg_list": 25,
 "on_list_breakdown": {
-"on our lost-species list": 23,
+"on our lost-species list": 22,
 "on the Black List": 3
 },
 "undated": 0,
 "newest": "Wed, 29 Jul 2026",
 "tracked_names": 6709,
-"image_local": 117,
-"archived": 15
+"image_local": 113,
+"archived": 14
 },
 "cards": [
 {
@@ -159,26 +159,29 @@
 "also": []
 },
 {
-"title": "Rediscovery of once-lost super-sized Megalodon vertebrae",
-"species": [
-"Otodus megalodon"
-],
+"title": "Rare Samar Rafflesia rediscovered in protected forest after 15 years",
+"species": [],
 "species_firm": [],
 "on_list": "",
 "detail": "",
-"publisher": "EurekAlert!",
-"date": "Sun, 28 Jun 2026",
-"ts": 1782630000,
-"first_seen": "2026-08-10",
-"link": "https://www.eurekalert.org/news-releases/1133142",
-"image": "/rd-img/819e5c8ca5a7d7e8.jpg",
-"wayback": "http://web.archive.org/web/20260630115536/https://www.eurekalert.org/news-releases/1133142",
-"desc": "Gram, Denmark &mdash; An associated set of gigantic vertebrae belonging to the iconic extinct Megalodon or megatooth shark that had been missing in action since the 1980s was discovered, providing new information about the shark&rsquo;s lifestyle. Two Museum o",
+"publisher": "Inquirer.net",
+"date": "Tue, 30 Jun 2026",
+"ts": 1782802800,
+"first_seen": "2026-08-11",
+"link": "https://newsinfo.inquirer.net/2255067/rare-samar-rafflesia-rediscovered-in-protected-forest-after-15-years",
+"image": "",
+"wayback": "",
+"desc": "",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "newsinfo.inquirer.net",
+"link": "https://newsinfo.inquirer.net/2255067/rare-samar-rafflesia-rediscovered-in-protected-forest-after-15-years"
+}
+]
 },
 {
 "title": "Scientists Rediscover Rare Island Fox Not Seen for More Than 20 Years",
@@ -264,7 +267,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "T\u00fcrkiye Today",
@@ -273,6 +276,10 @@
 {
 "publisher": "T\u00fcrkiye Today",
 "link": "https://www.turkiyetoday.com/lifestyle/lost-amasya-tulip-rediscovered-in-turkiye-after-130-years-3221803"
+},
+{
+"publisher": "floraldaily.com",
+"link": "https://www.floraldaily.com/article/9847764/lost-amasya-tulip-rediscovered-in-turkiye-after-130-years/"
 }
 ]
 },
@@ -468,31 +475,9 @@
 "ts": 1778664263,
 "first_seen": "2026-08-10",
 "link": "https://onlinelibrary.wiley.com/action/cookieAbsent",
-"image": "",
+"image": "/rd-img/06d8b28ab2cab70d.png",
 "wayback": "http://web.archive.org/web/20260720132620/https://onlinelibrary.wiley.com/action/cookieAbsent",
 "desc": "",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "A Dinosaur Skull Sat in a Drawer for 40 Years Until It Revealed a Lost Species - A-Z Animals",
-"species": [
-"Tyrannosaurus rex"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "A-Z Animals",
-"date": "Fri, 01 May 2026",
-"ts": 1777618800,
-"first_seen": "2026-08-10",
-"link": "https://a-z-animals.com/articles/a-dinosaur-skull-sat-in-a-drawer-for-40-years-until-it-revealed-a-lost-species/",
-"image": "/rd-img/fffaf17f6ddeb2d6.jpg",
-"wayback": "",
-"desc": "A forgotten dinosaur skull sat in storage for decades\u2014until scientists rediscovered it and uncovered a new species that could change evolution.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -781,8 +766,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Mongabay India",
+"link": "https://india.mongabay.com/2026/04/rare-assassin-bug-rediscovered-after-a-century/"
+}
+]
 },
 {
 "title": "Birdwatchers and Scientists Rediscover Five Species Not Seen for Over a Decade in 2025",
@@ -984,26 +974,6 @@
 "also": []
 },
 {
-"title": "Chance Rediscovery of Fossils Found in the 1960s Retell the Story of Giant, Globetrotting Amphibian",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Good News Network",
-"date": "Thu, 26 Feb 2026",
-"ts": 1772092800,
-"first_seen": "2026-08-10",
-"link": "https://www.goodnewsnetwork.org/chance-rediscovery-of-fossils-found-in-the-1960s-retell-the-story-of-giant-globetrotting-amphibian/",
-"image": "/rd-img/816f3bc4e82df0e3.jpg",
-"wayback": "",
-"desc": "The fossils would later travel all over the world much like the animal did in life, before being stuffed in storage and forgotten about.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "Citizen science rediscovers rare South African moth - news",
 "species": [
 "Axiodes insciata",
@@ -1133,7 +1103,8 @@
 "species": [
 "Prostalia granulata",
 "Brunia trigyna",
-"Maytenus abbottii"
+"Maytenus abbottii",
+"Lydenburgia abbottii"
 ],
 "species_firm": [],
 "on_list": "",
@@ -1149,7 +1120,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 6,
 "also": [
 {
 "publisher": "Mail & Guardian",
@@ -1670,18 +1641,20 @@
 },
 {
 "title": "\u2018Beauty\u2019 of a fish feared extinct for more than 20 years rediscovered in Bolivia",
-"species": [],
+"species": [
+"Aphyolebias claudiae"
+],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Fish, lost, last seen 2003",
 "publisher": "Miami Herald",
 "date": "Fri, 14 Nov 2025",
 "ts": 1763107200,
 "first_seen": "2026-08-10",
 "link": "https://www.miamiherald.com/news/nation-world/world/article312920217.html",
-"image": "",
+"image": "/rd-img/764b2465e26c9043.jpg",
 "wayback": "",
-"desc": "",
+"desc": "A grayscale drawing was the only image of the striking species until now, according to researchers.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -1954,7 +1927,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 7,
+"outlets": 9,
 "also": [
 {
 "publisher": "Jacaranda FM",
@@ -2251,7 +2224,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
 {
 "publisher": "Tech Explorist",
@@ -2264,6 +2237,10 @@
 {
 "publisher": "IFLScience",
 "link": "https://www.iflscience.com/the-worlds-tiniest-snake-was-lost-to-science-for-20-years-now-its-back-and-we-have-photos-80112"
+},
+{
+"publisher": "Good News Network",
+"link": "https://www.goodnewsnetwork.org/worlds-smallest-snake-rediscovered-in-barbados-after-20-years/"
 }
 ]
 },
@@ -2504,28 +2481,12 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "\u2018Lost\u2019 species rediscovered after more than three decades",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "The Independent",
-"date": "Thu, 15 May 2025",
-"ts": 1747292400,
-"first_seen": "2026-08-10",
-"link": "https://www.independent.co.uk/bulletin/news/blyde-rondavel-gecko-rediscovered-b2751737.html",
-"image": "/rd-img/986931256c6818e9.jpg",
-"wayback": "",
-"desc": "",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
+{
+"publisher": "The Independent",
+"link": "https://www.independent.co.uk/bulletin/news/blyde-rondavel-gecko-rediscovered-b2751737.html"
+},
 {
 "publisher": "Guinness World Records",
 "link": "https://www.guinnessworldrecords.com/news/2022/5/eight-species-that-were-rediscovered-after-decades-lost-704635"
@@ -2644,7 +2605,7 @@
 ]
 },
 {
-"title": "Gigantic millipede lost to science for 126 years rediscovered in remote Madagascan jungle",
+"title": "Giant millipede lost to science rediscovered in Madagascar\u2019s jungle",
 "species": [
 "Bedotia alveyi",
 "Ptychochromis makira",
@@ -2661,22 +2622,22 @@
 "species_firm": [],
 "on_list": "Black List (Data Deficient)",
 "detail": "tier 2",
-"publisher": "Discover Wildlife",
-"date": "Wed, 14 Aug 2024",
-"ts": 1723618800,
+"publisher": "cnn.com",
+"date": "Fri, 19 Jul 2024",
+"ts": 1721372400,
 "first_seen": "2026-08-10",
-"link": "https://www.discoverwildlife.com/animal-facts/giant-millipede-lost-for-over-a-century-rediscovered-madagascar",
-"image": "/rd-img/6e0864981eb49adc.jpg",
+"link": "https://www.cnn.com/science/giant-millipede-madagascar-c2e-spc",
+"image": "/rd-img/78a61522a432c886.jpg",
 "wayback": "",
-"desc": "The foot-long invertebrate, last recorded in 1897, was one of 21 species rediscovered on a research trip through the mountainous rainforests of north-east Madagascar.",
+"desc": "A giant dark-brown millipede, not documented for 126 years, has been recorded in Makira Natural Park, home to the largest and most intact forest in Madagascar.",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 4,
 "also": [
 {
-"publisher": "cnn.com",
-"link": "https://www.cnn.com/science/giant-millipede-madagascar-c2e-spc"
+"publisher": "Discover Wildlife",
+"link": "https://www.discoverwildlife.com/animal-facts/giant-millipede-lost-for-over-a-century-rediscovered-madagascar"
 },
 {
 "publisher": "Good News Network",
@@ -2783,59 +2744,7 @@
 "also": []
 },
 {
-"title": "We are losing tetrapod species at a faster rate than we are rediscovering them",
-"species": [
-"Atlapetes blancae",
-"Tympanocryptis pinguicolla",
-"Piliocolobus waldronae",
-"Rhinella rostrata",
-"Pyrrhura subandina",
-"Ara ambiguus",
-"Cryptochloris wintoni",
-"Furcifer voeltzkowi",
-"Melomys rubicola",
-"Dicaeum quadricolor",
-"Thylacinus cynocephalus"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Reptile, lost, last seen ?",
-"publisher": "The Conversation",
-"date": "Wed, 17 Jan 2024",
-"ts": 1705478400,
-"first_seen": "2026-08-10",
-"link": "https://theconversation.com/we-are-losing-tetrapod-species-at-a-faster-rate-than-we-are-rediscovering-them-220719",
-"image": "/rd-img/b04e668d760651de.jpg",
-"wayback": "",
-"desc": "There are hundreds of lost tetrapod species across the globe and their number are increasing decade-on-decade. This study aims to find out why some are rediscovered, while others are not.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Blind golden mole that swims through the sand rediscovered in SA",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Mail & Guardian",
-"date": "Wed, 27 Dec 2023",
-"ts": 1703664000,
-"first_seen": "2026-08-10",
-"link": "https://mg.co.za/the-green-guardian/2023-12-27-blind-golden-mole-that-swims-through-the-sand-rediscovered-in-sa/",
-"image": "/rd-img/70c71650309862ce.webp",
-"wayback": "",
-"desc": "The search for De Winton\u2019s mole involved  sniffer dog Jessie and collecting the mole\u2019s DNA from the sand",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "\u2018More precious than gold\u2019: How a long lost mole was rediscovered with the help of a border collie",
+"title": "Track-a-mole: Sniffer dog and eDNA help \u2018rediscover\u2019 South African golden mole - news",
 "species": [
 "Cryptochloris wintoni",
 "Cryptochloris zyli"
@@ -2845,26 +2754,26 @@
 ],
 "on_list": "Lost Species",
 "detail": "Mammal, long-lost, last seen 1937",
-"publisher": "euronews",
+"publisher": "Conservation news",
 "date": "Wed, 29 Nov 2023",
 "ts": 1701244800,
 "first_seen": "2026-08-10",
-"link": "https://www.euronews.com/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-co",
-"image": "/rd-img/35fbf2a659a71bba.jpg",
+"link": "https://news.mongabay.com/2023/11/track-a-mole-sniffer-dog-and-edna-help-rediscover-south-african-golden-mole/",
+"image": "/rd-img/748b0a29cf82a6c8.jpg",
 "wayback": "",
-"desc": "The team described the hunt to find the mole as 'more exciting' than an episode of CSI.",
+"desc": "Scientists have uncovered gold in the dunes of South Africa\u2019s northwest coast: the De Winton\u2019s golden mole, a species not seen by scientists since 1936. Like moles in general, De Winton\u2019s golden mole (Cryptochloris wintoni) is blind and lives largely undergrou",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
 {
-"publisher": "euronews",
-"link": "https://www.euronews.com/green/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-"
+"publisher": "Metro",
+"link": "https://metro.co.uk/2023/11/30/golden-mole-missing-80-years-rediscovered-south-africa-19906928/"
 },
 {
-"publisher": "Conservation news",
-"link": "https://news.mongabay.com/2023/11/track-a-mole-sniffer-dog-and-edna-help-rediscover-south-african-golden-mole/"
+"publisher": "euronews",
+"link": "https://www.euronews.com/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-co"
 }
 ]
 },
@@ -3138,8 +3047,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "the Guardian",
+"link": "https://www.theguardian.com/environment/2022/aug/03/magnolia-species-lost-to-science-for-97-years-rediscovered-in-haiti"
+}
+]
 },
 {
 "title": "Lost but not forgotten: a new nomenclature to support a call to rediscover and conserve lost species",
@@ -3245,61 +3159,6 @@
 "link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl"
 }
 ]
-},
-{
-"title": "Wanted lost species: blind salamander, tap-dancing spider and \u2018fat\u2019 catfish",
-"species": [
-"Nemesia berlandi"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Arachnid, long-lost, last seen 1931",
-"publisher": "the Guardian",
-"date": "Wed, 09 Feb 2022",
-"ts": 1644393600,
-"first_seen": "2026-08-10",
-"link": "https://www.theguardian.com/science/2022/feb/09/most-wanted-lost-species-blind-salamander-tap-dancing-spider-fat-catfish",
-"image": "/rd-img/d696f81b1d241feb.jpg",
-"wayback": "",
-"desc": "A Texas-based group has drawn up a new list as part of its quest to find species lost to science and possibly extinct",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 4,
-"also": [
-{
-"publisher": "weforum.org",
-"link": "https://www.weforum.org/stories/2024/06/rediscovered-species-biodiversity/"
-},
-{
-"publisher": "The World Economic Forum",
-"link": "https://www.weforum.org/stories/2024/06/rediscovered-species-biodiversity/"
-},
-{
-"publisher": "IFLScience",
-"link": "https://www.iflscience.com/tap-dancing-spider-lost-to-science-for-92-years-rediscovered-in-portugal-72009"
-}
-]
-},
-{
-"title": "New global search effort targets rediscovery of rarest birds on Earth",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "BirdGuides",
-"date": "Thu, 13 Jan 2022",
-"ts": 1642060800,
-"first_seen": "2026-08-10",
-"link": "https://www.birdguides.com/news/new-global-search-effort-targets-rediscovery-of-rarest-birds-on-earth/",
-"image": "/rd-img/f103b91e0efa3b51.jpg",
-"wayback": "",
-"desc": "The initiative will support expeditions to find 10 birds that haven",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
 },
 {
 "title": "In Sierra Leone, two colorful land crabs rediscovered, two new species found - news",
@@ -3425,8 +3284,12 @@
 },
 {
 "title": "Lost species of chameleon rediscovered by scientists",
-"species": [],
-"species_firm": [],
+"species": [
+"Furcifer voeltzkowi"
+],
+"species_firm": [
+"Furcifer voeltzkowi"
+],
 "on_list": "",
 "detail": "",
 "publisher": "cnn.com",
@@ -3434,9 +3297,9 @@
 "ts": 1604127600,
 "first_seen": "2026-08-10",
 "link": "https://www.cnn.com/videos/us/2020/10/31/lost-chameleon-species-furcifer-voeltzkowi-found-orig-kj.cnn",
-"image": "",
+"image": "/rd-img/6697bf8b1372da09.jpg",
 "wayback": "",
-"desc": "",
+"desc": "Furcifer voeltzkowi chameleons were found in Madagascar, including females whose color pattern changes when stressed, pregnant or encountering males.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -3465,7 +3328,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 8,
 "also": [
 {
 "publisher": "the Guardian",
@@ -3480,8 +3343,8 @@
 "link": "https://www.bbc.com/news/science-environment-53820395"
 },
 {
-"publisher": "Global News",
-"link": "https://globalnews.ca/news/7285974/somali-sengi-elephant-shrew-lost-species/"
+"publisher": "the Guardian",
+"link": "https://www.theguardian.com/environment/2020/aug/18/tiny-elephant-shrew-species-missing-for-50-years-rediscovered"
 }
 ]
 },
@@ -3527,8 +3390,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Duke Today",
+"link": "https://today.duke.edu/2020/08/lost-species-african-mammal-rediscovered-duke-researcher"
+}
+]
 },
 {
 "title": "Lost species of fanged 'mouse deer' spotted for first time in 30 years",
@@ -3547,8 +3415,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "CTVNews",
+"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
+}
+]
 },
 {
 "title": "FOUND: World\u2019s Largest Bee\u2014With Giant Jaws\u2014Rediscovered in the Wild After 38 Years Missing",
@@ -3587,7 +3460,7 @@
 "ts": 1468001400,
 "first_seen": "2026-08-11",
 "link": "https://news.mongabay.com/2016/07/citizen-science-leads-to-snail-rediscovery-in-vietnam/",
-"image": "https://imgs.mongabay.com/wp-content/uploads/sites/20/2016/07/01200241/Myxostoma-petiverianum.jpg",
+"image": "/rd-img/e434ca7a7dab8b35.jpg",
 "wayback": "",
 "desc": "Scott Trageser photographed invertebrates on Hon Cau, an island off south-east Vietnam, and posted them to iNaturalist hoping somebody could identify them. In November 2015 the malacologist Junn Kitt Foon recognised one as Myxostoma petiverianum, a land snail ",
 "citation": "Trageser, S.J., Wiscovitch, A. & Foon, J.K. (2018) Discovery of Myxostoma petiverianum Wood, 1828 on Hon Cau, Vietnam. The Festivus 50(2): 110-113.",
