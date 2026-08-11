@@ -604,12 +604,16 @@
   /* The page leads with the finding and defers the method. An earlier version put five
      caveat boxes above the table, which is honest but unreadable: the reader met the
      limitations before they met the thing being limited. */
-  .ntlead { max-width:46rem; margin:0 0 1.4rem; }
+  /* The lead block above the figures is centred. A max-width column needs margin:auto
+     or it hugs the left edge and only the text inside it moves. */
+  .ntlead { max-width:46rem; margin:0 auto 1.4rem; text-align:center; }
   .ntkicker { font-family:var(--sans); font-size:.72rem; letter-spacing:.12em;
     text-transform:uppercase; color:var(--ink-3); margin:0 0 .5rem; }
   .nthead { font-size:2rem; line-height:1.18; margin:0 0 .9rem; letter-spacing:-.015em; }
   .nthero { color:var(--accent); font-variant-numeric:tabular-nums; }
-  .ntsummary { color:var(--ink-2); margin:0 0 .7rem; font-size:1.02rem; }
+  /* narrower than the block so centred prose keeps a comfortable measure */
+  .ntsummary { color:var(--ink-2); margin:0 auto .7rem; font-size:1.02rem;
+    max-width:40rem; }
   .ntmore { font-family:var(--sans); font-size:.88rem; margin:.2rem 0 1.8rem; }
   .ntmore a { text-decoration:none; border-bottom:1px solid var(--rule-2);
     padding-bottom:1px; }
