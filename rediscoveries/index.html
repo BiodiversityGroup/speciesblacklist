@@ -700,6 +700,13 @@
   .rdcard.noimg .rdbody { border-top:3px solid var(--rule-2); }
   .rdorder { font-family:var(--sans); font-size:.82rem; color:var(--ink-3);
     margin:.2rem 0 .8rem; }
+  /* says what a paper actually reports, where that differs from what the page is
+     mostly about -- a new locality record is not a decades-lost rediscovery */
+  .rdnote { font-family:var(--sans); font-size:.74rem; line-height:1.5;
+    color:var(--ink-3); font-style:italic; margin:0; }
+  .rdtag-kind { background:var(--surface-2); color:var(--ink-2); }
+  .rdcite { font-family:var(--sans); font-size:.66rem; line-height:1.45;
+    color:var(--ink-3); margin:0; padding:0 1rem .8rem; }
   /* Outside the card's main <a>: a link inside a link is invalid HTML and the browser
      un-nests it, which silently breaks the card's own click target. */
   .rdarchive { font-family:var(--sans); font-size:.68rem; margin:0;
@@ -999,9 +1006,10 @@
   <div class="prose">
     <h2 style="font-size:var(--fs-h2)">Where the record actually is</h2>
     <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0">
-      Density of georeferenced specimen and observation records for the species in
-      this register, drawn from GBIF. Switch layers to isolate a single restriction
-      tier or view them together. <strong>Select any shaded cell or locality ring to
+      Where museum specimens and field sightings of these species have actually been
+      recorded, for every record that carries map coordinates. The data comes from GBIF,
+      a global archive of biodiversity records. Switch layers to isolate a single
+      restriction tier or view them together. <strong>Select any shaded cell or ring to
       open its species in the register.</strong> Scroll or pinch to zoom, drag to
       pan; cells subdivide as you zoom in, so finer clusters resolve rather than
       the same blocks getting bigger.</p>
@@ -1010,8 +1018,8 @@
   <div class="warn" style="margin-top:var(--s3)">
     <h3>This maps collecting effort as much as biology</h3>
     <p>A dense patch means <strong>records exist there</strong>, which is not the same
-      as species being concentrated there. Georeferenced records cluster around
-      institutions, expeditions and coastlines that somebody surveyed. Read the map as
+      as species being concentrated there. Records pile up around universities, museums,
+      expedition routes and coastlines somebody surveyed. Read the map as
       a picture of where the evidence sits, not of where the risk is.</p>
     <p>These are point records, <strong>not range maps</strong>, and they come from a
       different source than the localities on the Sites page — so the two will not
@@ -1036,8 +1044,9 @@
       <button id="zReset" aria-label="Reset zoom" title="Reset">Reset</button>
     </div>
     <canvas id="mapCanvas" role="img"
-            aria-label="World density map of georeferenced records for species in the
-            register. The same data is available as a table under The Register."></canvas>
+            aria-label="World map shading where records of the species in this register
+            carry map coordinates. The same data is available as a table under The
+            Register."></canvas>
   </div>
   <div class="maplegend" id="mapLegend"></div>
   <p class="mapstats" id="mapStats"></p>
@@ -1127,19 +1136,23 @@
         Database</a> checklist of June 2026 lists 12,650 accepted species. Comparing it
         with IUCN v2026-1, which holds 10,305 assessed reptiles, leaves the species the
         Red List has no record of.</p>
-      <p>Matching on names alone would be unreliable, because the two bodies often place
-        a species in different genera. Species are therefore matched on the binomial
-        <em>or</em> on the taxonomic authority &mdash; the describing author and year,
-        which travel with a species through every change of genus. That caught 169
-        species a name-only comparison would have wrongly called missing.</p>
+      <p>Comparing names alone would be unreliable. A species often gets moved into a
+        different genus, so its first name changes while the animal stays the same, and
+        the two organisations do not always agree on where it belongs. So species are
+        matched either on the full scientific name <em>or</em> on who first described it
+        and in what year &mdash; details that stay with a species through every change of
+        name. That caught 169 species a name-only comparison would have wrongly reported
+        as missing.</p>
     </details>
 
     <details class="ntdisc">
       <summary>Why you can trust the &ldquo;never assessed&rdquo; claim</summary>
-      <p>A failed name search cannot prove something was never assessed. So every species
-        here was queried individually against the Red List API, and every name IUCN did
-        not return was then re-checked against GBIF's synonyms. That removed 51 species
-        which had been assessed after all &mdash; a false-positive rate of 2.9%.</p>
+      <p>Failing to find a name in a search does not prove nobody ever assessed the
+        species &mdash; it might be filed under a different name. So every species here
+        was looked up individually in the Red List's own database, and every name it did
+        not return was checked again against GBIF's list of alternative names for the same
+        species. That found 51 which had been assessed after all, and they were removed:
+        an error rate of 2.9% in the list before checking.</p>
       <p>The evidence is graded, because it is not equally strong for every species:</p>
       <div class="ntlegend" id="ntLegendEv"></div>
     </details>
@@ -1152,15 +1165,18 @@
         twice as often as those crossing borders (27.2% against 13.2%, p&nbsp;=&nbsp;0.00005,
         tested on 600 reptiles the Red List <em>has</em> assessed).</p>
       <p>A finer, coordinate-based scale was tried first and <strong>abandoned</strong>.
-        Its top class, island endemism, predicted nothing at all (odds ratio 0.92,
-        p&nbsp;=&nbsp;1), because &ldquo;island&rdquo; read from a distribution string
-        covers a one-square-kilometre islet and Hainan's 34,000&nbsp;km&sup2; alike.
+        Its top class, living only on an island, turned out to predict nothing at all
+        &mdash; island species were no more likely to be threatened than any other
+        (odds&nbsp;ratio&nbsp;0.92, p&nbsp;=&nbsp;1: as close to no effect as a result
+        gets). The reason is that &ldquo;island&rdquo; taken from a written description
+        covers a one-square-kilometre rock and Hainan's 34,000&nbsp;km&sup2; alike.
         Geocoding the locality text could not rescue it either: measured against species
         whose descriptions print coordinates, it was off by a median of 53&nbsp;km and in
         the worst case 5,469&nbsp;km.</p>
       <div class="ntlegend" id="ntLegendRc"></div>
-      <p class="ntfoot">The &ldquo;finer detail&rdquo; column counts georeferenced
-        records where GBIF has them. It is descriptive only and has <em>not</em> been
+      <p class="ntfoot">The &ldquo;finer detail&rdquo; column counts how many records
+        carry map coordinates, where GBIF has any. It is descriptive only and has
+        <em>not</em> been
         validated against Red List outcomes &mdash; for a species described last year,
         few records may mean a small range, or may only mean nobody has looked twice.</p>
     </details>
@@ -1196,17 +1212,20 @@
 
   <div class="ntlead">
     <p class="ntkicker">Found again</p>
-    <!-- The figure counts REPORTS, not species. Only a minority of these headlines
-         name a binomial, so "131 species came back" would overclaim by a factor of six.
-         The sentence is built around the unit the number actually has. -->
-    <h2 class="nthead"><span class="nthero" id="rdHero">&mdash;</span> reports of a
-      species turning up after the searching had stopped.</h2>
-    <p class="ntsummary">A species is called lost when nobody has recorded it for years
-      and searching has stopped. Sometimes one turns up anyway. This page collects the
-      news reports of those returns, one card per story, gathered automatically from
-      conservation and science feeds and checked daily.</p>
-    <p class="ntsummary">It is a record of what was reported, not a verified register.
-      A headline is a lead, not an assessment &mdash; see the note below the list.</p>
+    <!-- The figure counts STORIES, not species: most of these headlines never name the
+         animal, so "151 species came back" would overstate it several times over. The
+         sentence is built around the unit the number actually has.
+         The old wording led on nobody having looked, which buried the actual finding:
+         these species were found because people went out and looked again. -->
+    <h2 class="nthead">Researchers and naturalists keep finding species that were feared
+      lost. Here are <span class="nthero" id="rdHero">&mdash;</span> of those finds.</h2>
+    <p class="ntsummary">A species is called lost when it has gone unrecorded for so long
+      that scientists no longer know whether it survives. Some of them are still out
+      there &mdash; and researchers, park rangers and amateur naturalists keep proving it,
+      by going back into the forest, the cave or the reef and finding them.</p>
+    <p class="ntsummary">This page gathers those finds as they are reported, checked every
+      day. It records what was reported, not what has been confirmed &mdash; a news story
+      is a lead, not proof. There is a note below the list explaining what that means.</p>
   </div>
 
   <div id="rdCounts" class="counts"></div>
@@ -1216,9 +1235,9 @@
       &darr;</a>
   </p>
 
-  <h3 class="siteshead">The reports</h3>
-  <p class="rdorder">Newest first. Search runs over the species name, the headline, the
-    summary and the outlet &mdash; try a binomial, a country or a publisher.</p>
+  <h3 class="siteshead">The finds</h3>
+  <p class="rdorder">Newest first. Search looks at the species name, the headline, the
+    summary and the outlet &mdash; try a species, a country or a news outlet.</p>
   <div class="filters">
     <!-- A visible label, not just a placeholder: placeholder text vanishes the moment
          anyone types and reads as decoration until then, which is exactly why a search
@@ -1229,11 +1248,11 @@
              placeholder="e.g. Chelonoidis, Madagascar, Mongabay&hellip;"
              aria-label="Search the reports">
     </label>
-    <select id="rdF" aria-label="Filter the reports">
-      <option value="">All reports</option>
-      <option value="sp">Naming a species</option>
-      <option value="list">On a TBG list</option>
-      <option value="multi">Covered by several outlets</option>
+    <select id="rdF" aria-label="Filter the list">
+      <option value="">Show everything</option>
+      <option value="sp">Only those naming a species</option>
+      <option value="list">Only species we were watching</option>
+      <option value="multi">Only the widely covered</option>
     </select>
   </div>
   <p id="rdShowing" style="font-family:var(--sans);font-size:.82rem;
@@ -1246,10 +1265,11 @@
     <details class="ntdisc" open>
       <summary>What is on this page</summary>
       <p>Journal alerts, conservation outlets and news searches run across
-        <strong>fourteen national editions</strong> are read once a day. Any item whose
-        text describes a species being found again is kept, and matched against the 6,715
-        names this project tracks, so where a report names a species we can say whether
-        it is one we were already following.</p>
+        <strong>fourteen national editions</strong> are read once a day. Anything
+        describing a species being found again is kept, and checked against the
+        <span id="rdTracked">thousands of</span> species names this project follows, so
+        where a report names a species we can say whether it was one we were already
+        watching.</p>
       <p>The national editions matter more than they sound. A news search returns a
         different set of results in each country, and running only the United States
         edition missed 60 of 134 stories on a single query &mdash; among them Wallace's
@@ -1257,10 +1277,10 @@
         Rediscovery happens mostly outside the United States, so a US-only search is
         close to the worst way to look for it. The searches are still English-language
         only, which remains a real gap.</p>
-      <p>Wire stories are syndicated, so the same rediscovery arrives from several
-        outlets under several headlines. Reports are grouped by how much wording they
-        share and shown once, with the number of outlets that carried the story. That
-        count is a measure of attention, not of evidence.</p>
+      <p>One find is usually covered by many outlets, each writing its own headline, so
+        the same story arrives over and over. Stories are matched up by the words they
+        share and shown once, with a count of how many outlets ran it. That count says how
+        much attention the find got &mdash; not how solid it is.</p>
     </details>
 
     <details class="ntdisc">
@@ -1277,19 +1297,22 @@
     </details>
 
     <details class="ntdisc">
-      <summary>How a report gets a species name &mdash; and the two grades of it</summary>
-      <p>Every name shown has been checked against the GBIF backbone taxonomy; a phrase
-        that merely looks like a Latin binomial is not enough. But one article often
-        reports several rediscoveries at once, and a headline such as &ldquo;Five lost
-        bird species rediscovered&rdquo; names none of them, so the article text is read
-        as well.</p>
-      <p>The two are not equally certain and are not shown the same way. A name in
-        <span class="rdsp" style="font-size:inherit">this colour</span> came from the
-        headline or summary, or was carried by two independent outlets. A name in
-        <span class="rdspsoft">grey, after &ldquo;also names&rdquo;,</span> was read out
-        of a single article's text &mdash; where a species mentioned for comparison can
-        look much like one that was refound. Treat the grey names as leads.</p>
-      <p>Only the names are kept. The article text is read and discarded.</p>
+      <summary>How we work out which species a story is about</summary>
+      <p>Species have two-word scientific names, like <em>Chelonoidis phantasticus</em>
+        for the Fernandina tortoise. Every scientific name shown here has been looked up
+        in a global database of species names to confirm the animal or plant really
+        exists &mdash; it is not enough for a phrase to simply look like one.</p>
+      <p>Headlines often name nothing at all. &ldquo;Five lost bird species
+        rediscovered&rdquo; tells you there are five, but not which five, so the article
+        itself is read to find them.</p>
+      <p>That makes some names surer than others, and they are shown differently. A name
+        in <span class="rdsp" style="font-size:inherit">this colour</span> came from the
+        headline or the summary, or was used by two separate outlets. A name in
+        <span class="rdspsoft">grey, after &ldquo;also names&rdquo;,</span> was found
+        further down in one article &mdash; and articles often mention a close relative
+        for comparison, which can look just like the species that was found. Treat the
+        grey ones as leads worth checking.</p>
+      <p>Only the names are kept; the article's text is read and then discarded.</p>
     </details>
 
     <details class="ntdisc">
@@ -1465,8 +1488,9 @@
       River", "Arrowsmith Bank", "Espiritu Santo". Those were <strong>not</strong> run
       through a gazetteer to make the map: place-name geocoding is ambiguous exactly
       where this corpus is ambiguous, and a map that confidently places a species in
-      the wrong ocean is worse than no map. The points are real georeferenced specimen
-      and observation records from <strong>GBIF</strong>, queried per species.</p>
+      the wrong ocean is worse than no map. The points are real museum specimens and
+      field sightings that already carry map coordinates &mdash; &ldquo;georeferenced&rdquo;
+      records &mdash; taken from <strong>GBIF</strong> and queried per species.</p>
     <p>One trap governed that query, and it is the same species of error that wrecked
       the first never-assessed list. GBIF's free-text name search must not be used,
       because many of these names are synonyms and it silently returns records of the
@@ -1670,10 +1694,15 @@ function showView(name, push) {
 /* ================= DESCRIBED BUT NEVER ASSESSED (reptile list) ================= */
 let NT = null, ntLoading = false;
 
+/* Labels a reader meets with no preparation, so they say what the evidence IS rather
+   than naming the grade. "Corroborated" told nobody anything. */
 const NT_EV = {
-  airtight:       ["Airtight", "IUCN indexes the taxon and holds zero assessments"],
-  corroborated:   ["Corroborated", "IUCN does not index the name; GBIF does; no assessed synonym found"],
-  uncorroborated: ["Single-source", "Neither IUCN nor GBIF indexes the name — rests on the Reptile Database alone"]
+  airtight:       ["Certain",
+                   "The Red List knows this species exists and holds no assessment of it"],
+  corroborated:   ["Confirmed a second way",
+                   "The Red List has no record of the name at all, but GBIF does — and no alternative name for it has been assessed either"],
+  uncorroborated: ["One source only",
+                   "Neither the Red List nor GBIF lists this name; it rests on the Reptile Database alone"]
 };
 /* Administrative extent, taken from each species' own published distribution statement.
    This is the axis the validation actually supported — endemic to a single country
@@ -1802,17 +1831,30 @@ function ensureRedisc() {
 
 function rdBoot() {
   const c = RD.counts;
+  /* The hero counts FINDS (stories), which is the one unit here that needs no footnote.
+     Tried and rejected: the species count reads better but overstates, because some
+     names are read out of article bodies where a species mentioned in passing looks like
+     one that was found; and the firm-only count is 26, which understates just as badly.
+     Species figures live in the tiles, where each has room for its qualifier. */
   $("#rdHero").textContent = c.stories.toLocaleString();
+
+  /* Tile captions are for someone who has never used this site. Where a figure needs a
+     qualifier, the qualifier is in the caption rather than left to the note below. */
+  const lists = c.on_list_breakdown || {};
+  const listSub = Object.keys(lists).length
+    ? Object.entries(lists).sort((a, b) => b[1] - a[1])
+        .map(([k, v]) => `${v} ${k}`).join(", ")
+    : "species we were already following";
+
   $("#rdCounts").innerHTML = [
-    ["Reports", c.stories.toLocaleString(), "one card per story, duplicates merged"],
-    /* Species, not cards. One article often reports several rediscoveries at once, so
-       counting cards that name something would undercount the animals badly. */
-    ["Species identified", (c.distinct_species || 0).toLocaleString(),
-     "distinct binomials, each checked against GBIF"],
-    ["Already on a TBG list", (c.on_tbg_list || 0).toLocaleString(),
-     "species this project was tracking"],
-    ["Carried by several outlets", (c.syndicated || 0).toLocaleString(),
-     "the stories that travelled"]
+    ["Finds reported", c.stories.toLocaleString(),
+     "one card each; the same find from several outlets is shown once"],
+    ["Species named", (c.distinct_species || 0).toLocaleString(),
+     `every name checked against a global species database; ${
+       (c.distinct_species_firm || 0)} named in a headline or by two outlets`],
+    ["Ones we were already watching", (c.on_tbg_list || 0).toLocaleString(), listSub],
+    ["Widely covered", (c.syndicated || 0).toLocaleString(),
+     "picked up by two or more outlets"]
   ].map(([k, v, sub]) =>
     `<div class="count"><b>${v}</b><span>${k}</span>` +
     `<em class="csub">${sub}</em></div>`).join("");
@@ -1820,6 +1862,10 @@ function rdBoot() {
   /* Preservation coverage, stated from the data rather than asserted in prose. The
      wording adapts to the actual ratio, so a bad night reads as a bad night instead of
      leaving "most of them" on a page where it is no longer true. */
+  if (c.tracked_names) {
+    $("#rdTracked").textContent = c.tracked_names.toLocaleString();
+  }
+
   const img = c.image_local || 0, imgTot = c.with_image || 0, arc = c.archived || 0;
   const share = imgTot ? img / imgTot : 0;
   // no em-dash inside the span; the sentence already supplies one immediately before it
@@ -1848,7 +1894,7 @@ function rdRender() {
             c.publisher + " " + c.desc).toLowerCase().includes(q)));
 
   $("#rdShowing").textContent =
-    `Showing ${cards.length.toLocaleString()} of ${RD.cards.length.toLocaleString()} reports` +
+    `Showing ${cards.length.toLocaleString()} of ${RD.cards.length.toLocaleString()}` +
     (cards.length ? "" : " — nothing matches this search.");
 
   $("#rdGrid").innerHTML = cards.map(c => {
@@ -1885,7 +1931,9 @@ function rdRender() {
           })()}
           <h4 class="rdtitle">${esc(c.title)}</h4>
           ${c.desc ? `<p class="rddesc">${esc(c.desc)}</p>` : ""}
+          ${c.note ? `<p class="rdnote">${esc(c.note)}</p>` : ""}
           <p class="rdmeta">
+            ${c.kind ? `<span class="rdtag rdtag-kind">${esc(c.kind)}</span>` : ""}
             ${c.publisher ? `<span class="rdpub">${esc(c.publisher)}</span>` : ""}
             ${date ? `<span>${esc(date)}</span>` : ""}
             ${c.outlets > 1
@@ -1895,6 +1943,7 @@ function rdRender() {
           </p>
         </div>
       </a>
+      ${c.citation ? `<p class="rdcite">${esc(c.citation)}</p>` : ""}
       ${c.wayback ? `<p class="rdarchive"><a href="${esc(c.wayback)}"
          target="_blank" rel="noopener">Archived copy</a></p>` : ""}
     </article>`;
@@ -2492,8 +2541,8 @@ async function ensureMap() {
   });
   $("#mapStats").innerHTML =
     `<strong>${st.species_mapped.toLocaleString()}</strong> of
-     ${st.species_total.toLocaleString()} species have at least one georeferenced
-     record, plotted from <strong>${st.points.toLocaleString()}</strong> points
+     ${st.species_total.toLocaleString()} species have at least one record with map
+     coordinates, plotted from <strong>${st.points.toLocaleString()}</strong> points
      (capped at ${st.max_points_per_species} per species so well-collected species
      cannot dominate the surface).
      <strong>${st.species_unmapped.toLocaleString()}</strong> species have none at
