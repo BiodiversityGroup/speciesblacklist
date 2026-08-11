@@ -1,24 +1,24 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 152,
+"stories": 142,
 "raw_items": 251,
-"with_species": 89,
+"with_species": 81,
 "distinct_species": 149,
 "distinct_species_firm": 26,
-"multi_species_cards": 32,
-"with_image": 133,
-"syndicated": 56,
-"on_tbg_list": 31,
+"multi_species_cards": 31,
+"with_image": 122,
+"syndicated": 58,
+"on_tbg_list": 28,
 "on_list_breakdown": {
-"on our lost-species list": 26,
-"on the Black List": 5
+"on our lost-species list": 24,
+"on the Black List": 4
 },
 "undated": 0,
 "newest": "Wed, 29 Jul 2026",
 "tracked_names": 6709,
-"image_local": 128,
-"archived": 14
+"image_local": 117,
+"archived": 16
 },
 "cards": [
 {
@@ -643,12 +643,12 @@
 "link": "https://news.mongabay.com/2026/04/once-lost-now-found-five-missing-bird-species-rediscovered-in-2025-offering-hope/"
 },
 {
-"publisher": "ZME Science",
-"link": "https://www.zmescience.com/science/news-science/lost-bird-species-found-2025/"
-},
-{
 "publisher": "Conservation news",
 "link": "https://news.mongabay.com/short-article/2026/04/five-lost-bird-species-rediscovered-in-2025/"
+},
+{
+"publisher": "ZME Science",
+"link": "https://www.zmescience.com/science/news-science/lost-bird-species-found-2025/"
 }
 ]
 },
@@ -839,12 +839,16 @@
 "outlets": 4,
 "also": [
 {
+"publisher": "mint",
+"link": "https://www.livemint.com/news/india/lost-for-nearly-two-centuries-this-rare-plant-species-has-been-rediscovered-in-arunachal-pradesh-11773478771147.html"
+},
+{
 "publisher": "Telegraph India",
 "link": "https://www.telegraphindia.com/north-east/researchers-rediscover-rare-himalayan-plant-species-in-arunachal-after-120-years/cid/2161198"
 },
 {
-"publisher": "mint",
-"link": "https://www.livemint.com/news/india/lost-for-nearly-two-centuries-this-rare-plant-species-has-been-rediscovered-in-arunachal-pradesh-11773478771147.html"
+"publisher": "GK Today",
+"link": "https://www.gktoday.in/rare-plant-henckelia-monophylla-rediscovered-in-arunachal-pradesh/"
 }
 ]
 },
@@ -1118,6 +1122,74 @@
 "also": []
 },
 {
+"title": "Endangered grasshopper rediscovered in KZN after 45 years",
+"species": [
+"Prostalia granulata",
+"Brunia trigyna",
+"Maytenus abbottii"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Mail & Guardian",
+"date": "Mon, 19 Jan 2026",
+"ts": 1768809600,
+"first_seen": "2026-08-10",
+"link": "https://mg.co.za/the-green-guardian/2026-01-19-endangered-grasshopper-rediscovered-in-kzn-after-45-years/",
+"image": "/rd-img/a4655de18f7cb00b.webp",
+"wayback": "",
+"desc": "Scientists have rediscovered an endangered grasshopper species in KwaZulu-Natal, underscoring the importance of small protected areas \u2014 and the often-overlooked invertebrates they shelter",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 5,
+"also": [
+{
+"publisher": "Mail & Guardian",
+"link": "https://mg.co.za/the-green-guardian/2026-01-19-endangered-grasshopper-rediscovered-in-kzn-after-45-years/"
+},
+{
+"publisher": "Time Out Durban",
+"link": "https://www.timeout.com/durban/news/kzn-great-grasshopper-rediscovery-011626"
+},
+{
+"publisher": "Time Out Durban",
+"link": "https://www.timeout.com/durban/news/kzn-great-grasshopper-rediscovery-011626"
+},
+{
+"publisher": "The Witness",
+"link": "https://witness.co.za/news/2026/01/12/rare-grass-hopper/"
+}
+]
+},
+{
+"title": "Photo leads to rediscovery of \u2018extinct\u2019 Aussie plant - News",
+"species": [
+"Ptilotus senarius"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "InDaily South Australia",
+"date": "Mon, 19 Jan 2026",
+"ts": 1768809600,
+"first_seen": "2026-08-10",
+"link": "https://www.indailysa.com.au/news/just-in/2026/01/19/photo-leads-to-rediscovery-of-extinct-aussie-plant",
+"image": "/rd-img/93ccf7ca21f60139.jpg",
+"wayback": "",
+"desc": "A native plant species has been rediscovered decades after it was presumed extinct, highlighting the power of citizen science data in research and conservation.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "Yahoo News Australia",
+"link": "https://au.news.yahoo.com/photo-leads-to-rediscovery-of-aussie-plant-species-almost-60-years-after-extinction-130150844.html"
+}
+]
+},
+{
 "title": "Rare plant thought extinct rediscovered by citizen scientist in remote Australia",
 "species": [],
 "species_firm": [],
@@ -1159,33 +1231,6 @@
 {
 "publisher": "scimex.org",
 "link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
-}
-]
-},
-{
-"title": "Photo leads to rediscovery of Aussie plant species almost 60 years after 'extinction'",
-"species": [
-"Ptilotus senarius"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Yahoo News Australia",
-"date": "Sun, 18 Jan 2026",
-"ts": 1768723200,
-"first_seen": "2026-08-10",
-"link": "https://au.news.yahoo.com/photo-leads-to-rediscovery-of-aussie-plant-species-almost-60-years-after-extinction-130150844.html",
-"image": "/rd-img/e2dbc7008f0788b4.jpg",
-"wayback": "",
-"desc": "The incredible find was only possible due to a series of 'serendipitous' events. Find out more.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "InDaily South Australia",
-"link": "https://www.indailysa.com.au/news/just-in/2026/01/19/photo-leads-to-rediscovery-of-extinct-aussie-plant"
 }
 ]
 },
@@ -1238,47 +1283,6 @@
 {
 "publisher": "The West Australian",
 "link": "https://thewest.com.au/technology/science/citizen-science-app-leads-to-rediscovery-of-extinct-species--c-21344775"
-}
-]
-},
-{
-"title": "KZN's great grasshopper rediscovery",
-"species": [
-"Brunia trigyna",
-"Maytenus abbottii",
-"Prostalia granulata"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Time Out Durban",
-"date": "Fri, 16 Jan 2026",
-"ts": 1768550400,
-"first_seen": "2026-08-10",
-"link": "https://www.timeout.com/durban/news/kzn-great-grasshopper-rediscovery-011626",
-"image": "/rd-img/bebca96cd0d3ea8e.jpg",
-"wayback": "",
-"desc": "This rediscovery is big...",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 5,
-"also": [
-{
-"publisher": "Time Out Durban",
-"link": "https://www.timeout.com/durban/news/kzn-great-grasshopper-rediscovery-011626"
-},
-{
-"publisher": "The Witness",
-"link": "https://witness.co.za/news/2026/01/12/rare-grass-hopper/"
-},
-{
-"publisher": "Mail & Guardian",
-"link": "https://mg.co.za/the-green-guardian/2026-01-19-endangered-grasshopper-rediscovered-in-kzn-after-45-years/"
-},
-{
-"publisher": "Mail & Guardian",
-"link": "https://mg.co.za/the-green-guardian/2026-01-19-endangered-grasshopper-rediscovered-in-kzn-after-45-years/"
 }
 ]
 },
@@ -1457,12 +1461,16 @@
 "link": "https://noticiasambientales.com/animals/rediscovery-of-the-cozumel-pygmy-fox-a-second-chance-for-the-conservation-of-this-species-in-mexico/"
 },
 {
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
+},
+{
 "publisher": "ScienceDaily",
 "link": "https://www.sciencedaily.com/releases/2025/12/251225080719.htm"
 },
 {
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
+"publisher": "GK Today",
+"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
 }
 ]
 },
@@ -1591,7 +1599,7 @@
 "first_seen": "2026-08-10",
 "link": "https://iol.co.za/sunday-tribune/news/2025-12-16-lost-species-back-from-the-brink/",
 "image": "/rd-img/ba56cde0364d7a96.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20251231042442/https://iol.co.za/sunday-tribune/news/2025-12-16-lost-species-back-from-the-brink/",
 "desc": "A lizard lost to science for more than 50 years has been rediscovered in Mozambique. Endangered Wildlife Trust researchers have confirmed the survival of the elusive Blue-tailed Sandveld Lizard during biodiversity surveys in Banhine and Zinave National Parks, ",
 "citation": "",
 "kind": "",
@@ -1620,48 +1628,13 @@
 "also": []
 },
 {
-"title": "Bamboo shrimp rediscovered after 7 decades in Karnataka",
+"title": "Shrimp species rediscovered in Karnataka and Odisha after 72 years",
 "species": [
 "Atyopsis spinipes"
 ],
 "species_firm": [
 "Atyopsis spinipes"
 ],
-"on_list": "",
-"detail": "",
-"publisher": "Deccan Herald",
-"date": "Sat, 06 Dec 2025",
-"ts": 1765008000,
-"first_seen": "2026-08-10",
-"link": "https://www.deccanherald.com/india/karnataka/bamboo-shrimp-rediscovered-after-7-decades-3822538",
-"image": "/rd-img/a30a95c04e9d4f26.jpg",
-"wayback": "",
-"desc": "Until now, the bamboo shrimp\u2019s presence in India remained uncertain because no verified specimens had been recorded since a 1951 report, which lacked strong morphological evidence.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 4,
-"also": [
-{
-"publisher": "Moneycontrol",
-"link": "https://www.moneycontrol.com/science/bamboo-shrimp-rediscovered-in-india-after-72-years-article-13705893.html"
-},
-{
-"publisher": "GK Today",
-"link": "https://www.gktoday.in/bamboo-shrimp-rediscovered-in-india-after-72-years/"
-},
-{
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/etimes/trending/bamboo-shrimp-rediscovered-in-india-after-72-years-revealing-hidden-freshwater-biodiversity-and-its-habitat/articleshow/125669402.cms"
-}
-]
-},
-{
-"title": "Shrimp species rediscovered in Karnataka and Odisha after 72 years",
-"species": [
-"Atyopsis spinipes"
-],
-"species_firm": [],
 "on_list": "",
 "detail": "",
 "publisher": "The Indian Express",
@@ -1675,8 +1648,25 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 5,
+"also": [
+{
+"publisher": "Deccan Herald",
+"link": "https://www.deccanherald.com/india/karnataka/bamboo-shrimp-rediscovered-after-7-decades-3822538"
+},
+{
+"publisher": "Moneycontrol",
+"link": "https://www.moneycontrol.com/science/bamboo-shrimp-rediscovered-in-india-after-72-years-article-13705893.html"
+},
+{
+"publisher": "GK Today",
+"link": "https://www.gktoday.in/bamboo-shrimp-rediscovered-in-india-after-72-years/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/bamboo-shrimp-rediscovered-in-india-after-72-years-revealing-hidden-freshwater-biodiversity-and-its-habitat/articleshow/125669402.cms"
+}
+]
 },
 {
 "title": "Rediscovery of South Africa\u2019s most endangered bird sparks hope",
@@ -1880,36 +1870,14 @@
 "link": "https://www.bbc.com/news/articles/ckg1y66y80ro"
 },
 {
-"publisher": "Countryfile.com",
-"link": "https://www.countryfile.com/wildlife/insects-invertebrates/aulonia-albimana-isle-of-wight"
-},
-{
 "publisher": "The Telegraph",
 "link": "https://www.telegraph.co.uk/news/2025/10/30/spider-species-lost-for-40-years-rediscovered-isle-of-wight/"
-}
-]
 },
 {
-"title": "Rare fynbos species rediscovered in Kogelberg Reserve after being feared extinct",
-"species": [
-"Erica cunoniensis"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Daily Maverick",
-"date": "Fri, 24 Oct 2025",
-"ts": 1761289200,
-"first_seen": "2026-08-10",
-"link": "https://www.dailymaverick.co.za/article/2025-10-24-rare-fynbos-species-rediscovered-in-kogelberg-reserve-after-being-feared-extinct/",
-"image": "/rd-img/c80d183c668908a0.jpg",
-"wayback": "",
-"desc": "After not having been seen for almost 40 years, a rare fynbos species has been rediscovered in Kogelberg Nature Reserve.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
+"publisher": "Countryfile.com",
+"link": "https://www.countryfile.com/wildlife/insects-invertebrates/aulonia-albimana-isle-of-wight"
+}
+]
 },
 {
 "title": "Rare Erica species rediscovered in Kogelberg after nearly four decades",
@@ -1932,52 +1900,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
+{
+"publisher": "Daily Maverick",
+"link": "https://www.dailymaverick.co.za/article/2025-10-24-rare-fynbos-species-rediscovered-in-kogelberg-reserve-after-being-feared-extinct/"
+},
 {
 "publisher": "Cape Town ETC",
 "link": "https://www.capetownetc.com/news/rare-erica-plant-rediscovered-after-40-years-in-kogelberg/"
-}
-]
-},
-{
-"title": "Plant species rediscovered after 130 years in Masungi Georeserve",
-"species": [
-"Exacum loheri"
-],
-"species_firm": [
-"Exacum loheri"
-],
-"on_list": "",
-"detail": "",
-"publisher": "GMA Network",
-"date": "Wed, 22 Oct 2025",
-"ts": 1761116400,
-"first_seen": "2026-08-10",
-"link": "https://www.gmanetwork.com/lifestyle/news/127097/plant-species-rediscovered-after-130-years-in-masungi-georeserve/story",
-"image": "/rd-img/da7bcb7dbc13fbaa.jpg",
-"wayback": "",
-"desc": "The plant species was last recorded in the 1890s.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 6,
-"also": [
-{
-"publisher": "ABS-CBN",
-"link": "https://www.abs-cbn.com/news/health-science/2025/10/22/rare-plant-rediscovered-in-masungi-after-130-years-1131"
-},
-{
-"publisher": "Philstar.com",
-"link": "https://www.philstar.com/business/2025/10/26/2482472/rare-plant-species-rediscovered-masungi-georeserve-after-130-years"
-},
-{
-"publisher": "GMA News Online",
-"link": "https://www.gmanetwork.com/news/scitech/science/963212/rare-plant-rediscovered-in-masungi-georeserve-after-130-years/story/"
-},
-{
-"publisher": "Philstar Life",
-"link": "https://philstarlife.com/news-and-views/516327-rare-plant-species-rediscovered-masungi-georeserve"
 }
 ]
 },
@@ -1986,7 +1917,9 @@
 "species": [
 "Exacum loheri"
 ],
-"species_firm": [],
+"species_firm": [
+"Exacum loheri"
+],
 "on_list": "",
 "detail": "",
 "publisher": "Interaksyon",
@@ -2000,8 +1933,25 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 7,
+"also": [
+{
+"publisher": "GMA Network",
+"link": "https://www.gmanetwork.com/lifestyle/news/127097/plant-species-rediscovered-after-130-years-in-masungi-georeserve/story"
+},
+{
+"publisher": "ABS-CBN",
+"link": "https://www.abs-cbn.com/news/health-science/2025/10/22/rare-plant-rediscovered-in-masungi-after-130-years-1131"
+},
+{
+"publisher": "Philstar.com",
+"link": "https://www.philstar.com/business/2025/10/26/2482472/rare-plant-species-rediscovered-masungi-georeserve-after-130-years"
+},
+{
+"publisher": "GMA News Online",
+"link": "https://www.gmanetwork.com/news/scitech/science/963212/rare-plant-rediscovered-in-masungi-georeserve-after-130-years/story/"
+}
+]
 },
 {
 "title": "Reptile thought to be extinct for 34 years is rediscovered",
@@ -2018,17 +1968,33 @@
 "ts": 1760684400,
 "first_seen": "2026-08-10",
 "link": "https://www.earth.com/news/reptile-thought-extinct-for-34-years-is-rediscovered-afroedura-rondavelica/",
-"image": "/rd-img/bf8a1c0c63ccdfe6.jpg",
+"image": "/rd-img/ebeb9577f29af63d.jpg",
 "wayback": "",
-"desc": "After more than 30 years of being missing, the Blyde Rondavel flat gecko (Afroedura rondavelica) reappears in South Africa.",
+"desc": "Since it was identified in 1991, mystery surrounded this elusive little lizard for more than three decades.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 6,
 "also": [
+{
+"publisher": "IOL",
+"link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
 {
 "publisher": "Jacaranda FM",
 "link": "https://www.jacarandafm.com/shows/drive/look-lost-gecko-species-rediscovered-mpumalanga/"
+},
+{
+"publisher": "Sunday Tribune",
+"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "Sunday Independent",
+"link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "Earth.com",
+"link": "https://www.earth.com/news/reptile-thought-extinct-for-34-years-is-rediscovered-afroedura-rondavelica/"
 }
 ]
 },
@@ -2099,7 +2065,8 @@
 {
 "title": "Whistler residents help document rediscovery of \u2018extinct\u2019 Ecuadorian toad",
 "species": [
-"Atelopus mindoensis"
+"Atelopus mindoensis",
+"Batrachochytrium dendrobatidis"
 ],
 "species_firm": [],
 "on_list": "",
@@ -2115,8 +2082,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "The Revelator",
+"link": "https://therevelator.org/harlequin-toad-rediscovered/"
+}
+]
 },
 {
 "title": "Extinct-in-the-wild plant rediscovered in Sri Lanka thanks to social media - news",
@@ -2204,33 +2176,6 @@
 "also": []
 },
 {
-"title": "World\u2019s Smallest Snake Rediscovered in Barbados After 20 Years",
-"species": [
-"Tetracheilostoma carlae"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Good News Network",
-"date": "Tue, 09 Sep 2025",
-"ts": 1757401200,
-"first_seen": "2026-08-10",
-"link": "https://www.goodnewsnetwork.org/worlds-smallest-snake-rediscovered-in-barbados-after-20-years/",
-"image": "/rd-img/db933c7a8b7f15d9.jpg",
-"wayback": "",
-"desc": "At the limit of how small a snake can be, the species measures only about 3 to 4 inches long (9 to 10 centimeters) when fully grown.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Tech Explorist",
-"link": "https://www.techexplorist.com/world-smallest-snake-lost-species-found/100396/"
-}
-]
-},
-{
 "title": "Elusive Sailback Houndshark Rediscovered in Papua New Guinea After 50 Years",
 "species": [
 "Gogolia filewoodi"
@@ -2252,12 +2197,12 @@
 "outlets": 3,
 "also": [
 {
-"publisher": "IFLScience",
-"link": "https://www.iflscience.com/long-lost-sailback-houndshark-not-seen-since-1973-rediscovered-in-papua-new-guinea-80580"
-},
-{
 "publisher": "Smithsonian Magazine",
 "link": "https://www.smithsonianmag.com/smart-news/elusive-sailback-houndshark-rediscovered-in-papua-new-guinea-after-50-years-180987260/"
+},
+{
+"publisher": "IFLScience",
+"link": "https://www.iflscience.com/long-lost-sailback-houndshark-not-seen-since-1973-rediscovered-in-papua-new-guinea-80580"
 }
 ]
 },
@@ -2283,12 +2228,12 @@
 "outlets": 3,
 "also": [
 {
-"publisher": "InsideHook",
-"link": "https://www.insidehook.com/culture/what-its-like-to-rediscover-lost-shark-forrest-galante"
-},
-{
 "publisher": "The Independent",
 "link": "https://www.independent.co.uk/news/science/rare-shark-species-extinct-rediscovery-b2814721.html"
+},
+{
+"publisher": "InsideHook",
+"link": "https://www.insidehook.com/culture/what-its-like-to-rediscover-lost-shark-forrest-galante"
 }
 ]
 },
@@ -2337,7 +2282,9 @@
 },
 {
 "title": "Scientists find the world's smallest snake, once feared extinct, hanging out under a rock",
-"species": [],
+"species": [
+"Tetracheilostoma carlae"
+],
 "species_firm": [],
 "on_list": "",
 "detail": "",
@@ -2352,8 +2299,17 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 3,
+"also": [
+{
+"publisher": "Tech Explorist",
+"link": "https://www.techexplorist.com/world-smallest-snake-lost-species-found/100396/"
+},
+{
+"publisher": "Good News Network",
+"link": "https://www.goodnewsnetwork.org/worlds-smallest-snake-rediscovered-in-barbados-after-20-years/"
+}
+]
 },
 {
 "title": "World\u2019s Tiniest Snake Rediscovered After Going MIA For 20 Years",
@@ -2423,31 +2379,6 @@
 "note": "",
 "outlets": 1,
 "also": []
-},
-{
-"title": "Incredible phone footage leads to rediscovery of lost species after 46 years",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Yahoo News Australia",
-"date": "Wed, 16 Jul 2025",
-"ts": 1752649200,
-"first_seen": "2026-08-10",
-"link": "https://au.news.yahoo.com/incredible-phone-footage-leads-to-rediscovery-of-lost-species-after-46-years-070206070.html",
-"image": "/rd-img/519eb5244cf16d44.jpg",
-"wayback": "",
-"desc": "The flightless bird was thought to be extinct on the mainland and hadn't been seen for almost 50 years. See the video of its unexpected discovery.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Moneycontrol.com",
-"link": "https://www.moneycontrol.com/science/8-incredible-species-rediscovered-after-being-lost-for-years-visual-story-2869904.html"
-}
-]
 },
 {
 "title": "Shock kiwi rediscovery delights conservation world: Media release 16 July 2025",
@@ -2587,7 +2518,7 @@
 "first_seen": "2026-08-10",
 "link": "https://www.iflscience.com/worlds-smallest-otter-species-rediscovered-in-nepal-after-185-years-79464",
 "image": "/rd-img/0baeb57a732e1524.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260107022332/https://www.iflscience.com/worlds-smallest-otter-species-rediscovered-in-nepal-after-185-years-79464",
 "desc": "These otter-ly adorable carnivores don\u2019t appear to have gone extinct in the country after all.",
 "citation": "",
 "kind": "",
@@ -2624,59 +2555,31 @@
 ]
 },
 {
-"title": "Rare Gecko Species Last Seen 30 Years Ago Rediscovered",
-"species": [
-"Afroedura rondavelica"
-],
+"title": "\u2018Lost\u2019 species rediscovered after more than three decades",
+"species": [],
 "species_firm": [],
-"on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
-"publisher": "Good Things Guy",
-"date": "Tue, 20 May 2025",
-"ts": 1747724400,
-"first_seen": "2026-08-10",
-"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/",
-"image": "/rd-img/45a110d922bbbbcf.jpg",
-"wayback": "",
-"desc": "A rare gecko species last seen more than three decades ago has been rediscovered at a remote site in the Blyde River",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "'Lost' gecko species thought to be extinct rediscovered in South Africa after more than 30 years",
-"species": [
-"Afroedura rondavelica"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
-"publisher": "euronews",
+"on_list": "",
+"detail": "",
+"publisher": "The Independent",
 "date": "Thu, 15 May 2025",
 "ts": 1747292400,
 "first_seen": "2026-08-10",
-"link": "https://www.euronews.com/2025/05/15/scientists-thought-this-gecko-was-extinct-or-didnt-exist-now-its-been-rediscovered-after-3",
-"image": "/rd-img/ebeb9577f29af63d.jpg",
+"link": "https://www.independent.co.uk/bulletin/news/blyde-rondavel-gecko-rediscovered-b2751737.html",
+"image": "/rd-img/986931256c6818e9.jpg",
 "wayback": "",
-"desc": "Since it was identified in 1991, mystery surrounded this elusive little lizard for more than three decades.",
+"desc": "",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 3,
 "also": [
 {
-"publisher": "IOL",
-"link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+"publisher": "Guinness World Records",
+"link": "https://www.guinnessworldrecords.com/news/2022/5/eight-species-that-were-rediscovered-after-decades-lost-704635"
 },
 {
-"publisher": "Sunday Tribune",
-"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "Sunday Independent",
-"link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+"publisher": "Guinness World Records",
+"link": "https://www.guinnessworldrecords.com/news/2022/5/eight-species-that-were-rediscovered-after-decades-lost-704635"
 }
 ]
 },
@@ -2699,8 +2602,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Good Things Guy",
+"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
+}
+]
 },
 {
 "title": "Attenborough\u2019s echidna rediscovered by combining Indigenous knowledge with camera-trapping | npj Biodiversity",
@@ -2785,34 +2693,27 @@
 "also": []
 },
 {
-"title": "Giant Millipede Lost to Science for a Century Rediscovered in Madagascar with 20 More Species in World-First Expedition",
-"species": [
-"Spirostreptus sculptus",
-"Ptychochromis makira"
-],
+"title": "8 Incredible Wild Species Rediscovered After Being Lost for Years",
+"species": [],
 "species_firm": [],
-"on_list": "Black List (Data Deficient)",
-"detail": "tier 2",
-"publisher": "Good News Network",
-"date": "Wed, 18 Sep 2024",
-"ts": 1726642800,
+"on_list": "",
+"detail": "",
+"publisher": "Moneycontrol.com",
+"date": "Tue, 04 Mar 2025",
+"ts": 1741075200,
 "first_seen": "2026-08-10",
-"link": "https://www.goodnewsnetwork.org/giant-millipede-lost-to-science-for-a-century-rediscovered-in-madagascar-with-20-more-species-in-world-first-expedition/",
-"image": "/rd-img/a51624b002be171d.jpg",
+"link": "https://www.moneycontrol.com/science/8-incredible-species-rediscovered-after-being-lost-for-years-visual-story-2869904.html",
+"image": "",
 "wayback": "",
-"desc": "It may be the very definition of a creepy crawly, but this species of giant millipede was a major discovery for a recent scientific expedition to Madagascar. Not seen in 126 years, it was part of a bevy of species identified by scientists among the trees and w",
+"desc": "",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 2,
 "also": [
 {
-"publisher": "Miami Herald",
-"link": "https://www.miamiherald.com/living/article314834589.html"
-},
-{
-"publisher": "cnn.com",
-"link": "https://www.cnn.com/science/giant-millipede-madagascar-c2e-spc"
+"publisher": "Yahoo News Australia",
+"link": "https://au.news.yahoo.com/incredible-phone-footage-leads-to-rediscovery-of-lost-species-after-46-years-070206070.html"
 }
 ]
 },
@@ -2845,8 +2746,16 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 4,
 "also": [
+{
+"publisher": "cnn.com",
+"link": "https://www.cnn.com/science/giant-millipede-madagascar-c2e-spc"
+},
+{
+"publisher": "Good News Network",
+"link": "https://www.goodnewsnetwork.org/giant-millipede-lost-to-science-for-a-century-rediscovered-in-madagascar-with-20-more-species-in-world-first-expedition/"
+},
 {
 "publisher": "IFLScience",
 "link": "https://www.iflscience.com/giant-millipede-lost-for-over-120-years-rediscovered-in-madagascan-forest-75145"
@@ -2980,26 +2889,6 @@
 "also": []
 },
 {
-"title": "Blind golden mole that swims through the sand rediscovered in SA",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Mail & Guardian",
-"date": "Wed, 27 Dec 2023",
-"ts": 1703664000,
-"first_seen": "2026-08-10",
-"link": "https://mg.co.za/the-green-guardian/2023-12-27-blind-golden-mole-that-swims-through-the-sand-rediscovered-in-sa/",
-"image": "/rd-img/70c71650309862ce.webp",
-"wayback": "",
-"desc": "The search for De Winton\u2019s mole involved  sniffer dog Jessie and collecting the mole\u2019s DNA from the sand",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "Track-a-mole: Sniffer dog and eDNA help \u2018rediscover\u2019 South African golden mole - news",
 "species": [
 "Cryptochloris wintoni",
@@ -3021,8 +2910,12 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
+{
+"publisher": "Mail & Guardian",
+"link": "https://mg.co.za/the-green-guardian/2023-12-27-blind-golden-mole-that-swims-through-the-sand-rediscovered-in-sa/"
+},
 {
 "publisher": "Metro",
 "link": "https://metro.co.uk/2023/11/30/golden-mole-missing-80-years-rediscovered-south-africa-19906928/"
@@ -3148,28 +3041,6 @@
 ]
 },
 {
-"title": "'Extinct' holly tree in Brazil rediscovered living in big city, say scientists",
-"species": [
-"Ilex sapiiformis"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Business Insider",
-"date": "Sun, 01 Oct 2023",
-"ts": 1696143600,
-"first_seen": "2026-08-10",
-"link": "https://www.businessinsider.com/rare-pernambuco-holly-tree-rediscovered-after-186-years-2023-9",
-"image": "/rd-img/535b466d9130abb8.jpg",
-"wayback": "",
-"desc": "The expedition in Brazil spotted the Pernambuco holly when they recognized its distinctive tiny white flowers, Euronews reported.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "'Lost\u2019 Brazilian tree rediscovered after almost 200 years",
 "species": [
 "Ilex sapiiformis"
@@ -3188,8 +3059,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Business Insider",
+"link": "https://www.businessinsider.com/rare-pernambuco-holly-tree-rediscovered-after-186-years-2023-9"
+}
+]
 },
 {
 "title": "Tree Thought Extinct Discovered After 2 Centuries in \u2018Incredible\u2019 Find",
@@ -3398,35 +3274,11 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Eight species that have been rediscovered after decades lost",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Guinness World Records",
-"date": "Fri, 20 May 2022",
-"ts": 1653030000,
-"first_seen": "2026-08-10",
-"link": "https://www.guinnessworldrecords.com/news/2022/5/eight-species-that-were-rediscovered-after-decades-lost-704635",
-"image": "/rd-img/33b8b53078ca6c88.jpg",
-"wayback": "",
-"desc": "Since 2017, eight of the",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
+"outlets": 2,
 "also": [
 {
-"publisher": "The Independent",
-"link": "https://www.independent.co.uk/bulletin/news/blyde-rondavel-gecko-rediscovered-b2751737.html"
-},
-{
-"publisher": "Guinness World Records",
-"link": "https://www.guinnessworldrecords.com/news/2022/5/eight-species-that-were-rediscovered-after-decades-lost-704635"
+"publisher": "Miami Herald",
+"link": "https://www.miamiherald.com/living/article314834589.html"
 }
 ]
 },
@@ -3501,16 +3353,16 @@
 "outlets": 4,
 "also": [
 {
-"publisher": "IFLScience",
-"link": "https://www.iflscience.com/tap-dancing-spider-lost-to-science-for-92-years-rediscovered-in-portugal-72009"
-},
-{
 "publisher": "weforum.org",
 "link": "https://www.weforum.org/stories/2024/06/rediscovered-species-biodiversity/"
 },
 {
 "publisher": "The World Economic Forum",
 "link": "https://www.weforum.org/stories/2024/06/rediscovered-species-biodiversity/"
+},
+{
+"publisher": "IFLScience",
+"link": "https://www.iflscience.com/tap-dancing-spider-lost-to-science-for-92-years-rediscovered-in-portugal-72009"
 }
 ]
 },
@@ -3729,29 +3581,6 @@
 "image": "/rd-img/6c6d4a1b880bbdf0.jpg",
 "wayback": "",
 "desc": "",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Harlequin Found: \u2018Extinct\u2019 Toad Rediscovered After 30 Years",
-"species": [
-"Atelopus mindoensis",
-"Batrachochytrium dendrobatidis"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "The Revelator",
-"date": "Mon, 11 May 2020",
-"ts": 1589180400,
-"first_seen": "2026-08-10",
-"link": "https://therevelator.org/harlequin-toad-rediscovered/",
-"image": "/rd-img/71983ebc524f150d.jpg",
-"wayback": "",
-"desc": "The Mindo harlequin toad, last seen in Ecuador in 1989, was feared a victim of the amphibian-killing chytrid fungus. Have other lost species survived, too?",
 "citation": "",
 "kind": "",
 "note": "",

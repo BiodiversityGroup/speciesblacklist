@@ -1817,6 +1817,15 @@ function ntRender() {
    loaded, counted and captioned apart from them and feeds nothing back. */
 let RD = null, rdLoading = false;
 
+/* The tag used to print the internal list name, so a species that had just been FOUND
+   was labelled "Lost Species" — which reads as a contradiction on a page about finds.
+   The tag now says what the match means: it was on a list we keep of species missing. */
+const LIST_LABEL = {
+  "Lost Species": "was on our lost list",
+  "Black List (Data Deficient)": "on the Black List",
+  "Never assessed (reptiles)": "never assessed",
+};
+
 function ensureRedisc() {
   if (RD || rdLoading) { if (RD) rdRender(); return; }
   rdLoading = true;
@@ -1939,7 +1948,8 @@ function rdRender() {
             ${c.outlets > 1
               ? `<span class="rdtag">${c.outlets} outlets</span>` : ""}
             ${c.on_list
-              ? `<span class="rdtag rdtag-list">${esc(c.on_list)}</span>` : ""}
+              ? `<span class="rdtag rdtag-list" title="${esc(c.detail || "")}"
+                   >${esc(LIST_LABEL[c.on_list] || c.on_list)}</span>` : ""}
           </p>
         </div>
       </a>
