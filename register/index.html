@@ -1432,6 +1432,27 @@
       <a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a> page.</p>
   </div>
 
+  <div class="prose">
+    <h3>Another list, counting something else</h3>
+    <p><a href="https://recentlyextinctspecies.com/" target="_blank"
+      rel="noopener">Recently Extinct Plants and Animals</a> is the most thorough
+      catalogue of its kind we know of — 12,859 taxa, painstakingly sourced, with a
+      citation behind almost every entry. It is worth your time, and it is worth saying
+      exactly how it differs from this page, because the two look like the same subject
+      and are not.</p>
+    <p>Its <a href="https://recentlyextinctspecies.com/database/local-rediscoveries"
+      target="_blank" rel="noopener">rediscoveries section</a> counts species that
+      disappeared from a <em>country</em> and were later refound there — a plant gone
+      from the British flora for ninety years, turning up on one roadside. This page
+      counts species missing from <em>science</em>, everywhere, at once. Both are real
+      losses and both matter; they are simply different questions.</p>
+    <p>The gap is measurable. We compared the two: of 1,063 species in their
+      rediscoveries listing, exactly <strong>one</strong> also appears among the 2,135
+      here — <span class="sci">Amphilophus lyonsi</span>, a Costa Rican cichlid, and it
+      has indeed been found again. That near-total absence is not a disagreement between
+      the lists. It is the two definitions doing their jobs.</p>
+  </div>
+
   <div class="prose lostsource">
     <p class="eyebrow">Sources</p>
     <p>Compiled from the Re:wild / IUCN&nbsp;SSC lost species list, following the
@@ -1968,11 +1989,15 @@ function ensureLost() {
 
 function renderLostStats() {
   const m = LOST.meta, byc = m.by_class || {};
+  // The refound count is shown rather than quietly folded into the total. Two of these
+  // species have been found again since the list was compiled, which makes the headline
+  // "unaccounted for" slightly generous — and the whole point of the list is that this
+  // number should go up.
   const cells = [
-    [m.n_species.toLocaleString(), "species unaccounted for"],
+    [m.n_species.toLocaleString(), "on the list"],
     [(byc["long-lost"] || 0).toLocaleString(), "lost over 50 years"],
     [m.n_places.toLocaleString(), "countries &amp; regions"],
-    [m.oldest_record || "—", "oldest last record"],
+    [(byc["rediscovered"] || 0).toLocaleString(), "found again since"],
   ];
   $("#lostStats").innerHTML = cells.map(
     ([n, l]) => `<div class="loststat"><b>${n}</b><span>${l}</span></div>`).join("");

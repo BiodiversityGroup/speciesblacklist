@@ -12905,27 +12905,28 @@
 ],
 "meta": {
 "n_species": 2135,
-"n_mapped": 2078,
-"n_unmapped": 57,
-"n_places": 238,
+"n_mapped": 2079,
+"n_unmapped": 56,
+"n_places": 236,
 "compiled": "January 2023",
 "nomenclature": "Long & Rodriguez 2022, Oryx 56(4)",
 "by_class": {
-"long-lost": 1188,
-"lost": 763,
-"unclassified": 184
+"long-lost": 1135,
+"lost": 816,
+"unclassified": 182,
+"rediscovered": 2
 },
 "by_group": {
 "Reptile": 582,
 "Fish": 327,
-"Amphibian": 297,
+"Amphibian": 304,
 "Insect": 212,
 "Flowering plants": 173,
 "Snails & slugs": 114,
-"Mammal": 82,
 "Arachnids": 72,
 "Plant - Trees & Shrubs": 71,
-"Bird": 47,
+"Mammal": 68,
+"Bird": 54,
 "Orchids": 46,
 "Crustaceans": 41,
 "Plant - Grasses & Sedges": 15,
@@ -12942,33 +12943,33 @@
 "Worm": 2,
 "Centipede": 2
 },
-"oldest_record": 1500
+"oldest_record": 1790
 },
 "places": [
 {
 "place": "Brazil",
 "lat": -10.333,
 "lon": -53.2,
-"n": 270,
+"n": 269,
 "cls": {
-"lost": 23,
-"long-lost": 241,
+"lost": 24,
+"long-lost": 239,
 "unclassified": 6
 },
 "grp": {
 "Fish": 189,
-"Amphibian": 42,
+"Amphibian": 41,
 "Reptile": 20,
-"Bird": 5,
+"Bird": 6,
 "Insect": 5
 },
 "rl": {
-"LC": 117,
-"DD": 42,
-"CR": 36,
-"not in IUCN index": 25,
+"LC": 116,
+"DD": 44,
+"not in IUCN index": 36,
+"CR(PE)": 23,
 "EN": 21,
-"NE": 14
+"CR": 13
 },
 "oldest": 1834,
 "examples": [
@@ -12982,28 +12983,29 @@
 "place": "Ecuador",
 "lat": -1.34,
 "lon": -79.367,
-"n": 107,
+"n": 112,
 "cls": {
-"long-lost": 59,
+"long-lost": 58,
 "unclassified": 14,
-"lost": 34
+"lost": 39,
+"rediscovered": 1
 },
 "grp": {
 "Flowering plants": 32,
-"Amphibian": 27,
+"Amphibian": 31,
 "Snails & slugs": 12,
 "Plant - Trees & Shrubs": 8,
 "Plant - Aquatic plant": 6
 },
 "rl": {
-"CR": 69,
-"CR(PE)": 14,
-"not in IUCN index": 10,
-"DD": 6,
+"CR(PE)": 79,
+"not in IUCN index": 11,
+"DD": 7,
+"CR": 7,
 "NE": 4,
-"EX": 3
+"EX": 2
 },
-"oldest": 1800,
+"oldest": 1823,
 "examples": [
 "Aetheolaena hypoleuca",
 "Aetheolaena ledifolia",
@@ -13017,8 +13019,8 @@
 "lon": 46.442,
 "n": 104,
 "cls": {
-"long-lost": 66,
-"lost": 29,
+"long-lost": 65,
+"lost": 30,
 "unclassified": 9
 },
 "grp": {
@@ -13029,14 +13031,14 @@
 "Insect": 7
 },
 "rl": {
-"CR": 38,
-"DD": 25,
-"not in IUCN index": 11,
-"EN": 10,
-"NE": 9,
-"VU": 8
+"CR(PE)": 30,
+"DD": 26,
+"EN": 11,
+"not in IUCN index": 10,
+"CR": 10,
+"NE": 8
 },
-"oldest": 1550,
+"oldest": 1849,
 "examples": [
 "Aeranthes albidiflora",
 "Agriocnemis merina",
@@ -13062,10 +13064,10 @@
 },
 "rl": {
 "EX": 35,
-"NE": 29,
-"not in IUCN index": 14,
-"CR": 8,
-"CR(PE)": 3,
+"not in IUCN index": 20,
+"NE": 20,
+"CR(PE)": 12,
+"CR": 2,
 "EW": 1
 },
 "oldest": 1850,
@@ -13074,6 +13076,39 @@
 "Achyranthes atollensis",
 "Amaranthus brownii",
 "Argyroxiphium virescens"
+]
+},
+{
+"place": "Colombia",
+"lat": 4.1,
+"lon": -72.909,
+"n": 89,
+"cls": {
+"lost": 71,
+"long-lost": 17,
+"unclassified": 1
+},
+"grp": {
+"Amphibian": 66,
+"Reptile": 12,
+"Insect": 3,
+"Fish": 2,
+"Bird": 2
+},
+"rl": {
+"CR(PE)": 38,
+"CR": 26,
+"DD": 13,
+"not in IUCN index": 8,
+"EN": 2,
+"LC": 1
+},
+"oldest": 1862,
+"examples": [
+"Allobates ranoides",
+"Alopoglossus lehmanni",
+"Anadia altaserrania",
+"Andinobates viridis"
 ]
 },
 {
@@ -13093,12 +13128,12 @@
 "Plant - Trees & Shrubs": 4
 },
 "rl": {
-"CR": 60,
-"CR(PE)": 8,
+"CR(PE)": 66,
 "DD": 6,
-"VU": 5,
-"EN": 2,
-"not in IUCN index": 2
+"VU": 4,
+"EN": 3,
+"not in IUCN index": 3,
+"LC": 1
 },
 "oldest": 1893,
 "examples": [
@@ -13106,39 +13141,6 @@
 "Acanthoxia aculeus",
 "Aerangis maireae",
 "Agelanthus rondensis"
-]
-},
-{
-"place": "Colombia",
-"lat": 4.1,
-"lon": -72.909,
-"n": 84,
-"cls": {
-"lost": 66,
-"long-lost": 17,
-"unclassified": 1
-},
-"grp": {
-"Amphibian": 62,
-"Reptile": 12,
-"Insect": 3,
-"Fish": 2,
-"Flowering plants": 1
-},
-"rl": {
-"CR": 58,
-"DD": 15,
-"not in IUCN index": 3,
-"EN": 2,
-"NE": 2,
-"LC": 1
-},
-"oldest": 1862,
-"examples": [
-"Allobates ranoides",
-"Alopoglossus lehmanni",
-"Anadia altaserrania",
-"Andinobates viridis"
 ]
 },
 {
@@ -13159,14 +13161,14 @@
 "Crustaceans": 5
 },
 "rl": {
+"CR(PE)": 23,
 "not in IUCN index": 21,
-"CR": 18,
-"CR(PE)": 9,
 "EX": 6,
-"NE": 4,
-"LC": 4
+"NE": 5,
+"LC": 4,
+"DD": 4
 },
-"oldest": 1800,
+"oldest": 1862,
 "examples": [
 "Anemone virginiana",
 "Aquilegia micrantha",
@@ -13175,64 +13177,31 @@
 ]
 },
 {
-"place": "Australia",
-"lat": -24.776,
-"lon": 134.755,
-"n": 62,
-"cls": {
-"lost": 29,
-"unclassified": 7,
-"long-lost": 26
-},
-"grp": {
-"Mammal": 23,
-"Reptile": 16,
-"Fish": 11,
-"Amphibian": 6,
-"Insect": 2
-},
-"rl": {
-"EX": 26,
-"DD": 16,
-"LC": 10,
-"CR": 3,
-"not in IUCN index": 3,
-"EN": 1
-},
-"oldest": 1840,
-"examples": [
-"Acentronura larsonae",
-"Aipysurus fuscus",
-"Beddomeia tumida",
-"Bettongia pusilla"
-]
-},
-{
 "place": "Mexico",
 "lat": 23.659,
 "lon": -102.008,
-"n": 56,
+"n": 65,
 "cls": {
 "long-lost": 28,
-"lost": 25,
+"lost": 34,
 "unclassified": 3
 },
 "grp": {
-"Amphibian": 18,
+"Amphibian": 24,
 "Reptile": 14,
 "Insect": 7,
-"Crustaceans": 6,
-"Bird": 4
+"Mammal": 7,
+"Crustaceans": 6
 },
 "rl": {
-"CR": 26,
+"CR(PE)": 30,
 "DD": 12,
+"CR": 8,
 "NE": 7,
-"not in IUCN index": 3,
 "VU": 3,
 "EX": 2
 },
-"oldest": 1800,
+"oldest": 1893,
 "examples": [
 "Abronia mitchelli",
 "Abronia ochoterenai",
@@ -13259,13 +13228,13 @@
 },
 "rl": {
 "DD": 20,
-"CR": 12,
-"not in IUCN index": 8,
-"NE": 3,
-"EN": 2,
-"VU": 1
+"not in IUCN index": 9,
+"CR": 6,
+"CR(PE)": 6,
+"NE": 2,
+"EN": 2
 },
-"oldest": 1800,
+"oldest": 1854,
 "examples": [
 "Argyrogena vittacaudata",
 "Asymblepharus tragbulense",
@@ -13286,12 +13255,12 @@
 "Arachnids": 3
 },
 "rl": {
-"NE": 21,
-"CR": 13,
-"not in IUCN index": 5,
-"EN": 2,
-"EX": 1,
-"DD": 1
+"not in IUCN index": 16,
+"CR(PE)": 9,
+"NE": 8,
+"CR": 5,
+"EN": 3,
+"EX": 2
 },
 "oldest": 1836,
 "examples": [
@@ -13299,6 +13268,39 @@
 "Anthicodes maculatus",
 "Aplothorax burchellii",
 "Apteromimus platyderoides"
+]
+},
+{
+"place": "Australia",
+"lat": -24.776,
+"lon": 134.755,
+"n": 42,
+"cls": {
+"lost": 29,
+"unclassified": 5,
+"long-lost": 8
+},
+"grp": {
+"Reptile": 18,
+"Fish": 11,
+"Mammal": 4,
+"Amphibian": 3,
+"Insect": 2
+},
+"rl": {
+"DD": 16,
+"LC": 10,
+"EX": 6,
+"EN": 2,
+"CR(PE)": 2,
+"not in IUCN index": 2
+},
+"oldest": 1889,
+"examples": [
+"Acentronura larsonae",
+"Aipysurus fuscus",
+"Beddomeia tumida",
+"Biroella tardigrada"
 ]
 },
 {
@@ -13318,12 +13320,12 @@
 "Plant - Grasses & Sedges": 1
 },
 "rl": {
-"CR": 20,
-"EN": 7,
+"CR": 14,
+"CR(PE)": 8,
 "DD": 7,
+"EN": 5,
 "not in IUCN index": 3,
-"EX": 2,
-"VU": 2
+"EX": 2
 },
 "oldest": 1865,
 "examples": [
@@ -13331,38 +13333,6 @@
 "Beauprea penariensis",
 "Bocquillonia arborea",
 "Brunoniella neocaledonica"
-]
-},
-{
-"place": "Sri Lanka",
-"lat": 7.555,
-"lon": 80.714,
-"n": 39,
-"cls": {
-"long-lost": 32,
-"lost": 7
-},
-"grp": {
-"Amphibian": 18,
-"Insect": 10,
-"Reptile": 9,
-"Fish": 1,
-"Crustaceans": 1
-},
-"rl": {
-"EX": 18,
-"not in IUCN index": 7,
-"DD": 5,
-"CR": 4,
-"EN": 4,
-"CR(PE)": 1
-},
-"oldest": 1800,
-"examples": [
-"Anisogomphus ceylonicus",
-"Anisogomphus solitaris",
-"Cnemaspis amith",
-"Cnemaspis latha"
 ]
 },
 {
@@ -13380,8 +13350,8 @@
 "rl": {
 "LC": 14,
 "DD": 7,
-"CR": 5,
 "EN": 5,
+"CR": 4,
 "not in IUCN index": 3,
 "VU": 2
 },
@@ -13394,14 +13364,78 @@
 ]
 },
 {
+"place": "Venezuela",
+"lat": 8.002,
+"lon": -66.111,
+"n": 37,
+"cls": {
+"lost": 33,
+"long-lost": 3,
+"unclassified": 1
+},
+"grp": {
+"Amphibian": 20,
+"Reptile": 16,
+"Flowering plants": 1
+},
+"rl": {
+"CR(PE)": 12,
+"CR": 10,
+"LC": 8,
+"DD": 3,
+"EN": 2,
+"NT": 1
+},
+"oldest": 1856,
+"examples": [
+"Adercosaurus vixadnexus",
+"Aechmea cymosopaniculata",
+"Amphisbaena rozei",
+"Anadia blakei"
+]
+},
+{
+"place": "Peru",
+"lat": -6.87,
+"lon": -75.046,
+"n": 36,
+"cls": {
+"long-lost": 10,
+"lost": 23,
+"unclassified": 3
+},
+"grp": {
+"Amphibian": 19,
+"Reptile": 13,
+"Mammal": 1,
+"Insect": 1,
+"Fish": 1
+},
+"rl": {
+"DD": 17,
+"CR(PE)": 10,
+"CR": 3,
+"not in IUCN index": 3,
+"NE": 2,
+"NT": 1
+},
+"oldest": 1900,
+"examples": [
+"Amphisbaena polygrammica",
+"Anolis laevis",
+"Atelopus dimorphus",
+"Atelopus erythropus"
+]
+},
+{
 "place": "The Democratic Republic of Congo",
 "lat": -2.981,
 "lon": 23.822,
-"n": 33,
+"n": 34,
 "cls": {
 "long-lost": 22,
 "unclassified": 10,
-"lost": 1
+"lost": 2
 },
 "grp": {
 "Reptile": 12,
@@ -13412,10 +13446,10 @@
 },
 "rl": {
 "DD": 16,
-"CR": 5,
 "LC": 5,
-"EN": 3,
-"CR(PE)": 2,
+"EN": 4,
+"CR(PE)": 4,
+"CR": 3,
 "VU": 1
 },
 "oldest": 1915,
@@ -13424,37 +13458,6 @@
 "Chlorocypha ghesquierei",
 "Chlorocypha granata",
 "Cryptothylax minutus"
-]
-},
-{
-"place": "Peru",
-"lat": -6.87,
-"lon": -75.046,
-"n": 33,
-"cls": {
-"long-lost": 10,
-"lost": 20,
-"unclassified": 3
-},
-"grp": {
-"Amphibian": 17,
-"Reptile": 13,
-"Mammal": 1,
-"Insect": 1,
-"Fish": 1
-},
-"rl": {
-"DD": 17,
-"CR": 11,
-"NE": 4,
-"not in IUCN index": 1
-},
-"oldest": 1800,
-"examples": [
-"Amphisbaena polygrammica",
-"Anolis laevis",
-"Atelopus dimorphus",
-"Atelopus erythropus"
 ]
 },
 {
@@ -13476,7 +13479,8 @@
 },
 "rl": {
 "DD": 13,
-"CR": 11,
+"CR(PE)": 7,
+"CR": 4,
 "not in IUCN index": 4,
 "LC": 3
 },
@@ -13505,8 +13509,8 @@
 "Centipede": 2
 },
 "rl": {
-"CR": 21,
-"CR(PE)": 10
+"CR(PE)": 30,
+"CR": 1
 },
 "oldest": 1892,
 "examples": [
@@ -13534,11 +13538,11 @@
 "Crustaceans": 2
 },
 "rl": {
-"CR": 19,
+"CR(PE)": 18,
 "DD": 5,
+"CR": 3,
 "not in IUCN index": 3,
-"EX": 2,
-"CR(PE)": 2
+"EX": 2
 },
 "oldest": 1880,
 "examples": [
@@ -13546,37 +13550,6 @@
 "Amolops mengyangensis",
 "Anabarilius qiluensis",
 "Anabarilius yangzonensis"
-]
-},
-{
-"place": "Venezuela",
-"lat": 8.002,
-"lon": -66.111,
-"n": 30,
-"cls": {
-"lost": 26,
-"long-lost": 3,
-"unclassified": 1
-},
-"grp": {
-"Reptile": 16,
-"Amphibian": 13,
-"Flowering plants": 1
-},
-"rl": {
-"CR": 14,
-"LC": 9,
-"DD": 3,
-"EN": 2,
-"EX": 1,
-"NT": 1
-},
-"oldest": 1856,
-"examples": [
-"Adercosaurus vixadnexus",
-"Aechmea cymosopaniculata",
-"Amphisbaena rozei",
-"Anadia blakei"
 ]
 },
 {
@@ -13596,12 +13569,12 @@
 "Plant - Trees & Shrubs": 1
 },
 "rl": {
-"not in IUCN index": 7,
-"CR": 6,
-"DD": 5,
-"NE": 5,
-"LC": 1,
-"CR(PE)": 1
+"not in IUCN index": 9,
+"DD": 6,
+"CR": 3,
+"CR(PE)": 3,
+"NE": 2,
+"LC": 1
 },
 "oldest": 1859,
 "examples": [
@@ -13609,6 +13582,68 @@
 "Ceratinopsis acripes",
 "Clethra arborea",
 "Discula lyelliana"
+]
+},
+{
+"place": "Indonesia",
+"lat": -2.483,
+"lon": 117.89,
+"n": 25,
+"cls": {
+"unclassified": 6,
+"lost": 7,
+"long-lost": 12
+},
+"grp": {
+"Mammal": 7,
+"Fish": 4,
+"Reptile": 4,
+"Bird": 3,
+"Cartilaginous Fish (sharks, rays, skates, and chimaeras)": 2
+},
+"rl": {
+"DD": 11,
+"CR(PE)": 5,
+"CR": 4,
+"not in IUCN index": 2,
+"EN": 2,
+"EX": 1
+},
+"oldest": 1866,
+"examples": [
+"Babirusa babyrousa",
+"Carcharhinus hemiodon",
+"Cyornis ruckii",
+"Duttaphrynus valhallae"
+]
+},
+{
+"place": "Haiti",
+"lat": 19.14,
+"lon": -72.357,
+"n": 24,
+"cls": {
+"long-lost": 8,
+"lost": 15,
+"unclassified": 1
+},
+"grp": {
+"Reptile": 17,
+"Amphibian": 5,
+"Plant - Cactus": 1,
+"Flowering plants": 1
+},
+"rl": {
+"CR(PE)": 14,
+"CR": 9,
+"EN": 1
+},
+"oldest": 1857,
+"examples": [
+"Amphisbaena cayemite",
+"Amphisbaena leali",
+"Anolis singularis",
+"Consolea falcata"
 ]
 },
 {
@@ -13629,10 +13664,9 @@
 "Crustaceans": 1
 },
 "rl": {
-"CR": 20,
+"CR(PE)": 21,
 "DD": 2,
-"VU": 1,
-"CR(PE)": 1
+"VU": 1
 },
 "oldest": 1892,
 "examples": [
@@ -13643,60 +13677,28 @@
 ]
 },
 {
-"place": "Indonesia",
-"lat": -2.483,
-"lon": 117.89,
-"n": 24,
-"cls": {
-"unclassified": 6,
-"lost": 6,
-"long-lost": 12
-},
-"grp": {
-"Mammal": 7,
-"Fish": 4,
-"Reptile": 4,
-"Bird": 3,
-"Cartilaginous Fish (sharks, rays, skates, and chimaeras)": 2
-},
-"rl": {
-"DD": 11,
-"CR": 8,
-"not in IUCN index": 2,
-"EN": 2,
-"EX": 1
-},
-"oldest": 1800,
-"examples": [
-"Babirusa babyrousa",
-"Carcharhinus hemiodon",
-"Cyornis ruckii",
-"Duttaphrynus valhallae"
-]
-},
-{
 "place": "Thailand",
 "lat": 14.897,
 "lon": 100.833,
-"n": 23,
+"n": 22,
 "cls": {
 "lost": 11,
-"long-lost": 6,
+"long-lost": 5,
 "unclassified": 6
 },
 "grp": {
 "Reptile": 14,
 "Fish": 3,
-"Mammal": 2,
 "Amphibian": 1,
+"Mammal": 1,
 "Cartilaginous Fish (sharks, rays, skates, and chimaeras)": 1
 },
 "rl": {
 "DD": 12,
-"CR": 4,
+"CR(PE)": 3,
 "EN": 2,
 "LC": 2,
-"EX": 2,
+"CR": 1,
 "not in IUCN index": 1
 },
 "oldest": 1923,
@@ -13726,8 +13728,8 @@
 },
 "rl": {
 "DD": 9,
-"CR": 7,
-"CR(PE)": 4,
+"CR(PE)": 7,
+"CR": 4,
 "not in IUCN index": 1,
 "VU": 1
 },
@@ -13756,12 +13758,11 @@
 "Snails & slugs": 1
 },
 "rl": {
-"not in IUCN index": 10,
-"CR": 4,
+"not in IUCN index": 12,
+"CR(PE)": 4,
 "DD": 3,
-"NE": 2,
 "EX": 1,
-"CR(PE)": 1
+"CR": 1
 },
 "oldest": 1804,
 "examples": [
@@ -13769,6 +13770,70 @@
 "Ameles fasciipennis",
 "Anonconotus apenninigenus",
 "Ephippiger camillae"
+]
+},
+{
+"place": "Panama",
+"lat": 8.56,
+"lon": -81.131,
+"n": 21,
+"cls": {
+"rediscovered": 1,
+"long-lost": 1,
+"lost": 17,
+"unclassified": 2
+},
+"grp": {
+"Amphibian": 13,
+"Fish": 3,
+"Reptile": 3,
+"Flowering plants": 1,
+"Coral": 1
+},
+"rl": {
+"CR(PE)": 7,
+"CR": 6,
+"DD": 4,
+"not in IUCN index": 3,
+"EN": 1
+},
+"oldest": 1938,
+"examples": [
+"Amphilophus lyonsi",
+"Bryx veleronis",
+"Celestus adercus",
+"Costus vinosus"
+]
+},
+{
+"place": "Sri Lanka",
+"lat": 7.555,
+"lon": 80.714,
+"n": 21,
+"cls": {
+"long-lost": 14,
+"lost": 7
+},
+"grp": {
+"Insect": 10,
+"Reptile": 9,
+"Fish": 1,
+"Crustaceans": 1
+},
+"rl": {
+"CR(PE)": 5,
+"DD": 5,
+"EN": 4,
+"not in IUCN index": 4,
+"CR": 2,
+"NE": 1
+},
+"oldest": 1930,
+"examples": [
+"Anisogomphus ceylonicus",
+"Anisogomphus solitaris",
+"Cnemaspis amith",
+"Cnemaspis latha"
 ]
 },
 {
@@ -13788,9 +13853,9 @@
 "Fish": 1
 },
 "rl": {
-"not in IUCN index": 16,
-"NE": 4,
-"CR": 1
+"not in IUCN index": 17,
+"NE": 3,
+"CR(PE)": 1
 },
 "oldest": 1983,
 "examples": [
@@ -13806,24 +13871,24 @@
 "lon": 24.992,
 "n": 20,
 "cls": {
-"long-lost": 12,
-"lost": 6,
+"long-lost": 10,
+"lost": 8,
 "unclassified": 2
 },
 "grp": {
 "Insect": 7,
-"Reptile": 5,
-"Mammal": 4,
+"Mammal": 5,
+"Reptile": 4,
 "Plant - Trees & Shrubs": 2,
 "Flowering plants": 1
 },
 "rl": {
-"DD": 7,
-"CR": 6,
+"DD": 8,
+"CR": 4,
+"CR(PE)": 4,
 "not in IUCN index": 2,
-"CR(PE)": 2,
-"EX": 2,
-"VU": 1
+"VU": 1,
+"EN": 1
 },
 "oldest": 1879,
 "examples": [
@@ -13834,93 +13899,36 @@
 ]
 },
 {
-"place": "Costa Rica",
-"lat": 10.274,
-"lon": -84.074,
+"place": "Argentina",
+"lat": -34.996,
+"lon": -64.967,
 "n": 19,
 "cls": {
-"long-lost": 5,
 "lost": 13,
+"long-lost": 5,
 "unclassified": 1
 },
 "grp": {
-"Amphibian": 14,
-"Fish": 2,
-"Bird": 1,
-"Insect": 1,
-"Reptile": 1
+"Reptile": 8,
+"Bird": 3,
+"Amphibian": 3,
+"Insect": 2,
+"Mammal": 2
 },
 "rl": {
-"CR": 10,
-"DD": 4,
-"EX": 3,
-"EN": 2
-},
-"oldest": 1895,
-"examples": [
-"Amazilia alfaroana",
-"Amphilophus lyonsi",
-"Atelopus chiriquiensis",
-"Atelopus chirripoensis"
-]
-},
-{
-"place": "Panama",
-"lat": 8.56,
-"lon": -81.131,
-"n": 19,
-"cls": {
-"lost": 16,
-"long-lost": 1,
-"unclassified": 2
-},
-"grp": {
-"Amphibian": 12,
-"Fish": 3,
-"Reptile": 2,
-"Flowering plants": 1,
-"Coral": 1
-},
-"rl": {
-"CR": 11,
-"DD": 3,
+"DD": 6,
+"CR(PE)": 5,
 "not in IUCN index": 3,
-"EN": 1,
-"EX": 1
+"CR": 3,
+"LC": 1,
+"VU": 1
 },
-"oldest": 1938,
+"oldest": 1899,
 "examples": [
-"Amphilophus lyonsi",
-"Atelopus chiriquiensis",
-"Bryx veleronis",
-"Celestus adercus"
-]
-},
-{
-"place": "Haiti",
-"lat": 19.14,
-"lon": -72.357,
-"n": 18,
-"cls": {
-"long-lost": 8,
-"lost": 9,
-"unclassified": 1
-},
-"grp": {
-"Reptile": 12,
-"Amphibian": 4,
-"Plant - Cactus": 1,
-"Flowering plants": 1
-},
-"rl": {
-"CR": 18
-},
-"oldest": 1857,
-"examples": [
-"Amphisbaena cayemite",
-"Amphisbaena leali",
-"Anolis singularis",
-"Consolea falcata"
+"Amphisbaena bagual",
+"Anodorhynchus glaucus",
+"Cercosaura steyeri",
+"Gastrotheca christiani"
 ]
 },
 {
@@ -13941,12 +13949,11 @@
 "Amphibian": 1
 },
 "rl": {
-"CR": 10,
+"CR(PE)": 11,
 "DD": 3,
 "NT": 2,
 "EN": 1,
-"not in IUCN index": 1,
-"CR(PE)": 1
+"not in IUCN index": 1
 },
 "oldest": 1909,
 "examples": [
@@ -13974,10 +13981,11 @@
 "Reptile": 1
 },
 "rl": {
-"not in IUCN index": 11,
-"CR": 2,
+"not in IUCN index": 12,
 "DD": 2,
-"NE": 2
+"CR(PE)": 1,
+"CR": 1,
+"NE": 1
 },
 "oldest": 1808,
 "examples": [
@@ -13985,6 +13993,38 @@
 "Belisarius ibericus",
 "Canarinus demaisoni",
 "Cosmocampus retropinnis"
+]
+},
+{
+"place": "Costa Rica",
+"lat": 10.274,
+"lon": -84.074,
+"n": 17,
+"cls": {
+"long-lost": 5,
+"rediscovered": 1,
+"lost": 10,
+"unclassified": 1
+},
+"grp": {
+"Amphibian": 12,
+"Fish": 2,
+"Bird": 1,
+"Insect": 1,
+"Reptile": 1
+},
+"rl": {
+"CR(PE)": 7,
+"CR": 4,
+"DD": 4,
+"EN": 2
+},
+"oldest": 1895,
+"examples": [
+"Amazilia alfaroana",
+"Amphilophus lyonsi",
+"Atelopus chirripoensis",
+"Bryx veleronis"
 ]
 },
 {
@@ -14005,11 +14045,11 @@
 "Plant - Aquatic plant": 1
 },
 "rl": {
-"NE": 5,
-"not in IUCN index": 4,
+"not in IUCN index": 7,
 "LC": 3,
-"CR": 2,
+"CR(PE)": 3,
 "DD": 2,
+"NE": 1,
 "EX": 1
 },
 "oldest": 1862,
@@ -14026,8 +14066,8 @@
 "lon": 144.249,
 "n": 17,
 "cls": {
-"long-lost": 13,
-"lost": 4
+"long-lost": 12,
+"lost": 5
 },
 "grp": {
 "Reptile": 8,
@@ -14038,7 +14078,8 @@
 "rl": {
 "DD": 12,
 "LC": 2,
-"EX": 2,
+"CR(PE)": 1,
+"EX": 1,
 "CR": 1
 },
 "oldest": 1913,
@@ -14050,60 +14091,34 @@
 ]
 },
 {
-"place": "Argentina",
-"lat": -34.996,
-"lon": -64.967,
-"n": 16,
-"cls": {
-"lost": 10,
-"long-lost": 5,
-"unclassified": 1
-},
-"grp": {
-"Reptile": 8,
-"Bird": 3,
-"Insect": 2,
-"Amphibian": 1,
-"Fish": 1
-},
-"rl": {
-"DD": 6,
-"CR": 5,
-"not in IUCN index": 3,
-"LC": 1,
-"VU": 1
-},
-"oldest": 1899,
-"examples": [
-"Amphisbaena bagual",
-"Anodorhynchus glaucus",
-"Cercosaura steyeri",
-"Gastrotheca christiani"
-]
-},
-{
-"place": "Honduras",
-"lat": 15.257,
-"lon": -86.076,
+"place": "Cameroon",
+"lat": 4.613,
+"lon": 13.154,
 "n": 15,
 "cls": {
-"lost": 14,
-"long-lost": 1
+"long-lost": 8,
+"lost": 7
 },
 "grp": {
-"Amphibian": 14,
-"Reptile": 1
+"Reptile": 7,
+"Amphibian": 4,
+"Insect": 1,
+"Flowering plants": 1,
+"Plant - Trees & Shrubs": 1
 },
 "rl": {
-"CR": 13,
-"EX": 2
+"DD": 5,
+"CR(PE)": 4,
+"CR": 3,
+"EN": 2,
+"not in IUCN index": 1
 },
-"oldest": 1970,
+"oldest": 1889,
 "examples": [
-"Craugastor anciano",
-"Craugastor chrysozetetes",
-"Craugastor cruzi",
-"Craugastor epochthidius"
+"Afrixalus schneideri",
+"Cyclanorbis elegans",
+"Cynisca schaeferi",
+"Hemidactylus makolowodei"
 ]
 },
 {
@@ -14121,10 +14136,11 @@
 "Bird": 2
 },
 "rl": {
-"CR": 5,
 "DD": 4,
+"CR(PE)": 3,
 "NT": 2,
 "EN": 2,
+"CR": 2,
 "not in IUCN index": 1
 },
 "oldest": 1937,
@@ -14136,34 +14152,65 @@
 ]
 },
 {
-"place": "Cameroon",
-"lat": 4.613,
-"lon": 13.154,
-"n": 13,
+"place": "Jamaica",
+"lat": 18.185,
+"lon": -77.395,
+"n": 14,
 "cls": {
-"long-lost": 8,
+"long-lost": 9,
 "lost": 5
 },
 "grp": {
-"Reptile": 7,
-"Amphibian": 2,
-"Insect": 1,
-"Flowering plants": 1,
-"Plant - Trees & Shrubs": 1
+"Reptile": 6,
+"Amphibian": 4,
+"Insect": 2,
+"Bird": 2
 },
 "rl": {
-"DD": 5,
-"CR": 3,
-"EN": 2,
-"CR(PE)": 2,
+"CR(PE)": 5,
+"CR": 4,
+"DD": 3,
+"VU": 1,
 "not in IUCN index": 1
 },
-"oldest": 1889,
+"oldest": 1840,
 "examples": [
-"Afrixalus schneideri",
-"Cyclanorbis elegans",
-"Cynisca schaeferi",
-"Hemidactylus makolowodei"
+"Camptonotus jamaicensis",
+"Celestus fowleri",
+"Celestus microblepharis",
+"Celestus occiduus"
+]
+},
+{
+"place": "Fiji",
+"lat": -18.124,
+"lon": 179.012,
+"n": 14,
+"cls": {
+"lost": 6,
+"long-lost": 8
+},
+"grp": {
+"Snails & slugs": 5,
+"Insect": 4,
+"Bird": 2,
+"Fish": 2,
+"Reptile": 1
+},
+"rl": {
+"CR(PE)": 6,
+"DD": 4,
+"CR": 1,
+"not in IUCN index": 1,
+"LC": 1,
+"NE": 1
+},
+"oldest": 1888,
+"examples": [
+"Charmosyna amabilis",
+"Delos gardineri",
+"Festucalex wassi",
+"Giganteremus spinulosus"
 ]
 },
 {
@@ -14183,11 +14230,10 @@
 "Mammal": 1
 },
 "rl": {
-"DD": 7,
+"DD": 8,
 "CR": 2,
 "EN": 2,
-"EX": 1,
-"NE": 1
+"EX": 1
 },
 "oldest": 1891,
 "examples": [
@@ -14214,11 +14260,10 @@
 "Mammal": 1
 },
 "rl": {
-"NE": 5,
-"not in IUCN index": 3,
-"CR": 2,
+"not in IUCN index": 7,
+"CR(PE)": 3,
+"NE": 1,
 "LC": 1,
-"CR(PE)": 1,
 "EX": 1
 },
 "oldest": 1858,
@@ -14230,63 +14275,28 @@
 ]
 },
 {
-"place": "Jamaica",
-"lat": 18.185,
-"lon": -77.395,
+"place": "Honduras",
+"lat": 15.257,
+"lon": -86.076,
 "n": 13,
 "cls": {
-"long-lost": 9,
-"lost": 4
+"lost": 12,
+"long-lost": 1
 },
 "grp": {
-"Reptile": 6,
-"Amphibian": 3,
-"Insect": 2,
-"Bird": 2
-},
-"rl": {
-"CR": 8,
-"DD": 3,
-"VU": 1,
-"NE": 1
-},
-"oldest": 1840,
-"examples": [
-"Camptonotus jamaicensis",
-"Celestus fowleri",
-"Celestus microblepharis",
-"Celestus occiduus"
-]
-},
-{
-"place": "Fiji",
-"lat": -18.124,
-"lon": 179.012,
-"n": 13,
-"cls": {
-"lost": 5,
-"long-lost": 8
-},
-"grp": {
-"Snails & slugs": 5,
-"Insect": 4,
-"Fish": 2,
-"Bird": 1,
+"Amphibian": 12,
 "Reptile": 1
 },
 "rl": {
-"CR": 5,
-"DD": 4,
-"CR(PE)": 2,
-"not in IUCN index": 1,
-"LC": 1
+"CR(PE)": 10,
+"CR": 3
 },
-"oldest": 1850,
+"oldest": 1988,
 "examples": [
-"Charmosyna amabilis",
-"Delos gardineri",
-"Festucalex wassi",
-"Giganteremus spinulosus"
+"Craugastor chrysozetetes",
+"Craugastor cruzi",
+"Craugastor epochthidius",
+"Craugastor fecundus"
 ]
 },
 {
@@ -14303,7 +14313,7 @@
 "Snails & slugs": 12
 },
 "rl": {
-"CR": 11,
+"CR(PE)": 11,
 "not in IUCN index": 1
 },
 "oldest": 1936,
@@ -14330,19 +14340,46 @@
 "Arachnids": 3
 },
 "rl": {
-"CR": 4,
-"not in IUCN index": 4,
+"not in IUCN index": 5,
+"CR(PE)": 4,
 "EN": 1,
 "LC": 1,
-"DD": 1,
-"CR(PE)": 1
+"DD": 1
 },
-"oldest": 1800,
+"oldest": 1870,
 "examples": [
 "Belgrandia moitessieri",
 "Belgrandia varica",
 "Bythinella eutrepha",
 "Coregonis bezola"
+]
+},
+{
+"place": "Solomon Islands",
+"lat": -8.705,
+"lon": 159.107,
+"n": 12,
+"cls": {
+"long-lost": 10,
+"lost": 2
+},
+"grp": {
+"Insect": 7,
+"Mammal": 4,
+"Bird": 1
+},
+"rl": {
+"DD": 6,
+"CR(PE)": 3,
+"CR": 2,
+"not in IUCN index": 1
+},
+"oldest": 1887,
+"examples": [
+"Indolestes lundqvisti",
+"Lieftinckia isabellae",
+"Pareudiastes silvestris",
+"Pteralopex pulchra"
 ]
 },
 {
@@ -14361,7 +14398,7 @@
 "Insect": 1
 },
 "rl": {
-"CR": 10,
+"CR(PE)": 10,
 "DD": 1
 },
 "oldest": 1957,
@@ -14400,30 +14437,89 @@
 ]
 },
 {
-"place": "Solomon Islands",
-"lat": -8.705,
-"lon": 159.107,
+"place": "Dominican Republic",
+"lat": 19.097,
+"lon": -70.303,
 "n": 11,
 "cls": {
-"long-lost": 10,
-"lost": 1
+"lost": 8,
+"long-lost": 3
 },
 "grp": {
-"Insect": 7,
-"Mammal": 3,
-"Bird": 1
+"Reptile": 8,
+"Amphibian": 3
 },
 "rl": {
-"DD": 6,
-"CR": 4,
-"not in IUCN index": 1
+"CR(PE)": 6,
+"CR": 3,
+"not in IUCN index": 1,
+"EN": 1
 },
-"oldest": 1887,
+"oldest": 1910,
 "examples": [
-"Indolestes lundqvisti",
-"Lieftinckia isabellae",
-"Pareudiastes silvestris",
-"Pteralopex pulchra"
+"Celestus anelpistus",
+"Eleutherodactylus rucillensis",
+"Eleutherodactylus schmidti",
+"Hypsirhynchus melanichnus"
+]
+},
+{
+"place": "Guatemala",
+"lat": 15.586,
+"lon": -90.346,
+"n": 10,
+"cls": {
+"lost": 9,
+"long-lost": 1
+},
+"grp": {
+"Amphibian": 8,
+"Reptile": 2
+},
+"rl": {
+"CR(PE)": 5,
+"CR": 3,
+"EX": 1,
+"DD": 1
+},
+"oldest": 1976,
+"examples": [
+"Abronia anzuetoi",
+"Bolitoglossa nussbaumi",
+"Craugastor adamastus",
+"Craugastor trachydermus"
+]
+},
+{
+"place": "Ethiopia",
+"lat": 10.212,
+"lon": 38.652,
+"n": 10,
+"cls": {
+"long-lost": 7,
+"lost": 3
+},
+"grp": {
+"Insect": 3,
+"Mammal": 2,
+"Amphibian": 2,
+"Flowering plants": 1,
+"Reptile": 1
+},
+"rl": {
+"CR(PE)": 4,
+"VU": 2,
+"DD": 1,
+"LC": 1,
+"not in IUCN index": 1,
+"CR": 1
+},
+"oldest": 1839,
+"examples": [
+"Aeschynomene ruspoliana",
+"Agama lucyae",
+"Alcelaphus buselaphus tora",
+"Altiphrynoides osgoodi"
 ]
 },
 {
@@ -14441,7 +14537,7 @@
 "Fish": 1
 },
 "rl": {
-"CR": 7,
+"CR(PE)": 7,
 "not in IUCN index": 1,
 "DD": 1,
 "VU": 1
@@ -14471,11 +14567,11 @@
 "Plant - Mosses": 1
 },
 "rl": {
-"CR": 6,
+"CR(PE)": 6,
 "DD": 1,
+"CR": 1,
 "not in IUCN index": 1,
-"EN": 1,
-"CR(PE)": 1
+"EN": 1
 },
 "oldest": 1885,
 "examples": [
@@ -14486,86 +14582,35 @@
 ]
 },
 {
-"place": "Dominican Republic",
-"lat": 19.097,
-"lon": -70.303,
+"place": "Myanmar",
+"lat": 17.175,
+"lon": 96.0,
 "n": 10,
 "cls": {
-"lost": 7,
-"long-lost": 3
+"long-lost": 5,
+"unclassified": 2,
+"lost": 3
 },
 "grp": {
-"Reptile": 7,
-"Amphibian": 3
+"Reptile": 6,
+"Amphibian": 1,
+"Bird": 1,
+"Fish": 1,
+"Mammal": 1
 },
 "rl": {
-"CR": 8,
-"not in IUCN index": 1,
-"EN": 1
-},
-"oldest": 1910,
-"examples": [
-"Celestus anelpistus",
-"Eleutherodactylus rucillensis",
-"Eleutherodactylus schmidti",
-"Hypsirhynchus melanichnus"
-]
-},
-{
-"place": "Guatemala",
-"lat": 15.586,
-"lon": -90.346,
-"n": 9,
-"cls": {
-"lost": 8,
-"long-lost": 1
-},
-"grp": {
-"Amphibian": 7,
-"Reptile": 2
-},
-"rl": {
-"CR": 7,
-"EX": 1,
-"DD": 1
-},
-"oldest": 1976,
-"examples": [
-"Abronia anzuetoi",
-"Bolitoglossa nussbaumi",
-"Craugastor adamastus",
-"Craugastor trachydermus"
-]
-},
-{
-"place": "Ethiopia",
-"lat": 10.212,
-"lon": 38.652,
-"n": 9,
-"cls": {
-"long-lost": 7,
-"lost": 2
-},
-"grp": {
-"Insect": 3,
-"Mammal": 2,
-"Flowering plants": 1,
-"Reptile": 1,
-"Amphibian": 1
-},
-"rl": {
-"CR": 4,
+"DD": 4,
+"NE": 2,
 "VU": 2,
-"DD": 1,
-"LC": 1,
-"not in IUCN index": 1
+"CR": 1,
+"CR(PE)": 1
 },
-"oldest": 1839,
+"oldest": 1937,
 "examples": [
-"Aeschynomene ruspoliana",
-"Agama lucyae",
-"Alcelaphus buselaphus",
-"Altiphrynoides osgoodi"
+"Amolops kaulbacki",
+"Cyrtodactylus tamaiensis",
+"Hydrophis hendersoni",
+"Hydrophis nigrocinctus"
 ]
 },
 {
@@ -14618,37 +14663,6 @@
 ]
 },
 {
-"place": "Myanmar",
-"lat": 17.175,
-"lon": 96.0,
-"n": 8,
-"cls": {
-"long-lost": 5,
-"unclassified": 2,
-"lost": 1
-},
-"grp": {
-"Reptile": 4,
-"Amphibian": 1,
-"Bird": 1,
-"Fish": 1,
-"Mammal": 1
-},
-"rl": {
-"DD": 3,
-"NE": 2,
-"CR": 2,
-"VU": 1
-},
-"oldest": 1930,
-"examples": [
-"Amolops kaulbacki",
-"Cyrtodactylus tamaiensis",
-"Hydrophis hendersoni",
-"Hydrophis nigrocinctus"
-]
-},
-{
 "place": "Luzon",
 "lat": 15.55,
 "lon": 120.743,
@@ -14665,7 +14679,7 @@
 "LC": 3,
 "VU": 1
 },
-"oldest": 1900,
+"oldest": 2001,
 "examples": [
 "Brachymeles isangdaliri",
 "Brachymeles lukbani",
@@ -14686,7 +14700,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 7,
+"CR(PE)": 7,
 "VU": 1
 },
 "oldest": 1980,
@@ -14712,9 +14726,9 @@
 "Fish": 3
 },
 "rl": {
-"CR": 7
+"CR(PE)": 7
 },
-"oldest": 1930,
+"oldest": 1939,
 "examples": [
 "Acanthobrama centisquama",
 "Acanthobrama tricolor",
@@ -14737,9 +14751,8 @@
 },
 "rl": {
 "DD": 3,
-"CR": 2,
-"not in IUCN index": 1,
-"NE": 1
+"not in IUCN index": 3,
+"CR(PE)": 1
 },
 "oldest": 1890,
 "examples": [
@@ -14765,7 +14778,8 @@
 "Insect": 1
 },
 "rl": {
-"CR": 5,
+"CR": 3,
+"CR(PE)": 2,
 "DD": 1,
 "VU": 1
 },
@@ -14793,7 +14807,7 @@
 },
 "rl": {
 "VU": 2,
-"CR": 2,
+"CR(PE)": 2,
 "DD": 2,
 "not in IUCN index": 1
 },
@@ -14819,7 +14833,7 @@
 },
 "rl": {
 "EX": 4,
-"CR": 2,
+"CR(PE)": 2,
 "not in IUCN index": 1
 },
 "oldest": 1859,
@@ -14846,7 +14860,7 @@
 },
 "rl": {
 "DD": 5,
-"CR": 1,
+"CR(PE)": 1,
 "LC": 1
 },
 "oldest": 1931,
@@ -14875,7 +14889,7 @@
 },
 "rl": {
 "DD": 5,
-"CR": 1,
+"CR(PE)": 1,
 "LC": 1
 },
 "oldest": 1918,
@@ -14931,7 +14945,7 @@
 "rl": {
 "DD": 2,
 "VU": 1,
-"NE": 1,
+"not in IUCN index": 1,
 "CR": 1,
 "EN": 1
 },
@@ -14957,10 +14971,11 @@
 "Insect": 1
 },
 "rl": {
-"NE": 2,
 "LC": 2,
+"NE": 1,
 "CR": 1,
-"VU": 1
+"VU": 1,
+"not in IUCN index": 1
 },
 "oldest": 1880,
 "examples": [
@@ -15066,8 +15081,9 @@
 "Bird": 1
 },
 "rl": {
-"CR": 3,
+"CR": 2,
 "NE": 1,
+"CR(PE)": 1,
 "not in IUCN index": 1
 },
 "oldest": 1927,
@@ -15093,7 +15109,8 @@
 "Fish": 1
 },
 "rl": {
-"CR": 4,
+"CR(PE)": 3,
+"CR": 1,
 "EX": 1
 },
 "oldest": 1908,
@@ -15102,33 +15119,6 @@
 "Partula meyeri",
 "Partula sagitta",
 "Pomarea mira"
-]
-},
-{
-"place": "United States (Puerto Rico)",
-"lat": 18.225,
-"lon": -66.486,
-"n": 5,
-"cls": {
-"long-lost": 3,
-"lost": 2
-},
-"grp": {
-"Amphibian": 3,
-"Orchids": 1,
-"Reptile": 1
-},
-"rl": {
-"CR": 3,
-"not in IUCN index": 1,
-"EX": 1
-},
-"oldest": 1800,
-"examples": [
-"Brachionidium ciliolatum",
-"Cyclura onchiopsis",
-"Eleutherodactylus eneidae",
-"Eleutherodactylus jasperi"
 ]
 },
 {
@@ -15147,7 +15137,7 @@
 },
 "rl": {
 "not in IUCN index": 4,
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1961,
 "examples": [
@@ -15173,7 +15163,7 @@
 },
 "rl": {
 "LC": 3,
-"CR": 1,
+"CR(PE)": 1,
 "not in IUCN index": 1
 },
 "oldest": 1901,
@@ -15204,7 +15194,7 @@
 },
 "oldest": 1914,
 "examples": [
-"Alcelaphus buselaphus",
+"Alcelaphus buselaphus tora",
 "Cyclanorbis elegans",
 "Panaspis wilsoni",
 "Trioceros kinetensis"
@@ -15224,7 +15214,7 @@
 "Bird": 1
 },
 "rl": {
-"CR": 3,
+"CR(PE)": 3,
 "EX": 1
 },
 "oldest": 1889,
@@ -15251,8 +15241,9 @@
 "Insect": 1
 },
 "rl": {
-"not in IUCN index": 2,
-"CR": 2
+"CR": 2,
+"not in IUCN index": 1,
+"CR(PE)": 1
 },
 "oldest": 1969,
 "examples": [
@@ -15301,11 +15292,11 @@
 "Insect": 2
 },
 "rl": {
-"CR": 2,
+"CR(PE)": 2,
 "not in IUCN index": 1,
 "DD": 1
 },
-"oldest": 1960,
+"oldest": 1961,
 "examples": [
 "Anodorhynchus glaucus",
 "Leiotettix politus",
@@ -15326,7 +15317,7 @@
 "Snails & slugs": 4
 },
 "rl": {
-"CR": 2,
+"CR(PE)": 2,
 "EX": 1,
 "EN": 1
 },
@@ -15336,35 +15327,6 @@
 "Belgrandiella kreisslorum",
 "Belgrandiella multiformis",
 "Iglica gratulabunda"
-]
-},
-{
-"place": "Mauritius",
-"lat": -20.276,
-"lon": 57.57,
-"n": 4,
-"cls": {
-"lost": 2,
-"long-lost": 2
-},
-"grp": {
-"Reptile": 1,
-"Orchids": 1,
-"Insect": 1,
-"Snails & slugs": 1
-},
-"rl": {
-"EX": 1,
-"NE": 1,
-"DD": 1,
-"CR": 1
-},
-"oldest": 1920,
-"examples": [
-"Bolyeria multocarinata",
-"Habenaria lancifolia",
-"Ischnura vinsoni",
-"Madgeaconcha sevathiani"
 ]
 },
 {
@@ -15382,7 +15344,7 @@
 "Fish": 1
 },
 "rl": {
-"CR": 2,
+"CR(PE)": 2,
 "DD": 1,
 "VU": 1
 },
@@ -15395,26 +15357,28 @@
 ]
 },
 {
-"place": "Martinique",
-"lat": 14.611,
-"lon": -60.962,
+"place": "United States (Puerto Rico)",
+"lat": 18.225,
+"lon": -66.486,
 "n": 4,
 "cls": {
-"long-lost": 4
+"long-lost": 2,
+"lost": 2
 },
 "grp": {
-"Reptile": 4
+"Amphibian": 3,
+"Orchids": 1
 },
 "rl": {
-"CR": 3,
-"EX": 1
+"CR(PE)": 3,
+"not in IUCN index": 1
 },
-"oldest": 1837,
+"oldest": 1969,
 "examples": [
-"Capitellum metallicum",
-"Erythrolamprus cursor",
-"Leiocephalus herminieri",
-"Mabuya mabouya"
+"Brachionidium ciliolatum",
+"Eleutherodactylus eneidae",
+"Eleutherodactylus jasperi",
+"Eleutherodactylus karlschmidti"
 ]
 },
 {
@@ -15461,7 +15425,7 @@
 "rl": {
 "VU": 1,
 "LC": 1,
-"CR": 1,
+"CR(PE)": 1,
 "DD": 1
 },
 "oldest": 1890,
@@ -15487,7 +15451,8 @@
 "Mammal": 1
 },
 "rl": {
-"CR": 4
+"CR(PE)": 3,
+"CR": 1
 },
 "oldest": 1959,
 "examples": [
@@ -15554,7 +15519,8 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 2,
+"CR(PE)": 1,
+"CR": 1,
 "DD": 1
 },
 "oldest": 1790,
@@ -15603,7 +15569,7 @@
 },
 "rl": {
 "not in IUCN index": 2,
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1846,
 "examples": [
@@ -15627,7 +15593,7 @@
 },
 "rl": {
 "DD": 2,
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1969,
 "examples": [
@@ -15663,6 +15629,27 @@
 ]
 },
 {
+"place": "Martinique",
+"lat": 14.611,
+"lon": -60.962,
+"n": 3,
+"cls": {
+"long-lost": 3
+},
+"grp": {
+"Reptile": 3
+},
+"rl": {
+"CR(PE)": 3
+},
+"oldest": 1879,
+"examples": [
+"Capitellum metallicum",
+"Erythrolamprus cursor",
+"Mabuya mabouya"
+]
+},
+{
 "place": "United States (U.S. Virgin Islands)",
 "lat": 17.789,
 "lon": -64.708,
@@ -15675,7 +15662,7 @@
 "Reptile": 3
 },
 "rl": {
-"CR": 3
+"CR(PE)": 3
 },
 "oldest": 1875,
 "examples": [
@@ -15724,7 +15711,8 @@
 "Mammal": 1
 },
 "rl": {
-"CR": 2,
+"CR(PE)": 1,
+"CR": 1,
 "DD": 1
 },
 "oldest": 1890,
@@ -15757,6 +15745,30 @@
 ]
 },
 {
+"place": "Ghana",
+"lat": 8.03,
+"lon": -1.08,
+"n": 3,
+"cls": {
+"lost": 2,
+"long-lost": 1
+},
+"grp": {
+"Reptile": 2,
+"Amphibian": 1
+},
+"rl": {
+"CR": 2,
+"DD": 1
+},
+"oldest": 1963,
+"examples": [
+"Cyclanorbis elegans",
+"Cynisca williamsi",
+"Phrynobatrachus intermedius"
+]
+},
+{
 "place": "Iran",
 "lat": 32.648,
 "lon": 54.564,
@@ -15770,7 +15782,7 @@
 },
 "rl": {
 "NE": 2,
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1980,
 "examples": [
@@ -15799,6 +15811,32 @@
 "Elattoneura flavifacies",
 "Pinheyschna moori",
 "Pseudoschulthessiella cerciata"
+]
+},
+{
+"place": "Mauritius",
+"lat": -20.276,
+"lon": 57.57,
+"n": 3,
+"cls": {
+"long-lost": 2,
+"lost": 1
+},
+"grp": {
+"Orchids": 1,
+"Insect": 1,
+"Snails & slugs": 1
+},
+"rl": {
+"NE": 1,
+"DD": 1,
+"CR(PE)": 1
+},
+"oldest": 1920,
+"examples": [
+"Habenaria lancifolia",
+"Ischnura vinsoni",
+"Madgeaconcha sevathiani"
 ]
 },
 {
@@ -15842,7 +15880,7 @@
 },
 "rl": {
 "EN": 2,
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1947,
 "examples": [
@@ -15912,10 +15950,10 @@
 },
 "rl": {
 "DD": 1,
-"CR": 1,
+"CR(PE)": 1,
 "LC": 1
 },
-"oldest": 1960,
+"oldest": 1962,
 "examples": [
 "Maroubra yasudai",
 "Murina tenebrosa",
@@ -15937,8 +15975,9 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 2,
-"NE": 1
+"CR(PE)": 1,
+"NE": 1,
+"CR": 1
 },
 "oldest": 1963,
 "examples": [
@@ -15959,35 +15998,14 @@
 "Crustaceans": 3
 },
 "rl": {
-"NE": 3
+"CR": 2,
+"EN": 1
 },
 "oldest": 1959,
 "examples": [
 "Pseudodiploexochus insularis",
 "Pseudodiploexochus leleupi",
 "Pseudodiploexochus mellissi"
-]
-},
-{
-"place": "St. Lucia",
-"lat": 13.909,
-"lon": -60.978,
-"n": 2,
-"cls": {
-"long-lost": 2
-},
-"grp": {
-"Reptile": 1,
-"Bird": 1
-},
-"rl": {
-"EX": 1,
-"CR": 1
-},
-"oldest": 1887,
-"examples": [
-"Alinea luciae",
-"Leucopeza semperi"
 ]
 },
 {
@@ -16069,7 +16087,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1,
+"CR(PE)": 1,
 "DD": 1
 },
 "oldest": 1927,
@@ -16122,28 +16140,6 @@
 "examples": [
 "Chalcides ebneri",
 "Cosmocampus retropinnis"
-]
-},
-{
-"place": "Cape Verde",
-"lat": 16.0,
-"lon": -24.008,
-"n": 2,
-"cls": {
-"long-lost": 1,
-"lost": 1
-},
-"grp": {
-"Reptile": 1,
-"Snails & slugs": 1
-},
-"rl": {
-"EX": 2
-},
-"oldest": 1912,
-"examples": [
-"Chioninia coctei",
-"Conus lugubris"
 ]
 },
 {
@@ -16213,28 +16209,6 @@
 ]
 },
 {
-"place": "Ghana",
-"lat": 8.03,
-"lon": -1.08,
-"n": 2,
-"cls": {
-"lost": 1,
-"long-lost": 1
-},
-"grp": {
-"Reptile": 2
-},
-"rl": {
-"CR": 1,
-"DD": 1
-},
-"oldest": 1963,
-"examples": [
-"Cyclanorbis elegans",
-"Cynisca williamsi"
-]
-},
-{
 "place": "South Sudan",
 "lat": 7.87,
 "lon": 29.667,
@@ -16272,7 +16246,7 @@
 },
 "rl": {
 "NE": 1,
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1977,
 "examples": [
@@ -16293,7 +16267,8 @@
 "Reptile": 2
 },
 "rl": {
-"CR": 2
+"CR": 1,
+"CR(PE)": 1
 },
 "oldest": 1970,
 "examples": [
@@ -16315,8 +16290,8 @@
 "Fish": 1
 },
 "rl": {
-"CR": 1,
-"CR(PE)": 1
+"CR(PE)": 1,
+"not in IUCN index": 1
 },
 "oldest": 1948,
 "examples": [
@@ -16337,7 +16312,7 @@
 "Arachnids": 1
 },
 "rl": {
-"CR": 1,
+"CR(PE)": 1,
 "not in IUCN index": 1
 },
 "oldest": 1980,
@@ -16360,7 +16335,7 @@
 "Amphibian": 1
 },
 "rl": {
-"CR": 1,
+"CR(PE)": 1,
 "DD": 1
 },
 "oldest": 1909,
@@ -16409,7 +16384,7 @@
 },
 "oldest": 1932,
 "examples": [
-"Equus africanus",
+"Equus africanus africanus",
 "Hypotrigona gribodoi"
 ]
 },
@@ -16468,8 +16443,7 @@
 "Snails & slugs": 2
 },
 "rl": {
-"CR": 1,
-"CR(PE)": 1
+"CR(PE)": 2
 },
 "oldest": 1933,
 "examples": [
@@ -16606,6 +16580,27 @@
 ]
 },
 {
+"place": "Romania",
+"lat": 45.985,
+"lon": 24.686,
+"n": 2,
+"cls": {
+"lost": 2
+},
+"grp": {
+"Fish": 1,
+"Mammal": 1
+},
+"rl": {
+"CR(PE)": 2
+},
+"oldest": 1994,
+"examples": [
+"Knipowitschia cameliae",
+"Spalax istricus"
+]
+},
+{
 "place": "Ascension",
 "lat": -7.942,
 "lon": -14.358,
@@ -16617,8 +16612,7 @@
 "Insect": 2
 },
 "rl": {
-"EX": 1,
-"DD": 1
+"EX": 2
 },
 "oldest": 1963,
 "examples": [
@@ -16638,8 +16632,7 @@
 "Insect": 2
 },
 "rl": {
-"EX": 1,
-"DD": 1
+"EX": 2
 },
 "oldest": 1963,
 "examples": [
@@ -16727,7 +16720,7 @@
 "Bird": 1
 },
 "rl": {
-"CR": 2
+"CR(PE)": 2
 },
 "oldest": 1879,
 "examples": [
@@ -16748,8 +16741,7 @@
 "Orchids": 2
 },
 "rl": {
-"not in IUCN index": 1,
-"NE": 1
+"not in IUCN index": 2
 },
 "oldest": 1950,
 "examples": [
@@ -16795,7 +16787,7 @@
 "rl": {
 "DD": 2
 },
-"oldest": 1910,
+"oldest": 2004,
 "examples": [
 "Nactus acutus",
 "Varanus telenesetes"
@@ -16813,8 +16805,7 @@
 "Snails & slugs": 2
 },
 "rl": {
-"CR": 1,
-"CR(PE)": 1
+"CR(PE)": 2
 },
 "oldest": null,
 "examples": [
@@ -16855,7 +16846,7 @@
 "Plant - Trees & Shrubs": 2
 },
 "rl": {
-"CR(PE)": 1,
+"NE": 1,
 "EX": 1
 },
 "oldest": 1874,
@@ -16914,7 +16905,7 @@
 "Flowering plants": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1967,
 "examples": [
@@ -16933,9 +16924,9 @@
 "Bird": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
-"oldest": 1960,
+"oldest": null,
 "examples": [
 "Anodorhynchus glaucus"
 ]
@@ -16952,7 +16943,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1932,
 "examples": [
@@ -16971,7 +16962,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1932,
 "examples": [
@@ -17028,7 +17019,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": null,
 "examples": [
@@ -17104,7 +17095,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1862,
 "examples": [
@@ -17123,7 +17114,7 @@
 "Crustaceans": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1944,
 "examples": [
@@ -17204,6 +17195,25 @@
 "oldest": 1925,
 "examples": [
 "Cnemaspis sundagekko"
+]
+},
+{
+"place": "Cape Verde",
+"lat": 16.0,
+"lon": -24.008,
+"n": 1,
+"cls": {
+"lost": 1
+},
+"grp": {
+"Snails & slugs": 1
+},
+"rl": {
+"EX": 1
+},
+"oldest": null,
+"examples": [
+"Conus lugubris"
 ]
 },
 {
@@ -17294,7 +17304,7 @@
 "Mammal": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1985,
 "examples": [
@@ -17503,7 +17513,7 @@
 "Bivalve molluscs (clams, oysters, mussels, scallops, etc.)": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1980,
 "examples": [
@@ -17701,25 +17711,6 @@
 ]
 },
 {
-"place": "New Zealand North Island",
-"lat": -38.004,
-"lon": 175.958,
-"n": 1,
-"cls": {
-"long-lost": 1
-},
-"grp": {
-"Reptile": 1
-},
-"rl": {
-"EX": 1
-},
-"oldest": 1833,
-"examples": [
-"Hoplodactylus delcourti"
-]
-},
-{
 "place": "Borneo",
 "lat": 1.43,
 "lon": 113.709,
@@ -17774,25 +17765,6 @@
 "oldest": null,
 "examples": [
 "Islamia zermanica"
-]
-},
-{
-"place": "Romania",
-"lat": 45.985,
-"lon": 24.686,
-"n": 1,
-"cls": {
-"lost": 1
-},
-"grp": {
-"Fish": 1
-},
-"rl": {
-"CR": 1
-},
-"oldest": 1994,
-"examples": [
-"Knipowitschia cameliae"
 ]
 },
 {
@@ -17853,6 +17825,25 @@
 ]
 },
 {
+"place": "St. Lucia",
+"lat": 13.909,
+"lon": -60.978,
+"n": 1,
+"cls": {
+"long-lost": 1
+},
+"grp": {
+"Bird": 1
+},
+"rl": {
+"CR": 1
+},
+"oldest": null,
+"examples": [
+"Leucopeza semperi"
+]
+},
+{
 "place": "Mindanao",
 "lat": 7.69,
 "lon": 125.237,
@@ -17902,7 +17893,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1963,
 "examples": [
@@ -17921,7 +17912,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1920,
 "examples": [
@@ -18016,7 +18007,7 @@
 "Mammal": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1937,
 "examples": [
@@ -18035,7 +18026,7 @@
 "Reptile": 1
 },
 "rl": {
-"NE": 1
+"not in IUCN index": 1
 },
 "oldest": 1917,
 "examples": [
@@ -18168,7 +18159,7 @@
 "Bird": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1879,
 "examples": [
@@ -18187,7 +18178,7 @@
 "Bird": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1879,
 "examples": [
@@ -18339,7 +18330,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1968,
 "examples": [
@@ -18358,7 +18349,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1968,
 "examples": [
@@ -18396,7 +18387,7 @@
 "Reptile": 1
 },
 "rl": {
-"CR": 1
+"CR(PE)": 1
 },
 "oldest": 1965,
 "examples": [
@@ -18420,25 +18411,6 @@
 "oldest": 1994,
 "examples": [
 "Spondylurus monae"
-]
-},
-{
-"place": "Tongatapu Island",
-"lat": -21.168,
-"lon": -175.274,
-"n": 1,
-"cls": {
-"long-lost": 1
-},
-"grp": {
-"Reptile": 1
-},
-"rl": {
-"EX": 1
-},
-"oldest": 1832,
-"examples": [
-"Tachygyia microlepis"
 ]
 },
 {
@@ -18558,20 +18530,6 @@
 ],
 "oldest": [
 {
-"sp": "Leiolopisma mauritianum",
-"common": "",
-"group": "Reptile",
-"last": 1500,
-"range": "Afrotropic"
-},
-{
-"sp": "Leiolopisma ceciliae",
-"common": "",
-"group": "Reptile",
-"last": 1550,
-"range": "Madagascar"
-},
-{
 "sp": "Afrithelphusa afzelii",
 "common": "Afzeli's Crab",
 "group": "Crustaceans",
@@ -18579,67 +18537,81 @@
 "range": "Sierra Leone"
 },
 {
-"sp": "Aetheolaena ledifolia",
-"common": "",
+"sp": "Eresus quartuorguttata",
+"common": "--",
+"group": "Arachnids",
+"last": 1804,
+"range": "Italy"
+},
+{
+"sp": "Eresus frontalis",
+"common": "--",
+"group": "Arachnids",
+"last": 1808,
+"range": "Spain"
+},
+{
+"sp": "Eugenia guayaquilensis",
+"common": "--",
+"group": "Plant - Trees & Shrubs",
+"last": 1823,
+"range": "Ecuador"
+},
+{
+"sp": "Eresus pharaonis",
+"common": "--",
+"group": "Arachnids",
+"last": 1829,
+"range": "Egypt"
+},
+{
+"sp": "Heteragrion beschkii",
+"common": "--",
+"group": "Insect",
+"last": 1834,
+"range": "Brazil"
+},
+{
+"sp": "Bombus rubriventris",
+"common": "--",
+"group": "Insect",
+"last": 1835,
+"range": "Brazil"
+},
+{
+"sp": "Delilia inelegans",
+"common": "--",
 "group": "Flowering plants",
-"last": 1800,
+"last": 1835,
 "range": "Ecuador"
 },
 {
-"sp": "Anolis laevis",
-"common": "Smooth Anole",
-"group": "Reptile",
-"last": 1800,
-"range": "Peru"
-},
-{
-"sp": "Cnemaspis amith",
-"common": "",
-"group": "Reptile",
-"last": 1800,
-"range": "Sri Lanka"
-},
-{
-"sp": "Cnemaspis monticola",
-"common": "Waynaad Day Gecko",
-"group": "Reptile",
-"last": 1800,
-"range": "India"
-},
-{
-"sp": "Coregonis bezola",
-"common": "",
-"group": "Fish",
-"last": 1800,
-"range": "France"
-},
-{
-"sp": "Cyclura onchiopsis",
-"common": "Navassa Rhinoceros Iguana",
-"group": "Reptile",
-"last": 1800,
-"range": "United States (Puerto\u00a0Rico)"
-},
-{
-"sp": "Cyperus multifolius",
-"common": "",
-"group": "Plant - Grasses & Sedges",
-"last": 1800,
+"sp": "Sicyos villosa",
+"common": "--",
+"group": "Flowering plants",
+"last": 1835,
 "range": "Ecuador"
 },
 {
-"sp": "Elaphoglossum polytrichum",
-"common": "",
-"group": "Plant - Ferns",
-"last": 1800,
+"sp": "Egletes humifusa",
+"common": "Arkansas Lazydaisy",
+"group": "Flowering plants",
+"last": 1836,
 "range": "Ecuador"
 },
 {
-"sp": "Eriocnemis godini",
-"common": "Turquoise-throated Puffleg",
-"group": "Bird",
-"last": 1800,
-"range": "Ecuador"
+"sp": "Peloriolus brunneus",
+"common": "Darwin's Elmid",
+"group": "Insect",
+"last": 1836,
+"range": "Saint Helena"
+},
+{
+"sp": "Cycloramphus fuliginosus",
+"common": "--",
+"group": "Amphibian",
+"last": 1838,
+"range": "Brazil"
 }
 ]
 }
