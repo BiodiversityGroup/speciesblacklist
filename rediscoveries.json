@@ -7,7 +7,7 @@
 "distinct_species": 177,
 "distinct_species_firm": 27,
 "multi_species_cards": 39,
-"with_image": 115,
+"with_image": 117,
 "syndicated": 62,
 "on_tbg_list": 48,
 "on_list_breakdown": {
@@ -479,7 +479,7 @@
 "link": "https://www.thepress.co.nz/nz-news/361010440/tiny-australian-bee-rediscovered-christchurch-gardens-65-years-after-last-sighting",
 "image": "",
 "wayback": "",
-"desc": "",
+"desc": "A native Australian bee not recorded in New Zealand for 65 years has turned up in gardens in Christchurch.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -1271,9 +1271,9 @@
 "ts": 1767772800,
 "first_seen": "2026-08-10",
 "link": "https://www.commercialappeal.com/story/news/local/2026/01/07/memphis-researchers-rediscovered-extinct-chestnut-weevil/87922313007/",
-"image": "",
+"image": "https://www.commercialappeal.com/gcdn/authoring/authoring-images/2026/01/02/PMCA/87992157007-michael-charles.jpeg",
 "wayback": "",
-"desc": "",
+"desc": "Researchers at the University of Memphis used a free app to rediscover a species of beetle that was thought to be extinct.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -1704,12 +1704,12 @@
 {
 "title": "Long-eared species feared extinct for 55 years rediscovered in Turkmenistan",
 "species": [
-"Nyctophilus howensis",
-"Monopeltis schoutedeni"
+"Monopeltis schoutedeni",
+"Nyctophilus howensis"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
-"detail": "Mammal, long-lost, last seen 1972",
+"detail": "Reptile, unclassified, last seen ??",
 "publisher": "Miami Herald",
 "date": "Thu, 06 Nov 2025",
 "ts": 1762416000,
@@ -1944,12 +1944,12 @@
 "species": [
 "Atelopus mindoensis",
 "Batrachochytrium dendrobatidis",
-"Strabomantis necerus",
-"Homoeodera nodulipennis"
+"Homoeodera nodulipennis",
+"Strabomantis necerus"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
-"detail": "Amphibian, lost, last seen 1995",
+"detail": "Insect, long-lost, last seen 1876",
 "publisher": "Pique Newsmagazine",
 "date": "Wed, 08 Oct 2025",
 "ts": 1759906800,
@@ -2231,9 +2231,9 @@
 "ts": 1752994800,
 "first_seen": "2026-08-10",
 "link": "https://onlinelibrary.wiley.com/doi/full/10.1111/aec.70101",
-"image": "",
+"image": "https://onlinelibrary.wiley.com/cms/asset/1e172c47-993d-48cb-bec9-f80e280dd1aa/aec.v50.7.cover.jpg",
 "wayback": "",
-"desc": "",
+"desc": "Rediscovery of an extinct species is an exciting prospect and, surprisingly, a common reason for changes to species listings. In Australia, however, species declared extinct are afforded no legal protection.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -2348,12 +2348,12 @@
 "Aonyx cinereus",
 "Lutrogale perspicillata",
 "Lutra lutra",
-"Bufoides kempi",
-"Asymblepharus nepalensis"
+"Asymblepharus nepalensis",
+"Bufoides kempi"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
-"detail": "Amphibian, lost, last seen 2002",
+"detail": "Reptile, lost, last seen 1991",
 "publisher": "IFLScience",
 "date": "Tue, 03 Jun 2025",
 "ts": 1748934000,
@@ -2630,8 +2630,8 @@
 {
 "title": "Giant millipede lost to science rediscovered in Madagascar\u2019s jungle",
 "species": [
-"Pareudiastes silvestris",
 "Madatyphlops madagascariensis",
+"Pareudiastes silvestris",
 "Bedotia alveyi",
 "Ptychochromis makira",
 "Spirostreptus sculptus",
@@ -2646,7 +2646,7 @@
 ],
 "species_firm": [],
 "on_list": "Lost Species",
-"detail": "Bird, long-lost, last seen 1953",
+"detail": "Reptile, lost, last seen ?",
 "publisher": "cnn.com",
 "date": "Fri, 19 Jul 2024",
 "ts": 1721372400,
