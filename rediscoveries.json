@@ -1,7 +1,7 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 122,
+"stories": 121,
 "raw_items": 273,
 "with_species": 79,
 "distinct_species": 177,
@@ -2348,12 +2348,12 @@
 "Aonyx cinereus",
 "Lutrogale perspicillata",
 "Lutra lutra",
-"Asymblepharus nepalensis",
-"Bufoides kempi"
+"Bufoides kempi",
+"Asymblepharus nepalensis"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
+"detail": "Amphibian, lost, last seen 2002",
 "publisher": "IFLScience",
 "date": "Tue, 03 Jun 2025",
 "ts": 1748934000,
@@ -2491,7 +2491,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
 {
 "publisher": "the Guardian",
@@ -2506,8 +2506,8 @@
 "link": "https://www.abc.net.au/news/2023-11-10/long-beaked-echidna-rediscovered-in-papua-mountains/103089936"
 },
 {
-"publisher": "The Telegraph",
-"link": "https://www.telegraph.co.uk/world-news/2023/11/10/attenborough-named-echidna-mammal-rediscovered-new-guinea/"
+"publisher": "Reuters",
+"link": "https://www.reuters.com/science/long-lost-mammal-rediscovered-remote-indonesia-mountains-2023-11-10/"
 }
 ]
 },
@@ -2831,26 +2831,6 @@
 "link": "https://www.itv.com/news/border/2025-10-16/former-eradicated-animal-species-rediscovered-in-dumfries-and-galloway"
 }
 ]
-},
-{
-"title": "Long-lost mammal rediscovered in remote Indonesia mountains",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Reuters",
-"date": "Thu, 09 Nov 2023",
-"ts": 1699516800,
-"first_seen": "2026-08-10",
-"link": "https://www.reuters.com/science/long-lost-mammal-rediscovered-remote-indonesia-mountains-2023-11-10/",
-"image": "",
-"wayback": "",
-"desc": "",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
 },
 {
 "title": "Large pigeon lost to science for 140 years rediscovered in Papua New Guinea",

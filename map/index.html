@@ -1970,6 +1970,7 @@ summary to show."}</p>`}
           </p>
         </div>
       </a>
+      ${c.credit ? `<p class="rdcite">${esc(c.credit)}</p>` : ""}
       ${c.citation ? `<p class="rdcite">${esc(c.citation)}</p>` : ""}
       ${c.wayback ? `<p class="rdarchive"><a href="${esc(c.wayback)}"
          target="_blank" rel="noopener">Archived copy</a></p>` : ""}
