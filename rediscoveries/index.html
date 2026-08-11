@@ -615,10 +615,7 @@
   /* narrower than the block so centred prose keeps a comfortable measure */
   .ntsummary { color:var(--ink-2); margin:0 auto .7rem; font-size:1.02rem;
     max-width:40rem; }
-  .ntmore { font-family:var(--sans); font-size:.88rem; margin:.2rem 0 1.8rem; }
-  .ntmore a { text-decoration:none; border-bottom:1px solid var(--rule-2);
-    padding-bottom:1px; }
-  .ntmore a:hover { border-bottom-color:var(--accent); }
+  /* .ntmore removed with the two jump links it styled; nothing carries it now. */
   .counts .count .csub { display:block; font-style:normal; font-size:.72rem;
     color:var(--ink-3); margin-top:.15rem; }
   .ntabout { margin-top:3rem; padding-top:1.4rem; border-top:1px solid var(--rule); }
@@ -1122,11 +1119,6 @@
   </div>
 
   <div id="ntCounts" class="counts"></div>
-
-  <p class="ntmore">
-    <a href="#nt-about" id="ntAboutLink">How this list was built, and what it cannot
-      tell you &darr;</a>
-  </p>
 
   <!-- ===================== THE LIST ===================== -->
   <h3 class="siteshead">The list</h3>
@@ -2017,13 +2009,14 @@ showView(viewForPath(location.pathname), false);
 
 /* Drop a fragment that no longer points at anything a reader asked for.
    The rediscoveries page used to carry a "what this does and doesn't prove" jump link.
-   It is gone, but any URL copied, shared or bookmarked while it existed still ends
-   #rd-about -- and because that section is still on the page, those links open partway
-   down it instead of at the top. Cleared from the address bar with replaceState, so no
-   history entry is added and Back still behaves. Live anchors such as #nt-about on the
-   new-species page are deliberately untouched. */
+   Both pages carried one -- "what this does and doesn't prove" on rediscoveries, "how
+   this list was built" on new-species -- and both are gone. Any URL copied, shared or
+   bookmarked while they existed still ends #rd-about or #nt-about, and because those
+   sections are still on the page such links open partway down instead of at the top.
+   Cleared with replaceState, so no history entry is added and Back still behaves. The
+   ids stay on the sections: they cost nothing and remain valid anchor targets. */
 (function dropStaleHash() {
-  if (["#rd-about"].includes(location.hash)) {
+  if (["#rd-about", "#nt-about"].includes(location.hash)) {
     history.replaceState(history.state, "", location.pathname + location.search);
     window.scrollTo({top: 0, behavior: "instant"});
   }
