@@ -1,14 +1,14 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 116,
+"stories": 114,
 "raw_items": 238,
 "with_species": 73,
 "distinct_species": 146,
 "distinct_species_firm": 29,
 "multi_species_cards": 27,
-"with_image": 114,
-"syndicated": 49,
+"with_image": 112,
+"syndicated": 48,
 "on_tbg_list": 26,
 "on_list_breakdown": {
 "on our lost-species list": 23,
@@ -17,8 +17,8 @@
 "undated": 0,
 "newest": "Tue, 11 Aug 2026",
 "tracked_names": 6709,
-"image_local": 108,
-"archived": 45
+"image_local": 106,
+"archived": 44
 },
 "cards": [
 {
@@ -759,31 +759,6 @@
 "also": []
 },
 {
-"title": "\"Exceptional discovery.\" Animals thought extinct for 6,000 years found alive in Indonesian rainforest",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Discover Wildlife",
-"date": "Fri, 27 Mar 2026",
-"ts": 1774594800,
-"first_seen": "2026-08-10",
-"link": "https://www.discoverwildlife.com/animal-facts/mammals/marsupials-rediscovered-new-guinea",
-"image": "/rd-img/05c4d2fc133b647f.jpg",
-"wayback": "http://web.archive.org/web/20260809063014/https://www.discoverwildlife.com/animal-facts/mammals/marsupials-rediscovered-new-guinea",
-"desc": "Two marsupial species previously only known from the fossil record have been rediscovered in New Guinea.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Kansas City Star",
-"link": "https://www.kansascity.com/living/article314982866.html"
-}
-]
-},
-{
 "title": "How Do You Rediscover A \u201cLost\u201d Species? The Fagidle's Trapdoor Spider Was Lost For 92 Years. Not Anymore",
 "species": [
 "Nemesia berlandi"
@@ -844,51 +819,6 @@
 ]
 },
 {
-"title": "Lost for 6,000 years: Scientists rediscover two adorable creatures on remote island",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "The Economic Times",
-"date": "Wed, 11 Mar 2026",
-"ts": 1773212400,
-"first_seen": "2026-08-10",
-"link": "https://m.economictimes.com/news/international/us/lost-for-6000-years-scientists-rediscover-two-adorable-creatures-on-remote-island/articleshow/129463916.cms",
-"image": "/rd-img/ab3e5c5b86339ba4.jpg",
-"wayback": "",
-"desc": "Two marsupial species believed to have gone extinct at least 6,000 years ago have been rediscovered alive in the forests of New Guinea. The animals \u2014 the pygmy long-fingered possum and the ring-tailed glider \u2014 were earlier known only through fossil remains fou",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Thought Extinct for 6,000 Years, These Tiny Marsupials Have Just Been Rediscovered - A-Z Animals",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "A-Z Animals",
-"date": "Wed, 11 Mar 2026",
-"ts": 1773212400,
-"first_seen": "2026-08-10",
-"link": "https://a-z-animals.com/articles/thought-extinct-for-6000-years-these-tiny-marsupials-have-just-been-rediscovered/",
-"image": "/rd-img/5ec8aa4e190d4811.jpg",
-"wayback": "http://web.archive.org/web/20260311185049/https://a-z-animals.com/articles/thought-extinct-for-6000-years-these-tiny-marsupials-have-just-been-rediscovered/",
-"desc": "In 2026, two tiny marsupials that were long written off as extinct were found alive in one of Earth's most remote and biodiverse regions.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Good News Network",
-"link": "https://www.goodnewsnetwork.org/gwc-charity-has-rediscovered-5-amazing-animals/"
-}
-]
-},
-{
 "title": "Bishop Museum helps rediscover 2 species thought to be extinct",
 "species": [],
 "species_firm": [],
@@ -930,8 +860,25 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 5,
+"also": [
+{
+"publisher": "Discover Wildlife",
+"link": "https://www.discoverwildlife.com/animal-facts/mammals/marsupials-rediscovered-new-guinea"
+},
+{
+"publisher": "The Economic Times",
+"link": "https://m.economictimes.com/news/international/us/lost-for-6000-years-scientists-rediscover-two-adorable-creatures-on-remote-island/articleshow/129463916.cms"
+},
+{
+"publisher": "Kansas City Star",
+"link": "https://www.kansascity.com/living/article314982866.html"
+},
+{
+"publisher": "A-Z Animals",
+"link": "https://a-z-animals.com/articles/thought-extinct-for-6000-years-these-tiny-marsupials-have-just-been-rediscovered/"
+}
+]
 },
 {
 "title": "Citizen science rediscovers rare South African moth - news",
@@ -2951,6 +2898,26 @@
 ]
 },
 {
+"title": "In Just 2 Years, They\u2019ve Rediscovered 4 Amazing Animals on Their \u201825 Lost Species\u2019 List\u2019",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Good News Network",
+"date": "Thu, 20 Aug 2020",
+"ts": 1597906800,
+"first_seen": "2026-08-10",
+"link": "https://www.goodnewsnetwork.org/gwc-charity-has-rediscovered-5-amazing-animals/",
+"image": "/rd-img/72cab1b400b34489.jpg",
+"wayback": "http://web.archive.org/web/20260811154652/https://www.goodnewsnetwork.org/gwc-charity-has-rediscovered-5-amazing-animals/",
+"desc": "Over two years, the charity Global Wildlife Conservation helped rediscover five species 'lost to science' on their 25 Most Wanted List.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "Lost Species of African Mammal Rediscovered by Duke Researcher",
 "species": [],
 "species_firm": [],
@@ -3053,10 +3020,10 @@
 "link": "https://news.mongabay.com/2016/07/citizen-science-leads-to-snail-rediscovery-in-vietnam/",
 "image": "/rd-img/e434ca7a7dab8b35.jpg",
 "wayback": "",
-"desc": "Scott Trageser photographed invertebrates on Hon Cau, an island off south-east Vietnam, and posted them to iNaturalist hoping somebody could identify them. In November 2015 the malacologist Junn Kitt Foon recognised one as Myxostoma petiverianum, a land snail ",
+"desc": "Scott Trageser photographed invertebrates on H\u00f2n Cau, an island off south-east Vietnam, and posted them to iNaturalist hoping somebody could identify them. The malacologist Junn Kitt Foon recognised one as Myxostoma petiverianum from its shell and operculum. T",
 "citation": "Trageser, S.J., Wiscovitch, A. & Foon, J.K. (2018) Discovery of Myxostoma petiverianum Wood, 1828 on Hon Cau, Vietnam. The Festivus 50(2): 110-113.",
 "kind": "citizen science",
-"note": "Found in a photograph, not in the field: identified from an iNaturalist post more than a year after it was taken.",
+"note": "Found in a photograph, not in the field: identified from an iNaturalist post more than a year after it was taken. Mongabay's report describes the snail as unseen for over a century; the paper itself does not make that claim, and this entry follows the paper.",
 "outlets": 2,
 "also": [
 {

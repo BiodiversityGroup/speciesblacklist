@@ -1366,6 +1366,13 @@
       found again</strong> — rediscovery is slowing for amphibians, birds and mammals,
       while reptiles are being lost quickly. The gap is widening, and it will not be
       closed by the kind of survey that finds large animals near roads.</p>
+    <p><strong>Plenty do come back.</strong> Of the tetrapods Lindken and colleagues
+      traced, <strong>424 of 1,280</strong> — a third — had already been found again by
+      the time they published. This page carries the ones still missing, so a rediscovery
+      is a species <em>leaving</em> it. The longest documented wait on record here is a
+      Sierra Leone freshwater crab, <span class="sci">Afrithelphusa afzelii</span>, refound
+      after <strong>225 years</strong>. Recent finds are collected on the
+      <a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a> page.</p>
   </div>
 
   <div class="prose">
@@ -1374,10 +1381,8 @@
       Biodiversity Group</a> works in the places the profile above predicts will be
       overlooked: steep, wet, unglamorous forest, a long way from a field station,
       looking for small animals at night. Three of those records are on this map.</p>
-    <p>The longest gap of the three is not the snake or the frog. It is a land snail:
-      <span class="sci">Myxostoma petiverianum</span> was last recorded in
-      <strong>1905</strong> and photographed alive in 2014 — <strong>109 years</strong>,
-      more than double the next longest.</p>
+    <p>The longest of the three is Fugler's shadow snake: <strong>54 years</strong>
+      between the only two individuals ever recorded.</p>
   </div>
 
   <div class="lostcards">
@@ -1407,14 +1412,15 @@
       <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
         Biodiversity Group</a>'s Scott Trageser photographed invertebrates on Hòn Cau,
         an island off south-east Vietnam, and posted them to iNaturalist hoping somebody
-        could name them. More
-        than a year later the malacologist Junn Kitt Foon recognised one from its shell
-        and operculum: a species not recorded in <strong>over a hundred years</strong>,
-        and one no living individual had ever been photographed.</p>
-      <p>It was found twice — once in the field, and once in a photo library, by someone
-        on the other side of the world who knew what he was looking at. The previous
-        record was <strong>1905</strong>: a gap of <strong>109 years</strong>, the
-        longest of anything on this page.</p>
+        could name them. More than a year later the malacologist Junn Kitt Foon
+        recognised one from its shell and operculum: <span class="sci">Myxostoma
+        petiverianum</span>, a poorly known land snail of Southeast Asia — and
+        <strong>the first photograph ever taken of a living adult</strong>.</p>
+      <p>It was found twice: once in the field, and once in a photo library, by someone
+        on the other side of the world who knew what he was looking at. The paper reports
+        a new record for the island. Press coverage at the time called it a rediscovery
+        after a century; the paper makes no such claim, and several other groups were
+        working on the species in the same years.</p>
       <p class="lostcite">Trageser, Wiscovitch &amp; Foon 2018, <em>The Festivus</em>
         50(2): 110–113</p>
     </article>
@@ -2033,15 +2039,16 @@ function ensureLost() {
 
 function renderLostStats() {
   const m = LOST.meta, byc = m.by_class || {};
-  // The refound count is shown rather than quietly folded into the total. Two of these
-  // species have been found again since the list was compiled, which makes the headline
-  // "unaccounted for" slightly generous — and the whole point of the list is that this
-  // number should go up.
+  // NOT a "found again" count. An earlier version showed one, and it read as though only
+  // two species had ever been refound — because the two are simply the ones reclassified
+  // in place here. This is a list of species STILL missing; the ones that come back leave
+  // it, and Lindken et al.'s figures for how many that is are in the prose below, where
+  // they can carry their source. A headline number cannot.
   const cells = [
     [m.n_species.toLocaleString(), "on the list"],
     [(byc["long-lost"] || 0).toLocaleString(), "lost over 50 years"],
     [m.n_places.toLocaleString(), "countries &amp; regions"],
-    [(byc["rediscovered"] || 0).toLocaleString(), "found again since"],
+    [m.oldest_record || "—", "oldest last record"],
   ];
   $("#lostStats").innerHTML = cells.map(
     ([n, l]) => `<div class="loststat"><b>${n}</b><span>${l}</span></div>`).join("");
