@@ -378,6 +378,17 @@
   .lostlegend .dots { display:flex; align-items:flex-end; gap:.55rem; }
   .lostlegend .dots i { display:block; border-radius:50%; border:1px solid var(--t4);
                         background:color-mix(in srgb, var(--t3) 45%, transparent); }
+  /* The heat ramp. Swatches butt together so it reads as a continuous scale, and the
+     numbers sit under it — the ramp is green-to-red, which is the one pairing
+     colour-blind readers cannot separate, so the figures are not optional. */
+  .lostlegend .ramp { display:flex; border:1px solid var(--rule); }
+  .lostlegend .ramp i { display:block; width:38px; height:12px; }
+  .lostlegend .rampnums { display:flex; gap:1.35rem; font-family:var(--mono);
+                          font-variant-numeric:tabular-nums; }
+  @media (max-width:560px) {
+    .lostlegend .ramp i { width:26px; }
+    .lostlegend .rampnums { gap:.7rem; }
+  }
   #lostTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
              transition:opacity .12s; background:var(--ink); color:var(--ground);
              font-family:var(--sans); font-size:var(--fs-small); padding:.5rem .7rem;
@@ -1171,6 +1182,21 @@
 
   <div id="ntCounts" class="counts"></div>
 
+  <!-- ===================== WHERE THEY ARE ===================== -->
+  <h3 class="siteshead">Where they are</h3>
+  <p class="siteslede">The same encoding as the lost-species map, so the two can be read
+    against each other: one circle per country, sized and shaded by how many of these
+    species it holds.</p>
+  <div class="mapwrap">
+    <canvas id="nsCanvas" role="img"
+            aria-label="World map with circles sized and coloured by the number of
+            reptile species described since 2015 that the IUCN Red List has never
+            assessed, per country. The same species are listed in the table below."></canvas>
+  </div>
+  <div class="lostlegend" id="nsLegend"></div>
+  <p class="mapstats" id="nsMapNote"></p>
+  <div id="nsTip" aria-hidden="true"></div>
+
   <!-- ===================== THE LIST ===================== -->
   <h3 class="siteshead">The list</h3>
   <div class="filters">
@@ -1271,12 +1297,11 @@
   <div class="lostbody">
 
   <div class="prose">
-    <p class="eyebrow">The Biodiversity Group</p>
     <h2 style="font-size:var(--fs-h2)">Species nobody has seen for a very long time</h2>
-    <p class="lostlede">Two thousand one hundred and thirty-five species that have not
-      been recorded in years — in some cases in centuries — and that nobody has been able
-      to declare extinct. They are not gone. They are <em>unaccounted for</em>, which is
-      a different thing, and the difference is where the work is.</p>
+    <p class="lostlede"><strong class="num">2,135</strong> species that have not been
+      recorded in years — in some cases in centuries — and that nobody has been able to
+      declare extinct. They are not gone. They are <em>unaccounted for</em>, which is a
+      different thing, and the difference is where the work is.</p>
   </div>
 
   <div class="loststats" id="lostStats"></div>
@@ -1335,9 +1360,10 @@
 
   <div class="prose">
     <h3>What The Biodiversity Group does about it</h3>
-    <p>TBG works in the places the profile above predicts will be overlooked: steep,
-      wet, unglamorous forest, a long way from a field station, looking for small animals
-      at night. Two of those records are on this map.</p>
+    <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
+      Biodiversity Group</a> works in the places the profile above predicts will be
+      overlooked: steep, wet, unglamorous forest, a long way from a field station,
+      looking for small animals at night. Two of those records are on this map.</p>
   </div>
 
   <div class="lostcards">
@@ -1346,10 +1372,11 @@
       <h4>Fugler's Shadow Snake</h4>
       <p class="sci">Emmochliophis fugleri</p>
       <p>Known from a single specimen collected in 1966 and never seen again. On
-        7&nbsp;March&nbsp;2019, at the Río Manduriacu Reserve in Imbabura, Scott
-        Trageser and Ross Maynard found one — the second individual of this species
-        ever recorded, and the first photographed alive. The rediscovery was published
-        in 2021, <strong>54 years</strong> after the first.</p>
+        7&nbsp;March&nbsp;2019, at the Río Manduriacu Reserve in Imbabura, <a
+        href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
+        Biodiversity Group</a>'s Scott Trageser and Ross Maynard found one — the second
+        individual of this species ever recorded, and the first photographed alive. The
+        rediscovery was published in 2021, <strong>54 years</strong> after the first.</p>
       <p>The paper recommends the species be listed Critically Endangered, because the
         reserve where it was found is under imminent threat from mining. The IUCN still
         lists it as <strong>Data Deficient</strong>, assessed in 2016 and not revisited
@@ -1363,8 +1390,10 @@
       <p class="eyebrow">Vietnam &middot; 2014</p>
       <h4>A land snail found in a photograph</h4>
       <p class="sci">Myxostoma petiverianum</p>
-      <p>Scott Trageser photographed invertebrates on Hòn Cau, an island off south-east
-        Vietnam, and posted them to iNaturalist hoping somebody could name them. More
+      <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
+        Biodiversity Group</a>'s Scott Trageser photographed invertebrates on Hòn Cau,
+        an island off south-east Vietnam, and posted them to iNaturalist hoping somebody
+        could name them. More
         than a year later the malacologist Junn Kitt Foon recognised one from its shell
         and operculum: a species not recorded in <strong>over a hundred years</strong>,
         and one no living individual had ever been photographed.</p>
@@ -1377,9 +1406,10 @@
     <article class="lostcard lostcard-redacted">
       <p class="eyebrow">Project Redacted</p>
       <h4>One we have found and cannot name</h4>
-      <p>There is a third. A species on lists like this one has been found again by this
-        team, and it is not on the map above, because saying where it is — or what it is
-        — would put it at risk before protection is in place.</p>
+      <p>There is a third. A species on lists like this one has been found again by <a
+        href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
+        Biodiversity Group</a>, and it is not on the map above, because saying where it
+        is — or what it is — would put it at risk before protection is in place.</p>
       <p>That caution is not theatre. For a species reduced to one known site, a public
         announcement is a map for collectors, and the trade in rare reptiles and
         amphibians runs on exactly this kind of news. The record is documented, the
@@ -1892,7 +1922,10 @@ function showView(name, push) {
   // reptiles.json is a second payload and most visitors never open this view, so it is
   // fetched on first arrival rather than at boot. Not gated on DATA: this list is a
   // separate effort and does not depend on the register's data.
-  if (name === "newtaxa") ensureReptiles();
+  if (name === "newtaxa") {
+    ensureReptiles();
+    ensureNsMap().then(ok => { if (ok) drawNsMap(); });
+  }
   if (name === "redisc") ensureRedisc();
   // Same reason as the register map: a hidden canvas has zero width, so the lost-species
   // map can only be laid out once its section is visible.
@@ -1952,11 +1985,44 @@ function renderLostStats() {
   }
 }
 
-function drawLost() {
-  const cv = $("#lostCanvas");
-  if (!LOST || !cv) return;
+/* --- the heat ramp -----------------------------------------------------------
+   Green -> yellow -> red, at Scott's request, with gradients between.
+
+   ONE THING TO KNOW ABOUT THIS RAMP: green-to-red is the single worst pairing for
+   colour-blind readers -- red/green confusion is by far the most common form, and to
+   those readers the two ends of this scale look alike. So the magnitude is NOT left to
+   hue alone. Every circle is ALSO sized by its value, the legend carries numbers rather
+   than only swatches, and the exact count is in the tooltip. Any one of those three
+   recovers the reading if the colours do not.
+
+   The stops also move steadily from dark to light to dark, so the ramp still reads as a
+   ramp in greyscale rather than collapsing into one flat tone. */
+const HEAT = [
+  [0.00, [ 27, 106,  66]],   // deep green   - few
+  [0.28, [106, 168,  79]],   // green
+  [0.52, [232, 205,  86]],   // yellow
+  [0.76, [227, 142,  56]],   // orange
+  [1.00, [188,  44,  42]],   // deep red     - many
+];
+function heatColour(t, alpha) {
+  t = Math.max(0, Math.min(1, t));
+  let a = HEAT[0], b = HEAT[HEAT.length - 1];
+  for (let i = 0; i < HEAT.length - 1; i++) {
+    if (t >= HEAT[i][0] && t <= HEAT[i + 1][0]) { a = HEAT[i]; b = HEAT[i + 1]; break; }
+  }
+  const span = (b[0] - a[0]) || 1, k = (t - a[0]) / span;
+  const c = [0, 1, 2].map(i => Math.round(a[1][i] + (b[1][i] - a[1][i]) * k));
+  return `rgba(${c[0]},${c[1]},${c[2]},${alpha === undefined ? 1 : alpha})`;
+}
+
+/* One renderer, two maps. The lost-species and new-species pages show the same kind of
+   thing -- a count per country -- so they get the same encoding rather than two that
+   look similar and differ in some detail nobody notices. */
+function paintHeat(cv, data, opts) {
+  if (!cv || !data) return null;
   const cssW = cv.parentElement.clientWidth;
-  const cssH = Math.round(cssW / 2);               // 360x180 degrees, equirectangular
+  if (!cssW) return null;                    // hidden section: nothing to lay out against
+  const cssH = Math.round(cssW / 2);         // 360x180 degrees, equirectangular
   const dpr = Math.min(devicePixelRatio || 1, 2);
   cv.width = Math.round(cssW * dpr);
   cv.height = Math.round(cssH * dpr);
@@ -1968,78 +2034,116 @@ function drawLost() {
   const X = lo => (lo + 180) / 360 * cssW;
   const Y = la => (90 - la) / 180 * cssH;
   const cs = getComputedStyle(document.documentElement);
-  const surf2 = cs.getPropertyValue("--surface-2").trim();
 
-  g.fillStyle = surf2;
+  g.fillStyle = cs.getPropertyValue("--surface-2").trim();
   g.strokeStyle = cs.getPropertyValue("--rule-2").trim();
   g.lineWidth = 1;
-  (LOST.land || []).forEach(ring => {
+  (data.land || []).forEach(ring => {
     g.beginPath();
     ring.forEach(([lo, la], i) => i ? g.lineTo(X(lo), Y(la)) : g.moveTo(X(lo), Y(la)));
     g.closePath(); g.fill(); g.stroke();
   });
 
-  // AREA proportional to count, not radius. Scaling the radius by the value makes a
-  // 270-species circle look eleven times a 25-species one instead of three times, which
-  // is the classic way a bubble map lies.
-  const max = Math.max(...LOST.places.map(p => p.n));
-  const rOf = n => 3 + Math.sqrt(n / max) * (cssW / 26);
+  const max = Math.max(...data.places.map(p => p.n));
+  // sqrt on BOTH channels. These counts are power-law -- one country holds 270 and the
+  // long tail holds one or two -- so a linear ramp would paint all but a handful of
+  // countries the same green and a linear radius would make the top one swamp the map.
+  const t = n => Math.sqrt(n / max);
+  const rOf = n => 3 + t(n) * (cssW / 27);
   const hits = [];
-  // Largest first so a big circle never hides a small one from the cursor.
-  const ordered = LOST.places.slice().sort((a, b) => b.n - a.n);
-  ordered.forEach(p => {
+  data.places.slice().sort((a, b) => b.n - a.n).forEach(p => {   // big first, so drawn under
     const x = X(p.lon), y = Y(p.lat), r = rOf(p.n);
+    const glow = g.createRadialGradient(x, y, 0, x, y, r);
+    glow.addColorStop(0, heatColour(t(p.n), 0.92));
+    glow.addColorStop(0.62, heatColour(t(p.n), 0.55));
+    glow.addColorStop(1, heatColour(t(p.n), 0.06));
     g.beginPath(); g.arc(x, y, r, 0, 6.2832);
-    g.fillStyle = "color-mix(in srgb, " + cs.getPropertyValue("--t3").trim()
-                + " 42%, transparent)";
-    g.fill();
-    g.strokeStyle = cs.getPropertyValue("--t4").trim();
+    g.fillStyle = glow; g.fill();
+    g.strokeStyle = heatColour(t(p.n), 0.85);
     g.lineWidth = 1; g.stroke();
     hits.push({x, y, r, p});
   });
-  // Smallest first for hit-testing, so a small circle inside a large one still wins.
-  hits.sort((a, b) => a.r - b.r);
-  lostGeom = {hits, cssW, cssH};
+  hits.sort((a, b) => a.r - b.r);   // small first for hit-testing, so they stay reachable
 
-  const steps = [10, 100, max];
-  $("#lostLegend").innerHTML =
-    `<span>Lost species recorded from each country or region</span>`
-    + `<span class="dots">` + steps.map(n => {
-        const d = Math.round(rOf(n) * 2);
-        return `<i style="width:${d}px;height:${d}px"></i>`;
-      }).join("") + `</span>`
-    + `<span>` + steps.map(n => n === max ? n : n).join(" &middot; ") + `</span>`;
+  const legend = $(opts.legend);
+  if (legend) {
+    const stops = [0, 0.25, 0.5, 0.75, 1];
+    const ticks = stops.map(s => Math.max(1, Math.round(max * s * s)));
+    legend.innerHTML =
+      `<span>${opts.label}</span>`
+      + `<span class="ramp">` + stops.map(s =>
+          `<i style="background:${heatColour(s, 1)}"></i>`).join("") + `</span>`
+      + `<span class="rampnums">` + ticks.map(n => n.toLocaleString()).join(" ")
+      + `</span>`;
+  }
+  return {hits, cssW, cssH};
 }
 
-(function lostHover() {
-  const tip = () => $("#lostTip");
-  const at = ev => {
-    const cv = $("#lostCanvas");
-    if (!cv || !lostGeom) return null;
-    const b = cv.getBoundingClientRect();
-    const x = ev.clientX - b.left, y = ev.clientY - b.top;
-    return lostGeom.hits.find(h => (h.x - x) ** 2 + (h.y - y) ** 2 <= h.r * h.r) || null;
-  };
+function drawLost() { lostGeom = paintHeat($("#lostCanvas"), LOST,
+  {legend: "#lostLegend", label: "Lost species recorded from each country or region"}); }
+
+/* Hover for any heat map on the page. Bound once, keyed on the canvas under the
+   pointer, so adding the second map needed no second handler. */
+(function heatHover() {
+  const MAPS = [
+    {cv: "#lostCanvas", tip: "#lostTip", geom: () => lostGeom, noun: "lost species"},
+    {cv: "#nsCanvas", tip: "#nsTip", geom: () => nsGeom,
+     noun: "species described since 2015 and never assessed"},
+  ];
   document.addEventListener("pointermove", ev => {
-    const t = tip(); if (!t) return;
-    if (!ev.target.closest || !ev.target.closest("#lostCanvas")) {
-      t.style.opacity = 0; return;
-    }
-    const h = at(ev);
-    if (!h) { t.style.opacity = 0; return; }
-    const p = h.p;
-    const grp = Object.entries(p.grp || {}).sort((a, b) => b[1] - a[1]).slice(0, 4)
-                  .map(([k, v]) => `${k} ${v}`).join(" &middot; ");
-    t.innerHTML = `<strong>${p.place}</strong> — ${p.n} lost species`
-      + (grp ? `<br>${grp}` : "")
-      + (p.oldest ? `<br>oldest last record ${p.oldest}` : "");
-    t.style.opacity = 1;
-    t.style.left = Math.min(ev.clientX + 14, innerWidth - 290) + "px";
-    t.style.top = (ev.clientY + 16) + "px";
+    MAPS.forEach(m => {
+      const t = $(m.tip), cv = $(m.cv), geom = m.geom();
+      if (!t || !cv) return;
+      if (!ev.target.closest || !ev.target.closest(m.cv) || !geom) {
+        t.style.opacity = 0; return;
+      }
+      const b = cv.getBoundingClientRect();
+      const x = ev.clientX - b.left, y = ev.clientY - b.top;
+      const h = geom.hits.find(q => (q.x - x) ** 2 + (q.y - y) ** 2 <= q.r * q.r);
+      if (!h) { t.style.opacity = 0; return; }
+      const p = h.p;
+      const grp = Object.entries(p.grp || {}).sort((a, b) => b[1] - a[1]).slice(0, 4)
+                    .map(([k, v]) => `${k} ${v}`).join(" &middot; ");
+      t.innerHTML = `<strong>${p.place}</strong> — ${p.n.toLocaleString()} ${m.noun}`
+        + (grp ? `<br>${grp}` : "")
+        + (p.oldest ? `<br>oldest last record ${p.oldest}` : "")
+        + (p.newest ? `<br>most recent description ${p.newest}` : "");
+      t.style.opacity = 1;
+      t.style.left = Math.min(ev.clientX + 14, innerWidth - 300) + "px";
+      t.style.top = (ev.clientY + 16) + "px";
+    });
   }, {passive: true});
 })();
 
-addEventListener("resize", () => { if (LOST && !$("#v-lost").hidden) drawLost(); });
+/* ---- the same map for the new-species page ---- */
+let NSMAP = null, nsLoading = false, nsGeom = null;
+
+function ensureNsMap() {
+  if (NSMAP) return Promise.resolve(true);
+  if (nsLoading) return Promise.resolve(false);
+  nsLoading = true;
+  return fetch("/newspecies-map.json", {cache: "no-cache"}).then(r => r.json())
+    .then(d => {
+      NSMAP = d;
+      const m = d.meta || {}, n = $("#nsMapNote");
+      if (n && m.unplaced) {
+        n.textContent = `${m.placed.toLocaleString()} of ${m.total.toLocaleString()} `
+          + `species are placed here, across ${m.places} countries. The other `
+          + `${m.unplaced} give a distribution this map could not resolve to a single `
+          + `country and are not drawn.`;
+      }
+      return true;
+    }).catch(() => false).finally(() => { nsLoading = false; });
+}
+
+function drawNsMap() { nsGeom = paintHeat($("#nsCanvas"), NSMAP,
+  {legend: "#nsLegend",
+   label: "Species described since 2015 that the Red List has never assessed"}); }
+
+addEventListener("resize", () => {
+  if (LOST && !$("#v-lost").hidden) drawLost();
+  if (NSMAP && !$("#v-newtaxa").hidden) drawNsMap();
+});
 
 /* ================= DESCRIBED BUT NEVER ASSESSED (reptile list) ================= */
 let NT = null, ntLoading = false;

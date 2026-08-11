@@ -1,13 +1,13 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 119,
+"stories": 116,
 "raw_items": 238,
 "with_species": 73,
 "distinct_species": 146,
 "distinct_species_firm": 29,
 "multi_species_cards": 27,
-"with_image": 117,
+"with_image": 114,
 "syndicated": 49,
 "on_tbg_list": 26,
 "on_list_breakdown": {
@@ -17,8 +17,8 @@
 "undated": 0,
 "newest": "Tue, 11 Aug 2026",
 "tracked_names": 6709,
-"image_local": 110,
-"archived": 46
+"image_local": 108,
+"archived": 45
 },
 "cards": [
 {
@@ -1307,26 +1307,6 @@
 "also": []
 },
 {
-"title": "A plant that was extinct in Canada was rediscovered in Ontario thanks to everyday observers",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "NOW Toronto",
-"date": "Thu, 18 Dec 2025",
-"ts": 1766044800,
-"first_seen": "2026-08-10",
-"link": "https://nowtoronto.com/news/a-plant-that-was-extinct-in-canada-was-rediscovered-in-ontario-thanks-to-everyday-observers/",
-"image": "/rd-img/a8748fd242e17098.jpg",
-"wayback": "",
-"desc": "A plant that had been deemed extinct in Canada for more than 40 years has been rediscovered in Southern Ontario thanks to local enthusiasts.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "Scientists rediscover creature thought to be 'possibly extinct' for more than 20 years: 'It is something special'",
 "species": [
 "Moema claudiae"
@@ -1365,11 +1345,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
 {
 "publisher": "miamiherald.com",
 "link": "https://www.miamiherald.com/news/nation-world/world/article310726685.html"
+},
+{
+"publisher": "NOW Toronto",
+"link": "https://nowtoronto.com/news/a-plant-that-was-extinct-in-canada-was-rediscovered-in-ontario-thanks-to-everyday-observers/"
 }
 ]
 },
@@ -1565,7 +1549,9 @@
 },
 {
 "title": "Long-eared species feared extinct for 55 years rediscovered in Turkmenistan",
-"species": [],
+"species": [
+"Plecotus turkmenicus"
+],
 "species_firm": [],
 "on_list": "",
 "detail": "",
@@ -1574,36 +1560,18 @@
 "ts": 1762416000,
 "first_seen": "2026-08-10",
 "link": "https://www.miamiherald.com/news/nation-world/world/article312805193.html",
-"image": "https://www.miamiherald.com/public/news/nation-world/world/om185a/picture312811901/alternates/LANDSCAPE_1200/PM-Plecotus-turkmenicus-(c)-C.DietzD85_1210__fitted.jpeg",
+"image": "/rd-img/ac88643352c156d5.jpg",
 "wayback": "http://web.archive.org/web/20260811164959/https://www.miamiherald.com/news/nation-world/world/article312805193.html",
 "desc": "Scientists on an expedition to find the species, which had never been seen alive, uncovered one hiding in a crevice in the middle of the Karakum Desert.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Rediscovery of the lost Turkestan Bat",
-"species": [
-"Plecotus turkmenicus"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Informationsdienst Wissenschaft",
-"date": "Mon, 03 Nov 2025",
-"ts": 1762156800,
-"first_seen": "2026-08-10",
-"link": "https://idw-online.de/de/news860765",
-"image": "/rd-img/ac88643352c156d5.jpg",
-"wayback": "http://web.archive.org/web/20260811153523/https://www.iflscience.com/bat-species-not-seen-in-55-years-rediscovered-and-photographed-for-first-time-just-look-at-those-ears-81436",
-"desc": "An international team of researchers from Germany, Uzbekistan and Turkmenistan, led by the Museum f\u00fcr Naturkunde Berlin, has rediscovered a bat species that had been missing for 55 years. Pictures and video recordings could be made for the first time. The aim ",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
+{
+"publisher": "Informationsdienst Wissenschaft",
+"link": "https://idw-online.de/de/news860765"
+},
 {
 "publisher": "IFLScience",
 "link": "https://www.iflscience.com/bat-species-not-seen-in-55-years-rediscovered-and-photographed-for-first-time-just-look-at-those-ears-81436"
@@ -1720,35 +1688,6 @@
 {
 "publisher": "Philstar Life",
 "link": "https://philstarlife.com/news-and-views/516327-rare-plant-species-rediscovered-masungi-georeserve"
-}
-]
-},
-{
-"title": "Reptile thought to be extinct for 34 years is rediscovered",
-"species": [
-"Afroedura rondavelica"
-],
-"species_firm": [
-"Afroedura rondavelica"
-],
-"on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
-"publisher": "Earth.com",
-"date": "Fri, 17 Oct 2025",
-"ts": 1760684400,
-"first_seen": "2026-08-10",
-"link": "https://www.earth.com/news/reptile-thought-extinct-for-34-years-is-rediscovered-afroedura-rondavelica/",
-"image": "/rd-img/bf8a1c0c63ccdfe6.jpg",
-"wayback": "",
-"desc": "After more than 30 years of being missing, the Blyde Rondavel flat gecko (Afroedura rondavelica) reappears in South Africa.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 10,
-"also": [
-{
-"publisher": "euronews",
-"link": "https://www.euronews.com/2025/05/15/scientists-thought-this-gecko-was-extinct-or-didnt-exist-now-its-been-rediscovered-after-3"
 }
 ]
 },
@@ -2149,23 +2088,48 @@
 },
 {
 "title": "SA scientists rediscover gecko species, 33 years after first recorded",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
+"species": [
+"Afroedura rondavelica"
+],
+"species_firm": [
+"Afroedura rondavelica"
+],
+"on_list": "Lost Species",
+"detail": "Reptile, lost, last seen 1991",
 "publisher": "News24",
 "date": "Fri, 20 Jun 2025",
 "ts": 1750402800,
 "first_seen": "2026-08-10",
 "link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871",
-"image": "/rd-img/4e77c1770b43b5b3.jpg",
-"wayback": "http://web.archive.org/web/20260811164600/https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871",
-"desc": "After hours of searching, and in the middle of the night, two researchers spotted a reptile, they had been airlifted to a remote part of the Blyde River Canyon to find \u2013 three decades after it was last recorded.",
+"image": "/rd-img/ebeb9577f29af63d.jpg",
+"wayback": "http://web.archive.org/web/20260811164632/https://www.euronews.com/2025/05/15/scientists-thought-this-gecko-was-extinct-or-didnt-exist-now-its-been-rediscovered-after-3",
+"desc": "Since it was identified in 1991, mystery surrounded this elusive little lizard for more than three decades.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 11,
+"also": [
+{
+"publisher": "The Independent",
+"link": "https://www.independent.co.uk/bulletin/news/blyde-rondavel-gecko-rediscovered-b2751737.html"
+},
+{
+"publisher": "IOL",
+"link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "Sunday Tribune",
+"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "Sunday Independent",
+"link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "News24",
+"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871"
+}
+]
 },
 {
 "title": "Rediscovery of the Losgna genus in India: a new species of parasitic wasp discovered in Chandigarh, named - \u2018Losgna Occidentalis\u2019",
