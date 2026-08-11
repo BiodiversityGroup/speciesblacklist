@@ -1,26 +1,46 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 133,
-"raw_items": 265,
+"stories": 134,
+"raw_items": 273,
 "with_species": 77,
-"distinct_species": 143,
+"distinct_species": 145,
 "distinct_species_firm": 27,
 "multi_species_cards": 30,
-"with_image": 126,
-"syndicated": 61,
+"with_image": 127,
+"syndicated": 62,
 "on_tbg_list": 25,
 "on_list_breakdown": {
 "on our lost-species list": 22,
 "on the Black List": 3
 },
 "undated": 0,
-"newest": "Wed, 29 Jul 2026",
+"newest": "Tue, 11 Aug 2026",
 "tracked_names": 6709,
-"image_local": 117,
-"archived": 19
+"image_local": 118,
+"archived": 25
 },
 "cards": [
+{
+"title": "The return of the caspian tiger: how a species feared extinct has come back to Kazakhstan",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "the Guardian",
+"date": "Tue, 11 Aug 2026",
+"ts": 1786417200,
+"first_seen": "2026-08-11",
+"link": "https://www.theguardian.com/environment/2026/aug/11/extinction-caspian-tiger-release-female-kazakhstan-aoe",
+"image": "/rd-img/bed6b28e1b0a31cc.jpg",
+"wayback": "",
+"desc": "The wild capture and release of a female big cat into a nature reserve is the first step towards reintroducing a population that hasn\u2019t been seen for 70 years",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "A new and interesting earthworm species from Madagascar (Crassiclitellata, Kynotidae) with an updated key to the Kynotus Michelsen, 1891 species",
 "species": [],
@@ -370,7 +390,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
 {
 "publisher": "GK Today",
@@ -381,11 +401,11 @@
 "link": "https://www.indiatodayne.in/arunachal-pradesh/story/rare-wild-blueberry-relative-rediscovered-in-arunachal-after-188-years-1398132-2026-05-26"
 },
 {
-"publisher": "NDTV",
-"link": "https://www.ndtv.com/india-news/rare-blueberry-species-rediscovered-in-arunachal-forest-after-188-years-11550231"
+"publisher": "Northeast Live",
+"link": "https://northeastlivetv.com/topnews/rare-blueberry-species-rediscovered-in-arunachal-forest-after-188-years/"
 },
 {
-"publisher": "ndtv.com",
+"publisher": "NDTV",
 "link": "https://www.ndtv.com/india-news/rare-blueberry-species-rediscovered-in-arunachal-forest-after-188-years-11550231"
 },
 {
@@ -533,8 +553,12 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
+{
+"publisher": "Conservation news",
+"link": "https://news.mongabay.com/2026/04/rediscovered-species-in-papua-spotlights-importance-of-indigenous-knowledge/"
+},
 {
 "publisher": "Conservation news",
 "link": "https://news.mongabay.com/2026/04/rediscovered-species-in-papua-spotlights-importance-of-indigenous-knowledge/"
@@ -616,7 +640,7 @@
 "first_seen": "2026-08-10",
 "link": "https://www.mauinews.com/news/local-news/2026/04/rare-native-species-rediscovered-on-lanai/",
 "image": "https://ogden_images.s3.amazonaws.com/www.mauinews.com/images/2026/04/23161920/FE3A5FFA-183E-4FE1-8E0F-3FA8BE7CBD8D-1.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260811124849/https://www.mauinews.com/news/local-news/2026/04/rare-native-species-rediscovered-on-lanai/",
 "desc": "The Pulama Lanai conservation team reports having recently documented several rare native species that haven\u2019t been seen on Lanai for decades, including the Blackburn\u2019s sphinx moth, which was believed to be extinct in Hawaii. According to the organization, the",
 "citation": "",
 "kind": "",
@@ -664,7 +688,9 @@
 "Pogoniulus bilineatus",
 "Guadalcanaria inexpectata",
 "Heinrichia simplex",
-"Zosterops samoensis"
+"Zosterops samoensis",
+"Malurus grayi",
+"Cyornis herioti"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
@@ -680,7 +706,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 6,
 "also": [
 {
 "publisher": "Conservation news",
@@ -691,12 +717,12 @@
 "link": "https://news.mongabay.com/short-article/2026/04/five-lost-bird-species-rediscovered-in-2025/"
 },
 {
-"publisher": "Good Good Good",
-"link": "https://www.goodgoodgood.co/articles/missing-bird-species-rediscovered"
+"publisher": "Conservation news",
+"link": "https://news.mongabay.com/short-article/2026/04/five-lost-bird-species-rediscovered-in-2025/"
 },
 {
-"publisher": "ZME Science",
-"link": "https://www.zmescience.com/science/news-science/lost-bird-species-found-2025/"
+"publisher": "Good Good Good",
+"link": "https://www.goodgoodgood.co/articles/missing-bird-species-rediscovered"
 }
 ]
 },
@@ -716,7 +742,7 @@
 "first_seen": "2026-08-10",
 "link": "https://bigislandnow.com/2026/04/21/rare-native-species-rediscovered-on-lanai-reflect-stewardship-conservation-partners/",
 "image": "/rd-img/e323ee2ccd88ea81.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260811151945/https://bigislandnow.com/2026/04/21/rare-native-species-rediscovered-on-lanai-reflect-stewardship-conservation-partners/",
 "desc": "Surveys were led by Maui Nui Plant Extinction Prevention Program in partnership with P\u016blama L\u0101na\u2018i, using on-the-ground exploration and drone technology to access steep cliffs and remote terrain.",
 "citation": "",
 "kind": "",
@@ -969,7 +995,7 @@
 "first_seen": "2026-08-10",
 "link": "https://www.bbc.com/news/articles/cp814l80pw2o",
 "image": "/rd-img/f646090743d3a5ba.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260811153254/https://www.bbc.com/news/articles/cp814l80pw2o",
 "desc": "The discovery of two lost species is 'exceptional' and rare, scientists say",
 "citation": "",
 "kind": "",
@@ -1119,7 +1145,7 @@
 "first_seen": "2026-08-10",
 "link": "https://mg.co.za/the-green-guardian/2026-01-19-endangered-grasshopper-rediscovered-in-kzn-after-45-years/",
 "image": "/rd-img/a4655de18f7cb00b.webp",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260811152135/https://www.timeout.com/durban/news/kzn-great-grasshopper-rediscovery-011626",
 "desc": "Scientists have rediscovered an endangered grasshopper species in KwaZulu-Natal, underscoring the importance of small protected areas \u2014 and the often-overlooked invertebrates they shelter",
 "citation": "",
 "kind": "",
@@ -1259,7 +1285,7 @@
 "first_seen": "2026-08-10",
 "link": "https://timesofindia.indiatimes.com/city/goa/endangered-herb-lepidagathis-clavata-rediscovered-after-166-years-in-western-ghats/articleshow/126470153.cms",
 "image": "/rd-img/3a222708ae62e7ca.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260222001318/https://timesofindia.indiatimes.com/city/goa/endangered-herb-lepidagathis-clavata-rediscovered-after-166-years-in-western-ghats/articleshow/126470153.cms",
 "desc": "A team of researchers has rediscovered the critically endangered herb Lepidagathis clavata in the Western Ghats after 166 years, revealing its unique flowering cycle and conservation needs.",
 "citation": "",
 "kind": "",
@@ -1378,7 +1404,7 @@
 "first_seen": "2026-08-10",
 "link": "https://www.thenews.com.pk/latest/1386222-worlds-rarest-flat-headed-cats-rediscovered-in-thailand-after-30-years",
 "image": "/rd-img/849a672bd7975f0c.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260811152631/https://www.thenews.com.pk/latest/1386222-worlds-rarest-flat-headed-cats-rediscovered-in-thailand-after-30-years",
 "desc": "In a recent unique discovery, researchers have photographed the world",
 "citation": "",
 "kind": "",
@@ -2540,8 +2566,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "The Hindu",
+"link": "https://www.thehindu.com/sci-tech/science/atree-researchers-rediscover-long-lost-species-after-111-years/article69442309.ece"
+}
+]
 },
 {
 "title": "\u200b7 species that were rediscovered after many years of extinction\u200b",
@@ -2600,8 +2631,12 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
+{
+"publisher": "Yahoo News Australia",
+"link": "https://au.news.yahoo.com/incredible-phone-footage-leads-to-rediscovery-of-lost-species-after-46-years-070206070.html"
+},
 {
 "publisher": "Yahoo News Australia",
 "link": "https://au.news.yahoo.com/incredible-phone-footage-leads-to-rediscovery-of-lost-species-after-46-years-070206070.html"
@@ -2772,12 +2807,20 @@
 "outlets": 5,
 "also": [
 {
-"publisher": "Metro",
-"link": "https://metro.co.uk/2023/11/30/golden-mole-missing-80-years-rediscovered-south-africa-19906928/"
+"publisher": "euronews",
+"link": "https://www.euronews.com/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-co"
+},
+{
+"publisher": "Mail & Guardian",
+"link": "https://mg.co.za/the-green-guardian/2023-12-27-blind-golden-mole-that-swims-through-the-sand-rediscovered-in-sa/"
 },
 {
 "publisher": "euronews",
-"link": "https://www.euronews.com/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-co"
+"link": "https://www.euronews.com/green/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-"
+},
+{
+"publisher": "Metro",
+"link": "https://metro.co.uk/2023/11/30/golden-mole-missing-80-years-rediscovered-south-africa-19906928/"
 }
 ]
 },
@@ -3369,8 +3412,12 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
+{
+"publisher": "Conservation news",
+"link": "https://news.mongabay.com/2020/08/elephant-shrew-lost-to-science-for-52-years-is-rediscovered-in-africa/"
+},
 {
 "publisher": "Discover Wildlife",
 "link": "https://www.discoverwildlife.com/news/a-sengi-species-lost-for-half-a-century-has-been-rediscovered-in-a-surprising-location"
