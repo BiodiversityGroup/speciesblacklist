@@ -601,6 +601,31 @@
   .ftable td:first-child { font-family:var(--mono); font-size:.82rem; }
 
   /* ---- described but never assessed ---- */
+  /* The page leads with the finding and defers the method. An earlier version put five
+     caveat boxes above the table, which is honest but unreadable: the reader met the
+     limitations before they met the thing being limited. */
+  .ntlead { max-width:46rem; margin:0 0 1.4rem; }
+  .ntkicker { font-family:var(--sans); font-size:.72rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-3); margin:0 0 .5rem; }
+  .nthead { font-size:2rem; line-height:1.18; margin:0 0 .9rem; letter-spacing:-.015em; }
+  .nthero { color:var(--accent); font-variant-numeric:tabular-nums; }
+  .ntsummary { color:var(--ink-2); margin:0 0 .7rem; font-size:1.02rem; }
+  .ntmore { font-family:var(--sans); font-size:.88rem; margin:.2rem 0 1.8rem; }
+  .ntmore a { text-decoration:none; border-bottom:1px solid var(--rule-2);
+    padding-bottom:1px; }
+  .ntmore a:hover { border-bottom-color:var(--accent); }
+  .counts .count .csub { display:block; font-style:normal; font-size:.72rem;
+    color:var(--ink-3); margin-top:.15rem; }
+  .ntabout { margin-top:3rem; padding-top:1.4rem; border-top:1px solid var(--rule); }
+  .ntdisc { border:1px solid var(--border, var(--rule)); border-radius:8px;
+    padding:.2rem .9rem; margin:.5rem 0; background:var(--surface); }
+  .ntdisc > summary { cursor:pointer; font-family:var(--sans); font-size:.9rem;
+    font-weight:600; padding:.6rem 0; list-style:none; }
+  .ntdisc > summary::-webkit-details-marker { display:none; }
+  .ntdisc > summary::before { content:"+ "; color:var(--accent); font-weight:700; }
+  .ntdisc[open] > summary::before { content:"– "; }
+  .ntdisc p { font-size:.9rem; color:var(--ink-2); margin:.5rem 0 .9rem; }
+  .ntfoot { font-size:.82rem !important; color:var(--ink-3) !important; }
   .ntlegend { margin:.6rem 0 0; }
   .ntlegend p { font-family:var(--sans); font-size:.82rem; color:var(--ink-2);
     margin:.3rem 0; line-height:1.5; }
@@ -982,103 +1007,114 @@
 
 <!-- ===================== DESCRIBED BUT NEVER ASSESSED ==================== -->
 <section class="view wrap" id="v-newtaxa" hidden>
-  <div class="prose">
-    <h2 style="font-size:1.4rem">Described but never assessed</h2>
 
-    <div class="warn">
-      <h3>This is not the register</h3>
-      <p style="margin:.4rem 0 0">The register asks which <em>assessed</em> species IUCN
-        looked at and returned <em>we don't know</em> about — and its ranking is tested
-        against IUCN's own later reassessments. This page asks a different question: who
-        is missing from the Red List <em>entirely</em>. It is built from a taxonomic
-        checklist rather than from the register's source, its restriction grades are a
-        separate instrument, and the two lists must never be added together.</p>
-    </div>
+  <!-- ===================== EXECUTIVE SUMMARY ===================== -->
+  <div class="ntlead">
+    <p class="ntkicker">Reptiles described since 2015</p>
+    <!-- filled from reptiles.json at runtime; a hard-coded figure here is exactly what
+         15_check_figures.py exists to catch -->
+    <h2 class="nthead">The Red List has never assessed <span class="nthero"
+      id="ntHero">&mdash;</span> of them.</h2>
+    <p class="ntsummary">Taxonomists have named more than two thousand new reptile
+      species in the past decade. Most have never been evaluated for extinction risk, so
+      no listing protects them and no conservation plan counts them. Nine in ten are
+      endemic to a single country &mdash; the pattern that best predicts a species turns
+      out to be threatened when someone finally looks.</p>
+    <p class="ntsummary">Every species below was checked one at a time against the IUCN
+      Red List's own database, not inferred from a missing name.</p>
+  </div>
 
-    <p style="margin:.8rem 0 0;color:var(--ink-2)">Every reptile species described since
-      2015 that the IUCN Red List has never assessed. Sources: the
-      <a href="https://reptile-database.org" target="_blank" rel="noopener">Reptile
-      Database</a> checklist of June 2026 (12,650 accepted species) against IUCN
-      v2026-1 (10,305 assessed reptiles), matched on binomial and on taxonomic authority
-      so that a change of genus is not mistaken for a gap.</p>
+  <div id="ntCounts" class="counts"></div>
 
-    <p style="margin:.7rem 0 0;color:var(--ink-2)">A failed name match cannot show that
-      something was never assessed, so <strong>every species here was checked
-      individually against the Red List API</strong>, and every name IUCN did not return
-      was then re-checked against GBIF's synonyms. That removed 51 species which were
-      assessed after all — a false-positive rate of 2.9%.</p>
+  <p class="ntmore">
+    <a href="#nt-about" id="ntAboutLink">How this list was built, and what it cannot
+      tell you &darr;</a>
+  </p>
 
-    <div id="ntCounts" class="counts"></div>
+  <!-- ===================== THE LIST ===================== -->
+  <h3 class="siteshead">The list</h3>
+  <div class="filters">
+    <input id="ntQ" type="search" placeholder="Search species, family, country&hellip;"
+           aria-label="Search the list">
+    <select id="ntEv" aria-label="Filter by evidence of the gap"></select>
+    <select id="ntRc" aria-label="Filter by geographic extent"></select>
+    <select id="ntFam" aria-label="Filter by family"></select>
+  </div>
+  <p id="ntShowing" style="font-family:var(--sans);font-size:.82rem;
+     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
+  <div id="ntTable"></div>
 
-    <h3 class="siteshead">How far the evidence goes</h3>
-    <p class="siteslede">Two things are graded separately, because they are known to
-      different standards. <strong>Evidence of the gap</strong> is how firmly we can say
-      IUCN has never assessed it. <strong>Restriction</strong> is how narrow the range
-      appears — and for a species described last year, few records may mean a small range
-      or may only mean nobody has looked twice. Species whose restriction is simply
-      unknown are labelled as such and never counted as narrow.</p>
+  <!-- ===================== METHOD AND LIMITS, BELOW THE LIST ===================== -->
+  <div id="nt-about" class="ntabout">
+    <h3 class="siteshead">How this list was built, and what it cannot tell you</h3>
 
-    <div class="ntlegend" id="ntLegend"></div>
+    <details class="ntdisc" open>
+      <summary>Where the species come from</summary>
+      <p>The <a href="https://reptile-database.org" target="_blank" rel="noopener">Reptile
+        Database</a> checklist of June 2026 lists 12,650 accepted species. Comparing it
+        with IUCN v2026-1, which holds 10,305 assessed reptiles, leaves the species the
+        Red List has no record of.</p>
+      <p>Matching on names alone would be unreliable, because the two bodies often place
+        a species in different genera. Species are therefore matched on the binomial
+        <em>or</em> on the taxonomic authority &mdash; the describing author and year,
+        which travel with a species through every change of genus. That caught 169
+        species a name-only comparison would have wrongly called missing.</p>
+    </details>
 
-    <div class="warn" style="margin-top:1rem">
-      <h3>The restriction classes were tested, and the top of the scale failed</h3>
-      <p style="margin:.4rem 0 0">These classes are <strong>descriptive, not a validated
-        priority ranking</strong>, and the reason is worth stating rather than hiding.
-        The same scorer was run over a random sample of 600 reptiles the Red List
-        <em>has</em> assessed, scoring them blind to their category, to ask whether
-        narrower species really do come back threatened more often.</p>
-      <p style="margin:.5rem 0 0">One distinction held clearly: species endemic to a
-        single country are threatened at <strong>27.2%</strong> against
-        <strong>13.2%</strong> for those in more than one — an odds ratio of 2.46
-        (p&nbsp;=&nbsp;0.00005). That is the ordering this page can defend.</p>
-      <p style="margin:.5rem 0 0">A finer, coordinate-led scale was tried first and
-        abandoned. Its top class, island endemism, came back at <strong>19.5%</strong>
-        threatened against 20.9% for everything else — an odds ratio of 0.92 and
-        <strong>p&nbsp;=&nbsp;1</strong>, no signal whatever — because "island" read from
-        distribution text spans a 1&nbsp;km² islet and Hainan's 34,000&nbsp;km² alike. A
-        bounded version, re-tested on a fresh sample, qualified only 3 species in 579 and
-        so could not be tested at all.</p>
-      <p style="margin:.5rem 0 0">Coordinates could not rescue it either. Geocoding the
-        published locality prose was measured against species whose descriptions print
-        coordinates: a <strong>53&nbsp;km median error</strong>, a 5,469&nbsp;km worst
-        case, and only a third of species resolving. So this page reports the extent each
-        species' own distribution statement supports, and nothing finer.</p>
-      <p style="margin:.5rem 0 0">The "finer detail" column is descriptive only. It counts
-        georeferenced records and the distance between them where GBIF has them, and it
-        has <em>not</em> been validated against Red List outcomes — for a species described
-        last year, few records may mean a small range or may only mean nobody has looked
-        twice.</p>
-    </div>
+    <details class="ntdisc">
+      <summary>Why you can trust the &ldquo;never assessed&rdquo; claim</summary>
+      <p>A failed name search cannot prove something was never assessed. So every species
+        here was queried individually against the Red List API, and every name IUCN did
+        not return was then re-checked against GBIF's synonyms. That removed 51 species
+        which had been assessed after all &mdash; a false-positive rate of 2.9%.</p>
+      <p>The evidence is graded, because it is not equally strong for every species:</p>
+      <div class="ntlegend" id="ntLegendEv"></div>
+    </details>
 
-    <div class="warn" style="margin-top:1rem">
-      <h3>Localities are deliberately withheld</h3>
-      <p style="margin:.4rem 0 0">This page gives each species' distribution — country,
-        state, island — and no more. <strong>Exact type localities and coordinates are
-        not published here and are not in the downloadable data.</strong></p>
-      <p style="margin:.5rem 0 0">These are narrowly restricted reptiles that the Red
-        List has never assessed, so no listing triggers any legal protection for them,
-        and island endemics among them are exactly what the reptile trade targets.
-        Individually their localities sit scattered across separate descriptions;
-        gathered into one file they become a collecting list. The aggregation is the
-        harm, not any single record.</p>
-      <p style="margin:.5rem 0 0">Describers already know this — obscuring or altering a
-        type locality in a new reptile or amphibian description is common practice to
-        deter collectors, which makes republishing those coordinates both a risk and
-        unreliable. Researchers who need locality data should go to the original
-        descriptions, where the authors decided for themselves what to disclose.</p>
-    </div>
+    <details class="ntdisc">
+      <summary>What &ldquo;extent&rdquo; means, and the ranking that failed</summary>
+      <p>Extent is taken from each species' own published distribution: the country,
+        state or landform it is recorded from. That is the measure the evidence supports
+        &mdash; species endemic to a single country turn out to be threatened roughly
+        twice as often as those crossing borders (27.2% against 13.2%, p&nbsp;=&nbsp;0.00005,
+        tested on 600 reptiles the Red List <em>has</em> assessed).</p>
+      <p>A finer, coordinate-based scale was tried first and <strong>abandoned</strong>.
+        Its top class, island endemism, predicted nothing at all (odds ratio 0.92,
+        p&nbsp;=&nbsp;1), because &ldquo;island&rdquo; read from a distribution string
+        covers a one-square-kilometre islet and Hainan's 34,000&nbsp;km&sup2; alike.
+        Geocoding the locality text could not rescue it either: measured against species
+        whose descriptions print coordinates, it was off by a median of 53&nbsp;km and in
+        the worst case 5,469&nbsp;km.</p>
+      <div class="ntlegend" id="ntLegendRc"></div>
+      <p class="ntfoot">The &ldquo;finer detail&rdquo; column counts georeferenced
+        records where GBIF has them. It is descriptive only and has <em>not</em> been
+        validated against Red List outcomes &mdash; for a species described last year,
+        few records may mean a small range, or may only mean nobody has looked twice.</p>
+    </details>
 
-    <h3 class="siteshead">The list</h3>
-    <div class="filters">
-      <input id="ntQ" type="search" placeholder="Search species, family, locality…"
-             aria-label="Search the list">
-      <select id="ntEv" aria-label="Filter by evidence of the gap"></select>
-      <select id="ntRc" aria-label="Filter by restriction class"></select>
-      <select id="ntFam" aria-label="Filter by family"></select>
-    </div>
-    <p id="ntShowing" style="font-family:var(--sans);font-size:.82rem;
-       color:var(--ink-3);margin:.6rem 0 .2rem"></p>
-    <div id="ntTable"></div>
+    <details class="ntdisc">
+      <summary>Why there are no coordinates here</summary>
+      <p>This page gives each species' distribution and no more. <strong>Exact type
+        localities and coordinates are deliberately absent, including from the
+        downloadable data.</strong></p>
+      <p>These are narrowly restricted reptiles the Red List has never listed, so no
+        legal protection follows from a listing, and island endemics among them are
+        exactly what the reptile trade targets. Scattered across separate descriptions
+        their localities are hard to exploit; gathered into one file they become a
+        collecting list. Describers know this &mdash; obscuring a type locality in a new
+        reptile description is common practice for the same reason. Researchers who need
+        locality data should go to the original descriptions, where the authors decided
+        for themselves what to disclose.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>How this differs from the register</summary>
+      <p>The register asks which <em>assessed</em> species IUCN looked at and returned
+        <em>we don't know</em> about, and its ranking is tested against IUCN's own later
+        reassessments. This page asks who is missing from the Red List entirely. It draws
+        on a different source and uses a different instrument, so <strong>the two lists
+        must never be added together.</strong></p>
+    </details>
   </div>
 </section>
 
@@ -1436,21 +1472,27 @@ function ntBoot() {
      HAS assessed and the top of the scale did not predict threat (island endemism came
      back OR 0.92, p = 1), so presenting a priority count here would assert something
      the test refused. Endemic-to-one-country is the distinction that did hold. */
+  $("#ntHero").textContent = c.total.toLocaleString();
   $("#ntCounts").innerHTML = [
-    ["Never assessed", c.total.toLocaleString()],
-    ["Confirmed airtight", (c.by_evidence.airtight || 0).toLocaleString()],
-    ["Endemic to one country", (c.single_country || 0).toLocaleString()],
-    ["With finer detail", (c.with_fine_detail || 0).toLocaleString()]
-  ].map(([k, v]) =>
-    `<div class="count"><b>${v}</b><span>${k}</span></div>`).join("");
+    ["Species", c.total.toLocaleString(), "described since 2015, never assessed"],
+    ["Endemic to one country", (c.single_country || 0).toLocaleString(),
+     "the pattern that predicts threat"],
+    ["Confirmed against IUCN's index", (c.by_evidence.airtight || 0).toLocaleString(),
+     "the strongest grade of evidence"],
+    ["Families affected", new Set(NT.rows.map(r => r.fam)).size.toLocaleString(),
+     "geckos worst hit"]
+  ].map(([k, v, sub]) =>
+    `<div class="count"><b>${v}</b><span>${k}</span>` +
+    `<em class="csub">${sub}</em></div>`).join("");
 
-  $("#ntLegend").innerHTML =
-    Object.entries(NT_EV).map(([k, [lab, why]]) =>
-      `<p><b>${lab}</b> (${(NT.counts.by_evidence[k] || 0).toLocaleString()}) — ${why}</p>`
-    ).join("") +
-    Object.entries(NT_RC).map(([k, [lab, why]]) =>
-      `<p><b>${k} · ${lab}</b> (${(NT.counts.by_class[k] || 0).toLocaleString()}) — ${why}</p>`
-    ).join("");
+  // the two legends now sit inside their own disclosure, each beside the text that
+  // explains what it is measuring
+  $("#ntLegendEv").innerHTML = Object.entries(NT_EV).map(([k, [lab, why]]) =>
+    `<p><b>${lab}</b> (${(c.by_evidence[k] || 0).toLocaleString()}) — ${why}</p>`
+  ).join("");
+  $("#ntLegendRc").innerHTML = Object.entries(NT_RC).map(([k, [lab, why]]) =>
+    `<p><b>${k} · ${lab}</b> (${(c.by_class[k] || 0).toLocaleString()}) — ${why}</p>`
+  ).join("");
 
   const opt = (sel, blank, items) => {
     $(sel).innerHTML = `<option value="">${blank}</option>` +
@@ -1458,7 +1500,7 @@ function ntBoot() {
   };
   opt("#ntEv", "Any evidence grade",
       Object.entries(NT_EV).map(([k, v]) => [k, v[0]]));
-  opt("#ntRc", "Any restriction class",
+  opt("#ntRc", "Any extent",
       Object.entries(NT_RC).map(([k, v]) => [k, k + " · " + v[0]]));
   const fams = [...new Set(NT.rows.map(r => r.fam))].filter(Boolean).sort();
   opt("#ntFam", "Any family", fams.map(f => [f, f]));
