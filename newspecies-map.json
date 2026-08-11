@@ -12907,7 +12907,7 @@
 "total": 1729,
 "placed": 1681,
 "unplaced": 48,
-"places": 86
+"places": 81
 },
 "places": [
 {
@@ -12939,7 +12939,7 @@
 "newest": 2026
 },
 {
-"place": "Viet Nam",
+"place": "Vietnam",
 "lat": 15.927,
 "lon": 107.965,
 "n": 101,
@@ -12998,15 +12998,18 @@
 "place": "Peru",
 "lat": -6.87,
 "lon": -75.046,
-"n": 70,
+"n": 74,
 "grp": {
 "Gymnophthalmidae": 25,
-"Tropiduridae": 14,
-"Liolaemidae": 9,
+"Tropiduridae": 15,
+"Liolaemidae": 12,
 "Colubridae": 7,
 "Hoplocercidae": 5
 },
-"newest": 2026
+"newest": 2026,
+"merged_from": [
+"Per\u00fa"
+]
 },
 {
 "place": "Thailand",
@@ -13023,6 +13026,24 @@
 "newest": 2026
 },
 {
+"place": "Mexico",
+"lat": 23.659,
+"lon": -102.008,
+"n": 56,
+"grp": {
+"Colubridae": 15,
+"Anguidae": 7,
+"Viperidae": 6,
+"Leptotyphlopidae": 5,
+"Scincidae": 5,
+"Xenosauridae": 1
+},
+"newest": 2025,
+"merged_from": [
+"M\u00e9xico"
+]
+},
+{
 "place": "Madagascar",
 "lat": -18.925,
 "lon": 46.442,
@@ -13035,20 +13056,6 @@
 "Pseudoxyrhophiidae": 1
 },
 "newest": 2026
-},
-{
-"place": "Mexico",
-"lat": 23.659,
-"lon": -102.008,
-"n": 53,
-"grp": {
-"Colubridae": 15,
-"Anguidae": 6,
-"Viperidae": 5,
-"Leptotyphlopidae": 5,
-"Scincidae": 5
-},
-"newest": 2025
 },
 {
 "place": "Myanmar",
@@ -13082,15 +13089,18 @@
 "place": "Argentina",
 "lat": -34.996,
 "lon": -64.967,
-"n": 41,
+"n": 42,
 "grp": {
-"Liolaemidae": 32,
+"Liolaemidae": 33,
 "Leiosauridae": 3,
 "Teiidae": 2,
 "Colubridae": 2,
 "Amphisbaenidae": 1
 },
-"newest": 2026
+"newest": 2026,
+"merged_from": [
+"ARGENTINA"
+]
 },
 {
 "place": "Ecuador",
@@ -13110,29 +13120,35 @@
 "place": "Colombia",
 "lat": 4.1,
 "lon": -72.909,
-"n": 35,
+"n": 36,
 "grp": {
 "Colubridae": 12,
 "Gymnophthalmidae": 9,
 "Viperidae": 5,
-"Anolidae": 3,
+"Anolidae": 4,
 "Sphaerodactylidae": 3
 },
-"newest": 2025
+"newest": 2025,
+"merged_from": [
+"COLOMBIA"
+]
 },
 {
 "place": "Malaysia",
 "lat": 4.569,
 "lon": 102.266,
-"n": 35,
+"n": 36,
 "grp": {
-"Gekkonidae": 16,
+"Gekkonidae": 17,
 "Scincidae": 11,
 "Pareidae": 4,
 "Colubridae": 3,
 "Dibamidae": 1
 },
-"newest": 2026
+"newest": 2026,
+"merged_from": [
+"MALAYSIA"
+]
 },
 {
 "place": "Indonesia",
@@ -13545,17 +13561,6 @@
 "newest": 2018
 },
 {
-"place": "Per\u00fa",
-"lat": -9.2,
-"lon": -75.0,
-"n": 4,
-"grp": {
-"Liolaemidae": 3,
-"Tropiduridae": 1
-},
-"newest": 2021
-},
-{
 "place": "Solomon Islands",
 "lat": -8.705,
 "lon": 159.107,
@@ -13576,18 +13581,6 @@
 "Colubridae": 1
 },
 "newest": 2025
-},
-{
-"place": "M\u00e9xico",
-"lat": 23.6,
-"lon": -102.6,
-"n": 3,
-"grp": {
-"Anguidae": 1,
-"Xenosauridae": 1,
-"Viperidae": 1
-},
-"newest": 2022
 },
 {
 "place": "Chad",
@@ -13696,16 +13689,6 @@
 "Gekkonidae": 1
 },
 "newest": 2023
-},
-{
-"place": "COLOMBIA",
-"lat": 4.1,
-"lon": -72.909,
-"n": 1,
-"grp": {
-"Anolidae": 1
-},
-"newest": 2025
 },
 {
 "place": "Liberia",
@@ -13826,26 +13809,6 @@
 "Phrynosomatidae": 1
 },
 "newest": 2020
-},
-{
-"place": "MALAYSIA",
-"lat": 4.569,
-"lon": 102.266,
-"n": 1,
-"grp": {
-"Gekkonidae": 1
-},
-"newest": 2026
-},
-{
-"place": "ARGENTINA",
-"lat": -34.996,
-"lon": -64.967,
-"n": 1,
-"grp": {
-"Liolaemidae": 1
-},
-"newest": 2023
 },
 {
 "place": "Zambia",

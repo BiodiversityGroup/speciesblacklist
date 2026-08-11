@@ -1188,6 +1188,11 @@
     against each other: one circle per country, sized and shaded by how many of these
     species it holds.</p>
   <div class="mapwrap">
+    <div class="mapzoom">
+      <button id="nsZIn"    aria-label="Zoom in">+</button>
+      <button id="nsZOut"   aria-label="Zoom out">&minus;</button>
+      <button id="nsZReset" aria-label="Reset zoom" title="Reset">Reset</button>
+    </div>
     <canvas id="nsCanvas" role="img"
             aria-label="World map with circles sized and coloured by the number of
             reptile species described since 2015 that the IUCN Red List has never
@@ -1313,6 +1318,11 @@
   </div>
 
   <div class="mapwrap">
+    <div class="mapzoom">
+      <button id="lostZIn"    aria-label="Zoom in">+</button>
+      <button id="lostZOut"   aria-label="Zoom out">&minus;</button>
+      <button id="lostZReset" aria-label="Reset zoom" title="Reset">Reset</button>
+    </div>
     <canvas id="lostCanvas" role="img"
             aria-label="World map with circles sized by the number of lost species
             recorded from each country or region. The counts are listed in the
@@ -1363,7 +1373,11 @@
     <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
       Biodiversity Group</a> works in the places the profile above predicts will be
       overlooked: steep, wet, unglamorous forest, a long way from a field station,
-      looking for small animals at night. Two of those records are on this map.</p>
+      looking for small animals at night. Three of those records are on this map.</p>
+    <p>The longest gap of the three is not the snake or the frog. It is a land snail:
+      <span class="sci">Myxostoma petiverianum</span> was last recorded in
+      <strong>1905</strong> and photographed alive in 2014 — <strong>109 years</strong>,
+      more than double the next longest.</p>
   </div>
 
   <div class="lostcards">
@@ -1398,9 +1412,27 @@
         and operculum: a species not recorded in <strong>over a hundred years</strong>,
         and one no living individual had ever been photographed.</p>
       <p>It was found twice — once in the field, and once in a photo library, by someone
-        on the other side of the world who knew what he was looking at.</p>
+        on the other side of the world who knew what he was looking at. The previous
+        record was <strong>1905</strong>: a gap of <strong>109 years</strong>, the
+        longest of anything on this page.</p>
       <p class="lostcite">Trageser, Wiscovitch &amp; Foon 2018, <em>The Festivus</em>
         50(2): 110–113</p>
+    </article>
+
+    <article class="lostcard">
+      <p class="eyebrow">Ecuador &middot; 2018</p>
+      <h4>The Mindo Glassfrog</h4>
+      <p class="sci">Nymphargus balionota</p>
+      <p>Seen once since 1984 — a single male in 2005. In 2018 a <a
+        href="https://biodiversitygroup.org" target="_blank" rel="noopener">Biodiversity
+        Group</a> team was at Río Manduriacu surveying the Tandayapa Andes toad when
+        Scott Trageser, too ill to join the night survey, went to a stream near camp
+        instead and heard a frog he did not recognise calling for a mate.</p>
+      <p>Return surveys in 2019 found more in three separate streams — including the
+        first females ever recorded, plus metamorphs and egg masses. Not a survivor, then:
+        a breeding population.</p>
+      <p class="lostcite">Reported in <em>Amphibian &amp; Reptile Conservation</em>,
+        July 2020</p>
     </article>
 
     <article class="lostcard lostcard-redacted">
@@ -1945,12 +1977,24 @@ function showView(name, push) {
   // separate effort and does not depend on the register's data.
   if (name === "newtaxa") {
     ensureReptiles();
-    ensureNsMap().then(ok => { if (ok) drawNsMap(); });
+    ensureNsMap().then(ok => {
+      if (ok) {
+        drawNsMap();
+        attachHeatZoom("#nsCanvas", nsView, drawNsMap,
+                       {in: "#nsZIn", out: "#nsZOut", reset: "#nsZReset"});
+      }
+    });
   }
   if (name === "redisc") ensureRedisc();
   // Same reason as the register map: a hidden canvas has zero width, so the lost-species
   // map can only be laid out once its section is visible.
-  if (name === "lost") ensureLost().then(ok => { if (ok) drawLost(); });
+  if (name === "lost") ensureLost().then(ok => {
+    if (ok) {
+      drawLost();
+      attachHeatZoom("#lostCanvas", lostView, drawLost,
+                     {in: "#lostZIn", out: "#lostZOut", reset: "#lostZReset"});
+    }
+  });
 }
 
 
@@ -2056,9 +2100,19 @@ function paintHeat(cv, data, opts) {
   g.setTransform(dpr, 0, 0, dpr, 0, 0);
   g.clearRect(0, 0, cssW, cssH);
 
-  const X = lo => (lo + 180) / 360 * cssW;
-  const Y = la => (90 - la) / 180 * cssH;
+  // Same pan/zoom model as the register map: k is the scale, tx/ty the translation in
+  // CSS pixels, and the world at scale k is (cssW*k) x (cssH*k) with the canvas as a
+  // window onto it. Clamped so no empty space can appear at an edge.
+  const v = opts.view || {k: 1, tx: 0, ty: 0};
+  v.k = Math.min(HEAT_K_MAX, Math.max(1, v.k));
+  v.tx = Math.min(0, Math.max(cssW - cssW * v.k, v.tx));
+  v.ty = Math.min(0, Math.max(cssH - cssH * v.k, v.ty));
+
+  const X = lo => (lo + 180) / 360 * cssW * v.k + v.tx;
+  const Y = la => (90 - la) / 180 * cssH * v.k + v.ty;
   const cs = getComputedStyle(document.documentElement);
+  g.save();
+  g.beginPath(); g.rect(0, 0, cssW, cssH); g.clip();
 
   g.fillStyle = cs.getPropertyValue("--surface-2").trim();
   g.strokeStyle = cs.getPropertyValue("--rule-2").trim();
@@ -2074,7 +2128,12 @@ function paintHeat(cv, data, opts) {
   // long tail holds one or two -- so a linear ramp would paint all but a handful of
   // countries the same green and a linear radius would make the top one swamp the map.
   const t = n => Math.sqrt(n / max);
-  const rOf = n => 3 + t(n) * (cssW / 27);
+  // Marks grow with zoom, but far more slowly than the map does. Scaling them by k would
+  // make Brazil swallow South America at 8x; leaving them fixed would make a cluster of
+  // small islands stay an unresolvable blob however far you zoomed in. The square root
+  // is the compromise that lets neighbours separate while keeping the big marks sane.
+  const zr = Math.sqrt(v.k);
+  const rOf = n => (3 + t(n) * (cssW / 27)) * zr;
   const hits = [];
   data.places.slice().sort((a, b) => b.n - a.n).forEach(p => {   // big first, so drawn under
     const x = X(p.lon), y = Y(p.lat), r = rOf(p.n);
@@ -2089,6 +2148,7 @@ function paintHeat(cv, data, opts) {
     hits.push({x, y, r, p});
   });
   hits.sort((a, b) => a.r - b.r);   // small first for hit-testing, so they stay reachable
+  g.restore();
 
   const legend = $(opts.legend);
   if (legend) {
@@ -2104,8 +2164,97 @@ function paintHeat(cv, data, opts) {
   return {hits, cssW, cssH};
 }
 
+const HEAT_K_MAX = 40;
+const lostView = {k: 1, tx: 0, ty: 0};
+const nsView = {k: 1, tx: 0, ty: 0};
+
 function drawLost() { lostGeom = paintHeat($("#lostCanvas"), LOST,
-  {legend: "#lostLegend", label: "Lost species recorded from each country or region"}); }
+  {legend: "#lostLegend", view: lostView,
+   label: "Lost species recorded from each country or region"}); }
+
+/* Pan and zoom for a heat map, matching the register map's behaviour: wheel and pinch
+   zoom about the point under the cursor, drag to pan, buttons for the keyboard and
+   touch cases. Bound once per canvas.
+
+   Redraws go through a TIMER, not requestAnimationFrame -- rAF does not fire in a hidden
+   or non-compositing tab, so a draw queued behind a boolean guard would leave that guard
+   set forever and the map would never redraw again, not even once the tab was shown. */
+function attachHeatZoom(sel, view, redraw, ids) {
+  const cv = $(sel);
+  if (!cv || cv.dataset.zoomBound) return;
+  cv.dataset.zoomBound = "1";
+
+  let timer = null;
+  const draw = () => {
+    if (timer) return;
+    timer = setTimeout(() => { timer = null; redraw(); }, 16);
+  };
+  const size = () => ({w: cv.getBoundingClientRect().width,
+                       h: parseFloat(cv.style.height) || 1});
+  const at = ev => {
+    const b = cv.getBoundingClientRect();
+    return {x: ev.clientX - b.left, y: ev.clientY - b.top};
+  };
+  const zoomAt = (px, py, factor) => {
+    const k0 = view.k;
+    view.k = Math.min(HEAT_K_MAX, Math.max(1, k0 * factor));
+    const r = view.k / k0;
+    view.tx = px - (px - view.tx) * r;
+    view.ty = py - (py - view.ty) * r;
+    draw();
+  };
+
+  cv.addEventListener("wheel", ev => {
+    ev.preventDefault();
+    const p = at(ev);
+    zoomAt(p.x, p.y, ev.deltaY < 0 ? 1.15 : 1 / 1.15);
+  }, {passive: false});
+
+  const pointers = new Map();
+  let pinch = null;
+  cv.addEventListener("pointerdown", ev => {
+    try { cv.setPointerCapture(ev.pointerId); } catch (e) { /* nicety only */ }
+    pointers.set(ev.pointerId, at(ev));
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      pinch = Math.hypot(a.x - b.x, a.y - b.y) || 1;
+    }
+    cv.style.cursor = "grabbing";
+  });
+  cv.addEventListener("pointermove", ev => {
+    if (!pointers.has(ev.pointerId)) return;
+    const prev = pointers.get(ev.pointerId), now = at(ev);
+    pointers.set(ev.pointerId, now);
+    if (pointers.size === 2 && pinch) {
+      const [a, b] = [...pointers.values()];
+      const d = Math.hypot(a.x - b.x, a.y - b.y) || 1;
+      zoomAt((a.x + b.x) / 2, (a.y + b.y) / 2, d / pinch);
+      pinch = d;
+      return;
+    }
+    if (view.k <= 1) return;               // nothing to pan at full extent
+    view.tx += now.x - prev.x;
+    view.ty += now.y - prev.y;
+    draw();
+  });
+  const end = ev => {
+    pointers.delete(ev.pointerId);
+    if (pointers.size < 2) pinch = null;
+    cv.style.cursor = view.k > 1 ? "grab" : "default";
+  };
+  cv.addEventListener("pointerup", end);
+  cv.addEventListener("pointercancel", end);
+
+  const btn = (id, fn) => {
+    const b = $(id);
+    if (b) b.onclick = () => { const s = size(); fn(s.w / 2, s.h / 2); };
+  };
+  btn(ids.in, (x, y) => zoomAt(x, y, 1.6));
+  btn(ids.out, (x, y) => zoomAt(x, y, 1 / 1.6));
+  if ($(ids.reset)) {
+    $(ids.reset).onclick = () => { view.k = 1; view.tx = 0; view.ty = 0; draw(); };
+  }
+}
 
 /* Hover for any heat map on the page. Bound once, keyed on the canvas under the
    pointer, so adding the second map needed no second handler. */
@@ -2162,7 +2311,7 @@ function ensureNsMap() {
 }
 
 function drawNsMap() { nsGeom = paintHeat($("#nsCanvas"), NSMAP,
-  {legend: "#nsLegend",
+  {legend: "#nsLegend", view: nsView,
    label: "Species described since 2015 that the Red List has never assessed"}); }
 
 addEventListener("resize", () => {
