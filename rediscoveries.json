@@ -1,13 +1,13 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 121,
+"stories": 119,
 "raw_items": 273,
 "with_species": 79,
 "distinct_species": 177,
 "distinct_species_firm": 27,
 "multi_species_cards": 39,
-"with_image": 117,
+"with_image": 118,
 "syndicated": 62,
 "on_tbg_list": 48,
 "on_list_breakdown": {
@@ -44,15 +44,15 @@
 {
 "title": "A new and interesting earthworm species from Madagascar (Crassiclitellata, Kynotidae) with an updated key to the Kynotus Michelsen, 1891 species",
 "species": [
-"Hypolimnus pedderensis",
 "Madatyphlops madagascariensis",
+"Hypolimnus pedderensis",
 "Furcifer voeltzkowi"
 ],
 "species_firm": [
 "Furcifer voeltzkowi"
 ],
 "on_list": "Lost Species",
-"detail": "Worm, long-lost, last seen 1972",
+"detail": "Reptile, lost, last seen ?",
 "publisher": "ZooKeys",
 "date": "Wed, 29 Jul 2026",
 "ts": 1785312901,
@@ -477,14 +477,15 @@
 "ts": 1779606000,
 "first_seen": "2026-08-10",
 "link": "https://www.thepress.co.nz/nz-news/361010440/tiny-australian-bee-rediscovered-christchurch-gardens-65-years-after-last-sighting",
-"image": "",
+"image": "https://www.thepress.co.nz/media/images/9Tzi8ywRz924XE3uHaD6DZ3Ef+IdbOiYlvIROR5vlqUSeZYZbm+SU0zjMnNqDfql8Yk4r+Ht43oxrl86VwI5IF7k1TZFVP%2FGWC",
 "wayback": "",
-"desc": "A native Australian bee not recorded in New Zealand for 65 years has turned up in gardens in Christchurch.",
+"desc": "A small Australian bee species believed absent from New Zealand for more than 65 years has been rediscovered in Christchurch community gardens.",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 1,
-"also": []
+"also": [],
+"credit": "Photograph: The Press"
 },
 {
 "title": "Plant believed extinct for 60 years suddenly reappears",
@@ -1704,12 +1705,12 @@
 {
 "title": "Long-eared species feared extinct for 55 years rediscovered in Turkmenistan",
 "species": [
-"Monopeltis schoutedeni",
-"Nyctophilus howensis"
+"Nyctophilus howensis",
+"Monopeltis schoutedeni"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
-"detail": "Reptile, unclassified, last seen ??",
+"detail": "Mammal, long-lost, last seen 1972",
 "publisher": "Miami Herald",
 "date": "Thu, 06 Nov 2025",
 "ts": 1762416000,
@@ -1761,26 +1762,6 @@
 ]
 },
 {
-"title": "Rare \u2018wolf\u2019 spider thought EXTINCT is spotted in UK for first time in 40 years",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "The Sun",
-"date": "Fri, 31 Oct 2025",
-"ts": 1761894000,
-"first_seen": "2026-08-10",
-"link": "https://www.thesun.co.uk/news/37166068/rare-white-knuckled-wolf-spider-rediscovered-isle-of-wight/",
-"image": "",
-"wayback": "",
-"desc": "",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "\u2018White-knuckled wolf spider\u2019 thought lost is rediscovered on Isle of Wight",
 "species": [
 "Aulonia albimana"
@@ -1799,7 +1780,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 6,
 "also": [
 {
 "publisher": "The Independent",
@@ -1944,12 +1925,12 @@
 "species": [
 "Atelopus mindoensis",
 "Batrachochytrium dendrobatidis",
-"Homoeodera nodulipennis",
-"Strabomantis necerus"
+"Strabomantis necerus",
+"Homoeodera nodulipennis"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
-"detail": "Insect, long-lost, last seen 1876",
+"detail": "Amphibian, lost, last seen 1995",
 "publisher": "Pique Newsmagazine",
 "date": "Wed, 08 Oct 2025",
 "ts": 1759906800,
@@ -2348,12 +2329,12 @@
 "Aonyx cinereus",
 "Lutrogale perspicillata",
 "Lutra lutra",
-"Asymblepharus nepalensis",
-"Bufoides kempi"
+"Bufoides kempi",
+"Asymblepharus nepalensis"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
+"detail": "Amphibian, lost, last seen 2002",
 "publisher": "IFLScience",
 "date": "Tue, 03 Jun 2025",
 "ts": 1748934000,
@@ -2606,26 +2587,6 @@
 "link": "https://au.news.yahoo.com/incredible-phone-footage-leads-to-rediscovery-of-lost-species-after-46-years-070206070.html"
 }
 ]
-},
-{
-"title": "Fish species thought to be extinct for 85 years rediscovered - ABC News",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Breaking News, Latest News and Videos",
-"date": "Mon, 17 Feb 2025",
-"ts": 1739779200,
-"first_seen": "2026-08-10",
-"link": "https://abcnews.com/International/researchers-rediscovered-elusive-fish-species-thought-extinct-85/story?id",
-"image": "",
-"wayback": "",
-"desc": "",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
 },
 {
 "title": "Giant millipede lost to science rediscovered in Madagascar\u2019s jungle",
