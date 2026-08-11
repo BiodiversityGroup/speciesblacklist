@@ -670,8 +670,11 @@
   .rdthumb { aspect-ratio:16/9; overflow:hidden; background:var(--surface-2);
     border-bottom:1px solid var(--rule); }
   .rdthumb img { width:100%; height:100%; object-fit:cover; display:block; }
+  /* Centred, and centred by DEFAULT rather than element by element. Centre alignment is
+     the standing preference for these sites; setting it on the card body means anything
+     added later inherits it instead of quietly arriving left-aligned. */
   .rdbody { padding:.9rem 1rem 1rem; display:flex; flex-direction:column;
-    flex:1 1 auto; gap:.4rem; }
+    flex:1 1 auto; gap:.4rem; text-align:center; }
   .rdsp { font-family:var(--serif); font-style:italic; font-size:.92rem;
     color:var(--accent); margin:0; line-height:1.4; }
   .rdspmore { font-family:var(--sans); font-style:normal; font-size:.7rem;
@@ -688,7 +691,7 @@
     color:var(--ink-2); margin:0; }
   .rdmeta { font-family:var(--sans); font-size:.7rem; color:var(--ink-3);
     margin:auto 0 0; padding-top:.5rem; display:flex; gap:.5rem;
-    flex-wrap:wrap; align-items:center; }
+    flex-wrap:wrap; align-items:center; justify-content:center; }
   .rdpub { font-weight:600; color:var(--ink-2); }
   .rdtag { font-family:var(--sans); font-size:.66rem; font-weight:600;
     letter-spacing:.03em; padding:.1rem .4rem; border-radius:3px;
@@ -707,14 +710,17 @@
   .rdnopreview { font-family:var(--sans); font-size:.68rem; color:var(--ink-3);
     margin:.1rem 0 0; font-style:italic; }
   .rdorder { font-family:var(--sans); font-size:.82rem; color:var(--ink-3);
-    margin:.2rem 0 .8rem; }
+    margin:.2rem auto .8rem; text-align:center; max-width:46rem; }
   /* says what a paper actually reports, where that differs from what the page is
      mostly about -- a new locality record is not a decades-lost rediscovery */
   .rdnote { font-family:var(--sans); font-size:.74rem; line-height:1.5;
     color:var(--ink-3); font-style:italic; margin:0; }
   .rdtag-kind { background:var(--surface-2); color:var(--ink-2); }
   .rdcite { font-family:var(--sans); font-size:.66rem; line-height:1.45;
-    color:var(--ink-3); margin:0; padding:0 1rem .8rem; }
+    color:var(--ink-3); margin:0; padding:0 1rem .8rem; text-align:center; }
+  .rdarchive { text-align:center; }
+  /* the showing-count line sits with the centred controls above it */
+  #rdShowing { text-align:center; }
   /* Outside the card's main <a>: a link inside a link is invalid HTML and the browser
      un-nests it, which silently breaks the card's own click target. */
   .rdarchive { font-family:var(--sans); font-size:.68rem; margin:0;
@@ -1349,11 +1355,16 @@
 
     <details class="ntdisc">
       <summary>Why some cards are text only</summary>
-      <p>Where a feed gives a publisher&rsquo;s own page, the card shows that
-        page&rsquo;s headline image and summary. Where it gives a news-aggregator link
-        instead, the destination has to be resolved before any preview exists; when that
-        fails the card keeps the headline, outlet and date and drops the image rather
-        than showing an empty frame.</p>
+      <p>Most cards show the publisher&rsquo;s own headline image and summary. Some show
+        only text, and the reason is worth stating plainly: <strong>a growing number of
+        news sites forbid automated readers</strong> in the file where a site declares
+        such things. Reuters and The Sun bar every automated visitor; the Washington Post,
+        the Telegraph, MSN and even BirdLife International name AI readers specifically.
+        This page respects that and does not fetch those pages.</p>
+      <p>Where the Internet Archive holds a copy, the summary comes from there instead and
+        the card links to it. Where it does not, the card carries the headline, the outlet
+        and the date &mdash; which is enough to go and read it yourself, and is the point
+        of the link.</p>
     </details>
 
     <details class="ntdisc">
@@ -1858,17 +1869,16 @@ function rdBoot() {
         .map(([k, v]) => `${v} ${k}`).join(", ")
     : "species we were already following";
 
+  /* Figure and label only. The explanatory sub-line under each tile was crowding the
+     row; what it said is covered by the notes below the list. `listSub` is still built
+     above because the breakdown is worth keeping in the payload. */
   $("#rdCounts").innerHTML = [
-    ["Finds reported", c.stories.toLocaleString(),
-     "one card each; the same find from several outlets is shown once"],
-    ["Species named", (c.distinct_species || 0).toLocaleString(),
-     "every name checked against a global species database"],
-    ["Ones we were already watching", (c.on_tbg_list || 0).toLocaleString(), listSub],
-    ["Widely covered", (c.syndicated || 0).toLocaleString(),
-     "picked up by two or more outlets"]
-  ].map(([k, v, sub]) =>
-    `<div class="count"><b>${v}</b><span>${k}</span>` +
-    `<em class="csub">${sub}</em></div>`).join("");
+    ["Finds reported", c.stories.toLocaleString()],
+    ["Species named", (c.distinct_species || 0).toLocaleString()],
+    ["Ones we were already watching", (c.on_tbg_list || 0).toLocaleString()],
+    ["Widely covered", (c.syndicated || 0).toLocaleString()]
+  ].map(([k, v]) =>
+    `<div class="count"><b>${v}</b><span>${k}</span></div>`).join("");
 
   /* Preservation coverage, stated from the data rather than asserted in prose. The
      wording adapts to the actual ratio, so a bad night reads as a bad night instead of
@@ -1943,9 +1953,9 @@ function rdRender() {
           <h4 class="rdtitle">${esc(c.title)}</h4>
           ${c.desc ? `<p class="rddesc">${esc(c.desc)}</p>`
             : `<p class="rdnopreview">${c.wayback
-                ? "This outlet supplies no summary — read it via the archived copy below."
-                : "This outlet supplies no summary, and the page cannot be read \
-automatically."}</p>`}
+                ? "No summary from this outlet — an archived copy is linked below."
+                : "This publisher does not allow automated readers, so there is no \
+summary to show."}</p>`}
           ${c.note ? `<p class="rdnote">${esc(c.note)}</p>` : ""}
           <p class="rdmeta">
             ${c.kind ? `<span class="rdtag rdtag-kind">${esc(c.kind)}</span>` : ""}
