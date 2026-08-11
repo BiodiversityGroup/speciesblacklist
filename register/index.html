@@ -2015,6 +2015,20 @@ const PAGE = 200;
    you arrived by clicking, because by then DATA was initialised. */
 showView(viewForPath(location.pathname), false);
 
+/* Drop a fragment that no longer points at anything a reader asked for.
+   The rediscoveries page used to carry a "what this does and doesn't prove" jump link.
+   It is gone, but any URL copied, shared or bookmarked while it existed still ends
+   #rd-about -- and because that section is still on the page, those links open partway
+   down it instead of at the top. Cleared from the address bar with replaceState, so no
+   history entry is added and Back still behaves. Live anchors such as #nt-about on the
+   new-species page are deliberately untouched. */
+(function dropStaleHash() {
+  if (["#rd-about"].includes(location.hash)) {
+    history.replaceState(history.state, "", location.pathname + location.search);
+    window.scrollTo({top: 0, behavior: "instant"});
+  }
+})();
+
 /* The payloads are regenerated on every rebuild but keep the same filenames, so a
    returning visitor can be served a cached copy inside a page that is otherwise new.
    That is not hypothetical — it happened in testing, and the map's tier layers showed
