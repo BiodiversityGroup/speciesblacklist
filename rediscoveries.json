@@ -1,13 +1,13 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 139,
+"stories": 140,
 "raw_items": 252,
-"with_species": 77,
-"distinct_species": 150,
+"with_species": 78,
+"distinct_species": 152,
 "distinct_species_firm": 25,
-"multi_species_cards": 30,
-"with_image": 119,
+"multi_species_cards": 31,
+"with_image": 122,
 "syndicated": 57,
 "on_tbg_list": 26,
 "on_list_breakdown": {
@@ -17,8 +17,8 @@
 "undated": 0,
 "newest": "Wed, 29 Jul 2026",
 "tracked_names": 6709,
-"image_local": 115,
-"archived": 14
+"image_local": 117,
+"archived": 15
 },
 "cards": [
 {
@@ -109,9 +109,9 @@
 "ts": 1784419200,
 "first_seen": "2026-08-10",
 "link": "https://www.bigislandvideonews.com/2026/07/19/pinapinao-hawaiian-damselfly-rediscovered-on-hawai%CA%BBi-island/",
-"image": "",
+"image": "/rd-img/e9f8b6c39beb74a8.jpg",
 "wayback": "",
-"desc": "",
+"desc": "(BIVN) \u2013 A species of endangered Hawaiian damselfly was rediscovered on Hawai\u02bbi island last year, after a century-long disappearance from the wild.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -179,6 +179,31 @@
 "note": "",
 "outlets": 1,
 "also": []
+},
+{
+"title": "Scientists Rediscover Rare Island Fox Not Seen for More Than 20 Years",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "SciTechDaily",
+"date": "Mon, 22 Jun 2026",
+"ts": 1782111600,
+"first_seen": "2026-08-10",
+"link": "https://scitechdaily.com/scientists-rediscover-rare-island-fox-not-seen-for-more-than-20-years/",
+"image": "/rd-img/1ab39125b7a81640.jpg",
+"wayback": "",
+"desc": "A confirmed sighting of the critically endangered Cozumel dwarf fox has renewed calls for urgent research and conservation to prevent the disappearance of this unique island species.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "Noticias Ambientales",
+"link": "https://noticiasambientales.com/animals/rediscovery-of-the-cozumel-pygmy-fox-a-second-chance-for-the-conservation-of-this-species-in-mexico/"
+}
+]
 },
 {
 "title": "Rediscovered in 2014, This Salamander\u2019s Habitat Was Almost Lost to Coffee - A-Z Animals",
@@ -337,6 +362,10 @@
 "outlets": 6,
 "also": [
 {
+"publisher": "GK Today",
+"link": "https://www.gktoday.in/rare-blueberry-species-rediscovered-in-arunachal-pradesh/"
+},
+{
 "publisher": "India Today NE",
 "link": "https://www.indiatodayne.in/arunachal-pradesh/story/rare-wild-blueberry-relative-rediscovered-in-arunachal-after-188-years-1398132-2026-05-26"
 },
@@ -347,10 +376,6 @@
 {
 "publisher": "ndtv.com",
 "link": "https://www.ndtv.com/india-news/rare-blueberry-species-rediscovered-in-arunachal-forest-after-188-years-11550231"
-},
-{
-"publisher": "GK Today",
-"link": "https://www.gktoday.in/rare-blueberry-species-rediscovered-in-arunachal-pradesh/"
 },
 {
 "publisher": "Wiley Online Library",
@@ -553,6 +578,36 @@
 {
 "publisher": "ynetglobal",
 "link": "https://www.ynetnews.com/environment/article/skle9be3zx"
+}
+]
+},
+{
+"title": "Scientists Stunned After Finding Plant Thought Extinct for 60 Years",
+"species": [
+"Ptilotus senarius",
+"Erica cunoniensis"
+],
+"species_firm": [
+"Ptilotus senarius"
+],
+"on_list": "",
+"detail": "",
+"publisher": "SciTechDaily",
+"date": "Sat, 25 Apr 2026",
+"ts": 1777100400,
+"first_seen": "2026-08-10",
+"link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/",
+"image": "/rd-img/1fabc14a03c6e45d.jpg",
+"wayback": "http://web.archive.org/web/20260429065300/https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/",
+"desc": "An unlikely chain of events led to the rediscovery of a plant species long presumed extinct.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "The Cool Down",
+"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/"
 }
 ]
 },
@@ -829,12 +884,12 @@
 "link": "https://www.livemint.com/news/india/lost-for-nearly-two-centuries-this-rare-plant-species-has-been-rediscovered-in-arunachal-pradesh-11773478771147.html"
 },
 {
-"publisher": "Telegraph India",
-"link": "https://www.telegraphindia.com/north-east/researchers-rediscover-rare-himalayan-plant-species-in-arunachal-after-120-years/cid/2161198"
-},
-{
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rare-plant-henckelia-monophylla-rediscovered-in-arunachal-pradesh/"
+},
+{
+"publisher": "Telegraph India",
+"link": "https://www.telegraphindia.com/north-east/researchers-rediscover-rare-himalayan-plant-species-in-arunachal-after-120-years/cid/2161198"
 }
 ]
 },
@@ -855,13 +910,8 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/scientists-rediscover-rare-island-fox-not-seen-for-more-than-20-years/"
-}
-]
+"outlets": 1,
+"also": []
 },
 {
 "title": "Thought Extinct for 6,000 Years, These Tiny Marsupials Have Just Been Rediscovered - A-Z Animals",
@@ -952,36 +1002,6 @@
 "note": "",
 "outlets": 1,
 "also": []
-},
-{
-"title": "Experts stunned after rediscovering species once thought extinct: 'Very serendipitous'",
-"species": [
-"Ptilotus senarius",
-"Erica cunoniensis"
-],
-"species_firm": [
-"Ptilotus senarius"
-],
-"on_list": "",
-"detail": "",
-"publisher": "The Cool Down",
-"date": "Sun, 15 Feb 2026",
-"ts": 1771142400,
-"first_seen": "2026-08-10",
-"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/",
-"image": "/rd-img/c251a30d4e9024a1.jpg",
-"wayback": "",
-"desc": "Australian researchers discovered the lost Ptilotus senarius wildflower in a remote corner of Queensland.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/"
-}
-]
 },
 {
 "title": "Citizen science rediscovers rare South African moth - news",
@@ -1418,12 +1438,8 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 5,
 "also": [
-{
-"publisher": "Noticias Ambientales",
-"link": "https://noticiasambientales.com/animals/rediscovery-of-the-cozumel-pygmy-fox-a-second-chance-for-the-conservation-of-this-species-in-mexico/"
-},
 {
 "publisher": "The Times of India",
 "link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
@@ -1619,12 +1635,12 @@
 "link": "https://www.deccanherald.com/india/karnataka/bamboo-shrimp-rediscovered-after-7-decades-3822538"
 },
 {
-"publisher": "Moneycontrol",
-"link": "https://www.moneycontrol.com/science/bamboo-shrimp-rediscovered-in-india-after-72-years-article-13705893.html"
-},
-{
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/bamboo-shrimp-rediscovered-in-india-after-72-years/"
+},
+{
+"publisher": "Moneycontrol",
+"link": "https://www.moneycontrol.com/science/bamboo-shrimp-rediscovered-in-india-after-72-years-article-13705893.html"
 },
 {
 "publisher": "The Times of India",
@@ -1777,7 +1793,7 @@
 "link": "https://idw-online.de/de/news860765",
 "image": "http://www.idw-online.de/de/institutionlogo36646",
 "wayback": "",
-"desc": "",
+"desc": "An international team of researchers from Germany, Uzbekistan and Turkmenistan, led by the Museum f\u00fcr Naturkunde Berlin, has rediscovered a bat species that had been missing for 55 years. Pictures and video recordings could be made for the first time. The aim ",
 "citation": "",
 "kind": "",
 "note": "",
@@ -3366,7 +3382,10 @@
 },
 {
 "title": "Biologists rediscover rare frog after 27 years",
-"species": [],
+"species": [
+"Pulchrana guttmani",
+"Pulchrana grandocula"
+],
 "species_firm": [],
 "on_list": "",
 "detail": "",
@@ -3375,9 +3394,9 @@
 "ts": 1615190400,
 "first_seen": "2026-08-10",
 "link": "https://newsinfo.inquirer.net/1404149/biologists-rediscover-rare-frog-after-27-years",
-"image": "",
+"image": "/rd-img/50ee85b6eb710fdd.jpg",
 "wayback": "",
-"desc": "",
+"desc": "MT. BUSA\u2019S ELUSIVE INHABITANT Guttman\u2019s stream frogs were perched on branches near streams deep in the forest of Mt. Busa in southern Mindanao when a team of wildlife biologists and T\u2019boli guides found them in September 2020, 27 years after the species was fir",
 "citation": "",
 "kind": "",
 "note": "",
@@ -3504,7 +3523,7 @@
 "link": "https://today.duke.edu/2020/08/lost-species-african-mammal-rediscovered-duke-researcher",
 "image": "/rd-img/6c6d4a1b880bbdf0.jpg",
 "wayback": "",
-"desc": "",
+"desc": "The Somali Sengi, also called the Somali Elephant-shrew, is a mouse-size African mammal with a long and flexible nose that it waggles to and fro. In fact, it is a close relative of other trunk-nosed creatures like aardvarks, elephants, and manatees.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -3568,7 +3587,7 @@
 "ts": 1468001400,
 "first_seen": "2026-08-11",
 "link": "https://news.mongabay.com/2016/07/citizen-science-leads-to-snail-rediscovery-in-vietnam/",
-"image": "/rd-img/e434ca7a7dab8b35.jpg",
+"image": "https://imgs.mongabay.com/wp-content/uploads/sites/20/2016/07/01200241/Myxostoma-petiverianum.jpg",
 "wayback": "",
 "desc": "Scott Trageser photographed invertebrates on Hon Cau, an island off south-east Vietnam, and posted them to iNaturalist hoping somebody could identify them. In November 2015 the malacologist Junn Kitt Foon recognised one as Myxostoma petiverianum, a land snail ",
 "citation": "Trageser, S.J., Wiscovitch, A. & Foon, J.K. (2018) Discovery of Myxostoma petiverianum Wood, 1828 on Hon Cau, Vietnam. The Festivus 50(2): 110-113.",
