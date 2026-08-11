@@ -1,23 +1,23 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 134,
+"stories": 122,
 "raw_items": 273,
-"with_species": 77,
-"distinct_species": 145,
+"with_species": 79,
+"distinct_species": 177,
 "distinct_species_firm": 27,
-"multi_species_cards": 30,
-"with_image": 127,
+"multi_species_cards": 39,
+"with_image": 115,
 "syndicated": 62,
-"on_tbg_list": 25,
+"on_tbg_list": 48,
 "on_list_breakdown": {
-"on our lost-species list": 22,
-"on the Black List": 3
+"on our lost-species list": 46,
+"on the Black List": 2
 },
 "undated": 0,
 "newest": "Tue, 11 Aug 2026",
 "tracked_names": 6709,
-"image_local": 118,
+"image_local": 110,
 "archived": 25
 },
 "cards": [
@@ -43,10 +43,16 @@
 },
 {
 "title": "A new and interesting earthworm species from Madagascar (Crassiclitellata, Kynotidae) with an updated key to the Kynotus Michelsen, 1891 species",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
+"species": [
+"Hypolimnus pedderensis",
+"Madatyphlops madagascariensis",
+"Furcifer voeltzkowi"
+],
+"species_firm": [
+"Furcifer voeltzkowi"
+],
+"on_list": "Lost Species",
+"detail": "Worm, long-lost, last seen 1972",
 "publisher": "ZooKeys",
 "date": "Wed, 29 Jul 2026",
 "ts": 1785312901,
@@ -58,19 +64,29 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 3,
+"also": [
+{
+"publisher": "cnn.com",
+"link": "https://www.cnn.com/videos/us/2020/10/31/lost-chameleon-species-furcifer-voeltzkowi-found-orig-kj.cnn"
+},
+{
+"publisher": "CNN",
+"link": "https://www.cnn.com/videos/us/2020/10/31/lost-chameleon-species-furcifer-voeltzkowi-found-orig-kj.cnn"
+}
+]
 },
 {
 "title": "Rare palm tree rediscovered in Madagascar after nearly 100 years",
 "species": [
-"Ravenea latisecta"
+"Ravenea latisecta",
+"Madatyphlops madagascariensis"
 ],
 "species_firm": [
 "Ravenea latisecta"
 ],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Reptile, lost, last seen ?",
 "publisher": "Conservation news",
 "date": "Tue, 28 Jul 2026",
 "ts": 1785275280,
@@ -101,17 +117,17 @@
 "ts": 1784840340,
 "first_seen": "2026-08-10",
 "link": "https://news.mongabay.com/short-article/2026/07/rare-alpine-herb-confirmed-in-india-after-158-years/",
-"image": "/rd-img/be6b128782730557.jpg",
+"image": "/rd-img/a73ad2fa717c6b18.jpg",
 "wayback": "",
-"desc": "After 158 years, the rare Himalayan flowering plant Cyananthus hookeri, locally known as pema, has been rediscovered in India. Scientists from the Botanical Sur",
+"desc": "In the rugged, high-altitude meadows of the Eastern Himalayas in India, researchers have confirmed the presence of a tiny plant with purple-blue flowers, last documented in the country more than 150 years ago. The plant, Cyananthus hookeri, was previously reco",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 2,
 "also": [
 {
-"publisher": "Conservation news",
-"link": "https://news.mongabay.com/short-article/2026/07/rare-alpine-herb-confirmed-in-india-after-158-years/"
+"publisher": "IndulgExpress",
+"link": "https://www.indulgexpress.com/north-east/2026/Jul/09/rare-himalayan-blue-bellflower-rediscovered-in-arunachal-pradesh-after-158-years"
 }
 ]
 },
@@ -119,11 +135,12 @@
 "title": "Pinapinao, Hawaiian Damselfly, Rediscovered on Hawai\u02bbi Island",
 "species": [
 "Megalagrion nesiotes",
-"Manduca blackburni"
+"Manduca blackburni",
+"Megalagrion molokaiense"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Insect, long-lost, last seen 1940s",
 "publisher": "Big Island Video News",
 "date": "Sun, 19 Jul 2026",
 "ts": 1784419200,
@@ -140,10 +157,12 @@
 },
 {
 "title": "Contributions of a small collection of the terrestrial microsnails genus Diplommatina s.l. (Caenogastropoda, Cyclophoroidea, Diplommatinidae) from Myanmar, with a catalogue of recorded species and description of two new species",
-"species": [],
+"species": [
+"Opisthostoma decrespignyi"
+],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Gastropod molluscs (snails and slugs), long-lost, last seen before 1960",
 "publisher": "ZooKeys",
 "date": "Fri, 17 Jul 2026",
 "ts": 1784297543,
@@ -160,10 +179,12 @@
 },
 {
 "title": "Trail camera captures rare 'rediscovery' of species that hasn't been seen in 80 years: 'A fantastic surprise'",
-"species": [],
+"species": [
+"Incilius peripatetes"
+],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Amphibian, lost, last seen 1980?",
 "publisher": "MSN",
 "date": "Fri, 17 Jul 2026",
 "ts": 1784285580,
@@ -209,10 +230,12 @@
 },
 {
 "title": "Scientists Rediscover Rare Island Fox Not Seen for More Than 20 Years",
-"species": [],
+"species": [
+"Toxostoma guttatum"
+],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Bird, lost, last seen 2004",
 "publisher": "SciTechDaily",
 "date": "Mon, 22 Jun 2026",
 "ts": 1782111600,
@@ -331,17 +354,19 @@
 "title": "Rare Dragonfly Rediscovered In Arunachal Pradesh After 110 Years",
 "species": [
 "Gynacantha khasiaca",
+"Biswamoyopterus biswasi",
 "Trithemis aurora",
 "Neurothemis fulvia",
 "Orthetrum glaucum",
 "Aristocypha spuria",
-"Neurobasis chinensis"
+"Neurobasis chinensis",
+"Gynacantha stylata"
 ],
 "species_firm": [
 "Gynacantha khasiaca"
 ],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Mammal, lost, last seen 1981",
 "publisher": "ETV Bharat News",
 "date": "Wed, 27 May 2026",
 "ts": 1779865200,
@@ -465,9 +490,12 @@
 "title": "Plant believed extinct for 60 years suddenly reappears",
 "species": [
 "Ptilotus senarius",
-"Thismia kobensis"
+"Thismia kobensis",
+"Erica cunoniensis"
 ],
-"species_firm": [],
+"species_firm": [
+"Ptilotus senarius"
+],
 "on_list": "",
 "detail": "",
 "publisher": "ScienceDaily",
@@ -481,8 +509,25 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 5,
+"also": [
+{
+"publisher": "SciTechDaily",
+"link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/"
+},
+{
+"publisher": "The Cool Down",
+"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/"
+},
+{
+"publisher": "InDaily South Australia",
+"link": "https://www.indailysa.com.au/news/just-in/2026/01/19/photo-leads-to-rediscovery-of-extinct-aussie-plant"
+},
+{
+"publisher": "Yahoo News Australia",
+"link": "https://au.news.yahoo.com/photo-leads-to-rediscovery-of-aussie-plant-species-almost-60-years-after-extinction-130150844.html"
+}
+]
 },
 {
 "title": "Unveiling the Identity of Viburnum laterale (Viburnaceae), a Long-Lost Species Rediscovered After Nearly a Century, Based on Morphological and Molecular Evidence",
@@ -537,7 +582,8 @@
 {
 "title": "Species thought extinct for thousands of years \u2018rediscovered\u2019 thanks to Indigenous knowledge - news",
 "species": [
-"Zaglossus attenboroughi"
+"Zaglossus attenboroughi",
+"Nycticebus bancanus"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
@@ -595,45 +641,16 @@
 ]
 },
 {
-"title": "Scientists Stunned After Finding Plant Thought Extinct for 60 Years",
-"species": [
-"Ptilotus senarius",
-"Erica cunoniensis"
-],
-"species_firm": [
-"Ptilotus senarius"
-],
-"on_list": "",
-"detail": "",
-"publisher": "SciTechDaily",
-"date": "Sat, 25 Apr 2026",
-"ts": 1777100400,
-"first_seen": "2026-08-10",
-"link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/",
-"image": "/rd-img/1fabc14a03c6e45d.jpg",
-"wayback": "http://web.archive.org/web/20260429065300/https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/",
-"desc": "An unlikely chain of events led to the rediscovery of a plant species long presumed extinct.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "The Cool Down",
-"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/"
-}
-]
-},
-{
 "title": "Rare native species rediscovered on Lanai",
 "species": [
 "Embelia pacifica",
 "Peperomia tetraphylla",
-"Schiedea menziesii"
+"Schiedea menziesii",
+"Trematolobelia auriculata"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Plant - Flowering plant (misc), long-lost, last seen 1964",
 "publisher": "Maui News",
 "date": "Fri, 24 Apr 2026",
 "ts": 1777014000,
@@ -778,13 +795,14 @@
 {
 "title": "Rare assassin bug rediscovered after a century",
 "species": [
-"Myiophanes kempi"
+"Myiophanes kempi",
+"Microphis insularis"
 ],
 "species_firm": [
 "Myiophanes kempi"
 ],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Fish, long-lost, last seen 1974",
 "publisher": "Mongabay India",
 "date": "Fri, 17 Apr 2026",
 "ts": 1776409200,
@@ -1171,33 +1189,6 @@
 ]
 },
 {
-"title": "Photo leads to rediscovery of \u2018extinct\u2019 Aussie plant - News",
-"species": [
-"Ptilotus senarius"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "InDaily South Australia",
-"date": "Mon, 19 Jan 2026",
-"ts": 1768809600,
-"first_seen": "2026-08-10",
-"link": "https://www.indailysa.com.au/news/just-in/2026/01/19/photo-leads-to-rediscovery-of-extinct-aussie-plant",
-"image": "/rd-img/93ccf7ca21f60139.jpg",
-"wayback": "",
-"desc": "A native plant species has been rediscovered decades after it was presumed extinct, highlighting the power of citizen science data in research and conservation.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Yahoo News Australia",
-"link": "https://au.news.yahoo.com/photo-leads-to-rediscovery-of-aussie-plant-species-almost-60-years-after-extinction-130150844.html"
-}
-]
-},
-{
 "title": "Rare plant thought extinct rediscovered by citizen scientist in remote Australia",
 "species": [],
 "species_firm": [],
@@ -1270,30 +1261,6 @@
 ]
 },
 {
-"title": "Endangered herb lepidagathis clavata rediscovered after 166 years in Western Ghats",
-"species": [
-"Lepidagathis clavata"
-],
-"species_firm": [
-"Lepidagathis clavata"
-],
-"on_list": "",
-"detail": "",
-"publisher": "The Times of India",
-"date": "Mon, 12 Jan 2026",
-"ts": 1768204800,
-"first_seen": "2026-08-10",
-"link": "https://timesofindia.indiatimes.com/city/goa/endangered-herb-lepidagathis-clavata-rediscovered-after-166-years-in-western-ghats/articleshow/126470153.cms",
-"image": "/rd-img/3a222708ae62e7ca.jpg",
-"wayback": "http://web.archive.org/web/20260222001318/https://timesofindia.indiatimes.com/city/goa/endangered-herb-lepidagathis-clavata-rediscovered-after-166-years-in-western-ghats/articleshow/126470153.cms",
-"desc": "A team of researchers has rediscovered the critically endangered herb Lepidagathis clavata in the Western Ghats after 166 years, revealing its unique flowering cycle and conservation needs.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "University of Memphis researchers find lost species through free app",
 "species": [],
 "species_firm": [],
@@ -1337,33 +1304,6 @@
 "link": "https://www.news24.com/business/climate-future/environment/see-six-sa-animal-species-discovered-and-rediscovered-in-2025-20251230-1208"
 }
 ]
-},
-{
-"title": "Killifish, Once Presumed Extinct, Rediscovered After 20 Years in a Remote Pond",
-"species": [
-"Cynopoecilus melanotaenia",
-"Aphyolebias claudiae",
-"Moema claudiae"
-],
-"species_firm": [
-"Cynopoecilus melanotaenia",
-"Aphyolebias claudiae"
-],
-"on_list": "Lost Species",
-"detail": "Fish, long-lost",
-"publisher": "Green Matters",
-"date": "Mon, 29 Dec 2025",
-"ts": 1766995200,
-"first_seen": "2026-08-10",
-"link": "https://www.greenmatters.com/pn/killifish-once-presumed-extinct-rediscovered-after-20-years-in-a-remote-pond",
-"image": "/rd-img/be60d6f3763a2af7.jpg",
-"wayback": "",
-"desc": "Scientists rediscovered Moema claudiae in a small and temporary Bolivian pond.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
 },
 {
 "title": "Elusive wild cat feared extinct rediscovered in Thailand",
@@ -1421,7 +1361,8 @@
 "title": "Back from the dead: \u201cExtinct\u201d fish rediscovered in a remote Bolivian pond after 20 years",
 "species": [
 "Aphyolebias claudiae",
-"Moema claudiae"
+"Moema claudiae",
+"Scincella inconspicua"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -1433,25 +1374,17 @@
 "ts": 1766649600,
 "first_seen": "2026-08-10",
 "link": "https://www.sciencedaily.com/releases/2025/12/251225080719.htm",
-"image": "/rd-img/b73e2fd705e4740e.jpg",
-"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
-"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
+"image": "/rd-img/f7ccc7dea3a0e574.jpg",
+"wayback": "http://web.archive.org/web/20260627090837/https://www.sciencedaily.com/releases/2025/12/251225080719.htm",
+"desc": "A tiny fish long feared lost has resurfaced in Bolivia, offering a rare conservation success story amid widespread habitat destruction. Moema claudiae, a seasonal killifish unseen for more than 20 years, was rediscovered in a small temporary pond hidden within",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 2,
 "also": [
 {
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
-},
-{
-"publisher": "ScienceDaily",
-"link": "https://www.sciencedaily.com/releases/2025/12/251225080719.htm"
-},
-{
-"publisher": "GK Today",
-"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+"publisher": "NDTV",
+"link": "https://www.ndtv.com/science/lost-for-20-years-rare-fish-species-rediscovered-in-small-pond-9656898"
 }
 ]
 },
@@ -1480,11 +1413,12 @@
 {
 "title": "Rare octopus rediscovered after 50 years, off Kerala coast",
 "species": [
-"Opisthoteuthis philipii"
+"Opisthoteuthis philipii",
+"Uraeotyphlus menoni"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Amphibian, long-lost, last seen 1913",
 "publisher": "The New Indian Express",
 "date": "Tue, 23 Dec 2025",
 "ts": 1766476800,
@@ -1569,11 +1503,12 @@
 {
 "title": "Lost species back from the brink",
 "species": [
-"Nucras caesicaudata"
+"Nucras caesicaudata",
+"Nucras aurantiaca"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Reptile, lost, last seen ?",
 "publisher": "IOL",
 "date": "Tue, 16 Dec 2025",
 "ts": 1765872000,
@@ -1611,13 +1546,14 @@
 {
 "title": "Shrimp species rediscovered in Karnataka and Odisha after 72 years",
 "species": [
-"Atyopsis spinipes"
+"Atyopsis spinipes",
+"Scincella inconspicua"
 ],
 "species_firm": [
 "Atyopsis spinipes"
 ],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Reptile, long-lost, last seen 1894 or earlier",
 "publisher": "The Indian Express",
 "date": "Sat, 29 Nov 2025",
 "ts": 1764403200,
@@ -1670,26 +1606,48 @@
 "also": []
 },
 {
-"title": "\u2018Beauty\u2019 of a fish feared extinct for more than 20 years rediscovered in Bolivia",
+"title": "Rediscovery of lost fish species provides a second chance for conservation",
 "species": [
-"Aphyolebias claudiae"
+"Aphyolebias claudiae",
+"Cynopoecilus melanotaenia",
+"Moema claudiae"
 ],
-"species_firm": [],
+"species_firm": [
+"Aphyolebias claudiae",
+"Cynopoecilus melanotaenia"
+],
 "on_list": "Lost Species",
 "detail": "Fish, lost, last seen 2003",
-"publisher": "Miami Herald",
+"publisher": "Phys.org",
 "date": "Fri, 14 Nov 2025",
 "ts": 1763107200,
 "first_seen": "2026-08-10",
-"link": "https://www.miamiherald.com/news/nation-world/world/article312920217.html",
-"image": "/rd-img/764b2465e26c9043.jpg",
-"wayback": "",
-"desc": "A grayscale drawing was the only image of the striking species until now, according to researchers.",
+"link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"image": "/rd-img/b73e2fd705e4740e.jpg",
+"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 5,
+"also": [
+{
+"publisher": "Miami Herald",
+"link": "https://www.miamiherald.com/news/nation-world/world/article312920217.html"
+},
+{
+"publisher": "Green Matters",
+"link": "https://www.greenmatters.com/pn/killifish-once-presumed-extinct-rediscovered-after-20-years-in-a-remote-pond"
+},
+{
+"publisher": "GK Today",
+"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
+}
+]
 },
 {
 "title": "\u2018Lost species\u2019 not seen in decades found in \u2018plain sight\u2019 near tourist hotspot",
@@ -1715,71 +1673,65 @@
 "title": "A Jumping spider genus rediscovered after 123 years, new species identified",
 "species": [
 "Memecylon umbellatum",
-"Pilia albicoma"
+"Pilia albicoma",
+"Minervarya murthii",
+"Lepidagathis clavata"
 ],
-"species_firm": [],
-"on_list": "",
-"detail": "",
+"species_firm": [
+"Lepidagathis clavata"
+],
+"on_list": "Lost Species",
+"detail": "Amphibian, lost, last seen 1979",
 "publisher": "Research Matters",
 "date": "Fri, 07 Nov 2025",
 "ts": 1762502400,
 "first_seen": "2026-08-10",
 "link": "https://researchmatters.in/news/jumping-spider-genus-rediscovered-after-123-years-new-species-identified",
 "image": "/rd-img/304640ae05fb8fd9.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260222001318/https://timesofindia.indiatimes.com/city/goa/endangered-herb-lepidagathis-clavata-rediscovered-after-166-years-in-western-ghats/articleshow/126470153.cms",
 "desc": "Pilia, an enigmatic genus of jumping spider has just been rediscovered in the tropical forests of Western Ghats after a staggering 123 years. The find has not only led to the description of a brand-new species, Pilia malenadu, but,\u00a0 also allowed researchers to",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Long-eared species feared extinct for 55 years rediscovered in Turkmenistan",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Miami Herald",
-"date": "Thu, 06 Nov 2025",
-"ts": 1762416000,
-"first_seen": "2026-08-10",
-"link": "https://www.miamiherald.com/news/nation-world/world/article312805193.html",
-"image": "https://www.miamiherald.com/public/news/nation-world/world/om185a/picture312811901/alternates/LANDSCAPE_1200/PM-Plecotus-turkmenicus-(c)-C.DietzD85_1210__fitted.jpeg",
-"wayback": "",
-"desc": "Scientists on an expedition to find the species, which had never been seen alive, uncovered one hiding in a crevice in the middle of the Karakum Desert.",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 2,
 "also": [
 {
-"publisher": "miamiherald.com",
-"link": "https://www.miamiherald.com/news/nation-world/world/article312805193.html"
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/city/goa/endangered-herb-lepidagathis-clavata-rediscovered-after-166-years-in-western-ghats/articleshow/126470153.cms"
 }
 ]
 },
 {
-"title": "Bat Species Not Seen In 55 Years Rediscovered And Filmed For First Time \u2013 Just Look At Those Ears",
+"title": "Long-eared species feared extinct for 55 years rediscovered in Turkmenistan",
 "species": [
-"Plecotus turkmenicus"
+"Nyctophilus howensis",
+"Monopeltis schoutedeni"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "IFLScience",
-"date": "Tue, 04 Nov 2025",
-"ts": 1762243200,
+"on_list": "Lost Species",
+"detail": "Mammal, long-lost, last seen 1972",
+"publisher": "Miami Herald",
+"date": "Thu, 06 Nov 2025",
+"ts": 1762416000,
 "first_seen": "2026-08-10",
-"link": "https://www.iflscience.com/bat-species-not-seen-in-55-years-rediscovered-and-photographed-for-first-time-just-look-at-those-ears-81436",
-"image": "/rd-img/ac88643352c156d5.jpg",
+"link": "https://www.miamiherald.com/news/nation-world/world/article312805193.html",
+"image": "/rd-img/4e77c1770b43b5b3.jpg",
 "wayback": "",
-"desc": "All the better to hear you with.",
+"desc": "Scientists on an expedition to find the species, which had never been seen alive, uncovered one hiding in a crevice in the middle of the Karakum Desert.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 3,
+"also": [
+{
+"publisher": "News24",
+"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871"
+},
+{
+"publisher": "miamiherald.com",
+"link": "https://www.miamiherald.com/news/nation-world/world/article312805193.html"
+}
+]
 },
 {
 "title": "Rediscovery of the lost Turkestan Bat",
@@ -1794,14 +1746,19 @@
 "ts": 1762156800,
 "first_seen": "2026-08-10",
 "link": "https://idw-online.de/de/news860765",
-"image": "http://www.idw-online.de/de/institutionlogo36646",
+"image": "/rd-img/ac88643352c156d5.jpg",
 "wayback": "",
 "desc": "An international team of researchers from Germany, Uzbekistan and Turkmenistan, led by the Museum f\u00fcr Naturkunde Berlin, has rediscovered a bat species that had been missing for 55 years. Pictures and video recordings could be made for the first time. The aim ",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "IFLScience",
+"link": "https://www.iflscience.com/bat-species-not-seen-in-55-years-rediscovered-and-photographed-for-first-time-just-look-at-those-ears-81436"
+}
+]
 },
 {
 "title": "Rare \u2018wolf\u2019 spider thought EXTINCT is spotted in UK for first time in 40 years",
@@ -1937,51 +1894,6 @@
 ]
 },
 {
-"title": "Reptile thought to be extinct for 34 years is rediscovered",
-"species": [
-"Afroedura rondavelica"
-],
-"species_firm": [
-"Afroedura rondavelica"
-],
-"on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
-"publisher": "Earth.com",
-"date": "Fri, 17 Oct 2025",
-"ts": 1760684400,
-"first_seen": "2026-08-10",
-"link": "https://www.earth.com/news/reptile-thought-extinct-for-34-years-is-rediscovered-afroedura-rondavelica/",
-"image": "/rd-img/286e73d16ad525f8.jpg",
-"wayback": "",
-"desc": "The species was first discovered by Dr Niels Jacobsen in December 1991, when he collected two males.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 9,
-"also": [
-{
-"publisher": "Jacaranda FM",
-"link": "https://www.jacarandafm.com/shows/drive/look-lost-gecko-species-rediscovered-mpumalanga/"
-},
-{
-"publisher": "Sunday Tribune",
-"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "Sunday Independent",
-"link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "IOL",
-"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/"
-},
-{
-"publisher": "Earth.com",
-"link": "https://www.earth.com/news/reptile-thought-extinct-for-34-years-is-rediscovered-afroedura-rondavelica/"
-}
-]
-},
-{
 "title": "Coral species thought to be extinct for 24 years is rediscovered",
 "species": [
 "Rhizopsammia wellingtoni"
@@ -2006,31 +1918,13 @@
 "also": []
 },
 {
-"title": "Former eradicated animal species rediscovered in Dumfries and Galloway",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "ITVX",
-"date": "Thu, 16 Oct 2025",
-"ts": 1760598000,
-"first_seen": "2026-08-10",
-"link": "https://www.itv.com/news/border/2025-10-16/former-eradicated-animal-species-rediscovered-in-dumfries-and-galloway",
-"image": "https://images.ctfassets.net/pjshm78m9jt4/4s90LrPtYOytOGX4Jl4V5S/f0b3bdd4f38a762834bbc56300afbcb2/Tadpole_Shrimp__c__WWT___Edmund_Fellows..jpg?fm=jpg&amp;fit=fill&amp;w=1600&amp;h=899&amp;q=80",
-"wayback": "",
-"desc": "The tadpole shrimp has been rediscovered at RSPB Scotland Mersehead in Dumfries. | ITV News Border",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "Bird not seen in 20 years is rediscovered using an audio recorder",
-"species": [],
+"species": [
+"Rhinoptilus bitorquatus"
+],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Bird, lost, last seen 2009",
 "publisher": "Earth.com",
 "date": "Wed, 15 Oct 2025",
 "ts": 1760511600,
@@ -2049,11 +1943,13 @@
 "title": "Whistler residents help document rediscovery of \u2018extinct\u2019 Ecuadorian toad",
 "species": [
 "Atelopus mindoensis",
-"Batrachochytrium dendrobatidis"
+"Batrachochytrium dendrobatidis",
+"Strabomantis necerus",
+"Homoeodera nodulipennis"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Amphibian, lost, last seen 1995",
 "publisher": "Pique Newsmagazine",
 "date": "Wed, 08 Oct 2025",
 "ts": 1759906800,
@@ -2137,11 +2033,12 @@
 "title": "Researchers on Kauai rediscover two native land snails, unseen for nearly a century",
 "species": [
 "Godwinia caperata",
-"Hiona exaequata"
+"Hiona exaequata",
+"Hemignathus hanapepe"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Bird, long-lost, last seen 1899",
 "publisher": "https://www.hawaiinewsnow.com",
 "date": "Tue, 09 Sep 2025",
 "ts": 1757401200,
@@ -2192,11 +2089,33 @@
 ]
 },
 {
-"title": "Hidden for over a century, a preserved Tasmanian Tiger head \"found in a bucket\" may bring the lost species back from extinction",
+"title": "Long-Lost Sailback Houndshark Not Seen Since 1973 Rediscovered In Papua New Guinea",
 "species": [],
 "species_firm": [],
 "on_list": "",
 "detail": "",
+"publisher": "IFLScience",
+"date": "Wed, 27 Aug 2025",
+"ts": 1756278000,
+"first_seen": "2026-08-10",
+"link": "https://www.iflscience.com/long-lost-sailback-houndshark-not-seen-since-1973-rediscovered-in-papua-new-guinea-80580",
+"image": "/rd-img/9e3ef6e5e44c5cae.jpg",
+"wayback": "",
+"desc": "Welcome back!",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "Hidden for over a century, a preserved Tasmanian Tiger head \"found in a bucket\" may bring the lost species back from extinction",
+"species": [
+"Scincella inconspicua"
+],
+"species_firm": [],
+"on_list": "Lost Species",
+"detail": "Reptile, long-lost, last seen 1894 or earlier",
 "publisher": "ZME Science",
 "date": "Fri, 22 Aug 2025",
 "ts": 1755841775,
@@ -2238,11 +2157,12 @@
 "title": "Scientists find the world's smallest snake, once feared extinct, hanging out under a rock",
 "species": [
 "Tetracheilostoma carlae",
+"Alinea lanceolata",
 "Erythrolamprus perfuscus"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
-"detail": "Reptile, long-lost, last seen 1963",
+"detail": "Reptile, long-lost, last seen 1889",
 "publisher": "CBC",
 "date": "Wed, 23 Jul 2025",
 "ts": 1753254000,
@@ -2403,26 +2323,6 @@
 "also": []
 },
 {
-"title": "SA scientists rediscover gecko species, 33 years after first recorded",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "News24",
-"date": "Fri, 20 Jun 2025",
-"ts": 1750402800,
-"first_seen": "2026-08-10",
-"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871",
-"image": "/rd-img/4e77c1770b43b5b3.jpg",
-"wayback": "",
-"desc": "After hours of searching, and in the middle of the night, two researchers spotted a reptile, they had been airlifted to a remote part of the Blyde River Canyon to find \u2013 three decades after it was last recorded.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "Rediscovery of the Losgna genus in India: a new species of parasitic wasp discovered in Chandigarh, named - \u2018Losgna Occidentalis\u2019",
 "species": [],
 "species_firm": [],
@@ -2447,11 +2347,13 @@
 "species": [
 "Aonyx cinereus",
 "Lutrogale perspicillata",
-"Lutra lutra"
+"Lutra lutra",
+"Asymblepharus nepalensis",
+"Bufoides kempi"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Reptile, lost, last seen 1991",
 "publisher": "IFLScience",
 "date": "Tue, 03 Jun 2025",
 "ts": 1748934000,
@@ -2495,6 +2397,47 @@
 ]
 },
 {
+"title": "'Lost' Gecko species rediscovered after more than 30 years",
+"species": [
+"Afroedura rondavelica"
+],
+"species_firm": [
+"Afroedura rondavelica"
+],
+"on_list": "Lost Species",
+"detail": "Reptile, lost, last seen 1991",
+"publisher": "IOL",
+"date": "Thu, 15 May 2025",
+"ts": 1747292400,
+"first_seen": "2026-08-10",
+"link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/",
+"image": "/rd-img/286e73d16ad525f8.jpg",
+"wayback": "",
+"desc": "The species was first discovered by Dr Niels Jacobsen in December 1991, when he collected two males.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 9,
+"also": [
+{
+"publisher": "Jacaranda FM",
+"link": "https://www.jacarandafm.com/shows/drive/look-lost-gecko-species-rediscovered-mpumalanga/"
+},
+{
+"publisher": "Sunday Tribune",
+"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "Sunday Independent",
+"link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "IOL",
+"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/"
+}
+]
+},
+{
 "title": "'Lost' gecko species thought to be extinct rediscovered in South Africa after more than 30 years",
 "species": [],
 "species_firm": [],
@@ -2529,23 +2472,44 @@
 },
 {
 "title": "Attenborough\u2019s echidna rediscovered by combining Indigenous knowledge with camera-trapping | npj Biodiversity",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
+"species": [
+"Zaglossus attenboroughi"
+],
+"species_firm": [
+"Zaglossus attenboroughi"
+],
+"on_list": "Lost Species",
+"detail": "Mammal, long-lost, last seen 1961",
 "publisher": "Nature",
 "date": "Mon, 12 May 2025",
 "ts": 1747033200,
 "first_seen": "2026-08-10",
 "link": "https://www.nature.com/articles/s44185-025-00086-6",
-"image": "",
+"image": "/rd-img/294a2533ffea89f6.jpg",
 "wayback": "",
-"desc": "",
+"desc": "Long-beaked echidna with spines of a hedgehog and snout of an anteater photographed on last day of expedition",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 6,
+"also": [
+{
+"publisher": "the Guardian",
+"link": "https://www.theguardian.com/world/2023/nov/10/attenborough-long-beaked-echidna-seen-first-time-cyclops-mountain-photos-footage"
+},
+{
+"publisher": "Australian Broadcasting Corporation",
+"link": "https://www.abc.net.au/news/2023-11-13/attenboroughs-long-beaked-echidna-rediscovered/103100456"
+},
+{
+"publisher": "Australian Broadcasting Corporation",
+"link": "https://www.abc.net.au/news/2023-11-10/long-beaked-echidna-rediscovered-in-papua-mountains/103089936"
+},
+{
+"publisher": "The Telegraph",
+"link": "https://www.telegraph.co.uk/world-news/2023/11/10/attenborough-named-echidna-mammal-rediscovered-new-guinea/"
+}
+]
 },
 {
 "title": "ATREE researchers rediscover long-lost species after 111 years",
@@ -2644,8 +2608,30 @@
 ]
 },
 {
+"title": "Fish species thought to be extinct for 85 years rediscovered - ABC News",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Breaking News, Latest News and Videos",
+"date": "Mon, 17 Feb 2025",
+"ts": 1739779200,
+"first_seen": "2026-08-10",
+"link": "https://abcnews.com/International/researchers-rediscovered-elusive-fish-species-thought-extinct-85/story?id",
+"image": "",
+"wayback": "",
+"desc": "",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "Giant millipede lost to science rediscovered in Madagascar\u2019s jungle",
 "species": [
+"Pareudiastes silvestris",
+"Madatyphlops madagascariensis",
 "Bedotia alveyi",
 "Ptychochromis makira",
 "Spirostreptus sculptus",
@@ -2659,8 +2645,8 @@
 "Kaliella crandalli"
 ],
 "species_firm": [],
-"on_list": "Black List (Data Deficient)",
-"detail": "tier 2",
+"on_list": "Lost Species",
+"detail": "Bird, long-lost, last seen 1953",
 "publisher": "cnn.com",
 "date": "Fri, 19 Jul 2024",
 "ts": 1721372400,
@@ -2672,11 +2658,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
 {
 "publisher": "Discover Wildlife",
 "link": "https://www.discoverwildlife.com/animal-facts/giant-millipede-lost-for-over-a-century-rediscovered-madagascar"
+},
+{
+"publisher": "Miami Herald",
+"link": "https://www.miamiherald.com/living/article314834589.html"
 },
 {
 "publisher": "Good News Network",
@@ -2701,9 +2691,12 @@
 "Fregetta maoriana",
 "Tragulus versicolor",
 "Ilex sapiiformis",
-"Atelopus longirostris"
+"Atelopus longirostris",
+"Glaucidium mooreorum"
 ],
-"species_firm": [],
+"species_firm": [
+"Ilex sapiiformis"
+],
 "on_list": "Lost Species",
 "detail": "Amphibian, lost, last seen 1988",
 "publisher": "Conservation news",
@@ -2717,8 +2710,21 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 4,
+"also": [
+{
+"publisher": "euronews",
+"link": "https://www.euronews.com/2023/09/23/nature-surprises-us-scientists-in-brazil-rediscover-tree-thought-extinct-for-nearly-200-ye"
+},
+{
+"publisher": "Business Insider",
+"link": "https://www.businessinsider.com/rare-pernambuco-holly-tree-rediscovered-after-186-years-2023-9"
+},
+{
+"publisher": "Newsweek",
+"link": "https://www.newsweek.com/tree-extinct-discovered-2-centuries-incredible-find-1828749"
+}
+]
 },
 {
 "title": "Meet 2 \u2018Lost\u2019 Species\u2014A Flightless Bird And Gliding Mammal\u2014Rediscovered 50+ Years Later",
@@ -2743,11 +2749,12 @@
 {
 "title": "Lost species of Chilean angel shark resurfaces after more than a century",
 "species": [
-"Squatina armata"
+"Squatina armata",
+"Peromyscus guardia"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Mammal, lost, last seen 1991",
 "publisher": "The Times of India",
 "date": "Sun, 28 Apr 2024",
 "ts": 1714287600,
@@ -2786,7 +2793,8 @@
 "title": "Track-a-mole: Sniffer dog and eDNA help \u2018rediscover\u2019 South African golden mole - news",
 "species": [
 "Cryptochloris wintoni",
-"Cryptochloris zyli"
+"Cryptochloris zyli",
+"Mitophis leptipileptus (Mitophis leptepileptus)"
 ],
 "species_firm": [
 "Cryptochloris wintoni"
@@ -2804,7 +2812,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 6,
 "also": [
 {
 "publisher": "euronews",
@@ -2819,66 +2827,8 @@
 "link": "https://www.euronews.com/green/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-"
 },
 {
-"publisher": "Metro",
-"link": "https://metro.co.uk/2023/11/30/golden-mole-missing-80-years-rediscovered-south-africa-19906928/"
-}
-]
-},
-{
-"title": "VIDEO: Attenborough's long-beaked echidna rediscovered - ABC News & Headlines",
-"species": [
-"Zaglossus attenboroughi"
-],
-"species_firm": [
-"Zaglossus attenboroughi"
-],
-"on_list": "Lost Species",
-"detail": "Mammal, long-lost",
-"publisher": "Australian Broadcasting Corporation",
-"date": "Sun, 12 Nov 2023",
-"ts": 1699776000,
-"first_seen": "2026-08-10",
-"link": "https://www.abc.net.au/news/2023-11-13/attenboroughs-long-beaked-echidna-rediscovered/103100456",
-"image": "/rd-img/f45a84b404e1138c.jpg",
-"wayback": "",
-"desc": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
-"also": [
-{
-"publisher": "Australian Broadcasting Corporation",
-"link": "https://www.abc.net.au/news/2023-11-10/long-beaked-echidna-rediscovered-in-papua-mountains/103089936"
-},
-{
-"publisher": "Breaking News, Latest News and Videos",
-"link": "https://abcnews.com/International/researchers-rediscovered-elusive-fish-species-thought-extinct-85/story?id"
-}
-]
-},
-{
-"title": "Attenborough\u2019s long-lost echidna rediscovered in New Guinea jungle",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "The Telegraph",
-"date": "Fri, 10 Nov 2023",
-"ts": 1699603200,
-"first_seen": "2026-08-10",
-"link": "https://www.telegraph.co.uk/world-news/2023/11/10/attenborough-named-echidna-mammal-rediscovered-new-guinea/",
-"image": "/rd-img/9e3ef6e5e44c5cae.jpg",
-"wayback": "",
-"desc": "Welcome back!",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "IFLScience",
-"link": "https://www.iflscience.com/long-lost-sailback-houndshark-not-seen-since-1973-rediscovered-in-papua-new-guinea-80580"
+"publisher": "ITVX",
+"link": "https://www.itv.com/news/border/2025-10-16/former-eradicated-animal-species-rediscovered-in-dumfries-and-galloway"
 }
 ]
 },
@@ -2896,82 +2846,6 @@
 "image": "",
 "wayback": "",
 "desc": "",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Species of mammal named after David Attenborough believed extinct rediscovered",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "the Guardian",
-"date": "Thu, 09 Nov 2023",
-"ts": 1699516800,
-"first_seen": "2026-08-10",
-"link": "https://www.theguardian.com/world/2023/nov/10/attenborough-long-beaked-echidna-seen-first-time-cyclops-mountain-photos-footage",
-"image": "/rd-img/294a2533ffea89f6.jpg",
-"wayback": "",
-"desc": "Long-beaked echidna with spines of a hedgehog and snout of an anteater photographed on last day of expedition",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "India Today",
-"link": "https://www.indiatoday.in/science/story/mammal-species-named-after-attenborough-rediscovered-it-was-extinct-for-60-years-2461367-2023-11-10"
-}
-]
-},
-{
-"title": "'Lost\u2019 Brazilian tree rediscovered after almost 200 years",
-"species": [
-"Ilex sapiiformis"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "euronews",
-"date": "Fri, 22 Sep 2023",
-"ts": 1695366000,
-"first_seen": "2026-08-10",
-"link": "https://www.euronews.com/2023/09/23/nature-surprises-us-scientists-in-brazil-rediscover-tree-thought-extinct-for-nearly-200-ye",
-"image": "/rd-img/f2c88e4ca006dcb5.jpg",
-"wayback": "",
-"desc": "A species of small holly tree last seen nearly two centuries ago has been rediscovered in Brazil.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Business Insider",
-"link": "https://www.businessinsider.com/rare-pernambuco-holly-tree-rediscovered-after-186-years-2023-9"
-}
-]
-},
-{
-"title": "Tree Thought Extinct Discovered After 2 Centuries in \u2018Incredible\u2019 Find",
-"species": [
-"Ilex sapiiformis"
-],
-"species_firm": [
-"Ilex sapiiformis"
-],
-"on_list": "",
-"detail": "",
-"publisher": "Newsweek",
-"date": "Thu, 21 Sep 2023",
-"ts": 1695279600,
-"first_seen": "2026-08-10",
-"link": "https://www.newsweek.com/tree-extinct-discovered-2-centuries-incredible-find-1828749",
-"image": "/rd-img/63bea29056317dc1.jpg",
-"wayback": "",
-"desc": "The tree, found in urban Brazil and called the Ilex sapiiformis, or Pernambuco holly, was first discovered in 1838 and has not been seen since.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -3034,7 +2908,16 @@
 "title": "Lost and found: stroke of luck that helped rediscover tiny \u2018superhero\u2019 fish",
 "species": [
 "Schistura chrysicristinae",
-"Paraschistura chrysicristinae"
+"Paraschistura chrysicristinae",
+"Scolopax rochussenii",
+"Mollinedia stenophylla",
+"Dracaena umbraculifera",
+"Begonia jocelinoi",
+"Melomys fulgens",
+"Asplenium achalense",
+"Channa amphibeus",
+"Meconopsis florindae",
+"Ursus thibetanus"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
@@ -3050,13 +2933,19 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Cambridge Core",
+"link": "https://www.cambridge.org/core/journals/oryx/article/lost-but-not-forgotten-a-new-nomenclature-to-support-a-call-to-rediscover-and-conserve-lost-species/5A148CDB9F0ECB4B11D04BA0D35864B2"
+}
+]
 },
 {
 "title": "Rare singing, emerald green and iridescent blue hummingbird unexpectedly rediscovered in Colombia",
 "species": [
-"Campylopterus phainopeplus"
+"Campylopterus phainopeplus",
+"Amazilia alfaroana"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
@@ -3078,7 +2967,8 @@
 {
 "title": "Magnolia species lost to science for 97 years rediscovered in Haiti",
 "species": [
-"Magnolia emarginata"
+"Magnolia emarginata",
+"Magnolia wolfii"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
@@ -3103,37 +2993,6 @@
 ]
 },
 {
-"title": "Lost but not forgotten: a new nomenclature to support a call to rediscover and conserve lost species",
-"species": [
-"Paraschistura chrysicristinae",
-"Scolopax rochussenii",
-"Mollinedia stenophylla",
-"Dracaena umbraculifera",
-"Begonia jocelinoi",
-"Melomys fulgens",
-"Asplenium achalense",
-"Channa amphibeus",
-"Meconopsis florindae",
-"Ursus thibetanus"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Fish, long-lost, last seen 1970s",
-"publisher": "Cambridge Core",
-"date": "Tue, 28 Jun 2022",
-"ts": 1656399600,
-"first_seen": "2026-08-10",
-"link": "https://www.cambridge.org/core/journals/oryx/article/lost-but-not-forgotten-a-new-nomenclature-to-support-a-call-to-rediscover-and-conserve-lost-species/5A148CDB9F0ECB4B11D04BA0D35864B2",
-"image": "https://static.cambridge.org/covers/ORX_0_0_0/oryx.jpg?send-full-size-image=true",
-"wayback": "",
-"desc": "Lost but not forgotten: a new nomenclature to support a call to rediscover and conserve lost species - Volume 56 Issue 4",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "Lost Species: Unseen but Not Extinct?",
 "species": [],
 "species_firm": [],
@@ -3150,13 +3009,8 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Miami Herald",
-"link": "https://www.miamiherald.com/living/article314834589.html"
-}
-]
+"outlets": 1,
+"also": []
 },
 {
 "title": "\u2018A powerful antidote to despair\u2019: the project that tracks down lost species",
@@ -3290,11 +3144,12 @@
 "title": "Biologists rediscover rare frog after 27 years",
 "species": [
 "Pulchrana guttmani",
-"Pulchrana grandocula"
+"Pulchrana grandocula",
+"Lepidodactylus labialis"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Reptile, long-lost, last seen 1971",
 "publisher": "Inquirer.net",
 "date": "Mon, 08 Mar 2021",
 "ts": 1615190400,
@@ -3330,40 +3185,13 @@
 "also": []
 },
 {
-"title": "Lost species of chameleon rediscovered by scientists",
-"species": [
-"Furcifer voeltzkowi"
-],
-"species_firm": [
-"Furcifer voeltzkowi"
-],
-"on_list": "",
-"detail": "",
-"publisher": "cnn.com",
-"date": "Sat, 31 Oct 2020",
-"ts": 1604127600,
-"first_seen": "2026-08-10",
-"link": "https://www.cnn.com/videos/us/2020/10/31/lost-chameleon-species-furcifer-voeltzkowi-found-orig-kj.cnn",
-"image": "/rd-img/6697bf8b1372da09.jpg",
-"wayback": "",
-"desc": "Furcifer voeltzkowi chameleons were found in Madagascar, including females whose color pattern changes when stressed, pregnant or encountering males.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "CNN",
-"link": "https://www.cnn.com/videos/us/2020/10/31/lost-chameleon-species-furcifer-voeltzkowi-found-orig-kj.cnn"
-}
-]
-},
-{
 "title": "Tiny Elephant Shrew Resurfaces After More Than 50 Years On Lost Species List",
-"species": [],
+"species": [
+"Calcochloris tytonis"
+],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Mammal, long-lost, last seen 1964",
 "publisher": "NPR",
 "date": "Mon, 24 Aug 2020",
 "ts": 1598252400,
@@ -3397,10 +3225,12 @@
 },
 {
 "title": "Elephant shrew \u2018lost\u2019 to science for 52 years is \u2018rediscovered\u2019 in Africa - news",
-"species": [],
+"species": [
+"Calcochloris tytonis"
+],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Mammal, long-lost, last seen 1964",
 "publisher": "Conservation news",
 "date": "Tue, 18 Aug 2020",
 "ts": 1597734000,
@@ -3426,10 +3256,12 @@
 },
 {
 "title": "Lost Species of African Mammal Rediscovered by Duke Researcher",
-"species": [],
+"species": [
+"Calcochloris tytonis"
+],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Mammal, long-lost, last seen 1964",
 "publisher": "Duke Today",
 "date": "Mon, 17 Aug 2020",
 "ts": 1597647600,
@@ -3451,10 +3283,12 @@
 },
 {
 "title": "Lost species of fanged 'mouse deer' spotted for first time in 30 years",
-"species": [],
+"species": [
+"Ialtris parishi"
+],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Reptile, lost, last seen ?",
 "publisher": "CTVNews",
 "date": "Mon, 11 Nov 2019",
 "ts": 1573459200,
