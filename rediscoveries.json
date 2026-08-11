@@ -1,24 +1,24 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 141,
+"stories": 139,
 "raw_items": 252,
-"with_species": 81,
+"with_species": 77,
 "distinct_species": 150,
 "distinct_species_firm": 25,
-"multi_species_cards": 31,
-"with_image": 121,
-"syndicated": 58,
-"on_tbg_list": 29,
+"multi_species_cards": 30,
+"with_image": 119,
+"syndicated": 57,
+"on_tbg_list": 26,
 "on_list_breakdown": {
-"on our lost-species list": 25,
-"on the Black List": 4
+"on our lost-species list": 23,
+"on the Black List": 3
 },
 "undated": 0,
 "newest": "Wed, 29 Jul 2026",
 "tracked_names": 6709,
-"image_local": 116,
-"archived": 16
+"image_local": 115,
+"archived": 14
 },
 "cards": [
 {
@@ -636,7 +636,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
 {
 "publisher": "Conservation news",
@@ -645,6 +645,10 @@
 {
 "publisher": "Conservation news",
 "link": "https://news.mongabay.com/short-article/2026/04/five-lost-bird-species-rediscovered-in-2025/"
+},
+{
+"publisher": "Good Good Good",
+"link": "https://www.goodgoodgood.co/articles/missing-bird-species-rediscovered"
 },
 {
 "publisher": "ZME Science",
@@ -726,42 +730,24 @@
 "also": []
 },
 {
-"title": "Five 'missing' bird species not seen in the wild for over a decade rediscovered in 2025",
-"species": [
-"Ceyx websteri",
-"Myzomela rubrobrunnea",
-"Chenorhamphus grayi",
-"Cyornis camarinensis",
-"Rhinoptilus bitorquatus",
-"Pogoniulus makawai",
-"Pogoniulus bilineatus",
-"Gallicolumba platenae",
-"Ducula mindorensis",
-"Guadalcanaria inexpectata",
-"Heinrichia simplex",
-"Zosterops samoensis"
-],
+"title": "Birdwatchers and Scientists Rediscover Five Species Not Seen for Over a Decade in 2025",
+"species": [],
 "species_firm": [],
-"on_list": "Lost Species",
-"detail": "Bird, lost, last seen 2009",
-"publisher": "Good Good Good",
-"date": "Thu, 16 Apr 2026",
-"ts": 1776322800,
+"on_list": "",
+"detail": "",
+"publisher": "Charlotte Observer",
+"date": "Wed, 08 Apr 2026",
+"ts": 1775631600,
 "first_seen": "2026-08-10",
-"link": "https://www.goodgoodgood.co/articles/missing-bird-species-rediscovered",
-"image": "/rd-img/ac7e25b34c75952a.jpg",
-"wayback": "http://web.archive.org/web/20260510175703/https://www.goodgoodgood.co/articles/missing-bird-species-rediscovered",
-"desc": "With the new changes, the overall number of \u201clost\u201d birds, as defined in a 2022 study, dropped to 120 from the 163 listed when the list was first published.",
+"link": "https://www.charlotteobserver.com/living/article315343921.html",
+"image": "",
+"wayback": "",
+"desc": "",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Charlotte Observer",
-"link": "https://www.charlotteobserver.com/living/article315343921.html"
-}
-]
+"outlets": 1,
+"also": []
 },
 {
 "title": "\"Exceptional discovery.\" Animals thought extinct for 6,000 years found alive in Indonesian rainforest",
@@ -1221,7 +1207,7 @@
 "ts": 1768809600,
 "first_seen": "2026-08-10",
 "link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years",
-"image": "https://www.scimex.org/__data/assets/image/0005/1207418/varieties/multimediaThumb.jpg",
+"image": "/rd-img/378fe96dccb976db.jpg",
 "wayback": "",
 "desc": "",
 "citation": "",
@@ -1259,31 +1245,6 @@
 {
 "publisher": "NDTV",
 "link": "https://www.ndtv.com/science/australian-plant-once-thought-extinct-rediscovered-after-60-years-in-unexpected-spot-10789666"
-}
-]
-},
-{
-"title": "Citizen science app leads to rediscovery of \u2018extinct\u2019 species",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "The West Australian",
-"date": "Sun, 18 Jan 2026",
-"ts": 1768694400,
-"first_seen": "2026-08-10",
-"link": "https://thewest.com.au/technology/science/citizen-science-app-leads-to-rediscovery-of-extinct-species--c-21344775",
-"image": "/rd-img/f791354f14daa9bf.jpg",
-"wayback": "",
-"desc": "A citizen science app has helped rediscover a plant species not known to have been sighted in more than half a century.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "The West Australian",
-"link": "https://thewest.com.au/technology/science/citizen-science-app-leads-to-rediscovery-of-extinct-species--c-21344775"
 }
 ]
 },
@@ -1971,18 +1932,14 @@
 "ts": 1760684400,
 "first_seen": "2026-08-10",
 "link": "https://www.earth.com/news/reptile-thought-extinct-for-34-years-is-rediscovered-afroedura-rondavelica/",
-"image": "/rd-img/ebeb9577f29af63d.jpg",
+"image": "/rd-img/286e73d16ad525f8.jpg",
 "wayback": "",
-"desc": "Since it was identified in 1991, mystery surrounded this elusive little lizard for more than three decades.",
+"desc": "The species was first discovered by Dr Niels Jacobsen in December 1991, when he collected two males.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
-{
-"publisher": "IOL",
-"link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
 {
 "publisher": "Jacaranda FM",
 "link": "https://www.jacarandafm.com/shows/drive/look-lost-gecko-species-rediscovered-mpumalanga/"
@@ -1994,6 +1951,10 @@
 {
 "publisher": "Sunday Independent",
 "link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "IOL",
+"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/"
 },
 {
 "publisher": "Earth.com",
@@ -2195,46 +2156,19 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
-"publisher": "Smithsonian Magazine",
-"link": "https://www.smithsonianmag.com/smart-news/elusive-sailback-houndshark-rediscovered-in-papua-new-guinea-after-50-years-180987260/"
-},
-{
-"publisher": "IFLScience",
-"link": "https://www.iflscience.com/long-lost-sailback-houndshark-not-seen-since-1973-rediscovered-in-papua-new-guinea-80580"
-}
-]
-},
-{
-"title": "Long-lost sailback shark rediscovered after more than 50 years",
-"species": [
-"Gogolia filewoodi"
-],
-"species_firm": [],
-"on_list": "Black List (Data Deficient)",
-"detail": "tier 2",
 "publisher": "New Scientist",
-"date": "Tue, 26 Aug 2025",
-"ts": 1756191600,
-"first_seen": "2026-08-10",
-"link": "https://www.newscientist.com/article/2493952-long-lost-sailback-shark-rediscovered-after-more-than-50-years/",
-"image": "/rd-img/1ded96deef1f48e6.jpg",
-"wayback": "",
-"desc": "The rare sailback houndshark, which has an unusually large dorsal fin, was first described by scientists in 1973. That was the last record of its existence, until now",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
-"also": [
+"link": "https://www.newscientist.com/article/2493952-long-lost-sailback-shark-rediscovered-after-more-than-50-years/"
+},
 {
 "publisher": "The Independent",
 "link": "https://www.independent.co.uk/news/science/rare-shark-species-extinct-rediscovery-b2814721.html"
 },
 {
-"publisher": "InsideHook",
-"link": "https://www.insidehook.com/culture/what-its-like-to-rediscover-lost-shark-forrest-galante"
+"publisher": "Smithsonian Magazine",
+"link": "https://www.smithsonianmag.com/smart-news/elusive-sailback-houndshark-rediscovered-in-papua-new-guinea-after-50-years-180987260/"
 }
 ]
 },
@@ -2284,11 +2218,12 @@
 {
 "title": "Scientists find the world's smallest snake, once feared extinct, hanging out under a rock",
 "species": [
-"Tetracheilostoma carlae"
+"Tetracheilostoma carlae",
+"Erythrolamprus perfuscus"
 ],
 "species_firm": [],
-"on_list": "",
-"detail": "",
+"on_list": "Lost Species",
+"detail": "Reptile, long-lost, last seen 1963",
 "publisher": "CBC",
 "date": "Wed, 23 Jul 2025",
 "ts": 1753254000,
@@ -2300,7 +2235,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "Tech Explorist",
@@ -2309,31 +2244,12 @@
 {
 "publisher": "Good News Network",
 "link": "https://www.goodnewsnetwork.org/worlds-smallest-snake-rediscovered-in-barbados-after-20-years/"
-}
-]
 },
 {
-"title": "World\u2019s Tiniest Snake Rediscovered After Going MIA For 20 Years",
-"species": [
-"Tetracheilostoma carlae",
-"Erythrolamprus perfuscus"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Reptile, long-lost, last seen 1963",
 "publisher": "IFLScience",
-"date": "Wed, 23 Jul 2025",
-"ts": 1753254000,
-"first_seen": "2026-08-10",
-"link": "https://www.iflscience.com/the-worlds-tiniest-snake-was-lost-to-science-for-20-years-now-its-back-and-we-have-photos-80112",
-"image": "/rd-img/9f55a779d0c87cc1.jpg",
-"wayback": "",
-"desc": "Sources say it\u2019s as mini as ever.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
+"link": "https://www.iflscience.com/the-worlds-tiniest-snake-was-lost-to-science-for-20-years-now-its-back-and-we-have-photos-80112"
+}
+]
 },
 {
 "title": "Rare Gecko Species Rediscovered in Galapagos Following Island Restoration Success",
@@ -2556,6 +2472,26 @@
 ]
 },
 {
+"title": "'Lost' gecko species thought to be extinct rediscovered in South Africa after more than 30 years",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "euronews",
+"date": "Thu, 15 May 2025",
+"ts": 1747292400,
+"first_seen": "2026-08-10",
+"link": "https://www.euronews.com/2025/05/15/scientists-thought-this-gecko-was-extinct-or-didnt-exist-now-its-been-rediscovered-after-3",
+"image": "/rd-img/ebeb9577f29af63d.jpg",
+"wayback": "",
+"desc": "Since it was identified in 1991, mystery surrounded this elusive little lizard for more than three decades.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "\u2018Lost\u2019 species rediscovered after more than three decades",
 "species": [],
 "species_firm": [],
@@ -2581,33 +2517,6 @@
 {
 "publisher": "Guinness World Records",
 "link": "https://www.guinnessworldrecords.com/news/2022/5/eight-species-that-were-rediscovered-after-decades-lost-704635"
-}
-]
-},
-{
-"title": "'Lost' Blyde River Flat Gecko rediscovered after 33 years",
-"species": [
-"Afroedura rondavelica"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
-"publisher": "IOL",
-"date": "Wed, 14 May 2025",
-"ts": 1747206000,
-"first_seen": "2026-08-10",
-"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/",
-"image": "/rd-img/bf39d1994849e99b.jpg",
-"wayback": "",
-"desc": "In a remarkable turn of events, researchers from the Endangered Wildlife Trust have rediscovered the Blyde River Flat Gecko, a species unseen for over 33 years, igniting hope for the conservation of South Africa\u2019s lesser-known wildlife",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Good Things Guy",
-"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
 }
 ]
 },
@@ -2993,8 +2902,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "IFLScience",
+"link": "https://www.iflscience.com/long-lost-sailback-houndshark-not-seen-since-1973-rediscovered-in-papua-new-guinea-80580"
+}
+]
 },
 {
 "title": "Long-lost mammal rediscovered in remote Indonesia mountains",
@@ -3471,6 +3385,26 @@
 "also": []
 },
 {
+"title": "What It Is Like to Rediscover a Lost Species of Shark",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "InsideHook",
+"date": "Mon, 30 Nov 2020",
+"ts": 1606723200,
+"first_seen": "2026-08-10",
+"link": "https://www.insidehook.com/culture/what-its-like-to-rediscover-lost-shark-forrest-galante",
+"image": "/rd-img/7be05e2a1b68709e.jpg",
+"wayback": "",
+"desc": "Forrest Galante tells InsideHook about finding the lost flapnosed houndshark",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "Lost species of chameleon rediscovered by scientists",
 "species": [],
 "species_firm": [],
@@ -3512,7 +3446,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 7,
+"outlets": 6,
 "also": [
 {
 "publisher": "the Guardian",
@@ -3523,34 +3457,39 @@
 "link": "https://www.bbc.com/news/science-environment-53820395"
 },
 {
-"publisher": "Conservation news",
-"link": "https://news.mongabay.com/2020/08/elephant-shrew-lost-to-science-for-52-years-is-rediscovered-in-africa/"
-},
-{
 "publisher": "bbc.com",
 "link": "https://www.bbc.com/news/science-environment-53820395"
+},
+{
+"publisher": "Global News",
+"link": "https://globalnews.ca/news/7285974/somali-sengi-elephant-shrew-lost-species/"
 }
 ]
 },
 {
-"title": "A sengi species 'lost' for half a century has been rediscovered in a surprising location",
+"title": "Elephant shrew \u2018lost\u2019 to science for 52 years is \u2018rediscovered\u2019 in Africa - news",
 "species": [],
 "species_firm": [],
 "on_list": "",
 "detail": "",
-"publisher": "Discover Wildlife",
-"date": "Thu, 20 Aug 2020",
-"ts": 1597906800,
+"publisher": "Conservation news",
+"date": "Tue, 18 Aug 2020",
+"ts": 1597734000,
 "first_seen": "2026-08-10",
-"link": "https://www.discoverwildlife.com/news/a-sengi-species-lost-for-half-a-century-has-been-rediscovered-in-a-surprising-location",
-"image": "/rd-img/c59c250b36132506.jpg",
-"wayback": "http://web.archive.org/web/20260519213957/https://www.discoverwildlife.com/news/a-sengi-species-lost-for-half-a-century-has-been-rediscovered-in-a-surprising-location",
-"desc": "A small mammal that has not been by scientists seen the late 1960s has been found, and in a new country.",
+"link": "https://news.mongabay.com/2020/08/elephant-shrew-lost-to-science-for-52-years-is-rediscovered-in-africa/",
+"image": "/rd-img/6adaf8994fd78dae.jpg",
+"wayback": "",
+"desc": "The Somali sengi is a strange amalgamation of creatures. While its body is the shape and size of a mouse\u2019s, it has spindly, gazelle-like legs that allow it to dart across boulders at breakneck speed. It also has a long, trunk-like nose that resembles an elepha",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Discover Wildlife",
+"link": "https://www.discoverwildlife.com/news/a-sengi-species-lost-for-half-a-century-has-been-rediscovered-in-a-surprising-location"
+}
+]
 },
 {
 "title": "Lost Species of African Mammal Rediscovered by Duke Researcher",
@@ -3615,7 +3554,7 @@
 "also": []
 },
 {
-"title": "First photograph of a living Myxostoma petiverianum, identified from an iNaturalist post",
+"title": "Citizen science leads to snail rediscovery in Vietnam",
 "species": [
 "Myxostoma petiverianum"
 ],
@@ -3624,19 +3563,28 @@
 ],
 "on_list": "",
 "detail": "",
-"publisher": "The Festivus",
-"date": "Tue, 01 May 2018",
-"ts": 1525132800,
+"publisher": "Mongabay",
+"date": "Fri, 08 Jul 2016",
+"ts": 1468001400,
 "first_seen": "2026-08-11",
-"link": "https://www.biodiversitylibrary.org/bibliography/188028",
-"image": "",
+"link": "https://news.mongabay.com/2016/07/citizen-science-leads-to-snail-rediscovery-in-vietnam/",
+"image": "/rd-img/e434ca7a7dab8b35.jpg",
 "wayback": "",
-"desc": "A land snail known from only a few places in Cambodia and Vietnam, photographed alive on Hon Cau in the Con Dao Archipelago. The photograph was posted to iNaturalist in 2014 and identified there four years later, giving the species its first record from the is",
+"desc": "Scott Trageser photographed invertebrates on Hon Cau, an island off south-east Vietnam, and posted them to iNaturalist hoping somebody could identify them. In November 2015 the malacologist Junn Kitt Foon recognised one as Myxostoma petiverianum, a land snail ",
 "citation": "Trageser, S.J., Wiscovitch, A. & Foon, J.K. (2018) Discovery of Myxostoma petiverianum Wood, 1828 on Hon Cau, Vietnam. The Festivus 50(2): 110-113.",
-"kind": "new record",
-"note": "A new island record and the first photograph of a live adult, not a rediscovery after decades lost.",
-"outlets": 1,
-"also": []
+"kind": "citizen science",
+"note": "Found in a photograph, not in the field: identified from an iNaturalist post more than a year after it was taken.",
+"outlets": 3,
+"also": [
+{
+"publisher": "The West Australian",
+"link": "https://thewest.com.au/technology/science/citizen-science-app-leads-to-rediscovery-of-extinct-species--c-21344775"
+},
+{
+"publisher": "The West Australian",
+"link": "https://thewest.com.au/technology/science/citizen-science-app-leads-to-rediscovery-of-extinct-species--c-21344775"
+}
+]
 }
 ]
 }
