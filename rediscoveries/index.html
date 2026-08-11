@@ -1,0 +1,2923 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rediscoveries in the News — The Species Black List</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="News reports of species found again after being considered lost, gathered daily from conservation and science feeds, one entry per story, with what a press report can and cannot establish stated plainly.">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://speciesblacklist.org/rediscoveries/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<!-- Shared-link previews. The advocacy case for this register travels by link,
+     so a bare URL with no card is a wasted send. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Biodiversity Group">
+<meta property="og:url" content="https://speciesblacklist.org/rediscoveries/">
+<meta property="og:title" content="Rediscoveries in the News — The Species Black List">
+<meta property="og:description" content="3,031 vertebrates the IUCN Red List records as Data Deficient, and 31 it has never assessed. Ranked by how narrowly restricted the published record says they are — and tested against IUCN's own reassessments.">
+<!-- The card is the register itself: masthead, one real tier-5 record, the field
+     of 2,407 marks, the headline figures. No photography, for the same reason
+     there is none on the page. Drawn by pipeline/11_make_og.py from data.json,
+     so the marks and the counts cannot drift from the data they stand for. -->
+<meta property="og:image" content="https://speciesblacklist.org/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,407 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 3,031 Data Deficient, 1,124 in the priority stratum, 31 never assessed, 53.6% of reassessed priority species proved threatened.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Species Black List">
+<meta name="twitter:description" content="Vertebrates the Red List cannot yet speak for, ranked by restriction and tested against IUCN's own reassessments.">
+<meta name="twitter:image" content="https://speciesblacklist.org/og-image.png">
+<meta name="twitter:image:alt" content="The register's headline figures over a field of 2,407 marks, one per species, shaded by how narrowly restricted each published record is.">
+
+<!-- Dataset markup so Google Dataset Search can surface this to the researchers
+     who would actually use it. Worth more than ordinary SEO for a register. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "The Species Black List",
+  "alternateName": "Data Deficient and unassessed vertebrates, ranked by geographic restriction",
+  "description": "A register of 3,031 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 31 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritised research agenda.",
+  "url": "https://speciesblacklist.org/",
+  "keywords": ["extinction risk","IUCN Red List","Data Deficient","conservation prioritisation","vertebrates","biodiversity assessment gap","Criterion B"],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {"@type": "Organization", "name": "The Biodiversity Group",
+              "url": "https://biodiversitygroup.org"},
+  "isBasedOn": [
+    {"@type": "Dataset", "name": "The IUCN Red List of Threatened Species, Version 2026-1",
+     "description": "The global authority on the extinction risk of animal, fungus and plant species, maintained by the International Union for Conservation of Nature since 1964. Version 2026-1 is the release from which the Data Deficient and never-assessed vertebrate cohorts in this register were drawn.",
+     "url": "https://www.iucnredlist.org", "identifier": "https://doi.org/10.15468/0qnb58",
+     "creator": {"@type": "Organization", "name": "International Union for Conservation of Nature",
+                 "url": "https://www.iucn.org"},
+     "license": "https://creativecommons.org/licenses/by/4.0/"},
+    {"@type": "Book", "name": "Threatened and Recently Extinct Vertebrates of the World: A Biogeographic Approach",
+     "author": {"@type": "Person", "name": "Matthew Richardson"},
+     "publisher": {"@type": "Organization", "name": "Cambridge University Press"},
+     "datePublished": "2023"}
+  ],
+  "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json",
+                    "contentUrl": "https://speciesblacklist.org/data.json"}],
+  "measurementTechnique": "Text classification of published range statements into restriction tiers, cross-referenced against the IUCN Red List and verified against the GBIF backbone taxonomy",
+  "variableMeasured": "Geographic restriction tier (1-5)"
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing:border-box; }
+  body { margin:0; }
+  /* ---- tokens: cool institutional ground, warm data ---------------------- */
+  :root {
+    --ground:#EDEEF0; --surface:#F7F8F9; --surface-2:#E4E6EA;
+    --ink:#171A21; --ink-2:#4A5260; --ink-3:#767E8C;
+    --rule:#D3D7DE; --rule-2:#C0C6D0;
+    --accent:#3B4E8C; --accent-soft:#E3E7F3;
+    --t1:#D9C08A; --t2:#C99B4F; --t3:#B4762B; --t4:#90501A; --t5:#6B300F;
+    --serif:Georgia,"Palatino Linotype",Palatino,"Book Antiqua",ui-serif,serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    /* 1.35rem floor rather than 1rem: at 375px the register table, the sites
+       list and the methods tables were all sitting ~16px off the edge, which
+       reads as touching it once each of them has its own border. */
+    --pad:clamp(1.35rem,4vw,2.5rem);
+    /* Type scale. Ratio ~1.28, with a deliberate jump to --fs-display so the
+       hero carries real weight against an otherwise dense, tabular page. */
+    --fs-micro:.68rem; --fs-small:.78rem; --fs-body:.9rem; --fs-base:1rem;
+    --fs-lede:1.16rem; --fs-h3:1.05rem; --fs-h2:1.4rem;
+    --fs-quote:clamp(1.25rem,2.7vw,1.9rem);
+    --fs-display:clamp(1.9rem,5.2vw,3.1rem);
+    /* Spacing rhythm, 8px base — every gap below is drawn from this. */
+    --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s5:3rem; --s6:4rem;
+  }
+  @media (prefers-color-scheme:dark) {
+    :root {
+      --ground:#12141A; --surface:#191C23; --surface-2:#22262F;
+      --ink:#E6E8EC; --ink-2:#A2AAB8; --ink-3:#79818F;
+      --rule:#2A2F39; --rule-2:#3A404C;
+      --accent:#8FA3E0; --accent-soft:#232A3D;
+      --t1:#EBD4A6; --t2:#DCB068; --t3:#C98A3C; --t4:#B4682A; --t5:#9A4C1C;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground:#12141A; --surface:#191C23; --surface-2:#22262F;
+    --ink:#E6E8EC; --ink-2:#A2AAB8; --ink-3:#79818F;
+    --rule:#2A2F39; --rule-2:#3A404C;
+    --accent:#8FA3E0; --accent-soft:#232A3D;
+    --t1:#EBD4A6; --t2:#DCB068; --t3:#C98A3C; --t4:#B4682A; --t5:#9A4C1C;
+  }
+  :root[data-theme="light"] {
+    --ground:#EDEEF0; --surface:#F7F8F9; --surface-2:#E4E6EA;
+    --ink:#171A21; --ink-2:#4A5260; --ink-3:#767E8C;
+    --rule:#D3D7DE; --rule-2:#C0C6D0;
+    --accent:#3B4E8C; --accent-soft:#E3E7F3;
+    --t1:#D9C08A; --t2:#C99B4F; --t3:#B4762B; --t4:#90501A; --t5:#6B300F;
+  }
+
+  body { background:var(--ground); color:var(--ink); font-family:var(--serif);
+         font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 var(--pad); }
+  /* Centre the measure column too. A centred heading inside a left-aligned 66ch
+     column lands left of the page's centre line, which reads as a mistake rather
+     than as centring. */
+  .prose { max-width:66ch; margin-inline:auto; }
+  /* All titles centred. Body prose stays left-aligned — centred running text is
+     genuinely hard to read, and the ragged left edge would hurt the tables and
+     evidence sentences that make up most of this site. Headings inside a bordered
+     callout are also centred, since the request was for consistency across every
+     title rather than only the page-level ones. */
+  h1,h2,h3,h4 { font-weight:600; text-wrap:balance; line-height:1.2; margin:0;
+                text-align:center; }
+  /* Kicker labels sit directly above a title, so they centre with it. The ones
+     used as UI labels (the field header, the map source row) are exempted below. */
+  .eyebrow { text-align:center; }
+  .field-head .eyebrow, .mapsource .eyebrow, .tierkey .eyebrow { text-align:left; }
+  a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
+  :focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:2px; }
+  .num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
+  .sci { font-family:var(--mono); font-style:normal; }
+  .eyebrow { font-family:var(--sans); font-size:.68rem; font-weight:600;
+             letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3); }
+
+  /* ---- masthead: a register header, ruled ------------------------------- */
+  .mast { border-bottom:2px solid var(--ink); background:var(--surface); }
+  /* Utility row carries the brand link and controls, so the title block below
+     can be centred without the buttons fighting it for the optical centre. */
+  /* Three tracks so the brand sits on the true page centre regardless of how wide
+     the controls are; an even flex row would push it off-centre. */
+  .utility { display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
+             gap:var(--s2); padding-top:.8rem; }
+  .utility .brand { grid-column:2; justify-self:center; }
+  .utility .mast-right { grid-column:3; justify-self:end; }
+  @media (max-width:620px) {
+    .utility { grid-template-columns:1fr; justify-items:center; gap:.6rem; }
+    .utility .brand, .utility .mast-right { grid-column:1; justify-self:center; }
+  }
+  /* The Methods page has its own .prose children in places; keep them wide too. */
+  .methods .prose { max-width:none; }
+  .brand { display:inline-flex; align-items:center; gap:.55rem; text-decoration:none;
+           color:var(--ink-2); font-family:var(--sans); font-size:var(--fs-small);
+           font-weight:600; letter-spacing:.01em; }
+  .brand:hover { color:var(--accent); }
+  /* Kept as the original white asset, unmodified, by request. Note this means it
+     has almost no contrast against the light theme's --surface masthead. */
+  .brand img { display:block; height:32px; width:auto; }
+  .brand:hover img { opacity:.75; }
+
+  .mast-title { text-align:center; padding-top:var(--s3); padding-bottom:var(--s3); }
+  /* Horizontal lockup, centred as a group so the optical centre is the pair rather
+     than the wordmark alone. */
+  .lockup { display:flex; align-items:center; justify-content:center; gap:.85rem; }
+  .lockup .logomark { width:clamp(34px,5vw,52px); height:auto; flex:0 0 auto;
+                      color:var(--ink); }
+  @media (max-width:520px) {
+    .lockup { gap:.6rem; }
+    .lockup .logomark { width:30px; }
+  }
+  .mast h1 { font-size:clamp(1.6rem,4vw,2.4rem); letter-spacing:-.02em; }
+  .mast .sub { font-family:var(--sans); font-size:.85rem; color:var(--ink-2);
+               margin-top:.45rem; }
+  /* No margin-left:auto — an auto margin beats justify-self on a grid item, which
+     kept the controls pinned right when the row stacks on a phone. */
+  .mast-right { display:flex; gap:.5rem; align-items:center; }
+  .ghost { font-family:var(--sans); font-size:.75rem; padding:.4rem .7rem;
+           background:none; border:1px solid var(--rule-2); border-radius:2px;
+           color:var(--ink-2); cursor:pointer; }
+  .ghost:hover { border-color:var(--accent); color:var(--accent); }
+
+  /* ---- nav tabs --------------------------------------------------------- */
+  nav { border-bottom:1px solid var(--rule); background:var(--surface); }
+  /* Wraps rather than scrolls. `justify-content:center` plus `overflow-x:auto`
+     is a trap: once the tabs overflow, the first one sits off the left edge and
+     cannot be scrolled back to. Wrapping keeps every tab reachable at any width
+     and removes the horizontal scroll entirely. */
+  .navbar { display:flex; gap:0; flex-wrap:wrap; justify-content:center; }
+  /* Anchors rather than buttons: a real href is crawlable and middle-clickable,
+     and the router intercepts plain left clicks. */
+  .navbar [role="tab"] { font-family:var(--sans); font-size:1rem; font-weight:500;
+    padding:.95rem 1.5rem; background:none; border:0; border-bottom:2px solid transparent;
+    color:var(--ink-2); cursor:pointer; white-space:nowrap; text-decoration:none;
+    display:block; }
+  @media (max-width:620px) {
+    .navbar [role="tab"] { font-size:.88rem; padding:.6rem .75rem; }
+  }
+  .navbar [role="tab"]:hover { color:var(--ink); }
+  .navbar [role="tab"][aria-selected="true"] { color:var(--ink);
+    border-bottom-color:var(--accent); font-weight:600; }
+
+  /* Longhand: a `padding` shorthand here would zero the horizontal padding
+     .wrap supplies, which left the register, sites and methods pages flush
+     against the screen edge on a phone. */
+  section.view { padding-top:2.2rem; padding-bottom:4rem; }
+  section.view[hidden] { display:none; }
+
+  /* ---- cover sheet ------------------------------------------------------ */
+  .lede { font-size:var(--fs-lede); color:var(--ink-2); margin:.9rem 0 0; }
+  .lede strong { color:var(--ink); font-weight:600; }
+
+  /* ---- hero: the field -------------------------------------------------- */
+  /* One mark per species, 2,407 of them, coloured by restriction tier. The mass
+     is the argument: a register of the overlooked, drawn at the scale of the
+     overlooking. Canvas rather than DOM because 2,407 nodes is wasteful and
+     because crisp sub-pixel marks need devicePixelRatio scaling. No photography
+     anywhere on this page — most of these animals have never been photographed,
+     and that absence is the subject. */
+  .hero { border-bottom:1px solid var(--rule); background:var(--surface);
+          padding:var(--s5) 0 var(--s4); }
+  .hero h2 { font-size:var(--fs-display); letter-spacing:-.025em; max-width:24ch;
+             margin-top:var(--s1); }
+  .hero .lede { max-width:56ch; }
+
+  /* The opening statement is centred; the stakes block and the field below it
+     stay left-aligned, so the measure constraints need auto side margins rather
+     than a blanket rule on the hero. */
+  .intro { text-align:center; }
+  .intro h2, .intro .lede { margin-left:auto; margin-right:auto; }
+
+  .field-wrap { margin:var(--s5) 0 0; }
+  .field-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:var(--s1) var(--s3);
+                margin-bottom:var(--s2); }
+  .field-head .eyebrow { margin:0; }
+  /* ---- tier key --------------------------------------------------------- */
+  /* A reviewer read the whole methods page and still could not say what a tier
+     was. So the key is no longer a colour legend with numbers next to it — it
+     defines each tier in words, at first use, and doubles as the field's legend. */
+  .tierkey { margin:var(--s4) 0 0; border-top:1px solid var(--rule);
+             padding-top:var(--s3); }
+  .tierkey-intro { font-family:var(--sans); font-size:var(--fs-small);
+                   color:var(--ink-2); margin:var(--s1) 0 var(--s3); }
+  .tierkey ul { list-style:none; margin:0; padding:0; display:grid; gap:1px;
+                background:var(--rule); border:1px solid var(--rule); }
+  .tierkey li { background:var(--surface); display:grid; align-items:center;
+                grid-template-columns:auto auto 1fr auto; gap:var(--s2);
+                padding:.6rem var(--s2); }
+  .tierkey .swatch { width:22px; height:22px; border-radius:3px; flex:0 0 22px; }
+  .tierkey .tname { font-family:var(--sans); font-size:var(--fs-small); font-weight:600;
+                    white-space:nowrap; }
+  .tierkey .tdef { font-family:var(--sans); font-size:var(--fs-small);
+                   color:var(--ink-2); }
+  .tierkey .tn { font-family:var(--mono); font-size:var(--fs-small);
+                 font-variant-numeric:tabular-nums; color:var(--ink-3);
+                 text-align:right; white-space:nowrap; }
+  .tierkey li.pri { background:var(--accent-soft); }
+  .tierkey li.pri .tname::after { content:" · priority"; color:var(--accent);
+                                  font-weight:600; }
+  /* On a phone the definition needs its own line, but a bare `grid-column:1/-1`
+     on it collapsed the count track to 0px. Named areas place all four parts
+     explicitly instead. */
+  @media (max-width:620px) {
+    .tierkey li { grid-template-columns:auto 1fr auto; gap:.4rem .7rem;
+                  grid-template-areas:"sw name count" "def def def"; }
+    .tierkey .swatch { grid-area:sw; }
+    .tierkey .tname  { grid-area:name; }
+    .tierkey .tn     { grid-area:count; }
+    .tierkey .tdef   { grid-area:def; }
+  }
+
+  /* Inline tier reminder in the register, so the column is never unexplained
+     even for someone who arrives straight at the table. */
+  .tierhelp { margin:var(--s3) 0 0; font-family:var(--sans); font-size:var(--fs-small);
+              border:1px solid var(--rule); background:var(--surface);
+              padding:.6rem var(--s2); }
+  .tierhelp summary { cursor:pointer; color:var(--ink-2); display:flex;
+                      align-items:center; gap:.4rem; flex-wrap:wrap; }
+  .tierhelp summary .tierchip { width:22px; height:19px; font-size:.72rem; }
+  .tierhelp[open] summary { margin-bottom:var(--s2); color:var(--ink); font-weight:600; }
+  .tierhelp dl { margin:0; display:grid; gap:.4rem var(--s2);
+                 grid-template-columns:auto 1fr; align-items:baseline; }
+  .tierhelp dt { display:flex; align-items:center; gap:.5rem; }
+  .tierhelp dd { margin:0; color:var(--ink-2); }
+  .tierhelp .note { margin:var(--s2) 0 0; color:var(--ink-3); }
+
+  /* ---- map page --------------------------------------------------------- */
+  /* Canvas, not SVG: the density grid is thousands of cells and repaints on every
+     layer change, and the land basemap is ~4k vertices. */
+  /* Two independent axes: which SOURCE is shown, and which TIER is isolated. Kept
+     as separate control groups because they are not alternatives to each other. */
+  .mapsource { display:flex; flex-wrap:wrap; gap:.35rem; align-items:center;
+               margin:var(--s3) 0 0; }
+  .mapsource .eyebrow { margin:0 .3rem 0 0; }
+  .mapsource button { font-family:var(--sans); font-size:var(--fs-small);
+    padding:.42rem .7rem; background:var(--surface); border:1px solid var(--rule-2);
+    border-radius:2px; color:var(--ink-3); cursor:pointer; }
+  .mapsource button[aria-pressed="true"] { color:var(--ink); border-color:var(--ink);
+    font-weight:600; background:var(--surface-2); }
+  .mapcaveat { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-3);
+               margin:var(--s2) 0 0; line-height:1.5; max-width:none; }
+  .mapcaveat strong { color:var(--ink-2); }
+  .maplayers { display:flex; flex-wrap:wrap; gap:.35rem; margin:var(--s2) 0 var(--s2); }
+  .maplayers button { font-family:var(--sans); font-size:var(--fs-small);
+    padding:.42rem .7rem; background:var(--surface); border:1px solid var(--rule-2);
+    border-radius:2px; color:var(--ink-2); cursor:pointer; display:flex;
+    align-items:center; gap:.4rem; }
+  .maplayers button:hover { border-color:var(--accent); color:var(--ink); }
+  .maplayers button[aria-pressed="true"] { border-color:var(--ink); color:var(--ink);
+    font-weight:600; background:var(--surface-2); }
+  .maplayers button i { width:10px; height:10px; border-radius:2px; flex:0 0 10px; }
+  .maplayers .n { font-family:var(--mono); font-size:.72rem; color:var(--ink-3); }
+
+  .mapwrap { border:1px solid var(--rule); background:var(--surface); overflow:hidden;
+             position:relative; }
+  /* touch-action:none so a one-finger drag pans the map instead of scrolling the
+     page, which is what a map is expected to do. The map is short enough that the
+     page is still easy to scroll past on either side of it. */
+  #mapCanvas { display:block; width:100%; height:auto; cursor:grab;
+               touch-action:none; }
+  #mapCanvas.dragging { cursor:grabbing; }
+  .mapzoom { position:absolute; top:.5rem; right:.5rem; z-index:2; display:flex;
+             flex-direction:column; gap:.25rem; }
+  .mapzoom button { font-family:var(--sans); font-size:.9rem; line-height:1;
+    width:30px; height:30px; display:grid; place-items:center; cursor:pointer;
+    background:var(--surface); color:var(--ink-2); border:1px solid var(--rule-2);
+    border-radius:3px; }
+  .mapzoom button#zReset { font-size:.6rem; width:auto; padding:0 .4rem; }
+  .mapzoom button:hover { border-color:var(--accent); color:var(--accent); }
+  .mapzoom button[disabled] { opacity:.4; cursor:default; }
+  .maplegend { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
+               font-family:var(--sans); font-size:var(--fs-micro); color:var(--ink-3);
+               margin:var(--s2) 0 0; }
+  .maplegend .ramp { display:flex; }
+  .maplegend .ramp i { width:26px; height:11px; }
+  .mapstats { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
+              margin:var(--s2) 0 0; }
+  .mapstats strong { color:var(--ink); }
+  #mapTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
+            transition:opacity .12s; background:var(--ink); color:var(--ground);
+            font-family:var(--sans); font-size:var(--fs-small); padding:.4rem .6rem;
+            border-radius:3px; line-height:1.35; }
+
+  /* ---- sites page ------------------------------------------------------- */
+  .siteshead { font-size:var(--fs-h2); margin:var(--s5) 0 var(--s1); }
+  .siteslede { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
+               margin:0 0 var(--s3); }
+  .sitelist { display:grid; gap:1px; background:var(--rule);
+              border:1px solid var(--rule); }
+  .siterow { display:grid; grid-template-columns:1fr auto auto; gap:var(--s2);
+             align-items:center; background:var(--surface); border:0; width:100%;
+             text-align:left; padding:.75rem var(--s2); font:inherit; color:inherit; }
+  button.siterow { cursor:pointer; }
+  button.siterow:hover { background:var(--accent-soft); }
+  button.siterow:hover .sname { color:var(--accent); }
+  /* Both must be block. As inline spans the description ran straight on from the
+     last letter of the name, and the margin-top below was silently doing nothing. */
+  .siterow .sname { display:block; font-family:var(--sans); font-size:var(--fs-body);
+                    font-weight:600; }
+  .siterow .sctx { display:block; font-family:var(--sans); font-size:var(--fs-small);
+                   color:var(--ink-3); margin-top:.2rem; line-height:1.45; }
+  /* provenance note reads as metadata, not as the book's prose */
+  .siterow .sctx.prov { font-style:italic; opacity:.8; }
+  .siterow .scount { font-family:var(--mono); font-size:var(--fs-small);
+                     font-variant-numeric:tabular-nums; color:var(--ink-2);
+                     white-space:nowrap; }
+  .siterow .sgo { font-family:var(--sans); font-size:var(--fs-micro);
+                  color:var(--ink-3); white-space:nowrap; }
+  button.siterow:hover .sgo { color:var(--accent); }
+  @media (max-width:620px) {
+    .siterow { grid-template-columns:1fr auto; }
+    .siterow .sgo { display:none; }
+  }
+  /* Active site filter, shown in the register's filter bar. */
+  .sitechip { font-family:var(--sans); font-size:var(--fs-small);
+              display:inline-flex; align-items:center; gap:.4rem; padding:.35rem .6rem;
+              background:var(--accent); color:#fff; border-radius:2px; border:0;
+              cursor:pointer; font-weight:600; }
+  :root[data-theme="dark"] .sitechip,
+  :root:not([data-theme="light"]) .sitechip { color:var(--ground); }
+  .sitechip::after { content:"×"; font-size:1rem; line-height:1; }
+
+  /* ---- stakes, stated on the first screen ------------------------------- */
+  /* This was previously the last section of the deepest page. It is the reason
+     the register exists, so it now sits directly under the lede. */
+  .stakes { margin:var(--s4) 0 0; border-left:3px solid var(--accent);
+            /* symmetric horizontal padding, or the centred heading sits ~14px
+               right of the section's centre line */
+            padding:var(--s1) var(--s3); }
+  .stakes h3 { font-size:var(--fs-h3); margin-bottom:var(--s1); }
+  .stakes p { font-family:var(--sans); font-size:var(--fs-body); color:var(--ink-2);
+              margin:var(--s1) 0 0; line-height:1.55; }
+  .stakes strong { color:var(--ink); }
+  #field { display:block; width:100%; height:auto; cursor:crosshair; }
+  .field-note { font-family:var(--sans); font-size:var(--fs-micro); color:var(--ink-3);
+                margin:var(--s1) 0 0; }
+  #fieldTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
+              transition:opacity .12s; background:var(--ink); color:var(--ground);
+              font-family:var(--sans); font-size:var(--fs-small); padding:.4rem .6rem;
+              border-radius:3px; max-width:280px; line-height:1.35;
+              box-shadow:0 4px 14px rgb(0 0 0 / .22); }
+  #fieldTip b { display:block; font-weight:600; }
+  #fieldTip i { font-family:var(--mono); font-style:normal; opacity:.8; font-size:.72rem; }
+
+  /* ---- featured evidence ------------------------------------------------ */
+  /* The most persuasive material in the corpus is Richardson's own prose, so it
+     is set at display size rather than buried in a table cell. */
+  /* Sits under the opening statement: the reader gets the framing, then a real
+     record as its evidence. `margin:0` because figure carries a 40px UA side
+     margin that otherwise pulls it in from the column. */
+  .feature { border-top:1px solid var(--rule); margin:var(--s4) 0 0;
+             padding-top:var(--s4); text-align:center; }
+  .feature blockquote { font-size:var(--fs-quote); line-height:1.4;
+                        margin:var(--s2) auto 0; max-width:52ch; text-wrap:pretty;
+                        letter-spacing:-.012em; transition:opacity .5s; }
+  .feature blockquote::before { content:"“"; color:var(--t4); margin-right:.1em; }
+  .feature blockquote::after  { content:"”"; color:var(--t4); }
+  .feature figcaption { font-family:var(--sans); font-size:var(--fs-small);
+                        color:var(--ink-3); margin-top:var(--s2);
+                        display:flex; align-items:center; justify-content:center;
+                        gap:.5rem; flex-wrap:wrap; transition:opacity .5s; }
+  .feature figcaption .sci { color:var(--ink-2); }
+  .feature.fading blockquote, .feature.fading figcaption { opacity:0; }
+  @media (prefers-reduced-motion:reduce) {
+    .feature blockquote, .feature figcaption { transition:none; }
+  }
+
+  .counts { display:grid; gap:1px; background:var(--rule);
+            grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+            border:1px solid var(--rule); margin:2.2rem 0; }
+  .count { background:var(--surface); padding:1.1rem 1.2rem; }
+  .count b { display:block; font-family:var(--mono); font-size:2rem; font-weight:600;
+             letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
+  .count span { font-family:var(--sans); font-size:.74rem; color:var(--ink-2);
+                display:block; margin-top:.15rem; }
+
+  .panel { background:var(--surface); border:1px solid var(--rule); padding:1.5rem var(--pad);
+           margin:2rem 0; }
+  .panel h3 { font-size:1.05rem; margin-bottom:.2rem; }
+
+  /* ---- validation dot plot --------------------------------------------- */
+  .plot { margin:1.4rem 0 .4rem; }
+  /* The rate label gets its own grid column. Absolutely positioning it past the
+     end of the track pushed the whole page sideways at 375px. */
+  .prow { display:grid; grid-template-columns:minmax(68px,auto) 1fr auto; gap:.7rem;
+          align-items:center; padding:.55rem 0; }
+  .plab { font-family:var(--sans); font-size:.78rem; color:var(--ink-2); text-align:right; }
+  .ptrack { position:relative; height:26px; min-width:0; }
+  .ptrack::before { content:""; position:absolute; inset:auto 0 50% 0; height:1px;
+                    background:var(--rule); transform:translateY(50%); }
+  .ci { position:absolute; top:50%; height:6px; transform:translateY(-50%);
+        background:var(--surface-2); border:1px solid var(--rule-2); border-radius:3px; }
+  .dot { position:absolute; top:50%; width:13px; height:13px; border-radius:50%;
+         transform:translate(-50%,-50%); border:2px solid var(--surface); }
+  .dot.hi { background:var(--t5); } .dot.lo { background:var(--t2); }
+  .pval { font-family:var(--mono); font-size:.82rem; font-weight:600;
+          font-variant-numeric:tabular-nums; white-space:nowrap; text-align:right; }
+  .baseline { position:absolute; top:0; bottom:0; width:1px; background:var(--ink-3); }
+  /* baseline is named in the caption below, not in a floating label that can
+     overflow the track on a narrow screen */
+  .blegend { font-family:var(--sans); font-size:.72rem; color:var(--ink-3);
+             display:flex; align-items:center; gap:.4rem; margin:.5rem 0 0;
+             padding-left:calc(68px + .7rem); }
+  .blegend i { display:inline-block; width:1px; height:11px; background:var(--ink-3);
+               flex:0 0 1px; }
+  .axis { display:flex; justify-content:space-between; font-family:var(--mono);
+          font-size:.7rem; color:var(--ink-3); border-top:1px solid var(--rule);
+          padding-top:.35rem; margin-left:calc(68px + .7rem); }
+  .stat { font-family:var(--sans); font-size:.82rem; color:var(--ink-2); margin-top:1rem; }
+  .stat code { font-family:var(--mono); background:var(--surface-2); padding:.1rem .3rem;
+               border-radius:2px; font-size:.8rem; }
+
+  /* ---- bar rows (class / tier) ----------------------------------------- */
+  .bars { display:grid; gap:.42rem; margin-top:1rem; }
+  .bar { display:grid; grid-template-columns:minmax(120px,auto) 1fr minmax(48px,auto);
+         gap:.8rem; align-items:center; font-size:.85rem; }
+  .bar .bl { font-family:var(--sans); color:var(--ink-2); }
+  .bar .bt { height:14px; background:var(--surface-2); position:relative; }
+  .bar .bf { position:absolute; inset:0 auto 0 0; border-radius:0 3px 3px 0;
+             background:var(--accent); }
+  .bar .bv { font-family:var(--mono); font-variant-numeric:tabular-nums;
+             text-align:right; color:var(--ink-2); }
+  .bar.t5 .bf{background:var(--t5)} .bar.t4 .bf{background:var(--t4)}
+  .bar.t3 .bf{background:var(--t3)} .bar.t2 .bf{background:var(--t2)}
+  .bar.t1 .bf{background:var(--t1)}
+
+  /* ---- filter rail ------------------------------------------------------ */
+  /* Sticky so the filters stay reachable while scrolling 2,400 rows. */
+  .filters { display:flex; flex-wrap:wrap; gap:.6rem; align-items:center;
+             padding:.9rem 0 1rem; border-bottom:1px solid var(--rule);
+             position:sticky; top:0; z-index:5; background:var(--ground); }
+  .filters input[type=search], .filters select {
+    font-family:var(--sans); font-size:.83rem; padding:.45rem .6rem;
+    background:var(--surface); color:var(--ink); border:1px solid var(--rule-2);
+    border-radius:2px; }
+  .filters input[type=search] { min-width:min(280px,100%); flex:1 1 220px; }
+  /* the tier labels are long, so cap the select and let it ellipsise */
+  .filters select#fTier { max-width:min(320px,100%); }
+  .chipset { display:flex; gap:.3rem; flex-wrap:wrap; }
+  .chip { font-family:var(--sans); font-size:.76rem; padding:.38rem .62rem;
+          background:var(--surface); border:1px solid var(--rule-2); border-radius:2px;
+          color:var(--ink-2); cursor:pointer; }
+  .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent);
+          color:#fff; font-weight:600; }
+  .chip.clear { border-style:dashed; color:var(--t4); border-color:var(--t4); }
+  .chip.clear:hover { background:var(--t4); color:var(--ground); border-style:solid; }
+  :root[data-theme="dark"] .chip[aria-pressed="true"],
+  :root:not([data-theme="light"]) .chip[aria-pressed="true"] { color:var(--ground); }
+  .resultline { font-family:var(--sans); font-size:.8rem; color:var(--ink-3);
+                padding:.8rem 0; display:flex; gap:1rem; flex-wrap:wrap; }
+
+  /* ---- register table --------------------------------------------------- */
+  .tablewrap { overflow-x:auto; border:1px solid var(--rule); background:var(--surface); }
+  table { border-collapse:collapse; width:100%; min-width:720px; }
+  thead th { font-family:var(--sans); font-size:.68rem; font-weight:600;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3);
+    text-align:left; padding:.6rem .8rem; border-bottom:1px solid var(--rule-2);
+    background:var(--surface); position:sticky; top:0; z-index:2; }
+  tbody td { padding:.6rem .8rem; border-bottom:1px solid var(--rule);
+             vertical-align:top; font-size:.9rem; }
+  tbody tr.sp { cursor:pointer; }
+  tbody tr.sp:hover td { background:var(--accent-soft); }
+  .sev { width:4px; padding:0 !important; }
+  .sev.t5{background:var(--t5)} .sev.t4{background:var(--t4)}
+  .sev.t3{background:var(--t3)} .sev.t2{background:var(--t2)} .sev.t1{background:var(--t1)}
+  .cell-name b { font-weight:600; }
+  .cell-name .sci { display:block; font-size:.82rem; color:var(--ink-2); margin-top:.1rem; }
+  /* Severity as a filled chip rather than a bare digit, so the ramp is legible at
+     a glance down the column. The number stays inside it — the ramp's lighter
+     steps fall under 3:1 against the surface, so colour never carries the value
+     on its own. */
+  .tierchip { display:inline-flex; align-items:center; justify-content:center;
+              width:26px; height:22px; border-radius:3px; font-family:var(--mono);
+              font-size:.8rem; font-weight:700; font-variant-numeric:tabular-nums; }
+  .tierchip.t5{background:var(--t5);color:#fff} .tierchip.t4{background:var(--t4);color:#fff}
+  .tierchip.t3{background:var(--t3);color:#fff} .tierchip.t2{background:var(--t2);color:#1a1206}
+  .tierchip.t1{background:var(--t1);color:#1a1206}
+  :root[data-theme="dark"] .tierchip.t5, :root[data-theme="dark"] .tierchip.t4 { color:#fff; }
+  :root[data-theme="dark"] .tierchip.t3, :root[data-theme="dark"] .tierchip.t2,
+  :root[data-theme="dark"] .tierchip.t1 { color:#14100a; }
+  .tag { font-family:var(--sans); font-size:.68rem; padding:.15rem .42rem;
+         border:1px solid var(--rule-2); border-radius:2px; color:var(--ink-2);
+         white-space:nowrap; }
+  .tag.pri { border-color:var(--t4); color:var(--t4); font-weight:600; }
+  #tbl thead th[data-sort] { cursor:pointer; user-select:none; position:relative;
+    padding-right:1.15rem; }
+  #tbl thead th[data-sort]:hover, #tbl thead th[data-sort]:focus-visible {
+    color:var(--accent); }
+  #tbl thead th[data-sort]::after { content:"\2195"; position:absolute; right:.35rem;
+    opacity:.28; font-size:.8em; }
+  #tbl thead th[data-sort].sorted { color:var(--accent); }
+  #tbl thead th[data-sort][data-dir="up"]::after { content:"\2191"; opacity:1; }
+  #tbl thead th[data-sort][data-dir="down"]::after { content:"\2193"; opacity:1; }
+  .tag.ne  { border-color:var(--accent); color:var(--accent); font-weight:600; }
+
+  /* ---- detail row ------------------------------------------------------- */
+  tr.detail td { background:var(--surface-2); padding:1.1rem 1.2rem; }
+  .quote { font-size:1rem; line-height:1.55; border-left:3px solid var(--t4);
+           padding-left:.9rem; margin:0 0 1rem; max-width:70ch; }
+  .kv { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+        gap:.8rem 1.6rem; font-family:var(--sans); font-size:.82rem; }
+  .kv div span { display:block; color:var(--ink-3); font-size:.68rem;
+                 text-transform:uppercase; letter-spacing:.07em; }
+  .desc-note { font-family:var(--sans); font-size:.76rem; color:var(--ink-3);
+               margin-top:.9rem; padding-top:.7rem; border-top:1px solid var(--rule-2);
+               max-width:70ch; }
+  .more { font-family:var(--sans); font-size:.83rem; margin:1.2rem auto 0; display:block;
+          padding:.6rem 1.4rem; background:var(--surface); border:1px solid var(--rule-2);
+          border-radius:2px; color:var(--ink); cursor:pointer; }
+  .more:hover { border-color:var(--accent); color:var(--accent); }
+
+  /* ---- provenance callout ---------------------------------------------- */
+  .warn { border:1px solid var(--t4); border-left-width:4px; background:var(--surface);
+          padding:1.1rem 1.3rem; margin:1.6rem 0; }
+  .warn h3 { font-size:.95rem; color:var(--t4); margin-bottom:.35rem; }
+  .warn p { font-family:var(--sans); font-size:.85rem; margin:.4rem 0 0; color:var(--ink-2); }
+
+  /* Methods body runs the full column instead of a 66ch measure. The tables in
+     here are the substance and were being crushed at 66ch; a wide prose measure
+     is the accepted trade. */
+  .mbody { max-width:none; }
+
+  .methods h2 { font-size:var(--fs-h2); margin:2.4rem 0 .6rem; }
+  .methods h3 { font-size:1rem; margin:1.6rem 0 .3rem; }
+  .methods p, .methods li { color:var(--ink-2); }
+  .methods p { margin:.7rem 0; }
+  .methods ul { margin:.7rem 0; padding-left:1.3rem; }
+  .methods li { margin:.35rem 0; }
+  .methods strong { color:var(--ink); }
+  .ftable { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.86rem;
+            min-width:0; }
+  .ftable th, .ftable td { text-align:left; padding:.45rem .7rem;
+            border-bottom:1px solid var(--rule); }
+  .ftable th { font-family:var(--sans); font-size:.68rem; text-transform:uppercase;
+            letter-spacing:.07em; color:var(--ink-3); }
+  .ftable td:first-child { font-family:var(--mono); font-size:.82rem; }
+
+  /* ---- described but never assessed ---- */
+  /* The page leads with the finding and defers the method. An earlier version put five
+     caveat boxes above the table, which is honest but unreadable: the reader met the
+     limitations before they met the thing being limited. */
+  /* The lead block above the figures is centred. A max-width column needs margin:auto
+     or it hugs the left edge and only the text inside it moves. */
+  .ntlead { max-width:46rem; margin:0 auto 1.4rem; text-align:center; }
+  .ntkicker { font-family:var(--sans); font-size:.72rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--ink-3); margin:0 0 .5rem; }
+  .nthead { font-size:2rem; line-height:1.18; margin:0 0 .9rem; letter-spacing:-.015em; }
+  .nthero { color:var(--accent); font-variant-numeric:tabular-nums; }
+  /* narrower than the block so centred prose keeps a comfortable measure */
+  .ntsummary { color:var(--ink-2); margin:0 auto .7rem; font-size:1.02rem;
+    max-width:40rem; }
+  .ntmore { font-family:var(--sans); font-size:.88rem; margin:.2rem 0 1.8rem; }
+  .ntmore a { text-decoration:none; border-bottom:1px solid var(--rule-2);
+    padding-bottom:1px; }
+  .ntmore a:hover { border-bottom-color:var(--accent); }
+  .counts .count .csub { display:block; font-style:normal; font-size:.72rem;
+    color:var(--ink-3); margin-top:.15rem; }
+  .ntabout { margin-top:3rem; padding-top:1.4rem; border-top:1px solid var(--rule); }
+  .ntdisc { border:1px solid var(--border, var(--rule)); border-radius:8px;
+    padding:.2rem .9rem; margin:.5rem 0; background:var(--surface); }
+  .ntdisc > summary { cursor:pointer; font-family:var(--sans); font-size:.9rem;
+    font-weight:600; padding:.6rem 0; list-style:none; }
+  .ntdisc > summary::-webkit-details-marker { display:none; }
+  .ntdisc > summary::before { content:"+ "; color:var(--accent); font-weight:700; }
+  .ntdisc[open] > summary::before { content:"– "; }
+  .ntdisc p { font-size:.9rem; color:var(--ink-2); margin:.5rem 0 .9rem; }
+  .ntfoot { font-size:.82rem !important; color:var(--ink-3) !important; }
+  .ntlegend { margin:.6rem 0 0; }
+  .ntlegend p { font-family:var(--sans); font-size:.82rem; color:var(--ink-2);
+    margin:.3rem 0; line-height:1.5; }
+  .ntlegend b { color:var(--ink); }
+  /* the base table rule sets min-width:720px, so it must scroll inside its own box
+     rather than pushing the page sideways */
+  #ntTable { overflow-x:auto; margin-top:.5rem; }
+  .nttable td i { font-style:italic; }
+  .ntdist { color:var(--ink-2); font-size:.84rem; max-width:24rem; }
+  .ntfine { color:var(--ink-2); font-size:.82rem; white-space:nowrap; }
+  .ntev, .ntrc { font-family:var(--sans); font-size:.7rem; font-weight:600;
+    letter-spacing:.03em; padding:.15rem .45rem; border-radius:3px;
+    border:1px solid var(--rule-2); color:var(--ink-2); white-space:nowrap;
+    cursor:help; }
+  .ntev-airtight { background:var(--accent-soft); color:var(--accent);
+    border-color:var(--accent); }
+  .ntrc-A, .ntrc-B { background:var(--accent-soft); color:var(--accent);
+    border-color:var(--accent); }
+  .ntrc-F { font-style:italic; }
+
+  /* ---- rediscovery cards -------------------------------------------------
+     auto-fill rather than auto-fit: with a handful of results left after a
+     filter, auto-fit would stretch three cards across the full width and the
+     images with them. Cards keep their size and the row simply ends. */
+  .rdgrid { display:grid; gap:1px; background:var(--rule);
+    /* min(290px,100%) rather than a bare 290px: a fixed track cannot shrink, so on
+       a 320px phone the grid is wider than the padded column and the whole PAGE
+       scrolls sideways. The min() lets the single column collapse to what is left. */
+    grid-template-columns:repeat(auto-fill,minmax(min(290px,100%),1fr));
+    border:1px solid var(--rule); margin:.5rem 0 0; }
+  .rdcard { background:var(--surface); display:flex; flex-direction:column;
+    min-width:0; }
+  .rdcard a.rdlink { text-decoration:none; color:inherit; display:flex;
+    flex-direction:column; height:100%; }
+  .rdcard a.rdlink:hover .rdtitle { color:var(--accent); }
+  /* fixed aspect box: publisher images arrive at every ratio, and letting them
+     size themselves makes the grid rows ragged */
+  .rdthumb { aspect-ratio:16/9; overflow:hidden; background:var(--surface-2);
+    border-bottom:1px solid var(--rule); }
+  .rdthumb img { width:100%; height:100%; object-fit:cover; display:block; }
+  .rdbody { padding:.9rem 1rem 1rem; display:flex; flex-direction:column;
+    flex:1 1 auto; gap:.4rem; }
+  .rdsp { font-family:var(--serif); font-style:italic; font-size:.92rem;
+    color:var(--accent); margin:0; line-height:1.4; }
+  .rdspmore { font-family:var(--sans); font-style:normal; font-size:.7rem;
+    color:var(--ink-3); }
+  /* softer, because it is a weaker claim -- read from one article's text rather than
+     from its headline or corroborated by a second outlet */
+  .rdspsoft { color:var(--ink-3); font-size:.84rem; cursor:help; }
+  .rdpres { margin:.6rem 0 .9rem; padding-left:1.1rem; }
+  .rdpres li { font-size:.9rem; color:var(--ink-2); margin:.35rem 0; line-height:1.55; }
+  .rdpres strong { color:var(--ink); }
+  .rdtitle { font-family:var(--serif); font-size:1rem; line-height:1.35;
+    margin:0; color:var(--ink); transition:color .15s; }
+  .rddesc { font-family:var(--sans); font-size:.78rem; line-height:1.5;
+    color:var(--ink-2); margin:0; }
+  .rdmeta { font-family:var(--sans); font-size:.7rem; color:var(--ink-3);
+    margin:auto 0 0; padding-top:.5rem; display:flex; gap:.5rem;
+    flex-wrap:wrap; align-items:center; }
+  .rdpub { font-weight:600; color:var(--ink-2); }
+  .rdtag { font-family:var(--sans); font-size:.66rem; font-weight:600;
+    letter-spacing:.03em; padding:.1rem .4rem; border-radius:3px;
+    border:1px solid var(--rule-2); color:var(--ink-2); }
+  .rdtag-list { background:var(--accent-soft); color:var(--accent);
+    border-color:var(--accent); }
+  /* a card with no image must look chosen, not broken: the kicker rule stands
+     in for the missing thumbnail so the grid keeps a consistent top edge */
+  .rdcard.noimg .rdbody { border-top:3px solid var(--rule-2); }
+  .rdorder { font-family:var(--sans); font-size:.82rem; color:var(--ink-3);
+    margin:.2rem 0 .8rem; }
+  /* Outside the card's main <a>: a link inside a link is invalid HTML and the browser
+     un-nests it, which silently breaks the card's own click target. */
+  .rdarchive { font-family:var(--sans); font-size:.68rem; margin:0;
+    padding:0 1rem .8rem; }
+  .rdarchive a { color:var(--ink-3); text-decoration:none;
+    border-bottom:1px dotted var(--rule-2); }
+  .rdarchive a:hover { color:var(--accent); border-bottom-color:var(--accent); }
+  .rdsearch { display:flex; align-items:stretch; flex:1 1 16rem; min-width:0;
+    border:1px solid var(--rule-2); background:var(--surface); }
+  .rdsearch:focus-within { border-color:var(--accent); }
+  .rdsearchlab { font-family:var(--sans); font-size:.74rem; font-weight:600;
+    letter-spacing:.04em; text-transform:uppercase; color:var(--ink-3);
+    background:var(--surface-2); border-right:1px solid var(--rule-2);
+    padding:0 .7rem; display:flex; align-items:center; white-space:nowrap; }
+  /* the input already carries the shared .filters styling; strip only the border it
+     would otherwise draw inside this one */
+  .rdsearch input { border:0; flex:1 1 auto; min-width:0; background:transparent; }
+
+  footer { border-top:1px solid var(--rule); background:var(--surface);
+           padding:1.6rem 0 2.4rem; font-family:var(--sans); font-size:.78rem;
+           color:var(--ink-3); }
+  footer p { margin:.35rem 0; }
+
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap utility">
+    <a class="brand" href="https://biodiversitygroup.org">
+      <img src="/tbg-frog.png" alt="" width="34" height="32">
+      <span>The Biodiversity Group</span>
+    </a>
+    <div class="mast-right">
+      <button class="ghost" id="theme">Theme</button>
+      <a class="ghost" href="/data.json" download style="text-decoration:none">Download data</a>
+    </div>
+  </div>
+  <div class="wrap mast-title">
+    <div class="lockup">
+      <!-- Inline rather than <img> so the mark can use currentColor and the theme
+           variables directly: one copy of the geometry, correct in both themes,
+           no JS. The blank fourth entry is the whole idea of the register. -->
+      <svg class="logomark" viewBox="0 0 32 32" aria-hidden="true">
+        <g fill="currentColor">
+          <rect x="3" y="4"  width="26" height="4" rx="1.2"/>
+          <rect x="3" y="11" width="20" height="4" rx="1.2"/>
+          <rect x="3" y="18" width="23" height="4" rx="1.2"/>
+        </g>
+        <rect x="3.85" y="25.85" width="15.3" height="4.3" rx="1.4"
+              fill="none" stroke="var(--t3)" stroke-width="1.7"/>
+      </svg>
+      <h1>The Species Black List</h1>
+    </div>
+    <p class="sub">Vertebrates the Red List cannot yet speak for &middot;
+      IUCN v2026&#8209;1</p>
+  </div>
+</header>
+
+<nav><div class="wrap navbar" role="tablist">
+  <a role="tab" href="/" aria-selected="true" data-v="overview">Overview</a>
+  <a role="tab" href="/register/" aria-selected="false" data-v="register">The Register</a>
+  <a role="tab" href="/map/" aria-selected="false" data-v="map">Map</a>
+  <a role="tab" href="/sites/" aria-selected="false" data-v="sites">Sites</a>
+  <a role="tab" href="/methods/" aria-selected="false" data-v="methods">Methods &amp; Limits</a>
+  <a role="tab" href="/new-species/" aria-selected="false" data-v="newtaxa">New Species</a>
+  <a role="tab" href="/rediscoveries/" aria-selected="false" data-v="redisc">Rediscoveries</a>
+</div></nav>
+
+<!-- ============================== OVERVIEW ============================== -->
+<section class="view" id="v-overview">
+ <div class="hero">
+  <div class="wrap">
+    <div class="intro">
+      <p class="eyebrow">What this is</p>
+      <h2>A species can be lost without ever having been counted as at risk.</h2>
+      <p class="lede">The IUCN Red List is the world's authority on extinction risk, and
+        it has two blind spots. Some species are assessed and come back
+        <strong>Data Deficient</strong> — IUCN looked, and there was not enough
+        information to say. Others are <strong>Not Evaluated</strong> — nobody has
+        looked at all. In practice both are treated as though the species were safe.</p>
+    </div>
+
+    <figure class="feature" id="feature">
+      <p class="eyebrow">What the record actually says</p>
+      <blockquote id="fqQuote"></blockquote>
+      <figcaption id="fqCap"></figcaption>
+    </figure>
+
+    <div class="stakes">
+      <h3>Why it matters that these species have no category</h3>
+      <p>Neither category is covered by the commitment that counts. <strong>Target 4 of
+        the Kunming-Montreal Global Biodiversity Framework</strong> binds governments to
+        halting the extinction of <em>known threatened species</em> — wording that
+        excludes both of these groups by definition. The money follows the same line:
+        under <strong>3.5%</strong> of Mohamed bin Zayed Species Conservation Fund
+        awards have gone to Data Deficient taxa, and under <strong>1%</strong> at the
+        People's Trust for Endangered Species.</p>
+      <p>IUCN's own guidance says Data Deficient species should receive the same
+        attention as threatened ones. It is not followed. So the gap is not only a
+        gap in knowledge — it is an exclusion written into policy and funding, and it
+        is the reason for compiling this register at all.</p>
+    </div>
+
+    <div class="field-wrap">
+      <div class="field-head">
+        <p class="eyebrow">Every species in the register, one mark each</p>
+      </div>
+      <canvas id="field" role="img"
+              aria-label="A dense field of marks, one for each of the 2,407 species in
+              the register, shaded by how narrowly restricted its published record is.
+              The same data is listed in full under The register tab."></canvas>
+      <p class="field-note">Hover a mark to name the species; select one to open its
+        record.</p>
+
+      <div class="tierkey" id="tierkey">
+        <p class="eyebrow">What the tiers mean</p>
+        <p class="tierkey-intro">Every species is placed in one of five
+          <strong>restriction tiers</strong> according to how narrow its published
+          record is. That is the only thing the tier measures, and it is the axis the
+          whole register is ranked on — a smaller known range is what would make a
+          species qualify as threatened under IUCN <strong>Criterion B</strong>.
+          <strong>Tiers 3, 4 and 5 are the priority stratum</strong>, the group whose
+          ranking has been tested against IUCN's own reassessments. The tested
+          break in risk falls between tier 2 and tier 3, not higher up.</p>
+        <ul id="tierlist"></ul>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ <div class="wrap">
+  <div class="counts" id="counts"></div>
+
+  <div class="warn">
+    <h3>Read the ranking before you use it</h3>
+    <p>Data Deficient status on its own predicts very little. Of the species here that
+      IUCN has since reassessed, the group as a whole came out threatened at roughly
+      the ordinary all-species rate. The <strong>narrowly restricted subset is
+      different</strong>, and that distinction — not the Data Deficient label — is
+      what this register is for.</p>
+    <p><strong>This is a ranked subset, not a census.</strong> IUCN v2026&#8209;1 holds
+      <span class="num">8,659</span> Data Deficient species in vertebrate classes; this
+      register covers <span class="num">3,031</span> of them —
+      <span class="num">35%</span>. The method needs a published sentence describing each
+      species' range, and the corpus behind it is one reference work. Of the
+      <span class="num">2,964</span> Data Deficient vertebrates that corpus names,
+      <strong>every one is in the register</strong>; the other
+      <span class="num">5,628</span> are never named in it at all. So the right reading is
+      "of the Data Deficient vertebrates with a usable published range statement, these are
+      the most narrowly restricted" — not "these are the ones that matter most".</p>
+    <p><strong>How long is a blank allowed to stand?</strong> The Red List export says
+      only that a species is Data Deficient now. Its assessment history, pulled from IUCN's
+      API, says since when — and the answer reframes the register. The median species here
+      has been Data Deficient for <span class="num">16</span> years;
+      <span class="num">475</span> have held the label for twenty years or more. And
+      <span class="num">1,210</span> of them — 40% — have been assessed more
+      than once, meaning IUCN returned, looked again, and wrote Data Deficient a second or
+      third time. Those are not species awaiting a first look. For scale, the median time
+      IUCN has actually taken to resolve a Data Deficient listing is
+      <span class="num">16</span> years, so
+      <span class="num">1,011</span> species in this register are already past it.</p>
+    <p><strong>The species outside were screened out, not overlooked.</strong> Richardson
+      takes an explicit position on the Data Deficient category: most of it, in his
+      judgement, is junior synonyms or valid species not in immediate danger, while
+      genuinely threatened species get lost there for want of follow-up research. He admits
+      a Data Deficient species when its record is narrow enough to imply risk — and that
+      screen is measurable, since he kept <span class="num">28%</span> of IUCN's Data
+      Deficient ray-finned fishes against <span class="num">72%</span> of the birds,
+      dropping the deep-sea groups almost entirely because naturally rare is not the same
+      as threatened. So the omitted species are neither unexamined nor shown to be safe:
+      one author's judgement, made without the research he says the category lacks, is not
+      an assessment. It also means this corpus is pre-selected for the trait the register
+      ranks on, which is why <span class="num">92%</span> of records state some
+      restriction — the register tests an expert's screen against IUCN's later verdicts
+      rather than discovering the pattern from scratch.</p>
+  </div>
+
+  <div class="panel">
+    <p class="eyebrow">Held-out test</p>
+    <h3>Does the ranking agree with IUCN's own verdict?</h3>
+    <p style="font-family:var(--sans);font-size:.87rem;color:var(--ink-2);margin:.5rem 0 0;
+       ">Between the previous data and v2026&#8209;1, IUCN independently
+      reassessed <span class="num">108</span> of these species and gave each a real
+      category. The ranking rules never saw those outcomes, so they work as an answer
+      key. Two caveats belong with the result: it rests on
+      <span class="num">28</span> species in the priority stratum, so the interval
+      matters more than the point estimate; and both the ranking and the assessment
+      draw on the same primary literature, so this is agreement between two readings
+      of one evidence base rather than a blind prediction.
+      Share reassessed as threatened or extinct:</p>
+    <div class="plot" id="plot"></div>
+    <p class="stat" id="pstat"></p>
+    <p style="font-family:var(--sans);font-size:.87rem;color:var(--ink-2);
+       margin:1.1rem 0 0"><strong>Does that depend on trusting IUCN's
+      &ldquo;not threatened&rdquo; calls?</strong> It is a fair worry: the Red List
+      Authorities have been working the Data Deficient backlog down through
+      specialist-group consensus rather than new fieldwork, so a species can be moved to
+      Least Concern because nobody reported a threat. Tested by discarding the
+      thinnest-evidenced calls, the result gets <em>stronger</em>, not weaker.
+      Two measures agree. By specimen record, 53.6% becomes 62.5% when calls resting on
+      five or fewer records worldwide are set aside. By citation — pulling every
+      assessment's own reference list from IUCN's API — not one of the
+      <span class="num">140</span> reassessments cites nothing newer than the Data
+      Deficient listing it replaced; and restricting the test to the ones citing new
+      research about that particular species gives 83.3%. What the citation check also
+      shows, and this is the real concession: most of these reassessments cite no new
+      species-specific research at all — 74 of 101 non-threatened outcomes. That is how
+      sparse-data assessment works, and it applies about equally to the threatened
+      outcomes (26 of 39), so it does not tilt the comparison.
+      Methods §4a has both tables and the limit of the argument.</p>
+  </div>
+
+  <div class="panel">
+    <p class="eyebrow">Composition</p>
+    <h3>Where the gap falls</h3>
+    <div style="display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+         margin-top:1.1rem">
+      <div>
+        <p class="eyebrow" style="font-size:.64rem">By class</p>
+        <div class="bars" id="barsClass"></div>
+      </div>
+      <div>
+        <p class="eyebrow" style="font-size:.64rem">By restriction tier</p>
+        <div class="bars" id="barsTier"></div>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+<div id="fieldTip" aria-hidden="true"></div>
+
+<!-- ============================== REGISTER ============================== -->
+<section class="view wrap" id="v-register" hidden>
+  <div class="prose" style="margin-bottom:.5rem">
+    <h2 style="font-size:var(--fs-h2)">The register</h2>
+    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0">
+      Every row carries the sentence it was judged on. Select a species to read it.</p>
+  </div>
+  <details class="tierhelp">
+    <summary>Tier <span class="tierchip t5">5</span> to <span class="tierchip t1">1</span>
+      — how narrow the published record is. Open for definitions.</summary>
+    <div id="tierhelpBody"></div>
+  </details>
+
+  <div class="filters">
+    <input type="search" id="q" placeholder="Search name, species, or locality&hellip;"
+           aria-label="Search the register">
+    <select id="fClass" aria-label="Filter by class"><option value="">All classes</option></select>
+    <select id="fList" aria-label="Filter by list">
+      <option value="">Both lists</option>
+      <option value="dd">Data Deficient</option>
+      <option value="ne">Never assessed</option>
+    </select>
+    <select id="fRealm" aria-label="Filter by biogeographic realm">
+      <option value="">All realms</option>
+    </select>
+    <select id="fDur" aria-label="Filter by how long the species has been Data Deficient">
+      <option value="">Any duration</option>
+      <option value="10">Data Deficient 10+ years</option>
+      <option value="15">Data Deficient 15+ years</option>
+      <option value="20">Data Deficient 20+ years</option>
+      <option value="re">Re-affirmed Data Deficient at least once</option>
+    </select>
+    <select id="fTier" aria-label="Filter by restriction tier">
+      <option value="">All tiers</option>
+    </select>
+    <div class="chipset">
+      <button class="chip" id="cPri" aria-pressed="false">Priority only</button>
+      <button class="chip" id="cSil" aria-pressed="false">No recent record</button>
+      <button class="sitechip" id="siteChip" hidden></button>
+      <button class="sitechip" id="cellChip" hidden></button>
+      <button class="chip clear" id="cClear" hidden>Clear filters</button>
+    </div>
+  </div>
+
+  <p class="resultline" id="resultline"></p>
+  <div class="tablewrap">
+    <table id="tbl">
+      <thead><tr>
+        <th class="sev" aria-hidden="true"></th>
+        <th data-sort="name">Species</th><th data-sort="c">Class</th>
+        <th data-sort="t">Tier</th><th data-sort="b">Basis</th>
+        <th data-sort="s">Locality</th>
+        <th data-sort="r" title="Biogeographic realm, from the corpus's own structure">Realm</th>
+        <th data-sort="ddy" title="Years listed Data Deficient, and how many times IUCN has assessed it and written Data Deficient again">DD&nbsp;since</th><th></th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+  </div>
+  <button class="more" id="more" hidden>Show more</button>
+</section>
+
+<!-- ================================= MAP ================================ -->
+<section class="view wrap" id="v-map" hidden>
+  <div class="prose">
+    <h2 style="font-size:var(--fs-h2)">Where the record actually is</h2>
+    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0">
+      Density of georeferenced specimen and observation records for the species in
+      this register, drawn from GBIF. Switch layers to isolate a single restriction
+      tier or view them together. <strong>Select any shaded cell or locality ring to
+      open its species in the register.</strong> Scroll or pinch to zoom, drag to
+      pan; cells subdivide as you zoom in, so finer clusters resolve rather than
+      the same blocks getting bigger.</p>
+  </div>
+
+  <div class="warn" style="margin-top:var(--s3)">
+    <h3>This maps collecting effort as much as biology</h3>
+    <p>A dense patch means <strong>records exist there</strong>, which is not the same
+      as species being concentrated there. Georeferenced records cluster around
+      institutions, expeditions and coastlines that somebody surveyed. Read the map as
+      a picture of where the evidence sits, not of where the risk is.</p>
+    <p>These are point records, <strong>not range maps</strong>, and they come from a
+      different source than the localities on the Sites page — so the two will not
+      correspond exactly. Individual records can also be plain wrong; GBIF's own
+      flagged coordinate errors are excluded, but some survive. That is why this shows
+      density rather than authoritative dots.</p>
+  </div>
+
+  <div class="mapsource">
+    <span class="eyebrow">Show</span>
+    <button id="srcGbif"  aria-pressed="true">Specimen records</button>
+    <button id="srcLoc"   aria-pressed="true">Localities (cross-checked)</button>
+    <button id="srcLocU"  aria-pressed="false">+ unverified localities</button>
+  </div>
+  <p class="mapcaveat" id="mapCaveat"></p>
+  <div class="maplayers" id="mapLayers"></div>
+
+  <div class="mapwrap">
+    <div class="mapzoom">
+      <button id="zIn"    aria-label="Zoom in">+</button>
+      <button id="zOut"   aria-label="Zoom out">&minus;</button>
+      <button id="zReset" aria-label="Reset zoom" title="Reset">Reset</button>
+    </div>
+    <canvas id="mapCanvas" role="img"
+            aria-label="World density map of georeferenced records for species in the
+            register. The same data is available as a table under The Register."></canvas>
+  </div>
+  <div class="maplegend" id="mapLegend"></div>
+  <p class="mapstats" id="mapStats"></p>
+  <div id="mapTip" aria-hidden="true"></div>
+</section>
+
+<!-- ================================ SITES =============================== -->
+<section class="view wrap" id="v-sites" hidden>
+  <div class="prose">
+    <h2 style="font-size:1.4rem">Localities holding several gap species</h2>
+    <p style="margin:.6rem 0 0;color:var(--ink-2)">The source is organised
+      geographically, so species cluster by place. Where a single locality carries
+      many of them, one protected area could cover the lot — the cheapest form of
+      conservation available.</p>
+    <p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-3);margin:.9rem 0 0">
+      Caveat: these localities are extracted at inconsistent grain. Some are a single
+      named river, some an entire ocean basin. Treat the small, specific ones as
+      actionable and the broad ones as an artefact of the source.</p>
+    <p id="sitesCoverage" style="font-family:var(--sans);font-size:.82rem;
+       color:var(--ink-3);margin:.6rem 0 0"></p>
+  </div>
+
+  <h3 class="siteshead">Localities</h3>
+  <p class="siteslede">Where a locality has an account of its own in the book, that
+    account's opening sentence is shown — which is what disambiguates a name like
+    <em>Espiritu Santo</em> or <em>Cordillera Central</em>, both of which occur more
+    than once in the world and one of which occurs twice in this book. The rest were
+    recovered from the species' own records, where the place is named in the entry
+    itself; those lines say so. Nothing here is geocoded or inferred. Select a locality
+    to open its species in the register.</p>
+  <div id="siteList"></div>
+
+  <h3 class="siteshead">Habitat types</h3>
+  <p class="siteslede">These are not places. They are habitat categories the source
+    defines and then groups species under — <em>terra firma</em> forest, <em>cerrado</em>,
+    <em>miombo</em> woodland. They are kept because the groupings are real, but no
+    protected area can be drawn around them.</p>
+  <div id="habList"></div>
+</section>
+
+<!-- ===================== DESCRIBED BUT NEVER ASSESSED ==================== -->
+<section class="view wrap" id="v-newtaxa" hidden>
+
+  <!-- ===================== EXECUTIVE SUMMARY ===================== -->
+  <div class="ntlead">
+    <p class="ntkicker">Reptiles described since 2015</p>
+    <!-- filled from reptiles.json at runtime; a hard-coded figure here is exactly what
+         15_check_figures.py exists to catch -->
+    <h2 class="nthead">The Red List has never assessed <span class="nthero"
+      id="ntHero">&mdash;</span> of them.</h2>
+    <p class="ntsummary">Taxonomists have named more than two thousand new reptile
+      species in the past decade. Most have never been evaluated for extinction risk, so
+      no listing protects them and no conservation plan counts them. Nine in ten are
+      endemic to a single country &mdash; the pattern that best predicts a species turns
+      out to be threatened when someone finally looks.</p>
+    <p class="ntsummary">Every species below was checked one at a time against the IUCN
+      Red List's own database, not inferred from a missing name.</p>
+  </div>
+
+  <div id="ntCounts" class="counts"></div>
+
+  <p class="ntmore">
+    <a href="#nt-about" id="ntAboutLink">How this list was built, and what it cannot
+      tell you &darr;</a>
+  </p>
+
+  <!-- ===================== THE LIST ===================== -->
+  <h3 class="siteshead">The list</h3>
+  <div class="filters">
+    <input id="ntQ" type="search" placeholder="Search species, family, country&hellip;"
+           aria-label="Search the list">
+    <select id="ntEv" aria-label="Filter by evidence of the gap"></select>
+    <select id="ntRc" aria-label="Filter by geographic extent"></select>
+    <select id="ntFam" aria-label="Filter by family"></select>
+  </div>
+  <p id="ntShowing" style="font-family:var(--sans);font-size:.82rem;
+     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
+  <div id="ntTable"></div>
+
+  <!-- ===================== METHOD AND LIMITS, BELOW THE LIST ===================== -->
+  <div id="nt-about" class="ntabout">
+    <h3 class="siteshead">How this list was built, and what it cannot tell you</h3>
+
+    <details class="ntdisc" open>
+      <summary>Where the species come from</summary>
+      <p>The <a href="https://reptile-database.org" target="_blank" rel="noopener">Reptile
+        Database</a> checklist of June 2026 lists 12,650 accepted species. Comparing it
+        with IUCN v2026-1, which holds 10,305 assessed reptiles, leaves the species the
+        Red List has no record of.</p>
+      <p>Matching on names alone would be unreliable, because the two bodies often place
+        a species in different genera. Species are therefore matched on the binomial
+        <em>or</em> on the taxonomic authority &mdash; the describing author and year,
+        which travel with a species through every change of genus. That caught 169
+        species a name-only comparison would have wrongly called missing.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>Why you can trust the &ldquo;never assessed&rdquo; claim</summary>
+      <p>A failed name search cannot prove something was never assessed. So every species
+        here was queried individually against the Red List API, and every name IUCN did
+        not return was then re-checked against GBIF's synonyms. That removed 51 species
+        which had been assessed after all &mdash; a false-positive rate of 2.9%.</p>
+      <p>The evidence is graded, because it is not equally strong for every species:</p>
+      <div class="ntlegend" id="ntLegendEv"></div>
+    </details>
+
+    <details class="ntdisc">
+      <summary>What &ldquo;extent&rdquo; means, and the ranking that failed</summary>
+      <p>Extent is taken from each species' own published distribution: the country,
+        state or landform it is recorded from. That is the measure the evidence supports
+        &mdash; species endemic to a single country turn out to be threatened roughly
+        twice as often as those crossing borders (27.2% against 13.2%, p&nbsp;=&nbsp;0.00005,
+        tested on 600 reptiles the Red List <em>has</em> assessed).</p>
+      <p>A finer, coordinate-based scale was tried first and <strong>abandoned</strong>.
+        Its top class, island endemism, predicted nothing at all (odds ratio 0.92,
+        p&nbsp;=&nbsp;1), because &ldquo;island&rdquo; read from a distribution string
+        covers a one-square-kilometre islet and Hainan's 34,000&nbsp;km&sup2; alike.
+        Geocoding the locality text could not rescue it either: measured against species
+        whose descriptions print coordinates, it was off by a median of 53&nbsp;km and in
+        the worst case 5,469&nbsp;km.</p>
+      <div class="ntlegend" id="ntLegendRc"></div>
+      <p class="ntfoot">The &ldquo;finer detail&rdquo; column counts georeferenced
+        records where GBIF has them. It is descriptive only and has <em>not</em> been
+        validated against Red List outcomes &mdash; for a species described last year,
+        few records may mean a small range, or may only mean nobody has looked twice.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>Why there are no coordinates here</summary>
+      <p>This page gives each species' distribution and no more. <strong>Exact type
+        localities and coordinates are deliberately absent, including from the
+        downloadable data.</strong></p>
+      <p>These are narrowly restricted reptiles the Red List has never listed, so no
+        legal protection follows from a listing, and island endemics among them are
+        exactly what the reptile trade targets. Scattered across separate descriptions
+        their localities are hard to exploit; gathered into one file they become a
+        collecting list. Describers know this &mdash; obscuring a type locality in a new
+        reptile description is common practice for the same reason. Researchers who need
+        locality data should go to the original descriptions, where the authors decided
+        for themselves what to disclose.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>How this differs from the register</summary>
+      <p>The register asks which <em>assessed</em> species IUCN looked at and returned
+        <em>we don't know</em> about, and its ranking is tested against IUCN's own later
+        reassessments. This page asks who is missing from the Red List entirely. It draws
+        on a different source and uses a different instrument, so <strong>the two lists
+        must never be added together.</strong></p>
+    </details>
+  </div>
+</section>
+
+<!-- ============================ REDISCOVERIES =========================== -->
+<section class="view wrap" id="v-redisc" hidden>
+
+  <div class="ntlead">
+    <p class="ntkicker">Found again</p>
+    <!-- The figure counts REPORTS, not species. Only a minority of these headlines
+         name a binomial, so "131 species came back" would overclaim by a factor of six.
+         The sentence is built around the unit the number actually has. -->
+    <h2 class="nthead"><span class="nthero" id="rdHero">&mdash;</span> reports of a
+      species turning up after the searching had stopped.</h2>
+    <p class="ntsummary">A species is called lost when nobody has recorded it for years
+      and searching has stopped. Sometimes one turns up anyway. This page collects the
+      news reports of those returns, one card per story, gathered automatically from
+      conservation and science feeds and checked daily.</p>
+    <p class="ntsummary">It is a record of what was reported, not a verified register.
+      A headline is a lead, not an assessment &mdash; see the note below the list.</p>
+  </div>
+
+  <div id="rdCounts" class="counts"></div>
+
+  <p class="ntmore">
+    <a href="#rd-about">Where these come from, and what they do and don&rsquo;t prove
+      &darr;</a>
+  </p>
+
+  <h3 class="siteshead">The reports</h3>
+  <p class="rdorder">Newest first. Search runs over the species name, the headline, the
+    summary and the outlet &mdash; try a binomial, a country or a publisher.</p>
+  <div class="filters">
+    <!-- A visible label, not just a placeholder: placeholder text vanishes the moment
+         anyone types and reads as decoration until then, which is exactly why a search
+         box that was already here went unnoticed. -->
+    <label class="rdsearch">
+      <span class="rdsearchlab" aria-hidden="true">Search</span>
+      <input id="rdQ" type="search"
+             placeholder="e.g. Chelonoidis, Madagascar, Mongabay&hellip;"
+             aria-label="Search the reports">
+    </label>
+    <select id="rdF" aria-label="Filter the reports">
+      <option value="">All reports</option>
+      <option value="sp">Naming a species</option>
+      <option value="list">On a TBG list</option>
+      <option value="multi">Covered by several outlets</option>
+    </select>
+  </div>
+  <p id="rdShowing" style="font-family:var(--sans);font-size:.82rem;
+     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
+  <div id="rdGrid" class="rdgrid"></div>
+
+  <div id="rd-about" class="ntabout">
+    <h3 class="siteshead">Where these come from, and what they do and don&rsquo;t prove</h3>
+
+    <details class="ntdisc" open>
+      <summary>What is on this page</summary>
+      <p>Journal alerts, conservation outlets and news searches run across
+        <strong>fourteen national editions</strong> are read once a day. Any item whose
+        text describes a species being found again is kept, and matched against the 6,715
+        names this project tracks, so where a report names a species we can say whether
+        it is one we were already following.</p>
+      <p>The national editions matter more than they sound. A news search returns a
+        different set of results in each country, and running only the United States
+        edition missed 60 of 134 stories on a single query &mdash; among them Wallace's
+        giant bee, the golden mole refound in South Africa and Attenborough's echidna.
+        Rediscovery happens mostly outside the United States, so a US-only search is
+        close to the worst way to look for it. The searches are still English-language
+        only, which remains a real gap.</p>
+      <p>Wire stories are syndicated, so the same rediscovery arrives from several
+        outlets under several headlines. Reports are grouped by how much wording they
+        share and shown once, with the number of outlets that carried the story. That
+        count is a measure of attention, not of evidence.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>How far back this goes, and why the recent years look busier</summary>
+      <p>The oldest report here is from August 2020 and the newest from July 2026. The
+        recent years hold far more of them &mdash; roughly three quarters fall in 2025 and
+        2026 &mdash; and <strong>that is a property of the search, not of the world.</strong>
+        A news index surfaces recent material and only a thinning sample of older
+        material, so nothing on this page should be read as rediscoveries becoming more
+        frequent.</p>
+      <p>The rate at which species are actually found again is a different question, and
+        one this page cannot answer. The archive only grows forwards from here, so
+        coverage will be even across future years and permanently sparse before 2025.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>How a report gets a species name &mdash; and the two grades of it</summary>
+      <p>Every name shown has been checked against the GBIF backbone taxonomy; a phrase
+        that merely looks like a Latin binomial is not enough. But one article often
+        reports several rediscoveries at once, and a headline such as &ldquo;Five lost
+        bird species rediscovered&rdquo; names none of them, so the article text is read
+        as well.</p>
+      <p>The two are not equally certain and are not shown the same way. A name in
+        <span class="rdsp" style="font-size:inherit">this colour</span> came from the
+        headline or summary, or was carried by two independent outlets. A name in
+        <span class="rdspsoft">grey, after &ldquo;also names&rdquo;,</span> was read out
+        of a single article's text &mdash; where a species mentioned for comparison can
+        look much like one that was refound. Treat the grey names as leads.</p>
+      <p>Only the names are kept. The article text is read and discarded.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>What happens when these articles disappear</summary>
+      <p>News sites reorganise, paywall and delete, and image paths churn faster than the
+        articles do. Every card here depends on a page nobody at this project controls,
+        so what can be preserved is preserved &mdash; and it is worth being exact about
+        how much that is, because the three parts are not equally safe.</p>
+      <!-- Figures written at runtime from the payload. Stating them in prose would put
+           three numbers on the page that drift every night the feed runs, and this
+           section's whole purpose is to be precise about coverage. -->
+      <ul class="rdpres">
+        <li><strong>The words &mdash; all of them.</strong> Headline, summary, outlet and
+          date are stored here and are what each card is built from. No card needs its
+          article to be alive in order to describe it.</li>
+        <li><strong>The picture &mdash; <span id="rdPresImg">most of them</span>.</strong>
+          Preview images are copied to this site and served from it, so they outlive the
+          publisher's own copy. Where that copy failed the card still loads the original,
+          and those are the ones that will go blank one day.</li>
+        <li><strong>A link that still works &mdash;
+          <span id="rdPresArc">seldom</span>.</strong> Where the Internet Archive already
+          holds a snapshot, the card offers it alongside the original. Most of these
+          articles have never been archived by anyone, and this page does not submit
+          them.</li>
+      </ul>
+      <p>The article text itself <em>is</em> read &mdash; that is how the species in a
+        roundup get identified &mdash; but it is <strong>discarded immediately and never
+        stored</strong>. Keeping a copy would be republishing someone else's work. The
+        job of this page is to send readers to the journalism, not to stand in for it.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>Why some cards are text only</summary>
+      <p>Where a feed gives a publisher&rsquo;s own page, the card shows that
+        page&rsquo;s headline image and summary. Where it gives a news-aggregator link
+        instead, the destination has to be resolved before any preview exists; when that
+        fails the card keeps the headline, outlet and date and drops the image rather
+        than showing an empty frame.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>What a report here does not establish</summary>
+      <p>These are news items. A rediscovery is only settled by a specimen, a photograph
+        or a sequence that specialists accept, published somewhere durable &mdash; and
+        some reports on this page will not survive that test. Others describe a
+        population found by people who never considered it lost in the first place.</p>
+      <p>Nothing here feeds the register or the counts elsewhere on this site. Those
+        figures come from the IUCN Red List and from checked sources, and a press
+        report has never been allowed to change one.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>Corrections</summary>
+      <p>If a species on this page was never lost, if a rediscovery has since been
+        retracted, or if one is missing, please say so:
+        <a href="mailto:business@biodiversitygroup.org?subject=Rediscoveries%20page">business@biodiversitygroup.org</a>.</p>
+    </details>
+  </div>
+</section>
+
+<!-- =============================== METHODS ============================== -->
+<section class="view wrap methods" id="v-methods" hidden>
+  <div class="mbody">
+    <h2 style="margin-top:0">Methods &amp; limits</h2>
+
+    <div class="warn">
+      <h3>Who called these species "priority"</h3>
+      <p>Nobody with a specialist's authority. The ranking is produced by a
+        text-classification rule that reads the source's own range statements and
+        sorts them by severity. <strong>No taxonomist or conservation biologist has
+        reviewed the individual species.</strong> What has been tested is the rule's
+        average behaviour against IUCN's independent reassessments — a statement about
+        the group, not about any one row.</p>
+      <p>These are not Red List assessments and must not be cited as such. They are a
+        prioritised research agenda: an argument about where to look.</p>
+    </div>
+
+    <h2 style="margin-top:var(--s4)">Why the gap matters</h2>
+    <p>Target 4 of the Kunming-Montreal Global Biodiversity Framework commits
+      governments to halting the extinction of <em>known threatened species</em> — a
+      phrase that excludes both categories in this register by definition. Funding
+      follows the same line: under 3.5% of Mohamed bin Zayed Species Conservation Fund
+      awards have gone to Data Deficient taxa, and under 1% at the People's Trust for
+      Endangered Species. IUCN's own guidance says Data Deficient species should get
+      the same attention as threatened ones, and it is not followed.</p>
+    <p>So the consequence of having no category is not merely that a species is
+      poorly known. It is excluded from the target that mobilises national action and
+      from the funds that pay for fieldwork — which is what makes deciding
+      <em>which</em> of these species to look at first worth doing carefully.</p>
+
+    <h3>Sources</h3>
+    <table class="ftable">
+      <tr><th>Evidence of risk</th><td>Matthew Richardson, <em>Threatened and Recently
+        Extinct Vertebrates of the World: A Biogeographic Approach</em>, Cambridge
+        University Press, 2023. Vertebrates only — the scope follows the book's.</td></tr>
+      <tr><th>Extinction risk</th><td>IUCN Red List v2026&#8209;1, 178,011 taxa,
+        via GBIF's Darwin Core mirror (accessed 2026&#8209;07&#8209;28).</td></tr>
+      <tr><th>Taxonomy</th><td>GBIF Backbone, for synonym resolution and for
+        independent verification of assessment status.</td></tr>
+      <tr><th>Map points</th><td>GBIF georeferenced occurrence records, queried by
+        strict taxon key. Basemap is Natural Earth 110m land (public domain).</td></tr>
+    </table>
+
+    <h3>What a restriction tier is</h3>
+    <p>Every species is assigned one of five <strong>restriction tiers</strong>. The
+      tier records one thing only: <strong>how narrow the species' published record
+      is</strong>, read from the range statement in Richardson's own text. Tier 5 means
+      the species is known from a single specimen or nothing beyond its type locality;
+      tier 1 means the source makes no restriction claim at all.</p>
+    <p>What a tier is <em>not</em>: it is not an IUCN category, not a threat level, not
+      a measure of how endangered the species is, and not a count of individuals. Two
+      species in the same tier may face completely different pressures. The tier is a
+      statement about the <em>evidence</em>, not about the animal.</p>
+    <p>Restriction is the axis because IUCN <strong>Criterion B</strong> allows a
+      species to qualify as threatened on a small range plus evidence of decline:
+      area of occupancy under 2,000&nbsp;km² for Vulnerable, 500 for Endangered, 10 for
+      Critically Endangered. A species known only from its type locality sits, on its
+      face, inside the Critically Endangered envelope. That is why a narrow record is
+      worth ranking on. <strong>Tiers 3, 4 and 5 together are the priority stratum</strong>,
+      and they are the only part of the ranking that has been tested. The boundary
+      sits there because that is where the tested risk actually jumps — tier 2 came
+      out threatened at 20%, tier 3 at 67% — and not because the top of the scale
+      is the most severe: it is not, see Methods.</p>
+    <table class="ftable" id="tierTable">
+      <thead><tr><th>Tier</th><th>Basis</th><th>Species</th></tr></thead><tbody></tbody>
+    </table>
+    <p>No area of occupancy has been computed. A priority flag argues that Criterion B
+      <em>should be evaluated</em>; it is not a finding that it is met.</p>
+
+    <h3>What the test showed</h3>
+    <p id="valprose"></p>
+    <p>The priority rate lands close to the 56% that Borgelt et al. (2022,
+      <em>Communications Biology</em>) predicted for Data Deficient species generally —
+      which suggests that figure belongs to the narrowly restricted subset, and that an
+      unranked list dilutes a real signal with vague-range species.</p>
+    <p>Two caveats belong with that number whenever it is quoted. The top stratum
+      rests on <span class="num">19</span> species, which is thin. And IUCN reassesses
+      where data has appeared, which probably favours species that turned out to be
+      more widespread — a bias running against the finding rather than creating it.
+      Separately, the five tiers were defined before any outcome was seen, but the
+      decision to split them at 4 was made after, which inflates the significance
+      somewhat.</p>
+
+    <h3>Where localities come from</h3>
+    <p>A locality is recorded two ways, and the Sites page distinguishes them.</p>
+    <p><strong>From a locality account.</strong> Richardson organises the book
+      geographically, so most species sit inside a paragraph introduced by a place.
+      That place, and its opening sentence, are attached to every species in the
+      paragraph. This is the stronger provenance and it covers
+      <span class="num">519</span> species.</p>
+    <p><strong>From the species entry itself.</strong> Where a species is not inside a
+      locality account, the place is very often named in its own sentence anyway —
+      <em>"collected from the upper Pungwe River"</em>, <em>"collected off
+      Mauritius"</em>. Pattern extraction over those sentences recovers a locality for
+      a further <span class="num">1,213</span> species, taking coverage from
+      <strong>19% to 60%</strong> of the register and the site list from 42 to 102.
+      Clusters that were entirely invisible before appear this way — the Gulf of
+      California holds 19 species, none of which had a locality until now.</p>
+    <p>Named physical features (<em>Salween River</em>, <em>Gulf of Panama</em>,
+      <em>Mount Kinabalu</em>) are preferred over a bare capitalised word after a
+      preposition, and a capture is rejected if it collides with the species' own
+      common name or genus. <strong>The place is only ever taken from the text, never
+      guessed</strong> — if the sentence names no place, the species keeps no locality,
+      which is why <span class="num">1,330</span> still have none.</p>
+    <p>These names are then looked up in a gazetteer to place them on the map, which
+      is a separate step with its own failure modes and its own verification — see
+      <em>Geocoding the locality names</em> below. Nothing in the register or on the
+      Sites page depends on that lookup: those show the name the source gave, and the
+      coordinates exist only for the map.</p>
+
+    <h3>How the map is built, and what it is not</h3>
+    <p>The register stores localities as text taken from Richardson's prose — "The Mano
+      River", "Arrowsmith Bank", "Espiritu Santo". Those were <strong>not</strong> run
+      through a gazetteer to make the map: place-name geocoding is ambiguous exactly
+      where this corpus is ambiguous, and a map that confidently places a species in
+      the wrong ocean is worse than no map. The points are real georeferenced specimen
+      and observation records from <strong>GBIF</strong>, queried per species.</p>
+    <p>One trap governed that query, and it is the same species of error that wrecked
+      the first never-assessed list. GBIF's free-text name search must not be used,
+      because many of these names are synonyms and it silently returns records of the
+      <em>accepted</em> species instead:</p>
+    <table class="ftable">
+      <tr><th><span class="sci">Anampses viridis</span>, free-text search</th>
+          <td class="num">3,071 records</td><td>centroid inland in New South Wales</td></tr>
+      <tr><th><span class="sci">Anampses viridis</span>, strict taxon key</th>
+          <td class="num">3 records</td><td>all at Réunion</td></tr>
+    </table>
+    <p>The book describes that species as known from a single specimen; the 3,071 belong
+      to <span class="sci">Anampses caeruleopunctatus</span>, its widespread senior
+      synonym. Every name is therefore resolved to a GBIF usage key by strict match
+      first, and records are pulled by taxon key. Records GBIF itself flags as having
+      bad coordinates are excluded, and points are capped at 30 per species so
+      well-collected species cannot dominate the surface.</p>
+    <p><strong>What the map is not.</strong> Not range maps — these are point records.
+      Not a picture of where risk is concentrated — it maps collecting effort at least
+      as much as biology, because georeferenced records cluster where institutions and
+      expeditions have worked. And not the same basis as the Sites page, which comes
+      from the book rather than from GBIF, so the two will not correspond exactly.
+      Some bad coordinates survive the filtering, which is why the page shows density
+      rather than authoritative dots.</p>
+    <h4 style="font-size:.95rem;margin:1.4rem 0 .3rem">Geocoding the locality names</h4>
+    <p>The register's place names are also plotted, as rings, because refusing to look
+      up "Salween River" while happily printing it was inconsistent. But a gazetteer
+      answers any string, and two checks are needed, not one.</p>
+    <p><strong>Type agreement</strong> catches the obvious failures: asked for "The
+      Cordillera Central", Nominatim returns a <em>university</em> in Baguio. A name
+      ending "River" must come back as a waterway, "Island" as an island; buildings,
+      roads and campuses are rejected outright. That removed
+      <span class="num" id="geoRejected">—</span> of
+      <span class="num" id="geoCandidates">—</span> candidates.</p>
+    <p><strong>But type agreement cannot see a same-type homonym</strong>, and those are
+      common. "Congo River" resolved to a real river of that name in Sierra Leone,
+      4,000&nbsp;km from the Congo, passing cleanly as river/river. "Dunk Island"
+      resolved near Sydney rather than Queensland. So each geocode is then measured
+      against the GBIF records of the species that sit at that locality — an
+      independent witness already held:</p>
+    <table class="ftable">
+      <tr><th>Agree within 500&nbsp;km — plotted</th>
+          <td class="num" id="geoValidated">—</td></tr>
+      <tr><th>Disagree by more — discarded</th>
+          <td class="num" id="geoContradicted">—</td></tr>
+      <tr><th>No species with records to check against — off by default</th>
+          <td class="num" id="geoUnverified">—</td></tr>
+    </table>
+    <p><strong>Around one in five checkable geocodes was wrong by more than
+      500&nbsp;km</strong>, and none of those errors was detectable from the name or the
+      feature type alone. That rate is the reason the unverified
+      <span class="num" id="geoUnverified2">—</span> are not plotted by
+      default: there is no reason to think they are cleaner, and they cannot be tested.
+      The validated rings add <span class="num" id="geoNewly">—</span> species that have
+      no georeferenced record of their own — modest, but every one is corroborated.</p>
+    <p><strong>A locality naming two places is kept but never plotted.</strong>
+      <span class="num" id="geoCompound">—</span> strings in the register are compounds
+      — "Athi and Tana River", "Caroline and Marshall Islands". There is no single
+      coordinate for them, and every way of reducing one to a single place either drops
+      the noun that identified it ("Caroline") or manufactures somewhere that does not
+      exist ("Oman and Masirah Island" → "Oman Island"). They are left whole, excluded
+      from the gazetteer, and the evidence sentence shows both places.</p>
+
+    <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
+      the <span class="num">3,062</span> species here, <span class="num">805</span>
+      have no georeferenced record anywhere in GBIF, and <span class="num">727</span>
+      cannot be placed even by a cross-checked locality. They are the least visible
+      members of an already invisible group, and they are absent from the map.</p>
+    <p>An earlier version of this page said 943 rather than 629. That figure was wrong:
+      the occurrence fetch had been running eight concurrent requests, GBIF answered
+      <span class="num">399</span> of them with HTTP 429, and the script cached those
+      failures as though they were results — so re-running never retried them and
+      16.6% of the register was silently recorded as having no records. Because the
+      register is sorted by tier, the failures landed disproportionately on tier 1,
+      which appeared to be 3.6% mappable when it is in fact 80%. The fetcher now backs
+      off exponentially, uses four threads, and never caches a failure.</p>
+
+    <h3>What was discarded</h3>
+    <p>An earlier composite score added points for a species not having been recorded
+      recently and for threats named at its locality. Testing destroyed it: the
+      composite was non-monotonic, and naming a site-level threat turned out
+      <em>inversely</em> associated with being threatened. The reason is legible in
+      hindsight — broad, well-documented regions attract threat prose but hold
+      wide-ranging species, while a genuine type-locality endemic gets one terse line.
+      Those fields survive on each record as description, and are not ranked on.</p>
+
+    <h3>Why the never-assessed list is short</h3>
+    <p>Proving that IUCN has <em>never</em> assessed a species is much harder than it
+      looks, because the two sources disagree about naming constantly. Deciding it by
+      failing to find a name produced a false-positive rate near 90%. Four distinct
+      failure modes had to be closed:</p>
+    <table class="ftable">
+      <thead><tr><th>Failure</th><th>Example</th></tr></thead><tbody>
+      <tr><td>Genus reassigned</td><td><span class="sci">Amblyopsis rosae</span> is IUCN's
+        <span class="sci">Troglichthys rosae</span> (Near Threatened)</td></tr>
+      <tr><td>Genus and family reassigned</td><td><span class="sci">Aphanius iberus</span> is
+        IUCN's <span class="sci">Apricaphanius iberus</span></td></tr>
+      <tr><td>Homonym within an order</td><td><span class="sci">Sinosuthora przewalskii</span>,
+        an Asian parrotbill, matching <span class="sci">Grallaria przewalskii</span>, a South
+        American antpitta</td></tr>
+      <tr><td>Rank change</td><td><span class="sci">Cyanoramphus cookii</span>, in fact
+        Least Concern</td></tr>
+      </tbody></table>
+    <p>Species known only from pre-1500 remains were also removed. The Red List covers
+      extinctions from 1500 AD onward, so those fall outside its remit by policy rather
+      than by neglect — counting them as coverage gaps would be a category error.</p>
+
+    <h3>Limits worth stating plainly</h3>
+    <ul>
+      <li><strong>Vertebrates only.</strong> Invertebrates, plants and fungi are where
+        the assessment gap is worst — invertebrates are 97% of animals and about a
+        third of animal assessments — and this register says nothing about them.</li>
+      <li><strong>One source.</strong> Everything rests on a single author's synthesis.
+        No second corpus corroborates the range statements.</li>
+      <li><strong>Restriction is read from prose, not from range data.</strong></li>
+      <li><strong>Localities vary in grain</strong>, from one river to an ocean basin.</li>
+    </ul>
+
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <p><strong>Cite the underlying data as:</strong> IUCN (2026). The IUCN Red List of
+    Threatened Species. Version 2026&#8209;1. iucnredlist.org —
+    doi:10.15468/0qnb58, accessed via GBIF.org. IUCN Red List Terms of Use apply.</p>
+  <p>Species accounts derive from Richardson, M. (2023) <em>Threatened and Recently
+    Extinct Vertebrates of the World</em>, Cambridge University Press.</p>
+  <p><strong>Found an error? Please tell us.</strong> This register makes checkable claims
+    about individual species, and some of them will be wrong — a name IUCN holds under a
+    genus we did not look for, a locality read out of the wrong clause, a taxon that should
+    not be here at all. Corrections are the most useful thing anyone can send:
+    <a href="mailto:business@biodiversitygroup.org?subject=Species%20Black%20List%20correction">business@biodiversitygroup.org</a>,
+    or open an issue at
+    <a href="https://github.com/BiodiversityGroup/speciesblacklist">github.com/BiodiversityGroup/speciesblacklist</a>.
+    Every exclusion this project has already made is published with its reason rather than
+    quietly dropped, and corrections are handled the same way.</p>
+  <p id="builtline"></p>
+</div></footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* theme toggle: cycles auto -> light -> dark.
+   The field is painted into a canvas, so it does not inherit a CSS variable
+   change the way the rest of the page does — it has to be repainted explicitly,
+   both when the toggle is used and when the OS preference flips underneath us. */
+$("#theme").onclick = () => {
+  const r = document.documentElement, cur = r.getAttribute("data-theme");
+  r.setAttribute("data-theme", cur === "light" ? "dark" : "light");
+  if (cur === "dark") r.removeAttribute("data-theme");
+  repaintCanvases();
+};
+matchMedia("(prefers-color-scheme:dark)").addEventListener("change", repaintCanvases);
+
+/* Both the field and the map are painted into canvases, so neither inherits a CSS
+   variable change the way the DOM does — each needs an explicit repaint. */
+function repaintCanvases() {
+  if (typeof DATA !== "undefined" && DATA && typeof drawField === "function") drawField();
+  if (typeof MAP !== "undefined" && MAP && !$("#v-map").hidden) drawMap();
+}
+
+/* ---------- routing --------------------------------------------------------
+   Each view is a real URL backed by its own index.html, so Back moves between
+   views instead of leaving the site, and every view is separately linkable and
+   indexable. The pages are byte-identical apart from their title and canonical
+   tag; this router reads the path and opens the matching view. */
+const ROUTES = {overview:"/", register:"/register/", map:"/map/",
+                sites:"/sites/", methods:"/methods/", newtaxa:"/new-species/",
+                redisc:"/rediscoveries/"};
+const viewForPath = p => {
+  p = p.replace(/\/index\.html$/, "/");
+  if (!p.endsWith("/")) p += "/";
+  return Object.keys(ROUTES).find(k => ROUTES[k] === p) || "overview";
+};
+
+function showView(name, push) {
+  document.querySelectorAll('.navbar [role="tab"]').forEach(x =>
+    x.setAttribute("aria-selected", x.dataset.v === name));
+  document.querySelectorAll("section.view").forEach(s =>
+    s.hidden = s.id !== "v-" + name);
+  if (push && location.pathname !== ROUTES[name]) {
+    history.pushState({v: name}, "", ROUTES[name]);
+  }
+  window.scrollTo({top: 0, behavior: "instant"});
+  // Reaching the register through navigation always shows the whole register.
+  // Without this, clicking a mark in the field leaves its species name in the
+  // search box, so a later visit showed a single row. Callers that mean to
+  // filter set their filter AFTER calling this.
+  if (name === "register" && DATA) resetFilters();
+  // A hidden canvas has no width, so the map can only be drawn once visible.
+  if (name === "map") ensureMap().then(ok => { if (ok) drawMap(); });
+  // reptiles.json is a second payload and most visitors never open this view, so it is
+  // fetched on first arrival rather than at boot. Not gated on DATA: this list is a
+  // separate effort and does not depend on the register's data.
+  if (name === "newtaxa") ensureReptiles();
+  if (name === "redisc") ensureRedisc();
+}
+
+
+/* ================= DESCRIBED BUT NEVER ASSESSED (reptile list) ================= */
+let NT = null, ntLoading = false;
+
+const NT_EV = {
+  airtight:       ["Airtight", "IUCN indexes the taxon and holds zero assessments"],
+  corroborated:   ["Corroborated", "IUCN does not index the name; GBIF does; no assessed synonym found"],
+  uncorroborated: ["Single-source", "Neither IUCN nor GBIF indexes the name — rests on the Reptile Database alone"]
+};
+/* Administrative extent, taken from each species' own published distribution statement.
+   This is the axis the validation actually supported — endemic to a single country
+   predicts threat at OR 2.46, p = 0.00005 — and unlike coordinates it exists for every
+   species on the list. The finer, coordinate-led classes it replaced were both
+   unvalidated (island endemism came back at p = 1) and unobtainable: geocoding the
+   locality prose measured a 53 km median error with a 5,469 km worst case. */
+const NT_RC = {
+  A: ["One landform", "Confined to a single named landform — a massif, lake or reserve — within one state or province. The narrowest statement the published distribution makes."],
+  B: ["One state", "Endemic to a single country and a single state, province or island."],
+  C: ["One country", "Endemic to one country, but recorded from several states or provinces."],
+  D: ["Several countries", "Recorded from more than one country — the least restricted group, and the one the Red List finds threatened least often."]
+};
+
+function ensureReptiles() {
+  if (NT || ntLoading) { if (NT) ntRender(); return; }
+  ntLoading = true;
+  fetch("/reptiles.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
+    NT = d; ntLoading = false; ntBoot();
+  }).catch(() => {
+    ntLoading = false;
+    $("#ntTable").innerHTML =
+      '<p class="siteslede">Could not load reptiles.json.</p>';
+  });
+}
+
+function ntBoot() {
+  const c = NT.counts;
+  /* No "priority" tile. The restriction classes were tested against the reptiles IUCN
+     HAS assessed and the top of the scale did not predict threat (island endemism came
+     back OR 0.92, p = 1), so presenting a priority count here would assert something
+     the test refused. Endemic-to-one-country is the distinction that did hold. */
+  $("#ntHero").textContent = c.total.toLocaleString();
+  $("#ntCounts").innerHTML = [
+    ["Species", c.total.toLocaleString(), "described since 2015, never assessed"],
+    ["Endemic to one country", (c.single_country || 0).toLocaleString(),
+     "the pattern that predicts threat"],
+    ["Confirmed against IUCN's index", (c.by_evidence.airtight || 0).toLocaleString(),
+     "the strongest grade of evidence"],
+    ["Families affected", new Set(NT.rows.map(r => r.fam)).size.toLocaleString(),
+     "geckos worst hit"]
+  ].map(([k, v, sub]) =>
+    `<div class="count"><b>${v}</b><span>${k}</span>` +
+    `<em class="csub">${sub}</em></div>`).join("");
+
+  // the two legends now sit inside their own disclosure, each beside the text that
+  // explains what it is measuring
+  $("#ntLegendEv").innerHTML = Object.entries(NT_EV).map(([k, [lab, why]]) =>
+    `<p><b>${lab}</b> (${(c.by_evidence[k] || 0).toLocaleString()}) — ${why}</p>`
+  ).join("");
+  $("#ntLegendRc").innerHTML = Object.entries(NT_RC).map(([k, [lab, why]]) =>
+    `<p><b>${k} · ${lab}</b> (${(c.by_class[k] || 0).toLocaleString()}) — ${why}</p>`
+  ).join("");
+
+  const opt = (sel, blank, items) => {
+    $(sel).innerHTML = `<option value="">${blank}</option>` +
+      items.map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
+  };
+  opt("#ntEv", "Any evidence grade",
+      Object.entries(NT_EV).map(([k, v]) => [k, v[0]]));
+  opt("#ntRc", "Any extent",
+      Object.entries(NT_RC).map(([k, v]) => [k, k + " · " + v[0]]));
+  const fams = [...new Set(NT.rows.map(r => r.fam))].filter(Boolean).sort();
+  opt("#ntFam", "Any family", fams.map(f => [f, f]));
+
+  ["#ntQ", "#ntEv", "#ntRc", "#ntFam"].forEach(s => {
+    $(s).oninput = ntRender; $(s).onchange = ntRender;
+  });
+  ntRender();
+}
+
+function ntRender() {
+  if (!NT) return;
+  const q = ($("#ntQ").value || "").trim().toLowerCase();
+  const ev = $("#ntEv").value, rc = $("#ntRc").value, fam = $("#ntFam").value;
+  const rows = NT.rows.filter(r =>
+    (!ev || r.ev === ev) && (!rc || r.rc === rc) && (!fam || r.fam === fam) &&
+    // r.type (the exact type locality) is deliberately absent from the public payload,
+    // so it is not searchable here either -- see the note in the view.
+    (!q || (r.sp + " " + r.fam + " " + r.dist).toLowerCase().includes(q)));
+
+  $("#ntShowing").textContent =
+    `Showing ${rows.length.toLocaleString()} of ${NT.rows.length.toLocaleString()} species` +
+    (rows.length ? "" : " — no species match these filters.");
+
+  const CAP = 400;
+  const esc = s => (s || "").replace(/[<>&]/g, m =>
+    ({"<": "&lt;", ">": "&gt;", "&": "&amp;"}[m]));
+  $("#ntTable").innerHTML = rows.length ? `<table class="nttable">
+    <thead><tr><th>Species</th><th>Described</th><th>Family</th>
+      <th>Gap evidence</th><th>Extent</th><th>Finer detail</th>
+      <th>Published range</th></tr></thead>
+    <tbody>${rows.slice(0, CAP).map(r => `<tr>
+      <td><i>${esc(r.sp)}</i></td>
+      <td>${r.yr || "—"}</td>
+      <td>${esc(r.fam)}</td>
+      <td><span class="ntev ntev-${r.ev}" title="${esc(NT_EV[r.ev][1])}">${NT_EV[r.ev][0]}</span></td>
+      <td><span class="ntrc ntrc-${r.rc}" title="${esc(NT_RC[r.rc][1])}">${r.rc} · ${NT_RC[r.rc][0]}</span></td>
+      <td class="ntfine">${esc(r.fine) || "<span style='color:var(--ink-3)'>—</span>"}</td>
+      <td class="ntdist">${esc(r.dist) || "<span style='color:var(--ink-3)'>not stated</span>"}</td>
+    </tr>`).join("")}</tbody></table>` +
+    (rows.length > CAP
+      ? `<p class="siteslede">Showing the first ${CAP} of ${rows.length.toLocaleString()}
+         — narrow the filters to see the rest. Ordered most-restricted first.</p>`
+      : "")
+    : "";
+}
+
+/* ========================= REDISCOVERIES (news layer) ========================= */
+/* A separate payload again, and a separate claim. Everything else on this site is
+   built from the Red List and from checked sources; this is press coverage, so it is
+   loaded, counted and captioned apart from them and feeds nothing back. */
+let RD = null, rdLoading = false;
+
+function ensureRedisc() {
+  if (RD || rdLoading) { if (RD) rdRender(); return; }
+  rdLoading = true;
+  fetch("/rediscoveries.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
+    RD = d; rdLoading = false; rdBoot();
+  }).catch(() => {
+    rdLoading = false;
+    $("#rdGrid").innerHTML =
+      '<p class="siteslede">Could not load rediscoveries.json.</p>';
+  });
+}
+
+function rdBoot() {
+  const c = RD.counts;
+  $("#rdHero").textContent = c.stories.toLocaleString();
+  $("#rdCounts").innerHTML = [
+    ["Reports", c.stories.toLocaleString(), "one card per story, duplicates merged"],
+    /* Species, not cards. One article often reports several rediscoveries at once, so
+       counting cards that name something would undercount the animals badly. */
+    ["Species identified", (c.distinct_species || 0).toLocaleString(),
+     "distinct binomials, each checked against GBIF"],
+    ["Already on a TBG list", (c.on_tbg_list || 0).toLocaleString(),
+     "species this project was tracking"],
+    ["Carried by several outlets", (c.syndicated || 0).toLocaleString(),
+     "the stories that travelled"]
+  ].map(([k, v, sub]) =>
+    `<div class="count"><b>${v}</b><span>${k}</span>` +
+    `<em class="csub">${sub}</em></div>`).join("");
+
+  /* Preservation coverage, stated from the data rather than asserted in prose. The
+     wording adapts to the actual ratio, so a bad night reads as a bad night instead of
+     leaving "most of them" on a page where it is no longer true. */
+  const img = c.image_local || 0, imgTot = c.with_image || 0, arc = c.archived || 0;
+  const share = imgTot ? img / imgTot : 0;
+  // no em-dash inside the span; the sentence already supplies one immediately before it
+  $("#rdPresImg").textContent =
+    share === 1
+      ? `all ${img.toLocaleString()} of them`
+      : `${share >= 0.9 ? "nearly all, " : "only "}` +
+        `${img.toLocaleString()} of ${imgTot.toLocaleString()}`;
+  $("#rdPresArc").textContent = arc
+    ? `only ${arc.toLocaleString()} of ${c.stories.toLocaleString()}`
+    : "none of them yet";
+
+  ["#rdQ", "#rdF"].forEach(s => { $(s).oninput = rdRender; $(s).onchange = rdRender; });
+  rdRender();
+}
+
+function rdRender() {
+  if (!RD) return;
+  const q = ($("#rdQ").value || "").trim().toLowerCase();
+  const f = $("#rdF").value;
+  const cards = RD.cards.filter(c =>
+    (f !== "sp" || (c.species || []).length) &&
+    (f !== "list" || c.on_list) &&
+    (f !== "multi" || c.outlets > 1) &&
+    (!q || (c.title + " " + (c.species || []).join(" ") + " " +
+            c.publisher + " " + c.desc).toLowerCase().includes(q)));
+
+  $("#rdShowing").textContent =
+    `Showing ${cards.length.toLocaleString()} of ${RD.cards.length.toLocaleString()} reports` +
+    (cards.length ? "" : " — nothing matches this search.");
+
+  $("#rdGrid").innerHTML = cards.map(c => {
+    const img = c.image
+      ? `<div class="rdthumb"><img src="${esc(c.image)}" alt="" loading="lazy"
+           referrerpolicy="no-referrer"
+           onerror="this.closest('.rdthumb').remove()"></div>`
+      : "";
+    const date = c.date ? new Date(c.date).toLocaleDateString(undefined,
+      {year: "numeric", month: "short", day: "numeric"}) : "";
+    return `<article class="rdcard${c.image ? "" : " noimg"}">
+      <a class="rdlink" href="${esc(c.link)}" target="_blank" rel="noopener">
+        ${img}
+        <div class="rdbody">
+          ${(() => {
+            /* Two tiers, shown differently because they are not equally certain.
+               A firm name came from the headline or summary, or two outlets both
+               carried it. A soft name was read out of one article's text, where a
+               species mentioned for comparison can look like one that was refound. */
+            const firm = c.species_firm || [];
+            const soft = (c.species || []).filter(s => !firm.includes(s));
+            if (!firm.length && !soft.length) return "";
+            const cap = 5;
+            return `<p class="rdsp">${firm.slice(0, cap).map(esc).join(", ")}${
+              firm.length > cap
+                ? ` <span class="rdspmore">+${firm.length - cap}</span>` : ""}${
+              soft.length
+                ? `${firm.length ? " " : ""}<span class="rdspsoft"
+                     title="Read from the article text — may include a species mentioned in passing"
+                     >${firm.length ? "also names " : "names "}${
+                       soft.slice(0, cap).map(esc).join(", ")}${
+                       soft.length > cap ? ` +${soft.length - cap}` : ""}</span>`
+                : ""}</p>`;
+          })()}
+          <h4 class="rdtitle">${esc(c.title)}</h4>
+          ${c.desc ? `<p class="rddesc">${esc(c.desc)}</p>` : ""}
+          <p class="rdmeta">
+            ${c.publisher ? `<span class="rdpub">${esc(c.publisher)}</span>` : ""}
+            ${date ? `<span>${esc(date)}</span>` : ""}
+            ${c.outlets > 1
+              ? `<span class="rdtag">${c.outlets} outlets</span>` : ""}
+            ${c.on_list
+              ? `<span class="rdtag rdtag-list">${esc(c.on_list)}</span>` : ""}
+          </p>
+        </div>
+      </a>
+      ${c.wayback ? `<p class="rdarchive"><a href="${esc(c.wayback)}"
+         target="_blank" rel="noopener">Archived copy</a></p>` : ""}
+    </article>`;
+  }).join("");
+}
+
+document.querySelectorAll('.navbar [role="tab"]').forEach(a => a.onclick = ev => {
+  // let modified clicks open a new tab, as a real link should
+  if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button !== 0) return;
+  ev.preventDefault();
+  showView(a.dataset.v, true);
+});
+addEventListener("popstate", () => showView(viewForPath(location.pathname), false));
+
+
+let siteFilter = "";
+/* Set of species names handed over by a click on a map cell. Kept separate from the
+   text search because it is an explicit list, not a pattern. */
+let cellFilter = null, cellLabel = "";
+
+function resetFilters() {
+  $("#q").value = "";
+  $("#fClass").value = "";
+  $("#fList").value = "";
+  $("#fTier").value = "";
+  $("#fDur").value = "";
+  $("#fRealm").value = "";
+  siteFilter = "";
+  cellFilter = null; cellLabel = "";
+  ["#cPri", "#cSil"].forEach(s => $(s).setAttribute("aria-pressed", "false"));
+  apply();
+}
+
+let DATA, rows = [], shown = 0;
+const PAGE = 200;
+
+/* First pass: make the right section visible before the data arrives. This must sit
+   AFTER the `let DATA` above. Called any earlier, showView's register branch reads
+   DATA inside its temporal dead zone, throws, and kills the rest of the script --
+   which broke a direct load of /register/ outright while every view still worked if
+   you arrived by clicking, because by then DATA was initialised. */
+showView(viewForPath(location.pathname), false);
+
+/* The payloads are regenerated on every rebuild but keep the same filenames, so a
+   returning visitor can be served a cached copy inside a page that is otherwise new.
+   That is not hypothetical — it happened in testing, and the map's tier layers showed
+   counts that disagreed with the register. data.json revalidates against its ETag (a
+   304 when unchanged, so effectively free) and carries the build stamp that versions
+   the other two payloads. */
+const stamped = p => p + "?v=" + encodeURIComponent(DATA.meta.built);
+fetch("/data.json", { cache: "no-cache" }).then(r => r.json()).then(d => { DATA = d; boot(); })
+  .catch(() => { $("#counts").innerHTML =
+    '<div class="count"><span>Could not load data.json — is it beside index.html?</span></div>'; });
+
+function boot() {
+  const m = DATA.meta, c = m.counts, v = m.validation;
+  /* Lowest tier counted as priority. Read from the payload so the page and
+     the pipeline cannot drift apart -- the same threshold was hardcoded in
+     seven places here and in five scripts, and a partial edit is exactly how
+     tier 3 ended up in both sides of a 2x2 during the move to 3-5. */
+  PRI = c.priority_tier || 4;
+
+  /* --- counts --- */
+  $("#counts").innerHTML = [
+    [c.dd.toLocaleString(), "Data Deficient — IUCN looked, and could not say"],
+    [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
+    [String(c.ne), "Never assessed by IUCN at all"],
+    [v.high.rate + "%", "of reassessed priority species proved threatened"],
+  ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
+
+  /* --- geocode verification figures, read from geo.json rather than typed in.
+         Hardcoded, these drifted the moment the geocoder was re-run (315/89/119 in
+         the prose vs 317/88/118 in the data), which is the same class of error the
+         cross-check exists to catch. Only fetched on the page that has the table. --- */
+  if ($("#geoValidated")) {
+    const n = x => (x || 0).toLocaleString();
+    $("#geoCompound").textContent = n(c.compound_localities);
+    fetch(stamped("/geo.json")).then(r => r.json()).then(g => {
+      const k = g.check || {}, st = g.stats || {};
+      const cand = Object.values(st).reduce((a, b) => a + b, 0);
+      // everything the type/extent checks refused: wrong class, no acceptable result,
+      // or a bounding box too large for a centroid to mean anything
+      const rej = cand - (st.verified || 0) - (st["no-type-expectation"] || 0);
+      $("#geoCandidates").textContent = n(cand);
+      $("#geoRejected").textContent = n(rej);
+      $("#geoValidated").textContent = n(k.validated);
+      $("#geoContradicted").textContent = n(k.contradicted);
+      $("#geoUnverified").textContent = $("#geoUnverified2").textContent = n(k.unverified);
+      $("#geoNewly").textContent = n(g.newly_placed);
+    }).catch(() => {});
+  }
+
+  /* --- validation dot plot: one axis, 0–80%, baseline reference --- */
+  const MAX = 80, pos = x => (x / MAX * 100) + "%";
+  const prow = (label, g, cls) => `
+    <div class="prow">
+      <div class="plab">${label}<br><span style="color:var(--ink-3);font-size:.72rem">
+        n=${g.n}</span></div>
+      <div class="ptrack">
+        <div class="baseline" style="left:${pos(v.baseline_all_species)}"
+             title="all assessed species ~${v.baseline_all_species}%"></div>
+        <div class="ci" style="left:${pos(g.lo)};width:${pos(g.hi - g.lo)}"
+             title="95% confidence interval ${g.lo}–${g.hi}%"></div>
+        <div class="dot ${cls}" style="left:${pos(g.rate)}"
+             title="${g.threatened} of ${g.n} = ${g.rate}%"></div>
+      </div>
+      <div class="pval" style="color:var(--${cls === "hi" ? "t5" : "t2"})">${g.rate}%</div>
+    </div>`;
+  $("#plot").innerHTML = `
+    ${prow("Priority<br>tier 4–5", v.high, "hi")}
+    ${prow("Rest<br>tier 1–3", v.low, "lo")}
+    <div class="axis"><span>0%</span><span>40%</span><span>80%</span></div>
+    <p class="blegend"><i></i> vertical rule marks the all-species rate,
+      ~${v.baseline_all_species}%</p>`;
+  $("#pstat").innerHTML = `Fisher exact two-sided <code>p = ${v.p}</code>,
+    odds ratio <code>${v.odds_ratio}</code>. Bars show 95% confidence intervals;
+    they overlap only slightly, and the priority group is about
+    <strong>2.6&times;</strong> more likely to prove threatened.`;
+
+  /* --- composition bars: magnitude, so one hue, not eight --- */
+  const maxC = Math.max(...Object.values(DATA.classes));
+  $("#barsClass").innerHTML = Object.entries(DATA.classes).map(([k, n]) => `
+    <div class="bar"><div class="bl">${esc(k)}</div>
+      <div class="bt"><div class="bf" style="width:${n / maxC * 100}%"></div></div>
+      <div class="bv">${n.toLocaleString()}</div></div>`).join("");
+
+  const maxT = Math.max(...Object.values(DATA.tier_counts));
+  $("#barsTier").innerHTML = [5, 4, 3, 2, 1].map(t => {
+    const n = DATA.tier_counts[t] || 0;
+    return `<div class="bar t${t}"><div class="bl">Tier ${t}${t >= PRI ? " ·&nbsp;priority" : ""}</div>
+      <div class="bt"><div class="bf" style="width:${n / maxT * 100}%"></div></div>
+      <div class="bv">${n.toLocaleString()}</div></div>`;
+  }).join("");
+
+  // Localities are actionable, so they are buttons into the register. Habitat
+  // types are not places you can survey, so they render as inert rows.
+  // Where the book gives a locality paragraph we show its opening sentence. Where
+  // the site was recovered from the species' own records instead, we say so rather
+  // than leaving the line blank and implying the same provenance.
+  const siteRow = (s, clickable) => {
+    const sub = s.context
+      ? `<span class="sctx">${esc(s.context)}</span>`
+      : (s.inline
+          ? `<span class="sctx prov">Named in ${s.inline === s.count
+              ? "the species records" : s.inline + " of the species records"},
+              not in a locality account of its own.</span>`
+          : "");
+    return `<${clickable ? "button" : "div"} class="siterow"${
+      clickable ? ` data-site="${esc(s.name)}"` : ""}>
+      <span><span class="sname">${esc(s.name)}</span>${sub}</span>
+      <span class="scount">${s.count} species</span>
+      ${clickable ? '<span class="sgo">open in register &rarr;</span>' : ""}
+    </${clickable ? "button" : "div"}>`;
+  };
+
+  const withLoc = DATA.species.filter(s => s.s).length;
+  const inlineN = DATA.species.filter(s => s.sk === "inline").length;
+  $("#sitesCoverage").innerHTML =
+    `Coverage: <strong style="color:var(--ink-2)">${withLoc.toLocaleString()}</strong>
+     of ${DATA.species.length.toLocaleString()} species carry a locality
+     (${Math.round(100 * withLoc / DATA.species.length)}%) —
+     ${(withLoc - inlineN).toLocaleString()} from the book's locality accounts and
+     ${inlineN.toLocaleString()} recovered from the species entries themselves. The
+     remaining ${(DATA.species.length - withLoc).toLocaleString()} name no place
+     specific enough to record.`;
+
+  const locs = DATA.sites.filter(s => !s.habitat);
+  const habs = DATA.sites.filter(s => s.habitat);
+  $("#siteList").innerHTML = `<div class="sitelist">${
+    locs.map(s => siteRow(s, true)).join("")}</div>`;
+  $("#habList").innerHTML = `<div class="sitelist">${
+    habs.map(s => siteRow(s, false)).join("")}</div>`;
+
+  $("#siteList").addEventListener("click", e => {
+    const b = e.target.closest("button.siterow");
+    if (!b) return;
+    // switch tabs first — the nav handler resets filters — then apply the site
+    showView("register", true);
+    siteFilter = b.dataset.site;
+    apply();
+  });
+
+  $("#tierhelpBody").innerHTML = `<dl>${[5, 4, 3, 2, 1].map(t => `
+      <dt><span class="tierchip t${t}">${t}</span>${t >= PRI
+        ? '<span style="color:var(--accent);font-weight:600">priority</span>' : ""}</dt>
+      <dd>${esc(DATA.tiers[t])}
+        <span style="color:var(--ink-3)">— ${(DATA.tier_counts[t] || 0).toLocaleString()}
+        species</span></dd>`).join("")}</dl>
+    <p class="note">The tier measures only how narrow the published record is. Tiers 4
+      and 5 are the stratum whose ranking was tested against IUCN's own reassessments,
+      where 52.6% proved threatened against 20.2% for the rest.</p>`;
+
+  $("#tierTable tbody").innerHTML = [5, 4, 3, 2, 1].map(t => `
+    <tr><td>${t}${t >= PRI ? " ·&nbsp;priority" : ""}</td><td>${esc(DATA.tiers[t])}</td>
+    <td class="num">${(DATA.tier_counts[t] || 0).toLocaleString()}</td></tr>`).join("");
+
+  $("#valprose").innerHTML = `Taken as one undifferentiated group, the
+    <span class="num">${v.all.n}</span> reassessed species proved threatened at
+    <strong>${v.all.rate}%</strong> — indistinguishable from the ordinary all-species
+    rate of about ${v.baseline_all_species}%. Split by restriction, the priority
+    stratum proved threatened at <strong>${v.high.rate}%</strong>
+    (${v.high.threatened}/${v.high.n}) against <strong>${v.low.rate}%</strong>
+    (${v.low.threatened}/${v.low.n}) for the rest.`;
+
+  $("#builtline").textContent =
+    `Register built ${m.built} against IUCN Red List v${m.redlist_version}, `
+    + `accessed ${m.redlist_accessed}. `
+    + `${DATA.species.length.toLocaleString()} species accounts. `
+    + `Anyone re-checking a claim against a later Red List release should expect `
+    + `movement: that movement is the point.`;
+
+  const cs = $("#fClass");
+  Object.keys(DATA.classes).forEach(k =>
+    cs.insertAdjacentHTML("beforeend", `<option>${esc(k)}</option>`));
+
+  // Built from DATA.tiers so the labels match the key on the overview exactly.
+  const ts = $("#fTier");
+  [5, 4, 3, 2, 1].forEach(t => ts.insertAdjacentHTML("beforeend",
+    `<option value="${t}">Tier ${t}${t >= PRI ? " · priority" : ""} — ${
+      esc(DATA.tiers[t])} (${(DATA.tier_counts[t] || 0).toLocaleString()})</option>`));
+
+  // Second pass, now that DATA exists: this is what actually initialises the map
+  // for someone who landed directly on /map/.
+  showView(viewForPath(location.pathname), false);
+
+  drawField();
+  startFeature();
+  addEventListener("resize", () => {
+    clearTimeout(rz);
+    rz = setTimeout(() => {
+      drawField();
+      if (MAP && !$("#v-map").hidden) drawMap();
+    }, 150);
+  });
+
+  const rcount = {};
+  DATA.species.forEach(s => { if (s.r) rcount[s.r] = (rcount[s.r] || 0) + 1; });
+  (DATA.meta.realms || []).forEach(r => {
+    if (!rcount[r]) return;
+    const o = document.createElement("option");
+    o.value = r;
+    o.textContent = `${r} (${rcount[r].toLocaleString()})`;
+    $("#fRealm").appendChild(o);
+  });
+  ["#q", "#fClass", "#fList", "#fTier", "#fDur", "#fRealm"].forEach(s => $(s).oninput = apply);
+  // Heading click sorts; same heading again reverses; a third click is still a reverse,
+  // not a reset, because "unsorted" is not a state a reader can see or wants back.
+  document.querySelectorAll("#tbl thead th[data-sort]").forEach(th => {
+    th.tabIndex = 0;
+    th.setAttribute("role", "columnheader");
+    const go = () => {
+      const k = th.dataset.sort;
+      if (sortKey === k) sortDir = -sortDir;
+      else { sortKey = k; sortDir = SORT_NUMERIC.has(k) ? -1 : 1; }
+      apply();
+    };
+    th.onclick = go;
+    th.onkeydown = e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
+    };
+  });
+  ["#cPri", "#cSil"].forEach(s => $(s).onclick = e => {
+    const b = e.currentTarget;
+    b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true");
+    apply();
+  });
+  $("#more").onclick = () => draw(true);
+  $("#cClear").onclick = resetFilters;
+  $("#siteChip").onclick = () => { siteFilter = ""; apply(); };
+  $("#cellChip").onclick = () => { cellFilter = null; cellLabel = ""; apply(); };
+  apply();
+}
+
+/* ---------- the field: one mark per species ------------------------------ */
+/* Marks are laid out in reading order over DATA.species, which is already sorted
+   by tier descending — so the darkest band at the top IS the priority stratum,
+   and its share of the whole block is visible without a caption. */
+let rz, cells = [], PITCH = 9, GAP = 2;
+
+/* Pitch is derived, not fixed. A fixed 9px pitch made the block 576px tall on a
+   375px screen — the field stopped reading as one mass and became a wall to
+   scroll past. Solving rows*p ≈ TARGET_H for p keeps it a consistent band at any
+   width: p = sqrt(TARGET_H * W / N). */
+const TARGET_H = 190;
+function pitchFor(cssW, n) {
+  const p = Math.round(Math.sqrt(TARGET_H * cssW / n));
+  return Math.max(3, Math.min(10, p));
+}
+
+function tierColor(t) {
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue("--t" + t).trim();
+}
+
+function drawField() {
+  const cv = $("#field"), sp = DATA.species;
+  if (!cv || !sp.length) return;
+  const cssW = cv.parentElement.clientWidth;
+  PITCH = pitchFor(cssW, sp.length);
+  GAP = PITCH >= 7 ? 2 : 1;
+  const cols = Math.max(24, Math.floor(cssW / PITCH));
+  const rows = Math.ceil(sp.length / cols);
+  const cssH = rows * PITCH;
+  const dpr = Math.min(devicePixelRatio || 1, 2);
+  cv.width = Math.round(cssW * dpr);
+  cv.height = Math.round(cssH * dpr);
+  cv.style.height = cssH + "px";
+  const g = cv.getContext("2d");
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, cssW, cssH);
+
+  const colors = {1: tierColor(1), 2: tierColor(2), 3: tierColor(3),
+                  4: tierColor(4), 5: tierColor(5)};
+  const size = PITCH - GAP;
+  cells = [];
+  sp.forEach((s, i) => {
+    const x = (i % cols) * PITCH, y = Math.floor(i / cols) * PITCH;
+    g.fillStyle = colors[s.t] || colors[1];
+    g.fillRect(x, y, size, size);
+    cells.push({x, y, size, s});
+  });
+  fieldGeom = {cols, cssW, cssH};
+
+  // The key is built from DATA.tiers, which the build script emits, so the wording
+  // here can never drift from the wording the scoring actually used.
+  const counts = DATA.tier_counts;
+  $("#tierlist").innerHTML = [5, 4, 3, 2, 1].map(t => `
+    <li class="${t >= PRI ? "pri" : ""}">
+      <span class="swatch" style="background:var(--t${t})" aria-hidden="true"></span>
+      <span class="tname">Tier ${t}</span>
+      <span class="tdef">${esc(DATA.tiers[t])}</span>
+      <span class="tn">${(counts[t] || 0).toLocaleString()} species</span>
+    </li>`).join("");
+}
+
+let fieldGeom = null;
+function hitTest(ev) {
+  const cv = $("#field"), r = cv.getBoundingClientRect();
+  const x = ev.clientX - r.left, y = ev.clientY - r.top;
+  if (!fieldGeom) return null;
+  const col = Math.floor(x / PITCH), row = Math.floor(y / PITCH);
+  if (col < 0 || col >= fieldGeom.cols || row < 0) return null;
+  const i = row * fieldGeom.cols + col;
+  return cells[i] || null;
+}
+
+(function wireField() {
+  const cv = $("#field"), tip = $("#fieldTip");
+  if (!cv) return;
+  cv.addEventListener("mousemove", ev => {
+    const hit = hitTest(ev);
+    if (!hit) { tip.style.opacity = 0; return; }
+    const s = hit.s;
+    tip.innerHTML = `<b>${esc(s.v || s.n)}</b><i>${esc(s.n)}</i>
+      <span style="opacity:.75">tier ${s.t} · ${esc(s.c)}${
+        s.l === "ne" ? " · never assessed" : ""}</span>`;
+    tip.style.opacity = 1;
+    const pad = 14;
+    let left = ev.clientX + pad, top = ev.clientY + pad;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    if (left + w > innerWidth - 8) left = ev.clientX - w - pad;
+    if (top + h > innerHeight - 8) top = ev.clientY - h - pad;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  });
+  cv.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+
+  /* ---- zoom and pan --------------------------------------------------------
+     One pointer drags, two pinch. Pointer events cover mouse, touch and pen with
+     one code path. A drag must not also fire the click that opens the register, so
+     movement past a small threshold disarms it. */
+  const pointers = new Map();
+  let dragged = false, pinchStart = null;
+
+  const canvasPt = ev => {
+    const r = cv.getBoundingClientRect();
+    return {x: ev.clientX - r.left, y: ev.clientY - r.top};
+  };
+
+  cv.addEventListener("pointerdown", ev => {
+    // setPointerCapture throws NotFoundError if the id is not an active pointer,
+    // which would abort the handler and leave the gesture untracked. Capture is a
+    // nicety; tracking is not.
+    try { cv.setPointerCapture(ev.pointerId); } catch (e) { /* keep going */ }
+    pointers.set(ev.pointerId, canvasPt(ev));
+    dragged = false;
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      pinchStart = {d: Math.hypot(a.x - b.x, a.y - b.y), k: view.k};
+    }
+    cv.classList.add("dragging");
+  });
+
+  cv.addEventListener("pointermove", ev => {
+    if (!pointers.has(ev.pointerId)) return;
+    const prev = pointers.get(ev.pointerId), now = canvasPt(ev);
+    pointers.set(ev.pointerId, now);
+
+    if (pointers.size === 2 && pinchStart) {
+      const [a, b] = [...pointers.values()];
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (pinchStart.d > 8) {
+        const mid = {x: (a.x + b.x) / 2, y: (a.y + b.y) / 2};
+        const target = pinchStart.k * (d / pinchStart.d);
+        zoomAt(mid.x, mid.y, target / view.k);
+      }
+      dragged = true;
+      return;
+    }
+    const dx = now.x - prev.x, dy = now.y - prev.y;
+    if (Math.abs(dx) + Math.abs(dy) > 2) dragged = true;
+    if (view.k === 1) return;                 // nothing to pan at full extent
+    view.tx += dx; view.ty += dy;
+    requestDraw();
+  });
+
+  const endPointer = ev => {
+    pointers.delete(ev.pointerId);
+    if (pointers.size < 2) pinchStart = null;
+    if (pointers.size === 0) cv.classList.remove("dragging");
+  };
+  cv.addEventListener("pointerup", endPointer);
+  cv.addEventListener("pointercancel", endPointer);
+
+  cv.addEventListener("wheel", ev => {
+    ev.preventDefault();
+    const p = canvasPt(ev);
+    zoomAt(p.x, p.y, Math.exp(-ev.deltaY * 0.0015));
+  }, {passive: false});
+
+  cv.addEventListener("dblclick", ev => {
+    ev.preventDefault();
+    const p = canvasPt(ev);
+    zoomAt(p.x, p.y, 2);
+  });
+
+  const zoomBtn = (sel, fn) => $(sel) && ($(sel).onclick = () => {
+    const cssW = cv.getBoundingClientRect().width;
+    fn(cssW / 2, parseFloat(cv.style.height) / 2);
+  });
+  zoomBtn("#zIn",  (x, y) => zoomAt(x, y, 1.6));
+  zoomBtn("#zOut", (x, y) => zoomAt(x, y, 1 / 1.6));
+  $("#zReset") && ($("#zReset").onclick = () => {
+    view = {k: 1, tx: 0, ty: 0};
+    requestDraw();
+  });
+  cv.addEventListener("click", ev => {
+    const hit = hitTest(ev);
+    if (!hit) return;
+    // jump straight into the register with that one species isolated
+    showView("register", true);
+    $("#q").value = hit.s.n;
+    $("#q").dispatchEvent(new Event("input"));
+    const first = $("#tbody tr.sp");
+    if (first) toggle(first);
+  });
+})();
+
+/* ---------- featured evidence ------------------------------------------- */
+/* Real tier-5 records only: the single-specimen cases are where the prose does
+   the most work, and they are the honest face of the argument. */
+let fqPool = [], fqAt = 0;
+function startFeature() {
+  fqPool = DATA.species.filter(s =>
+    s.t === 5 && s.e && s.e.length > 60 && s.e.length < 210 && s.v);
+  if (!fqPool.length) { $("#feature").hidden = true; return; }
+  showFeature();
+  const still = matchMedia("(prefers-reduced-motion:reduce)").matches;
+  if (!still && fqPool.length > 1) setInterval(nextFeature, 9000);
+}
+function showFeature() {
+  const s = fqPool[fqAt % fqPool.length];
+  $("#fqQuote").textContent = s.e.replace(/\s*\.\s*$/, ".");
+  $("#fqCap").innerHTML = `<i class="sci">${esc(s.n)}</i>
+    <span>·</span><span>${esc(s.c)}</span><span>·</span>
+    <span>${s.l === "ne" ? "never assessed by IUCN" : "IUCN: Data Deficient"}</span>`;
+}
+function nextFeature() {
+  const f = $("#feature");
+  f.classList.add("fading");
+  setTimeout(() => { fqAt++; showFeature(); f.classList.remove("fading"); }, 500);
+}
+
+/* ---------- map: density of georeferenced records ------------------------ */
+/* Loaded lazily on first visit — map.json is a separate request so the register
+   is not held up by geometry nobody has asked for yet. */
+let PRI = 4;
+let MAP = null, GEO = null, mapLayer = "all", mapCells = [], mapDots = [], mapGeom = null;
+/* Zoom/pan state. k is the scale, tx/ty the translation in CSS pixels. The world at
+   scale k is (cssW*k) x (cssH*k) and the canvas is a window onto it. */
+let view = {k: 1, tx: 0, ty: 0};
+const K_MIN = 1, K_MAX = 64;
+
+function clampView(cssW, cssH) {
+  view.k = Math.min(K_MAX, Math.max(K_MIN, view.k));
+  // never allow empty space at an edge
+  view.tx = Math.min(0, Math.max(cssW - cssW * view.k, view.tx));
+  view.ty = Math.min(0, Math.max(cssH - cssH * view.k, view.ty));
+}
+
+/* Zoom about a fixed point in canvas space, so the feature under the cursor or the
+   pinch midpoint stays put — the thing that makes zooming feel like zooming. */
+function zoomAt(px, py, factor) {
+  const cv = $("#mapCanvas"); if (!cv) return;
+  const cssW = cv.getBoundingClientRect().width, cssH = parseFloat(cv.style.height);
+  const k0 = view.k;
+  view.k = Math.min(K_MAX, Math.max(K_MIN, k0 * factor));
+  const r = view.k / k0;
+  view.tx = px - (px - view.tx) * r;
+  view.ty = py - (py - view.ty) * r;
+  clampView(cssW, cssH);
+  requestDraw();
+}
+
+/* Coalesce redraws on a timer rather than requestAnimationFrame. rAF does not fire
+   in a hidden or non-compositing tab, so a draw queued behind a boolean guard would
+   leave that guard set forever and the map would never redraw again -- not even
+   after the tab became visible. A timeout always fires, so the queue cannot wedge. */
+let drawTimer = null;
+function requestDraw() {
+  if (drawTimer) return;
+  drawTimer = setTimeout(() => { drawTimer = null; drawMap(); }, 16);
+}
+let showGbif = true, showLoc = true, showLocU = false;
+
+/* Per-locality tier breakdown, computed from the register so the locality overlay
+   honours the same tier filter as the density surface. */
+let locTiers = null, nameTier = null;
+function buildLocTiers() {
+  nameTier = {};
+  DATA.species.forEach(s => { nameTier[s.n] = s.t; });
+  locTiers = {};
+  DATA.species.forEach(s => {
+    if (!s.s) return;
+    (locTiers[s.s] = locTiers[s.s] || {total: 0})[s.t] =
+      (locTiers[s.s][s.t] || 0) + 1;
+    locTiers[s.s].total++;
+  });
+}
+
+function mapColor(t) {
+  return t === "all" ? getComputedStyle(document.documentElement)
+                        .getPropertyValue("--accent").trim()
+                     : tierColor(t);
+}
+
+async function ensureMap() {
+  if (MAP) return true;
+  try {
+    MAP = await fetch(stamped("/map.json")).then(r => r.json());
+  } catch (e) {
+    $("#mapStats").textContent = "Could not load map.json.";
+    return false;
+  }
+  // geo.json is optional: if geocoding has not been run the map still works,
+  // it just has no locality overlay.
+  try { GEO = await fetch(stamped("/geo.json")).then(r => r.json()); }
+  catch (e) { GEO = null; }
+  buildLocTiers();
+  if (!GEO) { ["#srcLoc", "#srcLocU"].forEach(x => { $(x).disabled = true;
+              $(x).setAttribute("aria-pressed", "false"); });
+              showLoc = showLocU = false; }
+  ["#srcGbif", "#srcLoc", "#srcLocU"].forEach(sel => $(sel).onclick = () => {
+    const b = $(sel), on = b.getAttribute("aria-pressed") !== "true";
+    b.setAttribute("aria-pressed", on);
+    if (sel === "#srcGbif") showGbif = on;
+    else if (sel === "#srcLoc") showLoc = on;
+    else showLocU = on;
+    drawMap();
+  });
+  const ck = GEO ? GEO.check : {};
+  $("#mapCaveat").innerHTML = GEO ? `Locality points are gazetteer lookups of the
+    place names in the register, each then measured against the GBIF records of the
+    species that sit there. <strong>${ck.validated || 0}</strong> agree and are
+    plotted; <strong>${ck.contradicted || 0}</strong> disagreed by more than
+    ${GEO.threshold_km}&nbsp;km and are discarded — "Congo River" resolved to a real
+    river of that name in Sierra Leone, 4,000&nbsp;km from the Congo, and passed a
+    type check as river/river. <strong>${ck.unverified || 0}</strong> have no species
+    with records to check against, so they cannot be verified either way; those are
+    off by default.` : "";
+  const st = MAP.stats;
+  $("#mapLayers").innerHTML = [
+    ["all", "All tiers", st.species_mapped],
+    ...[5, 4, 3, 2, 1].map(t => [String(t), "Tier " + t, st.mapped_by_tier[t] || 0]),
+  ].map(([k, label, n]) => `
+    <button data-layer="${k}" aria-pressed="${k === mapLayer}">
+      <i style="background:${k === "all" ? "var(--accent)" : `var(--t${k})`}"></i>
+      ${label}<span class="n">${n.toLocaleString()}</span></button>`).join("");
+  $("#mapLayers").addEventListener("click", e => {
+    const b = e.target.closest("button[data-layer]");
+    if (!b) return;
+    mapLayer = b.dataset.layer;
+    $("#mapLayers").querySelectorAll("button").forEach(x =>
+      x.setAttribute("aria-pressed", x === b));
+    drawMap();
+  });
+  $("#mapStats").innerHTML =
+    `<strong>${st.species_mapped.toLocaleString()}</strong> of
+     ${st.species_total.toLocaleString()} species have at least one georeferenced
+     record, plotted from <strong>${st.points.toLocaleString()}</strong> points
+     (capped at ${st.max_points_per_species} per species so well-collected species
+     cannot dominate the surface).
+     <strong>${st.species_unmapped.toLocaleString()}</strong> species have none at
+     all — no coordinates exist for them anywhere in GBIF, which makes them the least
+     visible of an already invisible group.`;
+  return true;
+}
+
+/* Equirectangular. Honest about area distortion, and the right choice here because
+   the point is comparing longitude bands, not measuring area. */
+function drawMap() {
+  const cv = $("#mapCanvas");
+  if (!MAP || !cv) return;
+  const cssW = cv.parentElement.clientWidth;
+  const cssH = Math.round(cssW / 2);              // 360x180 degrees
+  const dpr = Math.min(devicePixelRatio || 1, 2);
+  cv.width = Math.round(cssW * dpr);
+  cv.height = Math.round(cssH * dpr);
+  cv.style.height = cssH + "px";
+  const g = cv.getContext("2d");
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, cssW, cssH);
+  clampView(cssW, cssH);
+  const X = lo => (lo + 180) / 360 * cssW * view.k + view.tx;
+  const Y = la => (90 - la) / 180 * cssH * view.k + view.ty;
+  mapGeom = {cssW, cssH};
+
+  const cs = getComputedStyle(document.documentElement);
+  const rule = cs.getPropertyValue("--rule").trim();
+  const surf2 = cs.getPropertyValue("--surface-2").trim();
+
+  g.save();
+  g.beginPath(); g.rect(0, 0, cssW, cssH); g.clip();
+
+  // graticule every 30 degrees, recessive
+  g.strokeStyle = rule; g.lineWidth = 1;
+  for (let lo = -180; lo <= 180; lo += 30) {
+    g.beginPath(); g.moveTo(X(lo), 0); g.lineTo(X(lo), cssH); g.stroke();
+  }
+  for (let la = -60; la <= 60; la += 30) {
+    g.beginPath(); g.moveTo(0, Y(la)); g.lineTo(cssW, Y(la)); g.stroke();
+  }
+
+  // Land as flat fill plus a hairline: it is a backdrop and must never compete with
+  // the data, but fill alone gave almost no separation from the ocean, so the
+  // outline carries the coastline and the fill stays quiet.
+  g.fillStyle = surf2;
+  g.strokeStyle = cs.getPropertyValue("--rule-2").trim();
+  g.lineWidth = 1;
+  MAP.land.forEach(ring => {
+    g.beginPath();
+    ring.forEach(([lo, la], i) => i ? g.lineTo(X(lo), Y(la)) : g.moveTo(X(lo), Y(la)));
+    g.closePath(); g.fill(); g.stroke();
+  });
+
+  // bin into equal-degree cells, then shade by count: a heat map, one hue, so
+  // magnitude reads as magnitude
+  // Cells shrink as you zoom, so zooming in resolves finer structure instead of
+  // just magnifying the same blocks. Floored so the bin count stays sane.
+  const CELL = Math.max(0.08, (cssW > 700 ? 2.5 : 4) / view.k);
+  const bins = new Map(), binSp = new Map();
+  const want = mapLayer === "all" ? null : +mapLayer;
+  let n = 0;
+  for (const [lo, la, i] of MAP.points) {
+    const nm = MAP.names[i];
+    if (want !== null && nameTier[nm] !== want) continue;
+    n++;
+    const k = Math.floor((lo + 180) / CELL) + "," + Math.floor((90 - la) / CELL);
+    bins.set(k, (bins.get(k) || 0) + 1);
+    let set = binSp.get(k);
+    if (!set) binSp.set(k, set = new Set());
+    set.add(nm);
+  }
+  const max = Math.max(1, ...bins.values());
+  const base = mapColor(mapLayer);
+  mapCells = [];
+  // Cells must go through the same projection as everything else. Deriving their
+  // position straight from the bin index ignored the pan/zoom transform, so while
+  // the coastlines zoomed the cells stayed in their unzoomed layout and merely
+  // shrank as CELL shrank — a miniature world of specks over a zoomed basemap.
+  // Because CELL scales as base/k, w and h stay constant in screen pixels.
+  const w = CELL / 360 * cssW * view.k, h = CELL / 180 * cssH * view.k;
+  if (showGbif) {
+    bins.forEach((count, k) => {
+      const [cx, cy] = k.split(",").map(Number);
+      const lo = cx * CELL - 180, la = 90 - cy * CELL;
+      const x = X(lo), y = Y(la);
+      // skip what is scrolled out of frame instead of painting off-canvas
+      if (x + w < 0 || x > cssW || y + h < 0 || y > cssH) return;
+      // sqrt so a single record is still visible next to a hundred
+      g.globalAlpha = 0.22 + 0.78 * Math.sqrt(count / max);
+      g.fillStyle = base;
+      g.fillRect(x, y, Math.ceil(w), Math.ceil(h));
+      mapCells.push({x, y, w, h, count, species: binSp.get(k), lo, la});
+    });
+    g.globalAlpha = 1;
+  }
+
+  /* Locality overlay. Each circle is ONE named place holding N species, which is a
+     different quantity from a count of records — so it is drawn as a proportional
+     ring rather than folded into the density surface, where it would double-count
+     and hide which provenance produced what. */
+  mapDots = [];
+  let locCount = 0, locSpecies = 0;
+  if (showLoc && GEO) {
+    Object.entries(GEO.localities).forEach(([name, L]) => {
+      if (L.check === "validated" ? !showLoc : !showLocU) return;
+      const tiers = locTiers[name];
+      if (!tiers) return;
+      const n = want === null ? tiers.total : (tiers[want] || 0);
+      if (!n) return;
+      locCount++; locSpecies += n;
+      const x = X(L.lon), y = Y(L.lat);
+      const rad = Math.min(13, 2.6 + Math.sqrt(n) * 1.9);
+      const unver = L.check !== "validated";
+      g.beginPath(); g.arc(x, y, rad, 0, Math.PI * 2);
+      g.fillStyle = base; g.globalAlpha = unver ? 0.07 : 0.2; g.fill();
+      g.globalAlpha = 1; g.lineWidth = 1.5; g.strokeStyle = base;
+      g.setLineDash(unver ? [3, 3] : []);
+      g.stroke(); g.setLineDash([]);
+      mapDots.push({x, y, r: rad, name, n, kind: L.kind, check: L.check});
+    });
+  }
+
+  $("#mapCounts") && ($("#mapCounts").textContent = "");
+
+  g.restore();
+
+  const parts = [];
+  if (showGbif) parts.push(`<span>fewer records</span>
+    <span class="ramp">${[0.15, 0.35, 0.55, 0.78, 1].map(a =>
+      `<i style="background:${base};opacity:${0.22 + 0.78 * a}"></i>`).join("")}</span>
+    <span>more — shaded cells are specimen records
+      (densest ${max.toLocaleString()}, ${n.toLocaleString()} points, ${CELL}° cells)</span>`);
+  if (showLoc && GEO) parts.push(`<span style="display:flex;align-items:center;gap:.4rem">
+      <svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6"
+        fill="${base}" fill-opacity="0.2" stroke="${base}" stroke-width="1.5"/></svg>
+      rings are named localities, sized by species
+      (${locCount.toLocaleString()} places, ${locSpecies.toLocaleString()} species)</span>`);
+  const zi = $("#zIn"), zo = $("#zOut"), zr = $("#zReset");
+  if (zi) zi.disabled = view.k >= K_MAX;
+  if (zo) zo.disabled = view.k <= K_MIN;
+  if (zr) zr.disabled = view.k === K_MIN && view.tx === 0 && view.ty === 0;
+
+  parts.push(`<span>equirectangular${view.k > 1
+    ? ` · zoom ${view.k.toFixed(1)}× · ${CELL.toFixed(CELL < 1 ? 2 : 1)}° cells`
+    : ""}</span>`);
+  $("#mapLegend").innerHTML = parts.join('<span style="opacity:.4">·</span>');
+}
+
+(function wireMap() {
+  const cv = $("#mapCanvas"), tip = $("#mapTip");
+  if (!cv) return;
+  cv.addEventListener("mousemove", ev => {
+    const r = cv.getBoundingClientRect();
+    const x = ev.clientX - r.left, y = ev.clientY - r.top;
+    // a locality ring wins over the cell beneath it: it is the more specific thing
+    const dot = mapDots.find(d => Math.hypot(x - d.x, y - d.y) <= d.r + 2);
+    const hit = dot || mapCells.find(c =>
+      x >= c.x && x < c.x + c.w && y >= c.y && y < c.y + c.h);
+    if (!hit) { tip.style.opacity = 0; cv.style.cursor = "crosshair"; return; }
+    cv.style.cursor = "pointer";
+    const ns = n => (n < 0 ? Math.abs(n).toFixed(0) + "°S" : n.toFixed(0) + "°N");
+    const ew = n => (n < 0 ? Math.abs(n).toFixed(0) + "°W" : n.toFixed(0) + "°E");
+    tip.innerHTML = dot
+      ? `<b>${esc(dot.name)}</b>${dot.n.toLocaleString()} species in this layer
+         <span style="opacity:.7">· ${esc(dot.kind)}${
+           dot.check === "validated" ? " · cross-checked against records"
+             : " · UNVERIFIED location"}</span>
+         <span style="opacity:.7">· select to open in register</span>`
+      : `<b>${hit.count.toLocaleString()} record${hit.count === 1 ? "" : "s"}</b>
+         ${(hit.species ? hit.species.size : 0).toLocaleString()} species
+         · ${ns(hit.la)} ${ew(hit.lo)}
+         <span style="opacity:.7">select to open in register</span>`;
+    tip.style.opacity = 1;
+    let left = ev.clientX + 14, top = ev.clientY + 14;
+    if (left + tip.offsetWidth > innerWidth - 8) left = ev.clientX - tip.offsetWidth - 14;
+    if (top + tip.offsetHeight > innerHeight - 8) top = ev.clientY - tip.offsetHeight - 14;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  });
+  cv.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
+
+  /* ---- zoom and pan --------------------------------------------------------
+     One pointer drags, two pinch. Pointer events cover mouse, touch and pen with
+     one code path. A drag must not also fire the click that opens the register, so
+     movement past a small threshold disarms it. */
+  const pointers = new Map();
+  let dragged = false, pinchStart = null;
+
+  const canvasPt = ev => {
+    const r = cv.getBoundingClientRect();
+    return {x: ev.clientX - r.left, y: ev.clientY - r.top};
+  };
+
+  cv.addEventListener("pointerdown", ev => {
+    // setPointerCapture throws NotFoundError if the id is not an active pointer,
+    // which would abort the handler and leave the gesture untracked. Capture is a
+    // nicety; tracking is not.
+    try { cv.setPointerCapture(ev.pointerId); } catch (e) { /* keep going */ }
+    pointers.set(ev.pointerId, canvasPt(ev));
+    dragged = false;
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      pinchStart = {d: Math.hypot(a.x - b.x, a.y - b.y), k: view.k};
+    }
+    cv.classList.add("dragging");
+  });
+
+  cv.addEventListener("pointermove", ev => {
+    if (!pointers.has(ev.pointerId)) return;
+    const prev = pointers.get(ev.pointerId), now = canvasPt(ev);
+    pointers.set(ev.pointerId, now);
+
+    if (pointers.size === 2 && pinchStart) {
+      const [a, b] = [...pointers.values()];
+      const d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (pinchStart.d > 8) {
+        const mid = {x: (a.x + b.x) / 2, y: (a.y + b.y) / 2};
+        const target = pinchStart.k * (d / pinchStart.d);
+        zoomAt(mid.x, mid.y, target / view.k);
+      }
+      dragged = true;
+      return;
+    }
+    const dx = now.x - prev.x, dy = now.y - prev.y;
+    if (Math.abs(dx) + Math.abs(dy) > 2) dragged = true;
+    if (view.k === 1) return;                 // nothing to pan at full extent
+    view.tx += dx; view.ty += dy;
+    requestDraw();
+  });
+
+  const endPointer = ev => {
+    pointers.delete(ev.pointerId);
+    if (pointers.size < 2) pinchStart = null;
+    if (pointers.size === 0) cv.classList.remove("dragging");
+  };
+  cv.addEventListener("pointerup", endPointer);
+  cv.addEventListener("pointercancel", endPointer);
+
+  cv.addEventListener("wheel", ev => {
+    ev.preventDefault();
+    const p = canvasPt(ev);
+    zoomAt(p.x, p.y, Math.exp(-ev.deltaY * 0.0015));
+  }, {passive: false});
+
+  cv.addEventListener("dblclick", ev => {
+    ev.preventDefault();
+    const p = canvasPt(ev);
+    zoomAt(p.x, p.y, 2);
+  });
+
+  const zoomBtn = (sel, fn) => $(sel) && ($(sel).onclick = () => {
+    const cssW = cv.getBoundingClientRect().width;
+    fn(cssW / 2, parseFloat(cv.style.height) / 2);
+  });
+  zoomBtn("#zIn",  (x, y) => zoomAt(x, y, 1.6));
+  zoomBtn("#zOut", (x, y) => zoomAt(x, y, 1 / 1.6));
+  $("#zReset") && ($("#zReset").onclick = () => {
+    view = {k: 1, tx: 0, ty: 0};
+    requestDraw();
+  });
+  cv.addEventListener("click", ev => {
+    if (dragged) { dragged = false; return; }   // a pan is not a selection
+    const r = cv.getBoundingClientRect();
+    const x = ev.clientX - r.left, y = ev.clientY - r.top;
+    // a locality ring wins over the cell under it, matching the hover precedence
+    const dot = mapDots.find(d => Math.hypot(x - d.x, y - d.y) <= d.r + 2);
+    const cell = dot ? null : mapCells.find(c =>
+      x >= c.x && x < c.x + c.w && y >= c.y && y < c.y + c.h);
+    if (!dot && !cell) return;
+    showView("register", true);                     // resets filters first
+    if (dot) {
+      siteFilter = dot.name;
+    } else if (cell && cell.species && cell.species.size) {
+      const ns = n => (n < 0 ? Math.abs(n).toFixed(0) + "°S" : n.toFixed(0) + "°N");
+      const ew = n => (n < 0 ? Math.abs(n).toFixed(0) + "°W" : n.toFixed(0) + "°E");
+      cellFilter = cell.species;
+      cellLabel = `Map cell ${ns(cell.la)} ${ew(cell.lo)} · `
+                + `${cell.species.size} species`;
+    }
+    apply();
+  });
+})();
+
+/* #mapTip carries two lines for locality hits, so let the label break. */
+(function tipStyle() {
+  const s = document.createElement("style");
+  s.textContent = "#mapTip span{display:block}#mapTip b{display:block}";
+  document.head.appendChild(s);
+})();
+
+/* Sorting. Default is the register's editorial order -- tier descending, then class,
+   then name -- which is what the list has always shown; clicking a heading overrides it and
+   clicking the same heading again reverses. Numeric columns sort numerically and blanks sink
+   to the bottom in both directions, because a missing locality is not "less than" Amazonas
+   and should not lead the list either way. */
+let sortKey = null, sortDir = 1;
+const SORT_NUMERIC = new Set(["t", "ddy"]);
+
+function sortRows(arr) {
+  if (!sortKey) {
+    return arr.sort((a, b) => (b.t - a.t) || a.c.localeCompare(b.c)
+                              || a.n.localeCompare(b.n));
+  }
+  const num = SORT_NUMERIC.has(sortKey);
+  const val = s => sortKey === "name" ? (s.v || s.n) : s[sortKey];
+  return arr.sort((a, b) => {
+    const x = val(a), y = val(b);
+    const xe = x === undefined || x === null || x === "";
+    const ye = y === undefined || y === null || y === "";
+    if (xe && ye) return a.n.localeCompare(b.n);
+    if (xe) return 1;            // blanks last, whichever direction
+    if (ye) return -1;
+    const c = num ? (x - y) : String(x).localeCompare(String(y));
+    return (c || a.n.localeCompare(b.n)) * sortDir;
+  });
+}
+
+function markSortHeaders() {
+  document.querySelectorAll("#tbl thead th[data-sort]").forEach(th => {
+    const on = th.dataset.sort === sortKey;
+    th.setAttribute("aria-sort", on ? (sortDir > 0 ? "ascending" : "descending") : "none");
+    th.classList.toggle("sorted", on);
+    th.dataset.dir = on ? (sortDir > 0 ? "up" : "down") : "";
+  });
+}
+
+function apply() {
+  const q = $("#q").value.trim().toLowerCase(),
+        cl = $("#fClass").value, li = $("#fList").value,
+        ti = $("#fTier").value,
+        du = $("#fDur").value,
+        rl = $("#fRealm").value,
+        pri = $("#cPri").getAttribute("aria-pressed") === "true",
+        sil = $("#cSil").getAttribute("aria-pressed") === "true";
+  rows = DATA.species.filter(s =>
+    (!cl || s.c === cl) && (!li || s.l === li) && (!ti || s.t === +ti) &&
+    (!du || (du === "re" ? (s.ddr || 0) > 1 : (s.ddy || 0) >= +du)) &&
+    (!rl || s.r === rl) &&
+    (!pri || s.t >= PRI) && (!sil || s.sil) &&
+    (!siteFilter || s.s === siteFilter) &&
+    (!cellFilter || cellFilter.has(s.n)) &&
+    (!q || s.n.toLowerCase().includes(q) || (s.v || "").toLowerCase().includes(q)
+        || (s.s || "").toLowerCase().includes(q)));
+  sortRows(rows);
+  markSortHeaders();
+  shown = 0;
+  $("#tbody").innerHTML = "";
+  draw(false);
+  // Show the active locality as a dismissible chip, so arriving from the Sites
+  // page never looks like an unexplained short list.
+  const sc = $("#siteChip");
+  sc.hidden = !siteFilter;
+  sc.textContent = siteFilter ? "Locality: " + siteFilter : "";
+  const cc = $("#cellChip");
+  cc.hidden = !cellFilter;
+  cc.textContent = cellFilter ? cellLabel : "";
+  // Surface an escape hatch only when something is actually filtering.
+  const active = q || cl || li || ti || du || rl || pri || sil || siteFilter || cellFilter;
+  $("#cClear").hidden = !active;
+}
+
+function draw(append) {
+  const slice = rows.slice(shown, shown + PAGE);
+  $("#tbody").insertAdjacentHTML("beforeend", slice.map((s, i) => {
+    const idx = shown + i;
+    return `<tr class="sp" data-i="${idx}" tabindex="0">
+      <td class="sev t${s.t}"></td>
+      <td class="cell-name"><b>${esc(s.v || s.n)}</b><i class="sci">${esc(s.n)}</i></td>
+      <td style="font-family:var(--sans);font-size:.82rem;color:var(--ink-2)">${esc(s.c)}</td>
+      <td><span class="tierchip t${s.t}" title="${esc(DATA.tiers[s.t])}">${s.t}</span></td>
+      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.b)}</td>
+      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.s || "—")}</td>
+      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.r || "—")}</td>
+      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2);white-space:nowrap">${
+        s.dds ? `${s.dds} <span style="color:var(--ink-3)">(${s.ddy}\u00a0yr${
+          s.ddr > 1 ? `, ${s.ddr}\u00d7` : ""})</span>` : "—"}</td>
+      <td>${s.t >= PRI ? '<span class="tag pri">Priority</span> ' : ""}${
+           s.l === "ne" ? '<span class="tag ne">Never assessed</span>' : ""}</td></tr>`;
+  }).join(""));
+  shown += slice.length;
+  $("#more").hidden = shown >= rows.length;
+  $("#more").textContent = `Show more (${(rows.length - shown).toLocaleString()} remaining)`;
+  $("#resultline").innerHTML =
+    `<span><strong class="num">${rows.length.toLocaleString()}</strong> species match</span>
+     <span>showing ${shown.toLocaleString()}</span>
+     <span class="num">${rows.filter(r => r.t >= PRI).length.toLocaleString()} in the priority stratum</span>`;
+}
+
+/* row -> detail, toggled in place */
+$("#tbody").addEventListener("click", e => toggle(e.target.closest("tr.sp")));
+$("#tbody").addEventListener("keydown", e => {
+  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(e.target.closest("tr.sp")); }
+});
+
+function toggle(tr) {
+  if (!tr) return;
+  const nx = tr.nextElementSibling;
+  if (nx && nx.classList.contains("detail")) { nx.remove(); return; }
+  document.querySelectorAll("tr.detail").forEach(d => d.remove());
+  const s = rows[+tr.dataset.i], flags = [];
+  if (s.sil) flags.push("no recent record");
+  if (s.pa) flags.push("locality includes a protected area");
+  if (s.thr.length) flags.push("threats named at locality: " + s.thr.join(", "));
+  tr.insertAdjacentHTML("afterend", `<tr class="detail"><td colspan="7">
+    <p class="quote">${esc(s.e)}</p>
+    <div class="kv">
+      <div><span>Scientific name</span><i class="sci">${esc(s.n)}</i></div>
+      <div><span>As IUCN records it</span><i class="sci">${esc(s.iucn)}</i></div>
+      <div><span>Status</span>${s.l === "ne" ? "Never assessed" : "Data Deficient"}</div>
+      <div><span>Restriction tier</span>${s.t} — ${esc(s.b)}</div>
+      <div><span>Locality</span>${esc(s.s || "not specified")}</div>
+      <div><span>Look up</span>
+        <a href="https://www.iucnredlist.org/search?query=${encodeURIComponent(s.n)}"
+           target="_blank" rel="noopener">IUCN</a> ·
+        <a href="https://www.gbif.org/species/search?q=${encodeURIComponent(s.n)}"
+           target="_blank" rel="noopener">GBIF</a></div>
+    </div>
+    ${flags.length ? `<p class="desc-note"><strong>Description only:</strong>
+      ${esc(flags.join("; "))}. These fields were tested as predictors of threat and
+      did not hold — naming a site threat was in fact inversely associated. They are
+      shown for context and are not ranked on.</p>` : ""}
+  </td></tr>`);
+}
+</script>
+</body>
+</html>

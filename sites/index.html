@@ -650,6 +650,74 @@
     border-color:var(--accent); }
   .ntrc-F { font-style:italic; }
 
+  /* ---- rediscovery cards -------------------------------------------------
+     auto-fill rather than auto-fit: with a handful of results left after a
+     filter, auto-fit would stretch three cards across the full width and the
+     images with them. Cards keep their size and the row simply ends. */
+  .rdgrid { display:grid; gap:1px; background:var(--rule);
+    /* min(290px,100%) rather than a bare 290px: a fixed track cannot shrink, so on
+       a 320px phone the grid is wider than the padded column and the whole PAGE
+       scrolls sideways. The min() lets the single column collapse to what is left. */
+    grid-template-columns:repeat(auto-fill,minmax(min(290px,100%),1fr));
+    border:1px solid var(--rule); margin:.5rem 0 0; }
+  .rdcard { background:var(--surface); display:flex; flex-direction:column;
+    min-width:0; }
+  .rdcard a.rdlink { text-decoration:none; color:inherit; display:flex;
+    flex-direction:column; height:100%; }
+  .rdcard a.rdlink:hover .rdtitle { color:var(--accent); }
+  /* fixed aspect box: publisher images arrive at every ratio, and letting them
+     size themselves makes the grid rows ragged */
+  .rdthumb { aspect-ratio:16/9; overflow:hidden; background:var(--surface-2);
+    border-bottom:1px solid var(--rule); }
+  .rdthumb img { width:100%; height:100%; object-fit:cover; display:block; }
+  .rdbody { padding:.9rem 1rem 1rem; display:flex; flex-direction:column;
+    flex:1 1 auto; gap:.4rem; }
+  .rdsp { font-family:var(--serif); font-style:italic; font-size:.92rem;
+    color:var(--accent); margin:0; line-height:1.4; }
+  .rdspmore { font-family:var(--sans); font-style:normal; font-size:.7rem;
+    color:var(--ink-3); }
+  /* softer, because it is a weaker claim -- read from one article's text rather than
+     from its headline or corroborated by a second outlet */
+  .rdspsoft { color:var(--ink-3); font-size:.84rem; cursor:help; }
+  .rdpres { margin:.6rem 0 .9rem; padding-left:1.1rem; }
+  .rdpres li { font-size:.9rem; color:var(--ink-2); margin:.35rem 0; line-height:1.55; }
+  .rdpres strong { color:var(--ink); }
+  .rdtitle { font-family:var(--serif); font-size:1rem; line-height:1.35;
+    margin:0; color:var(--ink); transition:color .15s; }
+  .rddesc { font-family:var(--sans); font-size:.78rem; line-height:1.5;
+    color:var(--ink-2); margin:0; }
+  .rdmeta { font-family:var(--sans); font-size:.7rem; color:var(--ink-3);
+    margin:auto 0 0; padding-top:.5rem; display:flex; gap:.5rem;
+    flex-wrap:wrap; align-items:center; }
+  .rdpub { font-weight:600; color:var(--ink-2); }
+  .rdtag { font-family:var(--sans); font-size:.66rem; font-weight:600;
+    letter-spacing:.03em; padding:.1rem .4rem; border-radius:3px;
+    border:1px solid var(--rule-2); color:var(--ink-2); }
+  .rdtag-list { background:var(--accent-soft); color:var(--accent);
+    border-color:var(--accent); }
+  /* a card with no image must look chosen, not broken: the kicker rule stands
+     in for the missing thumbnail so the grid keeps a consistent top edge */
+  .rdcard.noimg .rdbody { border-top:3px solid var(--rule-2); }
+  .rdorder { font-family:var(--sans); font-size:.82rem; color:var(--ink-3);
+    margin:.2rem 0 .8rem; }
+  /* Outside the card's main <a>: a link inside a link is invalid HTML and the browser
+     un-nests it, which silently breaks the card's own click target. */
+  .rdarchive { font-family:var(--sans); font-size:.68rem; margin:0;
+    padding:0 1rem .8rem; }
+  .rdarchive a { color:var(--ink-3); text-decoration:none;
+    border-bottom:1px dotted var(--rule-2); }
+  .rdarchive a:hover { color:var(--accent); border-bottom-color:var(--accent); }
+  .rdsearch { display:flex; align-items:stretch; flex:1 1 16rem; min-width:0;
+    border:1px solid var(--rule-2); background:var(--surface); }
+  .rdsearch:focus-within { border-color:var(--accent); }
+  .rdsearchlab { font-family:var(--sans); font-size:.74rem; font-weight:600;
+    letter-spacing:.04em; text-transform:uppercase; color:var(--ink-3);
+    background:var(--surface-2); border-right:1px solid var(--rule-2);
+    padding:0 .7rem; display:flex; align-items:center; white-space:nowrap; }
+  /* the input already carries the shared .filters styling; strip only the border it
+     would otherwise draw inside this one */
+  .rdsearch input { border:0; flex:1 1 auto; min-width:0; background:transparent; }
+
   footer { border-top:1px solid var(--rule); background:var(--surface);
            padding:1.6rem 0 2.4rem; font-family:var(--sans); font-size:.78rem;
            color:var(--ink-3); }
@@ -699,6 +767,7 @@
   <a role="tab" href="/sites/" aria-selected="false" data-v="sites">Sites</a>
   <a role="tab" href="/methods/" aria-selected="false" data-v="methods">Methods &amp; Limits</a>
   <a role="tab" href="/new-species/" aria-selected="false" data-v="newtaxa">New Species</a>
+  <a role="tab" href="/rediscoveries/" aria-selected="false" data-v="redisc">Rediscoveries</a>
 </div></nav>
 
 <!-- ============================== OVERVIEW ============================== -->
@@ -1122,6 +1191,165 @@
   </div>
 </section>
 
+<!-- ============================ REDISCOVERIES =========================== -->
+<section class="view wrap" id="v-redisc" hidden>
+
+  <div class="ntlead">
+    <p class="ntkicker">Found again</p>
+    <!-- The figure counts REPORTS, not species. Only a minority of these headlines
+         name a binomial, so "131 species came back" would overclaim by a factor of six.
+         The sentence is built around the unit the number actually has. -->
+    <h2 class="nthead"><span class="nthero" id="rdHero">&mdash;</span> reports of a
+      species turning up after the searching had stopped.</h2>
+    <p class="ntsummary">A species is called lost when nobody has recorded it for years
+      and searching has stopped. Sometimes one turns up anyway. This page collects the
+      news reports of those returns, one card per story, gathered automatically from
+      conservation and science feeds and checked daily.</p>
+    <p class="ntsummary">It is a record of what was reported, not a verified register.
+      A headline is a lead, not an assessment &mdash; see the note below the list.</p>
+  </div>
+
+  <div id="rdCounts" class="counts"></div>
+
+  <p class="ntmore">
+    <a href="#rd-about">Where these come from, and what they do and don&rsquo;t prove
+      &darr;</a>
+  </p>
+
+  <h3 class="siteshead">The reports</h3>
+  <p class="rdorder">Newest first. Search runs over the species name, the headline, the
+    summary and the outlet &mdash; try a binomial, a country or a publisher.</p>
+  <div class="filters">
+    <!-- A visible label, not just a placeholder: placeholder text vanishes the moment
+         anyone types and reads as decoration until then, which is exactly why a search
+         box that was already here went unnoticed. -->
+    <label class="rdsearch">
+      <span class="rdsearchlab" aria-hidden="true">Search</span>
+      <input id="rdQ" type="search"
+             placeholder="e.g. Chelonoidis, Madagascar, Mongabay&hellip;"
+             aria-label="Search the reports">
+    </label>
+    <select id="rdF" aria-label="Filter the reports">
+      <option value="">All reports</option>
+      <option value="sp">Naming a species</option>
+      <option value="list">On a TBG list</option>
+      <option value="multi">Covered by several outlets</option>
+    </select>
+  </div>
+  <p id="rdShowing" style="font-family:var(--sans);font-size:.82rem;
+     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
+  <div id="rdGrid" class="rdgrid"></div>
+
+  <div id="rd-about" class="ntabout">
+    <h3 class="siteshead">Where these come from, and what they do and don&rsquo;t prove</h3>
+
+    <details class="ntdisc" open>
+      <summary>What is on this page</summary>
+      <p>Journal alerts, conservation outlets and news searches run across
+        <strong>fourteen national editions</strong> are read once a day. Any item whose
+        text describes a species being found again is kept, and matched against the 6,715
+        names this project tracks, so where a report names a species we can say whether
+        it is one we were already following.</p>
+      <p>The national editions matter more than they sound. A news search returns a
+        different set of results in each country, and running only the United States
+        edition missed 60 of 134 stories on a single query &mdash; among them Wallace's
+        giant bee, the golden mole refound in South Africa and Attenborough's echidna.
+        Rediscovery happens mostly outside the United States, so a US-only search is
+        close to the worst way to look for it. The searches are still English-language
+        only, which remains a real gap.</p>
+      <p>Wire stories are syndicated, so the same rediscovery arrives from several
+        outlets under several headlines. Reports are grouped by how much wording they
+        share and shown once, with the number of outlets that carried the story. That
+        count is a measure of attention, not of evidence.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>How far back this goes, and why the recent years look busier</summary>
+      <p>The oldest report here is from August 2020 and the newest from July 2026. The
+        recent years hold far more of them &mdash; roughly three quarters fall in 2025 and
+        2026 &mdash; and <strong>that is a property of the search, not of the world.</strong>
+        A news index surfaces recent material and only a thinning sample of older
+        material, so nothing on this page should be read as rediscoveries becoming more
+        frequent.</p>
+      <p>The rate at which species are actually found again is a different question, and
+        one this page cannot answer. The archive only grows forwards from here, so
+        coverage will be even across future years and permanently sparse before 2025.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>How a report gets a species name &mdash; and the two grades of it</summary>
+      <p>Every name shown has been checked against the GBIF backbone taxonomy; a phrase
+        that merely looks like a Latin binomial is not enough. But one article often
+        reports several rediscoveries at once, and a headline such as &ldquo;Five lost
+        bird species rediscovered&rdquo; names none of them, so the article text is read
+        as well.</p>
+      <p>The two are not equally certain and are not shown the same way. A name in
+        <span class="rdsp" style="font-size:inherit">this colour</span> came from the
+        headline or summary, or was carried by two independent outlets. A name in
+        <span class="rdspsoft">grey, after &ldquo;also names&rdquo;,</span> was read out
+        of a single article's text &mdash; where a species mentioned for comparison can
+        look much like one that was refound. Treat the grey names as leads.</p>
+      <p>Only the names are kept. The article text is read and discarded.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>What happens when these articles disappear</summary>
+      <p>News sites reorganise, paywall and delete, and image paths churn faster than the
+        articles do. Every card here depends on a page nobody at this project controls,
+        so what can be preserved is preserved &mdash; and it is worth being exact about
+        how much that is, because the three parts are not equally safe.</p>
+      <!-- Figures written at runtime from the payload. Stating them in prose would put
+           three numbers on the page that drift every night the feed runs, and this
+           section's whole purpose is to be precise about coverage. -->
+      <ul class="rdpres">
+        <li><strong>The words &mdash; all of them.</strong> Headline, summary, outlet and
+          date are stored here and are what each card is built from. No card needs its
+          article to be alive in order to describe it.</li>
+        <li><strong>The picture &mdash; <span id="rdPresImg">most of them</span>.</strong>
+          Preview images are copied to this site and served from it, so they outlive the
+          publisher's own copy. Where that copy failed the card still loads the original,
+          and those are the ones that will go blank one day.</li>
+        <li><strong>A link that still works &mdash;
+          <span id="rdPresArc">seldom</span>.</strong> Where the Internet Archive already
+          holds a snapshot, the card offers it alongside the original. Most of these
+          articles have never been archived by anyone, and this page does not submit
+          them.</li>
+      </ul>
+      <p>The article text itself <em>is</em> read &mdash; that is how the species in a
+        roundup get identified &mdash; but it is <strong>discarded immediately and never
+        stored</strong>. Keeping a copy would be republishing someone else's work. The
+        job of this page is to send readers to the journalism, not to stand in for it.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>Why some cards are text only</summary>
+      <p>Where a feed gives a publisher&rsquo;s own page, the card shows that
+        page&rsquo;s headline image and summary. Where it gives a news-aggregator link
+        instead, the destination has to be resolved before any preview exists; when that
+        fails the card keeps the headline, outlet and date and drops the image rather
+        than showing an empty frame.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>What a report here does not establish</summary>
+      <p>These are news items. A rediscovery is only settled by a specimen, a photograph
+        or a sequence that specialists accept, published somewhere durable &mdash; and
+        some reports on this page will not survive that test. Others describe a
+        population found by people who never considered it lost in the first place.</p>
+      <p>Nothing here feeds the register or the counts elsewhere on this site. Those
+        figures come from the IUCN Red List and from checked sources, and a press
+        report has never been allowed to change one.</p>
+    </details>
+
+    <details class="ntdisc">
+      <summary>Corrections</summary>
+      <p>If a species on this page was never lost, if a rediscovery has since been
+        retracted, or if one is missing, please say so:
+        <a href="mailto:business@biodiversitygroup.org?subject=Rediscoveries%20page">business@biodiversitygroup.org</a>.</p>
+    </details>
+  </div>
+</section>
+
 <!-- =============================== METHODS ============================== -->
 <section class="view wrap methods" id="v-methods" hidden>
   <div class="mbody">
@@ -1407,7 +1635,8 @@ function repaintCanvases() {
    indexable. The pages are byte-identical apart from their title and canonical
    tag; this router reads the path and opens the matching view. */
 const ROUTES = {overview:"/", register:"/register/", map:"/map/",
-                sites:"/sites/", methods:"/methods/", newtaxa:"/new-species/"};
+                sites:"/sites/", methods:"/methods/", newtaxa:"/new-species/",
+                redisc:"/rediscoveries/"};
 const viewForPath = p => {
   p = p.replace(/\/index\.html$/, "/");
   if (!p.endsWith("/")) p += "/";
@@ -1434,6 +1663,7 @@ function showView(name, push) {
   // fetched on first arrival rather than at boot. Not gated on DATA: this list is a
   // separate effort and does not depend on the register's data.
   if (name === "newtaxa") ensureReptiles();
+  if (name === "redisc") ensureRedisc();
 }
 
 
@@ -1550,6 +1780,125 @@ function ntRender() {
          — narrow the filters to see the rest. Ordered most-restricted first.</p>`
       : "")
     : "";
+}
+
+/* ========================= REDISCOVERIES (news layer) ========================= */
+/* A separate payload again, and a separate claim. Everything else on this site is
+   built from the Red List and from checked sources; this is press coverage, so it is
+   loaded, counted and captioned apart from them and feeds nothing back. */
+let RD = null, rdLoading = false;
+
+function ensureRedisc() {
+  if (RD || rdLoading) { if (RD) rdRender(); return; }
+  rdLoading = true;
+  fetch("/rediscoveries.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
+    RD = d; rdLoading = false; rdBoot();
+  }).catch(() => {
+    rdLoading = false;
+    $("#rdGrid").innerHTML =
+      '<p class="siteslede">Could not load rediscoveries.json.</p>';
+  });
+}
+
+function rdBoot() {
+  const c = RD.counts;
+  $("#rdHero").textContent = c.stories.toLocaleString();
+  $("#rdCounts").innerHTML = [
+    ["Reports", c.stories.toLocaleString(), "one card per story, duplicates merged"],
+    /* Species, not cards. One article often reports several rediscoveries at once, so
+       counting cards that name something would undercount the animals badly. */
+    ["Species identified", (c.distinct_species || 0).toLocaleString(),
+     "distinct binomials, each checked against GBIF"],
+    ["Already on a TBG list", (c.on_tbg_list || 0).toLocaleString(),
+     "species this project was tracking"],
+    ["Carried by several outlets", (c.syndicated || 0).toLocaleString(),
+     "the stories that travelled"]
+  ].map(([k, v, sub]) =>
+    `<div class="count"><b>${v}</b><span>${k}</span>` +
+    `<em class="csub">${sub}</em></div>`).join("");
+
+  /* Preservation coverage, stated from the data rather than asserted in prose. The
+     wording adapts to the actual ratio, so a bad night reads as a bad night instead of
+     leaving "most of them" on a page where it is no longer true. */
+  const img = c.image_local || 0, imgTot = c.with_image || 0, arc = c.archived || 0;
+  const share = imgTot ? img / imgTot : 0;
+  // no em-dash inside the span; the sentence already supplies one immediately before it
+  $("#rdPresImg").textContent =
+    share === 1
+      ? `all ${img.toLocaleString()} of them`
+      : `${share >= 0.9 ? "nearly all, " : "only "}` +
+        `${img.toLocaleString()} of ${imgTot.toLocaleString()}`;
+  $("#rdPresArc").textContent = arc
+    ? `only ${arc.toLocaleString()} of ${c.stories.toLocaleString()}`
+    : "none of them yet";
+
+  ["#rdQ", "#rdF"].forEach(s => { $(s).oninput = rdRender; $(s).onchange = rdRender; });
+  rdRender();
+}
+
+function rdRender() {
+  if (!RD) return;
+  const q = ($("#rdQ").value || "").trim().toLowerCase();
+  const f = $("#rdF").value;
+  const cards = RD.cards.filter(c =>
+    (f !== "sp" || (c.species || []).length) &&
+    (f !== "list" || c.on_list) &&
+    (f !== "multi" || c.outlets > 1) &&
+    (!q || (c.title + " " + (c.species || []).join(" ") + " " +
+            c.publisher + " " + c.desc).toLowerCase().includes(q)));
+
+  $("#rdShowing").textContent =
+    `Showing ${cards.length.toLocaleString()} of ${RD.cards.length.toLocaleString()} reports` +
+    (cards.length ? "" : " — nothing matches this search.");
+
+  $("#rdGrid").innerHTML = cards.map(c => {
+    const img = c.image
+      ? `<div class="rdthumb"><img src="${esc(c.image)}" alt="" loading="lazy"
+           referrerpolicy="no-referrer"
+           onerror="this.closest('.rdthumb').remove()"></div>`
+      : "";
+    const date = c.date ? new Date(c.date).toLocaleDateString(undefined,
+      {year: "numeric", month: "short", day: "numeric"}) : "";
+    return `<article class="rdcard${c.image ? "" : " noimg"}">
+      <a class="rdlink" href="${esc(c.link)}" target="_blank" rel="noopener">
+        ${img}
+        <div class="rdbody">
+          ${(() => {
+            /* Two tiers, shown differently because they are not equally certain.
+               A firm name came from the headline or summary, or two outlets both
+               carried it. A soft name was read out of one article's text, where a
+               species mentioned for comparison can look like one that was refound. */
+            const firm = c.species_firm || [];
+            const soft = (c.species || []).filter(s => !firm.includes(s));
+            if (!firm.length && !soft.length) return "";
+            const cap = 5;
+            return `<p class="rdsp">${firm.slice(0, cap).map(esc).join(", ")}${
+              firm.length > cap
+                ? ` <span class="rdspmore">+${firm.length - cap}</span>` : ""}${
+              soft.length
+                ? `${firm.length ? " " : ""}<span class="rdspsoft"
+                     title="Read from the article text — may include a species mentioned in passing"
+                     >${firm.length ? "also names " : "names "}${
+                       soft.slice(0, cap).map(esc).join(", ")}${
+                       soft.length > cap ? ` +${soft.length - cap}` : ""}</span>`
+                : ""}</p>`;
+          })()}
+          <h4 class="rdtitle">${esc(c.title)}</h4>
+          ${c.desc ? `<p class="rddesc">${esc(c.desc)}</p>` : ""}
+          <p class="rdmeta">
+            ${c.publisher ? `<span class="rdpub">${esc(c.publisher)}</span>` : ""}
+            ${date ? `<span>${esc(date)}</span>` : ""}
+            ${c.outlets > 1
+              ? `<span class="rdtag">${c.outlets} outlets</span>` : ""}
+            ${c.on_list
+              ? `<span class="rdtag rdtag-list">${esc(c.on_list)}</span>` : ""}
+          </p>
+        </div>
+      </a>
+      ${c.wayback ? `<p class="rdarchive"><a href="${esc(c.wayback)}"
+         target="_blank" rel="noopener">Archived copy</a></p>` : ""}
+    </article>`;
+  }).join("");
 }
 
 document.querySelectorAll('.navbar [role="tab"]').forEach(a => a.onclick = ev => {
