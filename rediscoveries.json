@@ -1,11 +1,11 @@
 {
 "built": "2026-08-11",
 "counts": {
-"stories": 118,
-"raw_items": 237,
-"with_species": 72,
-"distinct_species": 145,
-"distinct_species_firm": 28,
+"stories": 119,
+"raw_items": 238,
+"with_species": 73,
+"distinct_species": 146,
+"distinct_species_firm": 29,
 "multi_species_cards": 27,
 "with_image": 117,
 "syndicated": 49,
@@ -18,7 +18,7 @@
 "newest": "Tue, 11 Aug 2026",
 "tracked_names": 6709,
 "image_local": 110,
-"archived": 45
+"archived": 46
 },
 "cards": [
 {
@@ -3100,6 +3100,30 @@
 "link": "https://thewest.com.au/technology/science/citizen-science-app-leads-to-rediscovery-of-extinct-species--c-21344775"
 }
 ]
+},
+{
+"title": "Scientists rediscover endangered Andean toad in Ecuador",
+"species": [
+"Rhaebo olallai"
+],
+"species_firm": [
+"Rhaebo olallai"
+],
+"on_list": "",
+"detail": "",
+"publisher": "Mongabay",
+"date": "Fri, 30 Jan 2015",
+"ts": 1422631020,
+"first_seen": "2026-08-11",
+"link": "https://news.mongabay.com/2015/01/scientists-rediscover-endangered-andean-toad-in-ecuador/",
+"image": "",
+"wayback": "http://web.archive.org/web/20260516074950/https://news.mongabay.com/2015/01/scientists-rediscover-endangered-andean-toad-in-ecuador/",
+"desc": "The Tandayapa Andean toad was described in 1970 from a single individual found in Pichincha Province, Ecuador, and nothing was seen of it again. Forty-two years later a team refound it at R\u00edo Manduriacu \u2014 the reserve that is now its only known habitat, and whe",
+"citation": "Reported in Amphibian & Reptile Conservation. Mongabay, 30 January 2015.",
+"kind": "",
+"note": "Described as Andinophryne olallai; the genus was later folded into Rhaebo, so the same animal appears under both names.",
+"outlets": 1,
+"also": []
 }
 ]
 }
