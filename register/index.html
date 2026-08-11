@@ -433,7 +433,8 @@
   .counts { display:grid; gap:1px; background:var(--rule);
             grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
             border:1px solid var(--rule); margin:2.2rem 0; }
-  .count { background:var(--surface); padding:1.1rem 1.2rem; }
+  /* centred inside the cell, not just as a block -- the figure and its label both */
+  .count { background:var(--surface); padding:1.1rem 1.2rem; text-align:center; }
   .count b { display:block; font-family:var(--mono); font-size:2rem; font-weight:600;
              letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
   .count span { font-family:var(--sans); font-size:.74rem; color:var(--ink-2);
