@@ -346,6 +346,56 @@
             font-family:var(--sans); font-size:var(--fs-small); padding:.4rem .6rem;
             border-radius:3px; line-height:1.35; }
 
+  /* ---- lost species page ------------------------------------------------ */
+  /* Centred on the CONTAINER, not element by element. Anything added to this page
+     later inherits it instead of quietly arriving left-aligned. This is a narrative
+     page rather than a register, so centred running text suits it — the tables and
+     evidence sentences elsewhere on the site are the reason those stay left. */
+  .lostbody { text-align:center; }
+  /* A measure column without margin:auto reads as left-aligned with dead space down
+     the right, which is the single easiest way to reproduce the complaint. */
+  .lostbody .prose { max-width:64ch; margin:0 auto; }
+  .lostbody h3 { font-size:1.32rem; margin:var(--s4) 0 var(--s2); }
+  .lostbody h4 { font-size:1.05rem; margin:0 0 .15rem; }
+  .lostbody p { margin:.75rem auto 0; }
+  .lostlede { font-size:1.14rem; color:var(--ink-2); margin-top:var(--s2) !important; }
+  .lostbody .sci { color:var(--ink-3); font-size:.9rem; margin-top:0 !important; }
+
+  .loststats { display:flex; justify-content:center; flex-wrap:wrap; gap:var(--s2);
+               margin:var(--s4) 0 var(--s3); }
+  .loststat { background:var(--surface); border:1px solid var(--rule);
+              padding:.85rem 1.2rem; min-width:150px; }
+  .loststat b { display:block; font-family:var(--mono); font-size:1.6rem;
+                font-variant-numeric:tabular-nums; color:var(--ink); line-height:1.1; }
+  .loststat span { font-family:var(--sans); font-size:var(--fs-micro);
+                   text-transform:uppercase; letter-spacing:.1em; color:var(--ink-3); }
+
+  #lostCanvas { display:block; width:100%; height:auto; }
+  /* Flex needs justify-content; text-align does nothing to it. */
+  .lostlegend { display:flex; justify-content:center; align-items:center; gap:1rem;
+                flex-wrap:wrap; font-family:var(--sans); font-size:var(--fs-micro);
+                color:var(--ink-3); margin:var(--s2) 0 0; }
+  .lostlegend .dots { display:flex; align-items:flex-end; gap:.55rem; }
+  .lostlegend .dots i { display:block; border-radius:50%; border:1px solid var(--t4);
+                        background:color-mix(in srgb, var(--t3) 45%, transparent); }
+  #lostTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
+             transition:opacity .12s; background:var(--ink); color:var(--ground);
+             font-family:var(--sans); font-size:var(--fs-small); padding:.5rem .7rem;
+             border-radius:3px; line-height:1.4; text-align:left; max-width:270px; }
+
+  .lostcards { display:grid; gap:var(--s3); margin:var(--s3) 0 var(--s4);
+               grid-template-columns:repeat(auto-fit, minmax(270px, 1fr)); }
+  .lostcard { background:var(--surface); border:1px solid var(--rule);
+              border-top:3px solid var(--t3); padding:1.3rem 1.4rem;
+              display:flex; flex-direction:column; align-items:center; }
+  .lostcard p { font-family:var(--sans); font-size:.88rem; color:var(--ink-2); }
+  .lostcard-redacted { border-top-color:var(--ink-3); }
+  .lostcite { font-size:.78rem !important; color:var(--ink-3) !important;
+              margin-top:auto !important; padding-top:.9rem; }
+  .lostsource p { font-family:var(--sans); font-size:.8rem; color:var(--ink-3); }
+  .lostbody .warn { text-align:left; max-width:66ch; margin-inline:auto; }
+  .lostbody .warn h3 { text-align:center; margin-top:0; }
+
   /* ---- sites page ------------------------------------------------------- */
   .siteshead { font-size:var(--fs-h2); margin:var(--s5) 0 var(--s1); }
   .siteslede { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
@@ -786,6 +836,7 @@
   <a role="tab" href="/sites/" aria-selected="false" data-v="sites">Sites</a>
   <a role="tab" href="/methods/" aria-selected="false" data-v="methods">Methods &amp; Limits</a>
   <a role="tab" href="/new-species/" aria-selected="false" data-v="newtaxa">New Species</a>
+  <a role="tab" href="/lost-species/" aria-selected="false" data-v="lost">Lost Species</a>
   <a role="tab" href="/rediscoveries/" aria-selected="false" data-v="redisc">Rediscoveries</a>
 </div></nav>
 
@@ -1215,6 +1266,154 @@
 </section>
 
 <!-- ============================ REDISCOVERIES =========================== -->
+<!-- ============================ LOST SPECIES ============================= -->
+<section class="view wrap" id="v-lost" hidden>
+  <div class="lostbody">
+
+  <div class="prose">
+    <p class="eyebrow">The Biodiversity Group</p>
+    <h2 style="font-size:var(--fs-h2)">Species nobody has seen for a very long time</h2>
+    <p class="lostlede">Two thousand one hundred and thirty-five species that have not
+      been recorded in years — in some cases in centuries — and that nobody has been able
+      to declare extinct. They are not gone. They are <em>unaccounted for</em>, which is
+      a different thing, and the difference is where the work is.</p>
+  </div>
+
+  <div class="loststats" id="lostStats"></div>
+
+  <div class="prose">
+    <h3>Where they were last seen</h3>
+    <p>Each circle is a country or region, sized by how many lost species have their
+      range recorded there. Hover or tap for the breakdown.</p>
+  </div>
+
+  <div class="mapwrap">
+    <canvas id="lostCanvas" role="img"
+            aria-label="World map with circles sized by the number of lost species
+            recorded from each country or region. The counts are listed in the
+            table below the map."></canvas>
+  </div>
+  <div class="lostlegend" id="lostLegend"></div>
+  <div id="lostTip" aria-hidden="true"></div>
+
+  <div class="warn">
+    <h3>What this map is not</h3>
+    <p>A circle sits at a country's centre point, not at a locality. It says
+      <strong>"this many lost species have their range given as this country"</strong> —
+      it is not a sighting, not a range map, and not a search area. Large countries
+      accumulate large circles partly because they are large.</p>
+    <p>The list is also uneven by design. It inherits the Re:wild / IUCN&nbsp;SSC lost
+      species list, which is far better resolved for vertebrates than for insects,
+      plants or molluscs. Reptiles, fish and amphibians make up more than half of it.
+      Reading the map as a picture of the world's lost biodiversity would mistake the
+      shape of the <em>list</em> for the shape of the <em>problem</em>.</p>
+  </div>
+
+  <div class="prose">
+    <h3>Why some species come back and others never do</h3>
+    <p>Rediscovery is not random, and it is not simply a matter of looking harder.
+      <a href="https://onlinelibrary.wiley.com/doi/10.1111/gcb.17107" target="_blank"
+      rel="noopener">Lindken and colleagues</a> examined every lost tetrapod they could
+      trace and found that the species which come back share a profile: they tend to be
+      <strong>large, conspicuous mammals and birds</strong>, tolerant of a range of
+      habitats, living near people, in countries with money for fieldwork.</p>
+    <p>The species that stay lost are the mirror image. Narrow range. Small, cryptic,
+      nocturnal, or underground. And — the finding that matters most here — living
+      somewhere that is <strong>hard or dangerous to reach</strong>, so nobody has
+      searched. A species can remain "lost" for a century without any evidence that it
+      has declined at all. It can simply be that no qualified person has been to the
+      right ridge in the right month.</p>
+    <p>Their overall estimate is that roughly <strong>a quarter</strong> of lost species
+      are probably already extinct. Which is a bleak number read one way, and an
+      extraordinary one read the other: it implies that most of the species on this map
+      are still out there.</p>
+    <p>They also found that tetrapods are being <strong>lost faster than they are being
+      found again</strong> — rediscovery is slowing for amphibians, birds and mammals,
+      while reptiles are being lost quickly. The gap is widening, and it will not be
+      closed by the kind of survey that finds large animals near roads.</p>
+  </div>
+
+  <div class="prose">
+    <h3>What The Biodiversity Group does about it</h3>
+    <p>TBG works in the places the profile above predicts will be overlooked: steep,
+      wet, unglamorous forest, a long way from a field station, looking for small animals
+      at night. Two of those records are on this map.</p>
+  </div>
+
+  <div class="lostcards">
+    <article class="lostcard">
+      <p class="eyebrow">Ecuador &middot; 2019</p>
+      <h4>Fugler's Shadow Snake</h4>
+      <p class="sci">Emmochliophis fugleri</p>
+      <p>Known from a single specimen collected in 1966 and never seen again. On
+        7&nbsp;March&nbsp;2019, at the Río Manduriacu Reserve in Imbabura, Scott
+        Trageser and Ross Maynard found one — the second individual of this species
+        ever recorded, and the first photographed alive. The rediscovery was published
+        in 2021, <strong>54 years</strong> after the first.</p>
+      <p>The paper recommends the species be listed Critically Endangered, because the
+        reserve where it was found is under imminent threat from mining. The IUCN still
+        lists it as <strong>Data Deficient</strong>, assessed in 2016 and not revisited
+        since it was found again.</p>
+      <p class="lostcite"><a
+        href="https://checklist.pensoft.net/article/60009/" target="_blank"
+        rel="noopener">Maynard et al. 2021, <em>Check List</em> 17(1)</a></p>
+    </article>
+
+    <article class="lostcard">
+      <p class="eyebrow">Vietnam &middot; 2014</p>
+      <h4>A land snail found in a photograph</h4>
+      <p class="sci">Myxostoma petiverianum</p>
+      <p>Scott Trageser photographed invertebrates on Hòn Cau, an island off south-east
+        Vietnam, and posted them to iNaturalist hoping somebody could name them. More
+        than a year later the malacologist Junn Kitt Foon recognised one from its shell
+        and operculum: a species not recorded in <strong>over a hundred years</strong>,
+        and one no living individual had ever been photographed.</p>
+      <p>It was found twice — once in the field, and once in a photo library, by someone
+        on the other side of the world who knew what he was looking at.</p>
+      <p class="lostcite">Trageser, Wiscovitch &amp; Foon 2018, <em>The Festivus</em>
+        50(2): 110–113</p>
+    </article>
+
+    <article class="lostcard lostcard-redacted">
+      <p class="eyebrow">Project Redacted</p>
+      <h4>One we have found and cannot name</h4>
+      <p>There is a third. A species on lists like this one has been found again by this
+        team, and it is not on the map above, because saying where it is — or what it is
+        — would put it at risk before protection is in place.</p>
+      <p>That caution is not theatre. For a species reduced to one known site, a public
+        announcement is a map for collectors, and the trade in rare reptiles and
+        amphibians runs on exactly this kind of news. The record is documented, the
+        evidence is held, and it will be published when publishing it is safe.</p>
+      <p class="lostcite">Announcement pending</p>
+    </article>
+  </div>
+
+  <div class="prose">
+    <h3>The list is not a finished thing</h3>
+    <p>Two open questions sit on it, and both need a taxonomist rather than a
+      spreadsheet. Fifteen names are treated by one authority as valid species and by
+      another as synonyms of something else — and when a narrow endemic is absorbed
+      into a widespread species, it leaves conservation attention by clerical means
+      rather than by evidence. A further 149 were removed from the source list by IUCN
+      SSC specialists for reasons that were never recorded per species: some because
+      they had been found, some because nobody had ever looked. Those two reasons point
+      in opposite directions, and the difference is the whole argument.</p>
+    <p>Species from this list that have turned up again in the news are collected on the
+      <a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a> page.</p>
+  </div>
+
+  <div class="prose lostsource">
+    <p class="eyebrow">Sources</p>
+    <p>Compiled from the Re:wild / IUCN&nbsp;SSC lost species list, following the
+      definitions of Long &amp; Rodríguez 2022 (<em>Oryx</em> 56(4)), and reconciled
+      against Lindken et al. 2024 (<em>Global Change Biology</em> 30:e17107) —
+      additions, rediscoveries and specialist exclusions all applied. Occurrence dates
+      cross-checked against GBIF. <span id="lostUnmapped"></span></p>
+  </div>
+
+  </div>
+</section>
+
 <section class="view wrap" id="v-redisc" hidden>
 
   <div class="ntlead">
@@ -1667,7 +1866,7 @@ function repaintCanvases() {
    tag; this router reads the path and opens the matching view. */
 const ROUTES = {overview:"/", register:"/register/", map:"/map/",
                 sites:"/sites/", methods:"/methods/", newtaxa:"/new-species/",
-                redisc:"/rediscoveries/"};
+                lost:"/lost-species/", redisc:"/rediscoveries/"};
 const viewForPath = p => {
   p = p.replace(/\/index\.html$/, "/");
   if (!p.endsWith("/")) p += "/";
@@ -1695,8 +1894,152 @@ function showView(name, push) {
   // separate effort and does not depend on the register's data.
   if (name === "newtaxa") ensureReptiles();
   if (name === "redisc") ensureRedisc();
+  // Same reason as the register map: a hidden canvas has zero width, so the lost-species
+  // map can only be laid out once its section is visible.
+  if (name === "lost") ensureLost().then(ok => { if (ok) drawLost(); });
 }
 
+
+/* ============================== LOST SPECIES =================================
+   A separate payload and a separate map from the register's. Deliberately simpler:
+   one circle per country or region, area proportional to count. No pan, no zoom, no
+   binning -- there are 238 places, not 21,786 points, and a plain proportional-symbol
+   map is the honest encoding for "how many lost species are recorded from here".
+
+   ONE HUE, not a palette. The quantity being shown is a magnitude, so it gets a
+   sequential ramp; giving each taxonomic group its own colour would put twelve
+   categorical hues on a world map and make neither the group nor the count readable.
+   The group breakdown lives in the tooltip, where it can be read as text. */
+let LOST = null, lostLoading = false, lostGeom = null;
+
+function ensureLost() {
+  if (LOST) return Promise.resolve(true);
+  if (lostLoading) return Promise.resolve(false);
+  lostLoading = true;
+  // Plain path with no-cache, the same as reptiles.json and rediscoveries.json, NOT
+  // stamped(). stamped() reads DATA.meta.built, which couples this page to the 1.6 MB
+  // register payload: it is declared further down the file and throws outright if DATA
+  // has not loaded, and the throw happened BEFORE this function returned a promise, so
+  // the .catch() below never ran, lostLoading stayed true, and every later attempt
+  // returned false. A page that silently disables itself is worse than one that fails.
+  return fetch("/lost.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
+    LOST = d;
+    renderLostStats();
+    return true;
+  }).catch(e => {
+    const s = $("#lostStats");
+    if (s) s.innerHTML = '<p class="siteslede">Could not load lost.json.</p>';
+    return false;
+  }).finally(() => { lostLoading = false; });
+}
+
+function renderLostStats() {
+  const m = LOST.meta, byc = m.by_class || {};
+  const cells = [
+    [m.n_species.toLocaleString(), "species unaccounted for"],
+    [(byc["long-lost"] || 0).toLocaleString(), "lost over 50 years"],
+    [m.n_places.toLocaleString(), "countries &amp; regions"],
+    [m.oldest_record || "—", "oldest last record"],
+  ];
+  $("#lostStats").innerHTML = cells.map(
+    ([n, l]) => `<div class="loststat"><b>${n}</b><span>${l}</span></div>`).join("");
+
+  // Say what is missing from the map rather than letting the map imply it is everything.
+  const u = $("#lostUnmapped");
+  if (u && m.n_unmapped) {
+    u.textContent = `${m.n_unmapped} species have no country specific enough to place `
+      + `on the map and are counted in the totals but not drawn.`;
+  }
+}
+
+function drawLost() {
+  const cv = $("#lostCanvas");
+  if (!LOST || !cv) return;
+  const cssW = cv.parentElement.clientWidth;
+  const cssH = Math.round(cssW / 2);               // 360x180 degrees, equirectangular
+  const dpr = Math.min(devicePixelRatio || 1, 2);
+  cv.width = Math.round(cssW * dpr);
+  cv.height = Math.round(cssH * dpr);
+  cv.style.height = cssH + "px";
+  const g = cv.getContext("2d");
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, cssW, cssH);
+
+  const X = lo => (lo + 180) / 360 * cssW;
+  const Y = la => (90 - la) / 180 * cssH;
+  const cs = getComputedStyle(document.documentElement);
+  const surf2 = cs.getPropertyValue("--surface-2").trim();
+
+  g.fillStyle = surf2;
+  g.strokeStyle = cs.getPropertyValue("--rule-2").trim();
+  g.lineWidth = 1;
+  (LOST.land || []).forEach(ring => {
+    g.beginPath();
+    ring.forEach(([lo, la], i) => i ? g.lineTo(X(lo), Y(la)) : g.moveTo(X(lo), Y(la)));
+    g.closePath(); g.fill(); g.stroke();
+  });
+
+  // AREA proportional to count, not radius. Scaling the radius by the value makes a
+  // 270-species circle look eleven times a 25-species one instead of three times, which
+  // is the classic way a bubble map lies.
+  const max = Math.max(...LOST.places.map(p => p.n));
+  const rOf = n => 3 + Math.sqrt(n / max) * (cssW / 26);
+  const hits = [];
+  // Largest first so a big circle never hides a small one from the cursor.
+  const ordered = LOST.places.slice().sort((a, b) => b.n - a.n);
+  ordered.forEach(p => {
+    const x = X(p.lon), y = Y(p.lat), r = rOf(p.n);
+    g.beginPath(); g.arc(x, y, r, 0, 6.2832);
+    g.fillStyle = "color-mix(in srgb, " + cs.getPropertyValue("--t3").trim()
+                + " 42%, transparent)";
+    g.fill();
+    g.strokeStyle = cs.getPropertyValue("--t4").trim();
+    g.lineWidth = 1; g.stroke();
+    hits.push({x, y, r, p});
+  });
+  // Smallest first for hit-testing, so a small circle inside a large one still wins.
+  hits.sort((a, b) => a.r - b.r);
+  lostGeom = {hits, cssW, cssH};
+
+  const steps = [10, 100, max];
+  $("#lostLegend").innerHTML =
+    `<span>Lost species recorded from each country or region</span>`
+    + `<span class="dots">` + steps.map(n => {
+        const d = Math.round(rOf(n) * 2);
+        return `<i style="width:${d}px;height:${d}px"></i>`;
+      }).join("") + `</span>`
+    + `<span>` + steps.map(n => n === max ? n : n).join(" &middot; ") + `</span>`;
+}
+
+(function lostHover() {
+  const tip = () => $("#lostTip");
+  const at = ev => {
+    const cv = $("#lostCanvas");
+    if (!cv || !lostGeom) return null;
+    const b = cv.getBoundingClientRect();
+    const x = ev.clientX - b.left, y = ev.clientY - b.top;
+    return lostGeom.hits.find(h => (h.x - x) ** 2 + (h.y - y) ** 2 <= h.r * h.r) || null;
+  };
+  document.addEventListener("pointermove", ev => {
+    const t = tip(); if (!t) return;
+    if (!ev.target.closest || !ev.target.closest("#lostCanvas")) {
+      t.style.opacity = 0; return;
+    }
+    const h = at(ev);
+    if (!h) { t.style.opacity = 0; return; }
+    const p = h.p;
+    const grp = Object.entries(p.grp || {}).sort((a, b) => b[1] - a[1]).slice(0, 4)
+                  .map(([k, v]) => `${k} ${v}`).join(" &middot; ");
+    t.innerHTML = `<strong>${p.place}</strong> — ${p.n} lost species`
+      + (grp ? `<br>${grp}` : "")
+      + (p.oldest ? `<br>oldest last record ${p.oldest}` : "");
+    t.style.opacity = 1;
+    t.style.left = Math.min(ev.clientX + 14, innerWidth - 290) + "px";
+    t.style.top = (ev.clientY + 16) + "px";
+  }, {passive: true});
+})();
+
+addEventListener("resize", () => { if (LOST && !$("#v-lost").hidden) drawLost(); });
 
 /* ================= DESCRIBED BUT NEVER ASSESSED (reptile list) ================= */
 let NT = null, ntLoading = false;
