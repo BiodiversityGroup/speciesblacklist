@@ -7,6 +7,16 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://speciesblacklist.org/black-list/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://speciesblacklist.org/get-involved/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://speciesblacklist.org/register/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

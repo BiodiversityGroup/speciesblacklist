@@ -215,8 +215,14 @@
      The submenu links are real anchors present in the HTML at all times -- only
      visually hidden -- so they stay crawlable. Search indexing is deliberately
      on for this site and a JS-built menu would have cost seven of eight pages. */
-  .navgroup { position:relative; }
-  .navtoggle { font-family:inherit; }
+  /* The two dropdown labels are <button>, the rest are <a>, and a button does not inherit
+     the anchors' line metrics or box model. Left alone they sat a couple of pixels off the
+     others and the bar looked crooked. Matching line-height and making the group a flex
+     item whose button fills it puts every label on one baseline. */
+  .navgroup { position:relative; display:flex; align-items:stretch; }
+  .navitem { line-height:1.45; }
+  .navtoggle { font-family:inherit; font-size:1rem; line-height:1.45;
+               display:flex; align-items:center; }
   .navtoggle .caret { font-size:.7em; margin-left:.35em; display:inline-block;
                       transition:transform .15s; }
   .navtoggle[aria-expanded="true"] .caret { transform:rotate(180deg); }
@@ -482,6 +488,40 @@
   /* The base table rule sets min-width:720px, so like #ntTable this scrolls inside
      its own box rather than pushing the whole page sideways on a phone. */
   #longestWrap { overflow-x:auto; margin:var(--s2) 0 var(--s3); }
+  /* ---- site overview cards ------------------------------------------------ */
+  .homecards { display:grid; gap:var(--s2); margin:var(--s3) 0 var(--s4);
+               grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); }
+  .homecard { background:var(--surface); border:1px solid var(--rule);
+              border-top:3px solid var(--t3); padding:1.2rem 1.3rem; }
+  .homecard h4 { font-size:1.1rem; margin:.15rem 0 .5rem; }
+  .homecard h4 a { text-decoration:none; }
+  .homecard h4 a:hover { text-decoration:underline; }
+  .homecard p { font-family:var(--sans); font-size:.87rem; color:var(--ink-2);
+                margin:0; }
+  .homecard .eyebrow { color:var(--t4); }
+
+  /* ---- get involved ------------------------------------------------------- */
+  .giblock { max-width:66ch; margin:0 auto var(--s4); }
+  .gistep { background:var(--surface); border:1px solid var(--rule);
+            border-left:4px solid var(--t3); padding:1.2rem 1.4rem;
+            margin:var(--s2) 0; text-align:left; }
+  .gistep h4 { font-size:1.05rem; margin:0 0 .4rem; text-align:center; }
+  .gistep p { font-family:var(--sans); font-size:.88rem; color:var(--ink-2);
+              margin:.5rem 0 0; }
+  .gistep ul { font-family:var(--sans); font-size:.88rem; color:var(--ink-2);
+               margin:.6rem 0 0; padding-left:1.2rem; }
+  .gistep li { margin:.35rem 0; }
+  /* A ready-to-paste post, set apart so it is obviously a quotable block and not
+     the page talking. */
+  .gipost { background:var(--ground); border:1px dashed var(--rule-2);
+            padding:1rem 1.2rem; margin:.9rem 0 .3rem; font-family:var(--sans);
+            font-size:.88rem; color:var(--ink); line-height:1.6; }
+  .gipost p { margin:0 0 .6rem; font-family:var(--sans); color:var(--ink); }
+  .gipost p:last-child { margin:0; }
+  .gicopy { font-family:var(--sans); font-size:.8rem; padding:.5rem 1rem;
+            background:var(--accent); color:#fff; border:0; cursor:pointer;
+            margin-top:.2rem; }
+
   /* Lost per 1,000 described. One hue, because this is one quantity at different
      magnitudes -- a second colour here would imply a second variable. */
   .rate { max-width:46rem; margin:var(--s2) auto var(--s3); }
@@ -523,17 +563,29 @@
      Hidden until someone taps the heading five times, or types "night". The
      conceit is the actual method: almost everything TBG refinds is found at
      night with a torch, by walking slowly and looking at very small things. */
-  #night { position:fixed; inset:0; z-index:900; display:none; cursor:none;
+  /* crosshair, not a hidden cursor. With cursor:none you could see the eyeshine and
+     still not aim at it, which made the whole thing unclickable with a mouse. */
+  #night { position:fixed; inset:0; z-index:900; display:none; cursor:crosshair;
            background:radial-gradient(circle var(--beam,150px) at var(--nx,50%) var(--ny,50%),
                       rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.97) 100%); }
   #night.on { display:block; }
-  #night .eye { position:absolute; width:14px; height:8px; margin:-4px 0 0 -7px;
-                border-radius:50%; opacity:0; transition:opacity .18s;
-                background:radial-gradient(circle, #ffe9a8 0%, #e8b13c 45%,
-                           rgba(232,177,60,0) 70%);
-                box-shadow:0 0 12px 3px rgba(255,214,120,.55); cursor:none; }
+  /* The hit area is the OUTER box and is deliberately far bigger than the glint. A 14x8
+     target is not a realistic thing to ask anyone to click; 40x36 is comfortable at any
+     pointer precision, and the inner span still draws the same small eyeshine. */
+  #night .eye { position:absolute; width:40px; height:36px; margin:-18px 0 0 -20px;
+                display:grid; place-items:center; opacity:0; transition:opacity .18s;
+                cursor:pointer; }
+  #night .eye i { width:14px; height:8px; border-radius:50%; display:block;
+                  background:radial-gradient(circle, #ffe9a8 0%, #e8b13c 45%,
+                             rgba(232,177,60,0) 70%);
+                  box-shadow:0 0 12px 3px rgba(255,214,120,.55);
+                  transition:transform .18s; }
   #night .eye.lit { opacity:1; }
-  #night .eye.gone { opacity:0 !important; transform:scale(.3); transition:all .35s; }
+  /* Grows when the pointer is on it, so a mouse user gets confirmation that this is the
+     thing to click instead of having to guess. */
+  #night .eye.lit:hover i { transform:scale(1.6); }
+  #night .eye.gone { opacity:0 !important; transition:opacity .35s; }
+  #night .eye.gone i { transform:scale(.3); }
   /* A visible way out. Esc alone is not an exit on a phone, and an overlay a touch user
      cannot dismiss is a trap, not a joke. Sits top-right, the conventional place, with a
      44px minimum touch target. */
@@ -1056,22 +1108,23 @@
       </svg>
       <h1>The Species Black List</h1>
     </div>
-    <p class="sub">Vertebrates the Red List cannot yet speak for &middot;
-      IUCN v2026&#8209;1</p>
+    <p class="sub">Tracking down Life Overlooked</p>
   </div>
 </header>
 
 <nav aria-label="Main"><div class="wrap navbar">
-  <a class="navitem" href="/" data-v="overview">Overview</a>
+  <a class="navitem" href="/" data-v="home">Overview</a>
 
-  <div class="navgroup" data-group="register">
+  <div class="navgroup" data-group="blacklist">
     <button class="navitem navtoggle" type="button" aria-expanded="false"
-            aria-controls="navm-register">The Register <span class="caret"
+            aria-controls="navm-blacklist">The Black List <span class="caret"
             aria-hidden="true">&#9662;</span></button>
-    <div class="navmenu" id="navm-register" hidden>
-      <a href="/register/" data-v="register">The Register</a>
+    <div class="navmenu" id="navm-blacklist" hidden>
+      <a href="/black-list/" data-v="overview">Overview</a>
+      <a href="/register/" data-v="register">The Black List</a>
       <a href="/map/" data-v="map">Map</a>
       <a href="/sites/" data-v="sites">Localities</a>
+      <a href="/methods/" data-v="methods">Methods &amp; Limits</a>
     </div>
   </div>
 
@@ -1086,11 +1139,108 @@
   </div>
 
   <a class="navitem" href="/rediscoveries/" data-v="redisc">Rediscoveries</a>
-  <a class="navitem" href="/methods/" data-v="methods">Methods &amp; Limits</a>
+  <a class="navitem" href="/get-involved/" data-v="involved">Get Involved</a>
 </div></nav>
 
 <!-- ============================== OVERVIEW ============================== -->
-<section class="view" id="v-overview">
+<!-- ============================ SITE OVERVIEW ============================ -->
+<section class="view" id="v-home">
+ <div class="hero">
+  <div class="wrap">
+    <div class="intro">
+      <p class="eyebrow">Life Overlooked</p>
+      <h2>Thousands of species are slipping away without anyone counting them as at
+        risk.</h2>
+      <p class="lede">Conservation runs on lists. Money, legal protection and recovery
+        plans all follow from a species having a name on the right one. This site is about
+        the animals and plants that never made it onto any list, and what it will take to
+        find them before the decision gets made for us.</p>
+    </div>
+
+    <div class="stakes">
+      <h3>Why anyone should care about a gap in a database</h3>
+      <p>When a species is listed as threatened, things happen. Funders can point to it.
+        Governments can be held to it. Researchers can build a case around it. When a
+        species has no listing at all, none of that machinery can start, and the silence
+        reads exactly like good news.</p>
+      <p>It very often is not good news. These are the species nobody has the information
+        to worry about: known from one hillside, described once and never seen again, or
+        named so recently that no assessor has reached them. If one of them goes extinct,
+        it will happen without an entry, without a headline, and without anybody being
+        able to say afterwards what was lost.</p>
+      <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
+        Biodiversity Group</a> built this site to work out who those species actually are.
+        We call them <strong>Life Overlooked</strong>. Naming them is the first step,
+        because you cannot fight for something that has never been counted.</p>
+    </div>
+  </div>
+ </div>
+
+ <div class="wrap">
+  <div class="prose">
+    <h3>What you will find here</h3>
+    <p>Four separate pieces of work, each answering a different question. They come from
+      different sources and they are deliberately never added together.</p>
+  </div>
+
+  <div class="homecards">
+    <article class="homecard">
+      <p class="eyebrow">The core list</p>
+      <h4><a href="/black-list/" data-goto="overview">The Black List</a></h4>
+      <p>Species the Red List has assessed and been unable to categorise, or has never
+        assessed at all, ranked by how narrowly restricted the published record says they
+        are. If a species here turns out to be in trouble, this is where you would have
+        seen it first.</p>
+    </article>
+
+    <article class="homecard">
+      <p class="eyebrow">Described, then forgotten</p>
+      <h4><a href="/new-species/" data-goto="newtaxa">New Species</a></h4>
+      <p>Reptiles and amphibians named by science since 2015 that still carry no
+        extinction risk assessment. Nine in ten are known from a single country. New
+        ones join the queue every week.</p>
+    </article>
+
+    <article class="homecard">
+      <p class="eyebrow">Missing, not gone</p>
+      <h4><a href="/lost-species/" data-goto="lost">Lost Species</a></h4>
+      <p>Species nobody has confirmed alive in over a decade, and in some cases for
+        centuries, that nobody has been able to declare extinct either. Half of them have
+        not been seen since the 1960s.</p>
+    </article>
+
+    <article class="homecard">
+      <p class="eyebrow">Proof it can be done</p>
+      <h4><a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a></h4>
+      <p>Species found again, gathered as they are reported. This is the hopeful part.
+        Most species that go missing are still out there, and some of them turn up
+        because one person went and looked.</p>
+    </article>
+  </div>
+
+  <div class="prose">
+    <h3>The part worth holding on to</h3>
+    <p>A species being missing is not the same as a species being gone. Of the lost
+      species that researchers have traced, roughly a quarter are thought to be genuinely
+      extinct. That is a grim number read one way and a remarkable one read the other,
+      because it means most of them are alive and simply unvisited.</p>
+    <p>Some have been unseen for two hundred years and then turned up in a stream nobody
+      had surveyed. One was identified from a photograph a tourist posted online. The
+      work is not hopeless. It is just unfunded, and pointed at the wrong places.</p>
+  </div>
+
+  <div class="prose">
+    <h3>What would actually help</h3>
+    <p>Three things, and none of them need you to be a scientist. Tell somebody about
+      these species. Ask the people who decide where conservation money goes to include
+      them. Support the groups already doing this work.</p>
+    <p><a href="/get-involved/" data-goto="involved"><strong>How to help</strong></a></p>
+  </div>
+ </div>
+</section>
+
+<!-- ========================= BLACK LIST OVERVIEW ========================= -->
+<section class="view" id="v-overview" hidden>
  <div class="hero">
   <div class="wrap">
     <div class="intro">
@@ -2066,6 +2216,87 @@
   </div>
 </section>
 
+<!-- ============================ GET INVOLVED ============================= -->
+<section class="view wrap" id="v-involved" hidden>
+  <div class="giblock">
+    <div class="prose">
+      <h2 style="font-size:var(--fs-h2)">How to help</h2>
+      <p class="lostlede">These species are not short of scientific interest. They are
+        short of attention. Three things move that, and only one of them requires any
+        expertise.</p>
+    </div>
+
+    <div class="gistep">
+      <h4>1. Tell somebody</h4>
+      <p>The single most useful thing anyone can do is make these species less obscure.
+        Conservation funding follows attention, and attention follows people talking. A
+        species that nobody has heard of does not get a recovery plan.</p>
+      <p>Share this site. Send a page to somebody who would find it interesting. If you
+        work anywhere near this field, put it in front of the person who signs off your
+        grants.</p>
+      <p><strong>Something you can post as it is:</strong></p>
+      <div class="gipost" id="giPost">
+        <p>There is a list of animals and plants that conservation has effectively lost
+          track of. Not endangered. Not extinct. Just unaccounted for.</p>
+        <p>Some have not been seen since the 1800s. Nobody can declare them gone, so
+          nobody can protect them either. Most of them are probably still out there.</p>
+        <p>Someone has finally started writing them all down: speciesblacklist.org</p>
+      </div>
+      <button type="button" class="gicopy" id="giCopy">Copy this post</button>
+    </div>
+
+    <div class="gistep">
+      <h4>2. Ask for these species to be prioritised</h4>
+      <p>Every species on this site is excluded from the commitments that drive
+        conservation spending, because those commitments are written around species
+        already known to be threatened. Changing that is a matter of people asking for
+        it, repeatedly, in the places where lists get written.</p>
+      <ul>
+        <li><strong>If you fund conservation:</strong> ask whether your criteria quietly
+          rule out species with no assessment. Most do, without anyone intending it.</li>
+        <li><strong>If you work for an agency or a government:</strong> Data Deficient
+          and unassessed species can be written into national priorities even though the
+          global targets skip them.</li>
+        <li><strong>If you are a researcher:</strong> an assessment is a publishable
+          contribution, and these are the species where one assessment changes the whole
+          picture for a taxon.</li>
+        <li><strong>If you are a conservationist:</strong> a survey that produces no
+          sighting is still a result worth reporting, and almost nobody publishes those.</li>
+      </ul>
+    </div>
+
+    <div class="gistep">
+      <h4>3. Support the people already doing it</h4>
+      <p>This work is unglamorous and it is nearly always unfunded. Finding a small brown
+        frog on a steep hillside at two in the morning does not photograph like a tiger,
+        and the organisations that do it are small.</p>
+      <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
+        Biodiversity Group</a> built this site and works on exactly these species. If you
+        would like to back that, or do it with us, both doors are open:</p>
+      <ul>
+        <li><a href="https://biodiversitygroup.org/donate/" target="_blank"
+          rel="noopener"><strong>Donate</strong></a>, which pays for the fieldwork that
+          turns a name on this list into a record.</li>
+        <li><a href="https://biodiversitygroup.org/get-involved/" target="_blank"
+          rel="noopener"><strong>Get involved</strong></a>, including expeditions and
+          internships if you want to be there when it happens.</li>
+      </ul>
+      <p>If your money or your time is better placed with another group working on
+        neglected species, place it there instead. The point is the species, not us.</p>
+    </div>
+
+    <div class="prose">
+      <h3>And if you have seen one of them</h3>
+      <p>That is the whole reason this list is public. If you have a record, a photograph
+        or a museum specimen of anything on these pages, or you know a species has been
+        found again, please tell us:
+        <a href="mailto:business@biodiversitygroup.org?subject=Species%20Black%20List">business@biodiversitygroup.org</a>.
+        One of the rediscoveries on this site began as a photograph posted online by
+        somebody who had no idea what they had found.</p>
+    </div>
+  </div>
+</section>
+
 <!-- =============================== METHODS ============================== -->
 <section class="view wrap methods" id="v-methods" hidden>
   <div class="mbody">
@@ -2338,6 +2569,34 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
    The field is painted into a canvas, so it does not inherit a CSS variable
    change the way the rest of the page does — it has to be repainted explicitly,
    both when the toggle is used and when the OS preference flips underneath us. */
+/* Copy the shareable post. Falls back to selecting it, so the button still does something
+   useful where the clipboard API is unavailable or refused. */
+(function bindCopyPost() {
+  const btn = $("#giCopy"), src = $("#giPost");
+  if (!btn || !src) return;
+  btn.addEventListener("click", () => {
+    const text = [...src.querySelectorAll("p")]
+      .map(p => p.textContent.replace(/\s+/g, " ").trim()).join("\n\n");
+    const done = () => { btn.textContent = "Copied"; setTimeout(() => {
+      btn.textContent = "Copy this post"; }, 2200); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, () => selectPost(src, btn));
+    } else {
+      selectPost(src, btn);
+    }
+  });
+})();
+
+function selectPost(src, btn) {
+  const r = document.createRange();
+  r.selectNodeContents(src);
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(r);
+  btn.textContent = "Selected, press Ctrl+C";
+  setTimeout(() => { btn.textContent = "Copy this post"; }, 3000);
+}
+
 /* The theme button is also the way into the night survey -- see nightOpen(). It is the
    one control almost every visitor eventually presses, and somebody double-tapping it is
    asking how dark this can get, which is the joke.
@@ -2381,13 +2640,16 @@ function repaintCanvases() {
    views instead of leaving the site, and every view is separately linkable and
    indexable. The pages are byte-identical apart from their title and canonical
    tag; this router reads the path and opens the matching view. */
-const ROUTES = {overview:"/", register:"/register/", map:"/map/",
+/* "home" is the whole-site introduction and owns "/". "overview" is the Black List's own
+   introduction and moved to /black-list/ when the site grew past being one list. */
+const ROUTES = {home:"/", overview:"/black-list/", register:"/register/", map:"/map/",
                 sites:"/sites/", methods:"/methods/", newtaxa:"/new-species/",
-                lost:"/lost-species/", redisc:"/rediscoveries/"};
+                lost:"/lost-species/", redisc:"/rediscoveries/",
+                involved:"/get-involved/"};
 const viewForPath = p => {
   p = p.replace(/\/index\.html$/, "/");
   if (!p.endsWith("/")) p += "/";
-  return Object.keys(ROUTES).find(k => ROUTES[k] === p) || "overview";
+  return Object.keys(ROUTES).find(k => ROUTES[k] === p) || "home";
 };
 
 function showView(name, push) {
@@ -2640,6 +2902,7 @@ function nightOpen() {
   for (let i = 0; i < n; i++) {
     const d = document.createElement("div");
     d.className = "eye";
+    d.innerHTML = "<i></i>";          // the glint; the div itself is the generous hit area
     // Kept off the extreme edges so an eyeshine can never sit under the hint text
     // or half off-screen where it cannot be reached.
     d.style.left = (8 + Math.random() * 84) + "vw";
@@ -2677,21 +2940,68 @@ function nightOpen() {
   };
 }
 
+/* Five kickers, shown in turn so a second find is not a repeat of the first. Every claim
+   in them is one the site makes elsewhere and can stand behind. */
+const NIGHT_LINES = [
+  n => "You found it in a few seconds here but nobody has found the real one. It is "
+       + "still on the list, and so are " + n.toLocaleString() + " others.",
+  () => "You found it in a few seconds here but nobody has found the real one. A real "
+        + "survey has no torch beam pointing at the answer, and no glowing dot to aim at.",
+  () => "Missing is not the same as gone. Nobody has been able to declare this species "
+        + "extinct, and proving that is far harder than losing track of something.",
+  () => "The species that come back tend to be big, obvious and living near people. "
+        + "Almost nothing on this list is any of those things.",
+  () => "It can be this easy. A snail nobody had recorded since 1905 was identified from "
+        + "a holiday photograph posted online, by a stranger on the other side of the "
+        + "world who happened to know what he was looking at.",
+];
+let nightLine = 0;
+
+/* Natural history by group rather than by species, because the list carries a group and a
+   country and no habitat field. General and true beats specific and invented. */
+const NIGHT_GROUP = {
+  "Crustaceans": "Freshwater crabs spend the day jammed under stones and down burrows, "
+                 + "which is an excellent way to go unnoticed for two centuries.",
+  "Arachnids": "The spiders here are small, live in silk-lined tunnels in the ground, and "
+               + "in many species the males come up for only a few weeks a year.",
+  "Insect": "Insects outnumber every other group of animals on earth and have the fewest "
+            + "people looking for them.",
+  "Amphibian": "Many of these frogs breed in fast, cold streams for a few weeks and spend "
+               + "the rest of the year silent and out of sight.",
+  "Reptile": "Small, nocturnal and often underground. Torchlight really is how most of "
+             + "them get found.",
+  "Snails & slugs": "A snail can vanish for a century in one damp valley and nobody "
+                    + "notices, because almost nobody was counting.",
+  "Mammal": "Being a mammal is no protection. Plenty on this list are rats and bats on "
+            + "islands, where a single introduced predator can end things quietly.",
+  "Bird": "Birds are the best-watched group alive, so a bird staying lost this long "
+          + "usually means somewhere nobody can safely get to.",
+  "Fish": "Freshwater fish can be restricted to a single stream, and a stream is an easy "
+          + "thing to dam, divert or overlook.",
+};
+const NIGHT_PLANT = "You just found a plant by torchlight, which is not how botany works. "
+                    + "Plants have no eyeshine, no call and no burrow, and outside a few "
+                    + "weeks of flowering they can be almost impossible to name.";
+
 function nightReveal(s, found, total) {
   const yr = s.last ? String(s.last) : "?";
   const gap = s.last ? (new Date().getFullYear() - s.last) : null;
   const card = $("#nightCard");
+  const n = (LOST && LOST.meta ? LOST.meta.n_species : 2135) - 1;
+  const kicker = NIGHT_LINES[nightLine % NIGHT_LINES.length](n);
+  nightLine++;
+  const grp = s.group || "";
+  const note = /^Plant|Flowering|Orchid|Fern|Grass|Moss|Cactus|Epiphyte/.test(grp)
+    ? NIGHT_PLANT : (NIGHT_GROUP[grp] || "");
   card.innerHTML =
     '<p class="eyebrow">Rediscovered</p>'
-    + "<h4>" + esc(s.common || s.sp) + "</h4>"
+    + "<h4>" + esc(s.common && s.common !== "--" ? s.common : s.sp) + "</h4>"
     + '<p class="sci">' + esc(s.sp) + "</p>"
     + "<p>Last recorded in <strong>" + yr + "</strong>"
     + (s.range ? " in " + esc(s.range) : "") + "."
     + (gap ? " That is <strong>" + gap + " years</strong> ago." : "") + "</p>"
-    + '<p class="kicker">You found it in a few seconds because this is a game. '
-    + "Nobody has found the real one. It is still on the list, and so are "
-    + ((LOST && LOST.meta ? LOST.meta.n_species : 2135) - 1).toLocaleString()
-    + " others.</p>"
+    + (note ? "<p>" + note + "</p>" : "")
+    + '<p class="kicker">' + kicker + "</p>"
     + "<button type=\"button\">Keep looking</button>";
   card.querySelector("button").onclick = () => {
     card.classList.remove("show");
