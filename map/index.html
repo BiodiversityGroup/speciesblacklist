@@ -241,15 +241,23 @@
      the current page would have no marker in the bar at all. */
   .navgroup.on > .navtoggle { color:var(--ink); border-bottom-color:var(--accent);
                               font-weight:600; }
+  /* --surface-2 rather than --surface: on the dark theme --surface is #191C23 against a
+     #12141A page, three points of lightness apart, and the panel read as a hole rather than
+     as something sitting on top. --surface-2 lifts it and works in the light theme too,
+     where the same token goes the other way and darkens against a near-white page. */
   .navmenu { position:absolute; top:100%; left:50%; transform:translateX(-50%);
-             min-width:max-content; background:var(--surface);
-             border:1px solid var(--rule); border-top:2px solid var(--accent);
-             box-shadow:0 6px 20px rgba(0,0,0,.13); z-index:40; padding:.3rem 0; }
+             min-width:max-content; background:var(--surface-2);
+             border:1px solid var(--rule-2); border-top:2px solid var(--accent);
+             box-shadow:0 8px 24px rgba(0,0,0,.28); z-index:40; padding:.3rem 0; }
   .navmenu[hidden] { display:none; }
   .navmenu a { display:block; font-family:var(--sans); font-size:.94rem;
                padding:.6rem 1.4rem; color:var(--ink-2); text-decoration:none;
                white-space:nowrap; text-align:left; }
-  .navmenu a:hover, .navmenu a:focus-visible { background:var(--bg); color:var(--ink); }
+  /* var(--bg) was the whole declaration here, and there is no --bg token on this site. An
+     unresolvable var() drops its declaration, so the hover and keyboard-focus highlight
+     never painted at all; only the color change did. It fails silently, which is why it
+     went unnoticed. */
+  .navmenu a:hover, .navmenu a:focus-visible { background:var(--surface); color:var(--ink); }
   .navmenu a[aria-current="page"] { color:var(--ink); font-weight:600;
                                     box-shadow:inset 3px 0 0 var(--accent); }
   /* Below the wrap point this used to drop the menu into the flow (position:static) on the
@@ -391,9 +399,16 @@
              position:relative; }
   /* touch-action:none so a one-finger drag pans the map instead of scrolling the
      page, which is what a map is expected to do. The map is short enough that the
-     page is still easy to scroll past on either side of it. */
-  #mapCanvas { display:block; width:100%; height:auto; cursor:grab;
-               touch-action:none; }
+     page is still easy to scroll past on either side of it.
+
+     ALL THREE MAPS, not just the register's. Only #mapCanvas had this, so on the lost and
+     new-species maps attachHeatZoom's pinch and pan handlers were correct and simply never
+     ran: without touch-action the browser claims the touch as a page gesture and cancels
+     the pointer stream before pointermove fires. Nothing errored, which is why it read as
+     a missing feature rather than a bug. #nsCanvas had no rule of its own at all. One
+     selector now, so a fourth map cannot be added without the behavior. */
+  #mapCanvas, #nsCanvas, #lostCanvas {
+    display:block; width:100%; height:auto; cursor:grab; touch-action:none; }
   #mapCanvas.dragging { cursor:grabbing; }
   .mapzoom { position:absolute; top:.5rem; right:.5rem; z-index:2; display:flex;
              flex-direction:column; gap:.25rem; }
@@ -714,7 +729,8 @@
     #night .eye, #nightCard { transition:none; }
   }
 
-  #lostCanvas { display:block; width:100%; height:auto; }
+  /* #lostCanvas is sized with #mapCanvas and #nsCanvas above; a second definition here is
+     how it ended up without touch-action while the register map had it. */
   /* Flex needs justify-content; text-align does nothing to it. */
   .lostlegend { display:flex; justify-content:center; align-items:center; gap:1rem;
                 flex-wrap:wrap; font-family:var(--sans); font-size:var(--fs-micro);
