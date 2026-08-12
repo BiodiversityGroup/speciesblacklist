@@ -191,19 +191,60 @@
      is a trap: once the tabs overflow, the first one sits off the left edge and
      cannot be scrolled back to. Wrapping keeps every tab reachable at any width
      and removes the horizontal scroll entirely. */
-  .navbar { display:flex; gap:0; flex-wrap:wrap; justify-content:center; }
+  .navbar { display:flex; gap:0; flex-wrap:wrap; justify-content:center;
+            align-items:stretch; }
   /* Anchors rather than buttons: a real href is crawlable and middle-clickable,
      and the router intercepts plain left clicks. */
-  .navbar [role="tab"] { font-family:var(--sans); font-size:1rem; font-weight:500;
+  .navitem { font-family:var(--sans); font-size:1rem; font-weight:500;
     padding:.95rem 1.5rem; background:none; border:0; border-bottom:2px solid transparent;
     color:var(--ink-2); cursor:pointer; white-space:nowrap; text-decoration:none;
     display:block; }
   @media (max-width:620px) {
-    .navbar [role="tab"] { font-size:.88rem; padding:.6rem .75rem; }
+    .navitem { font-size:.88rem; padding:.6rem .75rem; }
   }
-  .navbar [role="tab"]:hover { color:var(--ink); }
-  .navbar [role="tab"][aria-selected="true"] { color:var(--ink);
+  .navitem:hover { color:var(--ink); }
+  .navitem[aria-current="page"] { color:var(--ink);
     border-bottom-color:var(--accent); font-weight:600; }
+
+  /* ---- grouped navigation -------------------------------------------------
+     Eight flat tabs implied the eight destinations were peers. They are not:
+     four are views onto ONE register, two are separate searches with their own
+     sources, and the numbers across the three groups are deliberately never
+     summed. The flat bar quietly undid that; the grouping states it.
+
+     The submenu links are real anchors present in the HTML at all times -- only
+     visually hidden -- so they stay crawlable. Search indexing is deliberately
+     on for this site and a JS-built menu would have cost seven of eight pages. */
+  .navgroup { position:relative; }
+  .navtoggle { font-family:inherit; }
+  .navtoggle .caret { font-size:.7em; margin-left:.35em; display:inline-block;
+                      transition:transform .15s; }
+  .navtoggle[aria-expanded="true"] .caret { transform:rotate(180deg); }
+  /* The parent shows the accent when one of ITS children is the open view, or
+     the current page would have no marker in the bar at all. */
+  .navgroup.on > .navtoggle { color:var(--ink); border-bottom-color:var(--accent);
+                              font-weight:600; }
+  .navmenu { position:absolute; top:100%; left:50%; transform:translateX(-50%);
+             min-width:max-content; background:var(--surface);
+             border:1px solid var(--rule); border-top:2px solid var(--accent);
+             box-shadow:0 6px 20px rgba(0,0,0,.13); z-index:40; padding:.3rem 0; }
+  .navmenu[hidden] { display:none; }
+  .navmenu a { display:block; font-family:var(--sans); font-size:.94rem;
+               padding:.6rem 1.4rem; color:var(--ink-2); text-decoration:none;
+               white-space:nowrap; text-align:left; }
+  .navmenu a:hover, .navmenu a:focus-visible { background:var(--bg); color:var(--ink); }
+  .navmenu a[aria-current="page"] { color:var(--ink); font-weight:600;
+                                    box-shadow:inset 3px 0 0 var(--accent); }
+  /* Below the wrap point the dropdown would open over the page with nothing to
+     anchor it to, so groups become inline sections of the bar instead. */
+  @media (max-width:620px) {
+    .navgroup { position:static; }
+    .navmenu { position:static; transform:none; border:0; border-top:1px solid var(--rule);
+               box-shadow:none; padding:.2rem 0; background:none; }
+    .navmenu a { text-align:center; padding:.5rem .75rem; font-size:.86rem; }
+    .navmenu a[aria-current="page"] { box-shadow:none;
+                                      border-bottom:2px solid var(--accent); }
+  }
 
   /* Longhand: a `padding` shorthand here would zero the horizontal padding
      .wrap supplies, which left the register, sites and methods pages flush
@@ -385,6 +426,117 @@
              margin:.15rem 0 0; }
   .defs .defsrc { font-family:var(--sans); font-size:.78rem; color:var(--ink-3);
                   margin:1rem 0 0; }
+
+  /* ---- lost vs newly described, per country ------------------------------
+     A diverging bar: lost to the left, newly described to the right, one shared
+     scale. Two hues rather than a ramp because these are two different things
+     being compared, not one thing at two magnitudes.
+
+     Colours are the site's own warm/cool pair, checked with the palette
+     validator rather than eyeballed. The dark-mode accent (#8FA3E0) failed the
+     lightness and chroma floors as a fill -- it is a link colour, too pale to
+     carry area -- so dark mode gets its own blue. Worst-case CVD separation is
+     ΔE 18.6 (protan, light) and 24.3 (deutan, dark), well clear of the floor,
+     and every bar is directly labelled so colour is never the only encoding. */
+  .cmp { --c-lost:#90501A; --c-new:#3B4E8C; margin:var(--s3) 0 var(--s2); }
+  @media (prefers-color-scheme:dark) {
+    .cmp { --c-lost:#B4682A; --c-new:#6C86DC; }
+  }
+  :root[data-theme="dark"] .cmp { --c-lost:#B4682A; --c-new:#6C86DC; }
+  :root[data-theme="light"] .cmp { --c-lost:#90501A; --c-new:#3B4E8C; }
+
+  .cmplegend { display:flex; justify-content:center; gap:var(--s3); flex-wrap:wrap;
+               font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
+               margin-bottom:var(--s2); }
+  .cmplegend span { display:inline-flex; align-items:center; gap:.45rem; }
+  .cmplegend i { width:14px; height:14px; display:inline-block; }
+  .cmprow { display:grid; grid-template-columns:1fr 8.5rem 1fr; align-items:center;
+            gap:.4rem; padding:.18rem 0; }
+  .cmprow:hover { background:var(--accent-soft); }
+  .cmpname { text-align:center; font-family:var(--sans); font-size:.82rem;
+             color:var(--ink); white-space:nowrap; overflow:hidden;
+             text-overflow:ellipsis; }
+  .cmpbar { display:flex; align-items:center; gap:.4rem; }
+  .cmpbar.l { justify-content:flex-end; }
+  .cmpbar b { height:17px; display:block; width:0; border-radius:3px;
+              transition:width .85s cubic-bezier(.22,.7,.3,1); }
+  .cmpbar.l b { background:var(--c-lost); }
+  .cmpbar.r b { background:var(--c-new); }
+  .cmpbar em { font-family:var(--mono); font-size:.74rem; font-style:normal;
+               font-variant-numeric:tabular-nums; color:var(--ink-3); opacity:0;
+               transition:opacity .4s .5s; }
+  .cmp.go .cmpbar em { opacity:1; }
+  .cmpnote { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-3);
+             text-align:center; margin:.15rem 0 0; }
+  .cmpnote b { color:var(--ink-2); font-weight:600; }
+  @media (prefers-reduced-motion:reduce) {
+    .cmpbar b, .cmpbar em { transition:none; }
+  }
+  @media (max-width:620px) {
+    .cmprow { grid-template-columns:1fr 6.4rem 1fr; }
+    .cmpname { font-size:.75rem; }
+    .cmpbar b { height:14px; }
+    .cmpbar em { font-size:.68rem; }
+  }
+
+  /* The base table rule sets min-width:720px, so like #ntTable this scrolls inside
+     its own box rather than pushing the whole page sideways on a phone. */
+  #longestWrap { overflow-x:auto; margin:var(--s2) 0 var(--s3); }
+  .lgtable td .sci { display:block; font-style:italic; font-size:.82rem;
+                     color:var(--ink-3); margin-top:.1rem; }
+  .lgtable .lgroup { font-weight:600; white-space:nowrap; }
+  .lgtable .lgyear { font-family:var(--mono); font-variant-numeric:tabular-nums;
+                     white-space:nowrap; }
+  .lgtable .lggap { font-family:var(--mono); font-variant-numeric:tabular-nums;
+                    color:var(--ink-3); white-space:nowrap; }
+  /* The record holder in the whole table, not just its row. */
+  .lgtable tr.lgtop .lgyear, .lgtable tr.lgtop .lgroup { color:var(--t5); }
+  .lgtable .lgwhere { color:var(--ink-2); font-size:.85rem; }
+  .lgtable .lgn { color:var(--ink-3); font-size:.78rem; white-space:nowrap; }
+
+  /* ---- night survey (easter egg) -----------------------------------------
+     Hidden until someone taps the heading five times, or types "night". The
+     conceit is the actual method: almost everything TBG refinds is found at
+     night with a torch, by walking slowly and looking at very small things. */
+  #night { position:fixed; inset:0; z-index:900; display:none; cursor:none;
+           background:radial-gradient(circle var(--beam,150px) at var(--nx,50%) var(--ny,50%),
+                      rgba(0,0,0,0) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.97) 100%); }
+  #night.on { display:block; }
+  #night .eye { position:absolute; width:14px; height:8px; margin:-4px 0 0 -7px;
+                border-radius:50%; opacity:0; transition:opacity .18s;
+                background:radial-gradient(circle, #ffe9a8 0%, #e8b13c 45%,
+                           rgba(232,177,60,0) 70%);
+                box-shadow:0 0 12px 3px rgba(255,214,120,.55); cursor:none; }
+  #night .eye.lit { opacity:1; }
+  #night .eye.gone { opacity:0 !important; transform:scale(.3); transition:all .35s; }
+  /* Hint and card are SIBLINGS of #night, not children: nightOpen() rebuilds the
+     overlay's innerHTML on every run, which wiped the hint when it lived inside.
+     They therefore need their own stacking above the 900 the overlay sits at. */
+  #nightHint { position:fixed; left:0; right:0; bottom:8%; text-align:center; z-index:901;
+               font-family:var(--sans); font-size:.9rem; color:rgba(255,255,255,.62);
+               letter-spacing:.02em; pointer-events:none; }
+  #nightHint b { color:#ffd678; font-weight:600; }
+  #nightCard { position:fixed; left:50%; top:50%; transform:translate(-50%,-46%) scale(.94);
+               z-index:902; width:min(92vw,420px); background:var(--surface);
+               border:1px solid var(--rule); border-top:3px solid var(--accent);
+               padding:1.4rem 1.5rem; text-align:center; opacity:0; pointer-events:none;
+               transition:opacity .3s, transform .3s; cursor:auto; }
+  #nightCard.show { opacity:1; transform:translate(-50%,-50%) scale(1);
+                    pointer-events:auto; }
+  #nightCard .eyebrow { color:var(--accent); letter-spacing:.14em; }
+  #nightCard h4 { font-size:1.15rem; margin:.3rem 0 .1rem; }
+  #nightCard .sci { font-style:italic; color:var(--ink-3); font-size:.9rem;
+                    margin:0 0 .8rem; }
+  #nightCard p { font-family:var(--sans); font-size:.87rem; color:var(--ink-2);
+                 margin:.5rem 0 0; }
+  #nightCard .kicker { border-top:1px solid var(--rule); margin-top:1rem;
+                       padding-top:.9rem; font-size:.83rem; color:var(--ink-3); }
+  #nightCard button { margin-top:1.1rem; font-family:var(--sans); font-size:.85rem;
+                      padding:.55rem 1.2rem; background:var(--accent); color:#fff;
+                      border:0; cursor:pointer; }
+  @media (prefers-reduced-motion:reduce) {
+    #night .eye, #nightCard { transition:none; }
+  }
 
   #lostCanvas { display:block; width:100%; height:auto; }
   /* Flex needs justify-content; text-align does nothing to it. */
@@ -872,15 +1024,32 @@
   </div>
 </header>
 
-<nav><div class="wrap navbar" role="tablist">
-  <a role="tab" href="/" aria-selected="true" data-v="overview">Overview</a>
-  <a role="tab" href="/register/" aria-selected="false" data-v="register">The Register</a>
-  <a role="tab" href="/map/" aria-selected="false" data-v="map">Map</a>
-  <a role="tab" href="/sites/" aria-selected="false" data-v="sites">Localities</a>
-  <a role="tab" href="/methods/" aria-selected="false" data-v="methods">Methods &amp; Limits</a>
-  <a role="tab" href="/new-species/" aria-selected="false" data-v="newtaxa">New Species</a>
-  <a role="tab" href="/lost-species/" aria-selected="false" data-v="lost">Lost Species</a>
-  <a role="tab" href="/rediscoveries/" aria-selected="false" data-v="redisc">Rediscoveries</a>
+<nav aria-label="Main"><div class="wrap navbar">
+  <a class="navitem" href="/" data-v="overview">Overview</a>
+
+  <div class="navgroup" data-group="register">
+    <button class="navitem navtoggle" type="button" aria-expanded="false"
+            aria-controls="navm-register">The Register <span class="caret"
+            aria-hidden="true">&#9662;</span></button>
+    <div class="navmenu" id="navm-register" hidden>
+      <a href="/register/" data-v="register">The Register</a>
+      <a href="/map/" data-v="map">Map</a>
+      <a href="/sites/" data-v="sites">Localities</a>
+    </div>
+  </div>
+
+  <div class="navgroup" data-group="search">
+    <button class="navitem navtoggle" type="button" aria-expanded="false"
+            aria-controls="navm-search">New &amp; Lost Species <span class="caret"
+            aria-hidden="true">&#9662;</span></button>
+    <div class="navmenu" id="navm-search" hidden>
+      <a href="/new-species/" data-v="newtaxa">New Species</a>
+      <a href="/lost-species/" data-v="lost">Lost Species</a>
+    </div>
+  </div>
+
+  <a class="navitem" href="/rediscoveries/" data-v="redisc">Rediscoveries</a>
+  <a class="navitem" href="/methods/" data-v="methods">Methods &amp; Limits</a>
 </div></nav>
 
 <!-- ============================== OVERVIEW ============================== -->
@@ -1232,6 +1401,17 @@
 
   <div id="ampCounts" class="counts"></div>
 
+  <!-- Deliberately after both classes, because the point only lands once the reader has
+       seen the two totals: the backlog is not a one-off cohort, it is an intake rate. -->
+  <div class="prose ntrate">
+    <h3>This is not a backlog. It is a rate.</h3>
+    <p id="ntRate">&nbsp;</p>
+    <p>A backlog is a pile you can work through. This is a tap that has been left on.
+      Clearing every species on both lists tomorrow would leave the same number arriving
+      the year after — so the question is not <em>when will somebody catch up</em>, but
+      <em>what would it take to keep up at all</em>.</p>
+  </div>
+
   <div class="filters">
     <input id="ampQ" type="search"
            placeholder="Search amphibian species, family, country&hellip;"
@@ -1439,6 +1619,47 @@
       plants or molluscs. Reptiles, fish and amphibians make up more than half of it.
       Reading the map as a picture of the world's lost biodiversity would mistake the
       shape of the <em>list</em> for the shape of the <em>problem</em>.</p>
+  </div>
+
+  <div class="prose">
+    <h3>Where we lose them is not where we find them</h3>
+    <p>This site carries two maps — species that have gone missing, and species being
+      described for the first time. Set side by side they disagree, and the disagreement
+      is the argument. <strong>Brazil</strong> has lost the most and is still describing
+      plenty. <strong>China</strong> is describing more new species than anywhere on
+      earth and carries almost no backlog. The <strong>United States</strong> is the
+      reverse: a long list of losses and very few new descriptions.</p>
+  </div>
+
+  <div class="cmp" id="cmp">
+    <div class="cmplegend">
+      <span><i style="background:var(--c-lost)"></i> Lost species</span>
+      <span><i style="background:var(--c-new)"></i> Described since 2015, never assessed</span>
+    </div>
+    <div id="cmpRows"></div>
+    <p class="cmpnote" id="cmpNote"></p>
+  </div>
+
+  <div class="prose">
+    <h3>The longest wait in each group</h3>
+    <p id="lostHowLong">&nbsp;</p>
+    <p>The groups are nothing like each other, though: a bird goes missing for a decade
+      and it is news, while a snail can go missing for a century before anyone notices it
+      has. These are the record holders — the species in each group whose last confirmed
+      record is the oldest of all.</p>
+  </div>
+
+  <div id="longestWrap"></div>
+
+  <div class="warn">
+    <h3>Two words doing more work than they should</h3>
+    <p><strong>"Toad" is not a group.</strong> Everyday usage covers warty-skinned frogs
+      in at least six families, so the split here is the strict one: <em>toads</em> means
+      the true toads, family Bufonidae, and every other frog is filed as a frog. A
+      spadefoot toad will therefore appear under frogs, which is correct taxonomically
+      and wrong conversationally. <strong>"Fish"</strong> is the same kind of
+      convenience — three classes, kept together because that is the question people ask.
+      Groups come from GBIF's backbone taxonomy, matched on the scientific name.</p>
   </div>
 
   <div class="prose">
@@ -2019,6 +2240,12 @@
   <p id="builtline"></p>
 </div></footer>
 
+<!-- Night survey overlay. Inert and invisible until the easter egg is opened; it sits
+     outside every view because it covers the whole viewport, not one section. -->
+<div id="night" aria-hidden="true"></div>
+<div id="nightHint" style="display:none"></div>
+<div id="nightCard" role="dialog" aria-modal="true" aria-label="Rediscovered"></div>
+
 <script>
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
@@ -2058,8 +2285,16 @@ const viewForPath = p => {
 };
 
 function showView(name, push) {
-  document.querySelectorAll('.navbar [role="tab"]').forEach(x =>
-    x.setAttribute("aria-selected", x.dataset.v === name));
+  // aria-current="page" rather than aria-selected: these are links that change the URL,
+  // not tabs in a tab panel, and the grouped bar has no single flat tablist any more.
+  document.querySelectorAll(".navbar [data-v]").forEach(x => {
+    if (x.dataset.v === name) x.setAttribute("aria-current", "page");
+    else x.removeAttribute("aria-current");
+  });
+  // A view inside a dropdown has no visible marker in the bar, so the parent carries it.
+  document.querySelectorAll(".navgroup").forEach(g =>
+    g.classList.toggle("on", !!g.querySelector('[data-v="' + name + '"]')));
+  closeNavMenus();
   document.querySelectorAll("section.view").forEach(s =>
     s.hidden = s.id !== "v-" + name);
   if (push && location.pathname !== ROUTES[name]) {
@@ -2125,6 +2360,8 @@ function ensureLost() {
   return fetch("/lost.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
     LOST = d;
     renderLostStats();
+    renderLongest();
+    renderCompare();
     return true;
   }).catch(e => {
     const s = $("#lostStats");
@@ -2132,6 +2369,213 @@ function ensureLost() {
     return false;
   }).finally(() => { lostLoading = false; });
 }
+
+/* Lost against newly described, per country. Bars grow from zero when the block first
+   scrolls into view -- the animation is the point Scott asked for, because the two
+   quantities racing out in opposite directions is what makes the mismatch legible.
+   IntersectionObserver rather than a timer so it fires when it is actually seen, and
+   once only: a chart that re-animates every scroll is a distraction, not an emphasis. */
+function renderCompare() {
+  const box = $("#cmp"), rowsEl = $("#cmpRows"), note = $("#cmpNote");
+  const c = LOST && LOST.compare;
+  if (!box || !rowsEl || !c) return;
+  const max = Math.max(...c.rows.map(r => Math.max(r.lost, r.new))) || 1;
+  rowsEl.innerHTML = c.rows.map(r => `<div class="cmprow">
+      <div class="cmpbar l"><em>${r.lost.toLocaleString()}</em>
+        <b data-w="${(100 * r.lost / max).toFixed(2)}"></b></div>
+      <div class="cmpname">${esc(r.c)}</div>
+      <div class="cmpbar r"><b data-w="${(100 * r.new / max).toFixed(2)}"></b>
+        <em>${r.new.toLocaleString()}</em></div>
+    </div>`).join("");
+  note.innerHTML =
+    "<b>" + c.n_overlap + " of the top 20 appear on both lists</b> — "
+    + c.overlap.slice(0, 6).map(esc).join(", ") + " among them. "
+    + "Of the United States' " + c.us_lost + " lost species, <b>" + c.hawaii
+    + " are Hawaiian</b>.";
+
+  const bars = [...rowsEl.querySelectorAll(".cmpbar b")];
+  const grow = () => {
+    box.classList.add("go");
+    bars.forEach((b, i) => {
+      // Staggered by row, not by bar, so each country's pair moves together.
+      setTimeout(() => { b.style.width = b.dataset.w + "%"; }, 60 * Math.floor(i / 2));
+    });
+  };
+  if (!("IntersectionObserver" in window)) { grow(); return; }
+  const io = new IntersectionObserver(es => {
+    if (es.some(e => e.isIntersecting)) { grow(); io.disconnect(); }
+  }, {threshold: 0.25});
+  io.observe(box);
+}
+
+/* The record holder in each group people actually think in. Groups are assigned from
+   GBIF families upstream (analysis/longest_by_group.py), because the payload's `order`
+   cannot separate snakes from lizards or frogs from toads. */
+function renderLongest() {
+  const w = $("#longestWrap");
+  if (!w) return;
+  // "A very long time" made concrete, and written from the payload rather than typed into
+  // the HTML so it cannot go stale the next time the list is rebuilt.
+  const hl = $("#lostHowLong"), m = (LOST && LOST.meta) || {};
+  if (hl && m.median_last) {
+    const now = new Date().getFullYear();
+    hl.innerHTML =
+      "The page above says <em>a very long time</em>. Here is what that means. Of the "
+      + "<strong>" + m.n_dated.toLocaleString() + "</strong> species whose last record "
+      + "carries a usable date, half have not been confirmed since <strong>"
+      + m.median_last + "</strong> — a gap of <strong>" + (now - m.median_last)
+      + " years</strong>. <strong>" + m.n_1800s.toLocaleString() + "</strong> of them "
+      + "were last seen in the <strong>1800s</strong>. The oldest, a Sierra Leone "
+      + "freshwater crab, was last recorded in <strong>" + m.oldest_record
+      + "</strong> — and has since been found again, the longest recovery anybody has "
+      + "documented.";
+  }
+  // Deliberately no year-count for the crab. Deriving one gave 231 years against the 225
+  // this site already cites from the rediscovery literature: two numbers for one animal
+  // on one page. The cited figure keeps its source; this sentence does not compete.
+  const rows = (LOST && LOST.longest) || [];
+  if (!rows.length) { w.innerHTML = ""; return; }
+  const oldest = Math.min(...rows.map(r => r.last));
+  w.innerHTML = `<table class="lgtable">
+    <thead><tr><th>Group</th><th>Species</th><th>Last recorded</th><th>Years ago</th>
+      <th>Where</th><th>Dated on list</th></tr></thead>
+    <tbody>` + rows.map(r => `<tr class="${r.last === oldest ? "lgtop" : ""}">
+      <td class="lgroup">${esc(r.group)}</td>
+      <td>${r.common ? "<b>" + esc(r.common) + "</b>" : ""}
+        <span class="sci">${esc(r.sp)}</span></td>
+      <td class="lgyear">${r.last}</td>
+      <td class="lggap">${r.gap}</td>
+      <td class="lgwhere">${esc(r.range || "—")}</td>
+      <td class="lgn">${r.n_dated.toLocaleString()}</td>
+    </tr>`).join("") + "</tbody></table>";
+}
+
+/* ---- night survey ---------------------------------------------------------
+   An easter egg, but not a decorative one: it dramatises the actual method. TBG's
+   rediscoveries were made by walking slowly in the dark with a torch, looking for
+   eyeshine, and the species it "finds" are the real oldest records in lost.json --
+   so the payoff card teaches the same thing the page does.
+
+   Opened by tapping the lost-species heading five times, or typing "night". A tap
+   count works on a phone, where there is no keyboard; the word works on a desktop,
+   where nobody thinks to tap a heading. */
+let nightOn = false, nightTaps = 0, nightTapAt = 0, nightBuf = "";
+
+function nightSpecies() {
+  // The real oldest records, so the card is never fiction. Falls back to the two TBG
+  // rediscoveries if lost.json has not loaded -- an easter egg must not be able to
+  // show an empty card.
+  const o = (LOST && LOST.oldest) || [];
+  if (o.length) return o[Math.floor(Math.random() * o.length)];
+  return {sp: "Emmochliophis fugleri", common: "Fugler's Shadow Snake",
+          last: 1966, range: "Ecuador"};
+}
+
+function nightOpen() {
+  if (nightOn) return;
+  nightOn = true;
+  const el = $("#night");
+  el.classList.add("on");
+  el.innerHTML = "";
+  const n = window.matchMedia("(max-width:620px)").matches ? 5 : 8;
+  const found = {n: 0};
+  for (let i = 0; i < n; i++) {
+    const d = document.createElement("div");
+    d.className = "eye";
+    // Kept off the extreme edges so an eyeshine can never sit under the hint text
+    // or half off-screen where it cannot be reached.
+    d.style.left = (8 + Math.random() * 84) + "vw";
+    d.style.top = (12 + Math.random() * 62) + "vh";
+    d.onclick = ev => {
+      ev.stopPropagation();
+      if (d.classList.contains("gone")) return;
+      d.classList.add("gone");
+      found.n++;
+      nightReveal(nightSpecies(), found.n, n);
+    };
+    el.appendChild(d);
+  }
+  $("#nightHint").textContent = "";
+  $("#nightHint").innerHTML =
+    "You are looking for <b>eyeshine</b>. Move the torch slowly. "
+    + "<span style=\"opacity:.7\">Esc to turn the lights back on.</span>";
+  $("#nightHint").style.display = "";
+  el.onpointermove = ev => {
+    el.style.setProperty("--nx", ev.clientX + "px");
+    el.style.setProperty("--ny", ev.clientY + "px");
+    el.querySelectorAll(".eye").forEach(d => {
+      const r = d.getBoundingClientRect();
+      const dx = r.left + r.width / 2 - ev.clientX, dy = r.top + r.height / 2 - ev.clientY;
+      d.classList.toggle("lit", Math.hypot(dx, dy) < 130);
+    });
+  };
+  // A touch drag should sweep the torch the same way a mouse does.
+  el.ontouchmove = ev => {
+    const t = ev.touches[0];
+    if (t) el.onpointermove({clientX: t.clientX, clientY: t.clientY});
+  };
+}
+
+function nightReveal(s, found, total) {
+  const yr = s.last ? String(s.last) : "?";
+  const gap = s.last ? (new Date().getFullYear() - s.last) : null;
+  const card = $("#nightCard");
+  card.innerHTML =
+    '<p class="eyebrow">Rediscovered</p>'
+    + "<h4>" + esc(s.common || s.sp) + "</h4>"
+    + '<p class="sci">' + esc(s.sp) + "</p>"
+    + "<p>Last recorded in <strong>" + yr + "</strong>"
+    + (s.range ? " in " + esc(s.range) : "") + "."
+    + (gap ? " That is <strong>" + gap + " years</strong> ago." : "") + "</p>"
+    + '<p class="kicker">You found it in a few seconds because this is a game. '
+    + "Nobody has found the real one. It is still on the list, and so are "
+    + ((LOST && LOST.meta ? LOST.meta.n_species : 2135) - 1).toLocaleString()
+    + " others.</p>"
+    + "<button type=\"button\">Keep looking</button>";
+  card.querySelector("button").onclick = () => {
+    card.classList.remove("show");
+    if (found >= total) nightClose();
+  };
+  card.classList.add("show");
+  if (found >= total) {
+    $("#nightHint").innerHTML = "That is all of them. <b>Keep looking</b> to stop.";
+  }
+}
+
+function nightClose() {
+  nightOn = false;
+  $("#night").classList.remove("on");
+  $("#night").onpointermove = null;
+  $("#nightCard").classList.remove("show");
+  $("#nightHint").style.display = "none";
+}
+
+addEventListener("keydown", ev => {
+  if (ev.key === "Escape" && nightOn) { nightClose(); return; }
+  if (nightOn) return;
+  // Only on the lost-species page, and never while someone is typing in the register's
+  // search box -- "tonight" in a species search must not black the screen out.
+  if (/^(INPUT|TEXTAREA)$/.test((ev.target.tagName || ""))) return;
+  const lost = $("#v-lost");
+  if (!lost || lost.hidden) return;
+  if (ev.key.length !== 1) return;
+  nightBuf = (nightBuf + ev.key.toLowerCase()).slice(-5);
+  if (nightBuf.endsWith("night")) nightOpen();
+});
+
+/* Five taps on the lost-species heading. Deliberately given no affordance -- an
+   easter egg with a button on it is just a feature. The 900 ms window keeps an
+   ordinary double-click or a text selection from ever reaching five. */
+(function bindNightTap() {
+  const h = document.querySelector("#v-lost h2");
+  if (!h) return;
+  h.addEventListener("click", () => {
+    const now = Date.now();
+    nightTaps = (now - nightTapAt < 900) ? nightTaps + 1 : 1;
+    nightTapAt = now;
+    if (nightTaps >= 5) { nightTaps = 0; nightOpen(); }
+  });
+})();
 
 function renderLostStats() {
   const m = LOST.meta, byc = m.by_class || {};
@@ -2483,6 +2927,35 @@ function ensureAmphibians() {
   });
 }
 
+/* How fast never-assessed species arrive, computed from the two payloads rather than
+   stated. Needs BOTH lists, so it runs from whichever finishes second and does nothing
+   until then. The window stops at 2025 on purpose: 2026 is a partial year and averaging
+   it in would drag the rate down for no reason other than the calendar. */
+function renderRate() {
+  const el = $("#ntRate");
+  if (!el || !NT || !AMP) return;
+  const FROM = 2020, TO = 2025;
+  const perYear = src => {
+    const yrs = {};
+    (src.rows || []).forEach(r => {
+      const y = +r.yr;
+      if (y >= FROM && y <= TO) yrs[y] = (yrs[y] || 0) + 1;
+    });
+    const ks = Object.keys(yrs);
+    if (!ks.length) return 0;
+    return ks.reduce((a, k) => a + yrs[k], 0) / ks.length;
+  };
+  const r = Math.round(perYear(NT)), a = Math.round(perYear(AMP));
+  if (!r && !a) return;
+  const tot = r + a;
+  el.innerHTML =
+    "Between " + FROM + " and " + TO + ", reptiles were described and left unassessed at "
+    + "<strong>about " + r + " a year</strong>, and amphibians at <strong>about " + a
+    + " a year</strong>. That is roughly <strong>" + tot + " species every year</strong> "
+    + "&mdash; more than <strong>" + Math.round(tot / 52) + " a week</strong> &mdash; "
+    + "joining a queue in just two of the thirty-odd classes of animal.";
+}
+
 function ampRender() {
   const c = AMP.counts;
   const n = x => (x || 0).toLocaleString();
@@ -2495,6 +2968,7 @@ function ampRender() {
   // ("Cote d'Ivoire; Ghana") and the single-country test only looked for commas, so
   // 57 multi-country species were counted as endemic.
   set("#ampOne", Math.round(100 * (c.single_country || 0) / Math.max(c.total, 1)) + "%");
+  renderRate();
 
   // Same three grades as the reptile list, so the two are comparable at a glance.
   const ev = c.by_evidence || {};
@@ -2697,6 +3171,7 @@ function ntBoot() {
 
 function ntRender() {
   if (!NT) return;
+  renderRate();          // whichever of the two lists lands second fills the rate
   const q = ($("#ntQ").value || "").trim().toLowerCase();
   const ev = $("#ntEv").value, rc = $("#ntRc").value, fam = $("#ntFam").value;
   const rows = NT.rows.filter(r =>
@@ -2885,13 +3360,47 @@ summary to show."}</p>`}
   }).join("");
 }
 
-document.querySelectorAll('.navbar [role="tab"]').forEach(a => a.onclick = ev => {
+document.querySelectorAll(".navbar [data-v]").forEach(a => a.onclick = ev => {
   // let modified clicks open a new tab, as a real link should
   if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button !== 0) return;
   ev.preventDefault();
   showView(a.dataset.v, true);
 });
 addEventListener("popstate", () => showView(viewForPath(location.pathname), false));
+
+/* ---- dropdown groups ------------------------------------------------------
+   Click to open, not hover. Hover menus are unusable on a touchscreen -- the
+   first tap fires the hover and the second lands wherever the menu has just
+   moved to -- and roughly half this site's traffic is on a phone. */
+function closeNavMenus(except) {
+  document.querySelectorAll(".navtoggle").forEach(b => {
+    if (b === except) return;
+    b.setAttribute("aria-expanded", "false");
+    document.getElementById(b.getAttribute("aria-controls")).hidden = true;
+  });
+}
+/* Named rather than written inline, so the behaviour can be exercised without a click.
+   Synthetic click events do not dispatch in the automation harness this page is checked
+   with, which made an inline handler untestable there -- the first "the menu does not
+   open" reading was the instrument, not the menu. */
+function navToggle(btn, force) {
+  const want = force === undefined
+    ? btn.getAttribute("aria-expanded") !== "true" : !!force;
+  closeNavMenus(want ? btn : null);
+  btn.setAttribute("aria-expanded", String(want));
+  document.getElementById(btn.getAttribute("aria-controls")).hidden = !want;
+}
+document.querySelectorAll(".navtoggle").forEach(btn => {
+  btn.addEventListener("click", ev => { ev.stopPropagation(); navToggle(btn); });
+});
+document.addEventListener("click", ev => {
+  if (!ev.target.closest(".navgroup")) closeNavMenus();
+});
+document.addEventListener("keydown", ev => {
+  if (ev.key !== "Escape") return;
+  const open = document.querySelector('.navtoggle[aria-expanded="true"]');
+  if (open) { closeNavMenus(); open.focus(); }
+});
 
 
 let siteFilter = "";

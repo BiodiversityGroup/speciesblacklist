@@ -12956,7 +12956,10 @@
 "NE": 91,
 "EW": 2
 },
-"oldest_record": 1790
+"oldest_record": 1790,
+"median_last": 1964,
+"n_dated": 1771,
+"n_1800s": 252
 },
 "places": [
 {
@@ -18162,7 +18165,7 @@
 },
 {
 "sp": "Egletes humifusa",
-"common": "Arkansas Lazydaisy",
+"common": "",
 "group": "Flowering plants",
 "last": 1836,
 "range": "Ecuador"
@@ -18181,5 +18184,347 @@
 "last": 1838,
 "range": "Brazil"
 }
-]
+],
+"longest": [
+{
+"group": "Snakes",
+"sp": "Epictia undecimstriata",
+"common": "",
+"last": 1839,
+"gap": 187,
+"range": "Bolivia",
+"family": "Leptotyphlopidae",
+"rl": "DD",
+"n_dated": 22,
+"gbif_total": 0,
+"gbif_latest": null
+},
+{
+"group": "Lizards",
+"sp": "Cryptoblepharus ahli",
+"common": "",
+"last": 1848,
+"gap": 178,
+"range": "Afrotropic",
+"family": "Scincidae",
+"rl": "DD",
+"n_dated": 456,
+"gbif_total": 0,
+"gbif_latest": null
+},
+{
+"group": "Worm lizards",
+"sp": "Cynisca degrysi",
+"common": "Sierra Leone Worm Lizard",
+"last": 1888,
+"gap": 138,
+"range": "Sierra Leone",
+"family": "Amphisbaenidae",
+"rl": "DD",
+"n_dated": 24,
+"gbif_total": 0,
+"gbif_latest": null
+},
+{
+"group": "Frogs",
+"sp": "Philautus microdiscus",
+"common": "Kobo Bubble-nest Frog",
+"last": 1912,
+"gap": 114,
+"range": "India",
+"family": "Rhacophoridae",
+"rl": "CR",
+"n_dated": 150,
+"gbif_total": 0,
+"gbif_latest": null
+},
+{
+"group": "Toads",
+"sp": "Duttaphrynus valhallae",
+"common": "",
+"last": 1909,
+"gap": 117,
+"range": "Indonesia",
+"family": "Bufonidae",
+"rl": "DD",
+"n_dated": 63,
+"gbif_total": 5,
+"gbif_latest": 1910
+},
+{
+"group": "Salamanders & newts",
+"sp": "Hynobius turkestanicus",
+"common": "Turkestanian Salamander",
+"last": 1909,
+"gap": 117,
+"range": "Kyrgyzstan, Tajikistan, Uzbekistan",
+"family": "Hynobiidae",
+"rl": "DD",
+"n_dated": 18,
+"gbif_total": 0,
+"gbif_latest": null
+},
+{
+"group": "Caecilians",
+"sp": "Ichthyophis singaporensis",
+"common": "Singapore Caecilian",
+"last": 1847,
+"gap": 179,
+"range": "Singapore",
+"family": "Ichthyophiidae",
+"rl": "DD",
+"n_dated": 5,
+"gbif_total": 3,
+"gbif_latest": null
+},
+{
+"group": "Birds",
+"sp": "Otus siaoensis",
+"common": "Siau Scops-owl",
+"last": 1866,
+"gap": 160,
+"range": "Indonesia",
+"family": "Strigidae",
+"rl": "CR",
+"n_dated": 42,
+"gbif_total": 0,
+"gbif_latest": null
+},
+{
+"group": "Mammals",
+"sp": "Uromys imperator",
+"common": "Emperor Rat",
+"last": 1887,
+"gap": 139,
+"range": "Solomon Islands",
+"family": "Muridae",
+"rl": "CR(PE)",
+"n_dated": 54,
+"gbif_total": 4,
+"gbif_latest": null
+},
+{
+"group": "Fish",
+"sp": "Barbonymus platysoma",
+"common": "",
+"last": 1855,
+"gap": 171,
+"range": "Java",
+"family": "Cyprinidae",
+"rl": "CR(PE)",
+"n_dated": 306,
+"gbif_total": 0,
+"gbif_latest": null
+},
+{
+"group": "Insects",
+"sp": "Heteragrion beschkii",
+"common": "",
+"last": 1834,
+"gap": 192,
+"range": "Brazil",
+"family": "Heteragrionidae",
+"rl": "DD",
+"n_dated": 200,
+"gbif_total": 2,
+"gbif_latest": null
+},
+{
+"group": "Spiders & scorpions",
+"sp": "Eresus pharaonis",
+"common": "",
+"last": 1829,
+"gap": 197,
+"range": "Egypt",
+"family": "Eresidae",
+"rl": "not in IUCN index",
+"n_dated": 54,
+"gbif_total": 0,
+"gbif_latest": null
+},
+{
+"group": "Snails & slugs",
+"sp": "Belgrandia varica",
+"common": "",
+"last": 1870,
+"gap": 156,
+"range": "France",
+"family": "Hydrobiidae",
+"rl": "CR(PE)",
+"n_dated": 52,
+"gbif_total": 9,
+"gbif_latest": 1854
+},
+{
+"group": "Clams & mussels",
+"sp": "Epioblasma othcaloogensis",
+"common": "Southern Acron Riffle Shell",
+"last": 1974,
+"gap": 52,
+"range": "United States",
+"family": "Unionidae",
+"rl": "CR(PE)",
+"n_dated": 4,
+"gbif_total": 113,
+"gbif_latest": 1974
+},
+{
+"group": "Crustaceans",
+"sp": "Potamonautes dubius",
+"common": "",
+"last": 1890,
+"gap": 136,
+"range": "Angola, Namibia",
+"family": "Potamonautidae",
+"rl": "DD",
+"n_dated": 32,
+"gbif_total": 5,
+"gbif_latest": null
+},
+{
+"group": "Corals",
+"sp": "Montigyra kenti",
+"common": "",
+"last": 2000,
+"gap": 26,
+"range": "Australia",
+"family": "Euphylliidae",
+"rl": "DD",
+"n_dated": 2,
+"gbif_total": 6,
+"gbif_latest": 1987
+},
+{
+"group": "Millipedes & centipedes",
+"sp": "Mecistocephalus cyclops",
+"common": "",
+"last": 1892,
+"gap": 134,
+"range": "Seychelles",
+"family": "Mecistocephalidae",
+"rl": "CR(PE)",
+"n_dated": 5,
+"gbif_total": 0,
+"gbif_latest": null
+},
+{
+"group": "Springtails & relatives",
+"sp": "Delamarephorura tami",
+"common": "",
+"last": 2004,
+"gap": 22,
+"range": "Vietnam",
+"family": "Tullbergiidae",
+"rl": "CR(PE)",
+"n_dated": 2,
+"gbif_total": 3,
+"gbif_latest": null
+},
+{
+"group": "Worms",
+"sp": "Prosadenoporus agricola",
+"common": "",
+"last": 1966,
+"gap": 60,
+"range": "Bermuda",
+"family": "Prosorhochmidae",
+"rl": "CR(PE)",
+"n_dated": 2,
+"gbif_total": 9,
+"gbif_latest": 1906
+},
+{
+"group": "Plants",
+"sp": "Eugenia guayaquilensis",
+"common": "",
+"last": 1823,
+"gap": 203,
+"range": "Ecuador",
+"family": "Myrtaceae",
+"rl": "CR(PE)",
+"n_dated": 277,
+"gbif_total": 15,
+"gbif_latest": 1828
+}
+],
+"compare": {
+"rows": [
+{
+"c": "Brazil",
+"lost": 266,
+"new": 87
+},
+{
+"c": "China",
+"lost": 29,
+"new": 225
+},
+{
+"c": "Madagascar",
+"lost": 103,
+"new": 97
+},
+{
+"c": "Ecuador",
+"lost": 110,
+"new": 85
+},
+{
+"c": "United States",
+"lost": 143,
+"new": 16
+},
+{
+"c": "Colombia",
+"lost": 87,
+"new": 52
+},
+{
+"c": "Peru",
+"lost": 36,
+"new": 66
+},
+{
+"c": "Vietnam",
+"lost": 29,
+"new": 64
+},
+{
+"c": "Mexico",
+"lost": 62,
+"new": 22
+},
+{
+"c": "India",
+"lost": 40,
+"new": 43
+},
+{
+"c": "Tanzania",
+"lost": 67,
+"new": 0
+},
+{
+"c": "Indonesia",
+"lost": 16,
+"new": 41
+}
+],
+"overlap": [
+"Australia",
+"Brazil",
+"China",
+"Colombia",
+"Ecuador",
+"India",
+"Madagascar",
+"Mexico",
+"Peru",
+"United States",
+"Vietnam"
+],
+"n_overlap": 11,
+"hawaii": 90,
+"us_lost": 143
+}
 }
