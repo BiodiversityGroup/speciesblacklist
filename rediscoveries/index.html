@@ -1478,6 +1478,16 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
   ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
+/* The binomial to search an external registry with: IUCN's, not the book's, wherever the
+   two disagree. s.iucn is a full authority string ("Pterocryptis indica (Datta, Barman &
+   Jayaram, 1987)"), so the genus and species are taken off the front and the author and
+   year dropped, which registry search boxes handle badly anyway. Falls back to the book
+   name whenever s.iucn is missing or does not start with a binomial. */
+function lookupName(s) {
+  const m = /^([A-Z][a-z]{2,})\s+([a-z-]{3,})/.exec(s.iucn || "");
+  return m ? m[1] + " " + m[2] : s.n;
+}
+
 /* EVERY PAYLOAD GOES THROUGH HERE.
    There were nine fetches with nine ideas about failure. None checked r.ok, so a 404 or a
    502 arrived as a JSON parse error and got reported as whatever that handler happened to
@@ -4051,9 +4061,16 @@ function toggle(tr) {
       <div><span>Restriction tier</span>${s.t} — ${esc(s.b)}</div>
       <div><span>Locality</span>${esc(s.s || "not specified")}</div>
       <div><span>Look up</span>
-        <a href="https://www.iucnredlist.org/search?query=${encodeURIComponent(s.n)}"
+        <!-- Search on the name the REGISTRY uses, not the one the book prints. Twelve
+             species differ, usually on gender agreement: the book has Pterocryptis
+             indicus, IUCN has indica; Fejervarya parambikulamana is Minervarya there. The
+             link was built from s.n, so on exactly the records where a reader most needs
+             to check, it searched a name the Red List does not hold and returned nothing.
+             A register whose thesis is that these species are hard to find in databases
+             cannot afford to be the reason one is. -->
+        <a href="https://www.iucnredlist.org/search?query=${encodeURIComponent(lookupName(s))}"
            target="_blank" rel="noopener">IUCN</a> ·
-        <a href="https://www.gbif.org/species/search?q=${encodeURIComponent(s.n)}"
+        <a href="https://www.gbif.org/species/search?q=${encodeURIComponent(lookupName(s))}"
            target="_blank" rel="noopener">GBIF</a></div>
     </div>
     ${flags.length ? `<p class="desc-note"><strong>Description only:</strong>
