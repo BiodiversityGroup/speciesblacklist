@@ -1,24 +1,24 @@
 {
 "built": "2026-08-12",
 "counts": {
-"stories": 121,
+"stories": 113,
 "raw_items": 280,
-"with_species": 77,
+"with_species": 70,
 "distinct_species": 153,
-"distinct_species_firm": 29,
-"multi_species_cards": 30,
-"with_image": 120,
-"syndicated": 57,
-"on_tbg_list": 28,
+"distinct_species_firm": 28,
+"multi_species_cards": 29,
+"with_image": 112,
+"syndicated": 51,
+"on_tbg_list": 22,
 "on_list_breakdown": {
-"on our lost-species list": 24,
-"on the Black List": 4
+"on our lost-species list": 19,
+"on the Black List": 3
 },
 "undated": 0,
 "newest": "Wed, 12 Aug 2026",
 "tracked_names": 6709,
-"image_local": 115,
-"archived": 99
+"image_local": 107,
+"archived": 92
 },
 "cards": [
 {
@@ -65,10 +65,14 @@
 },
 {
 "title": "A new and interesting earthworm species from Madagascar (Crassiclitellata, Kynotidae) with an updated key to the Kynotus Michelsen, 1891 species",
-"species": [],
-"species_firm": [],
+"species": [
+"Kynotus darwinii"
+],
+"species_firm": [
+"Kynotus darwinii"
+],
 "on_list": "",
-"detail": "",
+"detail": "The headline is a new species, but the same paper reports re-collecting Kynotus darwinii, the type species of its genus, which had not been collected since it was first described.",
 "publisher": "ZooKeys",
 "date": "Wed, 29 Jul 2026",
 "ts": 1785312901,
@@ -495,9 +499,7 @@
 "Thismia kobensis",
 "Erica cunoniensis"
 ],
-"species_firm": [
-"Ptilotus senarius"
-],
+"species_firm": [],
 "on_list": "",
 "detail": "",
 "publisher": "ScienceDaily",
@@ -505,29 +507,25 @@
 "ts": 1779087600,
 "first_seen": "2026-08-10",
 "link": "https://www.sciencedaily.com/releases/2026/05/260517211447.htm",
-"image": "/rd-img/adcc41bbee7e7859.jpg",
-"wayback": "http://web.archive.org/web/20260718182246/https://www.sciencedaily.com/releases/2026/05/260517211447.htm",
-"desc": "A random photo snapped in the Australian outback has led to the rediscovery of a plant thought extinct for nearly 60 years \u2014 proving that ordinary people with smartphones are quietly transforming science. After bird bander Aaron Bean uploaded pictures of a str",
+"image": "/rd-img/378fe96dccb976db.jpg",
+"wayback": "http://web.archive.org/web/20260209175711/https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years",
+"desc": "\u2018Extinct\u2019 Queensland plant rediscovered after 58 years\n\t\t\t\t\t\n\t\t\tA plant species presumed extinct in the wild has been rediscovered in northern Queensland\u2014thanks to a sharp-eyed observer, a smartpho",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 10,
 "also": [
+{
+"publisher": "Scimex",
+"link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
+},
 {
 "publisher": "ScienceDaily",
 "link": "https://www.sciencedaily.com/releases/2026/05/260517211447.htm"
 },
 {
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/"
-},
-{
-"publisher": "The Cool Down",
-"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/"
-},
-{
-"publisher": "InDaily South Australia",
-"link": "https://www.indailysa.com.au/news/just-in/2026/01/19/photo-leads-to-rediscovery-of-extinct-aussie-plant"
+"publisher": "Newsweek",
+"link": "https://www.newsweek.com/botany-plant-believed-extinct-half-century-found-queensland-australia-11373400"
 }
 ]
 },
@@ -629,7 +627,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 10,
 "also": [
 {
 "publisher": "Conservation news",
@@ -638,6 +636,14 @@
 {
 "publisher": "Conservation news",
 "link": "https://news.mongabay.com/2026/04/rediscovered-species-in-papua-spotlights-importance-of-indigenous-knowledge/"
+},
+{
+"publisher": "the Guardian",
+"link": "https://www.theguardian.com/world/2023/nov/10/attenborough-long-beaked-echidna-seen-first-time-cyclops-mountain-photos-footage"
+},
+{
+"publisher": "Nature",
+"link": "https://www.nature.com/articles/s44185-025-00086-6"
 }
 ]
 },
@@ -859,33 +865,6 @@
 "note": "",
 "outlets": 1,
 "also": []
-},
-{
-"title": "How Do You Rediscover A \u201cLost\u201d Species? The Fagidle's Trapdoor Spider Was Lost For 92 Years. Not Anymore",
-"species": [
-"Nemesia berlandi"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Arachnid, long-lost, last seen 1931",
-"publisher": "IFLScience",
-"date": "Thu, 19 Mar 2026",
-"ts": 1773903600,
-"first_seen": "2026-08-10",
-"link": "https://www.iflscience.com/how-do-you-rediscover-a-lost-species-we-spoke-to-the-experts-who-found-a-spider-lost-for-92-years-82907",
-"image": "/rd-img/4ae4bdb37a4cd466.jpg",
-"wayback": "http://web.archive.org/web/20260812035040/https://www.iflscience.com/how-do-you-rediscover-a-lost-species-we-spoke-to-the-experts-who-found-a-spider-lost-for-92-years-82907",
-"desc": "When a 10-year search comes down to a single rock.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "IFLScience",
-"link": "https://www.iflscience.com/iflscience-we-have-questions-how-do-you-rediscover-a-lost-species-78530"
-}
-]
 },
 {
 "title": "Rare plant species rediscovered in Arunachal after 189 years",
@@ -1168,60 +1147,6 @@
 "note": "",
 "outlets": 1,
 "also": []
-},
-{
-"title": "\u2018Extinct\u2019 Queensland plant rediscovered after 58 years",
-"species": [
-"Ptilotus senarius"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "scimex.org",
-"date": "Mon, 19 Jan 2026",
-"ts": 1768809600,
-"first_seen": "2026-08-10",
-"link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years",
-"image": "/rd-img/378fe96dccb976db.jpg",
-"wayback": "http://web.archive.org/web/20260209175711/https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years",
-"desc": "\u2018Extinct\u2019 Queensland plant rediscovered after 58 years\n\t\t\t\t\t\n\t\t\tA plant species presumed extinct in the wild has been rediscovered in northern Queensland\u2014thanks to a sharp-eyed observer, a smartpho",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Scimex",
-"link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
-}
-]
-},
-{
-"title": "Plant Believed Extinct For Half A Century Suddenly Found In Unexpected Spot",
-"species": [
-"Ptilotus senarius"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Newsweek",
-"date": "Sun, 18 Jan 2026",
-"ts": 1768723200,
-"first_seen": "2026-08-10",
-"link": "https://www.newsweek.com/botany-plant-believed-extinct-half-century-found-queensland-australia-11373400",
-"image": "/rd-img/eadb912fa3b867b2.jpg",
-"wayback": "http://web.archive.org/web/20260420165445/https://www.newsweek.com/botany-plant-believed-extinct-half-century-found-queensland-australia-11373400",
-"desc": "A plant thought extinct for 58 years has been found again in Australia after a chance upload to a citizen science mobile app.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "NDTV",
-"link": "https://www.ndtv.com/science/australian-plant-once-thought-extinct-rediscovered-after-60-years-in-unexpected-spot-10789666"
-}
-]
 },
 {
 "title": "Endangered herb lepidagathis clavata rediscovered after 166 years in Western Ghats",
@@ -1826,14 +1751,27 @@
 "ts": 1760511600,
 "first_seen": "2026-08-10",
 "link": "https://www.earth.com/news/two-song-notes-confirms-rediscovery-of-jerdons-courser-bird-missing-for-20-years/",
-"image": "/rd-img/63405a20459e6376.jpg",
-"wayback": "http://web.archive.org/web/20260811130800/https://www.earth.com/news/two-song-notes-confirms-rediscovery-of-jerdons-courser-bird-missing-for-20-years/",
-"desc": "In India, an acoustic recording from August 24, 2025 confirms that the nocturnal bird called 'Jerdon's courser' is not extinct.",
+"image": "/rd-img/ce58ca29f452a4d6.jpg",
+"wayback": "http://web.archive.org/web/20260812035626/https://www.birdlife.org/news/2025/09/10/glimmer-of-hope-sought-after-lost-bird-rediscovered-in-india/",
+"desc": "After more than 20 years, the Critically Endangered Jerdon\u2019s Courser has been documented again.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 4,
+"also": [
+{
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+},
+{
+"publisher": "Kids News",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+},
+{
+"publisher": "Earth.com",
+"link": "https://www.earth.com/news/two-song-notes-confirms-rediscovery-of-jerdons-courser-bird-missing-for-20-years/"
+}
+]
 },
 {
 "title": "Whistler residents help document rediscovery of \u2018extinct\u2019 Ecuadorian toad",
@@ -1893,37 +1831,6 @@
 {
 "publisher": "Conservation news",
 "link": "https://news.mongabay.com/2025/08/social-media-post-sparks-rediscovery-of-endemic-sri-lanka-rainforest-plant/"
-}
-]
-},
-{
-"title": "Glimmer of hope: Sought-after lost bird rediscovered in India",
-"species": [
-"Rhinoptilus bitorquatus"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Bird, lost, last seen 2009",
-"publisher": "BirdLife International",
-"date": "Wed, 10 Sep 2025",
-"ts": 1757487600,
-"first_seen": "2026-08-10",
-"link": "https://www.birdlife.org/news/2025/09/10/glimmer-of-hope-sought-after-lost-bird-rediscovered-in-india/",
-"image": "/rd-img/ce58ca29f452a4d6.jpg",
-"wayback": "http://web.archive.org/web/20260812035626/https://www.birdlife.org/news/2025/09/10/glimmer-of-hope-sought-after-lost-bird-rediscovered-in-india/",
-"desc": "After more than 20 years, the Critically Endangered Jerdon\u2019s Courser has been documented again.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
-"also": [
-{
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
-{
-"publisher": "Kids News",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 }
 ]
 },
@@ -1989,7 +1896,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 5,
 "also": [
 {
 "publisher": "Smithsonian Magazine",
@@ -1998,33 +1905,10 @@
 {
 "publisher": "Smithsonian Magazine",
 "link": "https://www.smithsonianmag.com/smart-news/elusive-sailback-houndshark-rediscovered-in-papua-new-guinea-after-50-years-180987260/"
-}
-]
 },
 {
-"title": "Long-lost sailback shark rediscovered after more than 50 years",
-"species": [
-"Gogolia filewoodi"
-],
-"species_firm": [],
-"on_list": "Black List (Data Deficient)",
-"detail": "tier 2",
 "publisher": "New Scientist",
-"date": "Tue, 26 Aug 2025",
-"ts": 1756191600,
-"first_seen": "2026-08-10",
-"link": "https://www.newscientist.com/article/2493952-long-lost-sailback-shark-rediscovered-after-more-than-50-years/",
-"image": "/rd-img/1ded96deef1f48e6.jpg",
-"wayback": "http://web.archive.org/web/20260812041055/https://www.newscientist.com/article/2493952-long-lost-sailback-shark-rediscovered-after-more-than-50-years/",
-"desc": "The rare sailback houndshark, which has an unusually large dorsal fin, was first described by scientists in 1973. That was the last record of its existence, until now",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "InsideHook",
-"link": "https://www.insidehook.com/culture/what-its-like-to-rediscover-lost-shark-forrest-galante"
+"link": "https://www.newscientist.com/article/2493952-long-lost-sailback-shark-rediscovered-after-more-than-50-years/"
 }
 ]
 },
@@ -2339,47 +2223,6 @@
 {
 "publisher": "Good News Network",
 "link": "https://www.goodnewsnetwork.org/small-rabbit-with-a-black-tail-not-seen-in-120-years-found-hopping-around-mexican-mountains/"
-}
-]
-},
-{
-"title": "Attenborough\u2019s echidna rediscovered by combining Indigenous knowledge with camera-trapping | npj Biodiversity",
-"species": [
-"Zaglossus attenboroughi"
-],
-"species_firm": [
-"Zaglossus attenboroughi"
-],
-"on_list": "Lost Species",
-"detail": "Mammal, long-lost, last seen 1961",
-"publisher": "Nature",
-"date": "Mon, 12 May 2025",
-"ts": 1747033200,
-"first_seen": "2026-08-10",
-"link": "https://www.nature.com/articles/s44185-025-00086-6",
-"image": "/rd-img/f45a84b404e1138c.jpg",
-"wayback": "http://web.archive.org/web/20260521110142/https://www.nature.com/articles/s44185-025-00086-6",
-"desc": "Follow the latest headlines from ABC News, Australia's most trusted media source, with live events, audio and on-demand video from the national broadcaster.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 5,
-"also": [
-{
-"publisher": "Australian Broadcasting Corporation",
-"link": "https://www.abc.net.au/news/2023-11-13/attenboroughs-long-beaked-echidna-rediscovered/103100456"
-},
-{
-"publisher": "Australian Broadcasting Corporation",
-"link": "https://www.abc.net.au/news/2023-11-10/long-beaked-echidna-rediscovered-in-papua-mountains/103089936"
-},
-{
-"publisher": "Reuters",
-"link": "https://www.reuters.com/science/long-lost-mammal-rediscovered-remote-indonesia-mountains-2023-11-10/"
-},
-{
-"publisher": "The Telegraph",
-"link": "https://www.telegraph.co.uk/world-news/2023/11/10/attenborough-named-echidna-mammal-rediscovered-new-guinea/"
 }
 ]
 },
@@ -2700,33 +2543,6 @@
 ]
 },
 {
-"title": "Species of mammal named after David Attenborough believed extinct rediscovered",
-"species": [
-"Zaglossus attenboroughi"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Mammal, long-lost, last seen 1961",
-"publisher": "the Guardian",
-"date": "Thu, 09 Nov 2023",
-"ts": 1699516800,
-"first_seen": "2026-08-10",
-"link": "https://www.theguardian.com/world/2023/nov/10/attenborough-long-beaked-echidna-seen-first-time-cyclops-mountain-photos-footage",
-"image": "/rd-img/294a2533ffea89f6.jpg",
-"wayback": "http://web.archive.org/web/20260812125635/https://www.indiatoday.in/science/story/mammal-species-named-after-attenborough-rediscovered-it-was-extinct-for-60-years-2461367-2023-11-10",
-"desc": "Long-beaked echidna with spines of a hedgehog and snout of an anteater photographed on last day of expedition",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "India Today",
-"link": "https://www.indiatoday.in/science/story/mammal-species-named-after-attenborough-rediscovered-it-was-extinct-for-60-years-2461367-2023-11-10"
-}
-]
-},
-{
 "title": "Large pigeon lost to science for 140 years rediscovered in Papua New Guinea",
 "species": [],
 "species_firm": [],
@@ -2769,14 +2585,23 @@
 "ts": 1668758400,
 "first_seen": "2026-08-10",
 "link": "https://www.theguardian.com/environment/2022/nov/17/afzelius-crab-rediscovery-225-years-sierra-leone-aoe",
-"image": "/rd-img/c2db9df2db16b116.jpg",
-"wayback": "",
-"desc": "The label on a specimen of Afzelius\u2019s crab, a species last seen in 1796, simply said \u2018Sierra Leone\u2019. Scientists headed to the country to see if they could find the land-dwelling crustacean",
+"image": "/rd-img/6f4319ae66dc9465.jpg",
+"wayback": "http://web.archive.org/web/20260811133515/https://news.mongabay.com/2021/07/in-sierra-leone-two-colorful-land-crabs-rediscovered-two-new-species-found/",
+"desc": "On a recent expedition to the remote forests of Sierra Leone, West Africa, researchers found two species of crabs new to science and rediscovered two species not seen in more than half a century. For 23 days, Pierre A. Mvogo Ndongo, a researcher from the Unive",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 3,
+"also": [
+{
+"publisher": "Earth.com",
+"link": "https://www.earth.com/news/lost-crab-species-rediscovered-in-sierra-leone/"
+},
+{
+"publisher": "the Guardian",
+"link": "https://www.theguardian.com/environment/2022/nov/17/afzelius-crab-rediscovery-225-years-sierra-leone-aoe"
+}
+]
 },
 {
 "title": "Lost and found: stroke of luck that helped rediscover tiny \u2018superhero\u2019 fish",
@@ -2935,34 +2760,6 @@
 {
 "publisher": "CNN",
 "link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl"
-}
-]
-},
-{
-"title": "In Sierra Leone, two colorful land crabs rediscovered, two new species found - news",
-"species": [
-"Afrithelphusa afzelii",
-"Afrithelphusa leonensis"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Crustacean, long-lost, last seen 1790-1800",
-"publisher": "Conservation news",
-"date": "Fri, 30 Jul 2021",
-"ts": 1627628400,
-"first_seen": "2026-08-10",
-"link": "https://news.mongabay.com/2021/07/in-sierra-leone-two-colorful-land-crabs-rediscovered-two-new-species-found/",
-"image": "/rd-img/6f4319ae66dc9465.jpg",
-"wayback": "http://web.archive.org/web/20260811133515/https://news.mongabay.com/2021/07/in-sierra-leone-two-colorful-land-crabs-rediscovered-two-new-species-found/",
-"desc": "On a recent expedition to the remote forests of Sierra Leone, West Africa, researchers found two species of crabs new to science and rediscovered two species not seen in more than half a century. For 23 days, Pierre A. Mvogo Ndongo, a researcher from the Unive",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Earth.com",
-"link": "https://www.earth.com/news/lost-crab-species-rediscovered-in-sierra-leone/"
 }
 ]
 },
