@@ -18103,69 +18103,79 @@
 {
 "sp": "Afrithelphusa afzelii",
 "common": "Afzeli's Crab",
+"descriptor": "Sierra Leonean crustacean",
 "group": "Crustaceans",
 "last": 1790,
 "range": "Sierra Leone"
 },
 {
 "sp": "Eresus quartuorguttata",
-"common": "--",
+"common": "",
+"descriptor": "Italian arachnid",
 "group": "Arachnids",
 "last": 1804,
 "range": "Italy"
 },
 {
 "sp": "Eresus frontalis",
-"common": "--",
+"common": "",
+"descriptor": "Spanish arachnid",
 "group": "Arachnids",
 "last": 1808,
 "range": "Spain"
 },
 {
 "sp": "Eugenia guayaquilensis",
-"common": "--",
+"common": "",
+"descriptor": "Ecuadorian tree or shrub",
 "group": "Plant - Trees & Shrubs",
 "last": 1823,
 "range": "Ecuador"
 },
 {
 "sp": "Eresus pharaonis",
-"common": "--",
+"common": "",
+"descriptor": "Egyptian arachnid",
 "group": "Arachnids",
 "last": 1829,
 "range": "Egypt"
 },
 {
 "sp": "Heteragrion beschkii",
-"common": "--",
+"common": "",
+"descriptor": "Brazilian insect",
 "group": "Insect",
 "last": 1834,
 "range": "Brazil"
 },
 {
 "sp": "Bombus rubriventris",
-"common": "--",
+"common": "",
+"descriptor": "Brazilian insect",
 "group": "Insect",
 "last": 1835,
 "range": "Brazil"
 },
 {
 "sp": "Delilia inelegans",
-"common": "--",
+"common": "",
+"descriptor": "Ecuadorian flowering plant",
 "group": "Flowering plants",
 "last": 1835,
 "range": "Ecuador"
 },
 {
 "sp": "Sicyos villosa",
-"common": "--",
+"common": "",
+"descriptor": "Ecuadorian flowering plant",
 "group": "Flowering plants",
 "last": 1835,
 "range": "Ecuador"
 },
 {
 "sp": "Egletes humifusa",
-"common": "",
+"common": "Arkansas Lazydaisy",
+"descriptor": "Ecuadorian flowering plant",
 "group": "Flowering plants",
 "last": 1836,
 "range": "Ecuador"
@@ -18173,13 +18183,15 @@
 {
 "sp": "Peloriolus brunneus",
 "common": "Darwin's Elmid",
+"descriptor": "Insect from Saint Helena",
 "group": "Insect",
 "last": 1836,
 "range": "Saint Helena"
 },
 {
 "sp": "Cycloramphus fuliginosus",
-"common": "--",
+"common": "Tschudi's Button Frog",
+"descriptor": "Brazilian amphibian",
 "group": "Amphibian",
 "last": 1838,
 "range": "Brazil"
@@ -18189,7 +18201,7 @@
 {
 "group": "Snakes",
 "sp": "Epictia undecimstriata",
-"common": "",
+"common": "Eleven-striped Blind Snake",
 "last": 1839,
 "gap": 187,
 "range": "Bolivia",
@@ -18202,7 +18214,7 @@
 {
 "group": "Lizards",
 "sp": "Cryptoblepharus ahli",
-"common": "",
+"common": "Ahl's Snake-eyed Skink",
 "last": 1848,
 "gap": 178,
 "range": "Afrotropic",
@@ -18241,7 +18253,7 @@
 {
 "group": "Toads",
 "sp": "Duttaphrynus valhallae",
-"common": "",
+"common": "Pulo Weh Toad",
 "last": 1909,
 "gap": 117,
 "range": "Indonesia",
@@ -18371,7 +18383,7 @@
 {
 "group": "Crustaceans",
 "sp": "Potamonautes dubius",
-"common": "",
+"common": "Kunene River Crab",
 "last": 1890,
 "gap": 136,
 "range": "Angola, Namibia",
@@ -18423,7 +18435,7 @@
 {
 "group": "Worms",
 "sp": "Prosadenoporus agricola",
-"common": "",
+"common": "Bermuda land nemertean",
 "last": 1966,
 "gap": 60,
 "range": "Bermuda",

@@ -133,7 +133,10 @@
   /* Kicker labels sit directly above a title, so they center with it. The ones
      used as UI labels (the field header, the map source row) are exempted below. */
   .eyebrow { text-align:center; }
-  .field-head .eyebrow, .mapsource .eyebrow, .tierkey .eyebrow { text-align:left; }
+  /* These were left-aligned when the tier key sat under the field as a footnote to it.
+     They are subheadings, and the site-wide rule is that titles and subheadings centre,
+     so only the map's source credit stays left. */
+  .mapsource .eyebrow { text-align:left; }
   a { color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px; }
   :focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:2px; }
   .num { font-family:var(--mono); font-variant-numeric:tabular-nums; }
@@ -763,7 +766,10 @@
               margin:var(--s1) 0 0; line-height:1.55; }
   .stakes strong { color:var(--ink); }
   #field { display:block; width:100%; height:auto; cursor:crosshair; }
-  .field-note { font-family:var(--sans); font-size:var(--fs-micro); color:var(--ink-3);
+  /* --fs-micro is 0.68rem, a size for uppercase labels and nothing else. Two sentences of
+     real prose were set in it, which is simply too small to read. Notes now use the small
+     body size and the mid ink, so they read as quiet rather than as fine print. */
+  .field-note { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
                 margin:var(--s1) 0 0; }
   #fieldTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
               transition:opacity .12s; background:var(--ink); color:var(--ground);
@@ -1188,104 +1194,6 @@
 
 <!-- ============================== OVERVIEW ============================== -->
 <!-- ============================ SITE OVERVIEW ============================ -->
-<section class="view" id="v-home">
- <div class="hero">
-  <div class="wrap">
-    <div class="intro">
-      <p class="eyebrow">Life Overlooked</p>
-      <h2>Thousands of species are slipping away without anyone claiming they're at risk
-        of extinction.</h2>
-      <p class="lede">Conservation runs on lists. Money, legal protection and recovery
-        plans all follow from a species having a name on the right list, like the IUCN's
-        Red List. This site is about the animals and plants that never made it onto those
-        lists, and what it will take to find them before an irreversible decision gets
-        made for us.</p>
-    </div>
-
-    <div class="stakes">
-      <h3>Why anyone should care about a gap in a database</h3>
-      <p>When a species is listed as threatened, things happen. Funders can point to it.
-        Governments can be held to it. Researchers can build a case around it. When a
-        species has no listing at all, none of that machinery can start, and the silence
-        reads almost like good news.</p>
-      <p>It very often is not good news. These are the species nobody has the information
-        to worry about: known from one hillside, described once and never seen again, or
-        named so recently that no assessor has reached them. If one of them goes extinct,
-        it will happen without an entry, without a headline, and without anybody being
-        able to say afterwards what was lost.</p>
-      <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
-        Biodiversity Group</a> built this site to work out who those species actually are.
-        We call them <strong>Life Overlooked</strong>. Naming them is the first step,
-        because you cannot fight for something that has never been counted.</p>
-    </div>
-  </div>
- </div>
-
- <div class="wrap homebody">
-  <div class="prose">
-    <h3>What you will find here</h3>
-    <p>Four separate pieces of work, each answering a different question. They come from
-      different sources and they are deliberately never added together.</p>
-  </div>
-
-  <div class="homecards">
-    <article class="homecard">
-      <p class="eyebrow">The core list</p>
-      <h4><a href="/black-list/" data-goto="overview">The Black List</a></h4>
-      <p>Species the Red List has assessed and been unable to categorize, or has never
-        assessed at all, ranked by how narrowly restricted the published record says they
-        are. If a species here turns out to be in trouble, this is where you would have
-        seen it first.</p>
-    </article>
-
-    <article class="homecard">
-      <p class="eyebrow">Described, then forgotten</p>
-      <h4><a href="/new-species/" data-goto="newtaxa">New Species</a></h4>
-      <p>Reptiles and amphibians named by science since 2015 that still carry no
-        extinction risk assessment. Nine in ten are known from a single country. New
-        ones join the queue every week.</p>
-    </article>
-
-    <article class="homecard">
-      <p class="eyebrow">Missing, not gone</p>
-      <h4><a href="/lost-species/" data-goto="lost">Lost Species</a></h4>
-      <p>Species nobody has confirmed alive in over a decade, and in some cases for
-        centuries, that nobody has been able to declare extinct either. Half of them have
-        not been seen since the 1960s.</p>
-    </article>
-
-    <article class="homecard">
-      <p class="eyebrow">Proof it can be done</p>
-      <h4><a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a></h4>
-      <p>Species found again, gathered as they are reported. This is the hopeful part.
-        Most species that go missing are still out there, and some of them turn up
-        because one person went and looked.</p>
-    </article>
-  </div>
-
-  <div class="prose">
-    <h3>The part worth holding on to</h3>
-    <p>A species being missing is not the same as a species being gone. Of the lost
-      species that researchers have traced, roughly a quarter are thought to be genuinely
-      extinct. That is a grim number read one way and a remarkable one read the other,
-      because it means most of them are alive and simply unvisited.</p>
-    <p>Some have been unseen for two hundred years and then turned up in a stream nobody
-      had surveyed. One was identified from a photograph a tourist posted online. The
-      work is not hopeless. It is just unfunded, and pointed at the wrong places.</p>
-  </div>
-
-  <div class="prose">
-    <h3>What would actually help</h3>
-    <p>Three things, and none of them need you to be a scientist. Tell somebody about
-      these species. Ask the people who decide where conservation money goes to include
-      them. Support the groups already doing this work.</p>
-  </div>
-  <p class="homecta"><a class="bigbtn" href="/get-involved/"
-    data-goto="involved">How to help</a></p>
- </div>
-</section>
-
-<!-- ========================= BLACK LIST OVERVIEW ========================= -->
 <section class="view" id="v-overview" hidden>
  <div class="hero">
   <div class="wrap">
@@ -1297,6 +1205,14 @@
         <strong>Data Deficient</strong>, meaning IUCN looked and there was not enough
         information to say. Others are <strong>Not Evaluated</strong>, meaning nobody has
         looked at all. In practice both are treated as though the species were safe.</p>
+      <p class="lede"><strong>The gap is much bigger than this register.</strong> IUCN
+        v2026&#8209;1 records <strong>8,659</strong> vertebrates as Data Deficient, and the
+        number never assessed is larger again and nobody knows it precisely. Comparing the
+        Reptile Database against the Red List leaves <strong>2,345 reptiles</strong> with no
+        entry at all, and <a href="/new-species/" data-goto="newtaxa">a separate count</a>
+        finds 1,729 reptiles and 974 amphibians described since 2015 that have never been
+        assessed. What follows is a <em>ranked subset</em> of that gap, not a measure of
+        it.</p>
     </div>
 
     <div class="counts" id="counts"></div>
@@ -1411,9 +1327,6 @@
   </div>
  </div>
 </section>
-<div id="fieldTip" aria-hidden="true"></div>
-
-<!-- ============================== REGISTER ============================== -->
 <section class="view wrap" id="v-register" hidden>
   <div class="prose" style="margin-bottom:.5rem">
     <h2 style="font-size:var(--fs-h2)">The Black List</h2>
@@ -1474,8 +1387,6 @@
   </div>
   <button class="more" id="more" hidden>Show more</button>
 </section>
-
-<!-- ================================= MAP ================================ -->
 <section class="view wrap" id="v-map" hidden>
   <div class="prose prose-full">
     <h2 style="font-size:var(--fs-h2)">Where the record actually is</h2>
@@ -1526,8 +1437,6 @@
   <p class="mapstats" id="mapStats"></p>
   <div id="mapTip" aria-hidden="true"></div>
 </section>
-
-<!-- ================================ SITES =============================== -->
 <section class="view wrap" id="v-sites" hidden>
   <div class="prose prose-full">
     <h2 style="font-size:1.4rem">Localities holding several gap species</h2>
@@ -1561,1068 +1470,24 @@
   <div id="habList"></div>
 </section>
 
+<!-- ========================= BLACK LIST OVERVIEW ========================= -->
+<div id="fieldTip" aria-hidden="true"></div>
+
+<!-- ============================== REGISTER ============================== -->
+
+<!-- ================================= MAP ================================ -->
+
+<!-- ================================ SITES =============================== -->
+
 <!-- ===================== DESCRIBED BUT NEVER ASSESSED ==================== -->
-<section class="view wrap" id="v-newtaxa" hidden>
-
-  <!-- ===================== EXECUTIVE SUMMARY ===================== -->
-  <div class="ntlead">
-    <p class="ntkicker">Reptiles described since 2015</p>
-    <!-- filled from reptiles.json at runtime; a hard-coded figure here is exactly what
-         15_check_figures.py exists to catch -->
-    <h2 class="nthead">The Red List has never assessed <span class="nthero"
-      id="ntHero">&hellip;</span> of them.</h2>
-    <p class="ntsummary">Taxonomists have named more than two thousand new reptile
-      species in the past decade. Most have never been evaluated for extinction risk, so
-      no listing protects them and no conservation plan counts them. Nine in ten are
-      endemic to a single country, which is the pattern that best predicts a species turns
-      out to be threatened when someone finally looks.</p>
-  </div>
-
-  <div id="ntCounts" class="counts"></div>
-
-  <!-- ===================== AMPHIBIANS ===================== -->
-  <div class="ntlead ntlead-amph">
-    <p class="ntkicker">And the same question, asked of amphibians</p>
-    <h2 class="nthead"><span class="nthero" id="ampHero">&hellip;</span> amphibians,
-      described since 2015, never assessed.</h2>
-    <p class="ntsummary">The reptile list rests on the Reptile Database; this one rests on
-      <a href="https://amphibiaweb.org/amphibian/newspecies.html" target="_blank"
-      rel="noopener">AmphibiaWeb's own new-species listing</a>: 1,721 species described
-      from 2015 onward, each checked individually against the Red List by the same method
-      and graded on the same three-point scale.</p>
-    <p class="ntsummary">Amphibians are the better-assessed class: <strong
-      id="ampAssessed">&hellip;</strong> of those 1,721 already carry an assessment, where
-      most recent reptiles do not. The Global Amphibian Assessment has been run twice and
-      reptiles have no equivalent. What is left is still <span id="ampInline">&hellip;</span>
-      species with no evaluation at all, and <strong id="ampOne">&hellip;</strong> of them
-      are endemic to a single country.</p>
-  </div>
-
-  <div id="ampCounts" class="counts"></div>
-
-  <!-- Deliberately after both classes, because the point only lands once the reader has
-       seen the two totals: the backlog is not a one-off cohort, it is an intake rate. -->
-  <div class="prose ntrate">
-    <h3>This is not a backlog. It is a rate.</h3>
-    <p id="ntRate">&nbsp;</p>
-    <p>A backlog is a pile you can work through. This is a tap that has been left on.
-      Clearing every species on both lists tomorrow would leave the same number arriving
-      the year after, so the question is not <em>when will somebody catch up</em>, but
-      <em>what would it take to keep up at all</em>.</p>
-  </div>
-
-  <div class="filters">
-    <input id="ampQ" type="search"
-           placeholder="Search amphibian species, family, country&hellip;"
-           aria-label="Search the amphibian list">
-    <select id="ampEv" aria-label="Filter by evidence of the gap"></select>
-    <select id="ampFam" aria-label="Filter by family"></select>
-    <select id="ampCty" aria-label="Filter by country"></select>
-  </div>
-  <p id="ampShowing" style="font-family:var(--sans);font-size:.82rem;
-     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
-  <div id="ampTable"></div>
-  <p class="siteslede" style="margin-top:.8rem">The reptile list carries two columns this
-    one cannot: a restriction tier and the finer locality detail behind it. Those are
-    derived from the Reptile Database's per-species distribution text, and AmphibiaWeb's
-    listing gives a country rather than a locality, so the columns are absent rather
-    than guessed. In their place is the describing publication, which the reptile list
-    has only as an authority string.</p>
-
-  <!-- ===================== WHERE THEY ARE ===================== -->
-  <h3 class="siteshead">Where they are</h3>
-  <p class="siteslede">Both classes on one map, in the same encoding as the lost-species
-    map so the three can be read against each other: one circle per country, sized and
-    shaded by how many of these species it holds.</p>
-  <div class="mapsource" style="justify-content:center">
-    <span class="eyebrow">Show</span>
-    <button id="nsClsAll"  aria-pressed="true">Both</button>
-    <button id="nsClsRep"  aria-pressed="false">Reptiles</button>
-    <button id="nsClsAmp"  aria-pressed="false">Amphibians</button>
-  </div>
-  <div class="mapwrap">
-    <div class="mapzoom">
-      <button id="nsZIn"    aria-label="Zoom in">+</button>
-      <button id="nsZOut"   aria-label="Zoom out">&minus;</button>
-      <button id="nsZReset" aria-label="Reset zoom" title="Reset">Reset</button>
-    </div>
-    <canvas id="nsCanvas" role="img"
-            aria-label="World map with circles sized and colored by the number of
-            reptile species described since 2015 that the IUCN Red List has never
-            assessed, per country. The same species are listed in the table below."></canvas>
-  </div>
-  <div class="lostlegend" id="nsLegend"></div>
-  <p class="mapstats" id="nsMapNote"></p>
-  <div id="nsTip" aria-hidden="true"></div>
-
-  <!-- ===================== THE LIST ===================== -->
-  <h3 class="siteshead">The list</h3>
-  <div class="filters">
-    <input id="ntQ" type="search" placeholder="Search species, family, country&hellip;"
-           aria-label="Search the list">
-    <select id="ntEv" aria-label="Filter by evidence of the gap"></select>
-    <select id="ntRc" aria-label="Filter by geographic extent"></select>
-    <select id="ntFam" aria-label="Filter by family"></select>
-  </div>
-  <p id="ntShowing" style="font-family:var(--sans);font-size:.82rem;
-     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
-  <div id="ntTable"></div>
-
-  <!-- ===================== METHOD AND LIMITS, BELOW THE LIST ===================== -->
-  <div id="nt-about" class="ntabout">
-    <h3 class="siteshead">How this list was built, and what it cannot tell you</h3>
-
-    <details class="ntdisc" open>
-      <summary>Where the species come from</summary>
-      <p>The <a href="https://reptile-database.org" target="_blank" rel="noopener">Reptile
-        Database</a> checklist of June 2026 lists 12,650 accepted species. Comparing it
-        with IUCN v2026-1, which holds 10,305 assessed reptiles, leaves the species the
-        Red List has no record of.</p>
-      <p>Comparing names alone would be unreliable. A species often gets moved into a
-        different genus, so its first name changes while the animal stays the same, and
-        the two organizations do not always agree on where it belongs. So species are
-        matched either on the full scientific name <em>or</em> on who first described it
-        and in what year. Those are details that stay with a species through every change of
-        name. That caught 169 species a name-only comparison would have wrongly reported
-        as missing.</p>
-    </details>
-
-    <details class="ntdisc">
-      <summary>Why you can trust the &ldquo;never assessed&rdquo; claim</summary>
-      <p>Failing to find a name in a search does not prove nobody ever assessed the
-        species, because it might be filed under a different name. So every species here
-        was looked up individually in the Red List's own database, and every name it did
-        not return was checked again against GBIF's list of alternative names for the same
-        species. That found 51 which had been assessed after all, and they were removed:
-        an error rate of 2.9% in the list before checking.</p>
-      <p>The evidence is graded, because it is not equally strong for every species:</p>
-      <div class="ntlegend" id="ntLegendEv"></div>
-    </details>
-
-    <details class="ntdisc">
-      <summary>What &ldquo;extent&rdquo; means, and the ranking that failed</summary>
-      <p>Extent is taken from each species' own published distribution: the country,
-        state or landform it is recorded from. That is the measure the evidence supports
-        : species endemic to a single country turn out to be threatened roughly
-        twice as often as those crossing borders (27.2% against 13.2%, p&nbsp;=&nbsp;0.00005,
-        tested on 600 reptiles the Red List <em>has</em> assessed).</p>
-      <p>A finer, coordinate-based scale was tried first and <strong>abandoned</strong>.
-        Its top class, living only on an island, turned out to predict nothing at all
-        : island species were no more likely to be threatened than any other
-        (odds&nbsp;ratio&nbsp;0.92, p&nbsp;=&nbsp;1: as close to no effect as a result
-        gets). The reason is that &ldquo;island&rdquo; taken from a written description
-        covers a one-square-kilometre rock and Hainan's 34,000&nbsp;km&sup2; alike.
-        Geocoding the locality text could not rescue it either: measured against species
-        whose descriptions print coordinates, it was off by a median of 53&nbsp;km and in
-        the worst case 5,469&nbsp;km.</p>
-      <div class="ntlegend" id="ntLegendRc"></div>
-      <p class="ntfoot">The &ldquo;finer detail&rdquo; column counts how many records
-        carry map coordinates, where GBIF has any. It is descriptive only and has
-        <em>not</em> been
-        validated against Red List outcomes. For a species described last year,
-        few records may mean a small range, or may only mean nobody has looked twice.</p>
-    </details>
-
-    <details class="ntdisc">
-      <summary>Why there are no coordinates here</summary>
-      <p>This page gives each species' distribution and no more. <strong>Exact type
-        localities and coordinates are deliberately absent, including from the
-        downloadable data.</strong></p>
-      <p>These are narrowly restricted reptiles the Red List has never listed, so no
-        legal protection follows from a listing, and island endemics among them are
-        exactly what the reptile trade targets. Scattered across separate descriptions
-        their localities are hard to exploit; gathered into one file they become a
-        collecting list. Describers know this, and obscuring a type locality in a new
-        reptile description is common practice for the same reason. Researchers who need
-        locality data should go to the original descriptions, where the authors decided
-        for themselves what to disclose.</p>
-    </details>
-
-    <details class="ntdisc">
-      <summary>How this differs from the register</summary>
-      <p>The register asks which <em>assessed</em> species IUCN looked at and returned
-        <em>we don't know</em> about, and its ranking is tested against IUCN's own later
-        reassessments. This page asks who is missing from the Red List entirely. It draws
-        on a different source and uses a different instrument, so <strong>the two lists
-        must never be added together.</strong></p>
-    </details>
-  </div>
-</section>
 
 <!-- ============================ REDISCOVERIES =========================== -->
 <!-- ============================ LOST SPECIES ============================= -->
-<section class="view wrap" id="v-lost" hidden>
-  <div class="lostbody">
 
-  <div class="prose">
-    <h2 style="font-size:var(--fs-h2)">Species nobody has seen for a very long time</h2>
-    <p class="lostlede"><strong class="num">2,135</strong> species that have not been
-      recorded in years, in some cases in centuries, and that nobody has been able to
-      declare extinct. They are not gone. They are <em>unaccounted for</em>, which is a
-      different thing, and the difference is where the work is.</p>
-  </div>
-
-  <div class="defs">
-    <h3>What "lost" means here</h3>
-    <dl>
-      <dt>Missing</dt>
-      <dd>Unseen in the wild for more than 5 but fewer than 10 years, with no population
-        held in captivity or cultivation.</dd>
-      <dt>Lost</dt>
-      <dd>Not confirmed alive by photographic, audio or genetic evidence for more than
-        <strong>10 years</strong>. This is the threshold for everything on this page:
-        <strong>816</strong> species qualify.</dd>
-      <dt>Long lost</dt>
-      <dd>Approximately <strong>50 years</strong> unobserved. Most of this list,
-        <strong>1,135</strong> species, is in this category, and a further
-        <strong>182</strong> carry too little date information to be placed in either.</dd>
-    </dl>
-    <p class="defsrc">Definitions from Long &amp; Rodríguez 2022, <em>Oryx</em> 56(4),
-      "Lost but not forgotten", which is the vocabulary the underlying list uses. Note
-      what they turn on: <strong>evidence</strong>, not conservation status. A species
-      can be missing for a decade and still be assessed as fine:
-      <strong>208</strong> species here are currently listed Least Concern, and another
-      <strong>462</strong> are Data Deficient.</p>
-  </div>
-
-  <div class="loststats" id="lostStats"></div>
-
-  <div class="prose">
-    <h3>Where they were last seen</h3>
-    <p>Each circle is a country or region, sized by how many lost species have their
-      range recorded there. Hover or tap for the breakdown.</p>
-  </div>
-
-  <div class="mapwrap">
-    <div class="mapzoom">
-      <button id="lostZIn"    aria-label="Zoom in">+</button>
-      <button id="lostZOut"   aria-label="Zoom out">&minus;</button>
-      <button id="lostZReset" aria-label="Reset zoom" title="Reset">Reset</button>
-    </div>
-    <canvas id="lostCanvas" role="img"
-            aria-label="World map with circles sized by the number of lost species
-            recorded from each country or region. The counts are listed in the
-            table below the map."></canvas>
-  </div>
-  <div class="lostlegend" id="lostLegend"></div>
-  <div id="lostTip" aria-hidden="true"></div>
-
-  <div class="warn">
-    <h3>What this map is not</h3>
-    <p>A circle sits at a country's center point, not at a locality. It says
-      <strong>"this many lost species have their range given as this country"</strong>.
-      it is not a sighting, not a range map, and not a search area. Large countries
-      accumulate large circles partly because they are large.</p>
-    <p>The list is also uneven by design. It inherits the Re:wild / IUCN&nbsp;SSC lost
-      species list, which is far better resolved for vertebrates than for insects,
-      plants or molluscs. Reptiles, fish and amphibians make up more than half of it.
-      Reading the map as a picture of the world's lost biodiversity would mistake the
-      shape of the <em>list</em> for the shape of the <em>problem</em>.</p>
-  </div>
-
-  <div class="prose">
-    <h3>Where we lose them is not where we find them</h3>
-    <p>This site carries two maps: species that have gone missing, and species being
-      described for the first time. Set side by side they disagree, and the disagreement
-      is the argument. <strong>Brazil</strong> has lost the most and is still describing
-      plenty. <strong>China</strong> is describing more new species than anywhere on
-      earth and carries almost no backlog. The <strong>United States</strong> is the
-      reverse: a long list of losses and very few new descriptions.</p>
-  </div>
-
-  <div class="cmp" id="cmp">
-    <div class="cmplegend">
-      <span><i style="background:var(--c-lost)"></i> Lost species</span>
-      <span><i style="background:var(--c-new)"></i> Described since 2015, never assessed</span>
-    </div>
-    <div id="cmpRows"></div>
-    <p class="cmpnote" id="cmpNote"></p>
-  </div>
-
-  <div class="prose">
-    <h3>The longest wait in each group</h3>
-    <p id="lostHowLong">&nbsp;</p>
-    <p>The groups are nothing like each other, though: a bird goes missing for a decade
-      and it is news, while a snail can go missing for a century before anyone notices it
-      has. These are the record holders, the species in each group whose last confirmed
-      record is the oldest of all.</p>
-  </div>
-
-  <div id="longestWrap"></div>
-
-  <div class="warn">
-    <h3>What had to be thrown out to build this table</h3>
-    <p>Taking simply the oldest date in each group produced a table we could not stand
-      behind. <strong>Ten of the first twenty-one entries were contradicted by
-      <a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF</a></strong>, the
-      global occurrence database, showing the animal turning up long after the date
-      this list gives as its last.</p>
-    <p>The fish was the worst of them. <span class="sci">Astyanax scabripinnis</span>, a
-      Brazilian tetra, sits in the source list with a last record of <strong>1842</strong>.
-      GBIF holds <strong>1,488 occurrences</strong> of it, the most recent from
-      <strong>2018</strong>. It is not a lost species. The same was true of
-      <span class="sci">Cycloramphus fuliginosus</span>, a frog with 152 records running to
-      2014, and of eight others.</p>
-    <p>Each group therefore shows its oldest candidate that GBIF does <em>not</em>
-      contradict, and all 23 rejections are recorded with their reasons. Two cautions had
-      to be built into that check. Evidence counts only where the scientific name matches
-      exactly. An apparent 7,537 records for one spider turned out to be a loose match to
-      a common European species. And an <em>absence</em> of recent records proves nothing
-      either: a Sierra Leone crab had none, and had still been found again. <strong>These
-      are errors in the lost-species list, not in the Red List</strong>, and they are why
-      this page treats its own inputs as claims to be checked rather than facts to be
-      republished.</p>
-  </div>
-
-  <div class="prose">
-    <h3>Counting is not the same as rate</h3>
-    <p id="rateLede">&nbsp;</p>
-  </div>
-
-  <div id="rateWrap"></div>
-
-  <div class="warn">
-    <h3>What that rate is, and is not</h3>
-    <p>It is <strong>not a rate of loss</strong>. The numerator is a curated list rather
-      than a census, and the denominator is how many species each group's own taxonomic
-      authority currently recognizes. Effort is the confound, and it runs one way: birds
-      are the best-surveyed group on earth, so a low bird rate partly measures how hard
-      people have looked rather than how well birds are doing.</p>
-    <p>Only vertebrate groups appear, covering <strong id="rateCover">&hellip;</strong> of
-      the species on this page. The rest are invertebrates and plants, where the lost list
-      is far less complete and a rate would be comparing our ignorance with theirs. Frogs
-      and toads are shown together here because AmphibiaWeb publishes Anura as a single
-      figure, and a guessed split is worse than an honest merge.</p>
-  </div>
-
-  <div class="warn">
-    <h3>Two words doing more work than they should</h3>
-    <p><strong>"Toad" is not a group.</strong> Everyday usage covers warty-skinned frogs
-      in at least six families, so the split here is the strict one: <em>toads</em> means
-      the true toads, family Bufonidae, and every other frog is filed as a frog. A
-      spadefoot toad will therefore appear under frogs, which is correct taxonomically
-      and wrong conversationally. <strong>"Fish"</strong> is the same kind of
-      convenience, covering three classes, kept together because that is the question
-      people ask.
-      Groups come from GBIF's backbone taxonomy, matched on the scientific name.</p>
-  </div>
-
-  <div class="prose">
-    <h3>Why some species come back and others never do</h3>
-    <p>Rediscovery is not random, and it is not simply a matter of looking harder.
-      <a href="https://onlinelibrary.wiley.com/doi/10.1111/gcb.17107" target="_blank"
-      rel="noopener">Lindken and colleagues</a> examined every lost tetrapod they could
-      trace and found that the species which come back share a profile: they tend to be
-      <strong>large, conspicuous mammals and birds</strong>, tolerant of a range of
-      habitats, living near people, in countries with money for fieldwork.</p>
-    <p>The species that stay lost are the mirror image. Narrow range. Small, cryptic,
-      nocturnal, or underground. And, the finding that matters most here, living
-      somewhere that is <strong>hard or dangerous to reach</strong>, so nobody has
-      searched. A species can remain "lost" for a century without any evidence that it
-      has declined at all. It can simply be that no qualified person has been to the
-      right ridge in the right month.</p>
-    <p>Their overall estimate is that roughly <strong>a quarter</strong> of lost species
-      are probably already extinct. Which is a bleak number read one way, and an
-      extraordinary one read the other: it implies that most of the species on this map
-      are still out there.</p>
-    <p>They also found that tetrapods are being <strong>lost faster than they are being
-      found again</strong>. Rediscovery is slowing for amphibians, birds and mammals,
-      while reptiles are being lost quickly. The gap is widening, and it will not be
-      closed by the kind of survey that finds large animals near roads.</p>
-    <p><strong>Plenty do come back.</strong> Of the tetrapods Lindken and colleagues
-      traced, <strong>424 of 1,280</strong>, a third of them, had already been found again by
-      the time they published. This page carries the ones still missing, so a rediscovery
-      is a species <em>leaving</em> it. The longest documented wait on record here is a
-      Sierra Leone freshwater crab, <span class="sci">Afrithelphusa afzelii</span>, refound
-      after <strong>225 years</strong>. Recent finds are collected on the
-      <a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a> page.</p>
-  </div>
-
-  <div class="prose">
-    <h3>What The Biodiversity Group does about it</h3>
-    <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
-      Biodiversity Group</a> works in the places the profile above predicts will be
-      overlooked: steep, wet, unglamorous forest, a long way from a field station,
-      looking for small animals at night. Three of those records are on this map.</p>
-  </div>
-
-  <div class="lostcards">
-    <article class="lostcard">
-      <p class="eyebrow">Ecuador &middot; 2019</p>
-      <h4>Fugler's Shadow Snake</h4>
-      <p class="sci">Emmochliophis fugleri</p>
-      <p>Known from a single specimen collected in 1966 and never seen again. On
-        7&nbsp;March&nbsp;2019, at the Río Manduriacu Reserve in Imbabura, <a
-        href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
-        Biodiversity Group</a>'s Scott Trageser and Ross Maynard found one: the second
-        individual of this species ever recorded, and the first photographed alive. The
-        rediscovery was published in 2021, <strong>54 years</strong> after the first.</p>
-      <p>The paper recommends the species be listed Critically Endangered, because the
-        reserve where it was found is under imminent threat from mining. The IUCN still
-        lists it as <strong>Data Deficient</strong>, assessed in 2016 and not revisited
-        since it was found again.</p>
-      <p class="lostcite"><a
-        href="https://checklist.pensoft.net/article/60009/" target="_blank"
-        rel="noopener">Maynard et al. 2021, <em>Check List</em> 17(1)</a></p>
-    </article>
-
-    <article class="lostcard">
-      <p class="eyebrow">Vietnam &middot; 2014</p>
-      <h4>A land snail found by a stranger online</h4>
-      <p class="sci">Myxostoma petiverianum</p>
-      <p>The last published record was Dautzenberg and Fischer's, in <strong>1905</strong>.
-        On 3&nbsp;August&nbsp;2014, on a citizen-science survey called Con Dao Land and
-        Sea, <a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
-        Biodiversity Group</a>'s Scott Trageser photographed a snail on Hòn Cau that
-        nobody present could name, and posted it to iNaturalist. That was the whole
-        method.</p>
-      <p>In November 2015 a malacologist in Malaysia, Junn Kitt Foon, came across the
-        photograph there and recognized the animal, the first ever taken of a live
-        adult. <strong>No expedition and no budget found this species.</strong> A picture
-        left somewhere public did, and one specialist who happened to scroll past it.</p>
-      <p class="lostcite">Trageser, Wiscovitch &amp; Foon 2018, <em>The Festivus</em>
-        50(2): 110–113 &middot; <a
-        href="https://news.mongabay.com/2016/07/citizen-science-leads-to-snail-rediscovery-in-vietnam/"
-        target="_blank" rel="noopener">Mongabay</a>, which reports the 1905 date</p>
-    </article>
-
-    <article class="lostcard">
-      <p class="eyebrow">Ecuador &middot; 2018</p>
-      <h4>The Mindo Glassfrog</h4>
-      <p class="sci">Nymphargus balionota</p>
-      <p>Seen once since 1984, a single male in 2005. In 2018 a <a
-        href="https://biodiversitygroup.org" target="_blank" rel="noopener">Biodiversity
-        Group</a> team was at Río Manduriacu surveying the Tandayapa Andes toad when
-        Scott Trageser, too ill to join the night survey, went to a stream near camp
-        instead and heard a frog he did not recognize calling for a mate.</p>
-      <p>Return surveys in 2019 found more in three separate streams, including the
-        first females ever recorded, plus metamorphs and egg masses. Not a survivor, then:
-        a breeding population.</p>
-      <p class="lostcite">Reported in <em>Amphibian &amp; Reptile Conservation</em>,
-        July 2020</p>
-    </article>
-
-    <article class="lostcard lostcard-redacted">
-      <p class="eyebrow">Project Redacted</p>
-      <h4>One we have found and cannot name</h4>
-      <p>There is a third. A species on lists like this one has been found again by <a
-        href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
-        Biodiversity Group</a>, and it is not on the map above, because saying where it
-        is, or what it is, would put it at risk before protection is in place.</p>
-      <p>That caution is not theatre. For a species reduced to one known site, a public
-        announcement is a map for collectors, and the trade in rare reptiles and
-        amphibians runs on exactly this kind of news. The record is documented, the
-        evidence is held, and it will be published when publishing it is safe.</p>
-      <p class="lostcite">Announcement pending</p>
-    </article>
-  </div>
-
-  <div class="prose">
-    <h3>The list is not a finished thing</h3>
-    <p>Two open questions sit on it, and both need a taxonomist rather than a
-      spreadsheet. Fifteen names are treated by one authority as valid species and by
-      another as synonyms of something else. When a narrow endemic is absorbed
-      into a widespread species, it leaves conservation attention by clerical means
-      rather than by evidence. A further 149 were removed from the source list by IUCN
-      SSC specialists for reasons that were never recorded per species: some because
-      they had been found, some because nobody had ever looked. Those two reasons point
-      in opposite directions, and the difference is the whole argument.</p>
-    <p>Species from this list that have turned up again in the news are collected on the
-      <a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a> page.</p>
-  </div>
-
-  <div class="prose">
-    <h3>Another list, counting something else</h3>
-    <p><a href="https://recentlyextinctspecies.com/" target="_blank"
-      rel="noopener">Recently Extinct Plants and Animals</a> is the most thorough
-      catalog of its kind we know of, with 12,859 taxa, painstakingly sourced and with a
-      citation behind almost every entry. It is worth your time, and it is worth saying
-      exactly how it differs from this page, because the two look like the same subject
-      and are not.</p>
-    <p>Its <a href="https://recentlyextinctspecies.com/database/local-rediscoveries"
-      target="_blank" rel="noopener">rediscoveries section</a> counts species that
-      disappeared from a <em>country</em> and were later refound there, such as a plant gone
-      from the British flora for ninety years, turning up on one roadside. This page
-      counts species missing from <em>science</em>, everywhere, at once. Both are real
-      losses and both matter; they are simply different questions.</p>
-    <p>The gap is measurable. We compared the two: of 1,063 species in their
-      rediscoveries listing, exactly <strong>one</strong> also appears among the 2,135
-      here: <span class="sci">Amphilophus lyonsi</span>, a Costa Rican cichlid, and it
-      has indeed been found again. That near-total absence is not a disagreement between
-      the lists. It is the two definitions doing their jobs.</p>
-  </div>
-
-  <div class="prose lostsource">
-    <p class="eyebrow">Sources</p>
-    <p>Compiled from the Re:wild / IUCN&nbsp;SSC lost species list, following the
-      definitions of Long &amp; Rodríguez 2022 (<em>Oryx</em> 56(4)), and reconciled
-      against Lindken et al. 2024 (<em>Global Change Biology</em> 30:e17107), with
-      additions, rediscoveries and specialist exclusions all applied. Occurrence dates
-      cross-checked against GBIF. <span id="lostUnmapped"></span></p>
-  </div>
-
-  </div>
-</section>
-
-<section class="view wrap" id="v-redisc" hidden>
-
-  <div class="ntlead">
-    <p class="ntkicker">Found again</p>
-    <!-- The figure counts STORIES, not species: most of these headlines never name the
-         animal, so "151 species came back" would overstate it several times over. The
-         sentence is built around the unit the number actually has.
-         The old wording led on nobody having looked, which buried the actual finding:
-         these species were found because people went out and looked again. -->
-    <h2 class="nthead">Researchers and naturalists keep finding species that were feared
-      lost. Here are <span class="nthero" id="rdHero">&hellip;</span> of those finds.</h2>
-    <p class="ntsummary">A species is called lost when it has gone unrecorded for so long
-      that scientists no longer know whether it survives. Some of them are still out
-      there, and researchers, park rangers and amateur naturalists keep proving it,
-      by going back into the forest, the cave or the reef and finding them.</p>
-    <p class="ntsummary">This page gathers those finds as they are reported, checked every
-      day. It records what was reported, not what has been confirmed. A news story
-      is a lead, not proof. There is a note below the list explaining what that means.</p>
-  </div>
-
-  <div id="rdCounts" class="counts"></div>
-
-  <h3 class="siteshead">The finds</h3>
-  <p class="rdorder">Newest first. Search looks at the species name, the headline, the
-    summary and the outlet, so try a species, a country or a news outlet.</p>
-  <div class="filters">
-    <!-- A visible label, not just a placeholder: placeholder text vanishes the moment
-         anyone types and reads as decoration until then, which is exactly why a search
-         box that was already here went unnoticed. -->
-    <label class="rdsearch">
-      <span class="rdsearchlab" aria-hidden="true">Search</span>
-      <input id="rdQ" type="search"
-             placeholder="e.g. Chelonoidis, Madagascar, Mongabay&hellip;"
-             aria-label="Search the reports">
-    </label>
-    <select id="rdF" aria-label="Filter the list">
-      <option value="">Show everything</option>
-      <option value="sp">Only those naming a species</option>
-      <option value="list">Only species we were watching</option>
-      <option value="multi">Only the widely covered</option>
-    </select>
-  </div>
-  <p id="rdShowing" style="font-family:var(--sans);font-size:.82rem;
-     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
-  <div id="rdGrid" class="rdgrid"></div>
-
-  <div id="rd-about" class="ntabout">
-    <h3 class="siteshead">Where these come from, and what they do and don&rsquo;t prove</h3>
-
-    <details class="ntdisc" open>
-      <summary>What is on this page</summary>
-      <p>Journal alerts, conservation outlets and news searches run across
-        <strong>fourteen national editions</strong> are read once a day. Anything
-        describing a species being found again is kept, and checked against the
-        <span id="rdTracked">thousands of</span> species names this project follows, so
-        where a report names a species we can say whether it was one we were already
-        watching.</p>
-      <p>The national editions matter more than they sound. A news search returns a
-        different set of results in each country, and running only the United States
-        edition missed 60 of 134 stories on a single query, among them Wallace's
-        giant bee, the golden mole refound in South Africa and Attenborough's echidna.
-        Rediscovery happens mostly outside the United States, so a US-only search is
-        close to the worst way to look for it. The searches are still English-language
-        only, which remains a real gap.</p>
-      <p>One find is usually covered by many outlets, each writing its own headline, so
-        the same story arrives over and over. Stories are matched up by the words they
-        share and shown once, with a count of how many outlets ran it. That count says how
-        much attention the find got, not how solid it is.</p>
-    </details>
-
-    <details class="ntdisc">
-      <summary>How far back this goes, and why the recent years look busier</summary>
-      <p>The oldest report here is from August 2020 and the newest from July 2026. The
-        recent years hold far more of them, with roughly three quarters falling in 2025 and
-        2026, and <strong>that is a property of the search, not of the world.</strong>
-        A news index surfaces recent material and only a thinning sample of older
-        material, so nothing on this page should be read as rediscoveries becoming more
-        frequent.</p>
-      <p>The rate at which species are actually found again is a different question, and
-        one this page cannot answer. The archive only grows forwards from here, so
-        coverage will be even across future years and permanently sparse before 2025.</p>
-    </details>
-
-    <details class="ntdisc">
-      <summary>How we work out which species a story is about</summary>
-      <p>Species have two-word scientific names, like <em>Chelonoidis phantasticus</em>
-        for the Fernandina tortoise. Every scientific name shown here has been looked up
-        in a global database of species names to confirm the animal or plant really
-        exists. It is not enough for a phrase to simply look like one.</p>
-      <p>Headlines often name nothing at all. &ldquo;Five lost bird species
-        rediscovered&rdquo; tells you there are five, but not which five, so the article
-        itself is read to find them.</p>
-      <p>That makes some names surer than others, and they are shown differently. A name
-        in <span class="rdsp" style="font-size:inherit">this color</span> came from the
-        headline or the summary, or was used by two separate outlets. A name in
-        <span class="rdspsoft">grey, after &ldquo;also names&rdquo;,</span> was found
-        further down in one article, and articles often mention a close relative
-        for comparison, which can look just like the species that was found. Treat the
-        grey ones as leads worth checking.</p>
-      <p>Only the names are kept; the article's text is read and then discarded.</p>
-    </details>
-
-    <details class="ntdisc">
-      <summary>What happens when these articles disappear</summary>
-      <p>News sites reorganize, paywall and delete, and image paths churn faster than the
-        articles do. Every card here depends on a page nobody at this project controls,
-        so what can be preserved is preserved, and it is worth being exact about
-        how much that is, because the three parts are not equally safe.</p>
-      <!-- Figures written at runtime from the payload. Stating them in prose would put
-           three numbers on the page that drift every night the feed runs, and this
-           section's whole purpose is to be precise about coverage. -->
-      <ul class="rdpres">
-        <li><strong>The words: all of them.</strong> Headline, summary, outlet and
-          date are stored here and are what each card is built from. No card needs its
-          article to be alive in order to describe it.</li>
-        <li><strong>The picture: <span id="rdPresImg">most of them</span>.</strong>
-          Preview images are copied to this site and served from it, so they outlive the
-          publisher's own copy. Where that copy failed the card still loads the original,
-          and those are the ones that will go blank one day.</li>
-        <li><strong>A link that still works:
-          <span id="rdPresArc">seldom</span>.</strong> Where the Internet Archive already
-          holds a snapshot, the card offers it alongside the original. Most of these
-          articles have never been archived by anyone, and this page does not submit
-          them.</li>
-      </ul>
-      <p>The article text itself <em>is</em> read, which is how the species in a
-        roundup get identified, but it is <strong>discarded immediately and never
-        stored</strong>. Keeping a copy would be republishing someone else's work. The
-        job of this page is to send readers to the journalism, not to stand in for it.</p>
-    </details>
-
-    <details class="ntdisc">
-      <summary>Why some cards are text only</summary>
-      <p>Most cards show the publisher&rsquo;s own headline image and summary. Some show
-        only text, and the reason is worth stating plainly: <strong>a growing number of
-        news sites forbid automated readers</strong> in the file where a site declares
-        such things. Reuters and The Sun bar every automated visitor; the Washington Post,
-        the Telegraph, MSN and even BirdLife International name AI readers specifically.
-        This page respects that and does not fetch those pages.</p>
-      <p>Where the Internet Archive holds a copy, the summary comes from there instead and
-        the card links to it. Where it does not, the card carries the headline, the outlet
-        and the date, which is enough to go and read it yourself, and is the point
-        of the link.</p>
-    </details>
-
-    <details class="ntdisc">
-      <summary>What a report here does not establish</summary>
-      <p>These are news items. A rediscovery is only settled by a specimen, a photograph
-        or a sequence that specialists accept, published somewhere durable, and
-        some reports on this page will not survive that test. Others describe a
-        population found by people who never considered it lost in the first place.</p>
-      <p>Nothing here feeds the register or the counts elsewhere on this site. Those
-        figures come from the IUCN Red List and from checked sources, and a press
-        report has never been allowed to change one.</p>
-    </details>
-
-    <details class="ntdisc">
-      <summary>Corrections</summary>
-      <p>If a species on this page was never lost, if a rediscovery has since been
-        retracted, or if one is missing, please say so:
-        <a href="mailto:info@biodiversitygroup.org?subject=Rediscoveries%20page">info@biodiversitygroup.org</a>.</p>
-    </details>
-  </div>
-</section>
 
 <!-- ============================ GET INVOLVED ============================= -->
-<section class="view wrap" id="v-involved" hidden>
-  <div class="giblock">
-    <div class="prose">
-      <h2 style="font-size:var(--fs-h2)">How to help</h2>
-      <p class="lostlede">These species are not short of scientific interest. They are
-        short of attention. Four things move that, and none of them require you to be a
-        scientist.</p>
-    </div>
-
-    <div class="gistep">
-      <h4>1. Tell somebody</h4>
-      <p>The single most useful thing anyone can do is make these species less obscure.
-        Conservation funding follows attention, and attention follows people talking. A
-        species that nobody has heard of does not get a recovery plan.</p>
-      <p>Share this site. Send a page to somebody who would find it interesting. If you
-        work anywhere near this field, put it in front of the person who signs off your
-        grants.</p>
-      <p><strong>Here is one you can steal:</strong></p>
-      <div class="gipost" id="giPost">
-        <p>Turns out there's a whole category of wildlife nobody is fighting for.</p>
-        <p>Not endangered. Not extinct. Just... unaccounted for. Some of these species
-          haven't been seen since the 1800s and nobody can officially declare them gone,
-          so nobody funds looking for them either.</p>
-        <p>Most of them are probably still out there. Somebody finally made a list.</p>
-        <p>speciesblacklist.org</p>
-      </div>
-      <div class="gishare" id="giShare"></div>
-    </div>
-
-    <div class="gistep">
-      <h4>2. Photograph things you cannot name</h4>
-      <p>This sounds too easy to matter. It is not. Species get rediscovered because
-        somebody posted a picture of something odd and a specialist happened to scroll
-        past it.</p>
-      <p>Here is how that actually plays out. In August 2014, Scott Trageser, who built
-        this site and is Executive Director of <a href="https://biodiversitygroup.org"
-        target="_blank" rel="noopener">The Biodiversity Group</a>, was running a citizen
-        science survey on the island of Hòn Cau in Vietnam. He came across a land snail
-        nobody present could identify and posted it to
-        <a href="https://www.inaturalist.org" target="_blank"
-        rel="noopener">iNaturalist</a>, largely to set an example for the children he was
-        teaching: when you find something you cannot name, this is what you do with it.</p>
-      <p>More than a year later a malacologist in Malaysia, Junn Kitt Foon, came across the
-        photograph, recognized the shell, and got in touch. It was
-        <span class="sci">Myxostoma petiverianum</span>, whose last published record was
-        from <strong>1905</strong>, and the photograph was the first ever taken of a live
-        adult. They published it together.</p>
-      <p>No expedition. No permit. No budget. A photograph left somewhere public, one
-        person on the other side of the world who knew what he was looking at, and a
-        lesson for a class that turned out to be worth rather more than the lesson.</p>
-      <p>So: if you see something you cannot name, especially somewhere remote, at night,
-        or very small, <strong>photograph it and upload it with a location</strong>. You
-        do not need to identify it. That is the whole point of putting it where the people
-        who can will find it.</p>
-      <p class="lostcite"><a
-        href="https://news.mongabay.com/2016/07/citizen-science-leads-to-snail-rediscovery-in-vietnam/"
-        target="_blank" rel="noopener">Mongabay's account of the rediscovery</a></p>
-    </div>
-
-    <div class="gistep">
-      <h4>3. Ask for these species to be prioritized</h4>
-      <p>Every species on this site is excluded from the commitments that drive
-        conservation spending, because those commitments are written around species
-        already known to be threatened. Changing that is a matter of people asking for
-        it, repeatedly, in the places where lists get written.</p>
-      <ul>
-        <li><strong>If you fund conservation:</strong> ask whether your criteria quietly
-          rule out species with no assessment. Most do, without anyone intending it.</li>
-        <li><strong>If you work for an agency or a government:</strong> Data Deficient
-          and unassessed species can be written into national priorities even though the
-          global targets skip them.</li>
-        <li><strong>If you are a researcher:</strong> an assessment is a publishable
-          contribution, and these are the species where one assessment changes the whole
-          picture for a taxon.</li>
-        <li><strong>If you are a conservationist:</strong> a survey that produces no
-          sighting is still a result worth reporting, and almost nobody publishes those.</li>
-      </ul>
-    </div>
-
-    <div class="gistep">
-      <h4>4. Support the people already doing it</h4>
-      <p>This work is unglamorous and it is nearly always unfunded. Finding a small brown
-        frog on a steep hillside at 2am does not elicit the same interest as finding a
-        tiger, and the organizations that do it are small.</p>
-      <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
-        Biodiversity Group</a> built this site and works on exactly these species. If you
-        would like to back that, or do it with us, both doors are open:</p>
-      <ul>
-        <li><a href="https://biodiversitygroup.org/donate/" target="_blank"
-          rel="noopener"><strong>Donate</strong></a>, which pays for the fieldwork that
-          turns a name on this list into a record.</li>
-        <li><a href="https://biodiversitygroup.org/get-involved/" target="_blank"
-          rel="noopener"><strong>Get involved</strong></a>, including expeditions and
-          internships if you want to be there when it happens.</li>
-      </ul>
-      <p>If your money or your time is better placed with another group working on
-        neglected species, place it there instead. The point is the species, not us.</p>
-    </div>
-
-    <div class="giend">
-      <h3>And if you have seen one of them</h3>
-      <p>That is the whole reason this list is public. If you have a record, a photograph
-        or a museum specimen of anything on these pages, or you know a species has been
-        found again, please tell us:
-        <a href="mailto:info@biodiversitygroup.org?subject=Species%20Black%20List">info@biodiversitygroup.org</a>.
-        One of the rediscoveries on this site began as a photograph posted online by
-        somebody who had no idea what they had found.</p>
-    </div>
-  </div>
-</section>
 
 <!-- =============================== METHODS ============================== -->
-<section class="view wrap methods" id="v-methods" hidden>
-  <div class="mbody">
-
-  <div class="warn">
-    <h3>Read the ranking before you use it</h3>
-    <p>Data Deficient status on its own predicts very little. Of the species here that
-      IUCN has since reassessed, the group as a whole came out threatened at roughly
-      the ordinary all-species rate. The <strong>narrowly restricted subset is
-      different</strong>, and that distinction, not the Data Deficient label, is
-      what this register is for.</p>
-    <p><strong>This is a ranked subset, not a census.</strong> IUCN v2026&#8209;1 holds
-      <span class="num">8,659</span> Data Deficient species in vertebrate classes; this
-      register covers <span class="num">3,031</span> of them, which is
-      <span class="num">35%</span>. The method needs a published sentence describing each
-      species' range, and the corpus behind it is one reference work. Of the
-      <span class="num">2,964</span> Data Deficient vertebrates that corpus names,
-      <strong>every one is in the register</strong>; the other
-      <span class="num">5,628</span> are never named in it at all. So the right reading is
-      "of the Data Deficient vertebrates with a usable published range statement, these are
-      the most narrowly restricted", not "these are the ones that matter most".</p>
-    <p><strong>How long is a blank allowed to stand?</strong> The Red List export says
-      only that a species is Data Deficient now. Its assessment history, pulled from IUCN's
-      API, says since when, and the answer reframes the register. The median species here
-      has been Data Deficient for <span class="num">16</span> years;
-      <span class="num">475</span> have held the label for twenty years or more. And
-      <span class="num">1,210</span> of them, 40%, have been assessed more
-      than once, meaning IUCN returned, looked again, and wrote Data Deficient a second or
-      third time. Those are not species awaiting a first look. For scale, the median time
-      IUCN has actually taken to resolve a Data Deficient listing is
-      <span class="num">16</span> years, so
-      <span class="num">1,011</span> species in this register are already past it.</p>
-    <p><strong>The species outside were screened out, not overlooked.</strong> Richardson
-      takes an explicit position on the Data Deficient category: most of it, in his
-      judgment, is junior synonyms or valid species not in immediate danger, while
-      genuinely threatened species get lost there for want of follow-up research. He admits
-      a Data Deficient species when its record is narrow enough to imply risk, and that
-      screen is measurable, since he kept <span class="num">28%</span> of IUCN's Data
-      Deficient ray-finned fishes against <span class="num">72%</span> of the birds,
-      dropping the deep-sea groups almost entirely because naturally rare is not the same
-      as threatened. So the omitted species are neither unexamined nor shown to be safe:
-      one author's judgment, made without the research he says the category lacks, is not
-      an assessment. It also means this corpus is pre-selected for the trait the register
-      ranks on, which is why <span class="num">92%</span> of records state some
-      restriction. The register tests an expert's screen against IUCN's later verdicts
-      rather than discovering the pattern from scratch.</p>
-  </div>
-
-    <h2 style="margin-top:0">Methods &amp; limits</h2>
-
-    <div class="warn">
-      <h3>Who called these species "priority"?</h3>
-      <p>Nobody with a specialist's authority. The ranking is produced by a
-        text-classification rule that reads the source's own range statements and
-        sorts them by severity. <strong>No taxonomist or conservation biologist has
-        reviewed the individual species.</strong> What has been tested is the rule's
-        average behavior against IUCN's independent reassessments — a statement about
-        the group, not about any one row.</p>
-      <p>These are not Red List assessments and must not be cited as such. They are a
-        prioritized research agenda: an argument about where to look.</p>
-    </div>
-
-    <h2 style="margin-top:var(--s4)">Why the gap matters</h2>
-    <p>Target 4 of the Kunming-Montreal Global Biodiversity Framework commits
-      governments to halting the extinction of <em>known threatened species</em> — a
-      phrase that excludes both categories in this register by definition. Funding
-      follows the same line: under 3.5% of Mohamed bin Zayed Species Conservation Fund
-      awards have gone to Data Deficient taxa, and under 1% at the People's Trust for
-      Endangered Species. IUCN's own guidance says Data Deficient species should get
-      the same attention as threatened ones, and it is not followed.</p>
-    <p>So the consequence of having no category is not merely that a species is
-      poorly known. It is excluded from the target that mobilizes national action and
-      from the funds that pay for fieldwork — which is what makes deciding
-      <em>which</em> of these species to look at first worth doing carefully.</p>
-
-    <h3>Sources</h3>
-    <table class="ftable">
-      <tr><th>Evidence of risk</th><td>Matthew Richardson, <em>Threatened and Recently
-        Extinct Vertebrates of the World: A Biogeographic Approach</em>, Cambridge
-        University Press, 2023. Vertebrates only — the scope follows the book's.</td></tr>
-      <tr><th>Extinction risk</th><td>IUCN Red List v2026&#8209;1, 178,011 taxa,
-        via GBIF's Darwin Core mirror (accessed 2026&#8209;07&#8209;28).</td></tr>
-      <tr><th>Taxonomy</th><td>GBIF Backbone, for synonym resolution and for
-        independent verification of assessment status.</td></tr>
-      <tr><th>Map points</th><td>GBIF georeferenced occurrence records, queried by
-        strict taxon key. Basemap is Natural Earth 110m land (public domain).</td></tr>
-    </table>
-
-    <h3>What a restriction tier is</h3>
-    <p>Every species is assigned one of five <strong>restriction tiers</strong>. The
-      tier records one thing only: <strong>how narrow the species' published record
-      is</strong>, read from the range statement in Richardson's own text. Tier 5 means
-      the species is known from a single specimen or nothing beyond its type locality;
-      tier 1 means the source makes no restriction claim at all.</p>
-    <p>What a tier is <em>not</em>: it is not an IUCN category, not a threat level, not
-      a measure of how endangered the species is, and not a count of individuals. Two
-      species in the same tier may face completely different pressures. The tier is a
-      statement about the <em>evidence</em>, not about the animal.</p>
-    <p>Restriction is the axis because IUCN <strong>Criterion B</strong> allows a
-      species to qualify as threatened on a small range plus evidence of decline:
-      area of occupancy under 2,000&nbsp;km² for Vulnerable, 500 for Endangered, 10 for
-      Critically Endangered. A species known only from its type locality sits, on its
-      face, inside the Critically Endangered envelope. That is why a narrow record is
-      worth ranking on. <strong>Tiers 3, 4 and 5 together are the priority stratum</strong>,
-      and they are the only part of the ranking that has been tested. The boundary
-      sits there because that is where the tested risk actually jumps — tier 2 came
-      out threatened at 20%, tier 3 at 67% — and not because the top of the scale
-      is the most severe: it is not, see Methods.</p>
-    <table class="ftable" id="tierTable">
-      <thead><tr><th>Tier</th><th>Basis</th><th>Species</th></tr></thead><tbody></tbody>
-    </table>
-    <p>No area of occupancy has been computed. A priority flag argues that Criterion B
-      <em>should be evaluated</em>; it is not a finding that it is met.</p>
-
-    <h3>What the test showed</h3>
-    <p id="valprose"></p>
-    <p>The priority rate lands close to the 56% that Borgelt et al. (2022,
-      <em>Communications Biology</em>) predicted for Data Deficient species generally —
-      which suggests that figure belongs to the narrowly restricted subset, and that an
-      unranked list dilutes a real signal with vague-range species.</p>
-    <p>Two caveats belong with that number whenever it is quoted. The top stratum
-      rests on <span class="num">19</span> species, which is thin. And IUCN reassesses
-      where data has appeared, which probably favors species that turned out to be
-      more widespread — a bias running against the finding rather than creating it.
-      Separately, the five tiers were defined before any outcome was seen, but the
-      decision to split them at 4 was made after, which inflates the significance
-      somewhat.</p>
-
-    <h3>Where localities come from</h3>
-    <p>A locality is recorded two ways, and the Localities page distinguishes them.</p>
-    <p><strong>From a locality account.</strong> Richardson organizes the book
-      geographically, so most species sit inside a paragraph introduced by a place.
-      That place, and its opening sentence, are attached to every species in the
-      paragraph. This is the stronger provenance and it covers
-      <span class="num">519</span> species.</p>
-    <p><strong>From the species entry itself.</strong> Where a species is not inside a
-      locality account, the place is very often named in its own sentence anyway —
-      <em>"collected from the upper Pungwe River"</em>, <em>"collected off
-      Mauritius"</em>. Pattern extraction over those sentences recovers a locality for
-      a further <span class="num">1,213</span> species, taking coverage from
-      <strong>19% to 60%</strong> of the register and the site list from 42 to 102.
-      Clusters that were entirely invisible before appear this way — the Gulf of
-      California holds 19 species, none of which had a locality until now.</p>
-    <p>Named physical features (<em>Salween River</em>, <em>Gulf of Panama</em>,
-      <em>Mount Kinabalu</em>) are preferred over a bare capitalized word after a
-      preposition, and a capture is rejected if it collides with the species' own
-      common name or genus. <strong>The place is only ever taken from the text, never
-      guessed</strong> — if the sentence names no place, the species keeps no locality,
-      which is why <span class="num">1,330</span> still have none.</p>
-    <p>These names are then looked up in a gazetteer to place them on the map, which
-      is a separate step with its own failure modes and its own verification — see
-      <em>Geocoding the locality names</em> below. Nothing in the register or on the
-      Localities page depends on that lookup: those show the name the source gave, and the
-      coordinates exist only for the map.</p>
-
-    <h3>How the map is built, and what it is not</h3>
-    <p>The register stores localities as text taken from Richardson's prose — "The Mano
-      River", "Arrowsmith Bank", "Espiritu Santo". Those were <strong>not</strong> run
-      through a gazetteer to make the map: place-name geocoding is ambiguous exactly
-      where this corpus is ambiguous, and a map that confidently places a species in
-      the wrong ocean is worse than no map. The points are real museum specimens and
-      field sightings that already carry map coordinates &mdash; &ldquo;georeferenced&rdquo;
-      records &mdash; taken from <strong>GBIF</strong> and queried per species.</p>
-    <p>One trap governed that query, and it is the same species of error that wrecked
-      the first never-assessed list. GBIF's free-text name search must not be used,
-      because many of these names are synonyms and it silently returns records of the
-      <em>accepted</em> species instead:</p>
-    <table class="ftable">
-      <tr><th><span class="sci">Anampses viridis</span>, free-text search</th>
-          <td class="num">3,071 records</td><td>centroid inland in New South Wales</td></tr>
-      <tr><th><span class="sci">Anampses viridis</span>, strict taxon key</th>
-          <td class="num">3 records</td><td>all at Réunion</td></tr>
-    </table>
-    <p>The book describes that species as known from a single specimen; the 3,071 belong
-      to <span class="sci">Anampses caeruleopunctatus</span>, its widespread senior
-      synonym. Every name is therefore resolved to a GBIF usage key by strict match
-      first, and records are pulled by taxon key. Records GBIF itself flags as having
-      bad coordinates are excluded, and points are capped at 30 per species so
-      well-collected species cannot dominate the surface.</p>
-    <p><strong>What the map is not.</strong> Not range maps — these are point records.
-      Not a picture of where risk is concentrated — it maps collecting effort at least
-      as much as biology, because georeferenced records cluster where institutions and
-      expeditions have worked. And not the same basis as the Localities page, which comes
-      from the book rather than from GBIF, so the two will not correspond exactly.
-      Some bad coordinates survive the filtering, which is why the page shows density
-      rather than authoritative dots.</p>
-    <h4 style="font-size:.95rem;margin:1.4rem 0 .3rem">Geocoding the locality names</h4>
-    <p>The register's place names are also plotted, as rings, because refusing to look
-      up "Salween River" while happily printing it was inconsistent. But a gazetteer
-      answers any string, and two checks are needed, not one.</p>
-    <p><strong>Type agreement</strong> catches the obvious failures: asked for "The
-      Cordillera Central", Nominatim returns a <em>university</em> in Baguio. A name
-      ending "River" must come back as a waterway, "Island" as an island; buildings,
-      roads and campuses are rejected outright. That removed
-      <span class="num" id="geoRejected">—</span> of
-      <span class="num" id="geoCandidates">—</span> candidates.</p>
-    <p><strong>But type agreement cannot see a same-type homonym</strong>, and those are
-      common. "Congo River" resolved to a real river of that name in Sierra Leone,
-      4,000&nbsp;km from the Congo, passing cleanly as river/river. "Dunk Island"
-      resolved near Sydney rather than Queensland. So each geocode is then measured
-      against the GBIF records of the species that sit at that locality — an
-      independent witness already held:</p>
-    <table class="ftable">
-      <tr><th>Agree within 500&nbsp;km — plotted</th>
-          <td class="num" id="geoValidated">—</td></tr>
-      <tr><th>Disagree by more — discarded</th>
-          <td class="num" id="geoContradicted">—</td></tr>
-      <tr><th>No species with records to check against — off by default</th>
-          <td class="num" id="geoUnverified">—</td></tr>
-    </table>
-    <p><strong>Around one in five checkable geocodes was wrong by more than
-      500&nbsp;km</strong>, and none of those errors was detectable from the name or the
-      feature type alone. That rate is the reason the unverified
-      <span class="num" id="geoUnverified2">—</span> are not plotted by
-      default: there is no reason to think they are cleaner, and they cannot be tested.
-      The validated rings add <span class="num" id="geoNewly">—</span> species that have
-      no georeferenced record of their own — modest, but every one is corroborated.</p>
-    <p><strong>A locality naming two places is kept but never plotted.</strong>
-      <span class="num" id="geoCompound">—</span> strings in the register are compounds
-      — "Athi and Tana River", "Caroline and Marshall Islands". There is no single
-      coordinate for them, and every way of reducing one to a single place either drops
-      the noun that identified it ("Caroline") or manufactures somewhere that does not
-      exist ("Oman and Masirah Island" → "Oman Island"). They are left whole, excluded
-      from the gazetteer, and the evidence sentence shows both places.</p>
-
-    <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
-      the <span class="num">3,062</span> species here, <span class="num">805</span>
-      have no georeferenced record anywhere in GBIF, and <span class="num">727</span>
-      cannot be placed even by a cross-checked locality. They are the least visible
-      members of an already invisible group, and they are absent from the map.</p>
-    <p>An earlier version of this page said 943 rather than 629. That figure was wrong:
-      the occurrence fetch had been running eight concurrent requests, GBIF answered
-      <span class="num">399</span> of them with HTTP 429, and the script cached those
-      failures as though they were results — so re-running never retried them and
-      16.6% of the register was silently recorded as having no records. Because the
-      register is sorted by tier, the failures landed disproportionately on tier 1,
-      which appeared to be 3.6% mappable when it is in fact 80%. The fetcher now backs
-      off exponentially, uses four threads, and never caches a failure.</p>
-
-    <h3>What was discarded</h3>
-    <p>An earlier composite score added points for a species not having been recorded
-      recently and for threats named at its locality. Testing destroyed it: the
-      composite was non-monotonic, and naming a site-level threat turned out
-      <em>inversely</em> associated with being threatened. The reason is legible in
-      hindsight — broad, well-documented regions attract threat prose but hold
-      wide-ranging species, while a genuine type-locality endemic gets one terse line.
-      Those fields survive on each record as description, and are not ranked on.</p>
-
-    <h3>Why the never-assessed list is short</h3>
-    <p>Proving that IUCN has <em>never</em> assessed a species is much harder than it
-      looks, because the two sources disagree about naming constantly. Deciding it by
-      failing to find a name produced a false-positive rate near 90%. Four distinct
-      failure modes had to be closed:</p>
-    <table class="ftable">
-      <thead><tr><th>Failure</th><th>Example</th></tr></thead><tbody>
-      <tr><td>Genus reassigned</td><td><span class="sci">Amblyopsis rosae</span> is IUCN's
-        <span class="sci">Troglichthys rosae</span> (Near Threatened)</td></tr>
-      <tr><td>Genus and family reassigned</td><td><span class="sci">Aphanius iberus</span> is
-        IUCN's <span class="sci">Apricaphanius iberus</span></td></tr>
-      <tr><td>Homonym within an order</td><td><span class="sci">Sinosuthora przewalskii</span>,
-        an Asian parrotbill, matching <span class="sci">Grallaria przewalskii</span>, a South
-        American antpitta</td></tr>
-      <tr><td>Rank change</td><td><span class="sci">Cyanoramphus cookii</span>, in fact
-        Least Concern</td></tr>
-      </tbody></table>
-    <p>Species known only from pre-1500 remains were also removed. The Red List covers
-      extinctions from 1500 AD onward, so those fall outside its remit by policy rather
-      than by neglect — counting them as coverage gaps would be a category error.</p>
-
-    <h3>Limits worth stating plainly</h3>
-    <ul>
-      <li><strong>Vertebrates only.</strong> Invertebrates, plants and fungi are where
-        the assessment gap is worst — invertebrates are 97% of animals and about a
-        third of animal assessments — and this register says nothing about them.</li>
-      <li><strong>One source.</strong> Everything rests on a single author's synthesis.
-        No second corpus corroborates the range statements.</li>
-      <li><strong>Restriction is read from prose, not from range data.</strong></li>
-      <li><strong>Localities vary in grain</strong>, from one river to an ocean basin.</li>
-    </ul>
-
-  </div>
-</section>
 
 <footer><div class="wrap">
   <p><strong>Cite the underlying data as:</strong> IUCN (2026). The IUCN Red List of
@@ -3128,6 +1993,9 @@ const NIGHT_NOUN = {
 function nightName(s) {
   const c = (s.common || "").trim();
   if (c && c !== "--" && c !== "-") return esc(c);
+  // The payload now carries a description for every species that has no vernacular,
+  // built once at build time so the page and the tables agree on what to call things.
+  if (s.descriptor) return esc(s.descriptor);
   const noun = NIGHT_NOUN[s.group || ""] || "species";
   const art = /^[aeiou]/i.test(noun) ? "An" : "A";
   const where = (s.range || "").split(";")[0].trim();
@@ -3977,6 +2845,11 @@ summary to show."}</p>`}
 document.querySelectorAll(".navbar [data-v]").forEach(a => a.onclick = ev => {
   // let modified clicks open a new tab, as a real link should
   if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button !== 0) return;
+  // 14_build_pages.py ships most routes with only their own section, so each URL is a
+  // distinct document rather than ten copies of the same one. Where the target section is
+  // not in this document, do nothing and let the href load the page: switching to a view
+  // that is not here would hide the only section and leave a blank screen.
+  if (!document.getElementById("v-" + a.dataset.v)) return;
   ev.preventDefault();
   showView(a.dataset.v, true);
 });
@@ -4091,15 +2964,18 @@ function boot() {
   PRI = c.priority_tier || 4;
 
   /* --- counts ---
-     The combined total leads, because "how many species has the Red List not given a
-     risk category to" is the question a reader arrives with, and until now the page
-     answered it only by asking them to add two numbers themselves. Summed here from
-     the payload rather than written down, so it cannot drift from its own parts. */
+     THE LEAD TILE IS THE REGISTER'S SIZE, NOT THE SIZE OF THE PROBLEM. It briefly read
+     "species with no usable risk category", which is wrong by a wide margin and is exactly
+     the mistake this project has a rule against: IUCN v2026-1 alone holds 8,659 Data
+     Deficient vertebrates, and the never-assessed count is larger still and genuinely
+     unknown (the separate new-species work found 1,729 reptiles and 974 amphibians
+     described since 2015, and a checklist comparison leaves 2,345 reptiles the Red List
+     has no record of). Label a coverage figure as coverage. */
   $("#counts").innerHTML = [
-    [(c.dd + c.ne).toLocaleString(),
-     "species with no usable risk category, Data Deficient or never assessed"],
-    [c.dd.toLocaleString(), "Data Deficient, meaning IUCN looked and could not say"],
-    [String(c.ne), "never assessed by IUCN at all"],
+    [(c.dd + c.ne).toLocaleString(), "species in this register"],
+    [c.dd.toLocaleString(),
+     "Data Deficient, of the 8,659 IUCN records as such"],
+    [String(c.ne), "in the register never assessed by IUCN at all"],
     [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
