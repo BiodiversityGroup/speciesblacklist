@@ -18447,6 +18447,88 @@
 "gbif_latest": 1828
 }
 ],
+"rates": [
+{
+"group": "Worm lizards",
+"lost": 29,
+"described": 204,
+"per_1000": 142.2,
+"source": "Reptile Database",
+"as_of": "June 2026"
+},
+{
+"group": "Lizards",
+"lost": 489,
+"described": 8003,
+"per_1000": 61.1,
+"source": "Reptile Database",
+"as_of": "June 2026"
+},
+{
+"group": "Frogs & toads",
+"lost": 274,
+"described": 8011,
+"per_1000": 34.2,
+"source": "AmphibiaWeb",
+"as_of": "12 Aug 2026"
+},
+{
+"group": "Salamanders & newts",
+"lost": 25,
+"described": 837,
+"per_1000": 29.9,
+"source": "AmphibiaWeb",
+"as_of": "12 Aug 2026"
+},
+{
+"group": "Caecilians",
+"lost": 5,
+"described": 233,
+"per_1000": 21.5,
+"source": "AmphibiaWeb",
+"as_of": "12 Aug 2026"
+},
+{
+"group": "Snakes",
+"lost": 59,
+"described": 4249,
+"per_1000": 13.9,
+"source": "Reptile Database",
+"as_of": "June 2026"
+},
+{
+"group": "Turtles & tortoises",
+"lost": 5,
+"described": 370,
+"per_1000": 13.5,
+"source": "Reptile Database",
+"as_of": "June 2026"
+},
+{
+"group": "Mammals",
+"lost": 68,
+"described": 6774,
+"per_1000": 10.0,
+"source": "Mammal Diversity Database v2.5",
+"as_of": "28 Jul 2026"
+},
+{
+"group": "Birds",
+"lost": 54,
+"described": 11063,
+"per_1000": 4.9,
+"source": "IOC World Bird List v15.2",
+"as_of": "13 Apr 2026"
+},
+{
+"group": "Crocodilians",
+"lost": 0,
+"described": 27,
+"per_1000": 0.0,
+"source": "Reptile Database",
+"as_of": "June 2026"
+}
+],
 "compare": {
 "rows": [
 {

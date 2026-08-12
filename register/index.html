@@ -482,6 +482,28 @@
   /* The base table rule sets min-width:720px, so like #ntTable this scrolls inside
      its own box rather than pushing the whole page sideways on a phone. */
   #longestWrap { overflow-x:auto; margin:var(--s2) 0 var(--s3); }
+  /* Lost per 1,000 described. One hue, because this is one quantity at different
+     magnitudes -- a second colour here would imply a second variable. */
+  .rate { max-width:46rem; margin:var(--s2) auto var(--s3); }
+  .raterow { display:grid; grid-template-columns:9.5rem 1fr 7.5rem; align-items:center;
+             gap:.6rem; padding:.22rem 0; }
+  .raterow:hover { background:var(--accent-soft); }
+  .ratename { text-align:right; font-family:var(--sans); font-size:.83rem;
+              color:var(--ink); white-space:nowrap; }
+  .ratebar { display:flex; align-items:center; gap:.5rem; }
+  .ratebar b { height:17px; width:0; display:block; background:var(--t3);
+               border-radius:3px; transition:width .8s cubic-bezier(.22,.7,.3,1); }
+  .ratebar em { font-family:var(--mono); font-size:.76rem; font-style:normal;
+                font-variant-numeric:tabular-nums; color:var(--ink-2); }
+  .ratesub { text-align:left; font-family:var(--sans); font-size:.74rem;
+             color:var(--ink-3); white-space:nowrap; }
+  @media (prefers-reduced-motion:reduce) { .ratebar b { transition:none; } }
+  @media (max-width:620px) {
+    .raterow { grid-template-columns:7rem 1fr; }
+    .ratesub { grid-column:2; text-align:left; margin-top:-.2rem; }
+    .ratename { font-size:.76rem; }
+  }
+
   /* The base thead rule left-aligns every header, but this page centres its content, so
      each label sat off to the left of the column it belongs to. Match the cells. */
   .lgtable th { text-align:center; }
@@ -1678,6 +1700,27 @@
       republished.</p>
   </div>
 
+  <div class="prose">
+    <h3>Counting is not the same as rate</h3>
+    <p id="rateLede">&nbsp;</p>
+  </div>
+
+  <div id="rateWrap"></div>
+
+  <div class="warn">
+    <h3>What that rate is, and is not</h3>
+    <p>It is <strong>not a rate of loss</strong>. The numerator is a curated list rather
+      than a census, and the denominator is how many species each group's own taxonomic
+      authority currently recognises. Effort is the confound, and it runs one way: birds
+      are the best-surveyed group on earth, so a low bird rate partly measures how hard
+      people have looked rather than how well birds are doing.</p>
+    <p>Only vertebrate groups appear, covering <strong id="rateCover">&mdash;</strong> of
+      the species on this page. The rest are invertebrates and plants, where the lost list
+      is far less complete and a rate would be comparing our ignorance with theirs. Frogs
+      and toads are shown together here because AmphibiaWeb publishes Anura as a single
+      figure, and a guessed split is worse than an honest merge.</p>
+  </div>
+
   <div class="warn">
     <h3>Two words doing more work than they should</h3>
     <p><strong>"Toad" is not a group.</strong> Everyday usage covers warty-skinned frogs
@@ -2388,6 +2431,7 @@ function ensureLost() {
     LOST = d;
     renderLostStats();
     renderLongest();
+    renderRates();
     renderCompare();
     return true;
   }).catch(e => {
@@ -2395,6 +2439,57 @@ function ensureLost() {
     if (s) s.innerHTML = '<p class="siteslede">Could not load lost.json.</p>';
     return false;
   }).finally(() => { lostLoading = false; });
+}
+
+/* Lost per 1,000 described. A bar chart rather than a table because the whole point is
+   one group towering over the rest, and that is a length comparison. Every bar is
+   labelled with its value, so the colour is decoration and the number is the encoding. */
+function renderRates() {
+  const wrap = $("#rateWrap"), lede = $("#rateLede");
+  const rows = (LOST && LOST.rates) || [];
+  if (!wrap || !rows.length) return;
+  const max = Math.max(...rows.map(r => r.per_1000)) || 1;
+  const top = rows[0];
+  const nz = rows.filter(r => r.per_1000 > 0);
+  const low = nz[nz.length - 1];
+  const zero = rows.filter(r => r.per_1000 === 0);
+
+  if (lede) {
+    lede.innerHTML =
+      "Reptiles have the most species on this list and birds among the fewest — but there "
+      + "are also far more reptiles. Measured against how many species each group actually "
+      + "contains, the picture changes. <strong>" + esc(top.group) + "</strong> are the "
+      + "worst affected group on earth by this measure: <strong>"
+      + top.lost + " of " + top.described.toLocaleString() + "</strong> are unaccounted "
+      + "for, <strong>one in " + Math.round(1000 / top.per_1000) + "</strong> — "
+      + Math.round(top.per_1000 / low.per_1000) + " times the rate for "
+      + esc(low.group.toLowerCase()) + "."
+      + (zero.length ? " At the other end, <strong>every one of the world's "
+         + zero[0].described + " " + esc(zero[0].group.toLowerCase())
+         + "</strong> is accounted for." : "");
+  }
+
+  wrap.innerHTML = '<div class="rate">' + rows.map(r => `<div class="raterow">
+      <div class="ratename">${esc(r.group)}</div>
+      <div class="ratebar"><b data-w="${(100 * r.per_1000 / max).toFixed(2)}"></b>
+        <em>${r.per_1000.toFixed(1)}</em></div>
+      <div class="ratesub">${r.lost} of ${r.described.toLocaleString()}</div>
+    </div>`).join("") + "</div>";
+
+  const cov = $("#rateCover");
+  if (cov && LOST.meta) {
+    const n = rows.reduce((a, r) => a + r.lost, 0);
+    cov.textContent = n.toLocaleString() + " of " + LOST.meta.n_species.toLocaleString();
+  }
+
+  const bars = [...wrap.querySelectorAll(".ratebar b")];
+  const grow = () => bars.forEach((b, i) =>
+    setTimeout(() => { b.style.width = b.dataset.w + "%"; }, 55 * i));
+  if (!("IntersectionObserver" in window)) { grow(); return; }
+  const io = new IntersectionObserver(es => {
+    if (es.some(e => e.isIntersecting)) { grow(); io.disconnect(); }
+  }, {threshold: 0.2});
+  io.observe(wrap);
 }
 
 /* Lost against newly described, per country. Bars grow from zero when the block first
