@@ -518,11 +518,27 @@
                 margin:0; }
   .homecard .eyebrow { color:var(--t4); }
 
+  /* An intro block that should match the width of the map or table it introduces,
+     rather than sitting in a 66ch column that makes the page look ragged. */
+  .prose-full { max-width:none; }
+
   /* ---- get involved ------------------------------------------------------- */
-  .giblock { max-width:66ch; margin:0 auto var(--s4); }
-  .gistep { background:var(--surface); border:1px solid var(--rule);
-            border-left:4px solid var(--t3); padding:1.2rem 1.4rem;
-            margin:var(--s2) 0; text-align:left; }
+  .giblock { max-width:none; margin:0 auto var(--s4); }
+  /* Alternating treatment so four long steps read as four things rather than one wall.
+     Odd steps sit on the raised surface with the amber rule, even steps drop back to the
+     page ground with the accent rule. */
+  .gistep { border:1px solid var(--rule); padding:1.4rem 1.6rem;
+            margin:var(--s2) 0; text-align:left;
+            background:var(--surface); border-left:4px solid var(--t3); }
+  .gistep:nth-of-type(even) { background:var(--ground);
+            border-left-color:var(--accent); }
+  /* The closing block is a box like the rest, or it reads as an afterthought that
+     fell off the end of the page. */
+  .giend { border:1px solid var(--rule); border-top:3px solid var(--accent);
+           background:var(--surface); padding:1.4rem 1.6rem; margin:var(--s3) 0 0;
+           text-align:left; }
+  .giend h3 { text-align:center; margin-top:0; }
+  .giend p { font-family:var(--sans); font-size:.88rem; color:var(--ink-2); }
   .gistep h4 { font-size:1.05rem; margin:0 0 .4rem; text-align:center; }
   .gistep p { font-family:var(--sans); font-size:.88rem; color:var(--ink-2);
               margin:.5rem 0 0; }
@@ -1283,6 +1299,8 @@
         looked at all. In practice both are treated as though the species were safe.</p>
     </div>
 
+    <div class="counts" id="counts"></div>
+
     <figure class="feature" id="feature">
       <p class="eyebrow">What the record actually says</p>
       <blockquote id="fqQuote"></blockquote>
@@ -1321,19 +1339,23 @@
       <div class="field-head">
         <p class="eyebrow">Every species in the register, one mark each</p>
       </div>
+      <p class="field-note" style="margin-bottom:.6rem">Where these species are in the
+        world is on the <a href="/map/" data-goto="map">map</a>, and the places holding
+        several at once are listed under
+        <a href="/sites/" data-goto="sites">localities</a>.</p>
       <canvas id="field" role="img"
               aria-label="A dense field of marks, one for each of the 2,407 species in
               the register, shaded by how narrowly restricted its published record is.
               The same data is listed in full under The register tab."></canvas>
       <p class="field-note">Hover a mark to name the species; select one to open its
-        record.</p>
+        record. How the tiers were built and tested, and what the ranking cannot tell you,
+        is set out in <a href="/methods/" data-goto="methods">methods and limits</a>.</p>
 
     </div>
   </div>
  </div>
 
  <div class="wrap">
-  <div class="counts" id="counts"></div>
 
   
 
@@ -1455,7 +1477,7 @@
 
 <!-- ================================= MAP ================================ -->
 <section class="view wrap" id="v-map" hidden>
-  <div class="prose">
+  <div class="prose prose-full">
     <h2 style="font-size:var(--fs-h2)">Where the record actually is</h2>
     <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0">
       Where museum specimens and field sightings of these species have actually been
@@ -1507,7 +1529,7 @@
 
 <!-- ================================ SITES =============================== -->
 <section class="view wrap" id="v-sites" hidden>
-  <div class="prose">
+  <div class="prose prose-full">
     <h2 style="font-size:1.4rem">Localities holding several gap species</h2>
     <p style="margin:.6rem 0 0;color:var(--ink-2)">The source is organized
       geographically, so species cluster by place. Where a single locality carries
@@ -2202,7 +2224,7 @@
       <summary>Corrections</summary>
       <p>If a species on this page was never lost, if a rediscovery has since been
         retracted, or if one is missing, please say so:
-        <a href="mailto:business@biodiversitygroup.org?subject=Rediscoveries%20page">business@biodiversitygroup.org</a>.</p>
+        <a href="mailto:info@biodiversitygroup.org?subject=Rediscoveries%20page">info@biodiversitygroup.org</a>.</p>
     </details>
   </div>
 </section>
@@ -2242,17 +2264,22 @@
       <p>This sounds too easy to matter. It is not. Species get rediscovered because
         somebody posted a picture of something odd and a specialist happened to scroll
         past it.</p>
-      <p>Here is how that actually plays out. In August 2014, on a citizen science survey
-        on the island of Hòn Cau in Vietnam, one of our team photographed a land snail
-        nobody present could identify, and put it on
+      <p>Here is how that actually plays out. In August 2014, Scott Trageser, who built
+        this site and is Executive Director of <a href="https://biodiversitygroup.org"
+        target="_blank" rel="noopener">The Biodiversity Group</a>, was running a citizen
+        science survey on the island of Hòn Cau in Vietnam. He came across a land snail
+        nobody present could identify and posted it to
         <a href="https://www.inaturalist.org" target="_blank"
-        rel="noopener">iNaturalist</a> because that is what you do with an unknown. More
-        than a year later a malacologist in Malaysia came across the photo, recognized the
-        shell, and identified it as <span class="sci">Myxostoma petiverianum</span>, a
-        species whose last published record was from <strong>1905</strong>. It became the
-        first photograph ever taken of a live adult.</p>
-      <p>No expedition. No permit. No budget. A photograph left somewhere public, and one
-        person on the other side of the world who knew what they were looking at.</p>
+        rel="noopener">iNaturalist</a>, largely to set an example for the children he was
+        teaching: when you find something you cannot name, this is what you do with it.</p>
+      <p>More than a year later a malacologist in Malaysia, Junn Kitt Foon, came across the
+        photograph, recognized the shell, and got in touch. It was
+        <span class="sci">Myxostoma petiverianum</span>, whose last published record was
+        from <strong>1905</strong>, and the photograph was the first ever taken of a live
+        adult. They published it together.</p>
+      <p>No expedition. No permit. No budget. A photograph left somewhere public, one
+        person on the other side of the world who knew what he was looking at, and a
+        lesson for a class that turned out to be worth rather more than the lesson.</p>
       <p>So: if you see something you cannot name, especially somewhere remote, at night,
         or very small, <strong>photograph it and upload it with a location</strong>. You
         do not need to identify it. That is the whole point of putting it where the people
@@ -2302,12 +2329,12 @@
         neglected species, place it there instead. The point is the species, not us.</p>
     </div>
 
-    <div class="prose">
+    <div class="giend">
       <h3>And if you have seen one of them</h3>
       <p>That is the whole reason this list is public. If you have a record, a photograph
         or a museum specimen of anything on these pages, or you know a species has been
         found again, please tell us:
-        <a href="mailto:business@biodiversitygroup.org?subject=Species%20Black%20List">business@biodiversitygroup.org</a>.
+        <a href="mailto:info@biodiversitygroup.org?subject=Species%20Black%20List">info@biodiversitygroup.org</a>.
         One of the rediscoveries on this site began as a photograph posted online by
         somebody who had no idea what they had found.</p>
     </div>
@@ -2607,7 +2634,7 @@
     about individual species, and some of them will be wrong — a name IUCN holds under a
     genus we did not look for, a locality read out of the wrong clause, a taxon that should
     not be here at all. Corrections are the most useful thing anyone can send:
-    <a href="mailto:business@biodiversitygroup.org?subject=Species%20Black%20List%20correction">business@biodiversitygroup.org</a>,
+    <a href="mailto:info@biodiversitygroup.org?subject=Species%20Black%20List%20correction">info@biodiversitygroup.org</a>,
     or open an issue at
     <a href="https://github.com/BiodiversityGroup/speciesblacklist">github.com/BiodiversityGroup/speciesblacklist</a>.
     Every exclusion this project has already made is published with its reason rather than
@@ -4063,11 +4090,17 @@ function boot() {
      tier 3 ended up in both sides of a 2x2 during the move to 3-5. */
   PRI = c.priority_tier || 4;
 
-  /* --- counts --- */
+  /* --- counts ---
+     The combined total leads, because "how many species has the Red List not given a
+     risk category to" is the question a reader arrives with, and until now the page
+     answered it only by asking them to add two numbers themselves. Summed here from
+     the payload rather than written down, so it cannot drift from its own parts. */
   $("#counts").innerHTML = [
-    [c.dd.toLocaleString(), "Data Deficient — IUCN looked, and could not say"],
+    [(c.dd + c.ne).toLocaleString(),
+     "species with no usable risk category, Data Deficient or never assessed"],
+    [c.dd.toLocaleString(), "Data Deficient, meaning IUCN looked and could not say"],
+    [String(c.ne), "never assessed by IUCN at all"],
     [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
-    [String(c.ne), "Never assessed by IUCN at all"],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
 
