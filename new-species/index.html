@@ -509,9 +509,21 @@
             transition:background .15s; }
   .bigbtn:hover, .bigbtn:focus-visible { background:var(--t4); color:#fff; }
 
-  .gidonate { text-align:center; margin:var(--s3) 0 .2rem; }
-  .bigbtn.donate { background:var(--t4); font-size:1.06rem; padding:1rem 2.4rem; }
-  .bigbtn.donate:hover, .bigbtn.donate:focus-visible { background:var(--t5); }
+  /* TBG's own donate button, rebuilt rather than screenshotted: their green (#5cbb7a,
+     taken from the donate page) and their white frog, which is served from this domain
+     so the page loads nothing from a third party. */
+  .gidonate { text-align:center; margin:var(--s4) 0 .2rem; }
+  .tbgdonate { display:inline-flex; flex-direction:column; align-items:center; gap:.45rem;
+               background:#5cbb7a; color:#fff; text-decoration:none;
+               padding:1.15rem 2.9rem 1.25rem; border-radius:10px;
+               font-family:var(--sans); font-weight:700; font-size:1.55rem;
+               line-height:1.1; transition:background .15s; }
+  .tbgdonate:hover, .tbgdonate:focus-visible { background:#4aa668; color:#fff; }
+  .tbgdonate img { display:block; }
+  @media (max-width:620px) {
+    .tbgdonate { font-size:1.3rem; padding:1rem 2.2rem 1.1rem; }
+    .tbgdonate img { width:76px; height:55px; }
+  }
 
   /* ---- site overview cards ------------------------------------------------ */
   .homecards { display:grid; gap:var(--s2); margin:var(--s3) 0 var(--s4);
