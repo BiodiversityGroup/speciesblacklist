@@ -482,6 +482,9 @@
   /* The base table rule sets min-width:720px, so like #ntTable this scrolls inside
      its own box rather than pushing the whole page sideways on a phone. */
   #longestWrap { overflow-x:auto; margin:var(--s2) 0 var(--s3); }
+  /* The base thead rule left-aligns every header, but this page centres its content, so
+     each label sat off to the left of the column it belongs to. Match the cells. */
+  .lgtable th { text-align:center; }
   .lgtable td .sci { display:block; font-style:italic; font-size:.82rem;
                      color:var(--ink-3); margin-top:.1rem; }
   .lgtable .lgroup { font-weight:600; white-space:nowrap; }
