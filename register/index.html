@@ -370,6 +370,22 @@
   .loststat span { font-family:var(--sans); font-size:var(--fs-micro);
                    text-transform:uppercase; letter-spacing:.1em; color:var(--ink-3); }
 
+  /* "Lost" is a published criterion with a number attached, not a mood. Readers arrive
+     assuming it means "probably extinct", so the definitions sit above the map rather
+     than in the methods page where almost nobody would find them. */
+  .defs { max-width:66ch; margin:var(--s4) auto 0; text-align:left;
+          background:var(--surface); border:1px solid var(--rule);
+          border-left:4px solid var(--t3); padding:1.1rem 1.3rem; }
+  .defs h3 { text-align:center; margin:0 0 .8rem; font-size:.95rem; }
+  .defs dl { margin:0; }
+  .defs dt { font-family:var(--mono); font-size:.9rem; color:var(--ink);
+             margin-top:.8rem; }
+  .defs dt:first-of-type { margin-top:0; }
+  .defs dd { font-family:var(--sans); font-size:.85rem; color:var(--ink-2);
+             margin:.15rem 0 0; }
+  .defs .defsrc { font-family:var(--sans); font-size:.78rem; color:var(--ink-3);
+                  margin:1rem 0 0; }
+
   #lostCanvas { display:block; width:100%; height:auto; }
   /* Flex needs justify-content; text-align does nothing to it. */
   .lostlegend { display:flex; justify-content:center; align-items:center; gap:1rem;
@@ -1367,6 +1383,29 @@
       different thing, and the difference is where the work is.</p>
   </div>
 
+  <div class="defs">
+    <h3>What "lost" means here</h3>
+    <dl>
+      <dt>Missing</dt>
+      <dd>Unseen in the wild for more than 5 but fewer than 10 years, with no population
+        held in captivity or cultivation.</dd>
+      <dt>Lost</dt>
+      <dd>Not confirmed alive by photographic, audio or genetic evidence for more than
+        <strong>10 years</strong>. This is the threshold for everything on this page:
+        <strong>816</strong> species qualify.</dd>
+      <dt>Long lost</dt>
+      <dd>Approximately <strong>50 years</strong> unobserved. Most of this list —
+        <strong>1,135</strong> species — is in this category, and a further
+        <strong>182</strong> carry too little date information to be placed in either.</dd>
+    </dl>
+    <p class="defsrc">Definitions from Long &amp; Rodríguez 2022, <em>Oryx</em> 56(4),
+      "Lost but not forgotten", which is the vocabulary the underlying list uses. Note
+      what they turn on: <strong>evidence</strong>, not conservation status. A species
+      can be missing for a decade and still be assessed as fine —
+      <strong>208</strong> species here are currently listed Least Concern, and another
+      <strong>462</strong> are Data Deficient.</p>
+  </div>
+
   <div class="loststats" id="lostStats"></div>
 
   <div class="prose">
@@ -1439,10 +1478,6 @@
       Biodiversity Group</a> works in the places the profile above predicts will be
       overlooked: steep, wet, unglamorous forest, a long way from a field station,
       looking for small animals at night. Three of those records are on this map.</p>
-    <p>The longest gap of the three is the Vietnamese land snail. Its own paper states no
-      interval — by the time it was published the species was no longer missing — but the
-      contemporary reporting put it at <strong>over a century</strong>, against 54 years
-      for Fugler's shadow snake and thirteen for the glassfrog.</p>
   </div>
 
   <div class="lostcards">
@@ -1467,29 +1502,22 @@
 
     <article class="lostcard">
       <p class="eyebrow">Vietnam &middot; 2014</p>
-      <h4>A land snail found in a photograph</h4>
+      <h4>A land snail found by a stranger online</h4>
       <p class="sci">Myxostoma petiverianum</p>
-      <p>On <strong>3 August 2014</strong>, on a citizen-science survey called Con Dao
-        Land and Sea, <a href="https://biodiversitygroup.org" target="_blank"
-        rel="noopener">The Biodiversity Group</a>'s Scott Trageser and Ash Wiscovitch
-        were in the rainforest of Hòn Cau, an island off south-east Vietnam, when they
-        came across a land snail neither could name. They photographed it and posted it
-        to iNaturalist. More than a year later the malacologist Junn Kitt Foon recognised
-        it — from the operculum, the banding and the set of the aperture — as
-        <span class="sci">Myxostoma petiverianum</span>, and identified the picture as
-        <strong>the first ever photograph of a live adult</strong>.</p>
-      <p>It was found twice: once in the field, and once in a photo library, by someone
-        on the other side of the world who knew what he was looking at. Hòn Cau is a
-        satellite of Côn Sơn, the island the species has always been best known from —
-        so it was hiding, in effect, next door to its own type locality.</p>
-      <p><strong>Found first, published fourth.</strong> Between the photograph and the
-        paper, four other groups published records of the species — from Cambodia,
-        Peninsular Malaysia and the islands off Rạch Giá. All of them appeared in 2016 or
-        later, two years and more after the Hòn Cau animal was photographed. The paper is
-        worded as a locality record rather than a rediscovery because that is what it
-        was by the time it went to press.</p>
+      <p>The last published record was Dautzenberg and Fischer's, in <strong>1905</strong>.
+        On 3&nbsp;August&nbsp;2014, on a citizen-science survey called Con Dao Land and
+        Sea, <a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
+        Biodiversity Group</a>'s Scott Trageser photographed a snail on Hòn Cau that
+        nobody present could name, and posted it to iNaturalist. That was the whole
+        method.</p>
+      <p>In November 2015 a malacologist in Malaysia, Junn Kitt Foon, came across the
+        photograph there and recognised the animal — the first ever taken of a live
+        adult. <strong>No expedition and no budget found this species.</strong> A picture
+        left somewhere public did, and one specialist who happened to scroll past it.</p>
       <p class="lostcite">Trageser, Wiscovitch &amp; Foon 2018, <em>The Festivus</em>
-        50(2): 110–113</p>
+        50(2): 110–113 &middot; <a
+        href="https://news.mongabay.com/2016/07/citizen-science-leads-to-snail-rediscovery-in-vietnam/"
+        target="_blank" rel="noopener">Mongabay</a>, which reports the 1905 date</p>
     </article>
 
     <article class="lostcard">

@@ -12943,6 +12943,19 @@
 "Worm": 2,
 "Centipede": 2
 },
+"by_redlist": {
+"CR(PE)": 622,
+"CR": 208,
+"DD": 462,
+"EX": 81,
+"EN": 98,
+"LC": 208,
+"not in IUCN index": 283,
+"VU": 59,
+"NT": 21,
+"NE": 91,
+"EW": 2
+},
 "oldest_record": 1790
 },
 "places": [
