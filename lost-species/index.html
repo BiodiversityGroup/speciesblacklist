@@ -15,21 +15,23 @@
 <meta property="og:site_name" content="The Biodiversity Group">
 <meta property="og:url" content="https://speciesblacklist.org/lost-species/">
 <meta property="og:title" content="Lost Species · The Species Black List">
-<meta property="og:description" content="3,031 vertebrates the IUCN Red List records as Data Deficient, and 31 it has never assessed. Ranked by how narrowly restricted the published record says they are — and tested against IUCN's own reassessments.">
-<!-- The card is the register itself: masthead, one real tier-5 record, the field
-     of 2,407 marks, the headline figures. No photography, for the same reason
-     there is none on the page. Drawn by pipeline/11_make_og.py from data.json,
-     so the marks and the counts cannot drift from the data they stand for. -->
-<meta property="og:image" content="https://speciesblacklist.org/og-image.png">
+<meta property="og:description" content="2,135 species not recorded for years or centuries and not declared extinct, mapped by where they were last seen, with what is known about why some are found again and most are not.">
+<!-- Purpose-built card, drawn by scripts/23_build_og_card.py. The previous one was a
+     screenshot of the homepage: correctly 1200x630, but with page-sized type, so once
+     a composer scaled and cropped it to fill, the title read "ecies Black List" and the
+     subtitle ran off both edges. Everything here sits inside a centred safe area, and
+     the filename changed on purpose because platforms cache a card against its URL and
+     there is no way to force a refetch from this side. -->
+<meta property="og:image" content="https://speciesblacklist.org/og-card.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A register-style card on pale grey. Under the title, a monospace record reads: Vaurie's nightjar (Caprimulgus centralasicus) is known only from a single specimen collected in the mid-twentieth century. Below it, a band of 2,407 small squares, one per species, shaded pale amber to dark rust by how narrowly restricted each published record is, then four figures: 3,031 Data Deficient, 1,124 in the priority stratum, 31 never assessed, 53.6% of reassessed priority species proved threatened.">
+<meta property="og:image:alt" content="A dark card. A small amber label reads THE SPECIES BLACK LIST, then in large serif type, Life Overlooked. Below it: Not endangered. Not extinct. Just unaccounted for. Then smaller text saying thousands of species have no extinction risk category at all, so nothing protects them and nobody is counting. Across the lower third runs a band of small squares in shades of amber and rust, one for each species. The foot reads speciesblacklist.org and THE BIODIVERSITY GROUP.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Species Black List">
-<meta name="twitter:description" content="Vertebrates the Red List cannot yet speak for, ranked by restriction and tested against IUCN's own reassessments.">
-<meta name="twitter:image" content="https://speciesblacklist.org/og-image.png">
-<meta name="twitter:image:alt" content="The register's headline figures over a field of 2,407 marks, one per species, shaded by how narrowly restricted each published record is.">
+<meta name="twitter:title" content="Lost Species · The Species Black List">
+<meta name="twitter:description" content="2,135 species not recorded for years or centuries and not declared extinct, mapped by where they were last seen, with what is known about why some are found again and most are not.">
+<meta name="twitter:image" content="https://speciesblacklist.org/og-card.png">
+<meta name="twitter:image:alt" content="Life Overlooked. Not endangered, not extinct, just unaccounted for. Over a band of amber marks, one per species.">
 
 <!-- Dataset markup so Google Dataset Search can surface this to the researchers
      who would actually use it. Worth more than ordinary SEO for a register. -->
@@ -295,9 +297,14 @@
                    color:var(--ink-2); margin:var(--s1) 0 var(--s3); }
   .tierkey ul { list-style:none; margin:0; padding:0; display:grid; gap:1px;
                 background:var(--rule); border:1px solid var(--rule); }
-  .tierkey li { background:var(--surface); display:grid; align-items:center;
-                grid-template-columns:auto auto 1fr auto; gap:var(--s2);
-                padding:.6rem var(--s2); }
+  .tierkey li { background:var(--surface); }
+  .tierkey .tierrow { display:grid; align-items:center; color:inherit;
+                text-decoration:none; grid-template-columns:auto auto 1fr auto;
+                gap:var(--s2); padding:.6rem var(--s2); }
+  .tierkey .tierrow:hover, .tierkey .tierrow:focus-visible {
+                background:var(--accent-soft); outline:none;
+                box-shadow:inset 3px 0 0 var(--accent); }
+  .tierkey .tierrow:hover .tname { text-decoration:underline; }
   .tierkey .swatch { width:22px; height:22px; border-radius:3px; flex:0 0 22px; }
   .tierkey .tname { font-family:var(--sans); font-size:var(--fs-small); font-weight:600;
                     white-space:nowrap; }
@@ -313,7 +320,7 @@
      on it collapsed the count track to 0px. Named areas place all four parts
      explicitly instead. */
   @media (max-width:620px) {
-    .tierkey li { grid-template-columns:auto 1fr auto; gap:.4rem .7rem;
+    .tierkey .tierrow { grid-template-columns:auto 1fr auto; gap:.4rem .7rem;
                   grid-template-areas:"sw name count" "def def def"; }
     .tierkey .swatch { grid-area:sw; }
     .tierkey .tname  { grid-area:name; }
@@ -1110,7 +1117,7 @@
     </a>
     <div class="mast-right">
       <button class="ghost" id="theme">Theme</button>
-      <a class="ghost" href="/data.json" download style="text-decoration:none">Download data</a>
+      <a class="ghost" href="/data.json" download style="text-decoration:none">Download Black List data</a>
     </div>
   </div>
   <div class="wrap mast-title">
@@ -1298,16 +1305,6 @@
     </div>
 
     <div class="field-wrap">
-      <div class="field-head">
-        <p class="eyebrow">Every species in the register, one mark each</p>
-      </div>
-      <canvas id="field" role="img"
-              aria-label="A dense field of marks, one for each of the 2,407 species in
-              the register, shaded by how narrowly restricted its published record is.
-              The same data is listed in full under The register tab."></canvas>
-      <p class="field-note">Hover a mark to name the species; select one to open its
-        record.</p>
-
       <div class="tierkey" id="tierkey">
         <p class="eyebrow">What the tiers mean</p>
         <p class="tierkey-intro">Every species is placed in one of five
@@ -1320,6 +1317,17 @@
           break in risk falls between tier 2 and tier 3, not higher up.</p>
         <ul id="tierlist"></ul>
       </div>
+
+      <div class="field-head">
+        <p class="eyebrow">Every species in the register, one mark each</p>
+      </div>
+      <canvas id="field" role="img"
+              aria-label="A dense field of marks, one for each of the 2,407 species in
+              the register, shaded by how narrowly restricted its published record is.
+              The same data is listed in full under The register tab."></canvas>
+      <p class="field-note">Hover a mark to name the species; select one to open its
+        record.</p>
+
     </div>
   </div>
  </div>
@@ -3947,6 +3955,18 @@ document.querySelectorAll(".navbar [data-v]").forEach(a => a.onclick = ev => {
 });
 addEventListener("popstate", () => showView(viewForPath(location.pathname), false));
 
+/* The tier rows link to /register/?tier=N. Following one in the same tab is handled by
+   openTier, but opening it in a new tab or pasting it has to work too, or the href is a
+   decoration that lies about where it goes. */
+function applyTierFromUrl() {
+  const t = new URLSearchParams(location.search).get("tier");
+  if (!t || !/^[1-5]$/.test(t)) return;
+  const sel = $("#fTier");
+  if (!sel) return;
+  sel.value = t;
+  sel.dispatchEvent(new Event("input", {bubbles: true}));
+}
+
 /* ---- dropdown groups ------------------------------------------------------
    Click to open, not hover. Hover menus are unusable on a touchscreen -- the
    first tap fires the hover and the second lands wherever the menu has just
@@ -4205,6 +4225,8 @@ function boot() {
   // Second pass, now that DATA exists: this is what actually initializes the map
   // for someone who landed directly on /map/.
   showView(viewForPath(location.pathname), false);
+  // After showView, because arriving at the register resets the filters.
+  applyTierFromUrl();
 
   drawField();
   startFeature();
@@ -4307,13 +4329,38 @@ function drawField() {
   // The key is built from DATA.tiers, which the build script emits, so the wording
   // here can never drift from the wording the scoring actually used.
   const counts = DATA.tier_counts;
+  /* Each row is a link into the list filtered to that tier. A reader who has just been
+     told what tier 5 means wants to see the tier 5 species, and until now the only route
+     was to go to the list and rediscover the filter for themselves. Real hrefs so the
+     rows are keyboard-reachable and can be opened in a new tab; the router intercepts a
+     plain click. */
   $("#tierlist").innerHTML = [5, 4, 3, 2, 1].map(t => `
     <li class="${t >= PRI ? "pri" : ""}">
-      <span class="swatch" style="background:var(--t${t})" aria-hidden="true"></span>
-      <span class="tname">Tier ${t}</span>
-      <span class="tdef">${esc(DATA.tiers[t])}</span>
-      <span class="tn">${(counts[t] || 0).toLocaleString()} species</span>
+      <a class="tierrow" href="/register/?tier=${t}" data-tier="${t}">
+        <span class="swatch" style="background:var(--t${t})" aria-hidden="true"></span>
+        <span class="tname">Tier ${t}</span>
+        <span class="tdef">${esc(DATA.tiers[t])}</span>
+        <span class="tn">${(counts[t] || 0).toLocaleString()} species</span>
+      </a>
     </li>`).join("");
+
+  $("#tierlist").addEventListener("click", ev => {
+    const a = ev.target.closest("a.tierrow");
+    if (!a || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.button !== 0) return;
+    ev.preventDefault();
+    openTier(a.dataset.tier);
+  });
+}
+
+/* Open the list showing one tier only. showView resets the filters on arrival, so the
+   filter has to be set AFTER the switch, exactly as the locality rows do. */
+function openTier(t) {
+  showView("register", true);
+  const sel = $("#fTier");
+  if (sel) {
+    sel.value = String(t);
+    sel.dispatchEvent(new Event("input", {bubbles: true}));
+  }
 }
 
 let fieldGeom = null;
