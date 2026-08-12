@@ -1614,6 +1614,10 @@ function showView(name, push) {
   if (name === "register" && DATA) resetFilters();
   // A hidden canvas has no width, so the map can only be drawn once visible.
   if (name === "map") ensureMap().then(ok => { if (ok) drawMap(); });
+  /* The other half of the zero-width guard in drawField(). boot() draws the field once,
+     and on any route where the overview starts hidden that draw is now skipped, so the
+     field has to be drawn when its section is actually revealed or it stays empty. */
+  if (name === "overview" && typeof DATA !== "undefined" && DATA) drawField();
   // reptiles.json is a second payload and most visitors never open this view, so it is
   // fetched on first arrival rather than at boot. Not gated on DATA: this list is a
   // separate effort and does not depend on the register's data.
@@ -3263,6 +3267,7 @@ function drawField() {
   const cv = $("#field"), sp = DATA.species;
   if (!cv || !sp.length) return;
   const cssW = cv.parentElement.clientWidth;
+  if (!cssW) return;                     // hidden section; showView redraws on reveal
   PITCH = pitchFor(cssW, sp.length);
   GAP = PITCH >= 7 ? 2 : 1;
   const cols = Math.max(24, Math.floor(cssW / PITCH));
@@ -3611,6 +3616,13 @@ function drawMap() {
   const cv = $("#mapCanvas");
   if (!MAP || !cv) return;
   const cssW = cv.parentElement.clientWidth;
+  /* THIS IS WHY THE MAP SOMETIMES WENT BLANK AFTER OPENING A RECORD AND COMING BACK.
+     A hidden section has clientWidth 0, and the lines below would then set the canvas to
+     0x0, wiping what was drawn. It needed a draw call to land while the section was
+     hidden, which is a race, which is why it happened only sometimes. paintHeat() has
+     carried this exact guard from the start; drawMap and drawField never got it.
+     Returning early is safe: showView() redraws whichever canvas it has just revealed. */
+  if (!cssW) return;
   const cssH = Math.round(cssW / 2);              // 360x180 degrees
   const dpr = Math.min(devicePixelRatio || 1, 2);
   cv.width = Math.round(cssW * dpr);
