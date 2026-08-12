@@ -2325,8 +2325,26 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
    The field is painted into a canvas, so it does not inherit a CSS variable
    change the way the rest of the page does — it has to be repainted explicitly,
    both when the toggle is used and when the OS preference flips underneath us. */
+/* The theme button is also the way into the night survey -- see nightOpen(). It is the
+   one control almost every visitor eventually presses, and somebody who presses it
+   repeatedly is asking how dark this can get, which is the joke. A single press, or
+   presses more than 1.4s apart, behave exactly as they always did; only a fourth rapid
+   one in a row opens it, so nobody who just wants dark mode can trip over it. */
+let themeClicks = 0, themeClickAt = 0;
+
 $("#theme").onclick = () => {
-  const r = document.documentElement, cur = r.getAttribute("data-theme");
+  const now = Date.now();
+  themeClicks = (now - themeClickAt < 1400) ? themeClicks + 1 : 1;
+  themeClickAt = now;
+  const r = document.documentElement;
+  if (themeClicks >= 4) {
+    themeClicks = 0;
+    r.setAttribute("data-theme", "dark");   // the reveal only reads right in the dark
+    repaintCanvases();
+    ensureLost().then(nightOpen);
+    return;
+  }
+  const cur = r.getAttribute("data-theme");
   r.setAttribute("data-theme", cur === "light" ? "dark" : "light");
   if (cur === "dark") r.removeAttribute("data-theme");
   repaintCanvases();
@@ -2581,7 +2599,7 @@ function renderLongest() {
    Opened by tapping the lost-species heading five times, or typing "night". A tap
    count works on a phone, where there is no keyboard; the word works on a desktop,
    where nobody thinks to tap a heading. */
-let nightOn = false, nightTaps = 0, nightTapAt = 0, nightBuf = "";
+let nightOn = false, nightBuf = "";
 
 function nightSpecies() {
   // The real oldest records, so the card is never fiction. Falls back to the two TBG
@@ -2675,29 +2693,18 @@ function nightClose() {
 addEventListener("keydown", ev => {
   if (ev.key === "Escape" && nightOn) { nightClose(); return; }
   if (nightOn) return;
-  // Only on the lost-species page, and never while someone is typing in the register's
-  // search box -- "tonight" in a species search must not black the screen out.
+  // Works on any page now that the theme button is the primary way in, but still never
+  // while someone is typing in a field -- "tonight" in a species search must not black
+  // the screen out.
   if (/^(INPUT|TEXTAREA)$/.test((ev.target.tagName || ""))) return;
-  const lost = $("#v-lost");
-  if (!lost || lost.hidden) return;
   if (ev.key.length !== 1) return;
   nightBuf = (nightBuf + ev.key.toLowerCase()).slice(-5);
-  if (nightBuf.endsWith("night")) nightOpen();
+  if (nightBuf.endsWith("night")) ensureLost().then(nightOpen);
 });
 
-/* Five taps on the lost-species heading. Deliberately given no affordance -- an
-   easter egg with a button on it is just a feature. The 900 ms window keeps an
-   ordinary double-click or a text selection from ever reaching five. */
-(function bindNightTap() {
-  const h = document.querySelector("#v-lost h2");
-  if (!h) return;
-  h.addEventListener("click", () => {
-    const now = Date.now();
-    nightTaps = (now - nightTapAt < 900) ? nightTaps + 1 : 1;
-    nightTapAt = now;
-    if (nightTaps >= 5) { nightTaps = 0; nightOpen(); }
-  });
-})();
+/* The five-taps-on-the-heading trigger was removed: nobody taps a heading, so in practice
+   it was undiscoverable. The way in is now the theme button in the header -- a control
+   every visitor eventually presses, on every page. See its handler further down. */
 
 function renderLostStats() {
   const m = LOST.meta, byc = m.by_class || {};
