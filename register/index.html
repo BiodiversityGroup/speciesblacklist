@@ -701,7 +701,19 @@
      rather than pushing the page sideways */
   #ntTable { overflow-x:auto; margin-top:.5rem; }
   .nttable td i { font-style:italic; }
+  /* Long cells clamp to two lines and expand on click rather than being cut off with no
+     way back. A citation truncated mid-author-list is unusable, and on a phone the
+     column is narrow enough that most of them were. */
   .ntdist { color:var(--ink-2); font-size:.84rem; max-width:24rem; }
+  .ntdist.clip { cursor:pointer; }
+  .ntdist.clip .clipin { display:-webkit-box; -webkit-line-clamp:2; line-clamp:2;
+                         -webkit-box-orient:vertical; overflow:hidden; }
+  .ntdist.clip.open .clipin { display:block; }
+  .ntdist.clip::after { content:"more"; display:block; margin-top:.15rem;
+                        font-family:var(--sans); font-size:.7rem; color:var(--accent); }
+  .ntdist.clip.open::after { content:"less"; }
+  .ntcite-title { color:var(--ink); }
+  @media (max-width:640px) { .ntdist { max-width:14rem; } }
   .ntfine { color:var(--ink-2); font-size:.82rem; white-space:nowrap; }
   .ntev, .ntrc { font-family:var(--sans); font-size:.7rem; font-weight:600;
     letter-spacing:.03em; padding:.15rem .45rem; border-radius:3px;
@@ -848,7 +860,7 @@
   <a role="tab" href="/" aria-selected="true" data-v="overview">Overview</a>
   <a role="tab" href="/register/" aria-selected="false" data-v="register">The Register</a>
   <a role="tab" href="/map/" aria-selected="false" data-v="map">Map</a>
-  <a role="tab" href="/sites/" aria-selected="false" data-v="sites">Sites</a>
+  <a role="tab" href="/sites/" aria-selected="false" data-v="sites">Localities</a>
   <a role="tab" href="/methods/" aria-selected="false" data-v="methods">Methods &amp; Limits</a>
   <a role="tab" href="/new-species/" aria-selected="false" data-v="newtaxa">New Species</a>
   <a role="tab" href="/lost-species/" aria-selected="false" data-v="lost">Lost Species</a>
@@ -1100,7 +1112,7 @@
       expedition routes and coastlines somebody surveyed. Read the map as
       a picture of where the evidence sits, not of where the risk is.</p>
     <p>These are point records, <strong>not range maps</strong>, and they come from a
-      different source than the localities on the Sites page — so the two will not
+      different source than the localities on the Localities page — so the two will not
       correspond exactly. Individual records can also be plain wrong; GBIF's own
       flagged coordinate errors are excluded, but some survive. That is why this shows
       density rather than authoritative dots.</p>
@@ -1180,8 +1192,6 @@
       no listing protects them and no conservation plan counts them. Nine in ten are
       endemic to a single country &mdash; the pattern that best predicts a species turns
       out to be threatened when someone finally looks.</p>
-    <p class="ntsummary">Every species below was checked one at a time against the IUCN
-      Red List's own database, not inferred from a missing name.</p>
   </div>
 
   <div id="ntCounts" class="counts"></div>
@@ -1429,8 +1439,10 @@
       Biodiversity Group</a> works in the places the profile above predicts will be
       overlooked: steep, wet, unglamorous forest, a long way from a field station,
       looking for small animals at night. Three of those records are on this map.</p>
-    <p>The longest of the three is Fugler's shadow snake: <strong>54 years</strong>
-      between the only two individuals ever recorded.</p>
+    <p>The longest gap of the three is the Vietnamese land snail. Its own paper states no
+      interval — by the time it was published the species was no longer missing — but the
+      contemporary reporting put it at <strong>over a century</strong>, against 54 years
+      for Fugler's shadow snake and thirteen for the glassfrog.</p>
   </div>
 
   <div class="lostcards">
@@ -1729,7 +1741,7 @@
     <h2 style="margin-top:0">Methods &amp; limits</h2>
 
     <div class="warn">
-      <h3>Who called these species "priority"</h3>
+      <h3>Who called these species "priority"?</h3>
       <p>Nobody with a specialist's authority. The ranking is produced by a
         text-classification rule that reads the source's own range statements and
         sorts them by severity. <strong>No taxonomist or conservation biologist has
@@ -1807,7 +1819,7 @@
       somewhat.</p>
 
     <h3>Where localities come from</h3>
-    <p>A locality is recorded two ways, and the Sites page distinguishes them.</p>
+    <p>A locality is recorded two ways, and the Localities page distinguishes them.</p>
     <p><strong>From a locality account.</strong> Richardson organises the book
       geographically, so most species sit inside a paragraph introduced by a place.
       That place, and its opening sentence, are attached to every species in the
@@ -1830,7 +1842,7 @@
     <p>These names are then looked up in a gazetteer to place them on the map, which
       is a separate step with its own failure modes and its own verification — see
       <em>Geocoding the locality names</em> below. Nothing in the register or on the
-      Sites page depends on that lookup: those show the name the source gave, and the
+      Localities page depends on that lookup: those show the name the source gave, and the
       coordinates exist only for the map.</p>
 
     <h3>How the map is built, and what it is not</h3>
@@ -1860,7 +1872,7 @@
     <p><strong>What the map is not.</strong> Not range maps — these are point records.
       Not a picture of where risk is concentrated — it maps collecting effort at least
       as much as biology, because georeferenced records cluster where institutions and
-      expeditions have worked. And not the same basis as the Sites page, which comes
+      expeditions have worked. And not the same basis as the Localities page, which comes
       from the book rather than from GBIF, so the two will not correspond exactly.
       Some bad coordinates survive the filtering, which is why the page shows density
       rather than authoritative dots.</p>
@@ -2462,7 +2474,7 @@ function ampRender() {
     [n(c.total), "never assessed"],
     [n(ev.airtight), "the Red List knows them and holds no assessment"],
     [n((ev.corroborated || 0) + (ev.uncorroborated || 0)),
-     "not in the Red List index at all"],
+     "not in the Red List index"],
     [n(c.countries), "countries"],
   ];
   const el = $("#ampCounts");
@@ -2495,6 +2507,38 @@ function ampRender() {
   ampDraw();
 }
 
+/* A citation cell that leads with the TITLE, not the author list.
+   AmphibiaWeb's references are "Authors. YEAR. Title. Journal", and ten Chinese authors
+   with hyphenated given names fill a phone column before the title arrives — the reader
+   sees "Song H-M, Wang F-X, Qi S, Wang H-T, Lyu Z-T, Cai Y-Y..." and learns nothing.
+   Reordered to "Title — First Author et al. YEAR", with the full citation one tap away
+   rather than discarded. */
+function citeCell(ref, esc) {
+  ref = (ref || "").trim();
+  if (!ref) {
+    return `<td class="ntdist"><span style="color:var(--ink-3)">not stated</span></td>`;
+  }
+  const m = ref.match(/^(.*?)\.\s*((?:19|20)\d\d)\.\s*(.*)$/);
+  let lead = ref;
+  if (m) {
+    const first = m[1].split(",")[0].trim();
+    const many = m[1].includes(",") || m[1].includes("&");
+    const title = m[3].replace(/\s+/g, " ").trim();
+    lead = `<span class="ntcite-title">${esc(title)}</span> — ${esc(first)}`
+         + `${many ? " et al." : ""} ${m[2]}`;
+  } else {
+    lead = esc(ref);
+  }
+  return `<td class="ntdist clip" title="${esc(ref)}"><span class="clipin">${lead}`
+       + `</span></td>`;
+}
+
+/* One delegated handler for every clamped cell on the page, present and future. */
+document.addEventListener("click", ev => {
+  const cell = ev.target.closest && ev.target.closest(".ntdist.clip");
+  if (cell) cell.classList.toggle("open");
+});
+
 function ampDraw() {
   if (!AMP) return;
   const val = s => (($(s) || {}).value || "");
@@ -2526,8 +2570,7 @@ function ampDraw() {
       <td>${esc(r.fam)}</td>
       <td><span class="ntev ntev-${r.ev}" title="${esc(NT_EV[r.ev][1])}">${NT_EV[r.ev][0]}</span></td>
       <td>${esc(r.cty) || "<span style='color:var(--ink-3)'>—</span>"}</td>
-      <td class="ntdist" title="${esc(r.ref)}">${esc((r.ref || "").slice(0, 120))
-        || "<span style='color:var(--ink-3)'>not stated</span>"}</td>
+      ${citeCell(r.ref, esc)}
     </tr>`).join("")}</tbody></table>` +
     (rows.length > CAP
       ? `<p class="siteslede">Showing the first ${CAP} of ${rows.length.toLocaleString()}
@@ -2652,7 +2695,8 @@ function ntRender() {
       <td><span class="ntev ntev-${r.ev}" title="${esc(NT_EV[r.ev][1])}">${NT_EV[r.ev][0]}</span></td>
       <td><span class="ntrc ntrc-${r.rc}" title="${esc(NT_RC[r.rc][1])}">${r.rc} · ${NT_RC[r.rc][0]}</span></td>
       <td class="ntfine">${esc(r.fine) || "<span style='color:var(--ink-3)'>—</span>"}</td>
-      <td class="ntdist">${esc(r.dist) || "<span style='color:var(--ink-3)'>not stated</span>"}</td>
+      <td class="ntdist clip" title="${esc(r.dist)}"><span class="clipin">${esc(r.dist)
+        || "<span style='color:var(--ink-3)'>not stated</span>"}</span></td>
     </tr>`).join("")}</tbody></table>` +
     (rows.length > CAP
       ? `<p class="siteslede">Showing the first ${CAP} of ${rows.length.toLocaleString()}
