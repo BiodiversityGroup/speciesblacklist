@@ -12904,17 +12904,39 @@
 ]
 ],
 "meta": {
-"total": 1729,
-"placed": 1681,
-"unplaced": 48,
-"places": 81
+"total": 2703,
+"placed": 2652,
+"by_class": {
+"reptile": 1681,
+"amphibian": 971
+},
+"unplaced": 51,
+"places": 90
 },
 "places": [
+{
+"place": "China",
+"lat": 34.541,
+"lon": 108.924,
+"n": 389,
+"grp": {
+"Megophryidae": 109,
+"Ranidae": 46,
+"Gekkonidae": 41,
+"Agamidae": 34,
+"Colubridae": 27
+},
+"cls": {
+"amphibian": 225,
+"reptile": 164
+},
+"newest": 2026
+},
 {
 "place": "India",
 "lat": 22.351,
 "lon": 78.668,
-"n": 203,
+"n": 244,
 "grp": {
 "Gekkonidae": 132,
 "Colubridae": 21,
@@ -12922,33 +12944,9 @@
 "Scincidae": 10,
 "Agamidae": 10
 },
-"newest": 2026
-},
-{
-"place": "China",
-"lat": 34.541,
-"lon": 108.924,
-"n": 164,
-"grp": {
-"Gekkonidae": 41,
-"Agamidae": 34,
-"Colubridae": 27,
-"Viperidae": 19,
-"Scincidae": 16
-},
-"newest": 2026
-},
-{
-"place": "Vietnam",
-"lat": 15.927,
-"lon": 107.965,
-"n": 101,
-"grp": {
-"Gekkonidae": 35,
-"Colubridae": 22,
-"Scincidae": 19,
-"Xenodermidae": 8,
-"Agamidae": 5
+"cls": {
+"reptile": 203,
+"amphibian": 41
 },
 "newest": 2026
 },
@@ -12956,55 +12954,71 @@
 "place": "Brazil",
 "lat": -10.333,
 "lon": -53.2,
-"n": 96,
+"n": 178,
 "grp": {
 "Colubridae": 28,
+"Hylidae": 21,
 "Amphisbaenidae": 15,
 "Gymnophthalmidae": 15,
-"Alopoglossidae": 6,
-"Elapidae": 5
+"Leptodactylidae": 13
+},
+"cls": {
+"reptile": 96,
+"amphibian": 82
 },
 "newest": 2026
 },
 {
-"place": "Australia",
-"lat": -24.776,
-"lon": 134.755,
-"n": 88,
+"place": "Madagascar",
+"lat": -18.925,
+"lon": 46.442,
+"n": 152,
 "grp": {
-"Gekkonidae": 24,
-"Agamidae": 19,
-"Diplodactylidae": 13,
-"Scincidae": 11,
-"Varanidae": 5
+"Mantellidae": 84,
+"Gekkonidae": 33,
+"Microhylidae": 13,
+"Chamaeleonidae": 11,
+"Scincidae": 8
+},
+"cls": {
+"amphibian": 97,
+"reptile": 55
 },
 "newest": 2026
 },
 {
-"place": "Papua New Guinea",
-"lat": -5.682,
-"lon": 144.249,
-"n": 75,
+"place": "Vietnam",
+"lat": 15.927,
+"lon": 107.965,
+"n": 147,
 "grp": {
-"Gekkonidae": 31,
-"Scincidae": 15,
-"Elapidae": 11,
-"Gerrhopilidae": 10,
-"Colubridae": 4
+"Gekkonidae": 35,
+"Colubridae": 22,
+"Scincidae": 19,
+"Megophryidae": 15,
+"Microhylidae": 12
 },
-"newest": 2025
+"cls": {
+"reptile": 101,
+"amphibian": 46
+},
+"newest": 2026
 },
 {
 "place": "Peru",
 "lat": -6.87,
 "lon": -75.046,
-"n": 74,
+"n": 136,
 "grp": {
+"Strabomantidae": 39,
 "Gymnophthalmidae": 25,
 "Tropiduridae": 15,
 "Liolaemidae": 12,
-"Colubridae": 7,
-"Hoplocercidae": 5
+"Colubridae": 7
+},
+"cls": {
+"reptile": 74,
+"amphibian": 62
 },
 "newest": 2026,
 "merged_from": [
@@ -13012,16 +13026,96 @@
 ]
 },
 {
+"place": "Ecuador",
+"lat": -1.34,
+"lon": -79.367,
+"n": 122,
+"grp": {
+"Strabomantidae": 58,
+"Colubridae": 19,
+"Centrolenidae": 10,
+"Gymnophthalmidae": 8,
+"Hylidae": 8
+},
+"cls": {
+"amphibian": 84,
+"reptile": 38
+},
+"newest": 2026
+},
+{
+"place": "Australia",
+"lat": -24.776,
+"lon": 134.755,
+"n": 102,
+"grp": {
+"Gekkonidae": 24,
+"Agamidae": 19,
+"Diplodactylidae": 13,
+"Scincidae": 11,
+"Hylidae": 9
+},
+"cls": {
+"reptile": 88,
+"amphibian": 14
+},
+"newest": 2026
+},
+{
+"place": "Papua New Guinea",
+"lat": -5.682,
+"lon": 144.249,
+"n": 97,
+"grp": {
+"Gekkonidae": 31,
+"Hylidae": 20,
+"Scincidae": 15,
+"Elapidae": 11,
+"Gerrhopilidae": 10
+},
+"cls": {
+"reptile": 75,
+"amphibian": 22
+},
+"newest": 2025
+},
+{
+"place": "Colombia",
+"lat": 4.1,
+"lon": -72.909,
+"n": 88,
+"grp": {
+"Strabomantidae": 19,
+"Colubridae": 12,
+"Caeciliidae": 10,
+"Gymnophthalmidae": 9,
+"Dendrobatidae": 9,
+"Anolidae": 1
+},
+"cls": {
+"amphibian": 52,
+"reptile": 36
+},
+"newest": 2026,
+"merged_from": [
+"COLOMBIA"
+]
+},
+{
 "place": "Thailand",
 "lat": 14.897,
 "lon": 100.833,
-"n": 69,
+"n": 82,
 "grp": {
 "Gekkonidae": 46,
 "Colubridae": 8,
 "Viperidae": 8,
 "Agamidae": 5,
-"Elapidae": 1
+"Megophryidae": 4
+},
+"cls": {
+"reptile": 69,
+"amphibian": 13
 },
 "newest": 2026
 },
@@ -13029,45 +13123,78 @@
 "place": "Mexico",
 "lat": 23.659,
 "lon": -102.008,
-"n": 56,
+"n": 78,
 "grp": {
 "Colubridae": 15,
+"Eleutherodactylidae": 8,
 "Anguidae": 7,
-"Viperidae": 6,
-"Leptotyphlopidae": 5,
-"Scincidae": 5,
+"Plethodontidae": 6,
+"Craugastoridae": 6,
 "Xenosauridae": 1
 },
-"newest": 2025,
+"cls": {
+"reptile": 56,
+"amphibian": 22
+},
+"newest": 2026,
 "merged_from": [
 "M\u00e9xico"
 ]
 },
 {
-"place": "Madagascar",
-"lat": -18.925,
-"lon": 46.442,
-"n": 55,
+"place": "Indonesia",
+"lat": -2.483,
+"lon": 117.89,
+"n": 75,
 "grp": {
-"Gekkonidae": 33,
-"Chamaeleonidae": 11,
-"Scincidae": 8,
-"Opluridae": 1,
-"Pseudoxyrhophiidae": 1
+"Gekkonidae": 13,
+"Rhacophoridae": 9,
+"Megophryidae": 7,
+"Microhylidae": 6,
+"Bufonidae": 6
+},
+"cls": {
+"amphibian": 41,
+"reptile": 34
 },
 "newest": 2026
+},
+{
+"place": "Malaysia",
+"lat": 4.569,
+"lon": 102.266,
+"n": 65,
+"grp": {
+"Dicroglossidae": 20,
+"Gekkonidae": 17,
+"Scincidae": 11,
+"Pareidae": 4,
+"Microhylidae": 4
+},
+"cls": {
+"reptile": 36,
+"amphibian": 29
+},
+"newest": 2026,
+"merged_from": [
+"MALAYSIA"
+]
 },
 {
 "place": "Myanmar",
 "lat": 17.175,
 "lon": 96.0,
-"n": 53,
+"n": 63,
 "grp": {
 "Gekkonidae": 39,
 "Agamidae": 5,
-"Homalopsidae": 2,
-"Pareidae": 2,
-"Viperidae": 2
+"Dicroglossidae": 4,
+"Ranidae": 3,
+"Homalopsidae": 2
+},
+"cls": {
+"reptile": 53,
+"amphibian": 10
 },
 "newest": 2026
 },
@@ -13083,86 +13210,31 @@
 "Lamprophiidae": 3,
 "Cordylidae": 3
 },
+"cls": {
+"reptile": 48
+},
 "newest": 2026
 },
 {
 "place": "Argentina",
 "lat": -34.996,
 "lon": -64.967,
-"n": 42,
+"n": 47,
 "grp": {
 "Liolaemidae": 33,
 "Leiosauridae": 3,
 "Teiidae": 2,
 "Colubridae": 2,
-"Amphisbaenidae": 1
+"Bufonidae": 2
+},
+"cls": {
+"reptile": 42,
+"amphibian": 5
 },
 "newest": 2026,
 "merged_from": [
 "ARGENTINA"
 ]
-},
-{
-"place": "Ecuador",
-"lat": -1.34,
-"lon": -79.367,
-"n": 38,
-"grp": {
-"Colubridae": 19,
-"Gymnophthalmidae": 8,
-"Anolidae": 4,
-"Viperidae": 2,
-"Scincidae": 1
-},
-"newest": 2024
-},
-{
-"place": "Colombia",
-"lat": 4.1,
-"lon": -72.909,
-"n": 36,
-"grp": {
-"Colubridae": 12,
-"Gymnophthalmidae": 9,
-"Viperidae": 5,
-"Anolidae": 4,
-"Sphaerodactylidae": 3
-},
-"newest": 2025,
-"merged_from": [
-"COLOMBIA"
-]
-},
-{
-"place": "Malaysia",
-"lat": 4.569,
-"lon": 102.266,
-"n": 36,
-"grp": {
-"Gekkonidae": 17,
-"Scincidae": 11,
-"Pareidae": 4,
-"Colubridae": 3,
-"Dibamidae": 1
-},
-"newest": 2026,
-"merged_from": [
-"MALAYSIA"
-]
-},
-{
-"place": "Indonesia",
-"lat": -2.483,
-"lon": 117.89,
-"n": 34,
-"grp": {
-"Gekkonidae": 13,
-"Agamidae": 4,
-"Varanidae": 3,
-"Chelidae": 3,
-"Viperidae": 3
-},
-"newest": 2025
 },
 {
 "place": "Iran",
@@ -13176,6 +13248,9 @@
 "Sphaerodactylidae": 2,
 "Phyllodactylidae": 1
 },
+"cls": {
+"reptile": 33
+},
 "newest": 2024
 },
 {
@@ -13187,7 +13262,46 @@
 "Diplodactylidae": 30,
 "Scincidae": 2
 },
+"cls": {
+"reptile": 32
+},
 "newest": 2024
+},
+{
+"place": "Cambodia",
+"lat": 12.543,
+"lon": 104.814,
+"n": 27,
+"grp": {
+"Gekkonidae": 17,
+"Scincidae": 2,
+"Microhylidae": 2,
+"Megophryidae": 2,
+"Dibamidae": 1
+},
+"cls": {
+"reptile": 21,
+"amphibian": 6
+},
+"newest": 2026
+},
+{
+"place": "Lao People's Democratic Republic",
+"lat": 19.9,
+"lon": 102.5,
+"n": 26,
+"grp": {
+"Gekkonidae": 12,
+"Colubridae": 4,
+"Dicroglossidae": 2,
+"Microhylidae": 2,
+"Agamidae": 1
+},
+"cls": {
+"reptile": 21,
+"amphibian": 5
+},
+"newest": 2026
 },
 {
 "place": "Sri Lanka",
@@ -13201,34 +13315,64 @@
 "Scincidae": 3,
 "Agamidae": 1
 },
+"cls": {
+"reptile": 23
+},
 "newest": 2025
 },
 {
-"place": "Lao People's Democratic Republic",
-"lat": 19.9,
-"lon": 102.5,
+"place": "Ethiopia",
+"lat": 10.212,
+"lon": 38.652,
 "n": 21,
 "grp": {
-"Gekkonidae": 12,
-"Colubridae": 4,
-"Agamidae": 1,
-"Pareidae": 1,
-"Viperidae": 1
+"Ptychadenidae": 9,
+"Gekkonidae": 3,
+"Arthroleptidae": 3,
+"Scincidae": 2,
+"Chamaeleonidae": 1
+},
+"cls": {
+"amphibian": 13,
+"reptile": 8
+},
+"newest": 2025
+},
+{
+"place": "Japan",
+"lat": 36.575,
+"lon": 139.239,
+"n": 21,
+"grp": {
+"Hynobiidae": 10,
+"Scincidae": 4,
+"Eublepharidae": 2,
+"Ranidae": 2,
+"Gekkonidae": 1
+},
+"cls": {
+"amphibian": 14,
+"reptile": 7
 },
 "newest": 2026
 },
 {
-"place": "Cambodia",
-"lat": 12.543,
-"lon": 104.814,
-"n": 21,
+"place": "Venezuela",
+"lat": 8.002,
+"lon": -66.111,
+"n": 18,
 "grp": {
-"Gekkonidae": 17,
-"Scincidae": 2,
-"Dibamidae": 1,
-"Agamidae": 1
+"Gymnophthalmidae": 5,
+"Sphaerodactylidae": 4,
+"Colubridae": 4,
+"Hemiphractidae": 2,
+"Leptotyphlopidae": 1
 },
-"newest": 2026
+"cls": {
+"reptile": 15,
+"amphibian": 3
+},
+"newest": 2025
 },
 {
 "place": "Chile",
@@ -13238,7 +13382,26 @@
 "grp": {
 "Liolaemidae": 18
 },
+"cls": {
+"reptile": 18
+},
 "newest": 2025
+},
+{
+"place": "United States",
+"lat": 39.784,
+"lon": -100.446,
+"n": 17,
+"grp": {
+"Plethodontidae": 15,
+"Phrynosomatidae": 1,
+"Sirenidae": 1
+},
+"cls": {
+"amphibian": 16,
+"reptile": 1
+},
+"newest": 2023
 },
 {
 "place": "Dominican Republic",
@@ -13251,21 +13414,28 @@
 "Boidae": 1,
 "Tropidophiidae": 1
 },
+"cls": {
+"reptile": 15
+},
 "newest": 2024
 },
 {
-"place": "Venezuela",
-"lat": 8.002,
-"lon": -66.111,
+"place": "Panama",
+"lat": 8.56,
+"lon": -81.131,
 "n": 15,
 "grp": {
-"Gymnophthalmidae": 5,
-"Sphaerodactylidae": 4,
 "Colubridae": 4,
-"Leptotyphlopidae": 1,
-"Teiidae": 1
+"Anolidae": 3,
+"Sphaerodactylidae": 3,
+"Diploglossidae": 1,
+"Leptotyphlopidae": 1
 },
-"newest": 2025
+"cls": {
+"reptile": 12,
+"amphibian": 3
+},
+"newest": 2023
 },
 {
 "place": "Haiti",
@@ -13275,6 +13445,9 @@
 "grp": {
 "Diploglossidae": 11,
 "Anolidae": 3
+},
+"cls": {
+"reptile": 14
 },
 "newest": 2024
 },
@@ -13290,13 +13463,16 @@
 "Viperidae": 1,
 "Elapidae": 1
 },
+"cls": {
+"reptile": 14
+},
 "newest": 2025
 },
 {
 "place": "Honduras",
 "lat": 15.257,
 "lon": -86.076,
-"n": 12,
+"n": 13,
 "grp": {
 "Colubridae": 4,
 "Anolidae": 3,
@@ -13304,27 +13480,51 @@
 "Leptotyphlopidae": 1,
 "Anomalepididae": 1
 },
+"cls": {
+"reptile": 12,
+"amphibian": 1
+},
 "newest": 2024
 },
 {
-"place": "Panama",
-"lat": 8.56,
-"lon": -81.131,
-"n": 12,
+"place": "United Republic of Tanzania",
+"lat": -6.4,
+"lon": 34.9,
+"n": 13,
 "grp": {
-"Colubridae": 4,
-"Anolidae": 3,
-"Sphaerodactylidae": 3,
-"Diploglossidae": 1,
-"Leptotyphlopidae": 1
+"Chamaeleonidae": 7,
+"Bufonidae": 3,
+"Psammophiidae": 1,
+"Colubridae": 1,
+"Arthroleptidae": 1
 },
-"newest": 2023
+"cls": {
+"reptile": 9,
+"amphibian": 4
+},
+"newest": 2025
+},
+{
+"place": "Costa Rica",
+"lat": 10.274,
+"lon": -84.074,
+"n": 13,
+"grp": {
+"Plethodontidae": 8,
+"Anolidae": 4,
+"Viperidae": 1
+},
+"cls": {
+"amphibian": 8,
+"reptile": 5
+},
+"newest": 2025
 },
 {
 "place": "Kenya",
 "lat": 1.442,
 "lon": 38.431,
-"n": 10,
+"n": 12,
 "grp": {
 "Scincidae": 3,
 "Typhlopidae": 2,
@@ -13332,7 +13532,44 @@
 "Agamidae": 1,
 "Leptotyphlopidae": 1
 },
+"cls": {
+"reptile": 10,
+"amphibian": 2
+},
 "newest": 2024
+},
+{
+"place": "Bolivia",
+"lat": -17.057,
+"lon": -64.991,
+"n": 12,
+"grp": {
+"Colubridae": 3,
+"Bufonidae": 2,
+"Leiosauridae": 1,
+"Viperidae": 1,
+"Liolaemidae": 1
+},
+"cls": {
+"reptile": 7,
+"amphibian": 5
+},
+"newest": 2025
+},
+{
+"place": "Nepal",
+"lat": 28.378,
+"lon": 84.0,
+"n": 10,
+"grp": {
+"Gekkonidae": 7,
+"Megophryidae": 3
+},
+"cls": {
+"reptile": 7,
+"amphibian": 3
+},
+"newest": 2026
 },
 {
 "place": "Saudi Arabia",
@@ -13345,19 +13582,28 @@
 "Lacertidae": 2,
 "Agamidae": 1
 },
+"cls": {
+"reptile": 10
+},
 "newest": 2025
 },
 {
-"place": "United Republic of Tanzania",
-"lat": -6.4,
-"lon": 34.9,
+"place": "Guyana",
+"lat": 4.842,
+"lon": -58.642,
 "n": 9,
 "grp": {
-"Chamaeleonidae": 7,
-"Psammophiidae": 1,
-"Colubridae": 1
+"Strabomantidae": 3,
+"Colubridae": 1,
+"Bufonidae": 1,
+"Rhinatrematidae": 1,
+"Hemiphractidae": 1
 },
-"newest": 2022
+"cls": {
+"amphibian": 8,
+"reptile": 1
+},
+"newest": 2025
 },
 {
 "place": "Oman",
@@ -13369,19 +13615,8 @@
 "Sphaerodactylidae": 1,
 "Lacertidae": 1
 },
-"newest": 2025
-},
-{
-"place": "Ethiopia",
-"lat": 10.212,
-"lon": 38.652,
-"n": 8,
-"grp": {
-"Gekkonidae": 3,
-"Scincidae": 2,
-"Chamaeleonidae": 1,
-"Viperidae": 1,
-"Lamprophiidae": 1
+"cls": {
+"reptile": 8
 },
 "newest": 2025
 },
@@ -13395,6 +13630,9 @@
 "Lacertidae": 2,
 "Agamidae": 1
 },
+"cls": {
+"reptile": 8
+},
 "newest": 2025
 },
 {
@@ -13405,6 +13643,9 @@
 "grp": {
 "Diplodactylidae": 5,
 "Scincidae": 3
+},
+"cls": {
+"reptile": 8
 },
 "newest": 2024
 },
@@ -13418,43 +13659,27 @@
 "Colubridae": 2,
 "Diploglossidae": 1
 },
+"cls": {
+"reptile": 7
+},
 "newest": 2022
 },
 {
-"place": "Nepal",
-"lat": 28.378,
-"lon": 84.0,
+"place": "Philippines",
+"lat": 12.75,
+"lon": 122.731,
 "n": 7,
 "grp": {
-"Gekkonidae": 7
+"Gekkonidae": 2,
+"Ceratobatrachidae": 2,
+"Dicroglossidae": 2,
+"Geoemydidae": 1
+},
+"cls": {
+"amphibian": 4,
+"reptile": 3
 },
 "newest": 2026
-},
-{
-"place": "Japan",
-"lat": 36.575,
-"lon": 139.239,
-"n": 7,
-"grp": {
-"Scincidae": 4,
-"Eublepharidae": 2,
-"Gekkonidae": 1
-},
-"newest": 2026
-},
-{
-"place": "Bolivia",
-"lat": -17.057,
-"lon": -64.991,
-"n": 7,
-"grp": {
-"Colubridae": 3,
-"Leiosauridae": 1,
-"Viperidae": 1,
-"Liolaemidae": 1,
-"Tropiduridae": 1
-},
-"newest": 2024
 },
 {
 "place": "Uganda",
@@ -13466,7 +13691,26 @@
 "Gekkonidae": 1,
 "Colubridae": 1
 },
+"cls": {
+"reptile": 6
+},
 "newest": 2025
+},
+{
+"place": "Mozambique",
+"lat": -19.302,
+"lon": 34.914,
+"n": 6,
+"grp": {
+"Chamaeleonidae": 4,
+"Scincidae": 1,
+"Pyxicephalidae": 1
+},
+"cls": {
+"reptile": 5,
+"amphibian": 1
+},
+"newest": 2026
 },
 {
 "place": "Turkey",
@@ -13478,29 +13722,60 @@
 "Viperidae": 1,
 "Colubridae": 1
 },
+"cls": {
+"reptile": 6
+},
 "newest": 2022
 },
 {
-"place": "Costa Rica",
-"lat": 10.274,
-"lon": -84.074,
-"n": 5,
+"place": "French Guiana",
+"lat": 4.0,
+"lon": -53.0,
+"n": 6,
 "grp": {
-"Anolidae": 4,
-"Viperidae": 1
+"Colubridae": 2,
+"Alopoglossidae": 1,
+"Strabomantidae": 1,
+"Aromobatidae": 1,
+"Caeciliidae": 1
 },
-"newest": 2023
+"cls": {
+"reptile": 3,
+"amphibian": 3
+},
+"newest": 2025
 },
 {
-"place": "Mozambique",
-"lat": -19.302,
-"lon": 34.914,
-"n": 5,
+"place": "C\u00f4te d'Ivoire",
+"lat": 7.99,
+"lon": -5.568,
+"n": 6,
 "grp": {
-"Chamaeleonidae": 4,
-"Scincidae": 1
+"Ptychadenidae": 3,
+"Phrynobatrachidae": 2,
+"Ranidae": 1
+},
+"cls": {
+"amphibian": 6
 },
 "newest": 2026
+},
+{
+"place": "Guatemala",
+"lat": 15.586,
+"lon": -90.346,
+"n": 5,
+"grp": {
+"Colubridae": 2,
+"Anguidae": 1,
+"Scincidae": 1,
+"Plethodontidae": 1
+},
+"cls": {
+"reptile": 4,
+"amphibian": 1
+},
+"newest": 2021
 },
 {
 "place": "Somalia",
@@ -13512,19 +13787,10 @@
 "Psammophiidae": 1,
 "Lamprophiidae": 1
 },
+"cls": {
+"reptile": 5
+},
 "newest": 2025
-},
-{
-"place": "Guatemala",
-"lat": 15.586,
-"lon": -90.346,
-"n": 4,
-"grp": {
-"Colubridae": 2,
-"Anguidae": 1,
-"Scincidae": 1
-},
-"newest": 2020
 },
 {
 "place": "Cuba",
@@ -13536,6 +13802,9 @@
 "Tropidophiidae": 1,
 "Colubridae": 1
 },
+"cls": {
+"reptile": 4
+},
 "newest": 2025
 },
 {
@@ -13545,6 +13814,9 @@
 "n": 4,
 "grp": {
 "Diploglossidae": 4
+},
+"cls": {
+"reptile": 4
 },
 "newest": 2024
 },
@@ -13558,6 +13830,9 @@
 "Lacertidae": 1,
 "Colubridae": 1
 },
+"cls": {
+"reptile": 4
+},
 "newest": 2018
 },
 {
@@ -13569,7 +13844,25 @@
 "Chelidae": 2,
 "Gekkonidae": 2
 },
+"cls": {
+"reptile": 4
+},
 "newest": 2026
+},
+{
+"place": "Cameroon",
+"lat": 4.613,
+"lon": 13.154,
+"n": 4,
+"grp": {
+"Phrynobatrachidae": 3,
+"Gekkonidae": 1
+},
+"cls": {
+"amphibian": 3,
+"reptile": 1
+},
+"newest": 2024
 },
 {
 "place": "Algeria",
@@ -13579,6 +13872,9 @@
 "grp": {
 "Gekkonidae": 2,
 "Colubridae": 1
+},
+"cls": {
+"reptile": 3
 },
 "newest": 2025
 },
@@ -13591,6 +13887,9 @@
 "Gekkonidae": 2,
 "Lamprophiidae": 1
 },
+"cls": {
+"reptile": 3
+},
 "newest": 2025
 },
 {
@@ -13602,18 +13901,10 @@
 "Chamaeleonidae": 2,
 "Gekkonidae": 1
 },
+"cls": {
+"reptile": 3
+},
 "newest": 2024
-},
-{
-"place": "Philippines",
-"lat": 12.75,
-"lon": 122.731,
-"n": 3,
-"grp": {
-"Gekkonidae": 2,
-"Geoemydidae": 1
-},
-"newest": 2023
 },
 {
 "place": "Pakistan",
@@ -13625,18 +13916,54 @@
 "Viperidae": 1,
 "Lacertidae": 1
 },
+"cls": {
+"reptile": 3
+},
 "newest": 2026
 },
 {
-"place": "French Guiana",
-"lat": 4.0,
-"lon": -53.0,
+"place": "Taiwan",
+"lat": 23.974,
+"lon": 120.982,
+"n": 3,
+"grp": {
+"Pareidae": 1,
+"Scincidae": 1,
+"Ranidae": 1
+},
+"cls": {
+"reptile": 2,
+"amphibian": 1
+},
+"newest": 2025
+},
+{
+"place": "Guinea",
+"lat": 10.723,
+"lon": -10.708,
 "n": 3,
 "grp": {
 "Colubridae": 2,
-"Alopoglossidae": 1
+"Conrauidae": 1
 },
-"newest": 2025
+"cls": {
+"reptile": 2,
+"amphibian": 1
+},
+"newest": 2023
+},
+{
+"place": "Suriname",
+"lat": 4.141,
+"lon": -56.077,
+"n": 3,
+"grp": {
+"Aromobatidae": 3
+},
+"cls": {
+"amphibian": 3
+},
+"newest": 2023
 },
 {
 "place": "Israel",
@@ -13646,26 +13973,23 @@
 "grp": {
 "Colubridae": 2
 },
-"newest": 2025
-},
-{
-"place": "Taiwan",
-"lat": 23.974,
-"lon": 120.982,
-"n": 2,
-"grp": {
-"Pareidae": 1,
-"Scincidae": 1
+"cls": {
+"reptile": 2
 },
 "newest": 2025
 },
 {
-"place": "Guinea",
-"lat": 10.723,
-"lon": -10.708,
+"place": "Rwanda",
+"lat": -2.0,
+"lon": 30.0,
 "n": 2,
 "grp": {
-"Colubridae": 2
+"Typhlopidae": 1,
+"Arthroleptidae": 1
+},
+"cls": {
+"reptile": 1,
+"amphibian": 1
 },
 "newest": 2023
 },
@@ -13678,7 +14002,67 @@
 "Phyllodactylidae": 1,
 "Psammophiidae": 1
 },
+"cls": {
+"reptile": 2
+},
 "newest": 2019
+},
+{
+"place": "Spain",
+"lat": 39.326,
+"lon": -4.838,
+"n": 2,
+"grp": {
+"Lacertidae": 1,
+"Pelodytidae": 1
+},
+"cls": {
+"reptile": 1,
+"amphibian": 1
+},
+"newest": 2020
+},
+{
+"place": "Singapore",
+"lat": 1.357,
+"lon": 103.819,
+"n": 2,
+"grp": {
+"Scincidae": 1,
+"Microhylidae": 1
+},
+"cls": {
+"reptile": 1,
+"amphibian": 1
+},
+"newest": 2022
+},
+{
+"place": "Congo",
+"lat": -0.726,
+"lon": 15.642,
+"n": 2,
+"grp": {
+"Hyperoliidae": 2
+},
+"cls": {
+"amphibian": 2
+},
+"newest": 2022
+},
+{
+"place": "Bangladesh",
+"lat": 24.477,
+"lon": 90.293,
+"n": 2,
+"grp": {
+"Megophryidae": 1,
+"Dicroglossidae": 1
+},
+"cls": {
+"amphibian": 2
+},
+"newest": 2021
 },
 {
 "place": "Uzbekistan",
@@ -13687,6 +14071,9 @@
 "n": 1,
 "grp": {
 "Gekkonidae": 1
+},
+"cls": {
+"reptile": 1
 },
 "newest": 2023
 },
@@ -13698,6 +14085,9 @@
 "grp": {
 "Atractaspididae": 1
 },
+"cls": {
+"reptile": 1
+},
 "newest": 2019
 },
 {
@@ -13707,6 +14097,9 @@
 "n": 1,
 "grp": {
 "Colubridae": 1
+},
+"cls": {
+"reptile": 1
 },
 "newest": 2018
 },
@@ -13718,6 +14111,9 @@
 "grp": {
 "Leptotyphlopidae": 1
 },
+"cls": {
+"reptile": 1
+},
 "newest": 2019
 },
 {
@@ -13728,17 +14124,10 @@
 "grp": {
 "Gekkonidae": 1
 },
+"cls": {
+"reptile": 1
+},
 "newest": 2025
-},
-{
-"place": "Rwanda",
-"lat": -2.0,
-"lon": 30.0,
-"n": 1,
-"grp": {
-"Typhlopidae": 1
-},
-"newest": 2018
 },
 {
 "place": "Uruguay",
@@ -13747,6 +14136,9 @@
 "n": 1,
 "grp": {
 "Liolaemidae": 1
+},
+"cls": {
+"reptile": 1
 },
 "newest": 2017
 },
@@ -13758,6 +14150,9 @@
 "grp": {
 "Scincidae": 1
 },
+"cls": {
+"reptile": 1
+},
 "newest": 2016
 },
 {
@@ -13767,6 +14162,9 @@
 "n": 1,
 "grp": {
 "Sphaerodactylidae": 1
+},
+"cls": {
+"reptile": 1
 },
 "newest": 2022
 },
@@ -13778,6 +14176,9 @@
 "grp": {
 "Viperidae": 1
 },
+"cls": {
+"reptile": 1
+},
 "newest": 2020
 },
 {
@@ -13788,27 +14189,10 @@
 "grp": {
 "Lacertidae": 1
 },
+"cls": {
+"reptile": 1
+},
 "newest": 2019
-},
-{
-"place": "Spain",
-"lat": 39.326,
-"lon": -4.838,
-"n": 1,
-"grp": {
-"Lacertidae": 1
-},
-"newest": 2020
-},
-{
-"place": "United States",
-"lat": 39.784,
-"lon": -100.446,
-"n": 1,
-"grp": {
-"Phrynosomatidae": 1
-},
-"newest": 2020
 },
 {
 "place": "Zambia",
@@ -13818,17 +14202,10 @@
 "grp": {
 "Lacertidae": 1
 },
+"cls": {
+"reptile": 1
+},
 "newest": 2025
-},
-{
-"place": "Guyana",
-"lat": 4.842,
-"lon": -58.642,
-"n": 1,
-"grp": {
-"Colubridae": 1
-},
-"newest": 2023
 },
 {
 "place": "Mongolia",
@@ -13838,25 +14215,8 @@
 "grp": {
 "Lacertidae": 1
 },
-"newest": 2017
-},
-{
-"place": "Cameroon",
-"lat": 4.613,
-"lon": 13.154,
-"n": 1,
-"grp": {
-"Gekkonidae": 1
-},
-"newest": 2024
-},
-{
-"place": "Singapore",
-"lat": 1.357,
-"lon": 103.819,
-"n": 1,
-"grp": {
-"Scincidae": 1
+"cls": {
+"reptile": 1
 },
 "newest": 2017
 },
@@ -13868,6 +14228,9 @@
 "grp": {
 "Varanidae": 1
 },
+"cls": {
+"reptile": 1
+},
 "newest": 2015
 },
 {
@@ -13877,6 +14240,9 @@
 "n": 1,
 "grp": {
 "Elapidae": 1
+},
+"cls": {
+"reptile": 1
 },
 "newest": 2018
 },
@@ -13888,7 +14254,75 @@
 "grp": {
 "Viperidae": 1
 },
+"cls": {
+"reptile": 1
+},
 "newest": 2026
+},
+{
+"place": "Benin",
+"lat": 9.529,
+"lon": 2.258,
+"n": 1,
+"grp": {
+"Ptychadenidae": 1
+},
+"cls": {
+"amphibian": 1
+},
+"newest": 2026
+},
+{
+"place": "Portugal",
+"lat": 39.662,
+"lon": -8.135,
+"n": 1,
+"grp": {
+"Salamandridae": 1
+},
+"cls": {
+"amphibian": 1
+},
+"newest": 2024
+},
+{
+"place": "Bhutan",
+"lat": 27.55,
+"lon": 90.512,
+"n": 1,
+"grp": {
+"Ranidae": 1
+},
+"cls": {
+"amphibian": 1
+},
+"newest": 2022
+},
+{
+"place": "South Korea",
+"lat": 36.638,
+"lon": 127.696,
+"n": 1,
+"grp": {
+"Hynobiidae": 1
+},
+"cls": {
+"amphibian": 1
+},
+"newest": 2022
+},
+{
+"place": "Italy",
+"lat": 42.638,
+"lon": 12.674,
+"n": 1,
+"grp": {
+"Hylidae": 1
+},
+"cls": {
+"amphibian": 1
+},
+"newest": 2018
 }
 ]
 }

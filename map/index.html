@@ -406,6 +406,10 @@
   .lostsource p { font-family:var(--sans); font-size:.8rem; color:var(--ink-3); }
   .lostbody .warn { text-align:left; max-width:66ch; margin-inline:auto; }
   .lostbody .warn h3 { text-align:center; margin-top:0; }
+  /* The amphibian block sits below the reptile one on the same page and needs to read as
+     a second section rather than a continuation, hence the rule above it. */
+  .ntlead-amph { border-top:1px solid var(--rule); padding-top:var(--s4);
+                 margin-top:var(--s4); }
 
   /* ---- sites page ------------------------------------------------------- */
   .siteshead { font-size:var(--fs-h2); margin:var(--s5) 0 var(--s1); }
@@ -1182,11 +1186,37 @@
 
   <div id="ntCounts" class="counts"></div>
 
+  <!-- ===================== AMPHIBIANS ===================== -->
+  <div class="ntlead ntlead-amph">
+    <p class="ntkicker">And the same question, asked of amphibians</p>
+    <h2 class="nthead"><span class="nthero" id="ampHero">&mdash;</span> amphibians,
+      described since 2015, never assessed.</h2>
+    <p class="ntsummary">The reptile list rests on the Reptile Database; this one rests on
+      <a href="https://amphibiaweb.org/amphibian/newspecies.html" target="_blank"
+      rel="noopener">AmphibiaWeb's own new-species listing</a> — 1,721 species described
+      from 2015 onward, each checked individually against the Red List by the same method
+      and graded on the same three-point scale.</p>
+    <p class="ntsummary">Amphibians are the better-assessed class: <strong
+      id="ampAssessed">&mdash;</strong> of those 1,721 already carry an assessment, where
+      most recent reptiles do not. The Global Amphibian Assessment has been run twice and
+      reptiles have no equivalent. What is left is still <span id="ampInline">&mdash;</span>
+      species with no evaluation at all, and <strong>99%</strong> of them are endemic to a
+      single country.</p>
+  </div>
+
+  <div id="ampCounts" class="counts"></div>
+
   <!-- ===================== WHERE THEY ARE ===================== -->
   <h3 class="siteshead">Where they are</h3>
-  <p class="siteslede">The same encoding as the lost-species map, so the two can be read
-    against each other: one circle per country, sized and shaded by how many of these
-    species it holds.</p>
+  <p class="siteslede">Both classes on one map, in the same encoding as the lost-species
+    map so the three can be read against each other: one circle per country, sized and
+    shaded by how many of these species it holds.</p>
+  <div class="mapsource" style="justify-content:center">
+    <span class="eyebrow">Show</span>
+    <button id="nsClsAll"  aria-pressed="true">Both</button>
+    <button id="nsClsRep"  aria-pressed="false">Reptiles</button>
+    <button id="nsClsAmp"  aria-pressed="false">Amphibians</button>
+  </div>
   <div class="mapwrap">
     <div class="mapzoom">
       <button id="nsZIn"    aria-label="Zoom in">+</button>
@@ -1990,6 +2020,7 @@ function showView(name, push) {
   // separate effort and does not depend on the register's data.
   if (name === "newtaxa") {
     ensureReptiles();
+    ensureAmphibians();
     ensureNsMap().then(ok => {
       if (ok) {
         drawNsMap();
@@ -2137,7 +2168,13 @@ function paintHeat(cv, data, opts) {
     g.closePath(); g.fill(); g.stroke();
   });
 
-  const max = Math.max(...data.places.map(p => p.n));
+  // A class filter reads the per-class count instead of the total, and drops the
+  // countries that hold none of that class rather than drawing them at zero.
+  const key = opts.classKey;
+  const valueOf = p => key ? ((p.cls || {})[key] || 0) : p.n;
+  const places = data.places.filter(p => valueOf(p) > 0);
+  if (!places.length) return null;
+  const max = Math.max(...places.map(valueOf));
   // sqrt on BOTH channels. These counts are power-law -- one country holds 270 and the
   // long tail holds one or two -- so a linear ramp would paint all but a handful of
   // countries the same green and a linear radius would make the top one swamp the map.
@@ -2149,17 +2186,18 @@ function paintHeat(cv, data, opts) {
   const zr = Math.sqrt(v.k);
   const rOf = n => (3 + t(n) * (cssW / 27)) * zr;
   const hits = [];
-  data.places.slice().sort((a, b) => b.n - a.n).forEach(p => {   // big first, so drawn under
-    const x = X(p.lon), y = Y(p.lat), r = rOf(p.n);
+  places.slice().sort((a, b) => valueOf(b) - valueOf(a)).forEach(p => {  // big first
+    const val = valueOf(p);
+    const x = X(p.lon), y = Y(p.lat), r = rOf(val);
     const glow = g.createRadialGradient(x, y, 0, x, y, r);
-    glow.addColorStop(0, heatColour(t(p.n), 0.92));
-    glow.addColorStop(0.62, heatColour(t(p.n), 0.55));
-    glow.addColorStop(1, heatColour(t(p.n), 0.06));
+    glow.addColorStop(0, heatColour(t(val), 0.92));
+    glow.addColorStop(0.62, heatColour(t(val), 0.55));
+    glow.addColorStop(1, heatColour(t(val), 0.06));
     g.beginPath(); g.arc(x, y, r, 0, 6.2832);
     g.fillStyle = glow; g.fill();
-    g.strokeStyle = heatColour(t(p.n), 0.85);
+    g.strokeStyle = heatColour(t(val), 0.85);
     g.lineWidth = 1; g.stroke();
-    hits.push({x, y, r, p});
+    hits.push({x, y, r, p, val});
   });
   hits.sort((a, b) => a.r - b.r);   // small first for hit-testing, so they stay reachable
   g.restore();
@@ -2292,7 +2330,11 @@ function attachHeatZoom(sel, view, redraw, ids) {
       const p = h.p;
       const grp = Object.entries(p.grp || {}).sort((a, b) => b[1] - a[1]).slice(0, 4)
                     .map(([k, v]) => `${k} ${v}`).join(" &middot; ");
-      t.innerHTML = `<strong>${p.place}</strong> — ${p.n.toLocaleString()} ${m.noun}`
+      const shown = (h.val === undefined ? p.n : h.val).toLocaleString();
+      const cls = Object.entries(p.cls || {}).sort((a, b) => b[1] - a[1])
+                    .map(([k, v]) => `${v} ${k}${v === 1 ? "" : "s"}`).join(" &middot; ");
+      t.innerHTML = `<strong>${p.place}</strong> — ${shown} ${m.noun}`
+        + (cls && !m.hideClass ? `<br>${cls}` : "")
         + (grp ? `<br>${grp}` : "")
         + (p.oldest ? `<br>oldest last record ${p.oldest}` : "")
         + (p.newest ? `<br>most recent description ${p.newest}` : "");
@@ -2324,9 +2366,88 @@ function ensureNsMap() {
     }).catch(() => false).finally(() => { nsLoading = false; });
 }
 
-function drawNsMap() { nsGeom = paintHeat($("#nsCanvas"), NSMAP,
-  {legend: "#nsLegend", view: nsView,
-   label: "Species described since 2015 that the Red List has never assessed"}); }
+let nsClass = null;          // null = both classes; "reptile" / "amphibian" to filter
+const NS_LABEL = {
+  "": "Reptiles and amphibians described since 2015, never assessed",
+  reptile: "Reptiles described since 2015 that the Red List has never assessed",
+  amphibian: "Amphibians described since 2015 that the Red List has never assessed",
+};
+
+function drawNsMap() {
+  nsGeom = paintHeat($("#nsCanvas"), NSMAP,
+    {legend: "#nsLegend", view: nsView, classKey: nsClass,
+     label: NS_LABEL[nsClass || ""]});
+  const note = $("#nsMapNote");
+  if (note && NSMAP && nsGeom) {
+    const m = NSMAP.meta || {};
+    const shown = nsGeom.hits.reduce((a, h) => a + (h.val || 0), 0);
+    note.textContent =
+      `${shown.toLocaleString()} species across ${nsGeom.hits.length} countries. `
+      + (nsClass ? "" : `${m.unplaced} more give a distribution this map could not `
+                      + `resolve to a single country and are not drawn.`);
+  }
+}
+
+/* The class switch. Both lists answer the same question of two different classes, so
+   they share a map -- but a reader comparing them needs to see each alone, because
+   China holds 225 amphibians and 164 reptiles and the total hides that. */
+(function nsClassButtons() {
+  const set = (cls, id) => {
+    const b = $(id);
+    if (!b) return;
+    b.onclick = () => {
+      nsClass = cls;
+      [["#nsClsAll", null], ["#nsClsRep", "reptile"], ["#nsClsAmp", "amphibian"]]
+        .forEach(([sel, c]) => {
+          const el = $(sel);
+          if (el) el.setAttribute("aria-pressed", String(c === cls));
+        });
+      drawNsMap();
+    };
+  };
+  set(null, "#nsClsAll");
+  set("reptile", "#nsClsRep");
+  set("amphibian", "#nsClsAmp");
+})();
+
+/* ---- the amphibian list ---- */
+let AMP = null, ampLoading = false;
+
+function ensureAmphibians() {
+  if (AMP || ampLoading) { if (AMP) ampRender(); return; }
+  ampLoading = true;
+  fetch("/amphibians.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
+    AMP = d; ampLoading = false; ampRender();
+  }).catch(() => {
+    ampLoading = false;
+    const c = $("#ampCounts");
+    if (c) c.innerHTML = '<p class="siteslede">Could not load amphibians.json.</p>';
+  });
+}
+
+function ampRender() {
+  const c = AMP.counts;
+  const n = x => (x || 0).toLocaleString();
+  const set = (id, v) => { const el = $(id); if (el) el.textContent = v; };
+  set("#ampHero", n(c.total));
+  set("#ampInline", n(c.total));
+  set("#ampAssessed", n(c.dropped_assessed));
+
+  // Same three grades as the reptile list, so the two are comparable at a glance.
+  const ev = c.by_evidence || {};
+  const cells = [
+    [n(c.total), "never assessed"],
+    [n(ev.airtight), "the Red List knows them and holds no assessment"],
+    [n((ev.corroborated || 0) + (ev.uncorroborated || 0)),
+     "not in the Red List index at all"],
+    [n(c.countries), "countries"],
+  ];
+  const el = $("#ampCounts");
+  if (el) {
+    el.innerHTML = cells.map(([v, l]) =>
+      `<div class="count"><b>${v}</b><span>${l}</span></div>`).join("");
+  }
+}
 
 addEventListener("resize", () => {
   if (LOST && !$("#v-lost").hidden) drawLost();
