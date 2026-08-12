@@ -1278,8 +1278,15 @@
   <div class="wrap">
     <div class="intro">
       <p class="eyebrow">Life Overlooked</p>
-      <h2>Thousands of species are slipping away without anyone claiming they're at risk
-        of extinction.</h2>
+      <!-- These figures sat unused in a JSON key. A reviewer wanted them led with and was
+           right, but glossed n_overdue as "past their review window", which the number does
+           not support: 18_dd_duration.py defines it as species Data Deficient for longer
+           than the MEDIAN TIME IUCN HISTORICALLY TOOK to resolve a Data Deficient listing.
+           There is no per-species review deadline anywhere in this data. Stated correctly it
+           is a sharper claim anyway, because it measures IUCN against its own record rather
+           than against a rule nobody set. -->
+      <h2 id="overdueHead">Thousands of species are slipping away without anyone claiming
+        they're at risk of extinction.</h2>
       <!-- "animals and plants" is correct HERE and was briefly changed to "vertebrates" in
            error. A reviewer read data.json, found eight vertebrate classes and no plants,
            and called the claim false. That is true of the Black List and only of the Black
@@ -3000,6 +3007,19 @@ function boot() {
     + `${DATA.species.length.toLocaleString()} species accounts. `
     + `Anyone re-checking a claim against a later Red List release should expect `
     + `movement: that movement is the point.`;
+
+  /* Rendered, not typed, and only where the element exists. The wording is bounded by what
+     18_dd_duration.py actually computes: n_overdue counts species Data Deficient longer than
+     the median time IUCN took to resolve the listings it did resolve, which is a comparison
+     with IUCN's own record and not with any published deadline. */
+  const D = m.duration;
+  if ($("#overdueHead") && D && D.n_overdue && D.n_ge_20) {
+    $("#overdueHead").innerHTML =
+      `<strong>${D.n_overdue.toLocaleString()}</strong> species have sat in Data Deficient `
+      + `longer than the ${D.median_time_to_resolution} years IUCN typically takes to `
+      + `resolve one. <strong>${D.n_ge_20.toLocaleString()}</strong> have waited twenty `
+      + `years or more.`;
+  }
 
   if (HAS_METHODS) {
     $("#tierTable tbody").innerHTML = [5, 4, 3, 2, 1].map(t => `

@@ -3176,6 +3176,19 @@ function boot() {
     + `Anyone re-checking a claim against a later Red List release should expect `
     + `movement: that movement is the point.`;
 
+  /* Rendered, not typed, and only where the element exists. The wording is bounded by what
+     18_dd_duration.py actually computes: n_overdue counts species Data Deficient longer than
+     the median time IUCN took to resolve the listings it did resolve, which is a comparison
+     with IUCN's own record and not with any published deadline. */
+  const D = m.duration;
+  if ($("#overdueHead") && D && D.n_overdue && D.n_ge_20) {
+    $("#overdueHead").innerHTML =
+      `<strong>${D.n_overdue.toLocaleString()}</strong> species have sat in Data Deficient `
+      + `longer than the ${D.median_time_to_resolution} years IUCN typically takes to `
+      + `resolve one. <strong>${D.n_ge_20.toLocaleString()}</strong> have waited twenty `
+      + `years or more.`;
+  }
+
   if (HAS_METHODS) {
     $("#tierTable tbody").innerHTML = [5, 4, 3, 2, 1].map(t => `
       <tr><td>${t}${t >= PRI ? " ·&nbsp;priority" : ""}</td><td>${esc(DATA.tiers[t])}</td>
