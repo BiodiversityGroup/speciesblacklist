@@ -39,9 +39,9 @@
   "@type": "Dataset",
   "name": "The Species Black List",
   "alternateName": "Data Deficient and unassessed vertebrates, ranked by geographic restriction",
-  "description": "A register of 3,031 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 31 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritised research agenda.",
+  "description": "A register of 3,031 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 31 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritized research agenda.",
   "url": "https://speciesblacklist.org/",
-  "keywords": ["extinction risk","IUCN Red List","Data Deficient","conservation prioritisation","vertebrates","biodiversity assessment gap","Criterion B"],
+  "keywords": ["extinction risk","IUCN Red List","Data Deficient","conservation prioritization","vertebrates","biodiversity assessment gap","Criterion B"],
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "creator": {"@type": "Organization", "name": "The Biodiversity Group",
               "url": "https://biodiversitygroup.org"},
@@ -117,18 +117,18 @@
   body { background:var(--ground); color:var(--ink); font-family:var(--serif);
          font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; }
   .wrap { max-width:1180px; margin:0 auto; padding:0 var(--pad); }
-  /* Centre the measure column too. A centred heading inside a left-aligned 66ch
-     column lands left of the page's centre line, which reads as a mistake rather
+  /* Center the measure column too. A centered heading inside a left-aligned 66ch
+     column lands left of the page's center line, which reads as a mistake rather
      than as centring. */
   .prose { max-width:66ch; margin-inline:auto; }
-  /* All titles centred. Body prose stays left-aligned — centred running text is
+  /* All titles centered. Body prose stays left-aligned — centered running text is
      genuinely hard to read, and the ragged left edge would hurt the tables and
      evidence sentences that make up most of this site. Headings inside a bordered
-     callout are also centred, since the request was for consistency across every
+     callout are also centered, since the request was for consistency across every
      title rather than only the page-level ones. */
   h1,h2,h3,h4 { font-weight:600; text-wrap:balance; line-height:1.2; margin:0;
                 text-align:center; }
-  /* Kicker labels sit directly above a title, so they centre with it. The ones
+  /* Kicker labels sit directly above a title, so they center with it. The ones
      used as UI labels (the field header, the map source row) are exempted below. */
   .eyebrow { text-align:center; }
   .field-head .eyebrow, .mapsource .eyebrow, .tierkey .eyebrow { text-align:left; }
@@ -142,9 +142,9 @@
   /* ---- masthead: a register header, ruled ------------------------------- */
   .mast { border-bottom:2px solid var(--ink); background:var(--surface); }
   /* Utility row carries the brand link and controls, so the title block below
-     can be centred without the buttons fighting it for the optical centre. */
-  /* Three tracks so the brand sits on the true page centre regardless of how wide
-     the controls are; an even flex row would push it off-centre. */
+     can be centered without the buttons fighting it for the optical center. */
+  /* Three tracks so the brand sits on the true page center regardless of how wide
+     the controls are; an even flex row would push it off-center. */
   .utility { display:grid; grid-template-columns:1fr auto 1fr; align-items:center;
              gap:var(--s2); padding-top:.8rem; }
   .utility .brand { grid-column:2; justify-self:center; }
@@ -165,7 +165,7 @@
   .brand:hover img { opacity:.75; }
 
   .mast-title { text-align:center; padding-top:var(--s3); padding-bottom:var(--s3); }
-  /* Horizontal lockup, centred as a group so the optical centre is the pair rather
+  /* Horizontal lockup, centered as a group so the optical center is the pair rather
      than the wordmark alone. */
   .lockup { display:flex; align-items:center; justify-content:center; gap:.85rem; }
   .lockup .logomark { width:clamp(34px,5vw,52px); height:auto; flex:0 0 auto;
@@ -263,7 +263,7 @@
   .lede strong { color:var(--ink); font-weight:600; }
 
   /* ---- hero: the field -------------------------------------------------- */
-  /* One mark per species, 2,407 of them, coloured by restriction tier. The mass
+  /* One mark per species, 2,407 of them, colored by restriction tier. The mass
      is the argument: a register of the overlooked, drawn at the scale of the
      overlooking. Canvas rather than DOM because 2,407 nodes is wasteful and
      because crisp sub-pixel marks need devicePixelRatio scaling. No photography
@@ -275,7 +275,7 @@
              margin-top:var(--s1); }
   .hero .lede { max-width:56ch; }
 
-  /* The opening statement is centred; the stakes block and the field below it
+  /* The opening statement is centered; the stakes block and the field below it
      stay left-aligned, so the measure constraints need auto side margins rather
      than a blanket rule on the hero. */
   .intro { text-align:center; }
@@ -287,7 +287,7 @@
   .field-head .eyebrow { margin:0; }
   /* ---- tier key --------------------------------------------------------- */
   /* A reviewer read the whole methods page and still could not say what a tier
-     was. So the key is no longer a colour legend with numbers next to it — it
+     was. So the key is no longer a color legend with numbers next to it — it
      defines each tier in words, at first use, and doubles as the field's legend. */
   .tierkey { margin:var(--s4) 0 0; border-top:1px solid var(--rule);
              padding-top:var(--s3); }
@@ -394,9 +394,9 @@
             border-radius:3px; line-height:1.35; }
 
   /* ---- lost species page ------------------------------------------------ */
-  /* Centred on the CONTAINER, not element by element. Anything added to this page
+  /* Centered on the CONTAINER, not element by element. Anything added to this page
      later inherits it instead of quietly arriving left-aligned. This is a narrative
-     page rather than a register, so centred running text suits it — the tables and
+     page rather than a register, so centered running text suits it — the tables and
      evidence sentences elsewhere on the site are the reason those stay left. */
   .lostbody { text-align:center; }
   /* A measure column without margin:auto reads as left-aligned with dead space down
@@ -438,12 +438,12 @@
      scale. Two hues rather than a ramp because these are two different things
      being compared, not one thing at two magnitudes.
 
-     Colours are the site's own warm/cool pair, checked with the palette
+     Colors are the site's own warm/cool pair, checked with the palette
      validator rather than eyeballed. The dark-mode accent (#8FA3E0) failed the
-     lightness and chroma floors as a fill -- it is a link colour, too pale to
+     lightness and chroma floors as a fill -- it is a link color, too pale to
      carry area -- so dark mode gets its own blue. Worst-case CVD separation is
      ΔE 18.6 (protan, light) and 24.3 (deutan, dark), well clear of the floor,
-     and every bar is directly labelled so colour is never the only encoding. */
+     and every bar is directly labeled so color is never the only encoding. */
   .cmp { --c-lost:#90501A; --c-new:#3B4E8C; margin:var(--s3) 0 var(--s2); }
   @media (prefers-color-scheme:dark) {
     .cmp { --c-lost:#B4682A; --c-new:#6C86DC; }
@@ -488,6 +488,17 @@
   /* The base table rule sets min-width:720px, so like #ntTable this scrolls inside
      its own box rather than pushing the whole page sideways on a phone. */
   #longestWrap { overflow-x:auto; margin:var(--s2) 0 var(--s3); }
+  /* ---- site overview ------------------------------------------------------- */
+  /* The hero block above ends on a dark band, and "What you will find here" was sitting
+     right up against it with no room to breathe. */
+  .homebody { padding-top:var(--s5); }
+  .homecta { text-align:center; margin:var(--s3) 0 var(--s5); }
+  .bigbtn { display:inline-block; font-family:var(--sans); font-size:1.02rem;
+            font-weight:600; padding:.95rem 2.2rem; background:var(--accent);
+            color:#fff; text-decoration:none; border-radius:3px;
+            transition:background .15s; }
+  .bigbtn:hover, .bigbtn:focus-visible { background:var(--t4); color:#fff; }
+
   /* ---- site overview cards ------------------------------------------------ */
   .homecards { display:grid; gap:var(--s2); margin:var(--s3) 0 var(--s4);
                grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); }
@@ -518,12 +529,22 @@
             font-size:.88rem; color:var(--ink); line-height:1.6; }
   .gipost p { margin:0 0 .6rem; font-family:var(--sans); color:var(--ink); }
   .gipost p:last-child { margin:0; }
-  .gicopy { font-family:var(--sans); font-size:.8rem; padding:.5rem 1rem;
-            background:var(--accent); color:#fff; border:0; cursor:pointer;
-            margin-top:.2rem; }
+  /* Share row. Each is a plain link to the network's own compose URL, so no third-party
+     script loads and no tracking pixel arrives with it. Mastodon has no single host to
+     post to, so that one asks which server you are on and remembers the answer. */
+  .gishare { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.9rem;
+             justify-content:center; }
+  .gishare a, .gishare button { font-family:var(--sans); font-size:.82rem;
+            font-weight:600; padding:.55rem 1rem; border:1px solid var(--rule-2);
+            background:var(--surface); color:var(--ink); cursor:pointer;
+            text-decoration:none; border-radius:3px; min-height:40px;
+            display:inline-flex; align-items:center; }
+  .gishare a:hover, .gishare button:hover,
+  .gishare a:focus-visible, .gishare button:focus-visible {
+            background:var(--accent-soft); border-color:var(--accent); }
 
   /* Lost per 1,000 described. One hue, because this is one quantity at different
-     magnitudes -- a second colour here would imply a second variable. */
+     magnitudes -- a second color here would imply a second variable. */
   .rate { max-width:46rem; margin:var(--s2) auto var(--s3); }
   .raterow { display:grid; grid-template-columns:9.5rem 1fr 7.5rem; align-items:center;
              gap:.6rem; padding:.22rem 0; }
@@ -544,7 +565,7 @@
     .ratename { font-size:.76rem; }
   }
 
-  /* The base thead rule left-aligns every header, but this page centres its content, so
+  /* The base thead rule left-aligns every header, but this page centers its content, so
      each label sat off to the left of the column it belongs to. Match the cells. */
   .lgtable th { text-align:center; }
   .lgtable td .sci { display:block; font-style:italic; font-size:.82rem;
@@ -637,7 +658,7 @@
                         background:color-mix(in srgb, var(--t3) 45%, transparent); }
   /* The heat ramp. Swatches butt together so it reads as a continuous scale, and the
      numbers sit under it — the ramp is green-to-red, which is the one pairing
-     colour-blind readers cannot separate, so the figures are not optional. */
+     color-blind readers cannot separate, so the figures are not optional. */
   .lostlegend .ramp { display:flex; border:1px solid var(--rule); }
   .lostlegend .ramp i { display:block; width:38px; height:12px; }
   .lostlegend .rampnums { display:flex; gap:1.35rem; font-family:var(--mono);
@@ -711,8 +732,8 @@
   /* This was previously the last section of the deepest page. It is the reason
      the register exists, so it now sits directly under the lede. */
   .stakes { margin:var(--s4) 0 0; border-left:3px solid var(--accent);
-            /* symmetric horizontal padding, or the centred heading sits ~14px
-               right of the section's centre line */
+            /* symmetric horizontal padding, or the centered heading sits ~14px
+               right of the section's center line */
             padding:var(--s1) var(--s3); }
   .stakes h3 { font-size:var(--fs-h3); margin-bottom:var(--s1); }
   .stakes p { font-family:var(--sans); font-size:var(--fs-body); color:var(--ink-2);
@@ -755,7 +776,7 @@
   .counts { display:grid; gap:1px; background:var(--rule);
             grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
             border:1px solid var(--rule); margin:2.2rem 0; }
-  /* centred inside the cell, not just as a block -- the figure and its label both */
+  /* centered inside the cell, not just as a block -- the figure and its label both */
   .count { background:var(--surface); padding:1.1rem 1.2rem; text-align:center; }
   .count b { display:block; font-family:var(--mono); font-size:2rem; font-weight:600;
              letter-spacing:-.02em; font-variant-numeric:tabular-nums; }
@@ -822,7 +843,7 @@
     background:var(--surface); color:var(--ink); border:1px solid var(--rule-2);
     border-radius:2px; }
   .filters input[type=search] { min-width:min(280px,100%); flex:1 1 220px; }
-  /* the tier labels are long, so cap the select and let it ellipsise */
+  /* the tier labels are long, so cap the select and let it ellipsize */
   .filters select#fTier { max-width:min(320px,100%); }
   .chipset { display:flex; gap:.3rem; flex-wrap:wrap; }
   .chip { font-family:var(--sans); font-size:.76rem; padding:.38rem .62rem;
@@ -855,7 +876,7 @@
   .cell-name .sci { display:block; font-size:.82rem; color:var(--ink-2); margin-top:.1rem; }
   /* Severity as a filled chip rather than a bare digit, so the ramp is legible at
      a glance down the column. The number stays inside it — the ramp's lighter
-     steps fall under 3:1 against the surface, so colour never carries the value
+     steps fall under 3:1 against the surface, so color never carries the value
      on its own. */
   .tierchip { display:inline-flex; align-items:center; justify-content:center;
               width:26px; height:22px; border-radius:3px; font-family:var(--mono);
@@ -927,14 +948,14 @@
   /* The page leads with the finding and defers the method. An earlier version put five
      caveat boxes above the table, which is honest but unreadable: the reader met the
      limitations before they met the thing being limited. */
-  /* The lead block above the figures is centred. A max-width column needs margin:auto
+  /* The lead block above the figures is centered. A max-width column needs margin:auto
      or it hugs the left edge and only the text inside it moves. */
   .ntlead { max-width:46rem; margin:0 auto 1.4rem; text-align:center; }
   .ntkicker { font-family:var(--sans); font-size:.72rem; letter-spacing:.12em;
     text-transform:uppercase; color:var(--ink-3); margin:0 0 .5rem; }
   .nthead { font-size:2rem; line-height:1.18; margin:0 0 .9rem; letter-spacing:-.015em; }
   .nthero { color:var(--accent); font-variant-numeric:tabular-nums; }
-  /* narrower than the block so centred prose keeps a comfortable measure */
+  /* narrower than the block so centered prose keeps a comfortable measure */
   .ntsummary { color:var(--ink-2); margin:0 auto .7rem; font-size:1.02rem;
     max-width:40rem; }
   /* .ntmore removed with the two jump links it styled; nothing carries it now. */
@@ -1002,7 +1023,7 @@
   .rdthumb { aspect-ratio:16/9; overflow:hidden; background:var(--surface-2);
     border-bottom:1px solid var(--rule); }
   .rdthumb img { width:100%; height:100%; object-fit:cover; display:block; }
-  /* Centred, and centred by DEFAULT rather than element by element. Centre alignment is
+  /* Centered, and centered by DEFAULT rather than element by element. Center alignment is
      the standing preference for these sites; setting it on the card body means anything
      added later inherits it instead of quietly arriving left-aligned. */
   .rdbody { padding:.9rem 1rem 1rem; display:flex; flex-direction:column;
@@ -1051,7 +1072,7 @@
   .rdcite { font-family:var(--sans); font-size:.66rem; line-height:1.45;
     color:var(--ink-3); margin:0; padding:0 1rem .8rem; text-align:center; }
   .rdarchive { text-align:center; }
-  /* the showing-count line sits with the centred controls above it */
+  /* the showing-count line sits with the centered controls above it */
   #rdShowing { text-align:center; }
   /* Outside the card's main <a>: a link inside a link is invalid HTML and the browser
      un-nests it, which silently breaks the card's own click target. */
@@ -1149,12 +1170,13 @@
   <div class="wrap">
     <div class="intro">
       <p class="eyebrow">Life Overlooked</p>
-      <h2>Thousands of species are slipping away without anyone counting them as at
-        risk.</h2>
+      <h2>Thousands of species are slipping away without anyone claiming they're at risk
+        of extinction.</h2>
       <p class="lede">Conservation runs on lists. Money, legal protection and recovery
-        plans all follow from a species having a name on the right one. This site is about
-        the animals and plants that never made it onto any list, and what it will take to
-        find them before the decision gets made for us.</p>
+        plans all follow from a species having a name on the right list, like the IUCN's
+        Red List. This site is about the animals and plants that never made it onto those
+        lists, and what it will take to find them before an irreversible decision gets
+        made for us.</p>
     </div>
 
     <div class="stakes">
@@ -1162,7 +1184,7 @@
       <p>When a species is listed as threatened, things happen. Funders can point to it.
         Governments can be held to it. Researchers can build a case around it. When a
         species has no listing at all, none of that machinery can start, and the silence
-        reads exactly like good news.</p>
+        reads almost like good news.</p>
       <p>It very often is not good news. These are the species nobody has the information
         to worry about: known from one hillside, described once and never seen again, or
         named so recently that no assessor has reached them. If one of them goes extinct,
@@ -1176,7 +1198,7 @@
   </div>
  </div>
 
- <div class="wrap">
+ <div class="wrap homebody">
   <div class="prose">
     <h3>What you will find here</h3>
     <p>Four separate pieces of work, each answering a different question. They come from
@@ -1187,7 +1209,7 @@
     <article class="homecard">
       <p class="eyebrow">The core list</p>
       <h4><a href="/black-list/" data-goto="overview">The Black List</a></h4>
-      <p>Species the Red List has assessed and been unable to categorise, or has never
+      <p>Species the Red List has assessed and been unable to categorize, or has never
         assessed at all, ranked by how narrowly restricted the published record says they
         are. If a species here turns out to be in trouble, this is where you would have
         seen it first.</p>
@@ -1234,8 +1256,9 @@
     <p>Three things, and none of them need you to be a scientist. Tell somebody about
       these species. Ask the people who decide where conservation money goes to include
       them. Support the groups already doing this work.</p>
-    <p><a href="/get-involved/" data-goto="involved"><strong>How to help</strong></a></p>
   </div>
+  <p class="homecta"><a class="bigbtn" href="/get-involved/"
+    data-goto="involved">How to help</a></p>
  </div>
 </section>
 
@@ -1304,49 +1327,7 @@
  <div class="wrap">
   <div class="counts" id="counts"></div>
 
-  <div class="warn">
-    <h3>Read the ranking before you use it</h3>
-    <p>Data Deficient status on its own predicts very little. Of the species here that
-      IUCN has since reassessed, the group as a whole came out threatened at roughly
-      the ordinary all-species rate. The <strong>narrowly restricted subset is
-      different</strong>, and that distinction, not the Data Deficient label, is
-      what this register is for.</p>
-    <p><strong>This is a ranked subset, not a census.</strong> IUCN v2026&#8209;1 holds
-      <span class="num">8,659</span> Data Deficient species in vertebrate classes; this
-      register covers <span class="num">3,031</span> of them, which is
-      <span class="num">35%</span>. The method needs a published sentence describing each
-      species' range, and the corpus behind it is one reference work. Of the
-      <span class="num">2,964</span> Data Deficient vertebrates that corpus names,
-      <strong>every one is in the register</strong>; the other
-      <span class="num">5,628</span> are never named in it at all. So the right reading is
-      "of the Data Deficient vertebrates with a usable published range statement, these are
-      the most narrowly restricted", not "these are the ones that matter most".</p>
-    <p><strong>How long is a blank allowed to stand?</strong> The Red List export says
-      only that a species is Data Deficient now. Its assessment history, pulled from IUCN's
-      API, says since when, and the answer reframes the register. The median species here
-      has been Data Deficient for <span class="num">16</span> years;
-      <span class="num">475</span> have held the label for twenty years or more. And
-      <span class="num">1,210</span> of them, 40%, have been assessed more
-      than once, meaning IUCN returned, looked again, and wrote Data Deficient a second or
-      third time. Those are not species awaiting a first look. For scale, the median time
-      IUCN has actually taken to resolve a Data Deficient listing is
-      <span class="num">16</span> years, so
-      <span class="num">1,011</span> species in this register are already past it.</p>
-    <p><strong>The species outside were screened out, not overlooked.</strong> Richardson
-      takes an explicit position on the Data Deficient category: most of it, in his
-      judgement, is junior synonyms or valid species not in immediate danger, while
-      genuinely threatened species get lost there for want of follow-up research. He admits
-      a Data Deficient species when its record is narrow enough to imply risk, and that
-      screen is measurable, since he kept <span class="num">28%</span> of IUCN's Data
-      Deficient ray-finned fishes against <span class="num">72%</span> of the birds,
-      dropping the deep-sea groups almost entirely because naturally rare is not the same
-      as threatened. So the omitted species are neither unexamined nor shown to be safe:
-      one author's judgement, made without the research he says the category lacks, is not
-      an assessment. It also means this corpus is pre-selected for the trait the register
-      ranks on, which is why <span class="num">92%</span> of records state some
-      restriction. The register tests an expert's screen against IUCN's later verdicts
-      rather than discovering the pattern from scratch.</p>
-  </div>
+  
 
   <div class="panel">
     <p class="eyebrow">Held-out test</p>
@@ -1405,8 +1386,9 @@
 <!-- ============================== REGISTER ============================== -->
 <section class="view wrap" id="v-register" hidden>
   <div class="prose" style="margin-bottom:.5rem">
-    <h2 style="font-size:var(--fs-h2)">The register</h2>
-    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0">
+    <h2 style="font-size:var(--fs-h2)">The Black List</h2>
+    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);
+       margin:.5rem 0 0;text-align:center">
       Every row carries the sentence it was judged on. Select a species to read it.</p>
   </div>
   <details class="tierhelp">
@@ -1519,7 +1501,7 @@
 <section class="view wrap" id="v-sites" hidden>
   <div class="prose">
     <h2 style="font-size:1.4rem">Localities holding several gap species</h2>
-    <p style="margin:.6rem 0 0;color:var(--ink-2)">The source is organised
+    <p style="margin:.6rem 0 0;color:var(--ink-2)">The source is organized
       geographically, so species cluster by place. Where a single locality carries
       many of them, one protected area could cover the lot, which is the cheapest form of
       conservation available.</p>
@@ -1635,7 +1617,7 @@
       <button id="nsZReset" aria-label="Reset zoom" title="Reset">Reset</button>
     </div>
     <canvas id="nsCanvas" role="img"
-            aria-label="World map with circles sized and coloured by the number of
+            aria-label="World map with circles sized and colored by the number of
             reptile species described since 2015 that the IUCN Red List has never
             assessed, per country. The same species are listed in the table below."></canvas>
   </div>
@@ -1668,7 +1650,7 @@
         Red List has no record of.</p>
       <p>Comparing names alone would be unreliable. A species often gets moved into a
         different genus, so its first name changes while the animal stays the same, and
-        the two organisations do not always agree on where it belongs. So species are
+        the two organizations do not always agree on where it belongs. So species are
         matched either on the full scientific name <em>or</em> on who first described it
         and in what year. Those are details that stay with a species through every change of
         name. That caught 169 species a name-only comparison would have wrongly reported
@@ -1797,7 +1779,7 @@
 
   <div class="warn">
     <h3>What this map is not</h3>
-    <p>A circle sits at a country's centre point, not at a locality. It says
+    <p>A circle sits at a country's center point, not at a locality. It says
       <strong>"this many lost species have their range given as this country"</strong>.
       it is not a sighting, not a range map, and not a search area. Large countries
       accumulate large circles partly because they are large.</p>
@@ -1873,7 +1855,7 @@
     <h3>What that rate is, and is not</h3>
     <p>It is <strong>not a rate of loss</strong>. The numerator is a curated list rather
       than a census, and the denominator is how many species each group's own taxonomic
-      authority currently recognises. Effort is the confound, and it runs one way: birds
+      authority currently recognizes. Effort is the confound, and it runs one way: birds
       are the best-surveyed group on earth, so a low bird rate partly measures how hard
       people have looked rather than how well birds are doing.</p>
     <p>Only vertebrate groups appear, covering <strong id="rateCover">&hellip;</strong> of
@@ -1965,7 +1947,7 @@
         nobody present could name, and posted it to iNaturalist. That was the whole
         method.</p>
       <p>In November 2015 a malacologist in Malaysia, Junn Kitt Foon, came across the
-        photograph there and recognised the animal, the first ever taken of a live
+        photograph there and recognized the animal, the first ever taken of a live
         adult. <strong>No expedition and no budget found this species.</strong> A picture
         left somewhere public did, and one specialist who happened to scroll past it.</p>
       <p class="lostcite">Trageser, Wiscovitch &amp; Foon 2018, <em>The Festivus</em>
@@ -1982,7 +1964,7 @@
         href="https://biodiversitygroup.org" target="_blank" rel="noopener">Biodiversity
         Group</a> team was at Río Manduriacu surveying the Tandayapa Andes toad when
         Scott Trageser, too ill to join the night survey, went to a stream near camp
-        instead and heard a frog he did not recognise calling for a mate.</p>
+        instead and heard a frog he did not recognize calling for a mate.</p>
       <p>Return surveys in 2019 found more in three separate streams, including the
         first females ever recorded, plus metamorphs and egg masses. Not a survivor, then:
         a breeding population.</p>
@@ -2023,7 +2005,7 @@
     <h3>Another list, counting something else</h3>
     <p><a href="https://recentlyextinctspecies.com/" target="_blank"
       rel="noopener">Recently Extinct Plants and Animals</a> is the most thorough
-      catalogue of its kind we know of, with 12,859 taxa, painstakingly sourced and with a
+      catalog of its kind we know of, with 12,859 taxa, painstakingly sourced and with a
       citation behind almost every entry. It is worth your time, and it is worth saying
       exactly how it differs from this page, because the two look like the same subject
       and are not.</p>
@@ -2145,7 +2127,7 @@
         rediscovered&rdquo; tells you there are five, but not which five, so the article
         itself is read to find them.</p>
       <p>That makes some names surer than others, and they are shown differently. A name
-        in <span class="rdsp" style="font-size:inherit">this colour</span> came from the
+        in <span class="rdsp" style="font-size:inherit">this color</span> came from the
         headline or the summary, or was used by two separate outlets. A name in
         <span class="rdspsoft">grey, after &ldquo;also names&rdquo;,</span> was found
         further down in one article, and articles often mention a close relative
@@ -2156,7 +2138,7 @@
 
     <details class="ntdisc">
       <summary>What happens when these articles disappear</summary>
-      <p>News sites reorganise, paywall and delete, and image paths churn faster than the
+      <p>News sites reorganize, paywall and delete, and image paths churn faster than the
         articles do. Every card here depends on a page nobody at this project controls,
         so what can be preserved is preserved, and it is worth being exact about
         how much that is, because the three parts are not equally safe.</p>
@@ -2223,8 +2205,8 @@
     <div class="prose">
       <h2 style="font-size:var(--fs-h2)">How to help</h2>
       <p class="lostlede">These species are not short of scientific interest. They are
-        short of attention. Three things move that, and only one of them requires any
-        expertise.</p>
+        short of attention. Four things move that, and none of them require you to be a
+        scientist.</p>
     </div>
 
     <div class="gistep">
@@ -2235,19 +2217,45 @@
       <p>Share this site. Send a page to somebody who would find it interesting. If you
         work anywhere near this field, put it in front of the person who signs off your
         grants.</p>
-      <p><strong>Something you can post as it is:</strong></p>
+      <p><strong>Here is one you can steal:</strong></p>
       <div class="gipost" id="giPost">
-        <p>There is a list of animals and plants that conservation has effectively lost
-          track of. Not endangered. Not extinct. Just unaccounted for.</p>
-        <p>Some have not been seen since the 1800s. Nobody can declare them gone, so
-          nobody can protect them either. Most of them are probably still out there.</p>
-        <p>Someone has finally started writing them all down: speciesblacklist.org</p>
+        <p>Turns out there's a whole category of wildlife nobody is fighting for.</p>
+        <p>Not endangered. Not extinct. Just... unaccounted for. Some of these species
+          haven't been seen since the 1800s and nobody can officially declare them gone,
+          so nobody funds looking for them either.</p>
+        <p>Most of them are probably still out there. Somebody finally made a list.</p>
+        <p>speciesblacklist.org</p>
       </div>
-      <button type="button" class="gicopy" id="giCopy">Copy this post</button>
+      <div class="gishare" id="giShare"></div>
     </div>
 
     <div class="gistep">
-      <h4>2. Ask for these species to be prioritised</h4>
+      <h4>2. Photograph things you cannot name</h4>
+      <p>This sounds too easy to matter. It is not. Species get rediscovered because
+        somebody posted a picture of something odd and a specialist happened to scroll
+        past it.</p>
+      <p>Here is how that actually plays out. In August 2014, on a citizen science survey
+        on the island of Hòn Cau in Vietnam, one of our team photographed a land snail
+        nobody present could identify, and put it on
+        <a href="https://www.inaturalist.org" target="_blank"
+        rel="noopener">iNaturalist</a> because that is what you do with an unknown. More
+        than a year later a malacologist in Malaysia came across the photo, recognized the
+        shell, and identified it as <span class="sci">Myxostoma petiverianum</span>, a
+        species whose last published record was from <strong>1905</strong>. It became the
+        first photograph ever taken of a live adult.</p>
+      <p>No expedition. No permit. No budget. A photograph left somewhere public, and one
+        person on the other side of the world who knew what they were looking at.</p>
+      <p>So: if you see something you cannot name, especially somewhere remote, at night,
+        or very small, <strong>photograph it and upload it with a location</strong>. You
+        do not need to identify it. That is the whole point of putting it where the people
+        who can will find it.</p>
+      <p class="lostcite"><a
+        href="https://news.mongabay.com/2016/07/citizen-science-leads-to-snail-rediscovery-in-vietnam/"
+        target="_blank" rel="noopener">Mongabay's account of the rediscovery</a></p>
+    </div>
+
+    <div class="gistep">
+      <h4>3. Ask for these species to be prioritized</h4>
       <p>Every species on this site is excluded from the commitments that drive
         conservation spending, because those commitments are written around species
         already known to be threatened. Changing that is a matter of people asking for
@@ -2267,10 +2275,10 @@
     </div>
 
     <div class="gistep">
-      <h4>3. Support the people already doing it</h4>
+      <h4>4. Support the people already doing it</h4>
       <p>This work is unglamorous and it is nearly always unfunded. Finding a small brown
-        frog on a steep hillside at two in the morning does not photograph like a tiger,
-        and the organisations that do it are small.</p>
+        frog on a steep hillside at 2am does not elicit the same interest as finding a
+        tiger, and the organizations that do it are small.</p>
       <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
         Biodiversity Group</a> built this site and works on exactly these species. If you
         would like to back that, or do it with us, both doors are open:</p>
@@ -2301,6 +2309,51 @@
 <!-- =============================== METHODS ============================== -->
 <section class="view wrap methods" id="v-methods" hidden>
   <div class="mbody">
+
+  <div class="warn">
+    <h3>Read the ranking before you use it</h3>
+    <p>Data Deficient status on its own predicts very little. Of the species here that
+      IUCN has since reassessed, the group as a whole came out threatened at roughly
+      the ordinary all-species rate. The <strong>narrowly restricted subset is
+      different</strong>, and that distinction, not the Data Deficient label, is
+      what this register is for.</p>
+    <p><strong>This is a ranked subset, not a census.</strong> IUCN v2026&#8209;1 holds
+      <span class="num">8,659</span> Data Deficient species in vertebrate classes; this
+      register covers <span class="num">3,031</span> of them, which is
+      <span class="num">35%</span>. The method needs a published sentence describing each
+      species' range, and the corpus behind it is one reference work. Of the
+      <span class="num">2,964</span> Data Deficient vertebrates that corpus names,
+      <strong>every one is in the register</strong>; the other
+      <span class="num">5,628</span> are never named in it at all. So the right reading is
+      "of the Data Deficient vertebrates with a usable published range statement, these are
+      the most narrowly restricted", not "these are the ones that matter most".</p>
+    <p><strong>How long is a blank allowed to stand?</strong> The Red List export says
+      only that a species is Data Deficient now. Its assessment history, pulled from IUCN's
+      API, says since when, and the answer reframes the register. The median species here
+      has been Data Deficient for <span class="num">16</span> years;
+      <span class="num">475</span> have held the label for twenty years or more. And
+      <span class="num">1,210</span> of them, 40%, have been assessed more
+      than once, meaning IUCN returned, looked again, and wrote Data Deficient a second or
+      third time. Those are not species awaiting a first look. For scale, the median time
+      IUCN has actually taken to resolve a Data Deficient listing is
+      <span class="num">16</span> years, so
+      <span class="num">1,011</span> species in this register are already past it.</p>
+    <p><strong>The species outside were screened out, not overlooked.</strong> Richardson
+      takes an explicit position on the Data Deficient category: most of it, in his
+      judgment, is junior synonyms or valid species not in immediate danger, while
+      genuinely threatened species get lost there for want of follow-up research. He admits
+      a Data Deficient species when its record is narrow enough to imply risk, and that
+      screen is measurable, since he kept <span class="num">28%</span> of IUCN's Data
+      Deficient ray-finned fishes against <span class="num">72%</span> of the birds,
+      dropping the deep-sea groups almost entirely because naturally rare is not the same
+      as threatened. So the omitted species are neither unexamined nor shown to be safe:
+      one author's judgment, made without the research he says the category lacks, is not
+      an assessment. It also means this corpus is pre-selected for the trait the register
+      ranks on, which is why <span class="num">92%</span> of records state some
+      restriction. The register tests an expert's screen against IUCN's later verdicts
+      rather than discovering the pattern from scratch.</p>
+  </div>
+
     <h2 style="margin-top:0">Methods &amp; limits</h2>
 
     <div class="warn">
@@ -2309,10 +2362,10 @@
         text-classification rule that reads the source's own range statements and
         sorts them by severity. <strong>No taxonomist or conservation biologist has
         reviewed the individual species.</strong> What has been tested is the rule's
-        average behaviour against IUCN's independent reassessments — a statement about
+        average behavior against IUCN's independent reassessments — a statement about
         the group, not about any one row.</p>
       <p>These are not Red List assessments and must not be cited as such. They are a
-        prioritised research agenda: an argument about where to look.</p>
+        prioritized research agenda: an argument about where to look.</p>
     </div>
 
     <h2 style="margin-top:var(--s4)">Why the gap matters</h2>
@@ -2324,7 +2377,7 @@
       Endangered Species. IUCN's own guidance says Data Deficient species should get
       the same attention as threatened ones, and it is not followed.</p>
     <p>So the consequence of having no category is not merely that a species is
-      poorly known. It is excluded from the target that mobilises national action and
+      poorly known. It is excluded from the target that mobilizes national action and
       from the funds that pay for fieldwork — which is what makes deciding
       <em>which</em> of these species to look at first worth doing carefully.</p>
 
@@ -2375,7 +2428,7 @@
       unranked list dilutes a real signal with vague-range species.</p>
     <p>Two caveats belong with that number whenever it is quoted. The top stratum
       rests on <span class="num">19</span> species, which is thin. And IUCN reassesses
-      where data has appeared, which probably favours species that turned out to be
+      where data has appeared, which probably favors species that turned out to be
       more widespread — a bias running against the finding rather than creating it.
       Separately, the five tiers were defined before any outcome was seen, but the
       decision to split them at 4 was made after, which inflates the significance
@@ -2383,7 +2436,7 @@
 
     <h3>Where localities come from</h3>
     <p>A locality is recorded two ways, and the Localities page distinguishes them.</p>
-    <p><strong>From a locality account.</strong> Richardson organises the book
+    <p><strong>From a locality account.</strong> Richardson organizes the book
       geographically, so most species sit inside a paragraph introduced by a place.
       That place, and its opening sentence, are attached to every species in the
       paragraph. This is the stronger provenance and it covers
@@ -2397,7 +2450,7 @@
       Clusters that were entirely invisible before appear this way — the Gulf of
       California holds 19 species, none of which had a locality until now.</p>
     <p>Named physical features (<em>Salween River</em>, <em>Gulf of Panama</em>,
-      <em>Mount Kinabalu</em>) are preferred over a bare capitalised word after a
+      <em>Mount Kinabalu</em>) are preferred over a bare capitalized word after a
       preposition, and a capture is rejected if it collides with the species' own
       common name or genus. <strong>The place is only ever taken from the text, never
       guessed</strong> — if the sentence names no place, the species keeps no locality,
@@ -2570,18 +2623,57 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
    The field is painted into a canvas, so it does not inherit a CSS variable
    change the way the rest of the page does — it has to be repainted explicitly,
    both when the toggle is used and when the OS preference flips underneath us. */
-/* Copy the shareable post. Falls back to selecting it, so the button still does something
-   useful where the clipboard API is unavailable or refused. */
-(function bindCopyPost() {
-  const btn = $("#giCopy"), src = $("#giPost");
-  if (!btn || !src) return;
-  btn.addEventListener("click", () => {
-    const text = [...src.querySelectorAll("p")]
-      .map(p => p.textContent.replace(/\s+/g, " ").trim()).join("\n\n");
+/* Share buttons. Built from the post text in the page so the two can never disagree, and
+   each one is a plain link to the network's own compose screen: no SDK, no embedded
+   button, nothing third-party loading on a page about conservation.
+
+   Facebook is the odd one out. Its sharer takes a URL only and ignores any text you pass,
+   which it has done for years, so that button shares the link and the page's own preview
+   card does the talking. Mastodon has no central host, so it asks for the reader's
+   instance and remembers it. */
+(function bindShare() {
+  const box = $("#giShare"), src = $("#giPost");
+  if (!box || !src) return;
+  const URL_ = "https://speciesblacklist.org";
+  const text = [...src.querySelectorAll("p")]
+    .map(p => p.textContent.replace(/\s+/g, " ").trim())
+    .filter(t => t && t !== URL_.replace("https://", ""))
+    .join("\n\n");
+  const t = encodeURIComponent(text);
+  const u = encodeURIComponent(URL_);
+
+  const NETS = [
+    ["Facebook", "https://www.facebook.com/sharer/sharer.php?u=" + u],
+    ["X", "https://twitter.com/intent/tweet?text=" + t + "&url=" + u],
+    ["Bluesky", "https://bsky.app/intent/compose?text=" + encodeURIComponent(
+      text + "\n\n" + URL_)],
+    ["Threads", "https://www.threads.net/intent/post?text=" + encodeURIComponent(
+      text + "\n\n" + URL_)],
+  ];
+  box.innerHTML = NETS.map(([name, href]) =>
+    `<a href="${href}" target="_blank" rel="noopener noreferrer">${name}</a>`).join("")
+    + '<button type="button" id="giMasto">Mastodon</button>'
+    + '<button type="button" id="giCopy">Copy text</button>';
+
+  $("#giMasto").addEventListener("click", () => {
+    let host = localStorage.getItem("mastoHost") || "";
+    host = (prompt("Which Mastodon server are you on?", host || "mastodon.social") || "")
+      .trim().replace(/^https?:\/\//, "").replace(/\/.*$/, "");
+    if (!host) return;
+    localStorage.setItem("mastoHost", host);
+    open("https://" + host + "/share?text=" + encodeURIComponent(text + "\n\n" + URL_),
+         "_blank", "noopener");
+  });
+
+  // Kept alongside the networks, because plenty of people would rather paste it into a
+  // newsletter, a Slack or an email than post it anywhere.
+  $("#giCopy").addEventListener("click", () => {
+    const btn = $("#giCopy");
+    const full = text + "\n\n" + URL_;
     const done = () => { btn.textContent = "Copied"; setTimeout(() => {
-      btn.textContent = "Copy this post"; }, 2200); };
+      btn.textContent = "Copy text"; }, 2200); };
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(done, () => selectPost(src, btn));
+      navigator.clipboard.writeText(full).then(done, () => selectPost(src, btn));
     } else {
       selectPost(src, btn);
     }
@@ -2595,7 +2687,7 @@ function selectPost(src, btn) {
   sel.removeAllRanges();
   sel.addRange(r);
   btn.textContent = "Selected, press Ctrl+C";
-  setTimeout(() => { btn.textContent = "Copy this post"; }, 3000);
+  setTimeout(() => { btn.textContent = "Copy text"; }, 3000);
 }
 
 /* The theme button is also the way into the night survey -- see nightOpen(). It is the
@@ -2703,7 +2795,6 @@ function showView(name, push) {
   });
 }
 
-
 /* ============================== LOST SPECIES =================================
    A separate payload and a separate map from the register's. Deliberately simpler:
    one circle per country or region, area proportional to count. No pan, no zoom, no
@@ -2711,7 +2802,7 @@ function showView(name, push) {
    map is the honest encoding for "how many lost species are recorded from here".
 
    ONE HUE, not a palette. The quantity being shown is a magnitude, so it gets a
-   sequential ramp; giving each taxonomic group its own colour would put twelve
+   sequential ramp; giving each taxonomic group its own color would put twelve
    categorical hues on a world map and make neither the group nor the count readable.
    The group breakdown lives in the tooltip, where it can be read as text. */
 let LOST = null, lostLoading = false, lostGeom = null;
@@ -2742,7 +2833,7 @@ function ensureLost() {
 
 /* Lost per 1,000 described. A bar chart rather than a table because the whole point is
    one group towering over the rest, and that is a length comparison. Every bar is
-   labelled with its value, so the colour is decoration and the number is the encoding. */
+   labeled with its value, so the color is decoration and the number is the encoding. */
 function renderRates() {
   const wrap = $("#rateWrap"), lede = $("#rateLede");
   const rows = (LOST && LOST.rates) || [];
@@ -2872,7 +2963,7 @@ function renderLongest() {
 }
 
 /* ---- night survey ---------------------------------------------------------
-   An easter egg, but not a decorative one: it dramatises the actual method. TBG's
+   An easter egg, but not a decorative one: it dramatizes the actual method. TBG's
    rediscoveries were made by walking slowly in the dark with a torch, looking for
    eyeshine, and the species it "finds" are the real oldest records in lost.json --
    so the payoff card teaches the same thing the page does.
@@ -3093,11 +3184,11 @@ function renderLostStats() {
    Green -> yellow -> red, at Scott's request, with gradients between.
 
    ONE THING TO KNOW ABOUT THIS RAMP: green-to-red is the single worst pairing for
-   colour-blind readers -- red/green confusion is by far the most common form, and to
+   color-blind readers -- red/green confusion is by far the most common form, and to
    those readers the two ends of this scale look alike. So the magnitude is NOT left to
    hue alone. Every circle is ALSO sized by its value, the legend carries numbers rather
    than only swatches, and the exact count is in the tooltip. Any one of those three
-   recovers the reading if the colours do not.
+   recovers the reading if the colors do not.
 
    The stops also move steadily from dark to light to dark, so the ramp still reads as a
    ramp in greyscale rather than collapsing into one flat tone. */
@@ -3172,7 +3263,7 @@ function paintHeat(cv, data, opts) {
   // Marks grow with zoom, but far more slowly than the map does. Scaling them by k would
   // make Brazil swallow South America at 8x; leaving them fixed would make a cluster of
   // small islands stay an unresolvable blob however far you zoomed in. The square root
-  // is the compromise that lets neighbours separate while keeping the big marks sane.
+  // is the compromise that lets neighbors separate while keeping the big marks sane.
   const zr = Math.sqrt(v.k);
   const rOf = n => (3 + t(n) * (cssW / 27)) * zr;
   const hits = [];
@@ -3214,7 +3305,7 @@ function drawLost() { lostGeom = paintHeat($("#lostCanvas"), LOST,
   {legend: "#lostLegend", view: lostView,
    label: "Lost species recorded from each country or region"}); }
 
-/* Pan and zoom for a heat map, matching the register map's behaviour: wheel and pinch
+/* Pan and zoom for a heat map, matching the register map's behavior: wheel and pinch
    zoom about the point under the cursor, drag to pan, buttons for the keyboard and
    touch cases. Bound once per canvas.
 
@@ -3703,7 +3794,7 @@ function ntRender() {
 let RD = null, rdLoading = false;
 
 /* The tag used to print the internal list name, so a species that had just been FOUND
-   was labelled "Lost Species" — which reads as a contradiction on a page about finds.
+   was labeled "Lost Species" — which reads as a contradiction on a page about finds.
    The tag now says what the match means: it was on a list we keep of species missing. */
 const LIST_LABEL = {
   "Lost Species": "was on our lost list",
@@ -3867,7 +3958,7 @@ function closeNavMenus(except) {
     document.getElementById(b.getAttribute("aria-controls")).hidden = true;
   });
 }
-/* Named rather than written inline, so the behaviour can be exercised without a click.
+/* Named rather than written inline, so the behavior can be exercised without a click.
    Synthetic click events do not dispatch in the automation harness this page is checked
    with, which made an inline handler untestable there -- the first "the menu does not
    open" reading was the instrument, not the menu. */
@@ -3889,7 +3980,6 @@ document.addEventListener("keydown", ev => {
   const open = document.querySelector('.navtoggle[aria-expanded="true"]');
   if (open) { closeNavMenus(); open.focus(); }
 });
-
 
 let siteFilter = "";
 /* Set of species names handed over by a click on a map cell. Kept separate from the
@@ -3916,7 +4006,7 @@ const PAGE = 200;
    AFTER the `let DATA` above. Called any earlier, showView's register branch reads
    DATA inside its temporal dead zone, throws, and kills the rest of the script --
    which broke a direct load of /register/ outright while every view still worked if
-   you arrived by clicking, because by then DATA was initialised. */
+   you arrived by clicking, because by then DATA was initialized. */
 showView(viewForPath(location.pathname), false);
 
 /* Drop a fragment that no longer points at anything a reader asked for.
@@ -4112,7 +4202,7 @@ function boot() {
     `<option value="${t}">Tier ${t}${t >= PRI ? " · priority" : ""} — ${
       esc(DATA.tiers[t])} (${(DATA.tier_counts[t] || 0).toLocaleString()})</option>`));
 
-  // Second pass, now that DATA exists: this is what actually initialises the map
+  // Second pass, now that DATA exists: this is what actually initializes the map
   // for someone who landed directly on /map/.
   showView(viewForPath(location.pathname), false);
 
@@ -4229,8 +4319,16 @@ function drawField() {
 let fieldGeom = null;
 function hitTest(ev) {
   const cv = $("#field"), r = cv.getBoundingClientRect();
-  const x = ev.clientX - r.left, y = ev.clientY - r.top;
-  if (!fieldGeom) return null;
+  if (!fieldGeom || !r.width || !r.height) return null;
+  /* The cells were laid out against parentElement.clientWidth, but the canvas is
+     displayed at width:100% and its height is pinned in pixels, so the rendered box is
+     not necessarily the box the layout used. Dividing raw CSS pixels by PITCH therefore
+     drifts further off with every column, and once the column index passes fieldGeom.cols
+     it returns null: hovering the left of the field worked and the rest of it did
+     nothing. Convert the pointer into layout units first, on each axis separately,
+     because width and height are constrained by different rules here. */
+  const kx = fieldGeom.cssW / r.width, ky = fieldGeom.cssH / r.height;
+  const x = (ev.clientX - r.left) * kx, y = (ev.clientY - r.top) * ky;
   const col = Math.floor(x / PITCH), row = Math.floor(y / PITCH);
   if (col < 0 || col >= fieldGeom.cols || row < 0) return null;
   const i = row * fieldGeom.cols + col;
@@ -4416,7 +4514,7 @@ function requestDraw() {
 let showGbif = true, showLoc = true, showLocU = false;
 
 /* Per-locality tier breakdown, computed from the register so the locality overlay
-   honours the same tier filter as the density surface. */
+   honors the same tier filter as the density surface. */
 let locTiers = null, nameTier = null;
 function buildLocTiers() {
   nameTier = {};
