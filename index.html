@@ -1200,11 +1200,29 @@
       id="ampAssessed">&mdash;</strong> of those 1,721 already carry an assessment, where
       most recent reptiles do not. The Global Amphibian Assessment has been run twice and
       reptiles have no equivalent. What is left is still <span id="ampInline">&mdash;</span>
-      species with no evaluation at all, and <strong>99%</strong> of them are endemic to a
-      single country.</p>
+      species with no evaluation at all, and <strong id="ampOne">&mdash;</strong> of them
+      are endemic to a single country.</p>
   </div>
 
   <div id="ampCounts" class="counts"></div>
+
+  <div class="filters">
+    <input id="ampQ" type="search"
+           placeholder="Search amphibian species, family, country&hellip;"
+           aria-label="Search the amphibian list">
+    <select id="ampEv" aria-label="Filter by evidence of the gap"></select>
+    <select id="ampFam" aria-label="Filter by family"></select>
+    <select id="ampCty" aria-label="Filter by country"></select>
+  </div>
+  <p id="ampShowing" style="font-family:var(--sans);font-size:.82rem;
+     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
+  <div id="ampTable"></div>
+  <p class="siteslede" style="margin-top:.8rem">The reptile list carries two columns this
+    one cannot: a restriction tier and the finer locality detail behind it. Those are
+    derived from the Reptile Database's per-species distribution text, and AmphibiaWeb's
+    listing gives a country rather than a locality — so the columns are absent rather
+    than guessed. In their place is the describing publication, which the reptile list
+    has only as an authority string.</p>
 
   <!-- ===================== WHERE THEY ARE ===================== -->
   <h3 class="siteshead">Where they are</h3>
@@ -2432,6 +2450,11 @@ function ampRender() {
   set("#ampHero", n(c.total));
   set("#ampInline", n(c.total));
   set("#ampAssessed", n(c.dropped_assessed));
+  // Read from the payload, never typed in. This one was published as "99%" while the
+  // real figure was 93% — AmphibiaWeb separates multiple countries with a SEMICOLON
+  // ("Cote d'Ivoire; Ghana") and the single-country test only looked for commas, so
+  // 57 multi-country species were counted as endemic.
+  set("#ampOne", Math.round(100 * (c.single_country || 0) / Math.max(c.total, 1)) + "%");
 
   // Same three grades as the reptile list, so the two are comparable at a glance.
   const ev = c.by_evidence || {};
@@ -2447,6 +2470,70 @@ function ampRender() {
     el.innerHTML = cells.map(([v, l]) =>
       `<div class="count"><b>${v}</b><span>${l}</span></div>`).join("");
   }
+
+  const opt = (sel, blank, pairs) => {
+    const s = $(sel);
+    if (!s) return;
+    s.innerHTML = `<option value="">${blank}</option>` +
+      pairs.map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
+  };
+  // NT_EV carries the wording the reptile list uses for the same three grades. Reusing
+  // it rather than restating it is the point: two different explanations of one scale
+  // would drift, and a reader comparing the lists would not know which was current.
+  opt("#ampEv", "Any evidence", Object.keys(NT_EV)
+      .filter(k => (ev[k] || 0) > 0)
+      .map(k => [k, `${NT_EV[k][0]} (${n(ev[k])})`]));
+  const fams = [...new Set(AMP.rows.map(r => r.fam))].filter(Boolean).sort();
+  opt("#ampFam", "Any family", fams.map(f => [f, f]));
+  const ctys = [...new Set(AMP.rows.map(r => r.cty))].filter(Boolean).sort();
+  opt("#ampCty", "Any country", ctys.map(x => [x, x]));
+
+  ["#ampQ", "#ampEv", "#ampFam", "#ampCty"].forEach(s => {
+    const e = $(s);
+    if (e) { e.oninput = ampDraw; e.onchange = ampDraw; }
+  });
+  ampDraw();
+}
+
+function ampDraw() {
+  if (!AMP) return;
+  const val = s => (($(s) || {}).value || "");
+  const q = val("#ampQ").trim().toLowerCase();
+  const ev = val("#ampEv"), fam = val("#ampFam"), cty = val("#ampCty");
+  const rows = AMP.rows.filter(r =>
+    (!ev || r.ev === ev) && (!fam || r.fam === fam) && (!cty || r.cty === cty) &&
+    (!q || (r.sp + " " + r.fam + " " + r.cty + " " + (r.ref || ""))
+             .toLowerCase().includes(q)));
+
+  const showing = $("#ampShowing");
+  if (showing) {
+    showing.textContent =
+      `Showing ${rows.length.toLocaleString()} of ${AMP.rows.length.toLocaleString()} `
+      + `species` + (rows.length ? "" : " — no species match these filters.");
+  }
+
+  const CAP = 400;
+  const esc = s => (s || "").replace(/[<>&]/g, m =>
+    ({"<": "&lt;", ">": "&gt;", "&": "&amp;"}[m]));
+  const t = $("#ampTable");
+  if (!t) return;
+  t.innerHTML = rows.length ? `<table class="nttable">
+    <thead><tr><th>Species</th><th>Described</th><th>Family</th>
+      <th>Gap evidence</th><th>Country</th><th>Described in</th></tr></thead>
+    <tbody>${rows.slice(0, CAP).map(r => `<tr>
+      <td><i>${esc(r.sp)}</i></td>
+      <td>${r.yr || "—"}</td>
+      <td>${esc(r.fam)}</td>
+      <td><span class="ntev ntev-${r.ev}" title="${esc(NT_EV[r.ev][1])}">${NT_EV[r.ev][0]}</span></td>
+      <td>${esc(r.cty) || "<span style='color:var(--ink-3)'>—</span>"}</td>
+      <td class="ntdist" title="${esc(r.ref)}">${esc((r.ref || "").slice(0, 120))
+        || "<span style='color:var(--ink-3)'>not stated</span>"}</td>
+    </tr>`).join("")}</tbody></table>` +
+    (rows.length > CAP
+      ? `<p class="siteslede">Showing the first ${CAP} of ${rows.length.toLocaleString()}
+         — narrow the filters to see the rest. Newest descriptions first.</p>`
+      : "")
+    : "";
 }
 
 addEventListener("resize", () => {
