@@ -226,7 +226,13 @@
      item whose button fills it puts every label on one baseline. */
   .navgroup { position:relative; display:flex; align-items:stretch; }
   .navitem { line-height:1.45; }
-  .navtoggle { font-family:var(--sans); font-size:1rem; line-height:1.45;
+  /* NO font-size HERE. It declared 1rem, and because this rule sits after the max-width:620px
+     block that takes .navitem down to .88rem, and both are single-class selectors, the later
+     one won: on a phone the two <button> labels stayed 1rem while the four <a> labels shrank,
+     which is the "different fonts" in the menu. Size now comes from .navitem for all six, so
+     the media query governs every label. font-family stays because a button does not inherit
+     it, and inheriting is what made these render in the body serif once before. */
+  .navtoggle { font-family:var(--sans); line-height:1.45;
                display:flex; align-items:center; }
   .navtoggle .caret { font-size:.7em; margin-left:.35em; display:inline-block;
                       transition:transform .15s; }
@@ -246,13 +252,21 @@
   .navmenu a:hover, .navmenu a:focus-visible { background:var(--bg); color:var(--ink); }
   .navmenu a[aria-current="page"] { color:var(--ink); font-weight:600;
                                     box-shadow:inset 3px 0 0 var(--accent); }
-  /* Below the wrap point the dropdown would open over the page with nothing to
-     anchor it to, so groups become inline sections of the bar instead. */
+  /* Below the wrap point this used to drop the menu into the flow (position:static) on the
+     theory that an overlay had nothing to anchor to. What actually happened is that the bar
+     is a WRAPPING flex row, so an in-flow menu became a flex item and re-laid-out the whole
+     nav around itself: the four top-level labels scattered down the left while the submenu
+     stacked on the right, and opening a menu moved the button you had just pressed.
+
+     A dropdown must not move the thing it dropped from. It anchors to the BAR instead of to
+     the group, which is the anchor the original comment said did not exist, so it spans the
+     full width and covers the page beneath rather than pushing it. */
   @media (max-width:620px) {
+    .navbar { position:relative; }
     .navgroup { position:static; }
-    .navmenu { position:static; transform:none; border:0; border-top:1px solid var(--rule);
-               box-shadow:none; padding:.2rem 0; background:none; }
-    .navmenu a { text-align:center; padding:.5rem .75rem; font-size:.86rem; }
+    .navmenu { left:0; right:0; transform:none; min-width:0;
+               border-left:0; border-right:0; padding:.2rem 0; }
+    .navmenu a { text-align:center; padding:.7rem .75rem; font-size:.88rem; }
     .navmenu a[aria-current="page"] { box-shadow:none;
                                       border-bottom:2px solid var(--accent); }
   }
@@ -1328,9 +1342,13 @@
 
   <div class="prose">
     <h3>What would actually help</h3>
-    <p>Three things, and none of them need you to be a scientist. Tell somebody about
-      these species. Ask the people who decide where conservation money goes to include
-      them. Support the groups already doing this work.</p>
+    <!-- Four, in the order Get Involved lists them. It said three and skipped the
+         photography one, which is the odd omission: it is the only item a reader can act on
+         the same afternoon, and it is how the snail on this site was refound. -->
+    <p>Four things, and none of them need you to be a scientist. Tell somebody about these
+      species. Photograph anything you cannot name. Ask the people who decide where
+      conservation money goes to include them. Support the groups already doing this
+      work.</p>
   </div>
   <p class="homecta"><a class="bigbtn" href="/get-involved/"
     data-goto="involved">How to help</a></p>
