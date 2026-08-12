@@ -3129,11 +3129,23 @@ function boot() {
      unknown (the separate new-species work found 1,729 reptiles and 974 amphibians
      described since 2015, and a checklist comparison leaves 2,345 reptiles the Red List
      has no record of). Label a coverage figure as coverage. */
+  /* THE SCALE TILE LEADS, because without it a reader has no way to tell whether 3,062 is
+     most of the problem or a slice of it, and every previous version of this table invited
+     the second reading by starting with the register's own size. 8,659 is counted from the
+     Red List index by 10_build_site.py, not typed: it was hardcoded in three places in the
+     prose and would go stale the next time IUCN publishes.
+
+     The never-assessed half is deliberately worded rather than numbered. IUCN publishes no
+     count of what it has not looked at, and any figure would be invented. "Thousands more"
+     is defensible from the site's own work: 2,345 reptiles have no Red List entry at all,
+     and 1,729 reptiles plus 974 amphibians described since 2015 have never been assessed. */
   $("#counts").innerHTML = [
-    [(c.dd + c.ne).toLocaleString(), "species in this register"],
-    [c.dd.toLocaleString(),
-     "Data Deficient, of the 8,659 IUCN records as such"],
-    [String(c.ne), "in the register never assessed by IUCN at all"],
+    [(c.iucn_dd_vertebrates || 8659).toLocaleString(),
+     "vertebrates the Red List records as Data Deficient, plus thousands more it has "
+     + "never assessed at all"],
+    [(c.dd + c.ne).toLocaleString(), "of them are in this register"],
+    [c.dd.toLocaleString(), "Data Deficient"],
+    [String(c.ne), "never assessed by IUCN at all"],
     [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
