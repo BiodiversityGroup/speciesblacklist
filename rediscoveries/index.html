@@ -361,6 +361,12 @@
   .tierhelp summary { cursor:pointer; color:var(--ink-2); display:flex;
                       align-items:center; gap:.4rem; flex-wrap:wrap; }
   .tierhelp summary .tierchip { width:22px; height:19px; font-size:.72rem; }
+  /* display:flex above removes the browser's own disclosure marker, so the box gave no
+     sign it opened. This is the caret the nav dropdowns already use. */
+  .tierhelp summary::-webkit-details-marker { display:none; }
+  .tierhelp summary .caret { font-size:.7em; margin-left:.15em; display:inline-block;
+                             transition:transform .15s; color:var(--accent); }
+  .tierhelp[open] summary .caret { transform:rotate(180deg); }
   .tierhelp[open] summary { margin-bottom:var(--s2); color:var(--ink); font-weight:600; }
   .tierhelp dl { margin:0; display:grid; gap:.4rem var(--s2);
                  grid-template-columns:auto 1fr; align-items:baseline; }
@@ -773,6 +779,9 @@
 
   /* ---- sites page ------------------------------------------------------- */
   .siteshead { font-size:var(--fs-h2); margin:var(--s5) 0 var(--s1); }
+  /* Letterspaced, because caps set at the body's tracking read as shouting rather than as
+     a label. Same treatment the eyebrows use. */
+  .caps { text-transform:uppercase; letter-spacing:.08em; }
   .siteslede { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
                margin:0 0 var(--s3); }
   .sitelist { display:grid; gap:1px; background:var(--rule);
@@ -1286,7 +1295,7 @@
 
   <div id="rdCounts" class="counts"></div>
 
-  <h3 class="siteshead">The finds</h3>
+  <h3 class="siteshead caps">The finds</h3>
   <p class="rdorder">Newest first. Search looks at the species name, the headline, the
     summary and the outlet, so try a species, a country or a news outlet.</p>
   <div class="filters">
