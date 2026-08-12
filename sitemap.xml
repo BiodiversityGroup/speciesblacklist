@@ -7,7 +7,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://speciesblacklist.org/black-list/</loc>
+    <loc>https://speciesblacklist.org/black-list-overview/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
