@@ -841,8 +841,12 @@
      were actually made, so it is worth finding on purpose, but a trigger nobody stumbles on
      is just dead code. It names a button without naming which one, and "the lights" is the
      only real clue. */
-  .hint { max-width:54ch; margin:0 auto var(--s3); padding:.9rem 1.2rem;
-          border:1px solid var(--rule); background:var(--surface);
+  /* --t3 is the same gold as the homecard top rules, so the box belongs to the page rather
+     than announcing itself. The border can carry the colour but the text cannot: --t3 on the
+     light surface is 3.5:1, under the 4.5:1 needed at this size, and no single tier token
+     clears it in BOTH themes, so the bold stays in --ink. */
+  .hint { max-width:54ch; margin:var(--s3) auto 0; padding:.9rem 1.2rem;
+          border:1px solid var(--t3); background:var(--surface);
           font-family:var(--sans); font-size:.88rem; line-height:1.55;
           color:var(--ink-2); text-align:center; }
   .hint b { color:var(--ink); font-weight:600; }
@@ -1259,15 +1263,15 @@
  </div>
 
  <div class="wrap homebody">
-  <p class="hint"><b>Knock twice.</b> One of the buttons on this site answers a second press
-    by turning the lights out, and what you can find in the dark has not been seen for a very
-    long time.</p>
-
   <div class="prose">
     <h3>What you will find here</h3>
     <p>Four separate pieces of work, each answering a different question. They come from
       different sources and they are deliberately never added together.</p>
   </div>
+
+  <p class="hint"><b>Knock twice.</b> One of the buttons on this site answers a second press
+    by turning the lights out, and what you can find in the dark has not been seen for a very
+    long time.</p>
 
   <div class="homecards">
     <article class="homecard">
