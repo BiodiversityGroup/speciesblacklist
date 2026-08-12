@@ -1559,6 +1559,33 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
   ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
+/* EVERY PAYLOAD GOES THROUGH HERE.
+   There were nine fetches with nine ideas about failure. None checked r.ok, so a 404 or a
+   502 arrived as a JSON parse error and got reported as whatever that handler happened to
+   guess; two had no catch at all, so the map simply did nothing. And none retried, which is
+   what actually matters: most readers arrive on a phone, the common failure there is a
+   request that does not finish rather than a server that is down, and the page gave up on
+   the first drop and stayed given up.
+
+   Deliberately no fallback to a stale cached copy. These figures revalidate against the
+   register on purpose, and quietly showing yesterday's numbers is worse than admitting the
+   load failed. */
+function getJSON(url, tries) {
+  tries = tries || 3;
+  // A ?v= stamp already versions the URL, so those cache hard. The unstamped payloads
+  // revalidate against their ETag, which is a 304 when nothing changed and so nearly free.
+  const opts = url.indexOf("?v=") >= 0 ? {} : {cache: "no-cache"};
+  const go = n => fetch(url, opts)
+    .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .catch(err => {
+      if (n < tries) {
+        return new Promise(wait => setTimeout(wait, n * 1500)).then(() => go(n + 1));
+      }
+      throw err;
+    });
+  return go(1);
+}
+
 /* theme toggle: cycles auto -> light -> dark.
    The field is painted into a canvas, so it does not inherit a CSS variable
    change the way the rest of the page does — it has to be repainted explicitly,
@@ -1757,7 +1784,7 @@ function ensureLost() {
   // has not loaded, and the throw happened BEFORE this function returned a promise, so
   // the .catch() below never ran, lostLoading stayed true, and every later attempt
   // returned false. A page that silently disables itself is worse than one that fails.
-  return fetch("/lost.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
+  return getJSON("/lost.json").then(d => {
     LOST = d;
     renderLostStats();
     renderLongest();
@@ -2395,7 +2422,7 @@ function ensureNsMap() {
   if (NSMAP) return Promise.resolve(true);
   if (nsLoading) return Promise.resolve(false);
   nsLoading = true;
-  return fetch("/newspecies-map.json", {cache: "no-cache"}).then(r => r.json())
+  return getJSON("/newspecies-map.json")
     .then(d => {
       NSMAP = d;
       const m = d.meta || {}, n = $("#nsMapNote");
@@ -2459,7 +2486,7 @@ let AMP = null, ampLoading = false;
 function ensureAmphibians() {
   if (AMP || ampLoading) { if (AMP) ampRender(); return; }
   ampLoading = true;
-  fetch("/amphibians.json", {cache: "no-cache"}).then(r => r.json()).then(d => {
+  getJSON("/amphibians.json").then(d => {
     AMP = d; ampLoading = false; ampRender();
   }).catch(() => {
     ampLoading = false;
@@ -2656,7 +2683,7 @@ const NT_RC = {
 function ensureReptiles() {
   if (NT || ntLoading) { if (NT) ntRender(); return; }
   ntLoading = true;
-  fetch("/reptiles.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
+  getJSON("/reptiles.json").then(d => {
     NT = d; ntLoading = false; ntBoot();
   }).catch(() => {
     ntLoading = false;
@@ -2767,7 +2794,7 @@ const LIST_LABEL = {
 function ensureRedisc() {
   if (RD || rdLoading) { if (RD) rdRender(); return; }
   rdLoading = true;
-  fetch("/rediscoveries.json", { cache: "no-cache" }).then(r => r.json()).then(d => {
+  getJSON("/rediscoveries.json").then(d => {
     RD = d; rdLoading = false; rdBoot();
   }).catch(() => {
     rdLoading = false;
@@ -3010,9 +3037,31 @@ showView(viewForPath(location.pathname), false);
    304 when unchanged, so effectively free) and carries the build stamp that versions
    the other two payloads. */
 const stamped = p => p + "?v=" + encodeURIComponent(DATA.meta.built);
-fetch("/data.json", { cache: "no-cache" }).then(r => r.json()).then(d => { DATA = d; boot(); })
-  .catch(() => { $("#counts").innerHTML =
-    '<div class="count"><span>Could not load data.json — is it beside index.html?</span></div>'; });
+/* ONE DROPPED REQUEST USED TO END THE PAGE, AND THE MESSAGE BLAMED THE WRONG THING.
+   The old handler threw the error away and asked whether data.json was beside index.html,
+   which was a fair question when this site was a folder on a laptop and is never the answer
+   in production: the file is served, 200, valid, 233 KB gzipped. Scott hit this on a phone
+   on mobile data, so the real cause was a fetch that did not finish, and the page then sat
+   there permanently telling him to check a file path.
+
+   So: say what actually failed, try again rather than giving up on the first drop, and
+   leave a way back that is not "reload the page". No fallback to a cached copy, because
+   these counts are revalidated against the register on purpose and quietly serving stale
+   figures would be worse than saying the load failed. */
+function loadData() {
+  return getJSON("/data.json")            // getJSON owns the retrying; this owns giving up
+    .then(d => { DATA = d; boot(); })
+    .catch(err => {
+      $("#counts").innerHTML =
+        '<div class="count"><span>Could not load the figures (' + esc(err.message || err)
+        + '). <button type="button" class="chip" id="dataretry">Try again</button></span></div>';
+      $("#dataretry").addEventListener("click", () => {
+        $("#counts").innerHTML = '<div class="count"><span>Loading</span></div>';
+        loadData();
+      });
+    });
+}
+loadData();
 
 function boot() {
   const m = DATA.meta, c = m.counts, v = m.validation;
@@ -3046,7 +3095,7 @@ function boot() {
   if ($("#geoValidated")) {
     const n = x => (x || 0).toLocaleString();
     $("#geoCompound").textContent = n(c.compound_localities);
-    fetch(stamped("/geo.json")).then(r => r.json()).then(g => {
+    getJSON(stamped("/geo.json")).then(g => {
       const k = g.check || {}, st = g.stats || {};
       const cand = Object.values(st).reduce((a, b) => a + b, 0);
       // everything the type/extent checks refused: wrong class, no acceptable result,
@@ -3552,14 +3601,14 @@ function mapColor(t) {
 async function ensureMap() {
   if (MAP) return true;
   try {
-    MAP = await fetch(stamped("/map.json")).then(r => r.json());
+    MAP = await getJSON(stamped("/map.json"));
   } catch (e) {
     $("#mapStats").textContent = "Could not load map.json.";
     return false;
   }
   // geo.json is optional: if geocoding has not been run the map still works,
   // it just has no locality overlay.
-  try { GEO = await fetch(stamped("/geo.json")).then(r => r.json()); }
+  try { GEO = await getJSON(stamped("/geo.json")); }
   catch (e) { GEO = null; }
   buildLocTiers();
   if (!GEO) { ["#srcLoc", "#srcLocU"].forEach(x => { $(x).disabled = true;
