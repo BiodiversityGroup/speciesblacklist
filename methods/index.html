@@ -1383,13 +1383,20 @@
       <em>Communications Biology</em>) predicted for Data Deficient species generally —
       which suggests that figure belongs to the narrowly restricted subset, and that an
       unranked list dilutes a real signal with vague-range species.</p>
-    <p>Two caveats belong with that number whenever it is quoted. The top stratum
-      rests on <span class="num">19</span> species, which is thin. And IUCN reassesses
-      where data has appeared, which probably favors species that turned out to be
-      more widespread — a bias running against the finding rather than creating it.
-      Separately, the five tiers were defined before any outcome was seen, but the
-      decision to split them at 4 was made after, which inflates the significance
-      somewhat.</p>
+    <p id="valcaveats"></p>
+
+    <h3>Detectability, and what happens at sea</h3>
+    <p>The tier is a rule over Richardson's wording, so it reads a phrase and cannot see
+      a depth. "Known only from a single specimen" is tier 5 whether the specimen came
+      off one hillside or out of one net tow in the bathypelagic, and those two sentences
+      do not mean the same thing. Ray-finned fishes are half this register, so the
+      objection is not a technicality.</p>
+    <p id="realmprose"></p>
+    <p>So the ranking is reported as a claim about land and fresh water. Oceanic species
+      remain listed, because a register that hides its weakest stratum is worse than one
+      that labels it, but the validated signal does not extend to them and no priority
+      claim here rests on them. Use the realm filter on the register to see either group
+      on its own.</p>
 
     <h3>Where localities come from</h3>
     <p>A locality is recorded two ways, and the Localities page distinguishes them.</p>
@@ -3158,6 +3165,36 @@ function boot() {
       stratum proved threatened at <strong>${v.high.rate}%</strong>
       (${v.high.threatened}/${v.high.n}) against <strong>${v.low.rate}%</strong>
       (${v.low.threatened}/${v.low.n}) for the rest.`;
+
+    /* Caveats carried figures typed by hand: "19 species" when the stratum is
+       ${v.high.n}, and "split them at 4" when the validated cut is ${v.cut}. Both are read
+       from the payload now, for the same reason the validation prose is. */
+    $("#valcaveats").innerHTML = `Three caveats belong with that number whenever it is
+      quoted. The top stratum rests on <span class="num">${v.high.n}</span> species, which
+      is thin. The five tiers were defined before any outcome was seen, but the decision to
+      split them at ${v.cut} was made after, which inflates the significance somewhat. And
+      IUCN chooses what to reassess, which is not a random draw: assessors go where new
+      data has appeared, and to taxa they already suspect are in trouble. The first pushes
+      toward species that turned out to be more widespread, the second toward species that
+      turned out to be threatened. The net direction is genuinely unknown, and this result
+      should be read as conditional on it.`;
+
+    /* Computed by 04_validate_score.py, not asserted here. If the ocean is ever what makes
+       this work, the page has to be able to say so. */
+    const R = v.by_realm;
+    if (R && R.non_oceanic && R.oceanic) {
+      $("#realmprose").innerHTML = `So it was tested. Dropping the Oceanic realm from the
+        labelled set does not weaken the result, it sharpens it: the priority stratum comes
+        out threatened at <strong>${R.non_oceanic.high_rate}%</strong>
+        (${R.non_oceanic.high_k}/${R.non_oceanic.high_n}) against
+        <strong>${R.non_oceanic.low_rate}%</strong> for the rest, an odds ratio of
+        <strong>${R.non_oceanic.odds_ratio}</strong> where the full set gives
+        ${R.all.odds_ratio}. Inside the Oceanic realm alone there is no signal at all:
+        ${R.oceanic.high_rate}% against ${R.oceanic.low_rate}%, odds ratio
+        ${R.oceanic.odds_ratio}, <code>p = ${R.oceanic.p}</code>. That last figure rests on
+        ${R.oceanic.high_n} high-tier species and cannot show a small effect, so read it as
+        no evidence of a signal rather than as evidence of none.`;
+    }
 
     /* --- geocode verification figures, read from geo.json rather than typed in.
            Hardcoded, these drifted the moment the geocoder was re-run (315/89/119 in
