@@ -526,6 +526,11 @@
   }
 
   /* ---- site overview cards ------------------------------------------------ */
+  /* The one deliberate exception to "body copy stays left". It is two lines introducing four
+     centered cards, and left-aligning it inside a centered column left a ragged edge hanging
+     off the middle of the page with nothing beneath it to explain the alignment. */
+  .homelede { max-width:60ch; margin:var(--s3) auto 0; text-align:center; }
+
   .homecards { display:grid; gap:var(--s2); margin:var(--s3) 0 var(--s4);
                grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); }
   .homecard { background:var(--surface); border:1px solid var(--rule);
@@ -1265,13 +1270,14 @@
  <div class="wrap homebody">
   <div class="prose">
     <h3>What you will find here</h3>
-    <p>Four separate pieces of work, each answering a different question. They come from
-      different sources and they are deliberately never added together.</p>
   </div>
 
   <p class="hint"><b>Knock twice.</b> One of the buttons on this site answers a second press
     by turning the lights out, and what you can find in the dark has not been seen for a very
     long time.</p>
+
+  <p class="homelede">Four separate pieces of work, each answering a different question. They
+    come from different sources and they are deliberately never added together.</p>
 
   <div class="homecards">
     <article class="homecard">

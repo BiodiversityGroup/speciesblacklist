@@ -526,6 +526,11 @@
   }
 
   /* ---- site overview cards ------------------------------------------------ */
+  /* The one deliberate exception to "body copy stays left". It is two lines introducing four
+     centered cards, and left-aligning it inside a centered column left a ragged edge hanging
+     off the middle of the page with nothing beneath it to explain the alignment. */
+  .homelede { max-width:60ch; margin:var(--s3) auto 0; text-align:center; }
+
   .homecards { display:grid; gap:var(--s2); margin:var(--s3) 0 var(--s4);
                grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); }
   .homecard { background:var(--surface); border:1px solid var(--rule);
