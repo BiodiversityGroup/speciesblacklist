@@ -22,7 +22,7 @@
      subtitle ran off both edges. Everything here sits inside a centred safe area, and
      the filename changed on purpose because platforms cache a card against its URL and
      there is no way to force a refetch from this side. -->
-<meta property="og:image" content="https://speciesblacklist.org/og-card.png?v=e38487a7a9">
+<meta property="og:image" content="https://speciesblacklist.org/og-card.png?v=b0c62c2a87">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -30,7 +30,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lost Species · The Species Black List">
 <meta name="twitter:description" content="2,135 species not recorded for years or centuries and not declared extinct, mapped by where they were last seen, with what is known about why some are found again and most are not.">
-<meta name="twitter:image" content="https://speciesblacklist.org/og-card.png?v=e38487a7a9">
+<meta name="twitter:image" content="https://speciesblacklist.org/og-card.png?v=b0c62c2a87">
 <meta name="twitter:image:alt" content="Life Overlooked. Not endangered, not extinct, just unaccounted for. Over a band of amber marks, one per species.">
 
 <!-- Dataset markup so Google Dataset Search can surface this to the researchers
@@ -2044,9 +2044,12 @@ const NIGHT_GROUP = {
   "Fish": "Freshwater fish can be restricted to a single stream, and a stream is an easy "
           + "thing to dam, divert or overlook.",
 };
-const NIGHT_PLANT = "You just found a plant by torchlight, which is not how botany works. "
-                    + "Plants have no eyeshine, no call and no burrow, and outside a few "
-                    + "weeks of flowering they can be almost impossible to name.";
+/* The first version said plants have no eyeshine, no call and no burrow, which is true and
+   which every reader already knows. The better fact is the opposite one: torchlight is
+   exactly right for some of them. */
+const NIGHT_PLANT = "Torchlight is a fair way to find a plant. Some spend years underground "
+                    + "as a tuber and surface only to flower, and a few open for a single "
+                    + "night, so the whole search window can be one evening a year.";
 
 /* Most species on this list have no common name at all, and falling back to the binomial
    printed it twice: once as the heading and again on the line underneath. A plain
@@ -2057,7 +2060,7 @@ const NIGHT_NOUN = {
   "Amphibian": "amphibian", "Reptile": "reptile", "Bird": "bird", "Mammal": "mammal",
   "Fish": "fish", "Snails & slugs": "snail", "Clams & mussels": "mussel",
   "Coral": "coral", "Millipede": "millipede", "Centipede": "centipede", "Worm": "worm",
-  "Flowering plants": "flowering plant", "Plant - Trees & Shrubs": "tree or shrub",
+  "Flowering plants": "flowering plant", "Plant - Trees & Shrubs": "plant",
   "Plant - Orchids": "orchid", "Plant - Ferns": "fern", "Plant - Cactus": "cactus",
   "Plant - Grasses & Sedges": "grass", "Plant - Mosses": "moss",
   "Plant - Aquatic plant": "water plant", "Plant - Epiphytes": "epiphyte",
