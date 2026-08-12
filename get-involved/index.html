@@ -509,12 +509,19 @@
             transition:background .15s; }
   .bigbtn:hover, .bigbtn:focus-visible { background:var(--t4); color:#fff; }
 
+  .gidonate { text-align:center; margin:var(--s3) 0 .2rem; }
+  .bigbtn.donate { background:var(--t4); font-size:1.06rem; padding:1rem 2.4rem; }
+  .bigbtn.donate:hover, .bigbtn.donate:focus-visible { background:var(--t5); }
+
   /* ---- site overview cards ------------------------------------------------ */
   .homecards { display:grid; gap:var(--s2); margin:var(--s3) 0 var(--s4);
                grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); }
   .homecard { background:var(--surface); border:1px solid var(--rule);
               border-top:3px solid var(--t3); padding:1.2rem 1.3rem; }
-  .homecard h4 { font-size:1.1rem; margin:.15rem 0 .5rem; }
+  .homecard .eyebrow { min-height:2.6em; display:flex; align-items:flex-start;
+                       justify-content:center; }
+  .homecard h4 { font-size:1.1rem; margin:.15rem 0 .5rem; min-height:2.6rem;
+                 display:flex; align-items:flex-start; justify-content:center; }
   .homecard h4 a { text-decoration:none; }
   .homecard h4 a:hover { text-decoration:underline; }
   .homecard p { font-family:var(--sans); font-size:.87rem; color:var(--ink-2);
@@ -1291,6 +1298,9 @@
       </ul>
       <p>If your money or your time is better placed with another group working on
         neglected species, place it there instead. The point is the species, not us.</p>
+      <p class="gidonate"><a class="bigbtn donate"
+        href="https://biodiversitygroup.org/donate/" target="_blank"
+        rel="noopener">Donate to The Biodiversity Group</a></p>
     </div>
 
     <div class="giend">
