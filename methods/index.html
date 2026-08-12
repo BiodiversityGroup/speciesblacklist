@@ -226,7 +226,7 @@
      item whose button fills it puts every label on one baseline. */
   .navgroup { position:relative; display:flex; align-items:stretch; }
   .navitem { line-height:1.45; }
-  .navtoggle { font-family:inherit; font-size:1rem; line-height:1.45;
+  .navtoggle { font-family:var(--sans); font-size:1rem; line-height:1.45;
                display:flex; align-items:center; }
   .navtoggle .caret { font-size:.7em; margin-left:.35em; display:inline-block;
                       transition:transform .15s; }
@@ -569,9 +569,11 @@
   .gistep li { margin:.35rem 0; }
   /* A ready-to-paste post, set apart so it is obviously a quotable block and not
      the page talking. */
+  .gilead { text-align:center; }
   .gipost { background:var(--ground); border:1px dashed var(--rule-2);
-            padding:1rem 1.2rem; margin:.9rem 0 .3rem; font-family:var(--sans);
-            font-size:.88rem; color:var(--ink); line-height:1.6; }
+            padding:1.2rem 1.4rem; margin:.9rem auto .3rem; font-family:var(--sans);
+            font-size:.88rem; color:var(--ink); line-height:1.6;
+            text-align:center; max-width:52ch; }
   .gipost p { margin:0 0 .6rem; font-family:var(--sans); color:var(--ink); }
   .gipost p:last-child { margin:0; }
   /* Share row. Each is a plain link to the network's own compose URL, so no third-party
@@ -1898,11 +1900,26 @@ function renderLongest() {
    where nobody thinks to tap a heading. */
 let nightOn = false, nightBuf = "";
 
+/* Species already shown this session, so the pool is drawn down rather than sampled with
+   replacement. Twelve records repeated fast; a hundred sampled naively still repeats far
+   sooner than you would expect, because a random draw from 100 hits a duplicate about
+   half the time within 12 picks. */
+let nightSeen = new Set();
+
 function nightSpecies() {
-  // The real oldest records, so the card is never fiction. Falls back to the two TBG
-  // rediscoveries if lost.json has not loaded -- an easter egg must not be able to
-  // show an empty card.
-  const o = (LOST && LOST.oldest) || [];
+  // Real records, so the card is never fiction. The 100-species pool is built across
+  // groups by 20_build_lost_page.py; `oldest` is the twelve-record fallback and the two
+  // TBG rediscoveries the last resort, because an easter egg must never show an empty
+  // card.
+  const pool = (LOST && (LOST.night || LOST.oldest)) || [];
+  const fresh = pool.filter(s => !nightSeen.has(s.sp));
+  if (fresh.length) {
+    const pick = fresh[Math.floor(Math.random() * fresh.length)];
+    nightSeen.add(pick.sp);
+    return pick;
+  }
+  nightSeen = new Set();                       // seen them all; start the pool again
+  const o = pool;
   if (o.length) return o[Math.floor(Math.random() * o.length)];
   return {sp: "Emmochliophis fugleri", common: "Fugler's Shadow Snake",
           last: 1966, range: "Ecuador"};
