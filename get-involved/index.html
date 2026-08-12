@@ -2901,18 +2901,38 @@ const stamped = p => p + "?v=" + encodeURIComponent(DATA.meta.built);
    leave a way back that is not "reload the page". No fallback to a cached copy, because
    these counts are revalidated against the register on purpose and quietly serving stale
    figures would be worse than saying the load failed. */
+/* A notice that cannot itself throw. #counts is on the register cluster and nowhere else,
+   so the previous handler was a second landmine: on the six routes without it, the attempt
+   to report a failure failed, and the page went silent instead. */
+function dataNote(html) {
+  const el = $("#counts");
+  if (el) el.innerHTML = '<div class="count"><span>' + html + "</span></div>";
+}
+
 function loadData() {
-  return getJSON("/data.json")            // getJSON owns the retrying; this owns giving up
-    .then(d => { DATA = d; boot(); })
-    .catch(err => {
-      $("#counts").innerHTML =
-        '<div class="count"><span>Could not load the figures (' + esc(err.message || err)
-        + '). <button type="button" class="chip" id="dataretry">Try again</button></span></div>';
-      $("#dataretry").addEventListener("click", () => {
-        $("#counts").innerHTML = '<div class="count"><span>Loading</span></div>';
-        loadData();
-      });
-    });
+  return getJSON("/data.json").then(       // getJSON owns the retrying
+    d => {
+      DATA = d;
+      /* boot() is deliberately NOT inside the load's rejection path. While it was, a null
+         element inside boot() surfaced as "could not load data.json", which is what sent
+         two debugging passes at the network and the file path while the real fault was a
+         missing element on nine of ten routes. A render fault must never be able to
+         impersonate a load fault. */
+      try {
+        boot();
+      } catch (e) {
+        console.error("boot() failed after data loaded:", e);
+        dataNote("Loaded, but some figures could not be drawn ("
+                 + esc(e.message || e) + ").");
+      }
+    },
+    err => {
+      dataNote("Could not load the figures (" + esc(err.message || err)
+               + '). <button type="button" class="chip" id="dataretry">Try again</button>');
+      const b = $("#dataretry");
+      if (b) b.addEventListener("click", () => { dataNote("Loading"); loadData(); });
+    }
+  );
 }
 loadData();
 
@@ -2923,6 +2943,64 @@ function boot() {
      seven places here and in five scripts, and a partial edit is exactly how
      tier 3 ended up in both sides of a 2x2 during the move to 3-5. */
   PRI = c.priority_tier || 4;
+
+  /* WHICH SECTIONS THIS PAGE ACTUALLY HAS.
+     boot() was written when every section was present in every page. Once routes began
+     being stripped to the sections they need, boot() kept writing to all of them and died
+     on the first element it could not find: $("#counts") on six routes, $("#tierTable") on
+     the register cluster. Everything after the throw never ran, on every page of the site,
+     which is why the build stamp was missing from every footer. It looked like a data
+     problem purely because the old catch reported every failure as "could not load
+     data.json", so the true cause was invisible for as long as that message stood. */
+  const HAS_REGISTER = !!$("#counts");    // overview, black-list, register, map, sites
+  const HAS_METHODS = !!$("#valprose");   // methods
+
+  // Written before either branch can return, because every route has a footer.
+  $("#builtline").textContent =
+    `Register built ${m.built} against IUCN Red List v${m.redlist_version}, `
+    + `accessed ${m.redlist_accessed}. `
+    + `${DATA.species.length.toLocaleString()} species accounts. `
+    + `Anyone re-checking a claim against a later Red List release should expect `
+    + `movement: that movement is the point.`;
+
+  if (HAS_METHODS) {
+    $("#tierTable tbody").innerHTML = [5, 4, 3, 2, 1].map(t => `
+      <tr><td>${t}${t >= PRI ? " ·&nbsp;priority" : ""}</td><td>${esc(DATA.tiers[t])}</td>
+      <td class="num">${(DATA.tier_counts[t] || 0).toLocaleString()}</td></tr>`).join("");
+
+    $("#valprose").innerHTML = `Taken as one undifferentiated group, the
+      <span class="num">${v.all.n}</span> reassessed species proved threatened at
+      <strong>${v.all.rate}%</strong> — indistinguishable from the ordinary all-species
+      rate of about ${v.baseline_all_species}%. Split by restriction, the priority
+      stratum proved threatened at <strong>${v.high.rate}%</strong>
+      (${v.high.threatened}/${v.high.n}) against <strong>${v.low.rate}%</strong>
+      (${v.low.threatened}/${v.low.n}) for the rest.`;
+
+    /* --- geocode verification figures, read from geo.json rather than typed in.
+           Hardcoded, these drifted the moment the geocoder was re-run (315/89/119 in
+           the prose vs 317/88/118 in the data), which is the same class of error the
+           cross-check exists to catch. Only fetched on the page that has the table. --- */
+    const n = x => (x || 0).toLocaleString();
+    $("#geoCompound").textContent = n(c.compound_localities);
+    getJSON(stamped("/geo.json")).then(g => {
+      const k = g.check || {}, st = g.stats || {};
+      const cand = Object.values(st).reduce((a, b) => a + b, 0);
+      // everything the type/extent checks refused: wrong class, no acceptable result,
+      // or a bounding box too large for a centroid to mean anything
+      const rej = cand - (st.verified || 0) - (st["no-type-expectation"] || 0);
+      $("#geoCandidates").textContent = n(cand);
+      $("#geoRejected").textContent = n(rej);
+      $("#geoValidated").textContent = n(k.validated);
+      $("#geoContradicted").textContent = n(k.contradicted);
+      $("#geoUnverified").textContent = $("#geoUnverified2").textContent = n(k.unverified);
+      $("#geoNewly").textContent = n(g.newly_placed);
+    }).catch(() => {});
+  }
+
+  /* Everything past here writes to the register cluster, which the other five routes and
+     the landing page do not carry. showView() already ran at load, outside boot(), so
+     returning here leaves nothing unrendered. */
+  if (!HAS_REGISTER) return;
 
   /* --- counts ---
      THE LEAD TILE IS THE REGISTER'S SIZE, NOT THE SIZE OF THE PROBLEM. It briefly read
@@ -2940,28 +3018,6 @@ function boot() {
     [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
-
-  /* --- geocode verification figures, read from geo.json rather than typed in.
-         Hardcoded, these drifted the moment the geocoder was re-run (315/89/119 in
-         the prose vs 317/88/118 in the data), which is the same class of error the
-         cross-check exists to catch. Only fetched on the page that has the table. --- */
-  if ($("#geoValidated")) {
-    const n = x => (x || 0).toLocaleString();
-    $("#geoCompound").textContent = n(c.compound_localities);
-    getJSON(stamped("/geo.json")).then(g => {
-      const k = g.check || {}, st = g.stats || {};
-      const cand = Object.values(st).reduce((a, b) => a + b, 0);
-      // everything the type/extent checks refused: wrong class, no acceptable result,
-      // or a bounding box too large for a centroid to mean anything
-      const rej = cand - (st.verified || 0) - (st["no-type-expectation"] || 0);
-      $("#geoCandidates").textContent = n(cand);
-      $("#geoRejected").textContent = n(rej);
-      $("#geoValidated").textContent = n(k.validated);
-      $("#geoContradicted").textContent = n(k.contradicted);
-      $("#geoUnverified").textContent = $("#geoUnverified2").textContent = n(k.unverified);
-      $("#geoNewly").textContent = n(g.newly_placed);
-    }).catch(() => {});
-  }
 
   /* --- validation dot plot: one axis, 0–80%, baseline reference --- */
   const MAX = 80, pos = x => (x / MAX * 100) + "%";
@@ -3062,25 +3118,6 @@ function boot() {
     <p class="note">The tier measures only how narrow the published record is. Tiers 4
       and 5 are the stratum whose ranking was tested against IUCN's own reassessments,
       where 52.6% proved threatened against 20.2% for the rest.</p>`;
-
-  $("#tierTable tbody").innerHTML = [5, 4, 3, 2, 1].map(t => `
-    <tr><td>${t}${t >= PRI ? " ·&nbsp;priority" : ""}</td><td>${esc(DATA.tiers[t])}</td>
-    <td class="num">${(DATA.tier_counts[t] || 0).toLocaleString()}</td></tr>`).join("");
-
-  $("#valprose").innerHTML = `Taken as one undifferentiated group, the
-    <span class="num">${v.all.n}</span> reassessed species proved threatened at
-    <strong>${v.all.rate}%</strong> — indistinguishable from the ordinary all-species
-    rate of about ${v.baseline_all_species}%. Split by restriction, the priority
-    stratum proved threatened at <strong>${v.high.rate}%</strong>
-    (${v.high.threatened}/${v.high.n}) against <strong>${v.low.rate}%</strong>
-    (${v.low.threatened}/${v.low.n}) for the rest.`;
-
-  $("#builtline").textContent =
-    `Register built ${m.built} against IUCN Red List v${m.redlist_version}, `
-    + `accessed ${m.redlist_accessed}. `
-    + `${DATA.species.length.toLocaleString()} species accounts. `
-    + `Anyone re-checking a claim against a later Red List release should expect `
-    + `movement: that movement is the point.`;
 
   const cs = $("#fClass");
   Object.keys(DATA.classes).forEach(k =>
