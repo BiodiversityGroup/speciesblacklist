@@ -534,6 +534,18 @@
                 box-shadow:0 0 12px 3px rgba(255,214,120,.55); cursor:none; }
   #night .eye.lit { opacity:1; }
   #night .eye.gone { opacity:0 !important; transform:scale(.3); transition:all .35s; }
+  /* A visible way out. Esc alone is not an exit on a phone, and an overlay a touch user
+     cannot dismiss is a trap, not a joke. Sits top-right, the conventional place, with a
+     44px minimum touch target. */
+  #nightExit { position:fixed; top:.9rem; right:.9rem; z-index:903;
+               display:none; min-height:44px; padding:.6rem 1.1rem;
+               font-family:var(--sans); font-size:.85rem; font-weight:600;
+               color:#f4e6c8; background:rgba(24,20,14,.82); cursor:pointer;
+               border:1px solid rgba(244,230,200,.42); border-radius:3px; }
+  #nightExit.on { display:block; }
+  #nightExit:hover, #nightExit:focus-visible { background:rgba(52,42,26,.94);
+                                               color:#fff5e0; }
+
   /* Hint and card are SIBLINGS of #night, not children: nightOpen() rebuilds the
      overlay's innerHTML on every run, which wiped the hint when it lived inside.
      They therefore need their own stacking above the 900 the overlay sits at. */
@@ -2313,6 +2325,7 @@
 <!-- Night survey overlay. Inert and invisible until the easter egg is opened; it sits
      outside every view because it covers the whole viewport, not one section. -->
 <div id="night" aria-hidden="true"></div>
+<button type="button" id="nightExit">Turn the lights on</button>
 <div id="nightHint" style="display:none"></div>
 <div id="nightCard" role="dialog" aria-modal="true" aria-label="Rediscovered"></div>
 
@@ -2326,18 +2339,23 @@ const esc = s => String(s ?? "").replace(/[&<>"]/g, c =>
    change the way the rest of the page does — it has to be repainted explicitly,
    both when the toggle is used and when the OS preference flips underneath us. */
 /* The theme button is also the way into the night survey -- see nightOpen(). It is the
-   one control almost every visitor eventually presses, and somebody who presses it
-   repeatedly is asking how dark this can get, which is the joke. A single press, or
-   presses more than 1.4s apart, behave exactly as they always did; only a fourth rapid
-   one in a row opens it, so nobody who just wants dark mode can trip over it. */
+   one control almost every visitor eventually presses, and somebody double-tapping it is
+   asking how dark this can get, which is the joke.
+
+   WHY THE WINDOW IS THIS SHORT. The cycle is auto -> light -> dark, so reaching dark mode
+   from the default takes TWO presses. A generous window would therefore fire this on
+   nearly every visitor who simply wants dark mode -- which is not an easter egg, it is a
+   control taken away from them. 550 ms distinguishes a deliberate double-tap from two
+   considered presses; a slower pair still just changes the theme. */
 let themeClicks = 0, themeClickAt = 0;
+const NIGHT_DOUBLE_TAP_MS = 550;
 
 $("#theme").onclick = () => {
   const now = Date.now();
-  themeClicks = (now - themeClickAt < 1400) ? themeClicks + 1 : 1;
+  themeClicks = (now - themeClickAt < NIGHT_DOUBLE_TAP_MS) ? themeClicks + 1 : 1;
   themeClickAt = now;
   const r = document.documentElement;
-  if (themeClicks >= 4) {
+  if (themeClicks >= 2) {
     themeClicks = 0;
     r.setAttribute("data-theme", "dark");   // the reveal only reads right in the dark
     repaintCanvases();
@@ -2637,9 +2655,12 @@ function nightOpen() {
   }
   $("#nightHint").textContent = "";
   $("#nightHint").innerHTML =
-    "You are looking for <b>eyeshine</b>. Move the torch slowly. "
-    + "<span style=\"opacity:.7\">Esc to turn the lights back on.</span>";
+    "You are looking for <b>eyeshine</b>. Move the torch slowly.";
   $("#nightHint").style.display = "";
+  // The exit is a real button rather than a keystroke: a phone has no Esc key, and an
+  // overlay a touch user cannot dismiss is a trap rather than a joke.
+  $("#nightExit").classList.add("on");
+  $("#nightExit").focus();
   el.onpointermove = ev => {
     el.style.setProperty("--nx", ev.clientX + "px");
     el.style.setProperty("--ny", ev.clientY + "px");
@@ -2678,7 +2699,8 @@ function nightReveal(s, found, total) {
   };
   card.classList.add("show");
   if (found >= total) {
-    $("#nightHint").innerHTML = "That is all of them. <b>Keep looking</b> to stop.";
+    $("#nightHint").innerHTML =
+      "That is all of them. <b>Turn the lights on</b> when you are done.";
   }
 }
 
@@ -2688,7 +2710,9 @@ function nightClose() {
   $("#night").onpointermove = null;
   $("#nightCard").classList.remove("show");
   $("#nightHint").style.display = "none";
+  $("#nightExit").classList.remove("on");
 }
+$("#nightExit").addEventListener("click", ev => { ev.stopPropagation(); nightClose(); });
 
 addEventListener("keydown", ev => {
   if (ev.key === "Escape" && nightOn) { nightClose(); return; }
