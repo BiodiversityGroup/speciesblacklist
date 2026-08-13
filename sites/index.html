@@ -822,7 +822,15 @@
   /* ---- stakes, stated on the first screen ------------------------------- */
   /* This was previously the last section of the deepest page. It is the reason
      the register exists, so it now sits directly under the lede. */
-  .stakes { margin:var(--s4) 0 0; border-left:3px solid var(--accent);
+  /* MEASURED TO MATCH .prose, which is the reading column everywhere else on this page.
+     This block had no max-width at all, so it ran the full 1180px wrap while the lede above
+     it sat at 56ch and the blocks below at 60-66ch: one paragraph nearly twice the width of
+     its neighbours. box-sizing is border-box, so the 66ch has to carry the padding and the
+     border with it, or the text inside would come out narrower than the prose it is lining
+     up with. */
+  .stakes { margin:var(--s4) auto 0;
+            max-width:calc(66ch + 2 * var(--s3) + 3px);
+            border-left:3px solid var(--accent);
             /* symmetric horizontal padding, or the centered heading sits ~14px
                right of the section's center line */
             padding:var(--s1) var(--s3); }
