@@ -1353,7 +1353,7 @@
       </div>
 
       <div class="field-head">
-        <p class="eyebrow">Every species in the register, one mark each</p>
+        <p class="eyebrow">Every species on the Black List, one mark each</p>
       </div>
       <p class="field-note" style="margin-bottom:.6rem">Where these species are in the
         world is on the <a href="/map/" data-goto="map">map</a>, and the places holding
@@ -1362,7 +1362,7 @@
       <canvas id="field" role="img"
               aria-label="A dense field of marks, one for each of the 2,407 species in
               the register, shaded by how narrowly restricted its published record is.
-              The same data is listed in full under The register tab."></canvas>
+              The same data is listed in full under Browse all species."></canvas>
       <p class="field-note">Hover a mark to name the species; select one to open its
         record. How the tiers were built and tested, and what the ranking cannot tell you,
         is set out in <a href="/methods/" data-goto="methods">methods and limits</a>.</p>
@@ -1453,7 +1453,7 @@
 
   <div class="filters">
     <input type="search" id="q" placeholder="Search name, species, or locality&hellip;"
-           aria-label="Search the register">
+           aria-label="Search the Black List">
     <select id="fClass" aria-label="Filter by class"><option value="">All classes</option></select>
     <select id="fList" aria-label="Filter by list">
       <option value="">Both lists</option>
@@ -1507,7 +1507,7 @@
       recorded, for every record that carries map coordinates. The data comes from GBIF,
       a global archive of biodiversity records. Switch layers to isolate a single
       restriction tier or view them together. <strong>Select any shaded cell or ring to
-      open its species in the register.</strong> Scroll or pinch to zoom, drag to
+      open its species in the Black List.</strong> Scroll or pinch to zoom, drag to
       pan; cells subdivide as you zoom in, so finer clusters resolve rather than
       the same blocks getting bigger.</p>
   </div>
@@ -1574,7 +1574,7 @@
     than once in the world and one of which occurs twice in this book. The rest were
     recovered from the species' own records, where the place is named in the entry
     itself; those lines say so. Nothing here is geocoded or inferred. Select a locality
-    to open its species in the register.</p>
+    to open its species in the Black List.</p>
   <div id="siteList"></div>
 
   <h3 class="siteshead">Habitat types</h3>
@@ -3312,9 +3312,10 @@ function boot() {
     [(c.iucn_dd_vertebrates || 8659).toLocaleString(),
      "vertebrates the Red List records as Data Deficient, not counting the thousands it "
      + "has not yet assessed"],
-    [(c.dd + c.ne).toLocaleString(), "of them are in this register"],
+    [(c.dd + c.ne).toLocaleString(), "of them are on this Black List"],
+    // Parallel breakdowns of the tile above, so neither needs to name the list again.
     [c.dd.toLocaleString(), "Data Deficient"],
-    [String(c.ne), "in the register not yet assessed"],
+    [String(c.ne), "not yet assessed"],
     [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");

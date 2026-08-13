@@ -3129,9 +3129,10 @@ function boot() {
     [(c.iucn_dd_vertebrates || 8659).toLocaleString(),
      "vertebrates the Red List records as Data Deficient, not counting the thousands it "
      + "has not yet assessed"],
-    [(c.dd + c.ne).toLocaleString(), "of them are in this register"],
+    [(c.dd + c.ne).toLocaleString(), "of them are on this Black List"],
+    // Parallel breakdowns of the tile above, so neither needs to name the list again.
     [c.dd.toLocaleString(), "Data Deficient"],
-    [String(c.ne), "in the register not yet assessed"],
+    [String(c.ne), "not yet assessed"],
     [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
