@@ -1345,7 +1345,7 @@
       <p class="eyebrow">The core list</p>
       <h4><a href="/black-list-overview/" data-goto="overview">The Black List</a></h4>
       <p>Species that the IUCN Red List has assessed and been unable to categorize, or
-        has never assessed at all, ranked by how narrowly restricted the published record
+        has not yet assessed, ranked by how narrowly restricted the published record
         says they are. If a species here turns out to be in trouble, this is where you
         would have seen it first. This page is aimed mostly at researchers and IUCN
         members.</p>
@@ -3023,10 +3023,14 @@ function boot() {
   const D = m.duration;
   if ($("#overdueHead") && D && D.n_overdue && D.n_ge_20) {
     $("#overdueHead").innerHTML =
-      `<strong>${D.n_overdue.toLocaleString()}</strong> species have sat in Data Deficient `
-      + `longer than the ${D.median_time_to_resolution} years IUCN typically takes to `
-      + `resolve one. <strong>${D.n_ge_20.toLocaleString()}</strong> have waited twenty `
-      + `years or more.`;
+      /* "have sat in" and "IUCN typically takes" put IUCN in the dock as the subject of the
+         sentence. Same figures, same force, but the subject is the listing rather than the
+         institution: this site's argument is that the gap is large and unattended, not that
+         anybody is at fault for it. */
+      `<strong>${D.n_overdue.toLocaleString()}</strong> species have been Data Deficient `
+      + `for longer than the ${D.median_time_to_resolution} years such a listing usually `
+      + `takes to resolve. <strong>${D.n_ge_20.toLocaleString()}</strong> have waited `
+      + `twenty years or more.`;
   }
 
   if (HAS_METHODS) {
@@ -3117,12 +3121,17 @@ function boot() {
      is defensible from the site's own work: 2,345 reptiles have no Red List entry at all,
      and 1,729 reptiles plus 974 amphibians described since 2015 have never been assessed. */
   $("#counts").innerHTML = [
+    /* "at all" twice over read as a dig at IUCN, which is not the argument. The point is
+       that the gap is large and that the register covers a slice of it, and that reads
+       better without an edge on it. "Not yet assessed" is also the more accurate tense:
+       IUCN's own category is Not Evaluated, and assessment is ongoing work rather than a
+       refusal. */
     [(c.iucn_dd_vertebrates || 8659).toLocaleString(),
-     "vertebrates the Red List records as Data Deficient, plus thousands more it has "
-     + "never assessed at all"],
+     "vertebrates the Red List records as Data Deficient, not counting the thousands it "
+     + "has not yet assessed"],
     [(c.dd + c.ne).toLocaleString(), "of them are in this register"],
     [c.dd.toLocaleString(), "Data Deficient"],
-    [String(c.ne), "never assessed by IUCN at all"],
+    [String(c.ne), "in the register not yet assessed"],
     [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
