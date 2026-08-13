@@ -1512,6 +1512,34 @@
       the same blocks getting bigger.</p>
   </div>
 
+  <!-- ORDER: controls, map, legend, count, caveats. The map used to sit fourth, under two
+       blocks of qualification, so a reader arriving on this page met the warnings before
+       the thing being warned about. The layer buttons stay above it because they operate
+       it; everything that qualifies what the map shows now sits underneath, where it reads
+       as a footnote to something you have already looked at. -->
+  <div class="mapsource" style="margin-top:var(--s3)">
+    <span class="eyebrow">Show</span>
+    <button id="srcGbif"  aria-pressed="true">Specimen records</button>
+    <button id="srcLoc"   aria-pressed="true">Localities (cross-checked)</button>
+    <button id="srcLocU"  aria-pressed="false">+ unverified localities</button>
+  </div>
+  <div class="maplayers" id="mapLayers"></div>
+
+  <div class="mapwrap">
+    <div class="mapzoom">
+      <button id="zIn"    aria-label="Zoom in">+</button>
+      <button id="zOut"   aria-label="Zoom out">&minus;</button>
+      <button id="zReset" aria-label="Reset zoom" title="Reset">Reset</button>
+    </div>
+    <canvas id="mapCanvas" role="img"
+            aria-label="World map shading where records of these species carry map
+            coordinates. The same data is available as a table under Browse all
+            species."></canvas>
+  </div>
+  <div class="maplegend" id="mapLegend"></div>
+  <p class="mapstats" id="mapStats"></p>
+  <p class="mapcaveat" id="mapCaveat"></p>
+
   <div class="warn" style="margin-top:var(--s3)">
     <!-- The old heading compressed this into a phrase about sampling bias and left the
          reader to unpack it. The paragraph under it already says the thing plainly, so the
@@ -1527,29 +1555,6 @@
       flagged coordinate errors are excluded, but some survive. That is why this shows
       density rather than authoritative dots.</p>
   </div>
-
-  <div class="mapsource">
-    <span class="eyebrow">Show</span>
-    <button id="srcGbif"  aria-pressed="true">Specimen records</button>
-    <button id="srcLoc"   aria-pressed="true">Localities (cross-checked)</button>
-    <button id="srcLocU"  aria-pressed="false">+ unverified localities</button>
-  </div>
-  <p class="mapcaveat" id="mapCaveat"></p>
-  <div class="maplayers" id="mapLayers"></div>
-
-  <div class="mapwrap">
-    <div class="mapzoom">
-      <button id="zIn"    aria-label="Zoom in">+</button>
-      <button id="zOut"   aria-label="Zoom out">&minus;</button>
-      <button id="zReset" aria-label="Reset zoom" title="Reset">Reset</button>
-    </div>
-    <canvas id="mapCanvas" role="img"
-            aria-label="World map shading where records of the species in this register
-            carry map coordinates. The same data is available as a table under The
-            Register."></canvas>
-  </div>
-  <div class="maplegend" id="mapLegend"></div>
-  <p class="mapstats" id="mapStats"></p>
   <div id="mapTip" aria-hidden="true"></div>
 </section>
 <section class="view wrap" id="v-sites" hidden>
