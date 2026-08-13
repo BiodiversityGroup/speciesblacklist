@@ -963,6 +963,9 @@
   .chip.clear:hover { background:var(--t4); color:var(--ground); border-style:solid; }
   :root[data-theme="dark"] .chip[aria-pressed="true"],
   :root:not([data-theme="light"]) .chip[aria-pressed="true"] { color:var(--ground); }
+  .noresults { font-family:var(--sans); font-size:.92rem; line-height:1.6;
+               color:var(--ink-2); background:var(--surface); border:1px solid var(--t3);
+               padding:1rem 1.2rem; margin:var(--s2) 0; text-align:center; }
   .resultline { font-family:var(--sans); font-size:.8rem; color:var(--ink-3);
                 padding:.8rem 0; display:flex; gap:1rem; flex-wrap:wrap; }
 
@@ -1248,9 +1251,14 @@
     <button class="navitem navtoggle" type="button" aria-expanded="false"
             aria-controls="navm-blacklist">The Black List <span class="caret"
             aria-hidden="true">&#9662;</span></button>
+    <!-- Both children used to repeat a label from elsewhere in the same bar: "The Black
+         List" inside a group called "The Black List", and "Overview" beside the top-level
+         "Overview" that goes somewhere else entirely. A reader cannot tell which one they
+         want from a menu that names two different pages the same thing. The group keeps the
+         name; the children say what they are. -->
     <div class="navmenu" id="navm-blacklist" hidden>
-      <a href="/black-list-overview/" data-v="overview">Overview</a>
-      <a href="/the-black-list/" data-v="register">The Black List</a>
+      <a href="/black-list-overview/" data-v="overview">What this is</a>
+      <a href="/the-black-list/" data-v="register">Browse all species</a>
       <a href="/map/" data-v="map">Map</a>
       <a href="/sites/" data-v="sites">Localities</a>
       <a href="/methods/" data-v="methods">Methods &amp; Limits</a>
@@ -4058,8 +4066,15 @@ function apply() {
     (!pri || s.t >= PRI) && (!sil || s.sil) &&
     (!siteFilter || s.s === siteFilter) &&
     (!cellFilter || cellFilter.has(s.n)) &&
+    /* s.iucn IS SEARCHED, and its absence was a silent miss aimed straight at the people
+       this page is for. Searching "Pterocryptis indica", IUCN's accepted spelling, returned
+       nothing, while the record sat there under the book's "Pterocryptis indicus" with a
+       detail field literally headed "As IUCN records it". An assessor types the accepted
+       name, gets zero results, and concludes the species is not in the register. Twelve
+       species differ that way. */
     (!q || s.n.toLowerCase().includes(q) || (s.v || "").toLowerCase().includes(q)
-        || (s.s || "").toLowerCase().includes(q)));
+        || (s.s || "").toLowerCase().includes(q)
+        || (s.iucn || "").toLowerCase().includes(q)));
   sortRows(rows);
   markSortHeaders();
   shown = 0;
@@ -4099,17 +4114,60 @@ function draw(append) {
   shown += slice.length;
   $("#more").hidden = shown >= rows.length;
   $("#more").textContent = `Show more (${(rows.length - shown).toLocaleString()} remaining)`;
+  /* "20 species match" beside "Gulf of California holds 19" on the Localities page reads as
+     two answers to one question. Both are right and they count different things: 19 are
+     RECORDED there, and the twentieth is Sebastes peduncularis, whose common name is "Gulf
+     of California rockfish". Saying which fields were searched makes the difference legible
+     instead of looking like sloppiness on a site that invites people to check it. */
+  const searched = $("#q").value.trim()
+    ? ' <span>matched on scientific name, common name, IUCN name or locality</span>' : "";
   $("#resultline").innerHTML =
     `<span><strong class="num">${rows.length.toLocaleString()}</strong> species match</span>
      <span>showing ${shown.toLocaleString()}</span>
-     <span class="num">${rows.filter(r => r.t >= PRI).length.toLocaleString()} in the priority stratum</span>`;
+     <span class="num">${rows.filter(r => r.t >= PRI).length.toLocaleString()} in the priority stratum</span>`
+    + searched;
+
+  /* A zero-result screen used to be an empty table, an empty header and a "Show more (0
+     remaining)" button, which tells a reader nothing. Zero results is exactly where the
+     user is more likely to be wrong than the data, so it now says what to try. */
+  const none = $("#noresults");
+  if (none) {
+    none.hidden = rows.length !== 0;
+    if (!rows.length) {
+      none.innerHTML = $("#q").value.trim()
+        ? `Nothing matches <strong>${esc($("#q").value.trim())}</strong> with the filters
+           you have set. Try the genus on its own, or the name IUCN uses if it differs from
+           the one in the book, or <button type="button" class="chip" id="nrClear">clear
+           the filters</button>.`
+        : `No species match these filters.
+           <button type="button" class="chip" id="nrClear">Clear the filters</button>`;
+      const b = $("#nrClear");
+      if (b) b.onclick = resetFilters;
+    }
+  }
 }
 
-/* row -> detail, toggled in place */
-$("#tbody").addEventListener("click", e => toggle(e.target.closest("tr.sp")));
-$("#tbody").addEventListener("keydown", e => {
-  if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(e.target.closest("tr.sp")); }
-});
+/* row -> detail, toggled in place.
+
+   GUARDED, because this is top-level code and #tbody exists only on the register cluster.
+   On the other six routes it threw "Cannot read properties of null", and a throw at the top
+   level stops the rest of the script: everything declared after this point never ran on
+   /methods/, /new-species/, /lost-species/, /rediscoveries/, /get-involved/ or the home
+   page. It surfaced as a console error a reviewer noticed, which is lucky, because the
+   damage was silent.
+
+   17_check_dom_contract.py did not catch this: it walked boot() and the functions boot()
+   calls, and this is neither. It now checks top-level statements too. */
+const TB = $("#tbody");
+if (TB) {
+  TB.addEventListener("click", e => toggle(e.target.closest("tr.sp")));
+  TB.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      toggle(e.target.closest("tr.sp"));
+    }
+  });
+}
 
 function toggle(tr) {
   if (!tr) return;
