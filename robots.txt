@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://speciesblacklist.org/sitemap.xml
+Sitemap: https://speciesblacklist.org/sitemap-species.xml

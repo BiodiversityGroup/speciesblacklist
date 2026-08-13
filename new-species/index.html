@@ -4128,6 +4128,12 @@ function toggle(tr) {
       <div><span>Status</span>${s.l === "ne" ? "Never assessed" : "Data Deficient"}</div>
       <div><span>Restriction tier</span>${s.t} — ${esc(s.b)}</div>
       <div><span>Locality</span>${esc(s.s || "not specified")}</div>
+      <!-- The permanent, shareable, crawlable address for this record. The register table
+           is built in JS, so before these pages existed a crawler fetching /the-black-list/
+           got nav and footer and not one of the 3,062 names. -->
+      <div><span>This species</span>
+        <a href="/species/${s.n.toLowerCase().replace(/[^a-z0-9]+/g, "-")
+                             .replace(/^-|-$/g, "")}/">permanent page</a></div>
       <div><span>Look up</span>
         <!-- Search on the name the REGISTRY uses, not the one the book prints. Twelve
              species differ, usually on gender agreement: the book has Pterocryptis
