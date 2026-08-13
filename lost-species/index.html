@@ -963,6 +963,20 @@
   .chip.clear:hover { background:var(--t4); color:var(--ground); border-style:solid; }
   :root[data-theme="dark"] .chip[aria-pressed="true"],
   :root:not([data-theme="light"]) .chip[aria-pressed="true"] { color:var(--ground); }
+  /* The rotating headline. min-height so the hero does not jump as the sentences change
+     length, and a fade rather than a slide because the thing moving is a paragraph of
+     text and sliding text is harder to start reading. */
+  #overdueHead { transition:opacity .35s; min-height:4.2em; }
+  #overdueHead.fading { opacity:0; }
+  @media (min-width:700px) { #overdueHead { min-height:3.1em; } }
+  .statdots { display:flex; justify-content:center; gap:.45rem; margin:.2rem 0 0; }
+  .statdots button { width:9px; height:9px; padding:0; border-radius:50%;
+                     border:1px solid var(--ink-3); background:none; cursor:pointer;
+                     transition:background .2s,border-color .2s; }
+  .statdots button[aria-current="true"] { background:var(--t3); border-color:var(--t3); }
+  .statdots button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  @media (prefers-reduced-motion:reduce) { #overdueHead { transition:none; } }
+
   .noresults { font-family:var(--sans); font-size:.92rem; line-height:1.6;
                color:var(--ink-2); background:var(--surface); border:1px solid var(--t3);
                padding:1rem 1.2rem; margin:var(--s2) 0; text-align:center; }
@@ -3212,17 +3226,79 @@ function boot() {
      18_dd_duration.py actually computes: n_overdue counts species Data Deficient longer than
      the median time IUCN took to resolve the listings it did resolve, which is a comparison
      with IUCN's own record and not with any published deadline. */
-  const D = m.duration;
-  if ($("#overdueHead") && D && D.n_overdue && D.n_ge_20) {
-    $("#overdueHead").innerHTML =
-      /* "have sat in" and "IUCN typically takes" put IUCN in the dock as the subject of the
-         sentence. Same figures, same force, but the subject is the listing rather than the
-         institution: this site's argument is that the gap is large and unattended, not that
-         anybody is at fault for it. */
-      `<strong>${D.n_overdue.toLocaleString()}</strong> species have been Data Deficient `
-      + `for longer than the ${D.median_time_to_resolution} years such a listing usually `
-      + `takes to resolve. <strong>${D.n_ge_20.toLocaleString()}</strong> have waited `
-      + `twenty years or more.`;
+  /* THE ROTATING HEADLINE.
+     Every one of these is read from the payload, and every one is bounded by what the
+     pipeline actually computes. The wait stat states the benchmark first, because
+     "longer than the 16 years such a listing usually takes to resolve" made the reader
+     carry a clause before knowing what it measured against.
+
+     Nothing here says or implies that IUCN is at fault. The subject of each sentence is
+     the species or the record. */
+  const D = m.duration, n = x => (x || 0).toLocaleString();
+  const STATS = [];
+  if (D && D.n_overdue && D.median_time_to_resolution) {
+    STATS.push(`Most Data Deficient listings are resolved within
+      <strong>${D.median_time_to_resolution} years</strong>. <strong>${n(D.n_overdue)}</strong>
+      of these species have waited longer, and <strong>${n(D.n_ge_20)}</strong> for twenty
+      years or more.`);
+  }
+  if (D && D.n_reaffirmed) {
+    STATS.push(`<strong>${n(D.n_reaffirmed)}</strong> of these species have been assessed
+      more than once, and come back Data Deficient every time. Looking again is not the
+      same as finding out.`);
+  }
+  if (v && v.high && v.low) {
+    STATS.push(`Where the published record points to a very small range,
+      <strong>${v.high.rate}%</strong> of the species IUCN has since reassessed turned out
+      to be threatened, against <strong>${v.low.rate}%</strong> of the rest.`);
+  }
+  if (c.iucn_dd_vertebrates) {
+    /* c.dd, NOT c.dd + c.ne. 8,659 counts Data Deficient vertebrates, and the 31 never
+       assessed are by definition not among them, so "3,062 of them" claimed an overlap
+       that cannot exist. The subset has to be measured against the same denominator. */
+    STATS.push(`The Red List records <strong>${n(c.iucn_dd_vertebrates)}</strong>
+      vertebrates as Data Deficient, and thousands more it has not yet assessed.
+      <strong>${n(c.dd)}</strong> of them are ranked here.`);
+  }
+  if (c.priority_dd) {
+    STATS.push(`For <strong>${n(c.priority_dd)}</strong> of them the published range is
+      narrow enough that the Red List's own Criterion B ought to be evaluated. That is an
+      argument for looking, not a finding that they are threatened.`);
+  }
+
+  const head = $("#overdueHead"), dots = $("#statDots");
+  if (head && STATS.length) {
+    let at = 0, timer = null;
+    const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const show = i => {
+      at = (i + STATS.length) % STATS.length;
+      head.innerHTML = STATS[at];
+      if (dots) {
+        [...dots.children].forEach((b, k) =>
+          b.setAttribute("aria-current", k === at ? "true" : "false"));
+      }
+    };
+    const go = i => {
+      if (calm) return show(i);
+      head.classList.add("fading");
+      setTimeout(() => { show(i); head.classList.remove("fading"); }, 350);
+    };
+    if (dots) {
+      dots.hidden = false;
+      dots.innerHTML = STATS.map((_, k) =>
+        `<button type="button" aria-label="Figure ${k + 1} of ${STATS.length}"></button>`).join("");
+      [...dots.children].forEach((b, k) => b.onclick = () => { stop(); go(k); });
+    }
+    /* Auto-advance is off under prefers-reduced-motion, and stops for good on any
+       interaction: a headline that keeps moving while somebody is reading it is worse
+       than one that never moved. */
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+    show(0);
+    if (!calm) {
+      timer = setInterval(() => go(at + 1), 7000);
+      head.addEventListener("mouseenter", stop);
+      head.addEventListener("focusin", stop);
+    }
   }
 
   if (HAS_METHODS) {
