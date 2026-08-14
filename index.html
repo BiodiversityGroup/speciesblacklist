@@ -2392,7 +2392,11 @@ function attachHeatZoom(sel, view, redraw, ids) {
     {cv: "#nsCanvas", tip: "#nsTip", geom: () => nsGeom,
      noun: "species described since 2015 and never assessed"},
   ];
-  document.addEventListener("pointermove", ev => {
+  /* pointermove AND pointerdown. A tap is pointerdown then pointerup with no move
+     between them, so on a phone the tooltip only appeared if you pressed and dragged --
+     which Scott found by trying to tap a country and getting nothing. A map that answers a
+     drag but not a tap is broken on the device most people will use it on. */
+  const showTip = ev => {
     MAPS.forEach(m => {
       const t = $(m.tip), cv = $(m.cv), geom = m.geom();
       if (!t || !cv) return;
@@ -2429,10 +2433,24 @@ function attachHeatZoom(sel, view, redraw, ids) {
         + (p.oldest ? `<br>oldest last record ${p.oldest}` : "")
         + (p.newest ? `<br>most recent description ${p.newest}` : "");
       t.style.opacity = 1;
-      t.style.left = Math.min(ev.clientX + 14, innerWidth - 300) + "px";
-      t.style.top = (ev.clientY + 16) + "px";
+      /* A finger covers what it taps, so on touch the card goes ABOVE the point rather
+         than under it, and is clamped to the viewport so it cannot open off-screen. */
+      const touch = ev.pointerType === "touch";
+      // tw/th, not w/h: `h` is the hit found above and shadowing it here is a redeclare
+      // in the same block. node --check caught it; the browser would have thrown on load.
+      const tw = t.offsetWidth || 260, th = t.offsetHeight || 90;
+      t.style.left = Math.max(8, Math.min(ev.clientX + (touch ? -tw / 2 : 14),
+                                          innerWidth - tw - 8)) + "px";
+      // Above the finger, unless there is no room -- clamping to the top edge would put
+      // the card back UNDER the thumb, which is the thing this is avoiding. Tapping near
+      // the top of the screen drops it below instead.
+      let top = touch ? ev.clientY - th - 18 : ev.clientY + 16;
+      if (touch && top < 8) top = ev.clientY + 24;
+      t.style.top = Math.max(8, top) + "px";
     });
-  }, {passive: true});
+  };
+  document.addEventListener("pointermove", showTip, {passive: true});
+  document.addEventListener("pointerdown", showTip, {passive: true});
 })();
 
 /* Which shaded country contains this coordinate. Ray casting, with a bounding-box
