@@ -1350,9 +1350,8 @@
   <h3 class="siteshead">Where they are</h3>
   <p class="siteslede">All four classes on one map, in the same encoding as the
     lost-species map so the three can be read against each other: countries shaded by how
-    many of these species they hold, and a circle where a place is not a country. The
-    tables below list the reptiles and amphibians; the birds and mammals are on the map
-    only for now.</p>
+    many of these species they hold, and a circle where a place is not a country. The table
+    below lists all four classes together.</p>
   <div class="mapsource" style="justify-content:center">
     <span class="eyebrow">Show</span>
     <button id="nsClsAll"  aria-pressed="true">All</button>
@@ -1395,50 +1394,14 @@
       <em>what would it take to keep up at all</em>.</p>
   </div>
 
-  <div class="filters">
-    <input id="ampQ" type="search"
-           placeholder="Search amphibian species, family, country&hellip;"
-           aria-label="Search the amphibian list">
-    <select id="ampEv" aria-label="Filter by evidence of the gap"></select>
-    <select id="ampFam" aria-label="Filter by family"></select>
-    <select id="ampCty" aria-label="Filter by country"></select>
-  </div>
-  <p id="ampShowing" style="font-family:var(--sans);font-size:.82rem;
-     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
-  <div id="ampTable"></div>
-  <p class="siteslede" style="margin-top:.8rem">The reptile list carries two columns this
-    one cannot: a restriction tier and the finer locality detail behind it. Those are
-    derived from the Reptile Database's per-species distribution text, and AmphibiaWeb's
-    listing gives a country rather than a locality, so the columns are absent rather
-    than guessed. In their place is the describing publication, which the reptile list
-    has only as an authority string.</p>
 
-  <!-- BIRDS AND MAMMALS. A third table rather than columns bolted onto the two above:
-       neither IOC nor the Mammal Diversity Database publishes a locality statement, so
-       the restriction tier and the gap-evidence grade cannot be computed for them, and a
-       merged table would be two thirds empty cells across 385 rows. -->
-  <h3 class="siteshead">Birds and mammals</h3>
-  <p class="siteslede">Checked one by one against the Red List's own API rather than
-    through an intermediary, because the claim being made is that a species is absent
-    from it.</p>
-  <div class="filters">
-    <input id="bmQ" type="search"
-           placeholder="Search species, family, country&hellip;"
-           aria-label="Search the bird and mammal list">
-    <select id="bmCls" aria-label="Filter by class"></select>
-    <select id="bmFam" aria-label="Filter by family"></select>
-    <select id="bmCty" aria-label="Filter by country"></select>
-  </div>
-  <p id="bmShowing" style="font-family:var(--sans);font-size:.82rem;
-     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
-  <div id="bmTable"></div>
-  <p class="siteslede" style="margin-top:.8rem">Neither source grades how restricted a
-    range is, so those columns are absent rather than guessed. The countries are the full
-    list the source gives, which is why a species can appear here against several
-    countries while the map counts it in each of them. One mammal,
-    <i>Crocidura barapi</i>, is held off this list: GBIF reports it assessed while the Red
-    List holds no species under that name, and GBIF's link points at a different shrew
-    described in 2007.</p>
+  <p class="siteslede" style="margin-top:.8rem">Where a class's source states a range,
+    the extent column grades it; where it does not, the column says so rather than
+    guessing. AmphibiaWeb gives a country and never a locality, and the Mammal Diversity
+    Database gives a country list and no state-level range, so most amphibians and
+    mammals read "not stated". One mammal, <i>Crocidura barapi</i>, is held off the list
+    entirely: GBIF reports it assessed while the Red List holds no species under that
+    name, and GBIF's link points at a different shrew described in 2007.</p>
 
   <!-- ===================== WHERE THEY ARE ===================== -->
 
@@ -2888,17 +2851,6 @@ function mergedDraw() {
          — narrow the filters to see the rest. Newest descriptions first.</p>`
       : "");
 
-  /* The superseded tables are emptied and their controls hidden rather than deleted:
-     their loaders and payloads still feed this one and the map, and a merge should not
-     turn into a rewrite of three code paths on its way in. */
-  ["#ampTable", "#ampShowing", "#bmTable", "#bmShowing"].forEach(sel => {
-    const el = $(sel);
-    if (el) el.innerHTML = "";
-  });
-  ["#ampQ", "#bmQ"].forEach(sel => {
-    const e = $(sel), box = e && e.closest(".filters");
-    if (box) box.style.display = "none";
-  });
 }
 
 function mergedClassFilter() {
@@ -3152,6 +3104,7 @@ function ntBoot() {
   ).join("");
 
   const opt = (sel, blank, items) => {
+    if (!$(sel)) return;          // a control the merge removed
     $(sel).innerHTML = `<option value="">${blank}</option>` +
       items.map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
   };

@@ -2774,17 +2774,6 @@ function mergedDraw() {
          — narrow the filters to see the rest. Newest descriptions first.</p>`
       : "");
 
-  /* The superseded tables are emptied and their controls hidden rather than deleted:
-     their loaders and payloads still feed this one and the map, and a merge should not
-     turn into a rewrite of three code paths on its way in. */
-  ["#ampTable", "#ampShowing", "#bmTable", "#bmShowing"].forEach(sel => {
-    const el = $(sel);
-    if (el) el.innerHTML = "";
-  });
-  ["#ampQ", "#bmQ"].forEach(sel => {
-    const e = $(sel), box = e && e.closest(".filters");
-    if (box) box.style.display = "none";
-  });
 }
 
 function mergedClassFilter() {
@@ -3038,6 +3027,7 @@ function ntBoot() {
   ).join("");
 
   const opt = (sel, blank, items) => {
+    if (!$(sel)) return;          // a control the merge removed
     $(sel).innerHTML = `<option value="">${blank}</option>` +
       items.map(([v, l]) => `<option value="${v}">${l}</option>`).join("");
   };
