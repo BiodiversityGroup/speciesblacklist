@@ -1714,7 +1714,7 @@ function showView(name, push) {
   if (name === "newtaxa") {
     ensureReptiles();
     ensureAmphibians();
-    ensureNsMap().then(ok => {
+    Promise.all([ensureNsMap(), ensureCountries()]).then(([ok]) => {
       if (ok) {
         drawNsMap();
         attachHeatZoom("#nsCanvas", nsView, drawNsMap,
@@ -1725,7 +1725,7 @@ function showView(name, push) {
   if (name === "redisc") ensureRedisc();
   // Same reason as the register map: a hidden canvas has zero width, so the lost-species
   // map can only be laid out once its section is visible.
-  if (name === "lost") ensureLost().then(ok => {
+  if (name === "lost") Promise.all([ensureLost(), ensureCountries()]).then(([ok]) => {
     if (ok) {
       drawLost();
       attachHeatZoom("#lostCanvas", lostView, drawLost,
@@ -1744,6 +1744,21 @@ function showView(name, push) {
    sequential ramp; giving each taxonomic group its own color would put twelve
    categorical hues on a world map and make neither the group nor the count readable.
    The group breakdown lives in the tooltip, where it can be read as text. */
+/* Country polygons, shared by the lost and new-species maps. Loaded once, lazily, and
+   only when a heat map is actually opened: 460 KB is not worth spending on a visitor who
+   never leaves the register. Absent means the maps fall back to circles alone, which is
+   what they did before, so a failed fetch degrades rather than breaks. */
+let COUNTRIES = null, countriesLoading = null;
+function ensureCountries() {
+  if (COUNTRIES) return Promise.resolve(true);
+  if (!countriesLoading) {
+    countriesLoading = getJSON("/countries.json")
+      .then(d => { COUNTRIES = d; return true; })
+      .catch(() => false);
+  }
+  return countriesLoading;
+}
+
 let LOST = null, lostLoading = false, lostGeom = null;
 
 function ensureLost() {
@@ -2215,6 +2230,40 @@ function paintHeat(cv, data, opts) {
   const key = opts.classKey;
   const valueOf = p => key ? ((p.cls || {})[key] || 0) : p.n;
   const places = data.places.filter(p => valueOf(p) > 0);
+
+  /* COUNTRY SHADING, drawn over the land and under the circles.
+     Places that name a country colour that country's polygon. The rest keep a circle,
+     because 63 of the 209 are islands inside a country (Luzon, Java, Sulawesi), sub-national
+     forms, or not countries at all (Lake Victoria, Oceania) -- and rolling Luzon up into the
+     Philippines would erase the one thing this map is best at, which is showing that a
+     species sits on a single island. 146 places shade, covering 2,099 of 2,274 records.
+
+     Ramp is the register's own tier colours, light to dark, because this is a magnitude and
+     a magnitude gets one hue. */
+  const shaded = new Map();
+  if (COUNTRIES && COUNTRIES.rings) {
+    places.forEach(p => {
+      if (p.cc) shaded.set(p.cc, (shaded.get(p.cc) || 0) + valueOf(p));
+    });
+  }
+  if (shaded.size) {
+    const hi = Math.max(...shaded.values());
+    const ramp = ["--t1", "--t2", "--t3", "--t4", "--t5"]
+      .map(t => cs.getPropertyValue(t).trim());
+    g.lineWidth = 0.6;
+    g.strokeStyle = cs.getPropertyValue("--rule-2").trim();
+    COUNTRIES.rings.forEach(([name, ring]) => {
+      const n = shaded.get(name);
+      if (!n) return;
+      // sqrt, matching the circle areas: counts here run 1 to 269 and a linear ramp
+      // would leave everything but Brazil in the first band.
+      const step = Math.min(4, Math.floor(Math.sqrt(n / hi) * 5));
+      g.fillStyle = ramp[step];
+      g.beginPath();
+      ring.forEach(([lo, la], i) => i ? g.lineTo(X(lo), Y(la)) : g.moveTo(X(lo), Y(la)));
+      g.closePath(); g.fill(); g.stroke();
+    });
+  }
   if (!places.length) return null;
   const max = Math.max(...places.map(valueOf));
   // sqrt on BOTH channels. These counts are power-law -- one country holds 270 and the
@@ -2228,7 +2277,11 @@ function paintHeat(cv, data, opts) {
   const zr = Math.sqrt(v.k);
   const rOf = n => (3 + t(n) * (cssW / 27)) * zr;
   const hits = [];
-  places.slice().sort((a, b) => valueOf(b) - valueOf(a)).forEach(p => {  // big first
+  /* A circle only where the shading could not carry the place. Drawing both would double
+     count Brazil visually: the country is already dark, and a 270-species disc on top of it
+     says the same thing twice and hides the countries underneath. */
+  const marks = shaded.size ? places.filter(p => !p.cc) : places;
+  marks.slice().sort((a, b) => valueOf(b) - valueOf(a)).forEach(p => {  // big first
     const val = valueOf(p);
     const x = X(p.lon), y = Y(p.lat), r = rOf(val);
     const glow = g.createRadialGradient(x, y, 0, x, y, r);

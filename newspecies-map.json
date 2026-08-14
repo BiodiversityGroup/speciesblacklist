@@ -12930,7 +12930,8 @@
 "amphibian": 225,
 "reptile": 164
 },
-"newest": 2026
+"newest": 2026,
+"cc": "People's Republic of China"
 },
 {
 "place": "India",
@@ -12948,7 +12949,8 @@
 "reptile": 203,
 "amphibian": 41
 },
-"newest": 2026
+"newest": 2026,
+"cc": "India"
 },
 {
 "place": "Brazil",
@@ -12966,7 +12968,8 @@
 "reptile": 96,
 "amphibian": 82
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Brazil"
 },
 {
 "place": "Madagascar",
@@ -12984,7 +12987,8 @@
 "amphibian": 97,
 "reptile": 55
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Madagascar"
 },
 {
 "place": "Vietnam",
@@ -13002,7 +13006,8 @@
 "reptile": 101,
 "amphibian": 46
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Vietnam"
 },
 {
 "place": "Peru",
@@ -13023,7 +13028,8 @@
 "newest": 2026,
 "merged_from": [
 "Per\u00fa"
-]
+],
+"cc": "Peru"
 },
 {
 "place": "Ecuador",
@@ -13041,7 +13047,8 @@
 "amphibian": 84,
 "reptile": 38
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Ecuador"
 },
 {
 "place": "Australia",
@@ -13059,7 +13066,8 @@
 "reptile": 88,
 "amphibian": 14
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Australia"
 },
 {
 "place": "Papua New Guinea",
@@ -13077,7 +13085,8 @@
 "reptile": 75,
 "amphibian": 22
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Papua New Guinea"
 },
 {
 "place": "Colombia",
@@ -13099,7 +13108,8 @@
 "newest": 2026,
 "merged_from": [
 "COLOMBIA"
-]
+],
+"cc": "Colombia"
 },
 {
 "place": "Thailand",
@@ -13117,7 +13127,8 @@
 "reptile": 69,
 "amphibian": 13
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Thailand"
 },
 {
 "place": "Mexico",
@@ -13139,7 +13150,8 @@
 "newest": 2026,
 "merged_from": [
 "M\u00e9xico"
-]
+],
+"cc": "Mexico"
 },
 {
 "place": "Indonesia",
@@ -13157,7 +13169,8 @@
 "amphibian": 41,
 "reptile": 34
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Indonesia"
 },
 {
 "place": "Malaysia",
@@ -13178,7 +13191,8 @@
 "newest": 2026,
 "merged_from": [
 "MALAYSIA"
-]
+],
+"cc": "Malaysia"
 },
 {
 "place": "Myanmar",
@@ -13196,7 +13210,8 @@
 "reptile": 53,
 "amphibian": 10
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Myanmar"
 },
 {
 "place": "Angola",
@@ -13213,7 +13228,8 @@
 "cls": {
 "reptile": 48
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Angola"
 },
 {
 "place": "Argentina",
@@ -13234,7 +13250,8 @@
 "newest": 2026,
 "merged_from": [
 "ARGENTINA"
-]
+],
+"cc": "Argentina"
 },
 {
 "place": "Iran",
@@ -13251,7 +13268,8 @@
 "cls": {
 "reptile": 33
 },
-"newest": 2024
+"newest": 2024,
+"cc": "Iran"
 },
 {
 "place": "New Caledonia",
@@ -13265,7 +13283,8 @@
 "cls": {
 "reptile": 32
 },
-"newest": 2024
+"newest": 2024,
+"cc": "New Caledonia"
 },
 {
 "place": "Cambodia",
@@ -13283,7 +13302,8 @@
 "reptile": 21,
 "amphibian": 6
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Cambodia"
 },
 {
 "place": "Lao People's Democratic Republic",
@@ -13301,7 +13321,8 @@
 "reptile": 21,
 "amphibian": 5
 },
-"newest": 2026
+"newest": 2026,
+"cc": ""
 },
 {
 "place": "Sri Lanka",
@@ -13318,7 +13339,8 @@
 "cls": {
 "reptile": 23
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Sri Lanka"
 },
 {
 "place": "Ethiopia",
@@ -13336,7 +13358,8 @@
 "amphibian": 13,
 "reptile": 8
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Ethiopia"
 },
 {
 "place": "Japan",
@@ -13354,7 +13377,8 @@
 "amphibian": 14,
 "reptile": 7
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Japan"
 },
 {
 "place": "Venezuela",
@@ -13372,7 +13396,8 @@
 "reptile": 15,
 "amphibian": 3
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Venezuela"
 },
 {
 "place": "Chile",
@@ -13385,7 +13410,8 @@
 "cls": {
 "reptile": 18
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Chile"
 },
 {
 "place": "United States",
@@ -13401,7 +13427,8 @@
 "amphibian": 16,
 "reptile": 1
 },
-"newest": 2023
+"newest": 2023,
+"cc": "United States of America"
 },
 {
 "place": "Dominican Republic",
@@ -13417,7 +13444,8 @@
 "cls": {
 "reptile": 15
 },
-"newest": 2024
+"newest": 2024,
+"cc": "Dominican Republic"
 },
 {
 "place": "Panama",
@@ -13435,7 +13463,8 @@
 "reptile": 12,
 "amphibian": 3
 },
-"newest": 2023
+"newest": 2023,
+"cc": "Panama"
 },
 {
 "place": "Haiti",
@@ -13449,7 +13478,8 @@
 "cls": {
 "reptile": 14
 },
-"newest": 2024
+"newest": 2024,
+"cc": "Haiti"
 },
 {
 "place": "Democratic Republic of the Congo",
@@ -13466,7 +13496,8 @@
 "cls": {
 "reptile": 14
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Democratic Republic of the Congo"
 },
 {
 "place": "Honduras",
@@ -13484,7 +13515,8 @@
 "reptile": 12,
 "amphibian": 1
 },
-"newest": 2024
+"newest": 2024,
+"cc": "Honduras"
 },
 {
 "place": "United Republic of Tanzania",
@@ -13502,7 +13534,8 @@
 "reptile": 9,
 "amphibian": 4
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Tanzania"
 },
 {
 "place": "Costa Rica",
@@ -13518,7 +13551,8 @@
 "amphibian": 8,
 "reptile": 5
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Costa Rica"
 },
 {
 "place": "Kenya",
@@ -13536,7 +13570,8 @@
 "reptile": 10,
 "amphibian": 2
 },
-"newest": 2024
+"newest": 2024,
+"cc": "Kenya"
 },
 {
 "place": "Bolivia",
@@ -13554,7 +13589,8 @@
 "reptile": 7,
 "amphibian": 5
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Bolivia"
 },
 {
 "place": "Nepal",
@@ -13569,7 +13605,8 @@
 "reptile": 7,
 "amphibian": 3
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Nepal"
 },
 {
 "place": "Saudi Arabia",
@@ -13585,7 +13622,8 @@
 "cls": {
 "reptile": 10
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Saudi Arabia"
 },
 {
 "place": "Guyana",
@@ -13603,7 +13641,8 @@
 "amphibian": 8,
 "reptile": 1
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Guyana"
 },
 {
 "place": "Oman",
@@ -13618,7 +13657,8 @@
 "cls": {
 "reptile": 8
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Oman"
 },
 {
 "place": "Namibia",
@@ -13633,7 +13673,8 @@
 "cls": {
 "reptile": 8
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Namibia"
 },
 {
 "place": "New Zealand",
@@ -13647,7 +13688,8 @@
 "cls": {
 "reptile": 8
 },
-"newest": 2024
+"newest": 2024,
+"cc": "New Zealand"
 },
 {
 "place": "Paraguay",
@@ -13662,7 +13704,8 @@
 "cls": {
 "reptile": 7
 },
-"newest": 2022
+"newest": 2022,
+"cc": "Paraguay"
 },
 {
 "place": "Philippines",
@@ -13679,7 +13722,8 @@
 "amphibian": 4,
 "reptile": 3
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Philippines"
 },
 {
 "place": "Uganda",
@@ -13694,7 +13738,8 @@
 "cls": {
 "reptile": 6
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Uganda"
 },
 {
 "place": "Mozambique",
@@ -13710,7 +13755,8 @@
 "reptile": 5,
 "amphibian": 1
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Mozambique"
 },
 {
 "place": "Turkey",
@@ -13725,7 +13771,8 @@
 "cls": {
 "reptile": 6
 },
-"newest": 2022
+"newest": 2022,
+"cc": "Turkey"
 },
 {
 "place": "French Guiana",
@@ -13743,7 +13790,8 @@
 "reptile": 3,
 "amphibian": 3
 },
-"newest": 2025
+"newest": 2025,
+"cc": ""
 },
 {
 "place": "C\u00f4te d'Ivoire",
@@ -13758,7 +13806,8 @@
 "cls": {
 "amphibian": 6
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Ivory Coast"
 },
 {
 "place": "Guatemala",
@@ -13775,7 +13824,8 @@
 "reptile": 4,
 "amphibian": 1
 },
-"newest": 2021
+"newest": 2021,
+"cc": "Guatemala"
 },
 {
 "place": "Somalia",
@@ -13790,7 +13840,8 @@
 "cls": {
 "reptile": 5
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Somalia"
 },
 {
 "place": "Cuba",
@@ -13805,7 +13856,8 @@
 "cls": {
 "reptile": 4
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Cuba"
 },
 {
 "place": "Jamaica",
@@ -13818,7 +13870,8 @@
 "cls": {
 "reptile": 4
 },
-"newest": 2024
+"newest": 2024,
+"cc": "Jamaica"
 },
 {
 "place": "Yemen",
@@ -13833,7 +13886,8 @@
 "cls": {
 "reptile": 4
 },
-"newest": 2018
+"newest": 2018,
+"cc": "Yemen"
 },
 {
 "place": "Solomon Islands",
@@ -13847,7 +13901,8 @@
 "cls": {
 "reptile": 4
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Solomon Islands"
 },
 {
 "place": "Cameroon",
@@ -13862,7 +13917,8 @@
 "amphibian": 3,
 "reptile": 1
 },
-"newest": 2024
+"newest": 2024,
+"cc": "Cameroon"
 },
 {
 "place": "Algeria",
@@ -13876,7 +13932,8 @@
 "cls": {
 "reptile": 3
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Algeria"
 },
 {
 "place": "Chad",
@@ -13890,7 +13947,8 @@
 "cls": {
 "reptile": 3
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Chad"
 },
 {
 "place": "Burundi",
@@ -13904,7 +13962,8 @@
 "cls": {
 "reptile": 3
 },
-"newest": 2024
+"newest": 2024,
+"cc": "Burundi"
 },
 {
 "place": "Pakistan",
@@ -13919,7 +13978,8 @@
 "cls": {
 "reptile": 3
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Pakistan"
 },
 {
 "place": "Taiwan",
@@ -13935,7 +13995,8 @@
 "reptile": 2,
 "amphibian": 1
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Taiwan"
 },
 {
 "place": "Guinea",
@@ -13950,7 +14011,8 @@
 "reptile": 2,
 "amphibian": 1
 },
-"newest": 2023
+"newest": 2023,
+"cc": "Guinea"
 },
 {
 "place": "Suriname",
@@ -13963,7 +14025,8 @@
 "cls": {
 "amphibian": 3
 },
-"newest": 2023
+"newest": 2023,
+"cc": "Suriname"
 },
 {
 "place": "Israel",
@@ -13976,7 +14039,8 @@
 "cls": {
 "reptile": 2
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Israel"
 },
 {
 "place": "Rwanda",
@@ -13991,7 +14055,8 @@
 "reptile": 1,
 "amphibian": 1
 },
-"newest": 2023
+"newest": 2023,
+"cc": "Rwanda"
 },
 {
 "place": "Mauritania",
@@ -14005,7 +14070,8 @@
 "cls": {
 "reptile": 2
 },
-"newest": 2019
+"newest": 2019,
+"cc": "Mauritania"
 },
 {
 "place": "Spain",
@@ -14020,7 +14086,8 @@
 "reptile": 1,
 "amphibian": 1
 },
-"newest": 2020
+"newest": 2020,
+"cc": "Spain"
 },
 {
 "place": "Singapore",
@@ -14035,7 +14102,8 @@
 "reptile": 1,
 "amphibian": 1
 },
-"newest": 2022
+"newest": 2022,
+"cc": "Singapore"
 },
 {
 "place": "Congo",
@@ -14048,7 +14116,8 @@
 "cls": {
 "amphibian": 2
 },
-"newest": 2022
+"newest": 2022,
+"cc": "Republic of the Congo"
 },
 {
 "place": "Bangladesh",
@@ -14062,7 +14131,8 @@
 "cls": {
 "amphibian": 2
 },
-"newest": 2021
+"newest": 2021,
+"cc": "Bangladesh"
 },
 {
 "place": "Uzbekistan",
@@ -14075,7 +14145,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2023
+"newest": 2023,
+"cc": "Uzbekistan"
 },
 {
 "place": "Liberia",
@@ -14088,7 +14159,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2019
+"newest": 2019,
+"cc": "Liberia"
 },
 {
 "place": "Eritrea",
@@ -14101,7 +14173,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2018
+"newest": 2018,
+"cc": "Eritrea"
 },
 {
 "place": "Nicaragua",
@@ -14114,7 +14187,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2019
+"newest": 2019,
+"cc": "Nicaragua"
 },
 {
 "place": "Nigeria",
@@ -14127,7 +14201,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Nigeria"
 },
 {
 "place": "Uruguay",
@@ -14140,7 +14215,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2017
+"newest": 2017,
+"cc": "Uruguay"
 },
 {
 "place": "Guadeloupe",
@@ -14153,7 +14229,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2016
+"newest": 2016,
+"cc": ""
 },
 {
 "place": "Puerto Rico",
@@ -14166,7 +14243,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2022
+"newest": 2022,
+"cc": "Puerto Rico"
 },
 {
 "place": "Equatorial Guinea",
@@ -14179,7 +14257,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2020
+"newest": 2020,
+"cc": "Equatorial Guinea"
 },
 {
 "place": "Armenia",
@@ -14192,7 +14271,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2019
+"newest": 2019,
+"cc": "Armenia"
 },
 {
 "place": "Zambia",
@@ -14205,7 +14285,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2025
+"newest": 2025,
+"cc": "Zambia"
 },
 {
 "place": "Mongolia",
@@ -14218,7 +14299,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2017
+"newest": 2017,
+"cc": "Mongolia"
 },
 {
 "place": "Iraq",
@@ -14231,7 +14313,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2015
+"newest": 2015,
+"cc": "Iraq"
 },
 {
 "place": "Togo",
@@ -14244,7 +14327,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2018
+"newest": 2018,
+"cc": "Togo"
 },
 {
 "place": "Afghanistan",
@@ -14257,7 +14341,8 @@
 "cls": {
 "reptile": 1
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Afghanistan"
 },
 {
 "place": "Benin",
@@ -14270,7 +14355,8 @@
 "cls": {
 "amphibian": 1
 },
-"newest": 2026
+"newest": 2026,
+"cc": "Benin"
 },
 {
 "place": "Portugal",
@@ -14283,7 +14369,8 @@
 "cls": {
 "amphibian": 1
 },
-"newest": 2024
+"newest": 2024,
+"cc": "Portugal"
 },
 {
 "place": "Bhutan",
@@ -14296,7 +14383,8 @@
 "cls": {
 "amphibian": 1
 },
-"newest": 2022
+"newest": 2022,
+"cc": "Bhutan"
 },
 {
 "place": "South Korea",
@@ -14309,7 +14397,8 @@
 "cls": {
 "amphibian": 1
 },
-"newest": 2022
+"newest": 2022,
+"cc": "South Korea"
 },
 {
 "place": "Italy",
@@ -14322,7 +14411,8 @@
 "cls": {
 "amphibian": 1
 },
-"newest": 2018
+"newest": 2018,
+"cc": "Italy"
 }
 ]
 }

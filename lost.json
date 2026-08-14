@@ -12993,7 +12993,8 @@
 "Amphisbaena arda",
 "Amphisbaena brevis"
 ],
-"oldest": 1834
+"oldest": 1834,
+"cc": "Brazil"
 },
 {
 "place": "Ecuador",
@@ -13027,7 +13028,8 @@
 "Aetheolaena pichinchensis",
 "Amsinckia marginata"
 ],
-"oldest": 1823
+"oldest": 1823,
+"cc": "Ecuador"
 },
 {
 "place": "Madagascar",
@@ -13060,7 +13062,8 @@
 "Amphiglossus mandady",
 "Amphiglossus spilostichus"
 ],
-"oldest": 1849
+"oldest": 1849,
+"cc": "Madagascar"
 },
 {
 "place": "United States (Hawaii)",
@@ -13092,7 +13095,8 @@
 "Amaranthus brownii",
 "Argyroxiphium virescens"
 ],
-"oldest": 1850
+"oldest": 1850,
+"cc": "United States of America"
 },
 {
 "place": "Colombia",
@@ -13125,7 +13129,8 @@
 "Anadia altaserrania",
 "Andinobates viridis"
 ],
-"oldest": 1862
+"oldest": 1862,
+"cc": "Colombia"
 },
 {
 "place": "Tanzania",
@@ -13157,7 +13162,8 @@
 "Aerangis maireae",
 "Agelanthus rondensis"
 ],
-"oldest": 1893
+"oldest": 1893,
+"cc": "Tanzania"
 },
 {
 "place": "United States",
@@ -13194,7 +13200,8 @@
 "oldest": 1862,
 "merged_from": [
 "United States (Puerto Rico: Isla Monito)"
-]
+],
+"cc": "United States of America"
 },
 {
 "place": "Mexico",
@@ -13227,7 +13234,8 @@
 "Abronia ornelasi",
 "Abronia ramirezi"
 ],
-"oldest": 1893
+"oldest": 1893,
+"cc": "Mexico"
 },
 {
 "place": "India",
@@ -13260,7 +13268,8 @@
 "Asymblepharus tragbulensis",
 "Biswamoyopterus biswasi"
 ],
-"oldest": 1854
+"oldest": 1854,
+"cc": "India"
 },
 {
 "place": "Saint Helena",
@@ -13292,7 +13301,8 @@
 "oldest": 1836,
 "merged_from": [
 "St. Helena"
-]
+],
+"cc": "Saint Helena"
 },
 {
 "place": "Australia",
@@ -13329,7 +13339,8 @@
 "merged_from": [
 "Australia: Kinghall Island",
 "Australia: Pedra Branca islet off Tasmania"
-]
+],
+"cc": "Australia"
 },
 {
 "place": "New Caledonia",
@@ -13361,7 +13372,8 @@
 "Bocquillonia arborea",
 "Brunoniella neocaledonica"
 ],
-"oldest": 1865
+"oldest": 1865,
+"cc": "New Caledonia"
 },
 {
 "place": "Australasia",
@@ -13389,7 +13401,8 @@
 "Ctenotus serotinus",
 "Ctenotus vagus"
 ],
-"oldest": 1887
+"oldest": 1887,
+"cc": ""
 },
 {
 "place": "Venezuela",
@@ -13420,7 +13433,8 @@
 "Amphisbaena rozei",
 "Anadia blakei"
 ],
-"oldest": 1856
+"oldest": 1856,
+"cc": "Venezuela"
 },
 {
 "place": "Democratic Republic of the Congo",
@@ -13457,7 +13471,8 @@
 "merged_from": [
 "Democratic Republic of the Congo",
 "Democratic Republic of Congo"
-]
+],
+"cc": "Democratic Republic of the Congo"
 },
 {
 "place": "Peru",
@@ -13490,7 +13505,8 @@
 "Atelopus dimorphus",
 "Atelopus erythropus"
 ],
-"oldest": 1900
+"oldest": 1900,
+"cc": "Peru"
 },
 {
 "place": "Vietnam",
@@ -13528,7 +13544,8 @@
 "Viet Nam",
 "Vietnam: Hon Son Island",
 "Vietnam: Kondao Island"
-]
+],
+"cc": "Vietnam"
 },
 {
 "place": "Seychelles",
@@ -13556,7 +13573,8 @@
 "Biantes parvulus",
 "Coneuplecta turrita"
 ],
-"oldest": 1892
+"oldest": 1892,
+"cc": "Seychelles"
 },
 {
 "place": "China",
@@ -13588,7 +13606,8 @@
 "Anabarilius qiluensis",
 "Anabarilius yangzonensis"
 ],
-"oldest": 1880
+"oldest": 1880,
+"cc": "People's Republic of China"
 },
 {
 "place": "Indonesia",
@@ -13624,7 +13643,8 @@
 "oldest": 1866,
 "merged_from": [
 "Indonesia: probably W Kalimantan"
-]
+],
+"cc": "Indonesia"
 },
 {
 "place": "Portugal",
@@ -13656,7 +13676,8 @@
 "Clethra arborea",
 "Discula lyelliana"
 ],
-"oldest": 1859
+"oldest": 1859,
+"cc": "Portugal"
 },
 {
 "place": "Malaysia",
@@ -13691,7 +13712,8 @@
 "oldest": 1901,
 "merged_from": [
 "Peninsular Malaysia"
-]
+],
+"cc": "Malaysia"
 },
 {
 "place": "Haiti",
@@ -13720,7 +13742,8 @@
 "Anolis singularis",
 "Consolea falcata"
 ],
-"oldest": 1857
+"oldest": 1857,
+"cc": "Haiti"
 },
 {
 "place": "Uganda",
@@ -13750,7 +13773,8 @@
 "Elephantulus fuscipes",
 "Haplochromis aelocephalus"
 ],
-"oldest": 1892
+"oldest": 1892,
+"cc": "Uganda"
 },
 {
 "place": "Thailand",
@@ -13783,7 +13807,8 @@
 "Balantiocheilos ambusticauda",
 "Bos sauveli"
 ],
-"oldest": 1923
+"oldest": 1923,
+"cc": "Thailand"
 },
 {
 "place": "Italy",
@@ -13814,7 +13839,8 @@
 "Anonconotus apenninigenus",
 "Ephippiger camillae"
 ],
-"oldest": 1804
+"oldest": 1804,
+"cc": "Italy"
 },
 {
 "place": "Panama",
@@ -13847,7 +13873,8 @@
 "Celestus adercus",
 "Costus vinosus"
 ],
-"oldest": 1938
+"oldest": 1938,
+"cc": "Panama"
 },
 {
 "place": "Sri Lanka",
@@ -13878,7 +13905,8 @@
 "Cnemaspis amith",
 "Cnemaspis latha"
 ],
-"oldest": 1930
+"oldest": 1930,
+"cc": "Sri Lanka"
 },
 {
 "place": "Iraq",
@@ -13907,7 +13935,8 @@
 "Astragalus dolius",
 "Astragalus ecbatanus"
 ],
-"oldest": 1983
+"oldest": 1983,
+"cc": "Iraq"
 },
 {
 "place": "South Africa",
@@ -13940,7 +13969,8 @@
 "Afrotettix fursti",
 "Anaxipha natalensis"
 ],
-"oldest": 1879
+"oldest": 1879,
+"cc": "South Africa"
 },
 {
 "place": "Argentina",
@@ -13973,7 +14003,8 @@
 "Cercosaura steyeri",
 "Gastrotheca christiani"
 ],
-"oldest": 1899
+"oldest": 1899,
+"cc": "Argentina"
 },
 {
 "place": "Kenya",
@@ -14005,7 +14036,8 @@
 "Haplochromis dentex",
 "Haplochromis granti"
 ],
-"oldest": 1909
+"oldest": 1909,
+"cc": "Kenya"
 },
 {
 "place": "Spain",
@@ -14037,7 +14069,8 @@
 "Canarinus demaisoni",
 "Cosmocampus retropinnis"
 ],
-"oldest": 1808
+"oldest": 1808,
+"cc": "Spain"
 },
 {
 "place": "Costa Rica",
@@ -14069,7 +14102,8 @@
 "Atelopus chirripoensis",
 "Bryx veleronis"
 ],
-"oldest": 1895
+"oldest": 1895,
+"cc": "Costa Rica"
 },
 {
 "place": "Canada",
@@ -14102,7 +14136,8 @@
 "Astragalus robbinsii",
 "Campanula aparinoides"
 ],
-"oldest": 1862
+"oldest": 1862,
+"cc": "Canada"
 },
 {
 "place": "Papua New Guinea",
@@ -14132,7 +14167,8 @@
 "Cyrtodactylus minor",
 "Emoia coggeri"
 ],
-"oldest": 1913
+"oldest": 1913,
+"cc": "Papua New Guinea"
 },
 {
 "place": "Cameroon",
@@ -14163,7 +14199,8 @@
 "Cynisca schaeferi",
 "Hemidactylus makolowodei"
 ],
-"oldest": 1889
+"oldest": 1889,
+"cc": "Cameroon"
 },
 {
 "place": "Cuba",
@@ -14193,7 +14230,8 @@
 "Anolis altitudinalis",
 "Anolis birama"
 ],
-"oldest": 1937
+"oldest": 1937,
+"cc": "Cuba"
 },
 {
 "place": "Jamaica",
@@ -14223,7 +14261,8 @@
 "Celestus microblepharis",
 "Celestus occiduus"
 ],
-"oldest": 1840
+"oldest": 1840,
+"cc": "Jamaica"
 },
 {
 "place": "Fiji",
@@ -14255,7 +14294,8 @@
 "Festucalex wassi",
 "Giganteremus spinulosus"
 ],
-"oldest": 1888
+"oldest": 1888,
+"cc": "Fiji"
 },
 {
 "place": "Indonesia (Borneo)",
@@ -14284,7 +14324,8 @@
 "merged_from": [
 "Indonesia (Borneo, Kalimantan)",
 "Indonesia (Borneo)"
-]
+],
+"cc": "Indonesia"
 },
 {
 "place": "Philippines",
@@ -14314,7 +14355,8 @@
 "Festucalex prolixus",
 "Gallicolumba menagei"
 ],
-"oldest": 1891
+"oldest": 1891,
+"cc": "Philippines"
 },
 {
 "place": "New Zealand",
@@ -14345,7 +14387,8 @@
 "Forstertyna marplesi",
 "Kapitia obscura"
 ],
-"oldest": 1858
+"oldest": 1858,
+"cc": "New Zealand"
 },
 {
 "place": "Honduras",
@@ -14370,7 +14413,8 @@
 "Craugastor epochthidius",
 "Craugastor fecundus"
 ],
-"oldest": 1988
+"oldest": 1988,
+"cc": "Honduras"
 },
 {
 "place": "Solomon Islands",
@@ -14402,7 +14446,8 @@
 "oldest": 1887,
 "merged_from": [
 "Solomon Islands: Bougainville Island"
-]
+],
+"cc": "Solomon Islands"
 },
 {
 "place": "Palau",
@@ -14427,7 +14472,8 @@
 "Aaadonta pelewana",
 "Diplommatina alata"
 ],
-"oldest": 1936
+"oldest": 1936,
+"cc": "Palau"
 },
 {
 "place": "France",
@@ -14457,7 +14503,8 @@
 "Bythinella eutrepha",
 "Coregonis bezola"
 ],
-"oldest": 1870
+"oldest": 1870,
+"cc": "France"
 },
 {
 "place": "Turkey",
@@ -14484,7 +14531,8 @@
 "Belgrandiella cavernica",
 "Cobitis kellei"
 ],
-"oldest": 1957
+"oldest": 1957,
+"cc": "Turkey"
 },
 {
 "place": "Pakistan",
@@ -14511,7 +14559,8 @@
 "Carcharhinus hemiodon",
 "Coeliccia vacca"
 ],
-"oldest": 1876
+"oldest": 1876,
+"cc": "Pakistan"
 },
 {
 "place": "Dominican Republic",
@@ -14538,7 +14587,8 @@
 "Eleutherodactylus schmidti",
 "Hypsirhynchus melanichnus"
 ],
-"oldest": 1910
+"oldest": 1910,
+"cc": "Dominican Republic"
 },
 {
 "place": "Guatemala",
@@ -14565,7 +14615,8 @@
 "Craugastor adamastus",
 "Craugastor trachydermus"
 ],
-"oldest": 1976
+"oldest": 1976,
+"cc": "Guatemala"
 },
 {
 "place": "Ethiopia",
@@ -14597,7 +14648,8 @@
 "Alcelaphus buselaphus tora",
 "Altiphrynoides osgoodi"
 ],
-"oldest": 1839
+"oldest": 1839,
+"cc": "Ethiopia"
 },
 {
 "place": "Bolivia",
@@ -14625,7 +14677,8 @@
 "Epictia undecimstriata",
 "Hyloscirtus chlorosteus"
 ],
-"oldest": 1839
+"oldest": 1839,
+"cc": "Bolivia"
 },
 {
 "place": "Greece",
@@ -14656,7 +14709,8 @@
 "Dianella schlickumi",
 "Islamia bendidis"
 ],
-"oldest": 1885
+"oldest": 1885,
+"cc": "Greece"
 },
 {
 "place": "Myanmar",
@@ -14688,7 +14742,8 @@
 "Hydrophis hendersoni",
 "Hydrophis nigrocinctus"
 ],
-"oldest": 1937
+"oldest": 1937,
+"cc": "Myanmar"
 },
 {
 "place": "Samoa",
@@ -14714,7 +14769,8 @@
 "Ischnura albistigma",
 "Ischnura buxtoni"
 ],
-"oldest": 1873
+"oldest": 1873,
+"cc": "Samoa"
 },
 {
 "place": "Luzon",
@@ -14739,7 +14795,8 @@
 "Brachymeles wrighti",
 "Luperosaurus kubli"
 ],
-"oldest": 2001
+"oldest": 2001,
+"cc": ""
 },
 {
 "place": "Lake Victoria",
@@ -14763,7 +14820,8 @@
 "Haplochromis nanoserranus",
 "Haplochromis pancitrinus"
 ],
-"oldest": 1980
+"oldest": 1980,
+"cc": ""
 },
 {
 "place": "Syria",
@@ -14788,7 +14846,8 @@
 "Melanopsis germaini",
 "Melanopsis infracincta"
 ],
-"oldest": 1939
+"oldest": 1939,
+"cc": "Syria"
 },
 {
 "place": "Sulawesi",
@@ -14814,7 +14873,8 @@
 "Luperosaurus iskandari",
 "Pseudorabdion sirambense"
 ],
-"oldest": 1890
+"oldest": 1890,
+"cc": ""
 },
 {
 "place": "Nigeria",
@@ -14843,7 +14903,8 @@
 "Cynisca gansi",
 "Cynisca kigomensis"
 ],
-"oldest": 1963
+"oldest": 1963,
+"cc": "Nigeria"
 },
 {
 "place": "Java",
@@ -14871,7 +14932,8 @@
 "Eutropis macrophthalma",
 "Hemileiocassis panjang"
 ],
-"oldest": 1855
+"oldest": 1855,
+"cc": ""
 },
 {
 "place": "Azores",
@@ -14896,7 +14958,8 @@
 "Calathus extensicollis",
 "Calathus vicenteorum"
 ],
-"oldest": 1859
+"oldest": 1859,
+"cc": ""
 },
 {
 "place": "Somalia",
@@ -14923,7 +14986,8 @@
 "Hemidactylus klauberi",
 "Macrobrachium scorteccii"
 ],
-"oldest": 1931
+"oldest": 1931,
+"cc": "Somalia"
 },
 {
 "place": "Mozambique",
@@ -14952,7 +15016,8 @@
 "Emicocarpus fissifolius",
 "Leptotyphlops pungwensis"
 ],
-"oldest": 1918
+"oldest": 1918,
+"cc": "Mozambique"
 },
 {
 "place": "Sumatra",
@@ -14984,7 +15049,8 @@
 "oldest": 1880,
 "merged_from": [
 "Sumatra (but some uncertainty about provenance)"
-]
+],
+"cc": ""
 },
 {
 "place": "Guadeloupe",
@@ -15016,7 +15082,8 @@
 "Guadeloupe: \u00celet \u00e0 Cochons",
 "Guadeloupe: Marie-Galante",
 "Guadeloupe: Grande Terre"
-]
+],
+"cc": ""
 },
 {
 "place": "Guinea",
@@ -15046,7 +15113,8 @@
 "Piliocolobus waldronae",
 "Soapitia dageti"
 ],
-"oldest": 1930
+"oldest": 1930,
+"cc": "Guinea"
 },
 {
 "place": "Nepal",
@@ -15073,7 +15141,8 @@
 "Japalura dasi",
 "Scincella capiteana"
 ],
-"oldest": 1991
+"oldest": 1991,
+"cc": "Nepal"
 },
 {
 "place": "New Guinea",
@@ -15100,7 +15169,8 @@
 "Emoia cyclops",
 "Hypsilurus nigrigularis"
 ],
-"oldest": 1874
+"oldest": 1874,
+"cc": ""
 },
 {
 "place": "Angola",
@@ -15127,7 +15197,8 @@
 "Paragomphus maynei",
 "Potamonautes adeleae"
 ],
-"oldest": 1890
+"oldest": 1890,
+"cc": "Angola"
 },
 {
 "place": "Oceania",
@@ -15151,7 +15222,8 @@
 "Lipinia inconspicua",
 "Lipinia nototaenia"
 ],
-"oldest": 1894
+"oldest": 1894,
+"cc": ""
 },
 {
 "place": "Russia",
@@ -15182,7 +15254,8 @@
 "Dreissena caspia",
 "Eresus bifasciatus"
 ],
-"oldest": 1927
+"oldest": 1927,
+"cc": "Russia"
 },
 {
 "place": "French Polynesia",
@@ -15209,7 +15282,8 @@
 "Partula sagitta",
 "Pomarea mira"
 ],
-"oldest": 1908
+"oldest": 1908,
+"cc": "French Polynesia"
 },
 {
 "place": "Germany",
@@ -15235,7 +15309,8 @@
 "Bythiospeum putei",
 "Bythiospeum turritum"
 ],
-"oldest": 1961
+"oldest": 1961,
+"cc": "Germany"
 },
 {
 "place": "Gabon",
@@ -15262,7 +15337,8 @@
 "Hypotrigona gribodoi",
 "Monopeltis schoutedeni"
 ],
-"oldest": 1901
+"oldest": 1901,
+"cc": "Gabon"
 },
 {
 "place": "C\u00f4te d'Ivoire",
@@ -15293,7 +15369,8 @@
 "oldest": 1969,
 "merged_from": [
 "Cote d'Ivoire"
-]
+],
+"cc": "Ivory Coast"
 },
 {
 "place": "Sudan",
@@ -15319,7 +15396,8 @@
 "Panaspis wilsoni",
 "Trioceros kinetensis"
 ],
-"oldest": 1914
+"oldest": 1914,
+"cc": "Sudan"
 },
 {
 "place": "Barbados",
@@ -15344,7 +15422,8 @@
 "Erythrolamprus perfuscus",
 "Numenius borealis"
 ],
-"oldest": 1889
+"oldest": 1889,
+"cc": "Barbados"
 },
 {
 "place": "Guyana",
@@ -15369,7 +15448,8 @@
 "Kaieteurosaurus hindsi",
 "Pantepuisaurus rodriguesi"
 ],
-"oldest": 1921
+"oldest": 1921,
+"cc": "Guyana"
 },
 {
 "place": "Uruguay",
@@ -15395,7 +15475,8 @@
 "Micrathyria ringueleti",
 "Numenius borealis"
 ],
-"oldest": 1961
+"oldest": 1961,
+"cc": "Uruguay"
 },
 {
 "place": "Austria",
@@ -15420,7 +15501,8 @@
 "Belgrandiella multiformis",
 "Iglica gratulabunda"
 ],
-"oldest": 1981
+"oldest": 1981,
+"cc": "Austria"
 },
 {
 "place": "Laos",
@@ -15447,7 +15529,8 @@
 "Cyrtodactylus khammouanensis",
 "Schistura tenura"
 ],
-"oldest": 1969
+"oldest": 1969,
+"cc": "Laos"
 },
 {
 "place": "United States (Puerto Rico)",
@@ -15472,7 +15555,8 @@
 "Eleutherodactylus jasperi",
 "Eleutherodactylus karlschmidti"
 ],
-"oldest": 1969
+"oldest": 1969,
+"cc": "United States of America"
 },
 {
 "place": "Singapore",
@@ -15498,7 +15582,8 @@
 "Ichthyophis singaporensis",
 "Millepore boschmai"
 ],
-"oldest": 1847
+"oldest": 1847,
+"cc": "Singapore"
 },
 {
 "place": "Namibia",
@@ -15527,7 +15612,8 @@
 "Panicum pearsonii",
 "Potamonautes dubius"
 ],
-"oldest": 1890
+"oldest": 1890,
+"cc": "Namibia"
 },
 {
 "place": "Chile",
@@ -15553,7 +15639,8 @@
 "Rhinoderma rufum",
 "Telmatobius pefauri"
 ],
-"oldest": 1959
+"oldest": 1959,
+"cc": "Chile"
 },
 {
 "place": "Palawan",
@@ -15583,7 +15670,8 @@
 "oldest": 1961,
 "merged_from": [
 "Paragua"
-]
+],
+"cc": ""
 },
 {
 "place": "Mascarene Islands",
@@ -15614,7 +15702,8 @@
 "merged_from": [
 "Mascarene Islands (Mauritius Island)",
 "Mascarene Islands (Maurice Island)"
-]
+],
+"cc": ""
 },
 {
 "place": "S\u00e3o Tom\u00e9",
@@ -15636,7 +15725,8 @@
 "Angraecopsis dolabriformis",
 "Angraecum astroarche"
 ],
-"oldest": 1888
+"oldest": 1888,
+"cc": ""
 },
 {
 "place": "Sierra Leone",
@@ -15660,7 +15750,8 @@
 "Afrithelphusa leonensis",
 "Cynisca degrysi"
 ],
-"oldest": 1790
+"oldest": 1790,
+"cc": "Sierra Leone"
 },
 {
 "place": "Zimbabwe",
@@ -15685,7 +15776,8 @@
 "Elephantulus fuscus",
 "Henicothericles spectabilis"
 ],
-"oldest": 1870
+"oldest": 1870,
+"cc": "Zimbabwe"
 },
 {
 "place": "Ukraine",
@@ -15708,7 +15800,8 @@
 "Eresus fulvus",
 "Eresus rotundiceps"
 ],
-"oldest": 1846
+"oldest": 1846,
+"cc": "Ukraine"
 },
 {
 "place": "Cambodia",
@@ -15732,7 +15825,8 @@
 "Hydrophis anomalus",
 "Hydrophis torquatus"
 ],
-"oldest": 1969
+"oldest": 1969,
+"cc": "Cambodia"
 },
 {
 "place": "Rwanda",
@@ -15758,7 +15852,8 @@
 "Cheilolejeunea omphalogastria",
 "Rhinolophus hilli"
 ],
-"oldest": 1950
+"oldest": 1950,
+"cc": "Rwanda"
 },
 {
 "place": "Martinique",
@@ -15779,7 +15874,8 @@
 "Erythrolamprus cursor",
 "Mabuya mabouya"
 ],
-"oldest": 1879
+"oldest": 1879,
+"cc": ""
 },
 {
 "place": "United States (U.S. Virgin Islands)",
@@ -15801,7 +15897,8 @@
 "Spondylurus magnacruzae",
 "Spondylurus spilonotus"
 ],
-"oldest": 1875
+"oldest": 1875,
+"cc": "United States of America"
 },
 {
 "place": "Oman",
@@ -15826,7 +15923,8 @@
 "Doryrhamphus aurolineatus",
 "Hemidactylus endophis"
 ],
-"oldest": 1885
+"oldest": 1885,
+"cc": "Oman"
 },
 {
 "place": "Togo",
@@ -15852,7 +15950,8 @@
 "Cyclanorbis elegans",
 "Leimacomys buettneri"
 ],
-"oldest": 1890
+"oldest": 1890,
+"cc": "Togo"
 },
 {
 "place": "Nias Island",
@@ -15874,7 +15973,8 @@
 "Dibamus dezwaani",
 "Harpesaurus ensicauda"
 ],
-"oldest": 1910
+"oldest": 1910,
+"cc": ""
 },
 {
 "place": "Ghana",
@@ -15898,7 +15998,8 @@
 "Cynisca williamsi",
 "Phrynobatrachus intermedius"
 ],
-"oldest": 1963
+"oldest": 1963,
+"cc": "Ghana"
 },
 {
 "place": "Iran",
@@ -15921,7 +16022,8 @@
 "Eremias isfahanica",
 "Hemidactylus romeshkanicus"
 ],
-"oldest": 1980
+"oldest": 1980,
+"cc": "Iran"
 },
 {
 "place": "Zambia",
@@ -15943,7 +16045,8 @@
 "Pinheyschna moori",
 "Pseudoschulthessiella cerciata"
 ],
-"oldest": 1952
+"oldest": 1952,
+"cc": "Zambia"
 },
 {
 "place": "Mauritius",
@@ -15969,7 +16072,8 @@
 "Ischnura vinsoni",
 "Madgeaconcha sevathiani"
 ],
-"oldest": 1920
+"oldest": 1920,
+"cc": "Mauritius"
 },
 {
 "place": "Bangladesh",
@@ -15996,7 +16100,8 @@
 "Microphis cuncalus",
 "Rhodonessa caryophyllacea"
 ],
-"oldest": 1949
+"oldest": 1949,
+"cc": "Bangladesh"
 },
 {
 "place": "Comoros",
@@ -16019,7 +16124,8 @@
 "Nesocordulia villiersi",
 "Nesolestes pauliani"
 ],
-"oldest": 1947
+"oldest": 1947,
+"cc": "Comoros"
 },
 {
 "place": "Japan",
@@ -16044,7 +16150,8 @@
 "Murina tenebrosa",
 "Pungitius kaibarae"
 ],
-"oldest": 1962
+"oldest": 1962,
+"cc": "Japan"
 },
 {
 "place": "Paraguay",
@@ -16070,7 +16177,8 @@
 "Ophiodes luciae",
 "Paraclaravis geoffroyi"
 ],
-"oldest": 1963
+"oldest": 1963,
+"cc": "Paraguay"
 },
 {
 "place": "Micronesia",
@@ -16093,7 +16201,8 @@
 "Aplonis pelzelni",
 "Partula guamensis"
 ],
-"oldest": 1936
+"oldest": 1936,
+"cc": "Federated States of Micronesia"
 },
 {
 "place": "Tajikistan",
@@ -16115,7 +16224,8 @@
 "Bombus fedtschenkoi",
 "Hynobius turkestanicus"
 ],
-"oldest": 1909
+"oldest": 1909,
+"cc": "Tajikistan"
 },
 {
 "place": "Bhutan",
@@ -16136,7 +16246,8 @@
 "Calotes bhutanensis",
 "Eutropis quadratilobus"
 ],
-"oldest": 1967
+"oldest": 1967,
+"cc": "Bhutan"
 },
 {
 "place": "Algeria",
@@ -16159,7 +16270,8 @@
 "Cerambyx paludivagus",
 "Eresus latefasciatus"
 ],
-"oldest": 1946
+"oldest": 1946,
+"cc": "Algeria"
 },
 {
 "place": "Morocco",
@@ -16182,7 +16294,8 @@
 "Chalcides ebneri",
 "Cosmocampus retropinnis"
 ],
-"oldest": 1970
+"oldest": 1970,
+"cc": "Morocco"
 },
 {
 "place": "Lebanon",
@@ -16205,7 +16318,8 @@
 "Clytus peyroni",
 "Megavitrina libanica"
 ],
-"oldest": 1899
+"oldest": 1899,
+"cc": "Lebanon"
 },
 {
 "place": "Senegal",
@@ -16227,7 +16341,8 @@
 "Cosmocampus retropinnis",
 "Potamonautes senegalensis"
 ],
-"oldest": 1960
+"oldest": 1960,
+"cc": "Senegal"
 },
 {
 "place": "Central African Republic",
@@ -16248,7 +16363,8 @@
 "Cyclanorbis elegans",
 "Trachylepis pendeana"
 ],
-"oldest": 1991
+"oldest": 1991,
+"cc": "Central African Republic"
 },
 {
 "place": "South Sudan",
@@ -16271,7 +16387,8 @@
 "Cyclanorbis elegans",
 "Elephantulus fuscipes"
 ],
-"oldest": 1968
+"oldest": 1968,
+"cc": "South Sudan"
 },
 {
 "place": "Tunisia",
@@ -16294,7 +16411,8 @@
 "Desmazeria lorentii",
 "Mercuria punica"
 ],
-"oldest": 1977
+"oldest": 1977,
+"cc": "Tunisia"
 },
 {
 "place": "British West Indies: Montserrat",
@@ -16316,7 +16434,8 @@
 "Diploglossus montisserrati",
 "Mabuya montserratae"
 ],
-"oldest": 1970
+"oldest": 1970,
+"cc": ""
 },
 {
 "place": "Azerbaijan",
@@ -16339,7 +16458,8 @@
 "Dreissena caspia",
 "Pseudophoxinus sojuchbulagi"
 ],
-"oldest": 1948
+"oldest": 1948,
+"cc": "Azerbaijan"
 },
 {
 "place": "Kazakhstan",
@@ -16361,7 +16481,8 @@
 "Dreissena caspia",
 "Eresus tristis"
 ],
-"oldest": 1980
+"oldest": 1980,
+"cc": "Kazakhstan"
 },
 {
 "place": "Uzbekistan",
@@ -16384,7 +16505,8 @@
 "Dreissena caspia",
 "Hynobius turkestanicus"
 ],
-"oldest": 1909
+"oldest": 1909,
+"cc": "Uzbekistan"
 },
 {
 "place": "Malawi",
@@ -16406,7 +16528,8 @@
 "Elephantulus fuscus",
 "Eumecia johnstoni"
 ],
-"oldest": 1897
+"oldest": 1897,
+"cc": "Malawi"
 },
 {
 "place": "Eritrea",
@@ -16428,7 +16551,8 @@
 "Equus africanus africanus",
 "Hypotrigona gribodoi"
 ],
-"oldest": 1932
+"oldest": 1932,
+"cc": "Eritrea"
 },
 {
 "place": "Georgia",
@@ -16449,7 +16573,8 @@
 "Eresus lavrosiae",
 "Xysticus kalandadzei"
 ],
-"oldest": 1967
+"oldest": 1967,
+"cc": "Georgia"
 },
 {
 "place": "Egypt",
@@ -16471,7 +16596,8 @@
 "Eresus pharaonis",
 "Lissocampus bannwarthi"
 ],
-"oldest": 1829
+"oldest": 1829,
+"cc": "Egypt"
 },
 {
 "place": "Tonga",
@@ -16491,7 +16617,8 @@
 "Eua globosa",
 "Samoana cramptoni"
 ],
-"oldest": 1933
+"oldest": 1933,
+"cc": "Tonga"
 },
 {
 "place": "Bermuda",
@@ -16513,7 +16640,8 @@
 "Halodule bermudensis",
 "Prosadenoporus agricola"
 ],
-"oldest": 1964
+"oldest": 1964,
+"cc": "Bermuda"
 },
 {
 "place": "Annobon Island",
@@ -16533,7 +16661,8 @@
 "Hemidactylus aporus",
 "Hemidactylus newtoni"
 ],
-"oldest": 1897
+"oldest": 1897,
+"cc": ""
 },
 {
 "place": "North Korea",
@@ -16554,7 +16683,8 @@
 "Hucho ishikawae",
 "Plestiodon coreensis"
 ],
-"oldest": 1928
+"oldest": 1928,
+"cc": "North Korea"
 },
 {
 "place": "Congo",
@@ -16576,7 +16706,8 @@
 "Hypotrigona gribodoi",
 "Trioceros chapini"
 ],
-"oldest": 1930
+"oldest": 1930,
+"cc": "Republic of the Congo"
 },
 {
 "place": "Romania",
@@ -16597,7 +16728,8 @@
 "Knipowitschia cameliae",
 "Spalax istricus"
 ],
-"oldest": 1994
+"oldest": 1994,
+"cc": "Romania"
 },
 {
 "place": "Ascension",
@@ -16617,7 +16749,8 @@
 "Labidura herculeana",
 "Sympetrum dilatatum"
 ],
-"oldest": 1963
+"oldest": 1963,
+"cc": ""
 },
 {
 "place": "Tristan da Cunha",
@@ -16637,7 +16770,8 @@
 "Labidura herculeana",
 "Sympetrum dilatatum"
 ],
-"oldest": 1963
+"oldest": 1963,
+"cc": ""
 },
 {
 "place": "Liberia",
@@ -16660,7 +16794,8 @@
 "Letheobia leucosticta",
 "Piliocolobus waldronae"
 ],
-"oldest": 1974
+"oldest": 1974,
+"cc": "Liberia"
 },
 {
 "place": "Israel",
@@ -16681,7 +16816,8 @@
 "Lissocampus bannwarthi",
 "Mirogrex hulensis"
 ],
-"oldest": 1975
+"oldest": 1975,
+"cc": "Israel"
 },
 {
 "place": "Saudi Arabia",
@@ -16704,7 +16840,8 @@
 "Lissocampus bannwarthi",
 "Tropiocolotes wolfgangboehmei"
 ],
-"oldest": 1975
+"oldest": 1975,
+"cc": "Saudi Arabia"
 },
 {
 "place": "Yemen",
@@ -16727,7 +16864,8 @@
 "Myriopholis yemenicus",
 "Xenephias socotranus"
 ],
-"oldest": 1967
+"oldest": 1967,
+"cc": "Yemen"
 },
 {
 "place": "Rossel Island",
@@ -16748,7 +16886,8 @@
 "Nactus acutus",
 "Varanus telenesetes"
 ],
-"oldest": 2004
+"oldest": 2004,
+"cc": ""
 },
 {
 "place": "Macedonia",
@@ -16767,7 +16906,8 @@
 "examples": [
 "Ohridohauffenia minuta",
 "Zaumia sanctizaumi"
-]
+],
+"cc": ""
 },
 {
 "place": "New Zealand South Island",
@@ -16788,7 +16928,8 @@
 "Oligosoma pikitanga",
 "Oligosoma tekakahu"
 ],
-"oldest": 2008
+"oldest": 2008,
+"cc": ""
 },
 {
 "place": "St Croix",
@@ -16812,7 +16953,8 @@
 "oldest": 1932,
 "merged_from": [
 "St Croix"
-]
+],
+"cc": ""
 },
 {
 "place": "Sumba",
@@ -16837,7 +16979,8 @@
 "oldest": 1983,
 "merged_from": [
 "Sumba"
-]
+],
+"cc": ""
 },
 {
 "place": "South Korea",
@@ -16862,7 +17005,8 @@
 "oldest": 1937,
 "merged_from": [
 "Korea"
-]
+],
+"cc": "South Korea"
 },
 {
 "place": "British Virgin Islands",
@@ -16887,7 +17031,8 @@
 "oldest": 1968,
 "merged_from": [
 "British Virgin Islands: Carrot Rock"
-]
+],
+"cc": "British Virgin Islands"
 },
 {
 "place": "Suriname",
@@ -16906,7 +17051,8 @@
 "examples": [
 "Amphisbaena myersi"
 ],
-"oldest": 1963
+"oldest": 1963,
+"cc": "Suriname"
 },
 {
 "place": "Burundi",
@@ -16925,7 +17071,8 @@
 "examples": [
 "Anisopappus burundiensis"
 ],
-"oldest": 1967
+"oldest": 1967,
+"cc": "Burundi"
 },
 {
 "place": "Britain (British Virgin Islands)",
@@ -16944,7 +17091,8 @@
 "examples": [
 "Anolis roosevelti"
 ],
-"oldest": 1932
+"oldest": 1932,
+"cc": ""
 },
 {
 "place": "Malta",
@@ -16963,7 +17111,8 @@
 "examples": [
 "Atriplex halimus"
 ],
-"oldest": 1875
+"oldest": 1875,
+"cc": "Malta"
 },
 {
 "place": "Tablas Island",
@@ -16982,7 +17131,8 @@
 "examples": [
 "Brachymeles dalawangdaliri"
 ],
-"oldest": 1972
+"oldest": 1972,
+"cc": ""
 },
 {
 "place": "Lubang Island",
@@ -17001,7 +17151,8 @@
 "examples": [
 "Brachymeles ligtas"
 ],
-"oldest": 2009
+"oldest": 2009,
+"cc": ""
 },
 {
 "place": "Hong Kong",
@@ -17020,7 +17171,8 @@
 "examples": [
 "Caridina apodosis"
 ],
-"oldest": 1944
+"oldest": 1944,
+"cc": "Hong Kong"
 },
 {
 "place": "Pulau Sukur",
@@ -17039,7 +17191,8 @@
 "examples": [
 "Carlia sukur"
 ],
-"oldest": 1908
+"oldest": 1908,
+"cc": ""
 },
 {
 "place": "Simeulue Island",
@@ -17058,7 +17211,8 @@
 "examples": [
 "Cnemaspis jacobsoni"
 ],
-"oldest": 1913
+"oldest": 1913,
+"cc": ""
 },
 {
 "place": "Pagai Island",
@@ -17077,7 +17231,8 @@
 "examples": [
 "Cnemaspis pagai"
 ],
-"oldest": 2009
+"oldest": 2009,
+"cc": ""
 },
 {
 "place": "Siantan Island",
@@ -17096,7 +17251,8 @@
 "examples": [
 "Cnemaspis sundagekko"
 ],
-"oldest": 1925
+"oldest": 1925,
+"cc": ""
 },
 {
 "place": "Cape Verde",
@@ -17114,7 +17270,8 @@
 },
 "examples": [
 "Conus lugubris"
-]
+],
+"cc": "Cape Verde"
 },
 {
 "place": "Isla de Margarita",
@@ -17133,7 +17290,8 @@
 "examples": [
 "Copeoglossum margaritae"
 ],
-"oldest": 1967
+"oldest": 1967,
+"cc": ""
 },
 {
 "place": "\u00cele Art",
@@ -17152,7 +17310,8 @@
 "examples": [
 "Correlophus belepensis"
 ],
-"oldest": 2002
+"oldest": 2002,
+"cc": ""
 },
 {
 "place": "Gambia",
@@ -17171,7 +17330,8 @@
 "examples": [
 "Cosmocampus retropinnis"
 ],
-"oldest": 1993
+"oldest": 1993,
+"cc": "The Gambia"
 },
 {
 "place": "Mauritania",
@@ -17190,7 +17350,8 @@
 "examples": [
 "Cosmocampus retropinnis"
 ],
-"oldest": 1993
+"oldest": 1993,
+"cc": "Mauritania"
 },
 {
 "place": "Christmas Island",
@@ -17209,7 +17370,8 @@
 "examples": [
 "Crocidura trichura"
 ],
-"oldest": 1985
+"oldest": 1985,
+"cc": ""
 },
 {
 "place": "Sardinia",
@@ -17227,7 +17389,8 @@
 },
 "examples": [
 "Cteniza brevidens"
-]
+],
+"cc": ""
 },
 {
 "place": "Isla de Utila",
@@ -17246,7 +17409,8 @@
 "examples": [
 "Ctenosaura bakeri"
 ],
-"oldest": 2003
+"oldest": 2003,
+"cc": ""
 },
 {
 "place": "Chad",
@@ -17265,7 +17429,8 @@
 "examples": [
 "Cyclanorbis elegans"
 ],
-"oldest": 1991
+"oldest": 1991,
+"cc": "Chad"
 },
 {
 "place": "Libya",
@@ -17284,7 +17449,8 @@
 "examples": [
 "Desmazeria lorentii"
 ],
-"oldest": 1977
+"oldest": 1977,
+"cc": "Libya"
 },
 {
 "place": "Taiwan",
@@ -17303,7 +17469,8 @@
 "examples": [
 "Dianemobius wulaius"
 ],
-"oldest": 1998
+"oldest": 1998,
+"cc": "Taiwan"
 },
 {
 "place": "\u00cele Baaba",
@@ -17322,7 +17489,8 @@
 "examples": [
 "Dierogekko baaba"
 ],
-"oldest": 2006
+"oldest": 2006,
+"cc": ""
 },
 {
 "place": "Biaro Island",
@@ -17341,7 +17509,8 @@
 "examples": [
 "Draco biaro"
 ],
-"oldest": 1998
+"oldest": 1998,
+"cc": ""
 },
 {
 "place": "Sulawesi: Tahulandang Island",
@@ -17360,7 +17529,8 @@
 "examples": [
 "Draco iskandari"
 ],
-"oldest": 1998
+"oldest": 1998,
+"cc": ""
 },
 {
 "place": "Turkmenistan",
@@ -17379,7 +17549,8 @@
 "examples": [
 "Dreissena caspia"
 ],
-"oldest": 1980
+"oldest": 1980,
+"cc": "Turkmenistan"
 },
 {
 "place": "Viti Levu",
@@ -17398,7 +17569,8 @@
 "examples": [
 "Emoia campbelli"
 ],
-"oldest": 1983
+"oldest": 1983,
+"cc": ""
 },
 {
 "place": "Rotuma Island",
@@ -17417,7 +17589,8 @@
 "examples": [
 "Emoia oriva"
 ],
-"oldest": 1986
+"oldest": 1986,
+"cc": ""
 },
 {
 "place": "Solomon Islands: Santa Cruz",
@@ -17436,7 +17609,8 @@
 "examples": [
 "Emoia taumakoensis"
 ],
-"oldest": 1981
+"oldest": 1981,
+"cc": ""
 },
 {
 "place": "Cook Islands (Rarotonga)",
@@ -17455,7 +17629,8 @@
 "examples": [
 "Emoia tuitarere"
 ],
-"oldest": 2000
+"oldest": 2000,
+"cc": "Cook Islands"
 },
 {
 "place": "Maldives",
@@ -17474,7 +17649,8 @@
 "examples": [
 "Enallagma maldivensis"
 ],
-"oldest": 1902
+"oldest": 1902,
+"cc": "Maldives"
 },
 {
 "place": "Gulf of Panama",
@@ -17493,7 +17669,8 @@
 "examples": [
 "Halodule ciliata"
 ],
-"oldest": 1960
+"oldest": 1960,
+"cc": ""
 },
 {
 "place": "Cape Verde Islands (Fogo)",
@@ -17512,7 +17689,8 @@
 "examples": [
 "Hemidactylus lopezjuradoi"
 ],
-"oldest": 1997
+"oldest": 1997,
+"cc": ""
 },
 {
 "place": "Montenegro",
@@ -17530,7 +17708,8 @@
 },
 "examples": [
 "Histopona palaeolithica"
-]
+],
+"cc": "Montenegro"
 },
 {
 "place": "Borneo",
@@ -17548,7 +17727,8 @@
 },
 "examples": [
 "Hydrophis annandalei"
-]
+],
+"cc": ""
 },
 {
 "place": "Kyrgyzstan",
@@ -17567,7 +17747,8 @@
 "examples": [
 "Hynobius turkestanicus"
 ],
-"oldest": 1909
+"oldest": 1909,
+"cc": "Kyrgyzstan"
 },
 {
 "place": "Croatia",
@@ -17585,7 +17766,8 @@
 },
 "examples": [
 "Islamia zermanica"
-]
+],
+"cc": "Croatia"
 },
 {
 "place": "Guinea Bissau",
@@ -17604,7 +17786,8 @@
 "examples": [
 "Latastia ornata"
 ],
-"oldest": 1938
+"oldest": 1938,
+"cc": "Guinea-Bissau"
 },
 {
 "place": "Benin",
@@ -17623,7 +17806,8 @@
 "examples": [
 "Latastia siebenrocki"
 ],
-"oldest": 1905
+"oldest": 1905,
+"cc": "Benin"
 },
 {
 "place": "St. Lucia",
@@ -17641,7 +17825,8 @@
 },
 "examples": [
 "Leucopeza semperi"
-]
+],
+"cc": ""
 },
 {
 "place": "Mindanao",
@@ -17660,7 +17845,8 @@
 "examples": [
 "Lipinia zamboangensis"
 ],
-"oldest": 1959
+"oldest": 1959,
+"cc": ""
 },
 {
 "place": "Jordan",
@@ -17679,7 +17865,8 @@
 "examples": [
 "Lissocampus bannwarthi"
 ],
-"oldest": 1975
+"oldest": 1975,
+"cc": "Jordan"
 },
 {
 "place": "Cyprus",
@@ -17698,7 +17885,8 @@
 "examples": [
 "Megachile cypricola"
 ],
-"oldest": 1950
+"oldest": 1950,
+"cc": "Cyprus"
 },
 {
 "place": "Bali",
@@ -17717,7 +17905,8 @@
 "examples": [
 "Nannocampus weberi"
 ],
-"oldest": 1983
+"oldest": 1983,
+"cc": ""
 },
 {
 "place": "Island of Banka",
@@ -17736,7 +17925,8 @@
 "examples": [
 "Nycticebus bancanus"
 ],
-"oldest": 1937
+"oldest": 1937,
+"cc": ""
 },
 {
 "place": "Rodrigues Island",
@@ -17755,7 +17945,8 @@
 "examples": [
 "Phelsuma edwardnewtoni"
 ],
-"oldest": 1917
+"oldest": 1917,
+"cc": ""
 },
 {
 "place": "China: \"Yunnan\"",
@@ -17773,7 +17964,8 @@
 },
 "examples": [
 "Plagiopholis unipostocularis"
-]
+],
+"cc": ""
 },
 {
 "place": "Hanish al-Kabir Island",
@@ -17792,7 +17984,8 @@
 "examples": [
 "Pristurus schneideri"
 ],
-"oldest": 2004
+"oldest": 2004,
+"cc": ""
 },
 {
 "place": "Madagascar: Nosy Be",
@@ -17811,7 +18004,8 @@
 "examples": [
 "Pseudoacontias unicolor"
 ],
-"oldest": 2000
+"oldest": 2000,
+"cc": ""
 },
 {
 "place": "Bahamas",
@@ -17830,7 +18024,8 @@
 "examples": [
 "Pterodroma caribbaea"
 ],
-"oldest": 1879
+"oldest": 1879,
+"cc": "The Bahamas"
 },
 {
 "place": "Dominica",
@@ -17849,7 +18044,8 @@
 "examples": [
 "Pterodroma caribbaea"
 ],
-"oldest": 1879
+"oldest": 1879,
+"cc": "Dominica"
 },
 {
 "place": "Santa Catalina Island",
@@ -17868,7 +18064,8 @@
 "examples": [
 "Sauromalus klauberi"
 ],
-"oldest": 2001
+"oldest": 2001,
+"cc": ""
 },
 {
 "place": "Benguerua Island",
@@ -17887,7 +18084,8 @@
 "examples": [
 "Scelotes duttoni"
 ],
-"oldest": 1990
+"oldest": 1990,
+"cc": ""
 },
 {
 "place": "Bioko",
@@ -17906,7 +18104,8 @@
 "examples": [
 "Scelotes poensis"
 ],
-"oldest": 1895
+"oldest": 1895,
+"cc": ""
 },
 {
 "place": "Great Nicobar Island",
@@ -17925,7 +18124,8 @@
 "examples": [
 "Scincella macrotis"
 ],
-"oldest": 1867
+"oldest": 1867,
+"cc": ""
 },
 {
 "place": "Kai Besar",
@@ -17944,7 +18144,8 @@
 "examples": [
 "Sphenomorphus capitolythos"
 ],
-"oldest": 1923
+"oldest": 1923,
+"cc": ""
 },
 {
 "place": "Anegada",
@@ -17963,7 +18164,8 @@
 "examples": [
 "Spondylurus anegadae"
 ],
-"oldest": 1968
+"oldest": 1968,
+"cc": ""
 },
 {
 "place": "St. Martin Island: Sint Maarten",
@@ -17982,7 +18184,8 @@
 "examples": [
 "Spondylurus martinae"
 ],
-"oldest": 1965
+"oldest": 1965,
+"cc": ""
 },
 {
 "place": "United States (Puerto Rico: Mona Island)",
@@ -18001,7 +18204,8 @@
 "examples": [
 "Spondylurus monae"
 ],
-"oldest": 1994
+"oldest": 1994,
+"cc": "United States of America"
 },
 {
 "place": "Buka Island",
@@ -18020,7 +18224,8 @@
 "examples": [
 "Tribolonotus parkeri"
 ],
-"oldest": 2005
+"oldest": 2005,
+"cc": ""
 },
 {
 "place": "Tioman Island",
@@ -18039,7 +18244,8 @@
 "examples": [
 "Tytthoscincus ishaki"
 ],
-"oldest": 2004
+"oldest": 2004,
+"cc": ""
 },
 {
 "place": "Roti Island",
@@ -18058,7 +18264,8 @@
 "examples": [
 "Varanus auffenbergi"
 ],
-"oldest": 2005
+"oldest": 2005,
+"cc": ""
 },
 {
 "place": "Indonesia (Halmahera Island)",
@@ -18077,7 +18284,8 @@
 "examples": [
 "Varanus zugorum"
 ],
-"oldest": 1980
+"oldest": 1980,
+"cc": "Indonesia"
 },
 {
 "place": "Australia (Norfolk Island)",
@@ -18096,7 +18304,8 @@
 "examples": [
 "Zosterops albogularis"
 ],
-"oldest": 2006
+"oldest": 2006,
+"cc": "Australia"
 }
 ],
 "oldest": [
