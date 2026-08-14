@@ -1348,14 +1348,18 @@
   <!-- ABOVE BOTH TABLES. The map answers 'where' for reptiles and amphibians together,
        so it belongs before either list rather than wedged between them. -->
   <h3 class="siteshead">Where they are</h3>
-  <p class="siteslede">Both classes on one map, in the same encoding as the lost-species
-    map so the three can be read against each other: countries shaded by how many of these
-    species they hold, and a circle where a place is not a country.</p>
+  <p class="siteslede">All four classes on one map, in the same encoding as the
+    lost-species map so the three can be read against each other: countries shaded by how
+    many of these species they hold, and a circle where a place is not a country. The
+    tables below list the reptiles and amphibians; the birds and mammals are on the map
+    only for now.</p>
   <div class="mapsource" style="justify-content:center">
     <span class="eyebrow">Show</span>
-    <button id="nsClsAll"  aria-pressed="true">Both</button>
+    <button id="nsClsAll"  aria-pressed="true">All</button>
     <button id="nsClsRep"  aria-pressed="false">Reptiles</button>
     <button id="nsClsAmp"  aria-pressed="false">Amphibians</button>
+    <button id="nsClsBird" aria-pressed="false">Birds</button>
+    <button id="nsClsMam"  aria-pressed="false">Mammals</button>
     <!-- Composes with the class buttons above: the payload carries counts per class per
          year, so "reptiles, 2023" is a real number rather than a total wearing a label. -->
     <span class="eyebrow" style="margin-left:var(--s2)">Described</span>
@@ -2614,11 +2618,17 @@ function ensureNsMap() {
   return nsLoading;
 }
 
-let nsClass = null, nsYear = "";          // null = both classes; "reptile" / "amphibian" to filter
+let nsClass = null, nsYear = "";   // null = every class; a class name to filter to one
+/* Mammal figures count SPECIES-COUNTRY PAIRS, not species: the Mammal Diversity Database
+   lists every country a species occurs in and 76 of 372 list more than one. That is right
+   for a shaded map, where a species really does occur in all of them, but it is why the
+   mammal label says "records" and the others say "species". */
 const NS_LABEL = {
-  "": "Reptiles and amphibians described since 2015, never assessed",
+  "": "Reptiles, amphibians, birds and mammals described since 2015, never assessed",
   reptile: "Reptiles described since 2015 that the Red List has never assessed",
   amphibian: "Amphibians described since 2015 that the Red List has never assessed",
+  bird: "Birds described since 2015 that the Red List has never assessed",
+  mammal: "Mammal records, by country, for species described since 2015 and never assessed",
 };
 
 function drawNsMap() {
@@ -2670,7 +2680,8 @@ function nsYearOptions() {
     if (!b) return;
     b.onclick = () => {
       nsClass = cls;
-      [["#nsClsAll", null], ["#nsClsRep", "reptile"], ["#nsClsAmp", "amphibian"]]
+      [["#nsClsAll", null], ["#nsClsRep", "reptile"], ["#nsClsAmp", "amphibian"],
+       ["#nsClsBird", "bird"], ["#nsClsMam", "mammal"]]
         .forEach(([sel, c]) => {
           const el = $(sel);
           if (el) el.setAttribute("aria-pressed", String(c === cls));
@@ -2681,6 +2692,8 @@ function nsYearOptions() {
   set(null, "#nsClsAll");
   set("reptile", "#nsClsRep");
   set("amphibian", "#nsClsAmp");
+  set("bird", "#nsClsBird");
+  set("mammal", "#nsClsMam");
 })();
 
 /* ---- the amphibian list ---- */
