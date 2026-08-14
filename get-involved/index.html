@@ -3245,6 +3245,21 @@ function boot() {
      the species or the record. */
   const D = m.duration, n = x => (x || 0).toLocaleString();
   const STATS = [];
+  /* FIRST, because it is the whole site in one sentence. Written for someone who has never
+     heard of a Red List category: no percentages, no strata, no interval. "Probably" and
+     "roughly" carry the uncertainty in words, which is the honest way to say a number that
+     is a sensitivity band rather than a measurement. The precise version, with the ranges
+     and what is and is not measured, is on the Black List overview. */
+  const A = m.across_lists;
+  if (A && A.central) {
+    // Rounded to the nearest hundred. "Roughly 2,697" claims a precision the number
+    // does not have, and a headline that says roughly should look roughly.
+    const approx = (Math.round(A.central / 100) * 100).toLocaleString();
+    STATS.push(`Roughly <strong>${approx}</strong> species on these
+      lists are probably heading for extinction, and not one of them is officially
+      recorded as being in trouble. Nobody is coming for them, because on paper there is
+      nothing to come for.`);
+  }
   if (D && D.n_overdue && D.median_time_to_resolution) {
     STATS.push(`Most Data Deficient listings are resolved within
       <strong>${D.median_time_to_resolution} years</strong>. <strong>${n(D.n_overdue)}</strong>
@@ -3450,11 +3465,15 @@ function boot() {
   const E = m.estimate;
   if ($("#estimate") && E) {
     $("#estimate").innerHTML =
-      `Applied to the register, those rates imply that about
-       <strong>${E.n.toLocaleString()}</strong> of the
+      /* Range first, central figure second. Written the other way round it read as
+         though 1,035 were a floor that 779 contradicted, which is exactly how Scott read
+         it: an interval brackets an estimate, and saying so plainly costs nothing. */
+      `Applied to the register, those rates imply that somewhere between
+       <strong>${E.lo.toLocaleString()}</strong> and
+       <strong>${E.hi.toLocaleString()}</strong> of the
        <strong>${E.of.toLocaleString()}</strong> species here are threatened and carry no
-       such status: <strong>${E.pct}%</strong>, with a 95% confidence interval of
-       <strong>${E.lo.toLocaleString()} to ${E.hi.toLocaleString()}</strong>.
+       such status, most likely around <strong>${E.n.toLocaleString()}</strong>, or
+       <strong>${E.pct}%</strong>. That range is a 95% confidence interval.
        <span class="caveat">Stratified by tier, ${E.high_n.toLocaleString()} species at
        tier ${PRI} to 5 and ${E.low_n.toLocaleString()} below, each carrying the rate
        measured on it. The interval covers sampling error only. It cannot cover the fact
