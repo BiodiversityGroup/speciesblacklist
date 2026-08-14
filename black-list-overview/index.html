@@ -2622,7 +2622,10 @@ function attachHeatZoom(sel, view, redraw, ids) {
       t.style.opacity = 1;
       /* A finger covers what it taps, so on touch the card goes ABOVE the point rather
          than under it, and is clamped to the viewport so it cannot open off-screen. */
-      const touch = ev.pointerType === "touch";
+      /* A click has no pointerType, and the canvas takes pointer capture on pointerdown,
+         which is where a document-level pointerdown listener stops being dependable on
+         touch. So the device decides the placement, not the event. */
+      const touch = ev.pointerType === "touch" || TOUCH_DEVICE;
       // tw/th, not w/h: `h` is the hit found above and shadowing it here is a redeclare
       // in the same block. node --check caught it; the browser would have thrown on load.
       const tw = t.offsetWidth || 260, th = t.offsetHeight || 90;
@@ -2636,8 +2639,16 @@ function attachHeatZoom(sel, view, redraw, ids) {
       t.style.top = Math.max(8, top) + "px";
     });
   };
+  /* THREE EVENTS, because a tap is not reliably one of them. pointerdown alone did not
+     fix this: the canvas calls setPointerCapture during its own pointerdown handler, and
+     with capture pending the document-level listener is not something to depend on. click
+     always fires on a tap, on every mobile browser, so that is the one that actually
+     guarantees it; pointerup covers a tap that ends up cancelled before click. */
+  const TOUCH_DEVICE = matchMedia("(hover: none)").matches;
   document.addEventListener("pointermove", showTip, {passive: true});
   document.addEventListener("pointerdown", showTip, {passive: true});
+  document.addEventListener("pointerup", showTip, {passive: true});
+  document.addEventListener("click", showTip, {passive: true});
 })();
 
 /* Which shaded country contains this coordinate. Ray casting, with a bounding-box
