@@ -2387,18 +2387,28 @@ function paintHeat(cv, data, opts) {
   const shaded = new Map();
   if (COUNTRIES && COUNTRIES.rings) {
     places.forEach(p => {
-      if (p.cc) shaded.set(p.cc, (shaded.get(p.cc) || 0) + valueOf(p));
+      if (!p.cc) return;
+      const e = shaded.get(p.cc) || {n: 0, places: [], grp: {}, cls: {}};
+      e.n += valueOf(p);
+      e.places.push(p.place);
+      // A country can gather several source places -- "United States" and "United States
+      // (Hawaii)" both shade the US -- so the breakdowns are summed, or the tooltip would
+      // report only whichever place happened to be last.
+      for (const [k, v] of Object.entries(p.grp || {})) e.grp[k] = (e.grp[k] || 0) + v;
+      for (const [k, v] of Object.entries(p.cls || {})) e.cls[k] = (e.cls[k] || 0) + v;
+      shaded.set(p.cc, e);
     });
   }
   if (shaded.size) {
-    const hi = Math.max(...shaded.values());
+    const hi = Math.max(...[...shaded.values()].map(e => e.n));
     const ramp = ["--t1", "--t2", "--t3", "--t4", "--t5"]
       .map(t => cs.getPropertyValue(t).trim());
     g.lineWidth = 0.6;
     g.strokeStyle = cs.getPropertyValue("--rule-2").trim();
     COUNTRIES.rings.forEach(([name, ring]) => {
-      const n = shaded.get(name);
-      if (!n) return;
+      const e = shaded.get(name);
+      if (!e) return;
+      const n = e.n;
       // sqrt, matching the circle areas: counts here run 1 to 269 and a linear ramp
       // would leave everything but Brazil in the first band.
       const step = Math.min(4, Math.floor(Math.sqrt(n / hi) * 5));
@@ -2452,7 +2462,12 @@ function paintHeat(cv, data, opts) {
       + `<span class="rampnums">` + ticks.map(n => n.toLocaleString()).join(" ")
       + `</span>`;
   }
-  return {hits, cssW, cssH};
+  /* shaded + inv let the hover test countries as well as circles. The inverse turns a
+     pointer position back into lon/lat, so hit-testing runs against the rings as stored
+     rather than reprojecting 1,589 of them on every mouse move. */
+  return {hits, cssW, cssH, shaded,
+          inv: (px, py) => [((px - v.tx) / (cssW * v.k)) * 360 - 180,
+                            90 - ((py - v.ty) / (cssH * v.k)) * 180]};
 }
 
 const HEAT_K_MAX = 40;
@@ -2564,7 +2579,20 @@ function attachHeatZoom(sel, view, redraw, ids) {
       }
       const b = cv.getBoundingClientRect();
       const x = ev.clientX - b.left, y = ev.clientY - b.top;
-      const h = geom.hits.find(q => (q.x - x) ** 2 + (q.y - y) ** 2 <= q.r * q.r);
+      let h = geom.hits.find(q => (q.x - x) ** 2 + (q.y - y) ** 2 <= q.r * q.r);
+      /* Circles first, because they are drawn on top and a small island sitting inside a
+         shaded country has to win. Then the shading: countries had no tooltip at all when
+         shading shipped, so hovering most of the map said nothing, which made the map look
+         less informative than the version it replaced. */
+      if (!h && geom.shaded && geom.shaded.size && COUNTRIES) {
+        const [lon, lat] = geom.inv(x, y);
+        const name = countryAt(lon, lat, geom.shaded);
+        if (name) {
+          const e = geom.shaded.get(name);
+          h = {p: {place: name, n: e.n, grp: e.grp, cls: e.cls,
+                   also: e.places.filter(q => q !== name)}, val: e.n};
+        }
+      }
       if (!h) { t.style.opacity = 0; return; }
       const p = h.p;
       const grp = Object.entries(p.grp || {}).sort((a, b) => b[1] - a[1]).slice(0, 4)
@@ -2575,6 +2603,7 @@ function attachHeatZoom(sel, view, redraw, ids) {
       t.innerHTML = `<strong>${p.place}</strong> &middot; ${shown} ${m.noun}`
         + (cls && !m.hideClass ? `<br>${cls}` : "")
         + (grp ? `<br>${grp}` : "")
+        + (p.also && p.also.length ? `<br>includes ${p.also.join(", ")}` : "")
         + (p.oldest ? `<br>oldest last record ${p.oldest}` : "")
         + (p.newest ? `<br>most recent description ${p.newest}` : "");
       t.style.opacity = 1;
@@ -2583,6 +2612,39 @@ function attachHeatZoom(sel, view, redraw, ids) {
     });
   }, {passive: true});
 })();
+
+/* Which shaded country contains this coordinate. Ray casting, with a bounding-box
+   pre-filter and a cache of those boxes, because this runs on every pointermove over
+   1,589 rings and testing them all properly would be felt. */
+let CBOX = null;
+function countryAt(lon, lat, shaded) {
+  if (!COUNTRIES || !COUNTRIES.rings) return "";
+  if (!CBOX) {
+    CBOX = COUNTRIES.rings.map(([name, ring]) => {
+      let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9;
+      for (const [a, b] of ring) {
+        if (a < x0) x0 = a; if (a > x1) x1 = a;
+        if (b < y0) y0 = b; if (b > y1) y1 = b;
+      }
+      return {name, ring, x0, y0, x1, y1};
+    });
+  }
+  for (const c of CBOX) {
+    if (!shaded.has(c.name)) continue;
+    if (lon < c.x0 || lon > c.x1 || lat < c.y0 || lat > c.y1) continue;
+    let inside = false;
+    const r = c.ring;
+    for (let i = 0, j = r.length - 1; i < r.length; j = i++) {
+      const [xi, yi] = r[i], [xj, yj] = r[j];
+      if ((yi > lat) !== (yj > lat)
+          && lon < ((xj - xi) * (lat - yi)) / ((yj - yi) || 1e-12) + xi) {
+        inside = !inside;
+      }
+    }
+    if (inside) return c.name;
+  }
+  return "";
+}
 
 /* ---- the same map for the new-species page ---- */
 let NSMAP = null, nsLoading = false, nsGeom = null;
