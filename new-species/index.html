@@ -1339,6 +1339,39 @@
       are endemic to a single country.</p>
   </div>
 
+  <!-- ABOVE BOTH TABLES. The map answers 'where' for reptiles and amphibians together,
+       so it belongs before either list rather than wedged between them. -->
+  <h3 class="siteshead">Where they are</h3>
+  <p class="siteslede">Both classes on one map, in the same encoding as the lost-species
+    map so the three can be read against each other: countries shaded by how many of these
+    species they hold, and a circle where a place is not a country.</p>
+  <div class="mapsource" style="justify-content:center">
+    <span class="eyebrow">Show</span>
+    <button id="nsClsAll"  aria-pressed="true">Both</button>
+    <button id="nsClsRep"  aria-pressed="false">Reptiles</button>
+    <button id="nsClsAmp"  aria-pressed="false">Amphibians</button>
+    <!-- Composes with the class buttons above: the payload carries counts per class per
+         year, so "reptiles, 2023" is a real number rather than a total wearing a label. -->
+    <span class="eyebrow" style="margin-left:var(--s2)">Described</span>
+    <select id="nsYear" aria-label="Filter by year of description">
+      <option value="">Any year</option>
+    </select>
+  </div>
+  <div class="mapwrap">
+    <div class="mapzoom">
+      <button id="nsZIn"    aria-label="Zoom in">+</button>
+      <button id="nsZOut"   aria-label="Zoom out">&minus;</button>
+      <button id="nsZReset" aria-label="Reset zoom" title="Reset">Reset</button>
+    </div>
+    <canvas id="nsCanvas" role="img"
+            aria-label="World map with circles sized and colored by the number of
+            reptile species described since 2015 that the IUCN Red List has never
+            assessed, per country. The same species are listed in the table below."></canvas>
+  </div>
+  <div class="lostlegend" id="nsLegend"></div>
+  <p class="mapstats" id="nsMapNote"></p>
+  <div id="nsTip" aria-hidden="true"></div>
+
   <div id="ampCounts" class="counts"></div>
 
   <!-- Deliberately after both classes, because the point only lands once the reader has
@@ -1371,36 +1404,6 @@
     has only as an authority string.</p>
 
   <!-- ===================== WHERE THEY ARE ===================== -->
-  <h3 class="siteshead">Where they are</h3>
-  <p class="siteslede">Both classes on one map, in the same encoding as the lost-species
-    map so the three can be read against each other: countries shaded by how many of these
-    species they hold, and a circle where a place is not a country.</p>
-  <div class="mapsource" style="justify-content:center">
-    <span class="eyebrow">Show</span>
-    <button id="nsClsAll"  aria-pressed="true">Both</button>
-    <button id="nsClsRep"  aria-pressed="false">Reptiles</button>
-    <button id="nsClsAmp"  aria-pressed="false">Amphibians</button>
-    <!-- Composes with the class buttons above: the payload carries counts per class per
-         year, so "reptiles, 2023" is a real number rather than a total wearing a label. -->
-    <span class="eyebrow" style="margin-left:var(--s2)">Described</span>
-    <select id="nsYear" aria-label="Filter by year of description">
-      <option value="">Any year</option>
-    </select>
-  </div>
-  <div class="mapwrap">
-    <div class="mapzoom">
-      <button id="nsZIn"    aria-label="Zoom in">+</button>
-      <button id="nsZOut"   aria-label="Zoom out">&minus;</button>
-      <button id="nsZReset" aria-label="Reset zoom" title="Reset">Reset</button>
-    </div>
-    <canvas id="nsCanvas" role="img"
-            aria-label="World map with circles sized and colored by the number of
-            reptile species described since 2015 that the IUCN Red List has never
-            assessed, per country. The same species are listed in the table below."></canvas>
-  </div>
-  <div class="lostlegend" id="nsLegend"></div>
-  <p class="mapstats" id="nsMapNote"></p>
-  <div id="nsTip" aria-hidden="true"></div>
 
   <!-- ===================== METHOD AND LIMITS, ABOVE THE LIST ===================== -->
   <div id="nt-about" class="ntabout">
