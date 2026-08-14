@@ -1,13 +1,13 @@
 {
 "built": "2026-08-14",
 "counts": {
-"stories": 119,
+"stories": 117,
 "raw_items": 294,
-"with_species": 75,
-"distinct_species": 161,
+"with_species": 74,
+"distinct_species": 158,
 "distinct_species_firm": 30,
-"multi_species_cards": 31,
-"with_image": 119,
+"multi_species_cards": 30,
+"with_image": 117,
 "syndicated": 53,
 "on_tbg_list": 22,
 "on_list_breakdown": {
@@ -17,34 +17,10 @@
 "undated": 0,
 "newest": "Thu, 13 Aug 2026",
 "tracked_names": 6709,
-"image_local": 114,
-"archived": 93
+"image_local": 112,
+"archived": 92
 },
 "cards": [
-{
-"title": "Crush-worthy cephalopods and beautiful bugs",
-"species": [
-"Dryococelus australe",
-"Lineus longissimus",
-"Porcellio scaber"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "the Guardian",
-"date": "Thu, 13 Aug 2026",
-"ts": 1786662000,
-"first_seen": "2026-08-14",
-"link": "https://www.theguardian.com/environment/2026/aug/14/cephalopods-bugs-vote-for-invertebrate-of-the-year",
-"image": "/rd-img/1997cba771720f0a.jpg",
-"wayback": "",
-"desc": "Of the 1.3m spineless wonders in the world, you told us your favourite. Now it\u2019s time to pick the winner. Plus: a climate hero going to the bat for conservation",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
 {
 "title": "Timor green pigeon nears extinction after decades of inaction, study warns",
 "species": [
@@ -208,26 +184,6 @@
 "image": "/rd-img/e9f8b6c39beb74a8.jpg",
 "wayback": "http://web.archive.org/web/20260806163412/https://www.bigislandvideonews.com/2026/07/19/pinapinao-hawaiian-damselfly-rediscovered-on-hawai%CA%BBi-island/",
 "desc": "(BIVN) \u2013 A species of endangered Hawaiian damselfly was rediscovered on Hawai\u02bbi island last year, after a century-long disappearance from the wild.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Contributions of a small collection of the terrestrial microsnails genus Diplommatina s.l. (Caenogastropoda, Cyclophoroidea, Diplommatinidae) from Myanmar, with a catalogue of recorded species and description of two new species",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "ZooKeys",
-"date": "Fri, 17 Jul 2026",
-"ts": 1784297543,
-"first_seen": "2026-08-10",
-"link": "https://zookeys.pensoft.net/article/186884/",
-"image": "/rd-img/e98b26bed5e4039b.jpg",
-"wayback": "http://web.archive.org/web/20260725200743/https://zookeys.pensoft.net/article/186884/",
-"desc": "All currently known microsnails of the genus Diplommatina s.l. from Myanmar are here listed and revised based on recently collected specimens. The specimens examined were obtained through the \u2018Conserving Myanmar\u2019s Karst Biodiversity\u2019 project, hosted by the Fau",
 "citation": "",
 "kind": "",
 "note": "",
