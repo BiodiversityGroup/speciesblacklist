@@ -1821,6 +1821,12 @@ function ensureLost() {
     if (s) s.innerHTML = '<p class="siteslede">Could not load lost.json.</p>';
     return false;
   }).finally(() => { lostLoading = false; });
+  // RETURN IT. The de-race edit turned `return getJSON(...)` into an assignment and the
+  // follow-up that adds the return did not match this loader, whose .catch has a different
+  // shape from ensureNsMap's. So this returned undefined, `if (ok)` was false, and neither
+  // drawLost nor attachHeatZoom ever ran -- which is why the lost map stopped zooming while
+  // the new-species map, whose loader was patched correctly, still did.
+  return lostLoading;
 }
 
 /* Lost per 1,000 described. A bar chart rather than a table because the whole point is
