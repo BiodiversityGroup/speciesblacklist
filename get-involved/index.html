@@ -1715,19 +1715,19 @@ function ensureCountries() {
   return countriesLoading;
 }
 
-let LOST = null, lostLoading = false, lostGeom = null;
+let LOST = null, lostLoading = null, lostGeom = null;
 
 function ensureLost() {
   if (LOST) return Promise.resolve(true);
-  if (lostLoading) return Promise.resolve(false);
-  lostLoading = true;
+  // Same race as ensureNsMap: return the in-flight promise, never false.
+  if (lostLoading) return lostLoading;
   // Plain path with no-cache, the same as reptiles.json and rediscoveries.json, NOT
   // stamped(). stamped() reads DATA.meta.built, which couples this page to the 1.6 MB
   // register payload: it is declared further down the file and throws outright if DATA
   // has not loaded, and the throw happened BEFORE this function returned a promise, so
   // the .catch() below never ran, lostLoading stayed true, and every later attempt
   // returned false. A page that silently disables itself is worse than one that fails.
-  return getJSON("/lost.json").then(d => {
+  lostLoading = getJSON("/lost.json").then(d => {
     LOST = d;
     renderLostStats();
     renderLongest();
@@ -2496,13 +2496,16 @@ function countryAt(lon, lat, shaded) {
 }
 
 /* ---- the same map for the new-species page ---- */
-let NSMAP = null, nsLoading = false, nsGeom = null;
+let NSMAP = null, nsLoading = null, nsGeom = null;
 
 function ensureNsMap() {
   if (NSMAP) return Promise.resolve(true);
-  if (nsLoading) return Promise.resolve(false);
-  nsLoading = true;
-  return getJSON("/newspecies-map.json")
+  /* RETURN THE IN-FLIGHT PROMISE, never false. showView runs twice on a direct load: once
+     at the top level and again from boot()'s second pass once data.json has arrived. The
+     second call used to see nsLoading and report FAILURE for a load that was merely still
+     going, so whichever call lost the race silently drew nothing. */
+  if (nsLoading) return nsLoading;
+  nsLoading = getJSON("/newspecies-map.json")
     .then(d => {
       NSMAP = d;
       const m = d.meta || {}, n = $("#nsMapNote");
@@ -2513,7 +2516,8 @@ function ensureNsMap() {
           + `country and are not drawn.`;
       }
       return true;
-    }).catch(() => false).finally(() => { nsLoading = false; });
+    }).catch(() => false);
+  return nsLoading;
 }
 
 let nsClass = null, nsYear = "";          // null = both classes; "reptile" / "amphibian" to filter
