@@ -985,6 +985,12 @@
   .statdots button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
   @media (prefers-reduced-motion:reduce) { #overdueHead { transition:none; } }
 
+  .estimate { font-family:var(--sans); font-size:.95rem; line-height:1.6;
+              background:var(--surface); border-left:3px solid var(--t3);
+              padding:1rem 1.2rem; margin:1.4rem 0 0; color:var(--ink-2); }
+  .estimate strong { color:var(--ink); }
+  .estimate .caveat { display:block; margin-top:.5rem; font-size:.85rem; color:var(--ink-3); }
+
   .noresults { font-family:var(--sans); font-size:.92rem; line-height:1.6;
                color:var(--ink-2); background:var(--surface); border:1px solid var(--t3);
                padding:1rem 1.2rem; margin:var(--s2) 0; text-align:center; }
@@ -3637,6 +3643,26 @@ function boot() {
     odds ratio <code>${v.odds_ratio}</code>. Bars show 95% confidence intervals;
     they overlap only slightly, and the priority group is about
     <strong>2.6&times;</strong> more likely to prove threatened.`;
+
+  /* WHAT THE RATES IMPLY, with a genuine interval. Stratified: each tier band carries the
+     rate measured on it, and because the two bands are independent binomial samples their
+     variances add, so this is a real 95% interval rather than a spread of assumptions.
+     Register only, deliberately. The same question across the new-species and lost lists
+     has no sample behind it, and a range built from assumptions must not be dressed up as
+     a confidence interval. */
+  const E = m.estimate;
+  if ($("#estimate") && E) {
+    $("#estimate").innerHTML =
+      `Applied to the register, those rates imply that about
+       <strong>${E.n.toLocaleString()}</strong> of the
+       <strong>${E.of.toLocaleString()}</strong> species here are threatened and carry no
+       such status: <strong>${E.pct}%</strong>, with a 95% confidence interval of
+       <strong>${E.lo.toLocaleString()} to ${E.hi.toLocaleString()}</strong>.
+       <span class="caveat">Stratified by tier, ${E.high_n.toLocaleString()} species at
+       tier ${PRI} to 5 and ${E.low_n.toLocaleString()} below, each carrying the rate
+       measured on it. The interval covers sampling error only. It cannot cover the fact
+       that IUCN chooses which species to reassess, and that choice is not random.</span>`;
+  }
 
   /* --- composition bars: magnitude, so one hue, not eight --- */
   const maxC = Math.max(...Object.values(DATA.classes));
