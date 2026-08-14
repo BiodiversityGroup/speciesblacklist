@@ -2979,8 +2979,9 @@ function rdBoot() {
   /* The hero counts FINDS (stories), which is the one unit here that needs no footnote.
      Tried and rejected: the species count reads better but overstates, because some
      names are read out of article bodies where a species mentioned in passing looks like
-     one that was found; and the firm-only count is 26, which understates just as badly.
-     Species figures live in the tiles, where each has room for its qualifier. */
+     one that was found; and the firm-only count is 30, which understates just as badly.
+     Both are in the payload for anyone who wants them; neither is printed on the page,
+     for the reason set out at the tiles below. */
   $("#rdHero").textContent = c.stories.toLocaleString();
 
   /* Tile captions are for someone who has never used this site. Where a figure needs a
@@ -2993,10 +2994,23 @@ function rdBoot() {
 
   /* Figure and label only. The explanatory sub-line under each tile was crowding the
      row; what it said is covered by the notes below the list. `listSub` is still built
-     above because the breakdown is worth keeping in the payload. */
+     above because the breakdown is worth keeping in the payload.
+
+     NO SPECIES TILE. It read "Species named 158" beside "Finds reported 117", and the
+     question a reader immediately asks -- how do 117 articles yield 158 rediscoveries --
+     has an answer the tile could not give: they do not. 158 is every validated binomial
+     in these articles, which includes the chytrid fungus in the Panama story, the jaguar
+     and the black-footed ferret used as comparisons in an essay, and five common
+     dragonflies recorded on the survey that found the rare one. The true number of
+     rediscoveries is not recoverable from the text; it lies somewhere between the 30
+     firm headline names and 158, and neither end is worth printing as a fact. The
+     comment above already said this figure overstates -- the qualifier that made it
+     honest lived in the sub-line deleted above, so the number was left asserting
+     something nobody had checked. A figure whose caveat has been removed is worse than
+     no figure. The species themselves stay in the payload and still drive the filter,
+     where "named in this article" is exactly the right meaning. */
   $("#rdCounts").innerHTML = [
     ["Finds reported", c.stories.toLocaleString()],
-    ["Species named", (c.distinct_species || 0).toLocaleString()],
     ["Ones we were already watching", (c.on_tbg_list || 0).toLocaleString()],
     ["Widely covered", (c.syndicated || 0).toLocaleString()]
   ].map(([k, v]) =>
