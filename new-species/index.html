@@ -1413,6 +1413,33 @@
     than guessed. In their place is the describing publication, which the reptile list
     has only as an authority string.</p>
 
+  <!-- BIRDS AND MAMMALS. A third table rather than columns bolted onto the two above:
+       neither IOC nor the Mammal Diversity Database publishes a locality statement, so
+       the restriction tier and the gap-evidence grade cannot be computed for them, and a
+       merged table would be two thirds empty cells across 385 rows. -->
+  <h3 class="siteshead">Birds and mammals</h3>
+  <p class="siteslede">Checked one by one against the Red List's own API rather than
+    through an intermediary, because the claim being made is that a species is absent
+    from it.</p>
+  <div class="filters">
+    <input id="bmQ" type="search"
+           placeholder="Search species, family, country&hellip;"
+           aria-label="Search the bird and mammal list">
+    <select id="bmCls" aria-label="Filter by class"></select>
+    <select id="bmFam" aria-label="Filter by family"></select>
+    <select id="bmCty" aria-label="Filter by country"></select>
+  </div>
+  <p id="bmShowing" style="font-family:var(--sans);font-size:.82rem;
+     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
+  <div id="bmTable"></div>
+  <p class="siteslede" style="margin-top:.8rem">Neither source grades how restricted a
+    range is, so those columns are absent rather than guessed. The countries are the full
+    list the source gives, which is why a species can appear here against several
+    countries while the map counts it in each of them. One mammal,
+    <i>Crocidura barapi</i>, is held off this list: GBIF reports it assessed while the Red
+    List holds no species under that name, and GBIF's link points at a different shrew
+    described in 2007.</p>
+
   <!-- ===================== WHERE THEY ARE ===================== -->
 
   <!-- ===================== METHOD AND LIMITS, ABOVE THE LIST ===================== -->
@@ -1756,6 +1783,7 @@ function showView(name, push) {
   if (name === "newtaxa") {
     ensureReptiles();
     ensureAmphibians();
+    ensureBirdsMammals();
     Promise.all([ensureNsMap(), ensureCountries()]).then(([ok]) => {
       if (ok) {
         nsYearOptions();
@@ -2697,6 +2725,90 @@ function nsYearOptions() {
 })();
 
 /* ---- the amphibian list ---- */
+/* ---- birds and mammals ------------------------------------------------------------
+   Its own loader and table because its SOURCES differ, not because its species do. IOC
+   and the Mammal Diversity Database publish a country list and no locality statement, so
+   the restriction tier and gap-evidence grade the other two tables carry cannot be
+   computed here. Absent columns rather than guessed ones.
+
+   The country filter lists individual countries but a row can name several, so it tests
+   containment rather than equality -- filtering to Kenya must not hide a shrew recorded
+   from Kenya, Mozambique and South Africa. */
+let BM = null, bmLoading = false;
+
+function ensureBirdsMammals() {
+  if (BM || bmLoading) { if (BM) bmSetup(); return; }
+  bmLoading = true;
+  getJSON("/birdsmammals.json").then(d => {
+    BM = d; bmLoading = false; bmSetup();
+  }).catch(() => {
+    bmLoading = false;
+    const t = $("#bmTable");
+    if (t) t.innerHTML = '<p class="siteslede">Could not load birdsmammals.json.</p>';
+  });
+}
+
+function bmCountries(r) {
+  return (r.cty || "").split(",").map(x => x.trim()).filter(Boolean);
+}
+
+function bmSetup() {
+  if (!BM || !$("#bmTable")) return;
+  const n = x => x.toLocaleString();
+  const cls = {};
+  BM.rows.forEach(r => { cls[r.cls] = (cls[r.cls] || 0) + 1; });
+  opt("#bmCls", "Birds and mammals",
+      Object.keys(cls).sort().map(k => [k, `${k[0].toUpperCase()}${k.slice(1)}s (${n(cls[k])})`]));
+  const fams = [...new Set(BM.rows.map(r => r.fam))].filter(Boolean).sort();
+  opt("#bmFam", "Any family", fams.map(f => [f, f]));
+  const ctys = [...new Set(BM.rows.flatMap(bmCountries))].filter(Boolean).sort();
+  opt("#bmCty", "Any country", ctys.map(x => [x, x]));
+  ["#bmQ", "#bmCls", "#bmFam", "#bmCty"].forEach(sel => {
+    const e = $(sel);
+    if (e) { e.oninput = bmDraw; e.onchange = bmDraw; }
+  });
+  bmDraw();
+}
+
+function bmDraw() {
+  if (!BM) return;
+  const val = sel => (($(sel) || {}).value || "");
+  const q = val("#bmQ").trim().toLowerCase();
+  const cl = val("#bmCls"), fam = val("#bmFam"), cty = val("#bmCty");
+  const rows = BM.rows.filter(r =>
+    (!cl || r.cls === cl) && (!fam || r.fam === fam) &&
+    (!cty || bmCountries(r).includes(cty)) &&
+    (!q || (r.sp + " " + r.fam + " " + r.cty).toLowerCase().includes(q)));
+
+  const showing = $("#bmShowing");
+  if (showing) {
+    showing.textContent =
+      `Showing ${rows.length.toLocaleString()} of ${BM.rows.length.toLocaleString()} `
+      + `species` + (rows.length ? "" : ". No species match these filters.");
+  }
+  const CAP = 400;
+  const esc = x => (x || "").replace(/[<>&]/g, m =>
+    ({"<": "&lt;", ">": "&gt;", "&": "&amp;"}[m]));
+  const t = $("#bmTable");
+  if (!t) return;
+  t.innerHTML = rows.length ? `<table class="nttable">
+    <thead><tr><th>Species</th><th>Class</th><th>Described</th><th>Family</th>
+      <th>Countries</th></tr></thead>
+    <tbody>${rows.slice(0, CAP).map(r => `<tr>
+      <td><i>${esc(r.sp)}</i></td>
+      <td>${esc(r.cls === "bird" ? "Bird" : "Mammal")}</td>
+      <td>${r.yr || "—"}</td>
+      <td>${esc(r.fam)}</td>
+      <td class="ntdist clip" title="${esc(r.cty)}"><span class="clipin">${esc(r.cty)
+        || "<span style='color:var(--ink-3)'>not stated</span>"}</span></td>
+    </tr>`).join("")}</tbody></table>` +
+    (rows.length > CAP
+      ? `<p class="siteslede">Showing the first ${CAP} of ${rows.length.toLocaleString()}
+         — narrow the filters to see the rest. Newest descriptions first.</p>`
+      : "")
+    : "";
+}
+
 let AMP = null, ampLoading = false;
 
 function ensureAmphibians() {

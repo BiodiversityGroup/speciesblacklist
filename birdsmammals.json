@@ -1,0 +1,2701 @@
+{
+ "built_from": "scripts/24_harvest_birds_mammals.py",
+ "note": "one row per species; cty lists every country the source gives. Never-assessed only, verified against IUCN's own API.",
+ "rows": [
+  {
+   "sp": "Afronycteris rautenbachi",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Vespertilionidae",
+   "cty": "Kenya, Mozambique, South Africa"
+  },
+  {
+   "sp": "Apnoctomys conicetorum",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Octodontidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Chiropodomys wandingensis",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Muridae",
+   "cty": "China"
+  },
+  {
+   "sp": "Coendou sangay",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Erethizontidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Colobus congoensis",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Cercopithecidae",
+   "cty": "Democratic Republic of the Congo"
+  },
+  {
+   "sp": "Crocidura pediculus",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Soricidae",
+   "cty": "Cote d'Ivoire, Guinea, Liberia"
+  },
+  {
+   "sp": "Glauconycteris baka",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Vespertilionidae",
+   "cty": "Cameroon, Democratic Republic of the Congo"
+  },
+  {
+   "sp": "Glauconycteris lobeke",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Vespertilionidae",
+   "cty": "Cameroon, Central African Republic, Equatorial Guinea, Nigeria?"
+  },
+  {
+   "sp": "Incanomys parviauris",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Monodelphis semilineata",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Didelphidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Murina huanglianensis",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Mus dumbara",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Muridae",
+   "cty": "Sri Lanka"
+  },
+  {
+   "sp": "Oreoryzomys jumandi",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Peromyscus carminensis",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Cricetidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Peromyscus silvicola",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Cricetidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Peroryctes trigonodon",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Peramelidae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Planigale petrophila",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Dasyuridae",
+   "cty": "Australia"
+  },
+  {
+   "sp": "Praomys togoensis",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Muridae",
+   "cty": "Benin, Togo"
+  },
+  {
+   "sp": "Rhinopoma funaiolii",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Rhinopomatidae",
+   "cty": "Somalia"
+  },
+  {
+   "sp": "Spalax lyapunovae",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Spalacidae",
+   "cty": "Russia"
+  },
+  {
+   "sp": "Typhlomys zhengkuni",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Platacanthomyidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Uropsilus cinereonates",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Uropsilus leptocranium",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Uropsilus maximus",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Uropsilus ningshanensis",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Uropsilus parvoniger",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Uropsilus wulingshanensis",
+   "cls": "mammal",
+   "yr": 2026,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Alticola yarlungius",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Antechinomys auritus",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Dasyuridae",
+   "cty": "Australia"
+  },
+  {
+   "sp": "Apomys crinitus",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Muridae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Apomys minor",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Muridae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Apomys veluzi",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Muridae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Breviforamen shannanense",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Sminthidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Coendou vossi",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Erethizontidae",
+   "cty": "Colombia"
+  },
+  {
+   "sp": "Crocidura darvishi",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Soricidae",
+   "cty": "Iran"
+  },
+  {
+   "sp": "Crocidura stanleyi",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Soricidae",
+   "cty": "Ethiopia"
+  },
+  {
+   "sp": "Crunomys tompotika",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Muridae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Cryptotis albujai",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Soricidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Daptomys nunashae",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Dryomys anatolicus",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Gliridae",
+   "cty": "Turkey"
+  },
+  {
+   "sp": "Eospalax minshanensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Spalacidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Eozapus wanglangensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Zapodidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Euroscaptor darwini",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Talpidae",
+   "cty": "Vietnam"
+  },
+  {
+   "sp": "Hipposideros srilankaensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Hipposideridae",
+   "cty": "Sri Lanka"
+  },
+  {
+   "sp": "Incanomys mayopuma",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Marmosa chachapoya",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Didelphidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Murina alvarezi",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Murina baletei",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Murina beibengensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Murina chayuensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Murina hilonghilong",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Murina luzonensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Murina medogensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Murina milinensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Murina mindorensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Murina philippinensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Murina yadongensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Mustela mopbie",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Mustelidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Myotis guarani",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "Argentina, Bolivia, Brazil, Paraguay"
+  },
+  {
+   "sp": "Myotis himalaicus",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "India, Pakistan"
+  },
+  {
+   "sp": "Myotis huariorum",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Myotis kalkoae",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Nagasorex albidens",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Soricidae",
+   "cty": "India"
+  },
+  {
+   "sp": "Nannospalax colaki",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Spalacidae",
+   "cty": "Turkey"
+  },
+  {
+   "sp": "Nannospalax garzanensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Spalacidae",
+   "cty": "Turkey"
+  },
+  {
+   "sp": "Nannospalax karyominor",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Spalacidae",
+   "cty": "Turkey"
+  },
+  {
+   "sp": "Neodon konggordous",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neodon kulakangria",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neodon minor",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Ochotona galunglaensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Ochotonidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Ochotona legbona",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Ochotonidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Oecomys hiceae",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Cricetidae",
+   "cty": "Ecuador, Peru"
+  },
+  {
+   "sp": "Oreoryzomys huancabambensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Cricetidae",
+   "cty": "Ecuador, Peru"
+  },
+  {
+   "sp": "Petaurista nujiangensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Sciuridae",
+   "cty": "China, Myanmar?"
+  },
+  {
+   "sp": "Pipistrellus etula",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Vespertilionidae",
+   "cty": "Equatorial Guinea"
+  },
+  {
+   "sp": "Rattus radityaniae",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Muridae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Scaptonyx wangi",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Talpidae",
+   "cty": "China, Myanmar"
+  },
+  {
+   "sp": "Sicista brevicauda",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Sminthidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Sicista meiguites",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Sminthidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Sorex nivicola",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Soriculus dexingensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Thrichomys dandreai",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Echimyidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Uropsilus funiushanensis",
+   "cls": "mammal",
+   "yr": 2025,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Calomyscus darvishi",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Calomyscidae",
+   "cty": "Iran"
+  },
+  {
+   "sp": "Calomyscus kiabii",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Calomyscidae",
+   "cty": "Iran"
+  },
+  {
+   "sp": "Caprimulgus ritae",
+   "cls": "bird",
+   "yr": 2024,
+   "fam": "Caprimulgidae",
+   "cty": "Timor, Rote and Wetar (e Lesser Sundas)"
+  },
+  {
+   "sp": "Chalinolobus orarius",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Vespertilionidae",
+   "cty": "Papua New Guinea"
+  },
+  {
+   "sp": "Corynorhinus leonpaniaguae",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Vespertilionidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Crocidura balingka",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Soricidae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Crocidura binco",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Soricidae",
+   "cty": "Democratic Republic of the Congo"
+  },
+  {
+   "sp": "Crocidura dewi",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Soricidae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Crocidura medogensis",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Crocidura salonga",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Soricidae",
+   "cty": "Democratic Republic of the Congo"
+  },
+  {
+   "sp": "Crocidura zhadaensis",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Ctenomys chechehet",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Ctenomys miguelchristie",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Ctenomys uco",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Dendromus pseudomystacalis",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Nesomyidae",
+   "cty": "Ethiopia"
+  },
+  {
+   "sp": "Dendromus rogersi",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Nesomyidae",
+   "cty": "Tanzania"
+  },
+  {
+   "sp": "Molossus paranaensis",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Molossidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Murina yuanyang",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Murina yushuensis",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neodon lhozhagensis",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Notiosorex carrawayae",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Soricidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Oecomys galvez",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Cricetidae",
+   "cty": "Brazil, Ecuador, Peru"
+  },
+  {
+   "sp": "Oecomys makampi",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Oecomys nanus",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Cricetidae",
+   "cty": "Brazil, Peru"
+  },
+  {
+   "sp": "Oligoryzomys gri",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Pudella carlae",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Cervidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Rattus ombirah",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Muridae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Rhagomys jequitiba",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Rhinolophus cervenyi",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Rhinolophidae",
+   "cty": "Lesotho, South Africa"
+  },
+  {
+   "sp": "Rhinolophus kirghisorum",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Rhinolophidae",
+   "cty": "Afghanistan, Kyrgyzstan, Tajikistan"
+  },
+  {
+   "sp": "Rhinolophus webalai",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Rhinolophidae",
+   "cty": "Kenya, South Sudan, Tanzania?, Uganda?"
+  },
+  {
+   "sp": "Sciurus pachecoi",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Sciuridae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Soriculus beibengensis",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Spermophilus vorontsovi",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Sciuridae",
+   "cty": "Russia"
+  },
+  {
+   "sp": "Tarsomys orientalis",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Muridae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Thomasomys igor",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Thomasomys otavalo",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Typhlomys taxuansis",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Platacanthomyidae",
+   "cty": "Vietnam"
+  },
+  {
+   "sp": "Vampyressa villai",
+   "cls": "mammal",
+   "yr": 2024,
+   "fam": "Phyllostomidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Calomyscus kermanensis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Calomyscidae",
+   "cty": "Iran"
+  },
+  {
+   "sp": "Cryptotis andinus",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Soricidae",
+   "cty": "Colombia"
+  },
+  {
+   "sp": "Cryptotis huttereri",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Soricidae",
+   "cty": "Colombia"
+  },
+  {
+   "sp": "Cryptotis woodmani",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Soricidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Ctenomys eileenae",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Ctenomys pulcer",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Ctenomys verzi",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Euryoryzomys cerqueirai",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Hipposideros kingstonae",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Hipposideridae",
+   "cty": "Malaysia, Thailand, Indonesia?, Philippines?"
+  },
+  {
+   "sp": "Hylomys macarong",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Erinaceidae",
+   "cty": "Vietnam"
+  },
+  {
+   "sp": "Hylomys vorax",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Erinaceidae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Mesechinus orientalis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Erinaceidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Metachirus aritanai",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Didelphidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Miniopterus srinii",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Miniopteridae",
+   "cty": "India"
+  },
+  {
+   "sp": "Neacomys marci",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Oecomys jamari",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Parablarinella latimaxillata",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Podogymnura intermedia",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Erinaceidae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Pseudoromicia mbamminkom",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Vespertilionidae",
+   "cty": "Cameroon"
+  },
+  {
+   "sp": "Pseudoromicia principis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Vespertilionidae",
+   "cty": "São Tomé and Príncipe"
+  },
+  {
+   "sp": "Rattus feileri",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Muridae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Rattus halmaheraensis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Muridae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Rattus taliabuensis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Muridae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Rhipidomys ybyrae",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Saguinus kulina",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Callitrichidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Soriculus medogensis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Soriculus nivatus",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Sturnira boadai",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Phyllostomidae",
+   "cty": "Ecuador, Peru?"
+  },
+  {
+   "sp": "Talpa hakkariensis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Talpidae",
+   "cty": "Turkey"
+  },
+  {
+   "sp": "Thomasomys lojapiuranus",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Cricetidae",
+   "cty": "Ecuador, Peru"
+  },
+  {
+   "sp": "Thomasomys pagaibambensis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Thomasomys shallqukucha",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Uropsilus fansipanensis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Talpidae",
+   "cty": "Vietnam"
+  },
+  {
+   "sp": "Uropsilus huanggangensis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Vernaya meiguites",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Muridae",
+   "cty": "China"
+  },
+  {
+   "sp": "Vernaya nushanensis",
+   "cls": "mammal",
+   "yr": 2023,
+   "fam": "Muridae",
+   "cty": "China"
+  },
+  {
+   "sp": "Akodon diauarum",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Alticola kohistanicus",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Pakistan"
+  },
+  {
+   "sp": "Baletemys kampalili",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Muridae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Cheracebus aquinoi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Pitheciidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Chilomys carapazi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Chilomys georgeledecii",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Chilomys neisi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Chilomys percequilloi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Chilomys weksleri",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Chionomys stekolnikovi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Turkey"
+  },
+  {
+   "sp": "Chodsigoa dabieshanensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Ctenomys heniacamiare",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Eospalax muliensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Spalacidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Glischropus meghalayanus",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Vespertilionidae",
+   "cty": "India"
+  },
+  {
+   "sp": "Macaca selai",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cercopithecidae",
+   "cty": "India, Bhutan?, China?"
+  },
+  {
+   "sp": "Mindomys kutuku",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Miniopterus phillipsi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Miniopteridae",
+   "cty": "India, Sri Lanka"
+  },
+  {
+   "sp": "Myotis barquezi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Vespertilionidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Myotis hayesi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Vespertilionidae",
+   "cty": "Cambodia"
+  },
+  {
+   "sp": "Neodon bershulaensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neodon bomiensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neodon chayuensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neodon liaoruii",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neodon namchabarwaensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neodon shergylaensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neoromicia hlandzeni",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Vespertilionidae",
+   "cty": "Eswatini, Mozambique, South Africa, Zimbabwe"
+  },
+  {
+   "sp": "Peromyscus ensinki",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Peromyscus greenbaumi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Phyllotis camiari",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Phyllotis pehuenche",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Rhinolophus chutamasae",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Rhinolophidae",
+   "cty": "Laos, Thailand"
+  },
+  {
+   "sp": "Rhinolophus namuli",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Rhinolophidae",
+   "cty": "Mozambique"
+  },
+  {
+   "sp": "Rhipidomys bezerrensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Rhipidomys caracolensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Tamiops minshanicus",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Sciuridae",
+   "cty": "China"
+  },
+  {
+   "sp": "Thomasomys burneoi",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Typhlomys fengjiensis",
+   "cls": "mammal",
+   "yr": 2022,
+   "fam": "Platacanthomyidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Akodon kadiweu",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Alpiscaptulus medogensis",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Bullimus carletoni",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Muridae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Calomyscus behzadi",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Calomyscidae",
+   "cty": "Iran"
+  },
+  {
+   "sp": "Crocidura narcondamica",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Soricidae",
+   "cty": "Andaman and Nicobar Islands"
+  },
+  {
+   "sp": "Cynomops kuizha",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Molossidae",
+   "cty": "Colombia, Ecuador, Peru"
+  },
+  {
+   "sp": "Dendrohyrax interfluvialis",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Procaviidae",
+   "cty": "Benin, Ghana, Nigeria, Togo"
+  },
+  {
+   "sp": "Eupetaurus nivamons",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Sciuridae",
+   "cty": "China, Myanmar?"
+  },
+  {
+   "sp": "Eupetaurus tibetensis",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Sciuridae",
+   "cty": "Bhutan, China, India, Nepal"
+  },
+  {
+   "sp": "Histiotus cadenai",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Vespertilionidae",
+   "cty": "Colombia"
+  },
+  {
+   "sp": "Histiotus mochica",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Vespertilionidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Holochilus oxe",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Marmosa adleri",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Didelphidae",
+   "cty": "Panama"
+  },
+  {
+   "sp": "Marmosa jansae",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Didelphidae",
+   "cty": "Colombia, Ecuador, Peru"
+  },
+  {
+   "sp": "Microcavia sorojchi",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Caviidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Molossus melini",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Molossidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Myotis moratellii",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Vespertilionidae",
+   "cty": "Ecuador, Peru"
+  },
+  {
+   "sp": "Myotis pampa",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Vespertilionidae",
+   "cty": "Uruguay"
+  },
+  {
+   "sp": "Neacomys aletheia",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Brazil, Peru"
+  },
+  {
+   "sp": "Neacomys auriventer",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Neacomys elieceri",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Neacomys jau",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Neacomys leilae",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Venezuela"
+  },
+  {
+   "sp": "Neacomys oliveirai",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Neacomys serranensis",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Colombia"
+  },
+  {
+   "sp": "Neoeptesicus langeri",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Vespertilionidae",
+   "cty": "Bolivia"
+  },
+  {
+   "sp": "Neoeptesicus orinocensis",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Vespertilionidae",
+   "cty": "Colombia, Venezuela, Guyana?"
+  },
+  {
+   "sp": "Nephelomys ricardopalmai",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Oecomys matogrossensis",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Oligoryzomys guille",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Oxymycterus willkaurco",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Plecotus gobiensis",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Vespertilionidae",
+   "cty": "Mongolia"
+  },
+  {
+   "sp": "Rhagomys septentrionalis",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Rhinolophus yonghoiseni",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Rhinolophidae",
+   "cty": "Malaysia, Singapore?"
+  },
+  {
+   "sp": "Sicista talgarica",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Sminthidae",
+   "cty": "Kazakhstan"
+  },
+  {
+   "sp": "Sicista terskeica",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Sminthidae",
+   "cty": "Kazakhstan, Kyrgyzstan, China?"
+  },
+  {
+   "sp": "Thomasomys antoniobracki",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Thomasomys pardignasi",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Uropsilus dabieshanensis",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Talpidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Vampyressa voragine",
+   "cls": "mammal",
+   "yr": 2021,
+   "fam": "Phyllostomidae",
+   "cty": "Colombia"
+  },
+  {
+   "sp": "Colomys lumumbai",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Muridae",
+   "cty": "Angola, Democratic Republic of the Congo, Zambia"
+  },
+  {
+   "sp": "Colomys wologizi",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Muridae",
+   "cty": "Guinea, Liberia"
+  },
+  {
+   "sp": "Crocidura huangshanensis",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Crocidura makeda",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Soricidae",
+   "cty": "Ethiopia"
+  },
+  {
+   "sp": "Crocidura similiturba",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Soricidae",
+   "cty": "Ethiopia"
+  },
+  {
+   "sp": "Ctenomys bidaui",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Ctenomys contrerasi",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Ctenomys thalesi",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Ctenomyidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Daptomys musseri",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Geoxus lafkenche",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Chile"
+  },
+  {
+   "sp": "Grallaria alvarezi",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Grallariidae",
+   "cty": "w Colombia (nw Antioquia to nw Cauca)"
+  },
+  {
+   "sp": "Grallaria ayacuchensis",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Grallariidae",
+   "cty": "sc Peru (Ayacucho)"
+  },
+  {
+   "sp": "Grallaria centralis",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Grallariidae",
+   "cty": "ec Peru (Huánuco south of the Río Huallaga through Pasco to Junín west of the Río Ene and north of the Río Mantaro)"
+  },
+  {
+   "sp": "Grallaria gravesi",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Grallariidae",
+   "cty": "nc, c Peru (Amazonas and San Martín south and east of the Río Marañón, south to Huánuco north of Río Huallaga)"
+  },
+  {
+   "sp": "Grallaria oneilli",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Grallariidae",
+   "cty": "ec Peru (Huánuco and Pasco, south of the Río Huallaga and north of the Río Perené)"
+  },
+  {
+   "sp": "Grallaria sinaensis",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Grallariidae",
+   "cty": "s Peru (Puno) and extreme w Bolivia (w La Paz)"
+  },
+  {
+   "sp": "Hylomyscus mpungamachagorum",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Muridae",
+   "cty": "Tanzania"
+  },
+  {
+   "sp": "Hylomyscus pygmaeus",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Muridae",
+   "cty": "Democratic Republic of the Congo"
+  },
+  {
+   "sp": "Hylomyscus stanleyi",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Muridae",
+   "cty": "Tanzania"
+  },
+  {
+   "sp": "Hylomyscus thornesmithae",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Muridae",
+   "cty": "Democratic Republic of the Congo"
+  },
+  {
+   "sp": "Ichthyomys pinei",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Laephotis kirinyaga",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Vespertilionidae",
+   "cty": "Ethiopia, Kenya, Senegal, Uganda, Tanzania?"
+  },
+  {
+   "sp": "Lasiurus arequipae",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Vespertilionidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Marmosops marina",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Didelphidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Micronycteris simmonsae",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Phyllostomidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Micronycteris tresamici",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Phyllostomidae",
+   "cty": "Costa Rica, Honduras"
+  },
+  {
+   "sp": "Miniopterus nimbae",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Miniopteridae",
+   "cty": "Guinea, Liberia"
+  },
+  {
+   "sp": "Miniopterus wilsoni",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Miniopteridae",
+   "cty": "Malawi, Mozambique"
+  },
+  {
+   "sp": "Murina jinchui",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Myotis armiensis",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Vespertilionidae",
+   "cty": "Colombia, Costa Rica, Ecuador, Panama, Venezuela"
+  },
+  {
+   "sp": "Myzomela wahe",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Meliphagidae",
+   "cty": "Taliabu (Sula Is., e of Sulawesi)"
+  },
+  {
+   "sp": "Neacomys marajoara",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Neacomys vossi",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Neacomys xingu",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Niviventer fengi",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Muridae",
+   "cty": "China"
+  },
+  {
+   "sp": "Notiosorex tataticuli",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Soricidae",
+   "cty": "Mexico, United States"
+  },
+  {
+   "sp": "Octodon ricardojeda",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Octodontidae",
+   "cty": "Argentina, Chile"
+  },
+  {
+   "sp": "Pattonimus ecominga",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Pattonimus musseri",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Peromyscus purepechus",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Philander vossi",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Didelphidae",
+   "cty": "Belize, El Salvador, Mexico, Costa Rica?, Guatemala?, Honduras?, Nicaragua?"
+  },
+  {
+   "sp": "Pipistrellus simandouensis",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Vespertilionidae",
+   "cty": "Guinea, Liberia"
+  },
+  {
+   "sp": "Pseudoromicia nyanza",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Vespertilionidae",
+   "cty": "Kenya, Uganda?"
+  },
+  {
+   "sp": "Rhipidomys ochoagrateroli",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Cricetidae",
+   "cty": "Venezuela"
+  },
+  {
+   "sp": "Rhipidura habibiei",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Rhipiduridae",
+   "cty": "montane Peleng (Banggai Is., e of Sulawesi)"
+  },
+  {
+   "sp": "Scytalopus frankeae",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Rhinocryptidae",
+   "cty": "c Peru (Huanuco to Junin)"
+  },
+  {
+   "sp": "Scytalopus krabbei",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Rhinocryptidae",
+   "cty": "nc Peru (n Amazonas to Huánuco)"
+  },
+  {
+   "sp": "Scytalopus whitneyi",
+   "cls": "bird",
+   "yr": 2020,
+   "fam": "Rhinocryptidae",
+   "cty": "s Peru (Ayacucho and Apurímac)"
+  },
+  {
+   "sp": "Sorex cruzi",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Soricidae",
+   "cty": "Honduras"
+  },
+  {
+   "sp": "Stenocephalemys sokolovi",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Muridae",
+   "cty": "Ethiopia"
+  },
+  {
+   "sp": "Stenocephalemys zimai",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Muridae",
+   "cty": "Ethiopia"
+  },
+  {
+   "sp": "Typhlomys huangshanensis",
+   "cls": "mammal",
+   "yr": 2020,
+   "fam": "Platacanthomyidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Afropipistrellus happoldorum",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Vespertilionidae",
+   "cty": "Equatorial Guinea, Guinea, Liberia"
+  },
+  {
+   "sp": "Afropipistrellus macrocephalus",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Vespertilionidae",
+   "cty": "Democratic Republic of the Congo, Rwanda"
+  },
+  {
+   "sp": "Apodemus nigrus",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Muridae",
+   "cty": "China"
+  },
+  {
+   "sp": "Barbastella pacifica",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Vespertilionidae",
+   "cty": "Japan, Russia"
+  },
+  {
+   "sp": "Biswamoyopterus gaoligongensis",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Sciuridae",
+   "cty": "China"
+  },
+  {
+   "sp": "Brucepattersonius nebulosus",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Chaetodipus durangae",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Heteromyidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Crocidura anhuiensis",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Soricidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Cryptotis eckerlini",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Soricidae",
+   "cty": "Guatemala"
+  },
+  {
+   "sp": "Cryptotis matsoni",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Soricidae",
+   "cty": "Guatemala"
+  },
+  {
+   "sp": "Cryptotis montecristo",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Soricidae",
+   "cty": "El Salvador, Guatemala, Honduras"
+  },
+  {
+   "sp": "Eliurus tsingimbato",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Nesomyidae",
+   "cty": "Madagascar"
+  },
+  {
+   "sp": "Lepus saharae",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Leporidae",
+   "cty": "Mali, Mauritania, Morocco, Senegal, Burkina Faso?, Niger?"
+  },
+  {
+   "sp": "Marmosops soinii",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Didelphidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Monodelphis vossi",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Didelphidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Myotis bakeri",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Vespertilionidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Myotis zenatius",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Vespertilionidae",
+   "cty": "Algeria, Morocco, Tunisia?"
+  },
+  {
+   "sp": "Neodon nepalensis",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Cricetidae",
+   "cty": "Nepal"
+  },
+  {
+   "sp": "Neoeptesicus ulapesensis",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Vespertilionidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Otomys willani",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Muridae",
+   "cty": "South Africa"
+  },
+  {
+   "sp": "Oxymycterus itapeby",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Peromyscus bakeri",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Cricetidae",
+   "cty": "Guatemala"
+  },
+  {
+   "sp": "Peromyscus carolpattonae",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Cricetidae",
+   "cty": "Guatemala, Mexico"
+  },
+  {
+   "sp": "Rhogeessa permutandis",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Vespertilionidae",
+   "cty": "Nicaragua"
+  },
+  {
+   "sp": "Rhynchomys labo",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Muridae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Rhynchomys mingan",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Muridae",
+   "cty": "Philippines"
+  },
+  {
+   "sp": "Sturnira giannae",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Phyllostomidae",
+   "cty": "Bolivia, Brazil, Colombia, Ecuador, French Guiana, Guyana, Peru, Suriname, Trinidad and Tobago, Venezuela"
+  },
+  {
+   "sp": "Thomasomys salazari",
+   "cls": "mammal",
+   "yr": 2019,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Anoura javieri",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Phyllostomidae",
+   "cty": "Peru, Bolivia?"
+  },
+  {
+   "sp": "Cynomops freemani",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Molossidae",
+   "cty": "Panama"
+  },
+  {
+   "sp": "Cynomops tonkigui",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Molossidae",
+   "cty": "Colombia, Ecuador"
+  },
+  {
+   "sp": "Diplomesodon sonnerati",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Soricidae",
+   "cty": "India"
+  },
+  {
+   "sp": "Glauconycteris atra",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Vespertilionidae",
+   "cty": "Democratic Republic of the Congo"
+  },
+  {
+   "sp": "Hipposideros kunzi",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Hipposideridae",
+   "cty": "Malaysia, Thailand"
+  },
+  {
+   "sp": "Mesechinus wangi",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Erinaceidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Molossus fentoni",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Molossidae",
+   "cty": "Ecuador, Guyana"
+  },
+  {
+   "sp": "Murina liboensis",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Vespertilionidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Myotis ancricola",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Vespertilionidae",
+   "cty": "Laos, Vietnam"
+  },
+  {
+   "sp": "Neacomys macedoruizi",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Neacomys rosalindae",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Cricetidae",
+   "cty": "Ecuador, Peru"
+  },
+  {
+   "sp": "Niviventer gladiusmaculus",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Muridae",
+   "cty": "China"
+  },
+  {
+   "sp": "Oligoryzomys pachecoi",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Cricetidae",
+   "cty": "Bolivia, Argentina?"
+  },
+  {
+   "sp": "Philander pebas",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Didelphidae",
+   "cty": "Brazil, Ecuador, Peru"
+  },
+  {
+   "sp": "Phyllomys centralis",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Echimyidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Pteronotus alitonus",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Mormoopidae",
+   "cty": "Brazil, French Guiana, Guyana, Suriname"
+  },
+  {
+   "sp": "Tanyuromys thomasleei",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Cricetidae",
+   "cty": "Ecuador"
+  },
+  {
+   "sp": "Tlacuatzin balsasensis",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Didelphidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Toromys albiventris",
+   "cls": "mammal",
+   "yr": 2018,
+   "fam": "Echimyidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Alexandromys alpinus",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Cricetidae",
+   "cty": "Mongolia, Russia"
+  },
+  {
+   "sp": "Cassistrellus yokdonensis",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Vespertilionidae",
+   "cty": "Cambodia, Vietnam"
+  },
+  {
+   "sp": "Chimaerodipus auritus",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Dipodidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Deltamys araucaria",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Hsunycteris dashe",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Phyllostomidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Laephotis stanleyi",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Vespertilionidae",
+   "cty": "Zimbabwe, Mozambique?, South Africa?"
+  },
+  {
+   "sp": "Microcavia jayat",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Caviidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Monodelphis saci",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Didelphidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Murina hkakaboraziensis",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Vespertilionidae",
+   "cty": "Myanmar"
+  },
+  {
+   "sp": "Myotis attenboroughi",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Vespertilionidae",
+   "cty": "Grenada, Suriname, Trinidad and Tobago"
+  },
+  {
+   "sp": "Myzomela irianawidodoae",
+   "cls": "bird",
+   "yr": 2017,
+   "fam": "Meliphagidae",
+   "cty": "Rote (ec Lesser Sundas)"
+  },
+  {
+   "sp": "Neacomys vargasllosai",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Cricetidae",
+   "cty": "Bolivia, Peru"
+  },
+  {
+   "sp": "Ochotona flatcalvariam",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Ochotonidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Ochotona huanglongensis",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Ochotonidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Ochotona qionglaiensis",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Ochotonidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Ototylomys chiapensis",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Cricetidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Sorex madrensis",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Soricidae",
+   "cty": "Guatemala"
+  },
+  {
+   "sp": "Sorex mccarthyi",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Soricidae",
+   "cty": "Honduras"
+  },
+  {
+   "sp": "Sturnira adrianae",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Phyllostomidae",
+   "cty": "Colombia, Venezuela"
+  },
+  {
+   "sp": "Sylvilagus parentum",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Leporidae",
+   "cty": "Suriname"
+  },
+  {
+   "sp": "Tylonycteris tonkinensis",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Vespertilionidae",
+   "cty": "China, Laos, Vietnam, Myanmar?"
+  },
+  {
+   "sp": "Typhlomys nanus",
+   "cls": "mammal",
+   "yr": 2017,
+   "fam": "Platacanthomyidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Akodon kotosh",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Alionoctula dhofarensis",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Vespertilionidae",
+   "cty": "Oman, Yemen"
+  },
+  {
+   "sp": "Cryptotis monteverdensis",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Soricidae",
+   "cty": "Costa Rica"
+  },
+  {
+   "sp": "Eremoryzomys mesocaudis",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Eumops chimaera",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Molossidae",
+   "cty": "Bolivia, Brazil"
+  },
+  {
+   "sp": "Euroscaptor orlovi",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Talpidae",
+   "cty": "China, Laos, Vietnam"
+  },
+  {
+   "sp": "Juliomys ximenezi",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Lonchorhina mankomara",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Phyllostomidae",
+   "cty": "Colombia"
+  },
+  {
+   "sp": "Macronycteris cryptovalorona",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Hipposideridae",
+   "cty": "Madagascar"
+  },
+  {
+   "sp": "Marmosops chucha",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Didelphidae",
+   "cty": "Colombia"
+  },
+  {
+   "sp": "Marmosops magdalenae",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Didelphidae",
+   "cty": "Colombia"
+  },
+  {
+   "sp": "Myotis clydejonesi",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Vespertilionidae",
+   "cty": "Suriname"
+  },
+  {
+   "sp": "Necromys lilloi",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Cricetidae",
+   "cty": "Argentina"
+  },
+  {
+   "sp": "Neodon medogensis",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Neodon nyalamensis",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Cricetidae",
+   "cty": "China"
+  },
+  {
+   "sp": "Oecomys franciscorum",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Cricetidae",
+   "cty": "Argentina, Brazil, Paraguay?"
+  },
+  {
+   "sp": "Peromyscus gardneri",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Cricetidae",
+   "cty": "Guatemala"
+  },
+  {
+   "sp": "Peromyscus kilpatricki",
+   "cls": "mammal",
+   "yr": 2016,
+   "fam": "Cricetidae",
+   "cty": "Mexico"
+  },
+  {
+   "sp": "Calomys mattevii",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Cricetidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Glischropus aquilus",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Vespertilionidae",
+   "cty": "Indonesia"
+  },
+  {
+   "sp": "Histiotus diaphanopterus",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Vespertilionidae",
+   "cty": "Bolivia, Brazil"
+  },
+  {
+   "sp": "Lonchophylla inexpectata",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Phyllostomidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Monodelphis pinocchio",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Didelphidae",
+   "cty": "Brazil"
+  },
+  {
+   "sp": "Murina kontumensis",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Vespertilionidae",
+   "cty": "Vietnam"
+  },
+  {
+   "sp": "Neusticomys vossi",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Cricetidae",
+   "cty": "Colombia, Ecuador"
+  },
+  {
+   "sp": "Phyllotis occidens",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Cricetidae",
+   "cty": "Peru"
+  },
+  {
+   "sp": "Rhinolophus francisi",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Rhinolophidae",
+   "cty": "Indonesia, Malaysia, Thailand"
+  },
+  {
+   "sp": "Rhinolophus luctoides",
+   "cls": "mammal",
+   "yr": 2015,
+   "fam": "Rhinolophidae",
+   "cty": "Malaysia"
+  }
+ ]
+}
