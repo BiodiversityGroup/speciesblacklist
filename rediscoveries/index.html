@@ -1716,6 +1716,7 @@ function showView(name, push) {
     ensureAmphibians();
     Promise.all([ensureNsMap(), ensureCountries()]).then(([ok]) => {
       if (ok) {
+        nsYearOptions();
         drawNsMap();
         attachHeatZoom("#nsCanvas", nsView, drawNsMap,
                        {in: "#nsZIn", out: "#nsZOut", reset: "#nsZReset"});
@@ -2227,8 +2228,16 @@ function paintHeat(cv, data, opts) {
 
   // A class filter reads the per-class count instead of the total, and drops the
   // countries that hold none of that class rather than drawing them at zero.
-  const key = opts.classKey;
-  const valueOf = p => key ? ((p.cls || {})[key] || 0) : p.n;
+  const key = opts.classKey, yr = opts.yearKey;
+  /* class x year, and both optional. The year counts live under the class, so filtering by
+     year alone means summing every class for that year -- not reading a per-country total
+     that was never split. */
+  const valueOf = p => {
+    if (!yr) return key ? ((p.cls || {})[key] || 0) : p.n;
+    const by = p.yr || {};
+    if (key) return ((by[key] || {})[yr] || 0);
+    return Object.values(by).reduce((a, m) => a + (m[yr] || 0), 0);
+  };
   const places = data.places.filter(p => valueOf(p) > 0);
 
   /* COUNTRY SHADING, drawn over the land and under the circles.
@@ -2523,7 +2532,7 @@ function ensureNsMap() {
     }).catch(() => false).finally(() => { nsLoading = false; });
 }
 
-let nsClass = null;          // null = both classes; "reptile" / "amphibian" to filter
+let nsClass = null, nsYear = "";          // null = both classes; "reptile" / "amphibian" to filter
 const NS_LABEL = {
   "": "Reptiles and amphibians described since 2015, never assessed",
   reptile: "Reptiles described since 2015 that the Red List has never assessed",
@@ -2532,22 +2541,47 @@ const NS_LABEL = {
 
 function drawNsMap() {
   nsGeom = paintHeat($("#nsCanvas"), NSMAP,
-    {legend: "#nsLegend", view: nsView, classKey: nsClass,
+    {legend: "#nsLegend", view: nsView, classKey: nsClass, yearKey: nsYear,
      label: NS_LABEL[nsClass || ""]});
   const note = $("#nsMapNote");
   if (note && NSMAP && nsGeom) {
     const m = NSMAP.meta || {};
-    const shown = nsGeom.hits.reduce((a, h) => a + (h.val || 0), 0);
+    /* hits is CIRCLES ONLY since the shading landed, so counting it alone quietly
+       under-reported the map by everything that is now a shaded country -- most of it.
+       Both layers are counted. */
+    const sh = nsGeom.shaded || new Map();
+    const shown = nsGeom.hits.reduce((a, h) => a + (h.val || 0), 0)
+                + [...sh.values()].reduce((a, e) => a + e.n, 0);
+    const where = nsGeom.hits.length + sh.size;
     note.textContent =
-      `${shown.toLocaleString()} species across ${nsGeom.hits.length} countries. `
-      + (nsClass ? "" : `${m.unplaced} more give a distribution this map could not `
-                      + `resolve to a single country and are not drawn.`);
+      `${shown.toLocaleString()} species across ${where} countries`
+      + (nsYear ? ` described in ${nsYear}. ` : ". ")
+      + (nsClass || nsYear ? "" : `${m.unplaced} more give a distribution this map could `
+                                + `not resolve to a single country and are not drawn.`);
   }
 }
 
 /* The class switch. Both lists answer the same question of two different classes, so
    they share a map -- but a reader comparing them needs to see each alone, because
    China holds 225 amphibians and 164 reptiles and the total hides that. */
+/* Years come from the payload, not a hardcoded range: the list runs 2015 to 2026 today and
+   will move on its own the next time the source is refreshed, and a select offering a year
+   with nothing behind it is a dead end a reader has to discover by clicking. */
+function nsYearOptions() {
+  const sel = $("#nsYear");
+  if (!sel || !NSMAP || sel.dataset.filled) return;
+  const years = new Set();
+  (NSMAP.places || []).forEach(p =>
+    Object.values(p.yr || {}).forEach(m => Object.keys(m).forEach(y => years.add(y))));
+  [...years].sort((a, b) => b - a).forEach(y => {
+    const o = document.createElement("option");
+    o.value = o.textContent = y;
+    sel.appendChild(o);
+  });
+  sel.dataset.filled = "1";
+  sel.onchange = () => { nsYear = sel.value; drawNsMap(); };
+}
+
 (function nsClassButtons() {
   const set = (cls, id) => {
     const b = $(id);
