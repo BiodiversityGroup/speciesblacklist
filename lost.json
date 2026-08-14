@@ -12904,10 +12904,10 @@
 ]
 ],
 "meta": {
-"n_species": 2135,
-"n_mapped": 2079,
+"n_species": 2134,
+"n_mapped": 2078,
 "n_unmapped": 56,
-"n_places": 209,
+"n_places": 208,
 "compiled": "January 2023",
 "nomenclature": "Long & Rodriguez 2022, Oryx 56(4)",
 "by_class": {
@@ -12951,14 +12951,14 @@
 "EN": 98,
 "LC": 208,
 "not in IUCN index": 283,
-"VU": 59,
+"VU": 58,
 "NT": 21,
 "NE": 91,
 "EW": 2
 },
 "oldest_record": 1790,
 "median_last": 1964,
-"n_dated": 1771,
+"n_dated": 1770,
 "n_1800s": 252
 },
 "places": [
@@ -18048,26 +18048,6 @@
 "cc": "Dominica"
 },
 {
-"place": "Santa Catalina Island",
-"lat": 25.633,
-"lon": -110.783,
-"n": 1,
-"grp": {
-"Reptile": 1
-},
-"cls": {
-"lost": 1
-},
-"rl": {
-"VU": 1
-},
-"examples": [
-"Sauromalus klauberi"
-],
-"oldest": 2001,
-"cc": ""
-},
-{
 "place": "Benguerua Island",
 "lat": -21.86,
 "lon": 35.438,
@@ -19120,12 +19100,12 @@
 "range": "United States (Hawaii)"
 },
 {
-"sp": "Parvoscincus agtorum",
-"common": "",
-"descriptor": "Reptile from Luzon",
+"sp": "Phelsuma gouldi",
+"common": "Anja Day Gecko",
+"descriptor": "Madagascan reptile",
 "group": "Reptile",
 "last": 2009,
-"range": "Luzon"
+"range": "Madagascar"
 },
 {
 "sp": "Trichomycterus hasemani",
