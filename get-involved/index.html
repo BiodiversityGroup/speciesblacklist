@@ -2627,7 +2627,7 @@ function ensureBirdsMammals() {
   if (BM || bmLoading) { if (BM) bmSetup(); return; }
   bmLoading = true;
   getJSON("/birdsmammals.json").then(d => {
-    BM = d; bmLoading = false; bmSetup();
+    BM = d; bmLoading = false; bmSetup(); mergedClassFilter(); mergedDraw();
   }).catch(() => {
     bmLoading = false;
     const t = $("#bmTable");
@@ -2696,13 +2696,115 @@ function bmDraw() {
     : "";
 }
 
+/* ---- ONE TABLE FOR ALL FOUR CLASSES ------------------------------------------------
+   They were three tables because they came from three sources with three schemas. That
+   is a fact about the sources, not something a reader should hold in their head while
+   comparing a gecko to a shrew.
+
+   The merged columns are what every class can fill honestly, plus the extent grade,
+   which several cannot. An empty extent renders as "not stated", so it reads as a
+   measurement nobody made rather than a value that failed to load:
+
+     reptiles    A-D from the Reptile Database's distribution text
+     birds       A-D read from IOC's breeding-range subregion, all 13 by hand
+     mammals     D where the source lists several countries; not stated otherwise, since
+                 MDD publishes no state-level range and a type locality is a point
+     amphibians  not stated -- AmphibiaWeb gives a country, never a locality
+
+   Columns a single class carried alone (the reptile finer-locality text, the amphibian
+   citation) move into the row's title attribute rather than widening the table to the
+   union of four schemas, which is what made merging look unattractive before. */
+function mergedRows() {
+  const out = [];
+  if (typeof NT !== "undefined" && NT) {
+    NT.rows.forEach(r => out.push({sp: r.sp, cls: "Reptile", yr: r.yr, fam: r.fam,
+      rc: r.rc || "", where: r.dist || "", extra: r.fine || ""}));
+  }
+  if (typeof AMP !== "undefined" && AMP) {
+    (AMP.rows || []).forEach(r => out.push({sp: r.sp, cls: "Amphibian", yr: r.yr,
+      fam: r.fam, rc: "", where: r.cty || "", extra: r.ref || ""}));
+  }
+  if (typeof BM !== "undefined" && BM) {
+    BM.rows.forEach(r => out.push({sp: r.sp, cls: r.cls === "bird" ? "Bird" : "Mammal",
+      yr: r.yr, fam: r.fam, rc: r.rc || "", where: r.cty || "", extra: r.rcwhy || ""}));
+  }
+  out.sort((a, b) => (b.yr || 0) - (a.yr || 0) || a.sp.localeCompare(b.sp));
+  return out;
+}
+
+let MG = null;
+function mergedDraw() {
+  const host = $("#ntTable");
+  if (!host) return;
+  MG = mergedRows();
+  if (!MG.length) return;
+  const val = sel => (($(sel) || {}).value || "");
+  const q = val("#ntQ").trim().toLowerCase();
+  const cl = val("#mgCls"), rc = val("#ntRc"), fam = val("#ntFam");
+  const rows = MG.filter(r =>
+    (!cl || r.cls === cl) && (!rc || r.rc === rc) && (!fam || r.fam === fam) &&
+    (!q || (r.sp + " " + r.fam + " " + r.where).toLowerCase().includes(q)));
+
+  const showing = $("#ntShowing");
+  if (showing) {
+    showing.textContent =
+      `Showing ${rows.length.toLocaleString()} of ${MG.length.toLocaleString()} species`
+      + (rows.length ? "" : ". No species match these filters.");
+  }
+  const CAP = 400;
+  const esc = x => (x || "").replace(/[<>&]/g, m =>
+    ({"<": "&lt;", ">": "&gt;", "&": "&amp;"}[m]));
+  const rcCell = r => r.rc && NT_RC[r.rc]
+    ? `<span class="ntrc ntrc-${r.rc}" title="${esc(NT_RC[r.rc][1])}">${r.rc} · ${NT_RC[r.rc][0]}</span>`
+    : `<span style="color:var(--ink-3)" title="This class's source does not state a range at that resolution.">not stated</span>`;
+  host.innerHTML = `<table class="nttable">
+    <thead><tr><th>Species</th><th>Class</th><th>Described</th><th>Family</th>
+      <th>Extent</th><th>Where</th></tr></thead>
+    <tbody>${rows.slice(0, CAP).map(r => `<tr>
+      <td><i>${esc(r.sp)}</i></td>
+      <td>${esc(r.cls)}</td>
+      <td>${r.yr || "—"}</td>
+      <td>${esc(r.fam)}</td>
+      <td>${rcCell(r)}</td>
+      <td class="ntdist clip" title="${esc(r.extra || r.where)}"><span class="clipin">${
+        esc(r.where) || "<span style='color:var(--ink-3)'>not stated</span>"}</span></td>
+    </tr>`).join("")}</tbody></table>` +
+    (rows.length > CAP
+      ? `<p class="siteslede">Showing the first ${CAP} of ${rows.length.toLocaleString()}
+         — narrow the filters to see the rest. Newest descriptions first.</p>`
+      : "");
+
+  /* The superseded tables are emptied and their controls hidden rather than deleted:
+     their loaders and payloads still feed this one and the map, and a merge should not
+     turn into a rewrite of three code paths on its way in. */
+  ["#ampTable", "#ampShowing", "#bmTable", "#bmShowing"].forEach(sel => {
+    const el = $(sel);
+    if (el) el.innerHTML = "";
+  });
+  ["#ampQ", "#bmQ"].forEach(sel => {
+    const e = $(sel), box = e && e.closest(".filters");
+    if (box) box.style.display = "none";
+  });
+}
+
+function mergedClassFilter() {
+  const sel = $("#mgCls");
+  if (!sel || sel.options.length) return;
+  const counts = {};
+  mergedRows().forEach(r => { counts[r.cls] = (counts[r.cls] || 0) + 1; });
+  sel.innerHTML = '<option value="">All classes</option>' +
+    Object.keys(counts).sort().map(k =>
+      `<option value="${k}">${k}s (${counts[k].toLocaleString()})</option>`).join("");
+  sel.onchange = mergedDraw;
+}
+
 let AMP = null, ampLoading = false;
 
 function ensureAmphibians() {
   if (AMP || ampLoading) { if (AMP) ampRender(); return; }
   ampLoading = true;
   getJSON("/amphibians.json").then(d => {
-    AMP = d; ampLoading = false; ampRender();
+    AMP = d; ampLoading = false; ampRender(); mergedClassFilter(); mergedDraw();
   }).catch(() => {
     ampLoading = false;
     const c = $("#ampCounts");
@@ -2896,10 +2998,10 @@ const NT_RC = {
 };
 
 function ensureReptiles() {
-  if (NT || ntLoading) { if (NT) ntRender(); return; }
+  if (NT || ntLoading) { if (NT) mergedDraw(); return; }
   ntLoading = true;
   getJSON("/reptiles.json").then(d => {
-    NT = d; ntLoading = false; ntBoot();
+    NT = d; ntLoading = false; ntBoot(); mergedClassFilter(); mergedDraw();
   }).catch(() => {
     ntLoading = false;
     $("#ntTable").innerHTML =
@@ -2946,8 +3048,11 @@ function ntBoot() {
   const fams = [...new Set(NT.rows.map(r => r.fam))].filter(Boolean).sort();
   opt("#ntFam", "Any family", fams.map(f => [f, f]));
 
-  ["#ntQ", "#ntEv", "#ntRc", "#ntFam"].forEach(s => {
-    $(s).oninput = ntRender; $(s).onchange = ntRender;
+  /* Bound to mergedDraw, not ntRender: these controls now drive one table holding all
+     four classes, and ntRender would repaint #ntTable with reptiles alone. */
+  ["#ntQ", "#ntEv", "#ntRc", "#ntFam", "#mgCls"].forEach(s => {
+    if (!$(s)) return;
+    $(s).oninput = mergedDraw; $(s).onchange = mergedDraw;
   });
   ntRender();
 }
