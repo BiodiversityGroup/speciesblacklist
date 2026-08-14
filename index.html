@@ -1693,10 +1693,15 @@ function showView(name, push) {
 }
 
 /* ============================== LOST SPECIES =================================
-   A separate payload and a separate map from the register's. Deliberately simpler:
-   one circle per country or region, area proportional to count. No pan, no zoom, no
-   binning -- there are 238 places, not 21,786 points, and a plain proportional-symbol
-   map is the honest encoding for "how many lost species are recorded from here".
+   A separate payload and a separate map from the register's. It was one circle per place,
+   area proportional to count, with no pan, no zoom and no binning. It now shades COUNTRIES
+   by count and keeps a circle only where a place is not one, and it pans and zooms.
+
+   This comment described the original design for two days after the shading landed, which
+   is worse than no comment: it asserted the opposite of what the code does, in the voice
+   of someone who had thought about it. The reader-facing description on the page was wrong
+   for exactly as long, and for the same reason -- a rendering change that nobody thought
+   of as a copy change.
 
    ONE HUE, not a palette. The quantity being shown is a magnitude, so it gets a
    sequential ramp; giving each taxonomic group its own color would put twelve
