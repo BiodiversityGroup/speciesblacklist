@@ -2921,11 +2921,11 @@ function mergedRows() {
   const out = [];
   if (typeof NT !== "undefined" && NT) {
     NT.rows.forEach(r => out.push({sp: r.sp, cls: "Reptile", yr: r.yr, fam: r.fam,
-      rc: r.rc || "", where: r.dist || "", extra: r.fine || ""}));
+      rc: r.rc || "", ev: r.ev || "", where: r.dist || "", extra: r.fine || ""}));
   }
   if (typeof AMP !== "undefined" && AMP) {
     (AMP.rows || []).forEach(r => out.push({sp: r.sp, cls: "Amphibian", yr: r.yr,
-      fam: r.fam, rc: "", where: r.cty || "", extra: r.ref || ""}));
+      fam: r.fam, rc: "", ev: r.ev || "", where: r.cty || "", extra: r.ref || ""}));
   }
   if (typeof BM !== "undefined" && BM) {
     BM.rows.forEach(r => out.push({sp: r.sp, cls: r.cls === "bird" ? "Bird" : "Mammal",
@@ -2944,8 +2944,12 @@ function mergedDraw() {
   const val = sel => (($(sel) || {}).value || "");
   const q = val("#ntQ").trim().toLowerCase();
   const cl = val("#mgCls"), rc = val("#ntRc"), fam = val("#ntFam");
+  /* Evidence grade exists only for reptiles and amphibians, so choosing one hides the
+     classes that cannot carry it. That is the honest reading of the filter. */
+  const ev = val("#ntEv");
   const rows = MG.filter(r =>
     (!cl || r.cls === cl) && (!rc || r.rc === rc) && (!fam || r.fam === fam) &&
+    (!ev || r.ev === ev) &&
     (!q || (r.sp + " " + r.fam + " " + r.where).toLowerCase().includes(q)));
 
   const showing = $("#ntShowing");
