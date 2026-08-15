@@ -422,7 +422,9 @@
     width:30px; height:30px; display:grid; place-items:center; cursor:pointer;
     background:var(--surface); color:var(--ink-2); border:1px solid var(--rule-2);
     border-radius:3px; }
-  .mapzoom button#zReset { font-size:.68rem; width:auto; padding:0 .4rem; }
+  /* all three maps have a Reset; the rule once named only the first, so the other two
+     rendered full-size and clipped past the map edge */
+  .mapzoom button[id$="Reset"] { font-size:.68rem; width:auto; padding:0 .4rem; }
   .mapzoom button:hover { border-color:var(--accent); color:var(--accent); }
   .mapzoom button[disabled] { opacity:.4; cursor:default; }
   .maplegend { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
