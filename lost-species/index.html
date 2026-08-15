@@ -978,6 +978,13 @@
   /* The rotating headline. min-height so the hero does not jump as the sentences change
      length, and a fade rather than a slide because the thing moving is a paragraph of
      text and sliding text is harder to start reading. */
+  .statrow { display:flex; align-items:center; gap:.6rem; }
+  .statrow h2 { flex:1; min-width:0; }
+  .statarrow { flex:0 0 auto; width:2.2rem; height:2.2rem; border-radius:50%;
+               border:1px solid var(--rule); background:none; color:var(--ink-3);
+               font-size:1.4rem; line-height:1; cursor:pointer; }
+  .statarrow:hover { border-color:var(--accent); color:var(--accent); }
+  @media (max-width:520px) { .statarrow { display:none; } }  /* thumbs swipe instead */
   #overdueHead { transition:opacity .35s; min-height:4.2em; }
   #overdueHead.fading { opacity:0; }
   @media (min-width:700px) { #overdueHead { min-height:3.1em; } }
@@ -3725,6 +3732,14 @@ function boot() {
       head.classList.add("fading");
       setTimeout(() => { show(i); head.classList.remove("fading"); }, 350);
     };
+    /* Arrows for pointers that cannot swipe. Hidden under 520px where the swipe is
+       the natural gesture; hidden entirely when there is only one headline. */
+    [["#statPrev", -1], ["#statNext", 1]].forEach(([sel, d]) => {
+      const b = $(sel);
+      if (!b) return;
+      if (STATS.length > 1) b.hidden = false;
+      b.onclick = () => { stop(); go(at + d); };
+    });
     if (dots) {
       dots.hidden = false;
       dots.innerHTML = STATS.map((_, k) =>
