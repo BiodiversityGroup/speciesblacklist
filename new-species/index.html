@@ -180,12 +180,12 @@
     .lockup .logomark { width:30px; }
   }
   .mast h1 { font-size:clamp(1.6rem,4vw,2.4rem); letter-spacing:-.02em; }
-  .mast .sub { font-family:var(--sans); font-size:.85rem; color:var(--ink-2);
+  .mast .sub { font-family:var(--sans); font-size:.88rem; color:var(--ink-2);
                margin-top:.45rem; }
   /* No margin-left:auto, an auto margin beats justify-self on a grid item, which
      kept the controls pinned right when the row stacks on a phone. */
   .mast-right { display:flex; gap:.5rem; align-items:center; }
-  .ghost { font-family:var(--sans); font-size:.75rem; padding:.4rem .7rem;
+  .ghost { font-family:var(--sans); font-size:.74rem; padding:.4rem .7rem;
            background:none; border:1px solid var(--rule-2); border-radius:2px;
            color:var(--ink-2); cursor:pointer; }
   .ghost:hover { border-color:var(--accent); color:var(--accent); }
@@ -250,7 +250,7 @@
              border:1px solid var(--rule-2); border-top:2px solid var(--accent);
              box-shadow:0 8px 24px rgba(0,0,0,.28); z-index:40; padding:.3rem 0; }
   .navmenu[hidden] { display:none; }
-  .navmenu a { display:block; font-family:var(--sans); font-size:.94rem;
+  .navmenu a { display:block; font-family:var(--sans); font-size:.95rem;
                padding:.6rem 1.4rem; color:var(--ink-2); text-decoration:none;
                white-space:nowrap; text-align:left; }
   /* var(--bg) was the whole declaration here, and there is no --bg token on this site. An
@@ -360,7 +360,7 @@
               padding:.6rem var(--s2); }
   .tierhelp summary { cursor:pointer; color:var(--ink-2); display:flex;
                       align-items:center; gap:.4rem; flex-wrap:wrap; }
-  .tierhelp summary .tierchip { width:22px; height:19px; font-size:.72rem; }
+  .tierhelp summary .tierchip { width:22px; height:19px; font-size:.74rem; }
   /* display:flex above removes the browser's own disclosure marker, so the box gave no
      sign it opened. This is the caret the nav dropdowns already use. */
   .tierhelp summary::-webkit-details-marker { display:none; }
@@ -399,7 +399,7 @@
   .maplayers button[aria-pressed="true"] { border-color:var(--ink); color:var(--ink);
     font-weight:600; background:var(--surface-2); }
   .maplayers button i { width:10px; height:10px; border-radius:2px; flex:0 0 10px; }
-  .maplayers .n { font-family:var(--mono); font-size:.72rem; color:var(--ink-3); }
+  .maplayers .n { font-family:var(--mono); font-size:.74rem; color:var(--ink-3); }
 
   .mapwrap { border:1px solid var(--rule); background:var(--surface); overflow:hidden;
              position:relative; }
@@ -418,11 +418,11 @@
   #mapCanvas.dragging { cursor:grabbing; }
   .mapzoom { position:absolute; top:.5rem; right:.5rem; z-index:2; display:flex;
              flex-direction:column; gap:.25rem; }
-  .mapzoom button { font-family:var(--sans); font-size:.9rem; line-height:1;
+  .mapzoom button { font-family:var(--sans); font-size:.88rem; line-height:1;
     width:30px; height:30px; display:grid; place-items:center; cursor:pointer;
     background:var(--surface); color:var(--ink-2); border:1px solid var(--rule-2);
     border-radius:3px; }
-  .mapzoom button#zReset { font-size:.6rem; width:auto; padding:0 .4rem; }
+  .mapzoom button#zReset { font-size:.68rem; width:auto; padding:0 .4rem; }
   .mapzoom button:hover { border-color:var(--accent); color:var(--accent); }
   .mapzoom button[disabled] { opacity:.4; cursor:default; }
   .maplegend { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
@@ -451,7 +451,7 @@
   .lostbody h4 { font-size:1.05rem; margin:0 0 .15rem; }
   .lostbody p { margin:.75rem auto 0; }
   .lostlede { font-size:1.14rem; color:var(--ink-2); margin-top:var(--s2) !important; }
-  .lostbody .sci { color:var(--ink-3); font-size:.9rem; margin-top:0 !important; }
+  .lostbody .sci { color:var(--ink-3); font-size:.88rem; margin-top:0 !important; }
 
   .loststats { display:flex; justify-content:center; flex-wrap:wrap; gap:var(--s2);
                margin:var(--s4) 0 var(--s3); }
@@ -470,12 +470,12 @@
           border-left:4px solid var(--t3); padding:1.1rem 1.3rem; }
   .defs h3 { text-align:center; margin:0 0 .8rem; font-size:.95rem; }
   .defs dl { margin:0; }
-  .defs dt { font-family:var(--mono); font-size:.9rem; color:var(--ink);
+  .defs dt { font-family:var(--mono); font-size:.88rem; color:var(--ink);
              margin-top:.8rem; }
   .defs dt:first-of-type { margin-top:0; }
-  .defs dd { font-family:var(--sans); font-size:.85rem; color:var(--ink-2);
+  .defs dd { font-family:var(--sans); font-size:.88rem; color:var(--ink-2);
              margin:.15rem 0 0; }
-  .defs .defsrc { font-family:var(--sans); font-size:.78rem; color:var(--ink-3);
+  .defs .defsrc { font-family:var(--sans); font-size:.82rem; color:var(--ink-3);
                   margin:1rem 0 0; }
 
   /* ---- lost vs newly described, per country ------------------------------
@@ -525,7 +525,7 @@
   }
   @media (max-width:620px) {
     .cmprow { grid-template-columns:1fr 6.4rem 1fr; }
-    .cmpname { font-size:.75rem; }
+    .cmpname { font-size:.74rem; }
     .cmpbar b { height:14px; }
     .cmpbar em { font-size:.68rem; }
   }
@@ -576,7 +576,7 @@
                  display:flex; align-items:flex-start; justify-content:center; }
   .homecard h4 a { text-decoration:none; }
   .homecard h4 a:hover { text-decoration:underline; }
-  .homecard p { font-family:var(--sans); font-size:.87rem; color:var(--ink-2);
+  .homecard p { font-family:var(--sans); font-size:.88rem; color:var(--ink-2);
                 margin:0; }
   .homecard .eyebrow { color:var(--t4); }
 
@@ -636,12 +636,12 @@
   .raterow { display:grid; grid-template-columns:9.5rem 1fr 7.5rem; align-items:center;
              gap:.6rem; padding:.22rem 0; }
   .raterow:hover { background:var(--accent-soft); }
-  .ratename { text-align:right; font-family:var(--sans); font-size:.83rem;
+  .ratename { text-align:right; font-family:var(--sans); font-size:.82rem;
               color:var(--ink); white-space:nowrap; }
   .ratebar { display:flex; align-items:center; gap:.5rem; }
   .ratebar b { height:17px; width:0; display:block; background:var(--t3);
                border-radius:3px; transition:width .8s cubic-bezier(.22,.7,.3,1); }
-  .ratebar em { font-family:var(--mono); font-size:.76rem; font-style:normal;
+  .ratebar em { font-family:var(--mono); font-size:.74rem; font-style:normal;
                 font-variant-numeric:tabular-nums; color:var(--ink-2); }
   .ratesub { text-align:left; font-family:var(--sans); font-size:.74rem;
              color:var(--ink-3); white-space:nowrap; }
@@ -649,7 +649,7 @@
   @media (max-width:620px) {
     .raterow { grid-template-columns:7rem 1fr; }
     .ratesub { grid-column:2; text-align:left; margin-top:-.2rem; }
-    .ratename { font-size:.76rem; }
+    .ratename { font-size:.74rem; }
   }
 
   /* The base thead rule left-aligns every header, but this page centers its content, so
@@ -664,8 +664,8 @@
                     color:var(--ink-3); white-space:nowrap; }
   /* The record holder in the whole table, not just its row. */
   .lgtable tr.lgtop .lgyear, .lgtable tr.lgtop .lgroup { color:var(--t5); }
-  .lgtable .lgwhere { color:var(--ink-2); font-size:.85rem; }
-  .lgtable .lgn { color:var(--ink-3); font-size:.78rem; white-space:nowrap; }
+  .lgtable .lgwhere { color:var(--ink-2); font-size:.88rem; }
+  .lgtable .lgn { color:var(--ink-3); font-size:.82rem; white-space:nowrap; }
 
   /* ---- night survey (easter egg) -----------------------------------------
      Hidden until someone taps the heading five times, or types "night". The
@@ -699,7 +699,7 @@
      44px minimum touch target. */
   #nightExit { position:fixed; top:.9rem; right:.9rem; z-index:903;
                display:none; min-height:44px; padding:.6rem 1.1rem;
-               font-family:var(--sans); font-size:.85rem; font-weight:600;
+               font-family:var(--sans); font-size:.88rem; font-weight:600;
                color:#f4e6c8; background:rgba(24,20,14,.82); cursor:pointer;
                border:1px solid rgba(244,230,200,.42); border-radius:3px; }
   #nightExit.on { display:block; }
@@ -710,7 +710,7 @@
      overlay's innerHTML on every run, which wiped the hint when it lived inside.
      They therefore need their own stacking above the 900 the overlay sits at. */
   #nightHint { position:fixed; left:0; right:0; bottom:8%; text-align:center; z-index:901;
-               font-family:var(--sans); font-size:.9rem; color:rgba(255,255,255,.62);
+               font-family:var(--sans); font-size:.88rem; color:rgba(255,255,255,.62);
                letter-spacing:.02em; pointer-events:none; }
   #nightHint b { color:#ffd678; font-weight:600; }
   #nightCard { position:fixed; left:50%; top:50%; transform:translate(-50%,-46%) scale(.94);
@@ -722,13 +722,13 @@
                     pointer-events:auto; }
   #nightCard .eyebrow { color:var(--accent); letter-spacing:.14em; }
   #nightCard h4 { font-size:1.15rem; margin:.3rem 0 .1rem; }
-  #nightCard .sci { font-style:italic; color:var(--ink-3); font-size:.9rem;
+  #nightCard .sci { font-style:italic; color:var(--ink-3); font-size:.88rem;
                     margin:0 0 .8rem; }
-  #nightCard p { font-family:var(--sans); font-size:.87rem; color:var(--ink-2);
+  #nightCard p { font-family:var(--sans); font-size:.88rem; color:var(--ink-2);
                  margin:.5rem 0 0; }
   #nightCard .kicker { border-top:1px solid var(--rule); margin-top:1rem;
-                       padding-top:.9rem; font-size:.83rem; color:var(--ink-3); }
-  #nightCard button { margin-top:1.1rem; font-family:var(--sans); font-size:.85rem;
+                       padding-top:.9rem; font-size:.82rem; color:var(--ink-3); }
+  #nightCard button { margin-top:1.1rem; font-family:var(--sans); font-size:.88rem;
                       padding:.55rem 1.2rem; background:var(--accent); color:#fff;
                       border:0; cursor:pointer; }
   @media (prefers-reduced-motion:reduce) {
@@ -767,9 +767,9 @@
               display:flex; flex-direction:column; align-items:center; }
   .lostcard p { font-family:var(--sans); font-size:.88rem; color:var(--ink-2); }
   .lostcard-redacted { border-top-color:var(--ink-3); }
-  .lostcite { font-size:.78rem !important; color:var(--ink-3) !important;
+  .lostcite { font-size:.82rem !important; color:var(--ink-3) !important;
               margin-top:auto !important; padding-top:.9rem; }
-  .lostsource p { font-family:var(--sans); font-size:.8rem; color:var(--ink-3); }
+  .lostsource p { font-family:var(--sans); font-size:.82rem; color:var(--ink-3); }
   .lostbody .warn { text-align:left; max-width:66ch; margin-inline:auto; }
   .lostbody .warn h3 { text-align:center; margin-top:0; }
   /* The amphibian block sits below the reptile one on the same page and needs to read as
@@ -850,7 +850,7 @@
               border-radius:3px; max-width:280px; line-height:1.35;
               box-shadow:0 4px 14px rgb(0 0 0 / .22); }
   #fieldTip b { display:block; font-weight:600; }
-  #fieldTip i { font-family:var(--mono); font-style:normal; opacity:.8; font-size:.72rem; }
+  #fieldTip i { font-family:var(--mono); font-style:normal; opacity:.8; font-size:.74rem; }
 
   /* ---- featured evidence ------------------------------------------------ */
   /* The most persuasive material in the corpus is Richardson's own prose, so it
@@ -909,7 +909,7 @@
      end of the track pushed the whole page sideways at 375px. */
   .prow { display:grid; grid-template-columns:minmax(68px,auto) 1fr auto; gap:.7rem;
           align-items:center; padding:.55rem 0; }
-  .plab { font-family:var(--sans); font-size:.78rem; color:var(--ink-2); text-align:right; }
+  .plab { font-family:var(--sans); font-size:.82rem; color:var(--ink-2); text-align:right; }
   .ptrack { position:relative; height:26px; min-width:0; }
   .ptrack::before { content:""; position:absolute; inset:auto 0 50% 0; height:1px;
                     background:var(--rule); transform:translateY(50%); }
@@ -923,22 +923,22 @@
   .baseline { position:absolute; top:0; bottom:0; width:1px; background:var(--ink-3); }
   /* baseline is named in the caption below, not in a floating label that can
      overflow the track on a narrow screen */
-  .blegend { font-family:var(--sans); font-size:.72rem; color:var(--ink-3);
+  .blegend { font-family:var(--sans); font-size:.74rem; color:var(--ink-3);
              display:flex; align-items:center; gap:.4rem; margin:.5rem 0 0;
              padding-left:calc(68px + .7rem); }
   .blegend i { display:inline-block; width:1px; height:11px; background:var(--ink-3);
                flex:0 0 1px; }
   .axis { display:flex; justify-content:space-between; font-family:var(--mono);
-          font-size:.7rem; color:var(--ink-3); border-top:1px solid var(--rule);
+          font-size:.74rem; color:var(--ink-3); border-top:1px solid var(--rule);
           padding-top:.35rem; margin-left:calc(68px + .7rem); }
   .stat { font-family:var(--sans); font-size:.82rem; color:var(--ink-2); margin-top:1rem; }
   .stat code { font-family:var(--mono); background:var(--surface-2); padding:.1rem .3rem;
-               border-radius:2px; font-size:.8rem; }
+               border-radius:2px; font-size:.82rem; }
 
   /* ---- bar rows (class / tier) ----------------------------------------- */
   .bars { display:grid; gap:.42rem; margin-top:1rem; }
   .bar { display:grid; grid-template-columns:minmax(120px,auto) 1fr minmax(48px,auto);
-         gap:.8rem; align-items:center; font-size:.85rem; }
+         gap:.8rem; align-items:center; font-size:.88rem; }
   .bar .bl { font-family:var(--sans); color:var(--ink-2); }
   .bar .bt { height:14px; background:var(--surface-2); position:relative; }
   .bar .bf { position:absolute; inset:0 auto 0 0; border-radius:0 3px 3px 0;
@@ -955,14 +955,14 @@
              padding:.9rem 0 1rem; border-bottom:1px solid var(--rule);
              position:sticky; top:0; z-index:5; background:var(--ground); }
   .filters input[type=search], .filters select {
-    font-family:var(--sans); font-size:.83rem; padding:.45rem .6rem;
+    font-family:var(--sans); font-size:.82rem; padding:.45rem .6rem;
     background:var(--surface); color:var(--ink); border:1px solid var(--rule-2);
     border-radius:2px; }
   .filters input[type=search] { min-width:min(280px,100%); flex:1 1 220px; }
   /* the tier labels are long, so cap the select and let it ellipsize */
   .filters select#fTier { max-width:min(320px,100%); }
   .chipset { display:flex; gap:.3rem; flex-wrap:wrap; }
-  .chip { font-family:var(--sans); font-size:.76rem; padding:.38rem .62rem;
+  .chip { font-family:var(--sans); font-size:.74rem; padding:.38rem .62rem;
           background:var(--surface); border:1px solid var(--rule-2); border-radius:2px;
           color:var(--ink-2); cursor:pointer; }
   .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent);
@@ -989,12 +989,12 @@
               background:var(--surface); border-left:3px solid var(--t3);
               padding:1rem 1.2rem; margin:1.4rem 0 0; color:var(--ink-2); }
   .estimate strong { color:var(--ink); }
-  .estimate .caveat { display:block; margin-top:.5rem; font-size:.85rem; color:var(--ink-3); }
+  .estimate .caveat { display:block; margin-top:.5rem; font-size:.88rem; color:var(--ink-3); }
 
-  .noresults { font-family:var(--sans); font-size:.92rem; line-height:1.6;
+  .noresults { font-family:var(--sans); font-size:.95rem; line-height:1.6;
                color:var(--ink-2); background:var(--surface); border:1px solid var(--t3);
                padding:1rem 1.2rem; margin:var(--s2) 0; text-align:center; }
-  .resultline { font-family:var(--sans); font-size:.8rem; color:var(--ink-3);
+  .resultline { font-family:var(--sans); font-size:.82rem; color:var(--ink-3);
                 padding:.8rem 0; display:flex; gap:1rem; flex-wrap:wrap; }
 
   /* ---- register table --------------------------------------------------- */
@@ -1005,7 +1005,7 @@
     text-align:left; padding:.6rem .8rem; border-bottom:1px solid var(--rule-2);
     background:var(--surface); position:sticky; top:0; z-index:2; }
   tbody td { padding:.6rem .8rem; border-bottom:1px solid var(--rule);
-             vertical-align:top; font-size:.9rem; }
+             vertical-align:top; font-size:.88rem; }
   tbody tr.sp { cursor:pointer; }
   tbody tr.sp:hover td { background:var(--accent-soft); }
   .sev { width:4px; padding:0 !important; }
@@ -1019,7 +1019,7 @@
      on its own. */
   .tierchip { display:inline-flex; align-items:center; justify-content:center;
               width:26px; height:22px; border-radius:3px; font-family:var(--mono);
-              font-size:.8rem; font-weight:700; font-variant-numeric:tabular-nums; }
+              font-size:.82rem; font-weight:700; font-variant-numeric:tabular-nums; }
   .tierchip.t5{background:var(--t5);color:#fff} .tierchip.t4{background:var(--t4);color:#fff}
   .tierchip.t3{background:var(--t3);color:#fff} .tierchip.t2{background:var(--t2);color:#1a1206}
   .tierchip.t1{background:var(--t1);color:#1a1206}
@@ -1049,10 +1049,10 @@
         gap:.8rem 1.6rem; font-family:var(--sans); font-size:.82rem; }
   .kv div span { display:block; color:var(--ink-3); font-size:.68rem;
                  text-transform:uppercase; letter-spacing:.07em; }
-  .desc-note { font-family:var(--sans); font-size:.76rem; color:var(--ink-3);
+  .desc-note { font-family:var(--sans); font-size:.74rem; color:var(--ink-3);
                margin-top:.9rem; padding-top:.7rem; border-top:1px solid var(--rule-2);
                max-width:70ch; }
-  .more { font-family:var(--sans); font-size:.83rem; margin:1.2rem auto 0; display:block;
+  .more { font-family:var(--sans); font-size:.82rem; margin:1.2rem auto 0; display:block;
           padding:.6rem 1.4rem; background:var(--surface); border:1px solid var(--rule-2);
           border-radius:2px; color:var(--ink); cursor:pointer; }
   .more:hover { border-color:var(--accent); color:var(--accent); }
@@ -1061,7 +1061,7 @@
   .warn { border:1px solid var(--t4); border-left-width:4px; background:var(--surface);
           padding:1.1rem 1.3rem; margin:1.6rem 0; }
   .warn h3 { font-size:.95rem; color:var(--t4); margin-bottom:.35rem; }
-  .warn p { font-family:var(--sans); font-size:.85rem; margin:.4rem 0 0; color:var(--ink-2); }
+  .warn p { font-family:var(--sans); font-size:.88rem; margin:.4rem 0 0; color:var(--ink-2); }
 
   /* Methods body runs the full column instead of a 66ch measure. The tables in
      here are the substance and were being crushed at 66ch; a wide prose measure
@@ -1075,7 +1075,7 @@
   .methods ul { margin:.7rem 0; padding-left:1.3rem; }
   .methods li { margin:.35rem 0; }
   .methods strong { color:var(--ink); }
-  .ftable { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.86rem;
+  .ftable { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.88rem;
             min-width:0; }
   .ftable th, .ftable td { text-align:left; padding:.45rem .7rem;
             border-bottom:1px solid var(--rule); }
@@ -1090,7 +1090,7 @@
   /* The lead block above the figures is centered. A max-width column needs margin:auto
      or it hugs the left edge and only the text inside it moves. */
   .ntlead { max-width:46rem; margin:0 auto 1.4rem; text-align:center; }
-  .ntkicker { font-family:var(--sans); font-size:.72rem; letter-spacing:.12em;
+  .ntkicker { font-family:var(--sans); font-size:.74rem; letter-spacing:.12em;
     text-transform:uppercase; color:var(--ink-3); margin:0 0 .5rem; }
   .nthead { font-size:2rem; line-height:1.18; margin:0 0 .9rem; letter-spacing:-.015em; }
   .nthero { color:var(--accent); font-variant-numeric:tabular-nums; }
@@ -1098,17 +1098,17 @@
   .ntsummary { color:var(--ink-2); margin:0 auto .7rem; font-size:1.02rem;
     max-width:40rem; }
   /* .ntmore removed with the two jump links it styled; nothing carries it now. */
-  .counts .count .csub { display:block; font-style:normal; font-size:.72rem;
+  .counts .count .csub { display:block; font-style:normal; font-size:.74rem;
     color:var(--ink-3); margin-top:.15rem; }
   .ntabout { margin-top:3rem; padding-top:1.4rem; border-top:1px solid var(--rule); }
   .ntdisc { border:1px solid var(--border, var(--rule)); border-radius:8px;
     padding:.2rem .9rem; margin:.5rem 0; background:var(--surface); }
-  .ntdisc > summary { cursor:pointer; font-family:var(--sans); font-size:.9rem;
+  .ntdisc > summary { cursor:pointer; font-family:var(--sans); font-size:.88rem;
     font-weight:600; padding:.6rem 0; list-style:none; }
   .ntdisc > summary::-webkit-details-marker { display:none; }
   .ntdisc > summary::before { content:"+ "; color:var(--accent); font-weight:700; }
   .ntdisc[open] > summary::before { content:"– "; }
-  .ntdisc p { font-size:.9rem; color:var(--ink-2); margin:.5rem 0 .9rem; }
+  .ntdisc p { font-size:.88rem; color:var(--ink-2); margin:.5rem 0 .9rem; }
   .ntfoot { font-size:.82rem !important; color:var(--ink-3) !important; }
   .ntlegend { margin:.6rem 0 0; }
   .ntlegend p { font-family:var(--sans); font-size:.82rem; color:var(--ink-2);
@@ -1121,18 +1121,18 @@
   /* Long cells clamp to two lines and expand on click rather than being cut off with no
      way back. A citation truncated mid-author-list is unusable, and on a phone the
      column is narrow enough that most of them were. */
-  .ntdist { color:var(--ink-2); font-size:.84rem; max-width:24rem; }
+  .ntdist { color:var(--ink-2); font-size:.82rem; max-width:24rem; }
   .ntdist.clip { cursor:pointer; }
   .ntdist.clip .clipin { display:-webkit-box; -webkit-line-clamp:2; line-clamp:2;
                          -webkit-box-orient:vertical; overflow:hidden; }
   .ntdist.clip.open .clipin { display:block; }
   .ntdist.clip::after { content:"more"; display:block; margin-top:.15rem;
-                        font-family:var(--sans); font-size:.7rem; color:var(--accent); }
+                        font-family:var(--sans); font-size:.74rem; color:var(--accent); }
   .ntdist.clip.open::after { content:"less"; }
   .ntcite-title { color:var(--ink); }
   @media (max-width:640px) { .ntdist { max-width:14rem; } }
   .ntfine { color:var(--ink-2); font-size:.82rem; white-space:nowrap; }
-  .ntev, .ntrc { font-family:var(--sans); font-size:.7rem; font-weight:600;
+  .ntev, .ntrc { font-family:var(--sans); font-size:.74rem; font-weight:600;
     letter-spacing:.03em; padding:.15rem .45rem; border-radius:3px;
     border:1px solid var(--rule-2); color:var(--ink-2); white-space:nowrap;
     cursor:help; }
@@ -1167,25 +1167,25 @@
      added later inherits it instead of quietly arriving left-aligned. */
   .rdbody { padding:.9rem 1rem 1rem; display:flex; flex-direction:column;
     flex:1 1 auto; gap:.4rem; text-align:center; }
-  .rdsp { font-family:var(--serif); font-style:italic; font-size:.92rem;
+  .rdsp { font-family:var(--serif); font-style:italic; font-size:.95rem;
     color:var(--accent); margin:0; line-height:1.4; }
-  .rdspmore { font-family:var(--sans); font-style:normal; font-size:.7rem;
+  .rdspmore { font-family:var(--sans); font-style:normal; font-size:.74rem;
     color:var(--ink-3); }
   /* softer, because it is a weaker claim -- read from one article's text rather than
      from its headline or corroborated by a second outlet */
-  .rdspsoft { color:var(--ink-3); font-size:.84rem; cursor:help; }
+  .rdspsoft { color:var(--ink-3); font-size:.82rem; cursor:help; }
   .rdpres { margin:.6rem 0 .9rem; padding-left:1.1rem; }
-  .rdpres li { font-size:.9rem; color:var(--ink-2); margin:.35rem 0; line-height:1.55; }
+  .rdpres li { font-size:.88rem; color:var(--ink-2); margin:.35rem 0; line-height:1.55; }
   .rdpres strong { color:var(--ink); }
   .rdtitle { font-family:var(--serif); font-size:1rem; line-height:1.35;
     margin:0; color:var(--ink); transition:color .15s; }
-  .rddesc { font-family:var(--sans); font-size:.78rem; line-height:1.5;
+  .rddesc { font-family:var(--sans); font-size:.82rem; line-height:1.5;
     color:var(--ink-2); margin:0; }
-  .rdmeta { font-family:var(--sans); font-size:.7rem; color:var(--ink-3);
+  .rdmeta { font-family:var(--sans); font-size:.74rem; color:var(--ink-3);
     margin:auto 0 0; padding-top:.5rem; display:flex; gap:.5rem;
     flex-wrap:wrap; align-items:center; justify-content:center; }
   .rdpub { font-weight:600; color:var(--ink-2); }
-  .rdtag { font-family:var(--sans); font-size:.66rem; font-weight:600;
+  .rdtag { font-family:var(--sans); font-size:.68rem; font-weight:600;
     letter-spacing:.03em; padding:.1rem .4rem; border-radius:3px;
     border:1px solid var(--rule-2); color:var(--ink-2); }
   .rdtag-list { background:var(--accent-soft); color:var(--accent);
@@ -1208,7 +1208,7 @@
   .rdnote { font-family:var(--sans); font-size:.74rem; line-height:1.5;
     color:var(--ink-3); font-style:italic; margin:0; }
   .rdtag-kind { background:var(--surface-2); color:var(--ink-2); }
-  .rdcite { font-family:var(--sans); font-size:.66rem; line-height:1.45;
+  .rdcite { font-family:var(--sans); font-size:.68rem; line-height:1.45;
     color:var(--ink-3); margin:0; padding:0 1rem .8rem; text-align:center; }
   .rdarchive { text-align:center; }
   /* the showing-count line sits with the centered controls above it */
@@ -1232,7 +1232,7 @@
   .rdsearch input { border:0; flex:1 1 auto; min-width:0; background:transparent; }
 
   footer { border-top:1px solid var(--rule); background:var(--surface);
-           padding:1.6rem 0 2.4rem; font-family:var(--sans); font-size:.78rem;
+           padding:1.6rem 0 2.4rem; font-family:var(--sans); font-size:.82rem;
            color:var(--ink-3); }
   footer p { margin:.35rem 0; }
 
@@ -2974,7 +2974,7 @@ function ampRender() {
    AmphibiaWeb's references are "Authors. YEAR. Title. Journal", and ten Chinese authors
    with hyphenated given names fill a phone column before the title arrives — the reader
    sees "Song H-M, Wang F-X, Qi S, Wang H-T, Lyu Z-T, Cai Y-Y..." and learns nothing.
-   Reordered to "Title — First Author et al. YEAR", with the full citation one tap away
+   Reordered to "Title, First Author et al. YEAR", with the full citation one tap away
    rather than discarded. */
 function citeCell(ref, esc) {
   ref = (ref || "").trim();
@@ -3056,7 +3056,7 @@ const NT_EV = {
   airtight:       ["Certain",
                    "The Red List knows this species exists and holds no assessment of it"],
   corroborated:   ["Confirmed a second way",
-                   "The Red List has no record of the name at all, but GBIF does — and no alternative name for it has been assessed either"],
+                   "The Red List has no record of the name at all, but GBIF does, and no alternative name for it has been assessed either"],
   uncorroborated: ["One source only",
                    "Neither the Red List nor GBIF lists this name; it rests on the Reptile Database alone"]
 };
@@ -3107,10 +3107,10 @@ function ntBoot() {
   // the two legends now sit inside their own disclosure, each beside the text that
   // explains what it is measuring
   $("#ntLegendEv").innerHTML = Object.entries(NT_EV).map(([k, [lab, why]]) =>
-    `<p><b>${lab}</b> (${(c.by_evidence[k] || 0).toLocaleString()}) — ${why}</p>`
+    `<p><b>${lab}</b> (${(c.by_evidence[k] || 0).toLocaleString()}): ${why}</p>`
   ).join("");
   $("#ntLegendRc").innerHTML = Object.entries(NT_RC).map(([k, [lab, why]]) =>
-    `<p><b>${k} · ${lab}</b> (${(c.by_class[k] || 0).toLocaleString()}) — ${why}</p>`
+    `<p><b>${k} · ${lab}</b> (${(c.by_class[k] || 0).toLocaleString()}): ${why}</p>`
   ).join("");
 
   const opt = (sel, blank, items) => {
@@ -3722,7 +3722,7 @@ function boot() {
   const MAX = 80, pos = x => (x / MAX * 100) + "%";
   const prow = (label, g, cls) => `
     <div class="prow">
-      <div class="plab">${label}<br><span style="color:var(--ink-3);font-size:.72rem">
+      <div class="plab">${label}<br><span style="color:var(--ink-3);font-size:.74rem">
         n=${g.n}</span></div>
       <div class="ptrack">
         <div class="baseline" style="left:${pos(v.baseline_all_species)}"
@@ -4651,10 +4651,10 @@ function draw(append) {
       <td class="cell-name"><b>${esc(s.v || s.n)}</b><i class="sci">${esc(s.n)}</i></td>
       <td style="font-family:var(--sans);font-size:.82rem;color:var(--ink-2)">${esc(s.c)}</td>
       <td><span class="tierchip t${s.t}" title="${esc(DATA.tiers[s.t])}">${s.t}</span></td>
-      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.b)}</td>
-      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.s || "—")}</td>
-      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2)">${esc(s.r || "—")}</td>
-      <td style="font-family:var(--sans);font-size:.8rem;color:var(--ink-2);white-space:nowrap">${
+      <td style="font-family:var(--sans);font-size:.82rem;color:var(--ink-2)">${esc(s.b)}</td>
+      <td style="font-family:var(--sans);font-size:.82rem;color:var(--ink-2)">${esc(s.s || "—")}</td>
+      <td style="font-family:var(--sans);font-size:.82rem;color:var(--ink-2)">${esc(s.r || "—")}</td>
+      <td style="font-family:var(--sans);font-size:.82rem;color:var(--ink-2);white-space:nowrap">${
         s.dds ? `${s.dds} <span style="color:var(--ink-3)">(${s.ddy}\u00a0yr${
           s.ddr > 1 ? `, ${s.ddr}\u00d7` : ""})</span>` : "—"}</td>
       <td>${s.t >= PRI ? '<span class="tag pri">Priority</span> ' : ""}${
