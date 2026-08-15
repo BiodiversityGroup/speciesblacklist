@@ -9,7 +9,7 @@
 <link rel="canonical" href="https://speciesblacklist.org/sites/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-<!-- Shared-link previews. The advocacy case for this register travels by link,
+<!-- Shared-link previews. The advocacy case for this list travels by link,
      so a bare URL with no card is a wasted send. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Biodiversity Group">
@@ -41,7 +41,7 @@
   "@type": "Dataset",
   "name": "The Species Black List",
   "alternateName": "Data Deficient and unassessed vertebrates, ranked by geographic restriction",
-  "description": "A register of 3,031 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 31 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritized research agenda.",
+  "description": "A list of 3,031 vertebrate species recorded as Data Deficient by the IUCN Red List (v2026-1) and 31 never assessed, each ranked by the severity of geographic restriction reported in Richardson (2023). The ranking is validated against 108 species independently reassessed by IUCN: the high-restriction stratum proved threatened at 52.6% versus 20.2% for the remainder (Fisher exact p=0.0075). Not a Red List assessment; a prioritized research agenda.",
   "url": "https://speciesblacklist.org/",
   "keywords": ["extinction risk","IUCN Red List","Data Deficient","conservation prioritization","vertebrates","biodiversity assessment gap","Criterion B"],
   "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -49,7 +49,7 @@
               "url": "https://biodiversitygroup.org"},
   "isBasedOn": [
     {"@type": "Dataset", "name": "The IUCN Red List of Threatened Species, Version 2026-1",
-     "description": "The global authority on the extinction risk of animal, fungus and plant species, maintained by the International Union for Conservation of Nature since 1964. Version 2026-1 is the release from which the Data Deficient and never-assessed vertebrate cohorts in this register were drawn.",
+     "description": "The global authority on the extinction risk of animal, fungus and plant species, maintained by the International Union for Conservation of Nature since 1964. Version 2026-1 is the release from which the Data Deficient and never-assessed vertebrate cohorts in this list were drawn.",
      "url": "https://www.iucnredlist.org", "identifier": "https://doi.org/10.15468/0qnb58",
      "creator": {"@type": "Organization", "name": "International Union for Conservation of Nature",
                  "url": "https://www.iucn.org"},
@@ -79,7 +79,7 @@
     --serif:Georgia,"Palatino Linotype",Palatino,"Book Antiqua",ui-serif,serif;
     --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
     --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-    /* 1.35rem floor rather than 1rem: at 375px the register table, the sites
+    /* 1.35rem floor rather than 1rem: at 375px the list table, the sites
        list and the methods tables were all sitting ~16px off the edge, which
        reads as touching it once each of them has its own border. */
     --pad:clamp(1.35rem,4vw,2.5rem);
@@ -89,7 +89,7 @@
     --fs-lede:1.16rem; --fs-h3:1.05rem; --fs-h2:1.4rem;
     --fs-quote:clamp(1.25rem,2.7vw,1.9rem);
     --fs-display:clamp(1.9rem,5.2vw,3.1rem);
-    /* Spacing rhythm, 8px base — every gap below is drawn from this. */
+    /* Spacing rhythm, 8px base, every gap below is drawn from this. */
     --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s5:3rem; --s6:4rem;
   }
   @media (prefers-color-scheme:dark) {
@@ -123,7 +123,7 @@
      column lands left of the page's center line, which reads as a mistake rather
      than as centring. */
   .prose { max-width:66ch; margin-inline:auto; }
-  /* All titles centered. Body prose stays left-aligned — centered running text is
+  /* All titles centered. Body prose stays left-aligned, centered running text is
      genuinely hard to read, and the ragged left edge would hurt the tables and
      evidence sentences that make up most of this site. Headings inside a bordered
      callout are also centered, since the request was for consistency across every
@@ -182,7 +182,7 @@
   .mast h1 { font-size:clamp(1.6rem,4vw,2.4rem); letter-spacing:-.02em; }
   .mast .sub { font-family:var(--sans); font-size:.85rem; color:var(--ink-2);
                margin-top:.45rem; }
-  /* No margin-left:auto — an auto margin beats justify-self on a grid item, which
+  /* No margin-left:auto, an auto margin beats justify-self on a grid item, which
      kept the controls pinned right when the row stacks on a phone. */
   .mast-right { display:flex; gap:.5rem; align-items:center; }
   .ghost { font-family:var(--sans); font-size:.75rem; padding:.4rem .7rem;
@@ -280,7 +280,7 @@
   }
 
   /* Longhand: a `padding` shorthand here would zero the horizontal padding
-     .wrap supplies, which left the register, sites and methods pages flush
+     .wrap supplies, which left the list, sites and methods pages flush
      against the screen edge on a phone. */
   section.view { padding-top:2.2rem; padding-bottom:4rem; }
   section.view[hidden] { display:none; }
@@ -291,10 +291,10 @@
 
   /* ---- hero: the field -------------------------------------------------- */
   /* One mark per species, 2,407 of them, colored by restriction tier. The mass
-     is the argument: a register of the overlooked, drawn at the scale of the
+     is the argument: a list of the overlooked, drawn at the scale of the
      overlooking. Canvas rather than DOM because 2,407 nodes is wasteful and
      because crisp sub-pixel marks need devicePixelRatio scaling. No photography
-     anywhere on this page — most of these animals have never been photographed,
+     anywhere on this page, most of these animals have never been photographed,
      and that absence is the subject. */
   .hero { border-bottom:1px solid var(--rule); background:var(--surface);
           padding:var(--s5) 0 var(--s4); }
@@ -314,7 +314,7 @@
   .field-head .eyebrow { margin:0; }
   /* ---- tier key --------------------------------------------------------- */
   /* A reviewer read the whole methods page and still could not say what a tier
-     was. So the key is no longer a color legend with numbers next to it — it
+     was. So the key is no longer a color legend with numbers next to it, it
      defines each tier in words, at first use, and doubles as the field's legend. */
   .tierkey { margin:var(--s4) 0 0; border-top:1px solid var(--rule);
              padding-top:var(--s3); }
@@ -353,7 +353,7 @@
     .tierkey .tdef   { grid-area:def; }
   }
 
-  /* Inline tier reminder in the register, so the column is never unexplained
+  /* Inline tier reminder in the list, so the column is never unexplained
      even for someone who arrives straight at the table. */
   .tierhelp { margin:var(--s3) 0 0; font-family:var(--sans); font-size:var(--fs-small);
               border:1px solid var(--rule); background:var(--surface);
@@ -407,7 +407,7 @@
      page, which is what a map is expected to do. The map is short enough that the
      page is still easy to scroll past on either side of it.
 
-     ALL THREE MAPS, not just the register's. Only #mapCanvas had this, so on the lost and
+     ALL THREE MAPS, not just the list's. Only #mapCanvas had this, so on the lost and
      new-species maps attachHeatZoom's pinch and pan handlers were correct and simply never
      ran: without touch-action the browser claims the touch as a page gesture and cancels
      the pointer stream before pointermove fires. Nothing errored, which is why it read as
@@ -441,7 +441,7 @@
   /* ---- lost species page ------------------------------------------------ */
   /* Centered on the CONTAINER, not element by element. Anything added to this page
      later inherits it instead of quietly arriving left-aligned. This is a narrative
-     page rather than a register, so centered running text suits it — the tables and
+     page rather than a register, so centered running text suits it, the tables and
      evidence sentences elsewhere on the site are the reason those stay left. */
   .lostbody { text-align:center; }
   /* A measure column without margin:auto reads as left-aligned with dead space down
@@ -736,7 +736,7 @@
   }
 
   /* #lostCanvas is sized with #mapCanvas and #nsCanvas above; a second definition here is
-     how it ended up without touch-action while the register map had it. */
+     how it ended up without touch-action while the list map had it. */
   /* Flex needs justify-content; text-align does nothing to it. */
   .lostlegend { display:flex; justify-content:center; align-items:center; gap:1rem;
                 flex-wrap:wrap; font-family:var(--sans); font-size:var(--fs-micro);
@@ -745,7 +745,7 @@
   .lostlegend .dots i { display:block; border-radius:50%; border:1px solid var(--t4);
                         background:color-mix(in srgb, var(--t3) 45%, transparent); }
   /* The heat ramp. Swatches butt together so it reads as a continuous scale, and the
-     numbers sit under it — the ramp is green-to-red, which is the one pairing
+     numbers sit under it, the ramp is green-to-red, which is the one pairing
      color-blind readers cannot separate, so the figures are not optional. */
   .lostlegend .ramp { display:flex; border:1px solid var(--rule); }
   .lostlegend .ramp i { display:block; width:38px; height:12px; }
@@ -810,7 +810,7 @@
     .siterow { grid-template-columns:1fr auto; }
     .siterow .sgo { display:none; }
   }
-  /* Active site filter, shown in the register's filter bar. */
+  /* Active site filter, shown in the list's filter bar. */
   .sitechip { font-family:var(--sans); font-size:var(--fs-small);
               display:inline-flex; align-items:center; gap:.4rem; padding:.35rem .6rem;
               background:var(--accent); color:#fff; border-radius:2px; border:0;
@@ -821,7 +821,7 @@
 
   /* ---- stakes, stated on the first screen ------------------------------- */
   /* This was previously the last section of the deepest page. It is the reason
-     the register exists, so it now sits directly under the lede. */
+     the list exists, so it now sits directly under the lede. */
   /* MEASURED TO MATCH .prose, which is the reading column everywhere else on this page.
      This block had no max-width at all, so it ran the full 1180px wrap while the lede above
      it sat at 56ch and the blocks below at 60-66ch: one paragraph nearly twice the width of
@@ -1014,7 +1014,7 @@
   .cell-name b { font-weight:600; }
   .cell-name .sci { display:block; font-size:.82rem; color:var(--ink-2); margin-top:.1rem; }
   /* Severity as a filled chip rather than a bare digit, so the ramp is legible at
-     a glance down the column. The number stays inside it — the ramp's lighter
+     a glance down the column. The number stays inside it, the ramp's lighter
      steps fall under 3:1 against the surface, so color never carries the value
      on its own. */
   .tierchip { display:inline-flex; align-items:center; justify-content:center;
@@ -1256,7 +1256,7 @@
     <div class="lockup">
       <!-- Inline rather than <img> so the mark can use currentColor and the theme
            variables directly: one copy of the geometry, correct in both themes,
-           no JS. The blank fourth entry is the whole idea of the register. -->
+           no JS. The blank fourth entry is the whole idea of the list. -->
       <svg class="logomark" viewBox="0 0 32 32" aria-hidden="true">
         <g fill="currentColor">
           <rect x="3" y="4"  width="26" height="4" rx="1.2"/>
@@ -1320,7 +1320,7 @@
         <strong>Data Deficient</strong>, meaning IUCN looked and there was not enough
         information to say. Others are <strong>Not Evaluated</strong>, meaning nobody has
         looked at all. In practice both are treated as though the species were safe.</p>
-      <p class="lede"><strong>The gap is much bigger than this register.</strong> IUCN
+      <p class="lede"><strong>The gap is much bigger than this list.</strong> IUCN
         v2026&#8209;1 records <strong>8,659</strong> vertebrates as Data Deficient, and the
         number never assessed is larger again and nobody knows it precisely. Comparing the
         Reptile Database against the Red List leaves <strong>2,345 reptiles</strong> with no
@@ -1333,9 +1333,9 @@
            all comes from one book will reasonably assume the coverage claim was the claim.
            It is stated here rather than on the site's front page, because it is true of the
            register and not of the lost-species or new-species work. -->
-      <p class="lede"><strong>Where this register comes from.</strong> Every species here is
+      <p class="lede"><strong>Where this list comes from.</strong> Every species here is
         drawn from a single source, Matthew Richardson's <em>Threatened and Recently Extinct
-        Vertebrates of the World</em> (2023), so the register inherits that book's scope:
+        Vertebrates of the World</em> (2023), so the list inherits that book's scope:
         vertebrates, and the species that book documents. A species IUCN holds as Data
         Deficient that Richardson does not cover will not appear here. That frame is worth
         stating plainly, because it cuts both ways: the book is a compendium of species
@@ -1363,7 +1363,7 @@
       <p>IUCN's own guidance says Data Deficient species should receive the same
         attention as threatened ones. It is not followed. So the gap is not only a
         gap in knowledge. It is an exclusion written into policy and funding, and it
-        is the reason for compiling this register at all.</p>
+        is the reason for compiling this list at all.</p>
     </div>
 
     <div class="field-wrap">
@@ -1372,7 +1372,7 @@
         <p class="tierkey-intro">Every species is placed in one of five
           <strong>restriction tiers</strong> according to how narrow its published
           record is. That is the only thing the tier measures, and it is the axis the
-          whole register is ranked on. A smaller known range is what would make a
+          whole list is ranked on. A smaller known range is what would make a
           species qualify as threatened under IUCN <strong>Criterion B</strong>.
           <strong>Tiers 3, 4 and 5 are the priority stratum</strong>, the group whose
           ranking has been tested against IUCN's own reassessments. The tested
@@ -1389,7 +1389,7 @@
         <a href="/sites/" data-goto="sites">localities</a>.</p>
       <canvas id="field" role="img"
               aria-label="A dense field of marks, one for each of the 2,407 species in
-              the register, shaded by how narrowly restricted its published record is.
+              the list, shaded by how narrowly restricted its published record is.
               The same data is listed in full under Browse all species."></canvas>
       <p class="field-note">Hover a mark to name the species; select one to open its
         record. How the tiers were built and tested, and what the ranking cannot tell you,
@@ -1646,8 +1646,8 @@
     doi:10.15468/0qnb58, accessed via GBIF.org. IUCN Red List Terms of Use apply.</p>
   <p>Species accounts derive from Richardson, M. (2023) <em>Threatened and Recently
     Extinct Vertebrates of the World</em>, Cambridge University Press.</p>
-  <p><strong>Found an error? Please tell us.</strong> This register makes checkable claims
-    about individual species, and some of them will be wrong — a name IUCN holds under a
+  <p><strong>Found an error? Please tell us.</strong> This list makes checkable claims
+    about individual species, and some of them will be wrong, a name IUCN holds under a
     genus we did not look for, a locality read out of the wrong clause, a taxon that should
     not be here at all. Corrections are the most useful thing anyone can send:
     <a href="mailto:info@biodiversitygroup.org?subject=Species%20Black%20List%20correction">info@biodiversitygroup.org</a>,
@@ -2974,13 +2974,19 @@ function mergedDraw() {
 }
 
 function mergedClassFilter() {
+  /* Rebuilt on EVERY payload arrival, preserving the selection. The first version
+     returned early once options existed, so whichever class's payload won the network
+     race became the only class in the dropdown. Three loaders finish in any order;
+     the filter has to be correct after each of them, not just the first. */
   const sel = $("#mgCls");
-  if (!sel || sel.options.length) return;
+  if (!sel) return;
+  const keep = sel.value;
   const counts = {};
   mergedRows().forEach(r => { counts[r.cls] = (counts[r.cls] || 0) + 1; });
   sel.innerHTML = '<option value="">All classes</option>' +
     Object.keys(counts).sort().map(k =>
       `<option value="${k}">${k}s (${counts[k].toLocaleString()})</option>`).join("");
+  if ([...sel.options].some(o => o.value === keep)) sel.value = keep;
   sel.onchange = mergedDraw;
 }
 
@@ -3024,7 +3030,7 @@ function renderRate() {
     + "<strong>about " + r + " a year</strong>, and amphibians at <strong>about " + a
     + " a year</strong>. That is roughly <strong>" + tot + " species every year</strong> "
     + "or more than <strong>" + Math.round(tot / 52) + " a week</strong>, "
-    + "joining a queue in just two of the thirty-odd classes of animal.";
+    + "joining a queue in just two of the thirty-odd classes of animal. The birds and mammals we have now added join the same queue, a few dozen more a year.";
 }
 
 function ampRender() {
