@@ -773,7 +773,9 @@
               margin-top:auto !important; padding-top:.9rem; }
   .lostsource p { font-family:var(--sans); font-size:.82rem; color:var(--ink-3); }
   .lostbody .warn { text-align:left; max-width:66ch; margin-inline:auto; }
-  .lostbody .warn h3 { text-align:center; margin-top:0; }
+  .lostbody .warn > summary { cursor:pointer; list-style-position:inside; }
+  .warn > summary::marker { color:var(--accent); }
+  .warn h3, .warn > summary { text-align:center; margin-top:0; }
   /* The amphibian block sits below the reptile one on the same page and needs to read as
      a second section rather than a continuation, hence the rule above it. */
   .ntlead-amph { border-top:1px solid var(--rule); padding-top:var(--s4);
@@ -1374,15 +1376,15 @@
   <div class="lostlegend" id="lostLegend"></div>
   <div id="lostTip" aria-hidden="true"></div>
 
-  <div class="warn">
-    <h3>What this map is not</h3>
+  <details class="warn">
+    <summary>What this map is not</summary>
     
     <p>The list is also uneven by design. It inherits the Re:wild / IUCN&nbsp;SSC lost
       species list, which is far better resolved for vertebrates than for insects,
       plants or molluscs. Reptiles, fish and amphibians make up more than half of it.
       Reading the map as a picture of the world's lost biodiversity would mistake the
       shape of the <em>list</em> for the shape of the <em>problem</em>.</p>
-  </div>
+  </details>
 
   <div class="prose">
     <h3>Where we lose them is not where we find them</h3>
@@ -1414,8 +1416,8 @@
 
   <div id="longestWrap"></div>
 
-  <div class="warn">
-    <h3>What had to be thrown out to build this table</h3>
+  <details class="warn">
+    <summary>What had to be thrown out to build this table</summary>
     <p>Taking simply the oldest date in each group produced a table we could not stand
       behind. <strong>Ten of the first twenty-one entries were contradicted by
       <a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF</a></strong>, the
@@ -1436,7 +1438,7 @@
       are errors in the lost-species list, not in the Red List</strong>, and they are why
       this page treats its own inputs as claims to be checked rather than facts to be
       republished.</p>
-  </div>
+  </details>
 
   <div class="prose">
     <h3>Counting is not the same as rate</h3>
@@ -1445,8 +1447,8 @@
 
   <div id="rateWrap"></div>
 
-  <div class="warn">
-    <h3>What that rate is, and is not</h3>
+  <details class="warn">
+    <summary>What that rate is, and is not</summary>
     <p>It is <strong>not a rate of loss</strong>. The numerator is a curated list rather
       than a census, and the denominator is how many species each group's own taxonomic
       authority currently recognizes. Effort is the confound, and it runs one way: birds
@@ -1457,10 +1459,10 @@
       is far less complete and a rate would be comparing our ignorance with theirs. Frogs
       and toads are shown together here because AmphibiaWeb publishes Anura as a single
       figure, and a guessed split is worse than an honest merge.</p>
-  </div>
+  </details>
 
-  <div class="warn">
-    <h3>Two words doing more work than they should</h3>
+  <details class="warn">
+    <summary>Two words doing more work than they should</summary>
     <p><strong>"Toad" is not a group.</strong> Everyday usage covers warty-skinned frogs
       in at least six families, so the split here is the strict one: <em>toads</em> means
       the true toads, family Bufonidae, and every other frog is filed as a frog. A
@@ -1469,7 +1471,7 @@
       convenience, covering three classes, kept together because that is the question
       people ask.
       Groups come from GBIF's backbone taxonomy, matched on the scientific name.</p>
-  </div>
+  </details>
 
   <div class="prose">
     <h3>Why some species come back and others never do</h3>
@@ -3739,6 +3741,22 @@ function boot() {
       head.addEventListener("mouseenter", stop);
       head.addEventListener("focusin", stop);
     }
+    /* Swipe, both directions. Pointer events cover touch and mouse alike, and pan-y
+       leaves vertical scrolling to the page while claiming horizontal drags for the
+       carousel. A swipe stops the auto-advance for the same reason a click does: the
+       reader has taken the wheel. 40px separates a swipe from a tap. */
+    head.style.touchAction = "pan-y";
+    let sx = null;
+    head.addEventListener("pointerdown", e => { sx = e.clientX; });
+    head.addEventListener("pointerup", e => {
+      if (sx === null) return;
+      const dx = e.clientX - sx;
+      sx = null;
+      if (Math.abs(dx) < 40) return;
+      stop();
+      go(dx < 0 ? at + 1 : at - 1);
+    });
+    head.addEventListener("pointercancel", () => { sx = null; });
   }
 
   if (HAS_METHODS) {
