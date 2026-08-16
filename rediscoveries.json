@@ -1,14 +1,14 @@
 {
-"built": "2026-08-14",
+"built": "2026-08-16",
 "counts": {
-"stories": 117,
-"raw_items": 294,
-"with_species": 74,
-"distinct_species": 158,
-"distinct_species_firm": 30,
+"stories": 121,
+"raw_items": 303,
+"with_species": 76,
+"distinct_species": 161,
+"distinct_species_firm": 31,
 "multi_species_cards": 30,
-"with_image": 117,
-"syndicated": 53,
+"with_image": 120,
+"syndicated": 55,
 "on_tbg_list": 22,
 "on_list_breakdown": {
 "on our lost-species list": 19,
@@ -17,7 +17,7 @@
 "undated": 0,
 "newest": "Thu, 13 Aug 2026",
 "tracked_names": 6709,
-"image_local": 112,
+"image_local": 115,
 "archived": 92
 },
 "cards": [
@@ -1021,6 +1021,30 @@
 "also": []
 },
 {
+"title": "Endemic plant believed extinct for 135 years rediscovered in a canyon in Alta Verapaz, Guatemala",
+"species": [
+"Passiflora clypeophylla"
+],
+"species_firm": [
+"Passiflora clypeophylla"
+],
+"on_list": "",
+"detail": "",
+"publisher": "Noticias Ambientales",
+"date": "Wed, 11 Feb 2026",
+"ts": 1770796800,
+"first_seen": "2026-08-16",
+"link": "https://noticiasambientales.com/science/endemic-plant-believed-extinct-for-135-years-rediscovered-in-a-canyon-in-alta-verapaz-guatemala/",
+"image": "/rd-img/77c2b063db8fab77.jpg",
+"wayback": "",
+"desc": "For 135 years, Passiflora clypeophylla remained hidden on the steep cliffs of the Rubel Cruz community, in the department of Alta Verapaz, Guatemala. The",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "Hope Returns to Panama\u2019s Forests With the Rediscovery of Four Missing Frog Species",
 "species": [
 "Triprion spinosus",
@@ -1116,8 +1140,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Hub News Assam",
+"link": "https://themeghalayanexpress.com/rare-orchid-species-rediscovered-in-meghalaya-after-175-years/"
+}
+]
 },
 {
 "title": "Endangered grasshopper rediscovered in KZN after 45 years",
@@ -1331,8 +1360,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "The New Indian Express",
+"link": "https://www.newindianexpress.com/states/kerala/2025/Dec/23/rare-octopus-rediscovered-after-50-years-off-kerala-coast-3"
+}
+]
 },
 {
 "title": "Scientists rediscover creature thought to be 'possibly extinct' for more than 20 years: 'It is something special'",
@@ -1521,7 +1555,8 @@
 "species": [
 "Aphyolebias claudiae",
 "Cynopoecilus melanotaenia",
-"Moema claudiae"
+"Moema claudiae",
+"Bombyx mori"
 ],
 "species_firm": [
 "Aphyolebias claudiae",
@@ -1540,7 +1575,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 6,
 "also": [
 {
 "publisher": "Miami Herald",
@@ -1555,8 +1590,8 @@
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
 },
 {
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
+"publisher": "BIOENGINEER.ORG",
+"link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/"
 }
 ]
 },
@@ -1715,6 +1750,28 @@
 "link": "https://philstarlife.com/news-and-views/516327-rare-plant-species-rediscovered-masungi-georeserve"
 }
 ]
+},
+{
+"title": "Rare firefly species not seen over 100 years rediscovered in Bukit Kiara",
+"species": [
+"Pteroptyx gombakia"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "The Sun Malaysia",
+"date": "Fri, 17 Oct 2025",
+"ts": 1760684400,
+"first_seen": "2026-08-16",
+"link": "https://thesun.my/lifestyle/travel-leisure/rare-firefly-bukit-kiara/",
+"image": "/rd-img/c5a6530ae247f30f.jpg",
+"wayback": "",
+"desc": "After more than a century, the Gombak bent-winged firefly has been rediscovered in Bukit Kiara, proving Malaysia\u2019s forests still hold hidden wonders.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
 },
 {
 "title": "Coral species thought to be extinct for 24 years is rediscovered",
@@ -2152,7 +2209,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 14,
+"outlets": 15,
 "also": [
 {
 "publisher": "The Independent",
@@ -2547,6 +2604,26 @@
 "also": []
 },
 {
+"title": "Which Lost Species May be Found Again? Huge Study Reveals Clues",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Scientific American",
+"date": "Wed, 17 Jan 2024",
+"ts": 1705478400,
+"first_seen": "2026-08-16",
+"link": "https://www.scientificamerican.com/article/which-lost-species-may-be-found-again-huge-study-reveals-clues/",
+"image": "",
+"wayback": "",
+"desc": "",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "Track-a-mole: Sniffer dog and eDNA help \u2018rediscover\u2019 South African golden mole - news",
 "species": [
 "Cryptochloris wintoni",
@@ -2568,7 +2645,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 6,
 "also": [
 {
 "publisher": "euronews",
@@ -2953,6 +3030,26 @@
 "citation": "Maynard, R.J., Trageser, S.J. et al. (2021) Finding a shadow in the dark: rediscovery of Fugler's Shadow Snake (Emmochliophis fugleri Fritts & Smith, 1969) after 54 years. Check List 17(1).",
 "kind": "TBG record",
 "note": "The paper recommends Critically Endangered because mining threatens the reserve. The IUCN still lists it Data Deficient, assessed 2016 and not revisited since the rediscovery.",
+"outlets": 1,
+"also": []
+},
+{
+"title": "20 new species found, and long-lost species rediscovered, in Bolivian Andes",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "https://www.kolotv.com",
+"date": "Mon, 28 Dec 2020",
+"ts": 1609142400,
+"first_seen": "2026-08-16",
+"link": "https://www.kolotv.com/2020/12/28/20-new-species-found-and-long-lost-species-rediscovered-in-bolivian-andes/",
+"image": "/rd-img/ecb9aa0ea44cabaa.jpg",
+"wayback": "",
+"desc": "Among the discoveries: new butterfly and orchid species, the mountain fer-de-lance viper, Bolivian flag snake and Lilliputian frog, which is just 1 centimeter long.",
+"citation": "",
+"kind": "",
+"note": "",
 "outlets": 1,
 "also": []
 },
