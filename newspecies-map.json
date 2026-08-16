@@ -12904,13 +12904,13 @@
 ]
 ],
 "meta": {
-"total": 3224,
-"placed": 3166,
+"total": 3225,
+"placed": 3167,
 "by_class": {
 "reptile": 1689,
 "amphibian": 971,
 "bird": 13,
-"mammal": 493
+"mammal": 494
 },
 "unplaced": 58,
 "places": 107
@@ -13546,9 +13546,9 @@
 "place": "Indonesia",
 "lat": -2.483,
 "lon": 117.89,
-"n": 92,
+"n": 93,
 "grp": {
-"?": 17,
+"?": 18,
 "Gekkonidae": 13,
 "Rhacophoridae": 9,
 "Megophryidae": 7,
@@ -13557,7 +13557,7 @@
 "cls": {
 "amphibian": 41,
 "reptile": 34,
-"mammal": 13,
+"mammal": 14,
 "bird": 4
 },
 "yr": {
@@ -13590,7 +13590,7 @@
 "mammal": {
 "2026": 1,
 "2025": 2,
-"2024": 3,
+"2024": 4,
 "2023": 5,
 "2015": 2
 }
