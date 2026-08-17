@@ -2079,6 +2079,8 @@ function renderLongest() {
   // "A very long time" made concrete, and written from the payload rather than typed into
   // the HTML so it cannot go stale the next time the list is rebuilt.
   const hl = $("#lostHowLong"), m = (LOST && LOST.meta) || {};
+  const bdp = m.by_date_precision || {};
+  const dec = bdp.decade || 0, cen = bdp.century || 0;
   if (hl && m.median_last) {
     const now = new Date().getFullYear();
     hl.innerHTML =
@@ -2090,7 +2092,16 @@ function renderLongest() {
       + "were last seen in the <strong>1800s</strong>. The oldest, a Sierra Leone "
       + "freshwater crab, was last recorded in <strong>" + m.oldest_record
       + "</strong>, and has since been found again, the longest recovery anybody has "
-      + "documented.";
+      + "documented."
+      /* "A usable date" now includes the ones the list gives as a decade, and the page
+         says so rather than letting a reader assume every one of these is a year. The
+         count moved by 96 when the parser stopped discarding "the 1980s"; a sentence that
+         changed by that much without explaining itself is the kind of thing a careful
+         reader is right to distrust. */
+      + (dec ? " " + dec.toLocaleString() + " of these dates are a decade rather than a "
+             + "year, counted at its midpoint. A further " + cen.toLocaleString()
+             + " species are known only to a century and are left out of the total above."
+             : "");
   }
   // Deliberately no year-count for the crab. Deriving one gave 231 years against the 225
   // this site already cites from the rediscovery literature: two numbers for one animal
