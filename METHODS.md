@@ -867,7 +867,7 @@ geocoded — but one check is not enough.
 *Type agreement* catches the obvious failures: asked for "The Cordillera Central",
 Nominatim returns a **university** in Baguio. Names ending *River* must resolve as
 waterways, *Island* as islands; buildings, roads and campuses are rejected outright.
-That removed 359 of 932 candidates.
+That removed 357 of 932 candidates.
 
 *But type agreement cannot see a same-type homonym*, and those are common. "Congo River"
 resolved to a real river of that name in **Sierra Leone**, 4,000 km from the Congo,
@@ -877,14 +877,32 @@ at that locality — an independent witness already held:
 
 | | |
 |---|---|
-| Agree within 500 km — plotted | **365** |
-| Disagree by more — discarded | **82** |
+| Agree within 500 km — plotted | **378** |
+| Disagree by more — discarded | **71** |
 | No records to check against — off by default | **126** |
 
-About one in five checkable geocodes was wrong by more than 500 km, and none of those
+About one in six checkable geocodes was wrong by more than 500 km, and none of those
 errors was detectable from the name or the feature type. That rate is why the unverified
 126 are not shown by default. The validated rings add **79** species that have no
 georeferenced record of their own.
+
+**Rejection was not the end of it.** A discarded geocode says the coordinate and the
+records disagree, not which of the two is wrong, so the discards were worked through in
+three passes rather than left as a total. Constraining the query by the species' country
+recovered 13. Re-querying inside a bounding box drawn around the species' own records,
+a constraint no country name can express, recovered 13 more, Congo River among them: the
+same-named river in Sierra Leone cannot be returned at all when the gazetteer is only
+allowed to answer from within the Congo basin. Reading the rest by hand recovered 8 and
+confirmed 16 as correct all along, rejected only because the feature or the species spans
+more than 500 km.
+
+Four candidates passed every automated test in that last pass and were still refused on
+reading. "The Godavari River" matched *Godawari* municipality in Nepal, where the feature
+itself is named Lele River; "Da Rang River" matched *Sông Rạng*, 279 km from the Đà Rằng
+basin the species actually occupies. A bounding box stops a homonym in another
+hemisphere. It cannot stop a differently named feature that happens to sit inside the
+box, which is why every candidate was read against the species living at the locality
+before it was kept.
 
 **Total placeable: 2,336 of 3,062 (76%). 726 cannot be placed at all.**
 

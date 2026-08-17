@@ -4276,9 +4276,10 @@ async function ensureMap() {
     place names in the register, each then measured against the GBIF records of the
     species that sit there. <strong>${ck.validated || 0}</strong> agree and are
     plotted; <strong>${ck.contradicted || 0}</strong> disagreed by more than
-    ${GEO.threshold_km}&nbsp;km and are discarded — "Congo River" resolved to a real
-    river of that name in Sierra Leone, 4,000&nbsp;km from the Congo, and passed a
-    type check as river/river. <strong>${ck.unverified || 0}</strong> have no species
+    ${GEO.threshold_km}&nbsp;km and are discarded. "Congo River" first resolved to a
+    real river of that name in Sierra Leone, 4,000&nbsp;km from the Congo, and passed a
+    type check as river/river; it was later recovered by asking the gazetteer only about
+    the basin the fish live in. <strong>${ck.unverified || 0}</strong> have no species
     with records to check against, so they cannot be verified either way; those are
     off by default.` : "";
   const st = MAP.stats;
