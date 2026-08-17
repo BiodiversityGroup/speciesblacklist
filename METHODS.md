@@ -8,7 +8,7 @@
 
 Two claims, deliberately kept separate because they are not equally strong.
 
-**List 1 — Data Deficient: 3,031 species**, of which **1,124 are tranche A**, the
+**List 1 — Data Deficient: 3,031 species**, of which **1,113 are tranche A**, the
 validated priority stratum. IUCN has assessed these and returned *we don't know*. A
 Cambridge University Press reference documents most of them as narrowly restricted,
 often to a single river or a single collecting event. Ranked by how severe that
@@ -597,7 +597,7 @@ The exposure is not evenly spread:
 | | species | in the priority stratum (tier 3–5) |
 |---|---|---|
 | List 1 — Data Deficient | 3,031 | 1,124 |
-| List 2 — Not Evaluated | 35 | **8** |
+| List 2 — Not Evaluated | 35 | **7** |
 
 List 2 is the more acute case, because "never assessed" is a category IUCN is actively
 retiring rather than one that persists. The eight priority-stratum species on it are the ones
@@ -732,20 +732,20 @@ it grew from 2,305 to 2,372 while the NE list shrank.
 
 Recorded two ways, and the site distinguishes them.
 
-**From a locality account (519 species).** Richardson organises geographically, so most
+**From a locality account (518 species).** Richardson organises geographically, so most
 species sit inside a paragraph introduced by a place. That place, and its opening
 sentence, attach to every species in the paragraph. The stronger provenance.
 
-**From the species entry itself (1,213 species).** Where a species is not inside a
+**From the species entry itself (1,211 species).** Where a species is not inside a
 locality account, the place is usually named in its own sentence anyway — *"collected
 from the upper Pungwe River"*, *"collected off Mauritius"*. `_locality.py` extracts
 those. Named physical features are preferred over a bare capitalised word after a
 preposition, and a capture is rejected when it collides with the species' own common
 name or genus.
 
-Coverage went from **19% to 60%** of the register (1,732 of 3,062) and the site list from
+Coverage went from **19% to 60%** of the register (1,729 of 3,062) and the site list from
 42 to 102. Clusters that were entirely invisible appeared — the Gulf of California holds
-19 species, none of which had a locality before. **1,330 still have none**, because their
+19 species, none of which had a locality before. **1,333 still have none**, because their
 sentence names no place specific enough to record. Nothing is invented to fill that gap.
 
 A later audit of the recovered localities found two more classes of defect in the captured strings, both
@@ -867,7 +867,7 @@ geocoded — but one check is not enough.
 *Type agreement* catches the obvious failures: asked for "The Cordillera Central",
 Nominatim returns a **university** in Baguio. Names ending *River* must resolve as
 waterways, *Island* as islands; buildings, roads and campuses are rejected outright.
-That removed 354 of 929 candidates.
+That removed 359 of 932 candidates.
 
 *But type agreement cannot see a same-type homonym*, and those are common. "Congo River"
 resolved to a real river of that name in **Sierra Leone**, 4,000 km from the Congo,
@@ -877,16 +877,26 @@ at that locality — an independent witness already held:
 
 | | |
 |---|---|
-| Agree within 500 km — plotted | **339** |
-| Disagree by more — discarded | **110** |
+| Agree within 500 km — plotted | **365** |
+| Disagree by more — discarded | **82** |
 | No records to check against — off by default | **126** |
 
 About one in five checkable geocodes was wrong by more than 500 km, and none of those
 errors was detectable from the name or the feature type. That rate is why the unverified
-126 are not shown by default. The validated rings add **78** species that have no
+126 are not shown by default. The validated rings add **79** species that have no
 georeferenced record of their own.
 
-**Total placeable: 2,335 of 3,062 (76%). 727 cannot be placed at all.**
+**Total placeable: 2,336 of 3,062 (76%). 726 cannot be placed at all.**
+
+**Locality strings are not all localities.** The `site` field holds whatever geographic
+resolution the book gives for that species. 1,729 rows carry a value, and 819 of them
+(47%) are specific enough to geocode and plot; the other 910 are section headings or
+habitat descriptions. The largest single value is "The Tropical Atlantic Region" with 63
+species, followed by "Terra firma" with 43 and "Lowland rainforests" with 13. Illustrating
+this field with examples like "The Mano River" describes the plotted minority, so the
+split is stated here rather than left for a reader to infer. Nothing coarse is plotted:
+the gazetteer refuses anything it cannot verify, which is why the plotted count is lower
+than the count of rows with a locality.
 
 The map shows density, never authoritative dots, and states plainly that it maps
 collecting effort at least as much as biology.
@@ -942,10 +952,10 @@ build script asserts that rather than trusting it.
 8. **The map maps collecting effort.** Density clusters where institutions and
    expeditions have worked, so it is a picture of where the evidence sits rather than
    where risk is concentrated.
-9. **1,330 species have no locality and 727 cannot be placed at all.** Both numbers are
+9. **1,330 species have no locality and 726 cannot be placed at all.** Both numbers are
    published rather than rounded away, because the least documented species are the ones
    the register exists to surface.
-10. **67 localities name two places and are deliberately never mapped.** *"Athi and Tana
+10. **65 localities name two places and are deliberately never mapped.** *"Athi and Tana
     River"*, *"Caroline and Marshall Islands"*. They are kept whole in the register and
     withheld from the gazetteer, because every reduction to one place either discards the
     noun that identified it (*"Caroline"*) or invents a location outright — *"Oman and
