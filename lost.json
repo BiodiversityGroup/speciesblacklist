@@ -15955,8 +15955,8 @@
 },
 {
 "place": "Nias Island",
-"lat": 65.533,
-"lon": -84.647,
+"lat": 1.1,
+"lon": 97.75,
 "n": 3,
 "grp": {
 "Reptile": 3
@@ -16907,7 +16907,7 @@
 "Ohridohauffenia minuta",
 "Zaumia sanctizaumi"
 ],
-"cc": ""
+"cc": "North Macedonia"
 },
 {
 "place": "New Zealand South Island",
@@ -17076,8 +17076,8 @@
 },
 {
 "place": "Britain (British Virgin Islands)",
-"lat": 54.315,
-"lon": -1.918,
+"lat": 18.42,
+"lon": -64.62,
 "n": 1,
 "grp": {
 "Reptile": 1
@@ -17610,7 +17610,7 @@
 "Emoia taumakoensis"
 ],
 "oldest": 1981,
-"cc": ""
+"cc": "Solomon Islands"
 },
 {
 "place": "Cook Islands (Rarotonga)",
@@ -17690,7 +17690,7 @@
 "Hemidactylus lopezjuradoi"
 ],
 "oldest": 1997,
-"cc": ""
+"cc": "Cape Verde"
 },
 {
 "place": "Montenegro",
@@ -17826,7 +17826,7 @@
 "examples": [
 "Leucopeza semperi"
 ],
-"cc": ""
+"cc": "Saint Lucia"
 },
 {
 "place": "Mindanao",
@@ -17965,7 +17965,7 @@
 "examples": [
 "Plagiopholis unipostocularis"
 ],
-"cc": ""
+"cc": "People's Republic of China"
 },
 {
 "place": "Hanish al-Kabir Island",
@@ -18005,7 +18005,7 @@
 "Pseudoacontias unicolor"
 ],
 "oldest": 2000,
-"cc": ""
+"cc": "Madagascar"
 },
 {
 "place": "Bahamas",

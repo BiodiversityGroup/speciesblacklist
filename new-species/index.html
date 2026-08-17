@@ -753,11 +753,25 @@
   .lostlegend .ramp i { display:block; width:38px; height:12px; }
   .lostlegend .rampnums { display:flex; gap:1.35rem; font-family:var(--mono);
                           font-variant-numeric:tabular-nums; }
+  /* The map draws two marks for one quantity, so both ramps are shown, each labelled with
+     what it colours, over a SINGLE row of numbers on its own line. One scale, because two
+     would invite a reader to compare a red circle with a dark country as though they were
+     equal. */
+  .lostlegend .rampcap { flex-basis:100%; text-align:center; }
+  .lostlegend .rampgroup { display:flex; flex-direction:column; align-items:center;
+                           gap:.2rem; }
+  .lostlegend .ramplabel { font-size:var(--fs-micro); color:var(--ink-3);
+                           letter-spacing:.02em; }
+  .lostlegend .rampscale { flex-basis:100%; display:flex; justify-content:center; }
   @media (max-width:560px) {
     .lostlegend .ramp i { width:26px; }
     .lostlegend .rampnums { gap:.7rem; }
   }
-  #lostTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
+  /* BOTH heat maps, not just the lost one. #nsTip had no rule at all, so the new-species
+     tooltip was a static, unstyled div: setting opacity and left/top on it did nothing a
+     reader could see, and the map answered no hover anywhere. Scott found it on the
+     countries; it was equally dead over the circles. */
+  #lostTip, #nsTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
              transition:opacity .12s; background:var(--ink); color:var(--ground);
              font-family:var(--sans); font-size:var(--fs-small); padding:.5rem .7rem;
              border-radius:3px; line-height:1.4; text-align:left; max-width:270px; }
@@ -1422,17 +1436,43 @@
 
     <details class="ntdisc" open>
       <summary>Where the species come from</summary>
-      <p>The <a href="https://reptile-database.org" target="_blank" rel="noopener">Reptile
-        Database</a> checklist of June 2026 lists 12,650 accepted species. Comparing it
-        with IUCN v2026-1, which holds 10,305 assessed reptiles, leaves the species the
-        Red List has no record of.</p>
+      <p>Four classes, four checklists. Each is the standard reference for its group, and
+        each is compared against the Red List to leave the species it has no record of.</p>
+      <table class="ftable">
+        <tr><th>Reptiles</th>
+            <td><a href="https://reptile-database.org" target="_blank" rel="noopener">Reptile
+              Database</a>, June 2026, against IUCN v2026-1</td></tr>
+        <tr><th>Amphibians</th>
+            <td><a href="https://amphibiaweb.org/amphibian/newspecies.html" target="_blank"
+              rel="noopener">AmphibiaWeb</a>, its own new-species listing</td></tr>
+        <tr><th>Birds</th>
+            <td><a href="https://www.worldbirdnames.org" target="_blank" rel="noopener">IOC
+              World Bird List</a> v15.2</td></tr>
+        <tr><th>Mammals</th>
+            <td><a href="https://www.mammaldiversity.org" target="_blank" rel="noopener">Mammal
+              Diversity Database</a></td></tr>
+      </table>
       <p>Comparing names alone would be unreliable. A species often gets moved into a
         different genus, so its first name changes while the animal stays the same, and
-        the two organizations do not always agree on where it belongs. So species are
+        the two organizations do not always agree on where it belongs. So reptiles are
         matched either on the full scientific name <em>or</em> on who first described it
         and in what year. Those are details that stay with a species through every change of
         name. That caught 169 species a name-only comparison would have wrongly reported
         as missing.</p>
+      <p>Birds and mammals are asked of the Red List's own API one species at a time
+        rather than matched against a downloaded copy of it. GBIF's backbone runs about two
+        years behind the mammal database, so every mammal named in the last two years is
+        missing from it, and a comparison built on GBIF would have called all of them
+        unassessed without checking.</p>
+      <p><strong>The four are not equally rigorous, and the page does not pretend they
+        are.</strong> The Reptile Database publishes a full checklist with authorities and
+        years, which is what makes the author-and-year match possible. AmphibiaWeb's
+        new-species listing is a specialist source but a thinner one, so amphibian rows
+        carry a reference and little else. Mammal figures count
+        <em>species-country pairs</em> rather than species, because the mammal database
+        lists every country a species occurs in and 76 of 372 list more than one. That is
+        right for a shaded map, where the animal really does occur in all of them, and it
+        is why the mammal label reads "records" where the others read "species".</p>
     </details>
 
     <details class="ntdisc">
@@ -2305,6 +2345,7 @@ function paintHeat(cv, data, opts) {
 
      Ramp is the register's own tier colours, light to dark, because this is a magnitude and
      a magnitude gets one hue. */
+  if (!places.length) return null;
   const shaded = new Map();
   if (COUNTRIES && COUNTRIES.rings) {
     places.forEach(p => {
@@ -2320,8 +2361,14 @@ function paintHeat(cv, data, opts) {
       shaded.set(p.cc, e);
     });
   }
+  /* THE ONE SCALE, declared before anything is drawn with it. Both the shading and the
+     circles divide by this, and the legend prints it, so the three cannot disagree. The
+     country ramp used to divide by the largest SHADED count instead: identical whenever the
+     biggest place is a country, which it happens to be on both maps today, and quietly
+     wrong the day a circle holds the largest value. */
+  const max = Math.max(...places.map(valueOf));
   if (shaded.size) {
-    const hi = Math.max(...[...shaded.values()].map(e => e.n));
+    const hi = max;
     const ramp = ["--t1", "--t2", "--t3", "--t4", "--t5"]
       .map(t => cs.getPropertyValue(t).trim());
     g.lineWidth = 0.6;
@@ -2339,8 +2386,25 @@ function paintHeat(cv, data, opts) {
       g.closePath(); g.fill(); g.stroke();
     });
   }
-  if (!places.length) return null;
-  const max = Math.max(...places.map(valueOf));
+  /* A circle only where the shading could not carry the place. Drawing both would double
+     count Brazil visually: the country is already dark, and a 270-species disc on top of it
+     says the same thing twice and hides the countries underneath. */
+  const marks = shaded.size ? places.filter(p => !p.cc) : places;
+  /* ONE VALUE SCALE FOR BOTH MARKS, deliberately, and the legend now shows both ramps
+     against it.
+
+     Scaling the circles over the circles alone was tried first and rasterised before it
+     shipped, which is the only reason it did not. It made Australasia, at 38 lost species,
+     the top of the circle scale: a deep red disc 44 px across sitting on Australia, next to
+     a Brazil holding 269 and shaded dark brown. The biggest, loudest mark on the map was
+     the one worth a seventh of the quietest large one. Two marks that encode the same
+     quantity have to share a scale or a reader cannot compare them, and comparing them is
+     the whole point of putting both on one map.
+
+     So the number stays global and the LEGEND is what changes: it shows the country ramp
+     and the circle ramp side by side over one set of numbers, instead of showing the
+     circle ramp alone beside a map that is mostly shaded countries. That was the actual
+     defect Scott reported. `max` is declared above the shading, which uses it too. */
   // sqrt on BOTH channels. These counts are power-law -- one country holds 270 and the
   // long tail holds one or two -- so a linear ramp would paint all but a handful of
   // countries the same green and a linear radius would make the top one swamp the map.
@@ -2352,10 +2416,6 @@ function paintHeat(cv, data, opts) {
   const zr = Math.sqrt(v.k);
   const rOf = n => (3 + t(n) * (cssW / 27)) * zr;
   const hits = [];
-  /* A circle only where the shading could not carry the place. Drawing both would double
-     count Brazil visually: the country is already dark, and a 270-species disc on top of it
-     says the same thing twice and hides the countries underneath. */
-  const marks = shaded.size ? places.filter(p => !p.cc) : places;
   marks.slice().sort((a, b) => valueOf(b) - valueOf(a)).forEach(p => {  // big first
     const val = valueOf(p);
     const x = X(p.lon), y = Y(p.lat), r = rOf(val);
@@ -2372,16 +2432,34 @@ function paintHeat(cv, data, opts) {
   hits.sort((a, b) => a.r - b.r);   // small first for hit-testing, so they stay reachable
   g.restore();
 
+  /* TWO MARKS, SO TWO RAMPS, AND THE LEGEND SHOWS BOTH. The map draws shaded countries in
+     the register's tier colours and circles in the green-to-red heat ramp, and the legend
+     used to show the heat ramp alone. So the swatches beside the numbers matched the
+     circles, which are the minority of the map, and matched nothing a reader was looking
+     at while hovering a country. Each ramp is now drawn with its own numbers, over its own
+     range, labelled with what it colours. */
   const legend = $(opts.legend);
   if (legend) {
     const stops = [0, 0.25, 0.5, 0.75, 1];
-    const ticks = stops.map(s => Math.max(1, Math.round(max * s * s)));
-    legend.innerHTML =
-      `<span>${opts.label}</span>`
-      + `<span class="ramp">` + stops.map(s =>
-          `<i style="background:${heatColour(s, 1)}"></i>`).join("") + `</span>`
-      + `<span class="rampnums">` + ticks.map(n => n.toLocaleString()).join(" ")
-      + `</span>`;
+    const rows = [];
+    if (shaded.size) {
+      rows.push(["shaded countries", ["--t1", "--t2", "--t3", "--t4", "--t5"]
+        .map(v => `<i style="background:${cs.getPropertyValue(v).trim()}"></i>`).join("")]);
+    }
+    if (marks.length) {
+      rows.push([shaded.size ? "circles, places a country outline cannot carry" : "places",
+                 stops.map(s => `<i style="background:${heatColour(s, 1)}"></i>`).join("")]);
+    }
+    /* Both ramps over ONE row of numbers, because both encode the same count. A separate
+       scale per ramp would let a reader put a red circle beside a dark country and read
+       them as equal when one is a seventh of the other. */
+    legend.innerHTML = `<span class="rampcap">${opts.label}</span>`
+      + rows.map(([title, sw]) =>
+          `<span class="rampgroup"><span class="ramplabel">${title}</span>`
+          + `<span class="ramp">${sw}</span></span>`).join("")
+      + `<span class="rampscale"><span class="rampnums">`
+      + stops.map(s => Math.max(1, Math.round(max * s * s)).toLocaleString()).join(" ")
+      + `</span></span>`;
   }
   /* shaded + inv let the hover test countries as well as circles. The inverse turns a
      pointer position back into lon/lat, so hit-testing runs against the rings as stored
