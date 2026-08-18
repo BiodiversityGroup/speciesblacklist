@@ -12904,8 +12904,8 @@
 ]
 ],
 "meta": {
-"n_species": 2128,
-"n_mapped": 2072,
+"n_species": 2123,
+"n_mapped": 2067,
 "n_unmapped": 56,
 "n_places": 208,
 "compiled": "January 2023",
@@ -12945,8 +12945,8 @@
 },
 "by_redlist": {
 "CR(PE)": 622,
-"CR": 208,
-"DD": 462,
+"CR": 207,
+"DD": 458,
 "EX": 81,
 "EN": 98,
 "LC": 206,
@@ -12958,10 +12958,10 @@
 },
 "oldest_record": 1790,
 "median_last": 1965,
-"n_dated": 1875,
+"n_dated": 1870,
 "n_1800s": 266,
 "by_date_precision": {
-"year": 1779,
+"year": 1774,
 "none": 223,
 "decade": 96,
 "century": 26,
@@ -12973,22 +12973,22 @@
 "place": "Brazil",
 "lat": -10.333,
 "lon": -53.2,
-"n": 269,
+"n": 268,
 "grp": {
-"Fish": 189,
+"Fish": 188,
 "Amphibian": 41,
 "Reptile": 20,
 "Bird": 6,
 "Insect": 5
 },
 "cls": {
-"long-lost": 239,
+"long-lost": 238,
 "lost": 24,
 "unclassified": 6
 },
 "rl": {
 "LC": 116,
-"DD": 44,
+"DD": 43,
 "not in IUCN index": 36,
 "CR(PE)": 23,
 "EN": 21,
@@ -13042,9 +13042,9 @@
 "place": "Madagascar",
 "lat": -18.925,
 "lon": 46.442,
-"n": 104,
+"n": 101,
 "grp": {
-"Reptile": 36,
+"Reptile": 33,
 "Orchids": 23,
 "Flowering plants": 15,
 "Plant - Trees & Shrubs": 14,
@@ -13052,12 +13052,12 @@
 },
 "cls": {
 "long-lost": 65,
-"lost": 31,
+"lost": 28,
 "unclassified": 8
 },
 "rl": {
 "CR(PE)": 30,
-"DD": 26,
+"DD": 23,
 "EN": 11,
 "not in IUCN index": 10,
 "CR": 10,
@@ -13065,9 +13065,7 @@
 },
 "examples": [
 "Aeranthes albidiflora",
-"Agriocnemis merina",
-"Amphiglossus mandady",
-"Amphiglossus spilostichus"
+"Agriocnemis merina"
 ],
 "oldest": 1849,
 "cc": "Madagascar"
@@ -13315,16 +13313,16 @@
 "place": "Australia",
 "lat": -24.776,
 "lon": 134.755,
-"n": 44,
+"n": 43,
 "grp": {
-"Reptile": 20,
+"Reptile": 19,
 "Fish": 11,
 "Mammal": 4,
 "Amphibian": 3,
 "Insect": 2
 },
 "cls": {
-"lost": 31,
+"lost": 30,
 "long-lost": 8,
 "unclassified": 5
 },
@@ -18456,100 +18454,100 @@
 "range": "Sierra Leone"
 },
 {
-"sp": "Deuterodon rosae",
-"common": "",
+"sp": "Cynopoecilus melanotaenia",
+"common": "Killifish",
 "descriptor": "Brazilian fish",
 "group": "Fish",
-"last": 1907,
+"last": 1912,
 "range": "Brazil"
 },
 {
-"sp": "Spatoglossum schmittii",
-"common": "",
-"descriptor": "Ecuadorian water plant",
+"sp": "Crassula aquatica",
+"common": "Water Pygmyweed",
+"descriptor": "Water plant from United States, Canada",
 "group": "Plant - Aquatic plant",
-"last": 1978,
+"last": 1906,
+"range": "United States, Canada"
+},
+{
+"sp": "Ctenitis pallatangana",
+"common": "",
+"descriptor": "Ecuadorian fern",
+"group": "Plant - Ferns",
+"last": 1883,
 "range": "Ecuador"
 },
 {
-"sp": "Asplenium leucostegioides",
-"common": "necklace island spleenwort",
-"descriptor": "Fern from United States (Hawaii)",
-"group": "Plant - Ferns",
-"last": 1879,
-"range": "United States (Hawaii)"
-},
-{
-"sp": "Sardohoratia sulcata",
+"sp": "Melanopsis infracincta",
 "common": "",
-"descriptor": "Italian snail",
+"descriptor": "Snail from Syria",
 "group": "Snails & slugs",
-"last": 1995,
-"range": "Italy"
+"last": 1945,
+"range": "Syria"
 },
 {
-"sp": "Cynorkis usambarae",
+"sp": "Cynorkis bimaculata",
 "common": "",
-"descriptor": "Tanzanian orchid",
+"descriptor": "Madagascan orchid",
 "group": "Orchids",
-"last": 1893,
-"range": "Tanzania"
+"last": 1961,
+"range": "Madagascar"
 },
 {
-"sp": "Eurochelidon sirintarae",
-"common": "White-eyed River Martin",
-"descriptor": "Thai bird",
+"sp": "Leucopeza semperi",
+"common": "Semper's Warbler",
+"descriptor": "Bird from St. Lucia",
 "group": "Bird",
-"last": 1978,
-"range": "Thailand"
+"last": 1965,
+"range": "St. Lucia"
 },
 {
-"sp": "Leucoperichaetium eremophilum",
-"common": "",
-"descriptor": "Moss from Namibia",
+"sp": "Isoetes heldreichii",
+"common": "Pindus Quillwort",
+"descriptor": "Greek moss",
 "group": "Plant - Mosses",
-"last": 1978,
-"range": "Namibia"
+"last": 1885,
+"range": "Greece"
 },
 {
-"sp": "Leimacomys buettneri",
-"common": "Togo Mouse",
-"descriptor": "Mammal from Togo",
+"sp": "Pappogeomys alcorni",
+"common": "Alcorn\u2019s Pocket Gopher",
+"descriptor": "Mexican mammal",
 "group": "Mammal",
-"last": 1890,
-"range": "Togo"
+"last": 1998,
+"range": "Mexico"
 },
 {
-"sp": "Mecistocephalus sechellarum",
+"sp": "Mecistocephalus cyclops",
 "common": "",
 "descriptor": "Seychellois centipede",
 "group": "Centipede",
-"last": 1972,
+"last": 1892,
 "range": "Seychelles"
 },
 {
-"sp": "Peperomia subpetiolata",
-"common": "'ala 'ala wai nui",
+"sp": "Peperomia degeneri",
+"common": "Kaluaaha Valley peperomia",
 "descriptor": "Epiphyte from United States (Hawaii)",
 "group": "Plant - Epiphytes",
-"last": 2000,
+"last": 1928,
 "range": "United States (Hawaii)"
 },
 {
-"sp": "Epioblasma othcaloogensis",
-"common": "Southern Acron Riffle Shell",
-"descriptor": "American freshwater mussel",
+"sp": "Lamprotula crassa",
+"common": "",
+"descriptor": "Vietnamese freshwater mussel",
 "group": "Bivalve molluscs (clams, oysters, mussels, scallops, etc.)",
-"last": 1974,
-"range": "United States"
+"last": 1995,
+"range": "Vietnam"
 },
 {
-"sp": "Carcharhinus obsoletus",
-"common": "Lost Shark",
+"sp": "Carcharhinus hemiodon",
+"common": "Pondicherry Shark",
 "descriptor": "Shark or ray from Asia",
 "group": "Cartilaginous Fish (sharks, rays, skates, and chimaeras)",
-"last": 1935,
-"range": "Indonesia (Borneo), Thailand and Vietnam"
+"last": 1979,
+"range": "China, India, Indonesia, Malaysia, Oman, Pakistan"
 },
 {
 "sp": "Spirobolellus simplex",
@@ -18584,11 +18582,11 @@
 "range": "Brazil"
 },
 {
-"sp": "Ceratophysella sp. nov. 'HC'",
+"sp": "Delamarephorura tami",
 "common": "",
 "descriptor": "Vietnamese springtail",
 "group": "Wingless Anthropods",
-"last": 2006,
+"last": 2004,
 "range": "Vietnam"
 },
 {
@@ -18648,108 +18646,108 @@
 "range": "United States (Hawaii)"
 },
 {
-"sp": "Luperosaurus gulat",
-"common": "",
-"descriptor": "Reptile from Palawan",
+"sp": "Paracontias rothschildi",
+"common": "Rothschild's Skink",
+"descriptor": "Madagascan reptile",
 "group": "Reptile",
 "last": 2007,
-"range": "Palawan"
-},
-{
-"sp": "Haplochromis sphex",
-"common": "Cichlid",
-"descriptor": "Tanzanian fish",
-"group": "Fish",
-"last": 1986,
-"range": "Tanzania"
-},
-{
-"sp": "Bifurcaria galapagensis",
-"common": "Gal\u00e1pagos Stringweed",
-"descriptor": "Ecuadorian water plant",
-"group": "Plant - Aquatic plant",
-"last": 1983,
-"range": "Ecuador"
-},
-{
-"sp": "Ctenitis pallatangana",
-"common": "",
-"descriptor": "Ecuadorian fern",
-"group": "Plant - Ferns",
-"last": 1883,
-"range": "Ecuador"
-},
-{
-"sp": "Dianella schlickumi",
-"common": "",
-"descriptor": "Greek snail",
-"group": "Snails & slugs",
-"last": 1985,
-"range": "Greece"
-},
-{
-"sp": "Bulbophyllum zaratananae",
-"common": "",
-"descriptor": "Madagascan orchid",
-"group": "Orchids",
-"last": 1924,
 "range": "Madagascar"
 },
 {
-"sp": "Pterodroma caribbaea",
-"common": "Jamaican Petrel",
-"descriptor": "Bird from Islands",
-"group": "Bird",
-"last": 1879,
-"range": "Bahamas, Dominica, Guadeloupe, Jamaica"
-},
-{
-"sp": "Anacamptodon marginata",
+"sp": "Isbrueckerichthys alipionis",
 "common": "",
-"descriptor": "Moss from Zimbabwe",
-"group": "Plant - Mosses",
-"last": 1870,
-"range": "Zimbabwe"
+"descriptor": "Brazilian fish",
+"group": "Fish",
+"last": 1956,
+"range": "Brazil"
 },
 {
-"sp": "Cryptochloris wintoni",
-"common": "De Winton's Golden Mole",
-"descriptor": "South African mammal",
-"group": "Mammal",
-"last": 1937,
-"range": "South Africa"
-},
-{
-"sp": "Mecistocephalus cyclops",
+"sp": "Spatoglossum schmittii",
 "common": "",
-"descriptor": "Seychellois centipede",
-"group": "Centipede",
-"last": 1892,
-"range": "Seychelles"
+"descriptor": "Ecuadorian water plant",
+"group": "Plant - Aquatic plant",
+"last": 1978,
+"range": "Ecuador"
 },
 {
-"sp": "Peperomia degeneri",
-"common": "Kaluaaha Valley peperomia",
-"descriptor": "Epiphyte from United States (Hawaii)",
-"group": "Plant - Epiphytes",
-"last": 1928,
+"sp": "Botrychium subbifoliatum",
+"common": "makou",
+"descriptor": "Fern from United States (Hawaii)",
+"group": "Plant - Ferns",
+"last": 1940,
 "range": "United States (Hawaii)"
 },
 {
-"sp": "Pleurobema curtum",
-"common": "Black Clubshell, Curtus's Mussel",
+"sp": "Geomitra delphinuloides",
+"common": "",
+"descriptor": "Portuguese snail",
+"group": "Snails & slugs",
+"last": 1875,
+"range": "Portugal"
+},
+{
+"sp": "Benthamia nigro-vaginata",
+"common": "",
+"descriptor": "Madagascan orchid",
+"group": "Orchids",
+"last": 1926,
+"range": "Madagascar"
+},
+{
+"sp": "Eurostopodus exul",
+"common": "New Caledonian Nightjar",
+"descriptor": "Bird from New Caledonia",
+"group": "Bird",
+"last": 1939,
+"range": "New Caledonia"
+},
+{
+"sp": "Leucoperichaetium eremophilum",
+"common": "",
+"descriptor": "Moss from Namibia",
+"group": "Plant - Mosses",
+"last": 1978,
+"range": "Namibia"
+},
+{
+"sp": "Elephantulus pilicaudus",
+"common": "Karoo Rock Sengi",
+"descriptor": "South African mammal",
+"group": "Mammal",
+"last": 2008,
+"range": "South Africa"
+},
+{
+"sp": "Mecistocephalus sechellarum",
+"common": "",
+"descriptor": "Seychellois centipede",
+"group": "Centipede",
+"last": 1972,
+"range": "Seychelles"
+},
+{
+"sp": "Peperomia subpetiolata",
+"common": "'ala 'ala wai nui",
+"descriptor": "Epiphyte from United States (Hawaii)",
+"group": "Plant - Epiphytes",
+"last": 2000,
+"range": "United States (Hawaii)"
+},
+{
+"sp": "Epioblasma othcaloogensis",
+"common": "Southern Acron Riffle Shell",
 "descriptor": "American freshwater mussel",
 "group": "Bivalve molluscs (clams, oysters, mussels, scallops, etc.)",
-"last": 1995,
+"last": 1974,
 "range": "United States"
 },
 {
-"sp": "Carcharhinus hemiodon",
-"common": "Pondicherry Shark",
+"sp": "Carcharhinus obsoletus",
+"common": "Lost Shark",
 "descriptor": "Shark or ray from Asia",
 "group": "Cartilaginous Fish (sharks, rays, skates, and chimaeras)",
-"last": 1979,
-"range": "China, India, Indonesia, Malaysia, Oman, Pakistan"
+"last": 1935,
+"range": "Indonesia (Borneo), Thailand and Vietnam"
 },
 {
 "sp": "Rhinotus albifrons",
@@ -18768,19 +18766,19 @@
 "range": "Australia"
 },
 {
-"sp": "Plexaurella obesa",
-"common": "",
-"descriptor": "Brazilian coral",
+"sp": "Rhizopsammia wellingtoni",
+"common": "Wellington's Solitary Coral",
+"descriptor": "Ecuadorian coral",
 "group": "Coral",
-"last": 1985,
-"range": "Brazil"
+"last": 2000,
+"range": "Ecuador"
 },
 {
-"sp": "Delamarephorura tami",
+"sp": "Ceratophysella sp. nov. 'HC'",
 "common": "",
 "descriptor": "Vietnamese springtail",
 "group": "Wingless Anthropods",
-"last": 2004,
+"last": 2006,
 "range": "Vietnam"
 },
 {
@@ -18848,76 +18846,76 @@
 "range": "Bhutan"
 },
 {
-"sp": "Glanidium catharinensis",
+"sp": "Leptolebias splendens",
 "common": "",
 "descriptor": "Brazilian fish",
 "group": "Fish",
-"last": 1962,
+"last": 1942,
 "range": "Brazil"
 },
 {
-"sp": "Dictyota galapagensis",
-"common": "",
+"sp": "Desmarestia tropica",
+"common": "Tropical Acidweed",
 "descriptor": "Ecuadorian water plant",
 "group": "Plant - Aquatic plant",
-"last": 1974,
+"last": 1972,
 "range": "Ecuador"
 },
 {
-"sp": "Blotiella coriacea",
-"common": "",
-"descriptor": "Tanzanian fern",
+"sp": "Asplenium leucostegioides",
+"common": "necklace island spleenwort",
+"descriptor": "Fern from United States (Hawaii)",
 "group": "Plant - Ferns",
-"last": 1971,
-"range": "Tanzania"
+"last": 1879,
+"range": "United States (Hawaii)"
 },
 {
-"sp": "Spiralix corsica",
-"common": "",
-"descriptor": "French snail",
+"sp": "Palaina patula",
+"common": "Palauan Land Snail",
+"descriptor": "Snail from Palau",
 "group": "Snails & slugs",
-"last": 1995,
-"range": "France"
+"last": 1936,
+"range": "Palau"
 },
 {
-"sp": "Jumellea brevifolia",
+"sp": "Maxillaria guadalupensis",
 "common": "",
-"descriptor": "Madagascan orchid",
+"descriptor": "Orchid from Guadeloupe (French Caribbean)",
 "group": "Orchids",
-"last": 1933,
-"range": "Madagascar"
+"last": 1950,
+"range": "Guadeloupe (French Caribbean)"
 },
 {
-"sp": "Ophrysia superciliosa",
-"common": "Himalayan Quail",
-"descriptor": "Indian bird",
+"sp": "Lophura edwardsi",
+"common": "Edwards's Pheasant",
+"descriptor": "Vietnamese bird",
 "group": "Bird",
-"last": 1876,
-"range": "India"
+"last": 2000,
+"range": "Vietnam"
 },
 {
-"sp": "Isoetes heldreichii",
-"common": "Pindus Quillwort",
-"descriptor": "Greek moss",
-"group": "Plant - Mosses",
-"last": 1885,
-"range": "Greece"
-},
-{
-"sp": "Uromys emmae",
-"common": "Emma\u2019s Giant Rat",
-"descriptor": "Indonesian mammal",
-"group": "Mammal",
-"last": 1946,
-"range": "Indonesia"
-},
-{
-"sp": "Dreissena caspia",
+"sp": "Anacamptodon marginata",
 "common": "",
-"descriptor": "Freshwater mussel from Middle East",
+"descriptor": "Moss from Zimbabwe",
+"group": "Plant - Mosses",
+"last": 1870,
+"range": "Zimbabwe"
+},
+{
+"sp": "Trachypithecus barbei",
+"common": "Tenasserim Langur",
+"descriptor": "Burmese mammal",
+"group": "Mammal",
+"last": 1975,
+"range": "Myanmar"
+},
+{
+"sp": "Cuneopsis demangei",
+"common": "",
+"descriptor": "Vietnamese freshwater mussel",
 "group": "Bivalve molluscs (clams, oysters, mussels, scallops, etc.)",
-"last": 1980,
-"range": "Azerbaijan, Iran, Kazakhstan, Russia, Turkmenistan, Uzbekistan"
+"last": 1929,
+"range": "Vietnam"
 },
 {
 "sp": "Diglossosternoides curiosus",
@@ -18928,12 +18926,12 @@
 "range": "Seychelles"
 },
 {
-"sp": "Rhizopsammia wellingtoni",
-"common": "Wellington's Solitary Coral",
-"descriptor": "Ecuadorian coral",
+"sp": "Plexaurella obesa",
+"common": "",
+"descriptor": "Brazilian coral",
 "group": "Coral",
-"last": 2000,
-"range": "Ecuador"
+"last": 1985,
+"range": "Brazil"
 },
 {
 "sp": "Macrobrachium purpureamanus",
@@ -18992,76 +18990,76 @@
 "range": "New Caledonia"
 },
 {
-"sp": "Amphisbaena acrobeles",
-"common": "",
-"descriptor": "Brazilian reptile",
+"sp": "Emoia loyaltiensis",
+"common": "Roux's Emo Skink",
+"descriptor": "Reptile from Australasia",
 "group": "Reptile",
 "last": 2003,
-"range": "Brazil"
+"range": "Australasia"
 },
 {
-"sp": "Hypostomus jaguribensis",
+"sp": "Haplochromis vonlinnei",
 "common": "",
-"descriptor": "Brazilian fish",
+"descriptor": "Tanzanian fish",
 "group": "Fish",
-"last": 1915,
-"range": "Brazil"
-},
-{
-"sp": "Galaxaura barbata",
-"common": "",
-"descriptor": "Ecuadorian water plant",
-"group": "Plant - Aquatic plant",
-"last": 1963,
-"range": "Ecuador"
-},
-{
-"sp": "Diplazium ulugurense",
-"common": "",
-"descriptor": "Tanzanian fern",
-"group": "Plant - Ferns",
-"last": 1970,
+"last": 1980,
 "range": "Tanzania"
 },
 {
-"sp": "Elimia troostiana",
-"common": "Mossy Elimia",
-"descriptor": "American snail",
+"sp": "Halodule ciliata",
+"common": "Shoalgrass",
+"descriptor": "Water plant from Gulf of Panama",
+"group": "Plant - Aquatic plant",
+"last": 1960,
+"range": "Gulf of Panama"
+},
+{
+"sp": "Blotiella coriacea",
+"common": "",
+"descriptor": "Tanzanian fern",
+"group": "Plant - Ferns",
+"last": 1971,
+"range": "Tanzania"
+},
+{
+"sp": "Leiostyla cassida",
+"common": "",
+"descriptor": "Portuguese snail",
 "group": "Snails & slugs",
-"last": 1985,
-"range": "United States"
+"last": 1875,
+"range": "Portugal"
 },
 {
-"sp": "Benthamia nigro-vaginata",
-"common": "",
-"descriptor": "Madagascan orchid",
+"sp": "Polystachya acuminata",
+"common": "The Acuminate Polystachya",
+"descriptor": "Tanzanian orchid",
 "group": "Orchids",
-"last": 1926,
-"range": "Madagascar"
+"last": 1943,
+"range": "Tanzania"
 },
 {
-"sp": "Pyrrhura subandina",
-"common": "Sinu Parakeet",
-"descriptor": "Colombian bird",
+"sp": "Pomarea mira",
+"common": "Ua Pou Monarch",
+"descriptor": "Bird from French Polynesia",
 "group": "Bird",
-"last": 1949,
-"range": "Colombia"
+"last": 1985,
+"range": "French Polynesia"
 },
 {
-"sp": "Murina tenebrosa",
-"common": "Gloomy Tube-nosed Bat",
-"descriptor": "Japanese mammal",
+"sp": "Viverra civettina",
+"common": "Malabar Civet",
+"descriptor": "Indian mammal",
 "group": "Mammal",
-"last": 1962,
-"range": "Japan"
+"last": 1989,
+"range": "India"
 },
 {
-"sp": "Lamprotula crassa",
-"common": "",
-"descriptor": "Vietnamese freshwater mussel",
+"sp": "Obovaria haddletoni",
+"common": "Haddleton Lampmussel",
+"descriptor": "American freshwater mussel",
 "group": "Bivalve molluscs (clams, oysters, mussels, scallops, etc.)",
-"last": 1995,
-"range": "Vietnam"
+"last": 1970,
+"range": "United States"
 },
 {
 "sp": "Procambarus delicatus",
@@ -19128,68 +19126,68 @@
 "range": "Mexico"
 },
 {
-"sp": "Haplochromis barbarae",
-"common": "Cichlid",
-"descriptor": "Fish from Tanzania, Uganda",
-"group": "Fish",
-"last": 1985,
-"range": "Tanzania, Uganda"
-},
-{
-"sp": "Devillea flagelliformis",
+"sp": "Deuterodon rosae",
 "common": "",
-"descriptor": "Brazilian water plant",
-"group": "Plant - Aquatic plant",
-"last": 1845,
+"descriptor": "Brazilian fish",
+"group": "Fish",
+"last": 1907,
 "range": "Brazil"
 },
 {
-"sp": "Elaphoglossum gracilipes",
+"sp": "Halodule bermudensis",
+"common": "Bermuda Shoalgrass",
+"descriptor": "Water plant from Bermuda",
+"group": "Plant - Aquatic plant",
+"last": 1964,
+"range": "Bermuda"
+},
+{
+"sp": "Diplazium ulugurense",
 "common": "",
-"descriptor": "Ecuadorian fern",
+"descriptor": "Tanzanian fern",
 "group": "Plant - Ferns",
-"last": 1853,
-"range": "Ecuador"
-},
-{
-"sp": "Melanopsis infracincta",
-"common": "",
-"descriptor": "Snail from Syria",
-"group": "Snails & slugs",
-"last": 1945,
-"range": "Syria"
-},
-{
-"sp": "Angraecum mahavavense",
-"common": "The Mahavavi River Angraecum",
-"descriptor": "Madagascan orchid",
-"group": "Orchids",
-"last": 1932,
-"range": "Madagascar"
-},
-{
-"sp": "Tadorna cristata",
-"common": "Crested Shelduck",
-"descriptor": "Bird from Korea, Russia",
-"group": "Bird",
-"last": 1964,
-"range": "Korea, Russia"
-},
-{
-"sp": "Calcochloris tytonis",
-"common": "Somali Golden Mole",
-"descriptor": "Mammal from Somalia",
-"group": "Mammal",
-"last": 1964,
-"range": "Somalia"
-},
-{
-"sp": "Obovaria haddletoni",
-"common": "Haddleton Lampmussel",
-"descriptor": "American freshwater mussel",
-"group": "Bivalve molluscs (clams, oysters, mussels, scallops, etc.)",
 "last": 1970,
-"range": "United States"
+"range": "Tanzania"
+},
+{
+"sp": "Geomitra grabhami",
+"common": "",
+"descriptor": "Portuguese snail",
+"group": "Snails & slugs",
+"last": 1985,
+"range": "Portugal"
+},
+{
+"sp": "Angraecopsis dolabriformis",
+"common": "",
+"descriptor": "Orchid from S\u00e3o\u00a0Tom\u00e9",
+"group": "Orchids",
+"last": 1892,
+"range": "S\u00e3o\u00a0Tom\u00e9"
+},
+{
+"sp": "Pareudiastes silvestris",
+"common": "Makira Moorhen",
+"descriptor": "Bird from Solomon Islands",
+"group": "Bird",
+"last": 1953,
+"range": "Solomon Islands"
+},
+{
+"sp": "Monodelphis unistriata",
+"common": "Single-striped Opossum",
+"descriptor": "Mammal from Argentina, Brazil",
+"group": "Mammal",
+"last": 1899,
+"range": "Argentina, Brazil"
+},
+{
+"sp": "Dreissena caspia",
+"common": "",
+"descriptor": "Freshwater mussel from Middle East",
+"group": "Bivalve molluscs (clams, oysters, mussels, scallops, etc.)",
+"last": 1980,
+"range": "Azerbaijan, Iran, Kazakhstan, Russia, Turkmenistan, Uzbekistan"
 }
 ],
 "longest": [
@@ -19511,7 +19509,7 @@
 "rows": [
 {
 "c": "Brazil",
-"lost": 266,
+"lost": 265,
 "new": 87
 },
 {
@@ -19521,7 +19519,7 @@
 },
 {
 "c": "Madagascar",
-"lost": 103,
+"lost": 100,
 "new": 97
 },
 {

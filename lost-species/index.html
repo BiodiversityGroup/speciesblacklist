@@ -1391,7 +1391,7 @@
 
   <div class="prose">
     <h2 style="font-size:var(--fs-h2)">Species nobody has seen for a very long time</h2>
-    <p class="lostlede"><strong class="num">2,128</strong> species that have not been
+    <p class="lostlede"><strong class="num">2,123</strong> species that have not been
       recorded in years, in some cases in centuries, and that nobody has been able to
       declare extinct. They are not gone. They are <em>unaccounted for</em>, which is a
       different thing, and the difference is where the work is.</p>
@@ -1685,7 +1685,7 @@
       counts species missing from <em>science</em>, everywhere, at once. Both are real
       losses and both matter; they are simply different questions.</p>
     <p>The gap is measurable. We compared the two: of 1,063 species in their
-      rediscoveries listing, exactly <strong>one</strong> also appears among the 2,128
+      rediscoveries listing, exactly <strong>one</strong> also appears among the 2,123
       here: <span class="sci">Amphilophus lyonsi</span>, a Costa Rican cichlid, and it
       has indeed been found again. That near-total absence is not a disagreement between
       the lists. It is the two definitions doing their jobs.</p>
@@ -2338,7 +2338,7 @@ function nightReveal(s, found, total) {
   const yr = s.last ? String(s.last) : "?";
   const gap = s.last ? (new Date().getFullYear() - s.last) : null;
   const card = $("#nightCard");
-  const n = (LOST && LOST.meta && LOST.meta.n_species) || 2128;
+  const n = (LOST && LOST.meta && LOST.meta.n_species) || 2123;
   const kicker = NIGHT_LINES[nightLine % NIGHT_LINES.length](n);
   nightLine++;
   const grp = s.group || "";
