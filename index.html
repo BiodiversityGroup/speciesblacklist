@@ -1358,7 +1358,7 @@
       <!-- "animals and plants" is correct HERE and was briefly changed to "vertebrates" in
            error. A reviewer read data.json, found eight vertebrate classes and no plants,
            and called the claim false. That is true of the Black List and only of the Black
-           List: the lost-species list is 2,134 species and includes 173 flowering plants
+           List: the lost-species list is 2,128 species and includes 173 flowering plants
            plus orchids, ferns, mosses, cacti, trees and shrubs, and the invertebrates. This
            page introduces all four bodies of work, so it takes the widest true scope, and
            the list's own frame is stated on the list's own overview. -->
@@ -2102,7 +2102,7 @@ function nightReveal(s, found, total) {
   const yr = s.last ? String(s.last) : "?";
   const gap = s.last ? (new Date().getFullYear() - s.last) : null;
   const card = $("#nightCard");
-  const n = (LOST && LOST.meta ? LOST.meta.n_species : 2135) - 1;
+  const n = (LOST && LOST.meta && LOST.meta.n_species) || 2128;
   const kicker = NIGHT_LINES[nightLine % NIGHT_LINES.length](n);
   nightLine++;
   const grp = s.group || "";

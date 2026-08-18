@@ -12904,8 +12904,8 @@
 ]
 ],
 "meta": {
-"n_species": 2134,
-"n_mapped": 2078,
+"n_species": 2128,
+"n_mapped": 2072,
 "n_unmapped": 56,
 "n_places": 208,
 "compiled": "January 2023",
@@ -12949,11 +12949,11 @@
 "DD": 462,
 "EX": 81,
 "EN": 98,
-"LC": 208,
-"not in IUCN index": 283,
+"LC": 206,
+"not in IUCN index": 280,
 "VU": 58,
 "NT": 21,
-"NE": 91,
+"NE": 90,
 "EW": 2
 },
 "oldest_record": 1790,
@@ -12962,7 +12962,7 @@
 "n_1800s": 266,
 "by_date_precision": {
 "year": 1770,
-"none": 242,
+"none": 236,
 "decade": 96,
 "century": 26
 }
@@ -13172,44 +13172,6 @@
 "cc": "Tanzania"
 },
 {
-"place": "United States",
-"lat": 39.784,
-"lon": -100.446,
-"n": 68,
-"grp": {
-"Flowering plants": 18,
-"Snails & slugs": 10,
-"Plant - Trees & Shrubs": 8,
-"Bird": 6,
-"Crustaceans": 5,
-"Reptile": 1
-},
-"cls": {
-"long-lost": 33,
-"lost": 18,
-"unclassified": 17
-},
-"rl": {
-"CR(PE)": 23,
-"not in IUCN index": 21,
-"EX": 6,
-"NE": 5,
-"DD": 5,
-"LC": 4
-},
-"examples": [
-"Anemone virginiana",
-"Aquilegia micrantha",
-"Argythamnia humilis",
-"Astragalus americanus"
-],
-"oldest": 1862,
-"merged_from": [
-"United States (Puerto Rico: Isla Monito)"
-],
-"cc": "United States of America"
-},
-{
 "place": "Mexico",
 "lat": 23.659,
 "lon": -102.008,
@@ -13242,6 +13204,44 @@
 ],
 "oldest": 1893,
 "cc": "Mexico"
+},
+{
+"place": "United States",
+"lat": 39.784,
+"lon": -100.446,
+"n": 63,
+"grp": {
+"Flowering plants": 14,
+"Snails & slugs": 10,
+"Plant - Trees & Shrubs": 8,
+"Bird": 6,
+"Crustaceans": 5,
+"Reptile": 1
+},
+"cls": {
+"long-lost": 33,
+"lost": 18,
+"unclassified": 12
+},
+"rl": {
+"CR(PE)": 23,
+"not in IUCN index": 18,
+"EX": 6,
+"DD": 5,
+"NE": 4,
+"LC": 3
+},
+"examples": [
+"Aquilegia micrantha",
+"Argythamnia humilis",
+"Astragalus americanus",
+"Sphaerodactylus micropithecus"
+],
+"oldest": 1862,
+"merged_from": [
+"United States (Puerto Rico: Isla Monito)"
+],
+"cc": "United States of America"
 },
 {
 "place": "India",
@@ -13653,39 +13653,6 @@
 "cc": "Indonesia"
 },
 {
-"place": "Portugal",
-"lat": 39.662,
-"lon": -8.135,
-"n": 25,
-"grp": {
-"Arachnids": 12,
-"Snails & slugs": 8,
-"Insect": 4,
-"Plant - Trees & Shrubs": 1
-},
-"cls": {
-"long-lost": 14,
-"unclassified": 9,
-"lost": 2
-},
-"rl": {
-"not in IUCN index": 9,
-"DD": 6,
-"CR": 3,
-"CR(PE)": 3,
-"NE": 2,
-"LC": 1
-},
-"examples": [
-"Araneus hortensis",
-"Ceratinopsis acripes",
-"Clethra arborea",
-"Discula lyelliana"
-],
-"oldest": 1859,
-"cc": "Portugal"
-},
-{
 "place": "Malaysia",
 "lat": 4.569,
 "lon": 102.266,
@@ -13720,6 +13687,36 @@
 "Peninsular Malaysia"
 ],
 "cc": "Malaysia"
+},
+{
+"place": "Portugal",
+"lat": 39.662,
+"lon": -8.135,
+"n": 24,
+"grp": {
+"Arachnids": 12,
+"Snails & slugs": 8,
+"Insect": 4
+},
+"cls": {
+"long-lost": 14,
+"unclassified": 8,
+"lost": 2
+},
+"rl": {
+"not in IUCN index": 9,
+"DD": 6,
+"CR": 3,
+"CR(PE)": 3,
+"NE": 2
+},
+"examples": [
+"Araneus hortensis",
+"Ceratinopsis acripes",
+"Discula lyelliana"
+],
+"oldest": 1859,
+"cc": "Portugal"
 },
 {
 "place": "Haiti",
@@ -14112,40 +14109,6 @@
 "cc": "Costa Rica"
 },
 {
-"place": "Canada",
-"lat": 61.067,
-"lon": -107.992,
-"n": 17,
-"grp": {
-"Flowering plants": 6,
-"Snails & slugs": 5,
-"Plant - Trees & Shrubs": 2,
-"Fish": 1,
-"Plant - Aquatic plant": 1
-},
-"cls": {
-"unclassified": 7,
-"long-lost": 6,
-"lost": 4
-},
-"rl": {
-"not in IUCN index": 7,
-"LC": 3,
-"CR(PE)": 3,
-"DD": 2,
-"NE": 1,
-"EX": 1
-},
-"examples": [
-"Anemone virginiana",
-"Astragalus americanus",
-"Astragalus robbinsii",
-"Campanula aparinoides"
-],
-"oldest": 1862,
-"cc": "Canada"
-},
-{
 "place": "Papua New Guinea",
 "lat": -5.682,
 "lon": 144.249,
@@ -14207,6 +14170,39 @@
 ],
 "oldest": 1889,
 "cc": "Cameroon"
+},
+{
+"place": "Canada",
+"lat": 61.067,
+"lon": -107.992,
+"n": 14,
+"grp": {
+"Snails & slugs": 5,
+"Flowering plants": 4,
+"Plant - Trees & Shrubs": 2,
+"Fish": 1,
+"Plant - Aquatic plant": 1
+},
+"cls": {
+"long-lost": 6,
+"unclassified": 4,
+"lost": 4
+},
+"rl": {
+"not in IUCN index": 5,
+"CR(PE)": 3,
+"LC": 2,
+"DD": 2,
+"NE": 1,
+"EX": 1
+},
+"examples": [
+"Astragalus americanus",
+"Astragalus robbinsii",
+"Campanula aparinoides"
+],
+"oldest": 1862,
+"cc": "Canada"
 },
 {
 "place": "Cuba",
@@ -19200,262 +19196,233 @@
 {
 "group": "Snakes",
 "sp": "Epictia undecimstriata",
-"common": "Eleven-striped Blind Snake",
+"common": "--",
 "last": 1839,
-"gap": 187,
 "range": "Bolivia",
 "family": "Leptotyphlopidae",
 "rl": "DD",
-"n_dated": 22,
-"gbif_total": 0,
-"gbif_latest": null
+"n_dated": 24,
+"gap": 187
 },
 {
 "group": "Lizards",
-"sp": "Cryptoblepharus ahli",
-"common": "Ahl's Snake-eyed Skink",
-"last": 1848,
-"gap": 178,
-"range": "Afrotropic",
+"sp": "Trachylepis maculata",
+"common": "Spotted Mabuya",
+"last": 1839,
+"range": "Brazil",
 "family": "Scincidae",
 "rl": "DD",
-"n_dated": 456,
-"gbif_total": 0,
-"gbif_latest": null
+"n_dated": 465,
+"gap": 187
 },
 {
 "group": "Worm lizards",
 "sp": "Cynisca degrysi",
 "common": "Sierra Leone Worm Lizard",
 "last": 1888,
-"gap": 138,
 "range": "Sierra Leone",
 "family": "Amphisbaenidae",
 "rl": "DD",
 "n_dated": 24,
-"gbif_total": 0,
-"gbif_latest": null
+"gap": 138
+},
+{
+"group": "Turtles & tortoises",
+"sp": "Kinosternon hirtipes megacephalum",
+"common": "Rough-footed Mud Turtle",
+"last": 1965,
+"range": "Mexico",
+"family": "Kinosternidae",
+"rl": "LC",
+"n_dated": 3,
+"gap": 61
 },
 {
 "group": "Frogs",
-"sp": "Philautus microdiscus",
-"common": "Kobo Bubble-nest Frog",
-"last": 1912,
-"gap": 114,
-"range": "India",
-"family": "Rhacophoridae",
-"rl": "CR",
-"n_dated": 150,
-"gbif_total": 0,
-"gbif_latest": null
+"sp": "Cycloramphus fuliginosus",
+"common": "--",
+"last": 1838,
+"range": "Brazil",
+"family": "Cycloramphidae",
+"rl": "LC",
+"n_dated": 175,
+"gap": 188
 },
 {
 "group": "Toads",
 "sp": "Duttaphrynus valhallae",
-"common": "Pulo Weh Toad",
+"common": "--",
 "last": 1909,
-"gap": 117,
 "range": "Indonesia",
 "family": "Bufonidae",
 "rl": "DD",
-"n_dated": 63,
-"gbif_total": 5,
-"gbif_latest": 1910
+"n_dated": 64,
+"gap": 117
 },
 {
 "group": "Salamanders & newts",
 "sp": "Hynobius turkestanicus",
 "common": "Turkestanian Salamander",
 "last": 1909,
-"gap": 117,
 "range": "Kyrgyzstan, Tajikistan, Uzbekistan",
 "family": "Hynobiidae",
 "rl": "DD",
-"n_dated": 18,
-"gbif_total": 0,
-"gbif_latest": null
+"n_dated": 20,
+"gap": 117
 },
 {
 "group": "Caecilians",
 "sp": "Ichthyophis singaporensis",
 "common": "Singapore Caecilian",
 "last": 1847,
-"gap": 179,
 "range": "Singapore",
 "family": "Ichthyophiidae",
 "rl": "DD",
 "n_dated": 5,
-"gbif_total": 3,
-"gbif_latest": null
+"gap": 179
 },
 {
 "group": "Birds",
-"sp": "Otus siaoensis",
-"common": "Siau Scops-owl",
-"last": 1866,
-"gap": 160,
-"range": "Indonesia",
-"family": "Strigidae",
-"rl": "CR",
-"n_dated": 42,
-"gbif_total": 0,
-"gbif_latest": null
+"sp": "Eriocnemis godini",
+"common": "Turquoise-throated Puffleg",
+"last": 1850,
+"range": "Ecuador",
+"family": "Trochilidae",
+"rl": "CR(PE)",
+"n_dated": 46,
+"gap": 176
 },
 {
 "group": "Mammals",
 "sp": "Uromys imperator",
 "common": "Emperor Rat",
 "last": 1887,
-"gap": 139,
 "range": "Solomon Islands",
 "family": "Muridae",
 "rl": "CR(PE)",
-"n_dated": 54,
-"gbif_total": 4,
-"gbif_latest": null
+"n_dated": 58,
+"gap": 139
 },
 {
 "group": "Fish",
-"sp": "Barbonymus platysoma",
-"common": "",
-"last": 1855,
-"gap": 171,
-"range": "Java",
-"family": "Cyprinidae",
-"rl": "CR(PE)",
-"n_dated": 306,
-"gbif_total": 0,
-"gbif_latest": null
+"sp": "Astyanax scabripinnis",
+"common": "Banded Astyanax\t/ Tetra",
+"last": 1842,
+"range": "Brazil",
+"family": "Characidae",
+"rl": "LC",
+"n_dated": 323,
+"gap": 184
 },
 {
 "group": "Insects",
 "sp": "Heteragrion beschkii",
-"common": "",
+"common": "--",
 "last": 1834,
-"gap": 192,
 "range": "Brazil",
 "family": "Heteragrionidae",
 "rl": "DD",
-"n_dated": 200,
-"gbif_total": 2,
-"gbif_latest": null
+"n_dated": 208,
+"gap": 192
 },
 {
 "group": "Spiders & scorpions",
-"sp": "Eresus pharaonis",
-"common": "",
-"last": 1829,
-"gap": 197,
-"range": "Egypt",
+"sp": "Eresus quartuorguttata",
+"common": "--",
+"last": 1804,
+"range": "Italy",
 "family": "Eresidae",
 "rl": "not in IUCN index",
 "n_dated": 54,
-"gbif_total": 0,
-"gbif_latest": null
+"gap": 222
 },
 {
 "group": "Snails & slugs",
-"sp": "Belgrandia varica",
-"common": "",
-"last": 1870,
-"gap": 156,
-"range": "France",
-"family": "Hydrobiidae",
+"sp": "Omphalotropis ingens",
+"common": "--",
+"last": 1855,
+"range": "Fiji",
+"family": "Assimineidae",
 "rl": "CR(PE)",
-"n_dated": 52,
-"gbif_total": 9,
-"gbif_latest": 1854
+"n_dated": 75,
+"gap": 171
 },
 {
 "group": "Clams & mussels",
-"sp": "Epioblasma othcaloogensis",
-"common": "Southern Acron Riffle Shell",
-"last": 1974,
-"gap": 52,
-"range": "United States",
+"sp": "Cuneopsis demangei",
+"common": "--",
+"last": 1929,
+"range": "Vietnam",
 "family": "Unionidae",
 "rl": "CR(PE)",
-"n_dated": 4,
-"gbif_total": 113,
-"gbif_latest": 1974
+"n_dated": 6,
+"gap": 97
 },
 {
 "group": "Crustaceans",
-"sp": "Potamonautes dubius",
-"common": "Kunene River Crab",
-"last": 1890,
-"gap": 136,
-"range": "Angola, Namibia",
-"family": "Potamonautidae",
-"rl": "DD",
-"n_dated": 32,
-"gbif_total": 5,
-"gbif_latest": null
+"sp": "Afrithelphusa afzelii",
+"common": "Afzeli's Crab",
+"last": 1790,
+"range": "Sierra Leone",
+"family": "Deckeniidae",
+"rl": "CR(PE)",
+"n_dated": 35,
+"gap": 236
 },
 {
 "group": "Corals",
-"sp": "Montigyra kenti",
-"common": "",
-"last": 2000,
-"gap": 26,
-"range": "Australia",
-"family": "Euphylliidae",
-"rl": "DD",
-"n_dated": 2,
-"gbif_total": 6,
-"gbif_latest": 1987
+"sp": "Plexaurella obesa",
+"common": "--",
+"last": 1985,
+"range": "Brazil",
+"family": "Plexaurellidae",
+"rl": "not in IUCN index",
+"n_dated": 3,
+"gap": 41
 },
 {
 "group": "Millipedes & centipedes",
 "sp": "Mecistocephalus cyclops",
-"common": "",
+"common": "--",
 "last": 1892,
-"gap": 134,
 "range": "Seychelles",
 "family": "Mecistocephalidae",
 "rl": "CR(PE)",
 "n_dated": 5,
-"gbif_total": 0,
-"gbif_latest": null
+"gap": 134
 },
 {
 "group": "Springtails & relatives",
 "sp": "Delamarephorura tami",
-"common": "",
+"common": "--",
 "last": 2004,
-"gap": 22,
 "range": "Vietnam",
 "family": "Tullbergiidae",
 "rl": "CR(PE)",
 "n_dated": 2,
-"gbif_total": 3,
-"gbif_latest": null
+"gap": 22
 },
 {
 "group": "Worms",
 "sp": "Prosadenoporus agricola",
-"common": "Bermuda land nemertean",
+"common": "--",
 "last": 1966,
-"gap": 60,
 "range": "Bermuda",
 "family": "Prosorhochmidae",
 "rl": "CR(PE)",
 "n_dated": 2,
-"gbif_total": 9,
-"gbif_latest": 1906
+"gap": 60
 },
 {
 "group": "Plants",
 "sp": "Eugenia guayaquilensis",
-"common": "",
+"common": "--",
 "last": 1823,
-"gap": 203,
 "range": "Ecuador",
 "family": "Myrtaceae",
 "rl": "CR(PE)",
-"n_dated": 277,
-"gbif_total": 15,
-"gbif_latest": 1828
+"n_dated": 296,
+"gap": 203
 }
 ],
 "rates": [
@@ -19564,7 +19531,7 @@
 },
 {
 "c": "United States",
-"lost": 143,
+"lost": 141,
 "new": 16
 },
 {
@@ -19618,6 +19585,6 @@
 ],
 "n_overlap": 11,
 "hawaii": 90,
-"us_lost": 143
+"us_lost": 141
 }
 }
