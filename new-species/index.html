@@ -1216,7 +1216,7 @@
   /* the base table rule sets min-width:720px, so it must scroll inside its own box
      rather than pushing the page sideways */
   #ntTable { overflow-x:auto; margin-top:.5rem; }
-  /* Common name over the binomial, as the register's table does it. 1,205 of the 3,089
+  /* Common name over the binomial, as the register's table does it. 1,190 of the 3,089
      have no vernacular in IOC, MDD, iNaturalist or GBIF, so this is absent rather than
      blank for those and the row shows the scientific name alone. */
   .ntcn { display:block; font-family:var(--sans); font-size:.88rem; font-weight:600;
@@ -3361,7 +3361,7 @@ function ntRender() {
     // r.type (the exact type locality) is deliberately absent from the public payload,
     // so it is not searchable here either -- see the note in the view.
     // r.v, the common name, is searched as well. It is the thing a non-specialist will
-    // type, and it was the whole point of harvesting 1,884 of them.
+    // type, and it was the whole point of harvesting 1,899 of them.
     (!q || (r.sp + " " + (r.v || "") + " " + r.fam + " " + r.dist)
              .toLowerCase().includes(q)));
 

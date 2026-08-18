@@ -540,7 +540,8 @@
 "ev": "airtight",
 "cty": "Ecuador",
 "ref": "Yánez-Muñoz MH, Vega-Yánez MA, Reyes-Puig JP, Lagla-Chimba G, Paucar-Veintimilla C, Nicolalde-Tapia K, Urgilés-Merchán M, Carrión-Olmedo JC, Reyes-Puig C. 2026. Update of species limits in the Pristimantis myersi clade (Anura: Craugastoridae), with the description of two new species from the western",
-"one": true
+"one": true,
+"v": "Cayapa’s rainfrog"
 },
 {
 "sp": "Pristimantis chusquea",
@@ -558,7 +559,8 @@
 "ev": "airtight",
 "cty": "Ecuador",
 "ref": "Yánez-Muñoz MH, Vega-Yánez MA, Reyes-Puig JP, Lagla-Chimba G, Paucar-Veintimilla C, Nicolalde-Tapia K, Urgilés-Merchán M, Carrión-Olmedo JC, Reyes-Puig C. 2026. Update of species limits in the Pristimantis myersi clade (Anura: Craugastoridae), with the description of two new species from the western",
-"one": true
+"one": true,
+"v": "Dinardo’s rainfrog"
 },
 {
 "sp": "Pristimantis fergusoni",
@@ -782,7 +784,8 @@
 "ev": "airtight",
 "cty": "Viet Nam",
 "ref": "Pham AV, Hoang CV, Tapley B, Nguyen LT, Nguyen HH, La TV, Ziegler T, Rowley JL, Nguyen TQ, and Le MD. 2025. Amolops cuongi (Amphibia, Anura, Ranidae), a new species from the Hoang Lien Range, Vietnam. ZooKeys 1256: 235-257. ( 10.3897/zookeys.1256.158846 )",
-"one": true
+"one": true,
+"v": "Cuong’s Torrent Frog"
 },
 {
 "sp": "Amolops gudao",
@@ -1861,7 +1864,8 @@
 "ev": "airtight",
 "cty": "Ecuador",
 "ref": "Loza-Carvajal KD, Yánez-Muñoz MH, Quilumbaquin W, Ortega-Andrade HM. 2025 Vast cryptic diversity in direct-developing frogs Pristimantis (Anura: Strabomantidae): A new subgenus and the description of a new species from the eastern Andes of Ecuador. PeerJ 13: e20512 . ( 10.7717/peerj.20512 )",
-"one": true
+"one": true,
+"v": "Amazonian pagan rainfrog"
 },
 {
 "sp": "Pristimantis praemortuus",
@@ -2170,7 +2174,8 @@
 "ev": "airtight",
 "cty": "China",
 "ref": "Li SZ, Liu J, Ke XC, Cheng G, and Wang B. 2024. A new species of Amolops (Amphibia, Anura, Ranidae) from Guizhou Province, China. ZooKeys 1189: 33–54 ( 10.3897/zookeys.1189.115621 )",
-"one": true
+"one": true,
+"v": "Dafang cascade frogs"
 },
 {
 "sp": "Amolops yangi",
@@ -2837,7 +2842,8 @@
 "ev": "airtight",
 "cty": "China",
 "ref": "Li SZ, Chen JJ, Su HJ, Liu J, Tang XJ, Wang B. 2024. A new odorous frog species of Odorrana (Amphibia, Anura, Ranidae) from Guizhou Province, China. ZooKeys 1192: 57–82. ( https://doi.org/10.3897/zookeys.1192.114315 )",
-"one": true
+"one": true,
+"v": "Leishan Odorous Frog"
 },
 {
 "sp": "Oreolalax adelphos",
