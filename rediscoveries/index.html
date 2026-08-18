@@ -3681,7 +3681,29 @@ function boot() {
      "roughly" carry the uncertainty in words, which is the honest way to say a number that
      is a sensitivity band rather than a measurement. The precise version, with the ranges
      and what is and is not measured, is on the Black List overview. */
+  /* FIRST, by Scott's decision 2026-08-18. It is the one headline that tells a reader what
+     the list is FOR rather than what it measures, and it hands them a single number instead
+     of two they have to divide.
+
+     THE MULTIPLIER IS COMPUTED, NOT TYPED. 162% is (55.6 / 21.2 - 1). Both rates move when
+     IUCN reassesses more of the validation set, and they moved once already this month
+     (53.6% to 55.6%), so a typed 162 would have quietly drifted away from the two figures
+     it is derived from and from the methods page that states them.
+
+     "the 1,120 whose records" and not the whole register: the Black List is all 3,062 Data
+     Deficient and Not Evaluated vertebrates, and the narrow-range stratum is 1,120 of them.
+     The efficiency gain comes from preferring that stratum OVER the broader-range species,
+     so a sentence implying the whole list delivers it is claiming more than was measured. */
   const A = m.across_lists;
+  if (v && v.high && v.low && v.low.rate) {
+    const gain = Math.round((v.high.rate / v.low.rate - 1) * 100);
+    const narrow = (m.counts && m.counts.priority_dd) || c.priority_dd;
+    STATS.push(`The Black List holds every vertebrate stuck at Data Deficient and Not
+      Evaluated, and flags the <strong>${n(narrow)}</strong> whose records already describe
+      a tiny range. Start there and threatened species are uncovered
+      <strong>${gain}%</strong> more efficiently than by choosing species with broader
+      ranges.`);
+  }
   if (A && A.central) {
     // Rounded to the nearest hundred. "Roughly 2,697" claims a precision the number
     // does not have, and a headline that says roughly should look roughly.
@@ -3701,11 +3723,11 @@ function boot() {
       more than once, and come back Data Deficient every time. Looking again is not the
       same as finding out.`);
   }
-  if (v && v.high && v.low) {
-    STATS.push(`Where the published record points to a very small range,
-      <strong>${v.high.rate}%</strong> of the species IUCN has since reassessed turned out
-      to be threatened, against <strong>${v.low.rate}%</strong> of the rest.`);
-  }
+  /* The two-rate sentence that used to sit here was replaced by the efficiency headline at
+     the top of this array, which is built from the same two figures. Both said the same
+     thing; the survivor says it without asking the reader to divide 55.6 by 21.2. The rates
+     themselves, with the confidence interval and the sensitivity analysis, stay on the
+     methods page, where a reader who wants them will look. */
   if (c.iucn_dd_vertebrates) {
     /* c.dd, NOT c.dd + c.ne. 8,659 counts Data Deficient vertebrates, and the 31 never
        assessed are by definition not among them, so "3,062 of them" claimed an overlap
