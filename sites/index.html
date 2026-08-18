@@ -357,6 +357,16 @@
      than a blanket rule on the hero. */
   .intro { text-align:center; }
   .intro h2, .intro .lede { margin-left:auto; margin-right:auto; }
+  /* On a phone the first thing on screen was 83px of nothing: section.view contributes
+     2.2rem and .hero another 3rem, and they stack. On a desktop that reads as composure,
+     but a phone screen is mostly vertical and the nav rule directly above already does the
+     work of separating the header from the page, so the padding is only pushing the
+     headline toward the fold. Halved here rather than reduced everywhere, because the same
+     space is correct at desktop width. */
+  @media (max-width:560px) {
+    section.view { padding-top:1rem; }
+    .hero { padding-top:var(--s3); }
+  }
 
   .field-wrap { margin:var(--s5) 0 0; }
   .field-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:var(--s1) var(--s3);
