@@ -189,6 +189,18 @@
            background:none; border:1px solid var(--rule-2); border-radius:2px;
            color:var(--ink-2); cursor:pointer; }
   .ghost:hover { border-color:var(--accent); color:var(--accent); }
+  /* The theme control, sized up and taken to full contrast. --ink-2 is the quiet ink and
+     this is the one control in the masthead, so it was reading as disabled.
+     Three states, not two: an explicit choice stamps data-theme on the root, and the
+     default "system" setting stamps nothing, so the media query has to carry the unset
+     case and :root[data-theme="light"] has to be able to win back against it. */
+  #theme { font-size:.9rem; padding:.5rem 1rem; color:#000; border-color:#000; }
+  @media (prefers-color-scheme:dark) {
+    :root:not([data-theme="light"]) #theme { color:#fff; border-color:#fff; }
+  }
+  :root[data-theme="dark"] #theme { color:#fff; border-color:#fff; }
+  :root[data-theme="light"] #theme { color:#000; border-color:#000; }
+  #theme:hover { border-color:var(--accent); color:var(--accent); }
 
 
   /* ---- data download, foot of every Black List view ----------------------
@@ -201,8 +213,15 @@
               border-top:3px solid var(--accent); border-radius:2px; text-align:center; }
   .datagrab h3 { font-family:var(--serif); font-size:1.28rem; color:var(--ink);
                  margin:0 0 .5rem; }
-  .datagrab p { font-family:var(--sans); font-size:.9rem; color:var(--ink-2);
-                max-width:34rem; margin:0 auto 1.1rem; line-height:1.55; }
+  /* aside.datagrab, not .datagrab: this block is inserted into five different views, and
+     on the methods route `.methods p { margin:.7rem 0 }` is declared later at the same
+     specificity. It won, `margin:0 auto` became `margin:.7rem 0`, and the paragraph sat
+     against the left of a centred box while the heading and button stayed centred -- a
+     max-width whose auto margins had been quietly removed. The element selector puts this
+     out of reach of any single-class rule on a container, wherever the block is dropped. */
+  aside.datagrab p { font-family:var(--sans); font-size:.9rem; color:var(--ink-2);
+                     max-width:34rem; margin:0 auto 1.1rem; line-height:1.55;
+                     text-align:center; }
   .datagrab-btn { display:inline-flex; flex-direction:column; align-items:center;
                   gap:.2rem; font-family:var(--sans); font-size:1.02rem; font-weight:600;
                   text-decoration:none; padding:.85rem 1.9rem; border-radius:3px;
