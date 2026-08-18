@@ -357,14 +357,21 @@
      than a blanket rule on the hero. */
   .intro { text-align:center; }
   .intro h2, .intro .lede { margin-left:auto; margin-right:auto; }
-  /* On a phone the first thing on screen was 83px of nothing: section.view contributes
-     2.2rem and .hero another 3rem, and they stack. On a desktop that reads as composure,
-     but a phone screen is mostly vertical and the nav rule directly above already does the
-     work of separating the header from the page, so the padding is only pushing the
-     headline toward the fold. Halved here rather than reduced everywhere, because the same
-     space is correct at desktop width. */
+  /* THE DARK BAND ABOVE THE HEADLINE. section.view carries 2.2rem of top padding, and a
+     view that opens with a .hero stacks that on top of the hero's own 3rem. The hero paints
+     its own --surface background while that padding shows bare --ground, so it rendered as
+     a stripe of darker page with nothing in it between the nav rule and the headline, and
+     83px of dead height before a reader reaches a word.
+
+     Removed where a hero leads, kept everywhere else: a view with no hero opens straight
+     onto content and does need the padding. All five heroes on the site are the first child
+     of their view, checked across every built route, so the selector is exact rather than
+     hopeful. It also degrades in the safe direction, since a browser without :has() support
+     simply keeps the band instead of overlapping anything. */
+  section.view:has(> .hero:first-child) { padding-top:0; }
+  /* And on a phone the hero's own 3rem is more than the screen can spare, with the nav rule
+     directly above already separating header from page. Desktop keeps the full measure. */
   @media (max-width:560px) {
-    section.view { padding-top:1rem; }
     .hero { padding-top:var(--s3); }
   }
 
