@@ -1334,11 +1334,21 @@
     <button class="navitem navtoggle" type="button" aria-expanded="false"
             aria-controls="navm-blacklist">The Black List <span class="caret"
             aria-hidden="true">&#9662;</span></button>
-    <!-- Both children used to repeat a label from elsewhere in the same bar: "The Black
+    <!-- HISTORY, because this label has been both things and the reason matters.
+         Both children once repeated a label from elsewhere in the same bar: "The Black
          List" inside a group called "The Black List", and "Overview" beside the top-level
-         "Overview" that goes somewhere else entirely. A reader cannot tell which one they
-         want from a menu that names two different pages the same thing. The group keeps the
-         name; the children say what they are. -->
+         "Overview" that goes somewhere else entirely. They were renamed to "Browse all
+         species" and "What this is" so a reader could tell which one they wanted.
+
+         The register child is called "The Black List" again, on Scott's instruction of
+         2026-08-17. That restores the duplicate: the group and its second child now read
+         the same. He asked for the list's own name rather than a description of an action,
+         which is a fair thing to want, and the duplication is the cost. "What this is"
+         stays as it is, so the two children are still distinguishable from each other even
+         though one now matches the group.
+
+         If this reads badly in use, the fix is to rename the GROUP rather than the child,
+         since the group is the one label that does not name a page. -->
     <div class="navmenu" id="navm-blacklist" hidden>
       <a href="/black-list-overview/" data-v="overview">What this is</a>
       <a href="/the-black-list/" data-v="register">The Black List</a>
