@@ -1180,6 +1180,11 @@
   /* the base table rule sets min-width:720px, so it must scroll inside its own box
      rather than pushing the page sideways */
   #ntTable { overflow-x:auto; margin-top:.5rem; }
+  /* Common name over the binomial, as the register's table does it. 1,205 of the 3,089
+     have no vernacular in IOC, MDD, iNaturalist or GBIF, so this is absent rather than
+     blank for those and the row shows the scientific name alone. */
+  .ntcn { display:block; font-family:var(--sans); font-size:.88rem; font-weight:600;
+          color:var(--ink); }
   .nttable td i { font-style:italic; }
   /* Long cells clamp to two lines and expand on click rather than being cut off with no
      way back. A citation truncated mid-author-list is unusable, and on a phone the
@@ -1511,6 +1516,15 @@
         years behind the mammal database, so every mammal named in the last two years is
         missing from it, and a comparison built on GBIF would have called all of them
         unassessed without checking.</p>
+      <p><strong>Most of these species have no common name, and that is not a small
+        detail.</strong> <span class="num" id="ntNamed">&mdash;</span> of the
+        <span class="num" id="ntTotal">&mdash;</span> here carry an English name in any of
+        the four checklists, iNaturalist or GBIF. A frog described in 2019 usually has only
+        a Latin one. It matters because searching for a species means searching for its
+        name: when we asked every conservation organization we could find which of these
+        species they mention, this list scored lowest of the four, and part of that is our
+        vocabulary rather than the world's neglect. The names that are missing are mostly
+        waiting in the papers the species were described in.</p>
       <p><strong>The four are not equally rigorous, and the page does not pretend they
         are.</strong> The Reptile Database publishes a full checklist with authorities and
         years, which is what makes the author-and-year match possible. AmphibiaWeb's
@@ -2851,7 +2865,9 @@ function ensureBirdsMammals() {
   if (BM || bmLoading) { if (BM) bmSetup(); return; }
   bmLoading = true;
   getJSON("/birdsmammals.json").then(d => {
-    BM = d; bmLoading = false; bmSetup(); mergedClassFilter(); mergedDraw();
+    // renderNamed too: it needs all THREE payloads and this is the one that arrives on
+    // its own path. Without this line the count stays blank whenever BM loads last.
+    BM = d; bmLoading = false; bmSetup(); mergedClassFilter(); mergedDraw(); renderNamed();
   }).catch(() => {
     bmLoading = false;
     const t = $("#bmTable");
@@ -2906,7 +2922,7 @@ function bmDraw() {
     <thead><tr><th>Species</th><th>Class</th><th>Described</th><th>Family</th>
       <th>Countries</th></tr></thead>
     <tbody>${rows.slice(0, CAP).map(r => `<tr>
-      <td><i>${esc(r.sp)}</i></td>
+      <td>${r.v ? `<b class="ntcn">${esc(r.v)}</b>` : ""}<i>${esc(r.sp)}</i></td>
       <td>${esc(r.cls === "bird" ? "Bird" : "Mammal")}</td>
       <td>${r.yr || "—"}</td>
       <td>${esc(r.fam)}</td>
@@ -3039,7 +3055,25 @@ function ensureAmphibians() {
    stated. Needs BOTH lists, so it runs from whichever finishes second and does nothing
    until then. The window stops at 2025 on purpose: 2026 is a partial year and averaging
    it in would drag the rate down for no reason other than the calendar. */
+/* How many of the new-species rows carry a common name, counted from the payloads rather
+   than typed in. It is a real limitation of the list and 15_check_figures.py anchors it, so
+   if an assembler is re-run without analysis/inject_newspecies_names.py the number falls
+   and the build fails instead of quietly serving binomials. */
+function renderNamed() {
+  const srcs = [NT, AMP, BM].filter(Boolean);
+  if (srcs.length < 3) return;                 // wait for all three, or it under-reports
+  let tot = 0, named = 0;
+  srcs.forEach(s => (s.rows || []).forEach(r => {
+    tot++;
+    if (r.v) named++;
+  }));
+  const a = $("#ntNamed"), b = $("#ntTotal");
+  if (a) a.textContent = named.toLocaleString();
+  if (b) b.textContent = tot.toLocaleString();
+}
+
 function renderRate() {
+  renderNamed();
   const el = $("#ntRate");
   if (!el || !NT || !AMP) return;
   const FROM = 2020, TO = 2025;
@@ -3290,7 +3324,10 @@ function ntRender() {
     (!ev || r.ev === ev) && (!rc || r.rc === rc) && (!fam || r.fam === fam) &&
     // r.type (the exact type locality) is deliberately absent from the public payload,
     // so it is not searchable here either -- see the note in the view.
-    (!q || (r.sp + " " + r.fam + " " + r.dist).toLowerCase().includes(q)));
+    // r.v, the common name, is searched as well. It is the thing a non-specialist will
+    // type, and it was the whole point of harvesting 1,884 of them.
+    (!q || (r.sp + " " + (r.v || "") + " " + r.fam + " " + r.dist)
+             .toLowerCase().includes(q)));
 
   $("#ntShowing").textContent =
     `Showing ${rows.length.toLocaleString()} of ${NT.rows.length.toLocaleString()} species` +
