@@ -570,6 +570,13 @@
   /* The hero block above ends on a dark band, and "What you will find here" was sitting
      right up against it with no room to breathe. */
   .homebody { padding-top:var(--s5); }
+  /* The caveat under the Connect & Conserve figures. Quieter than body copy, because it
+     qualifies rather than argues, and ink-2 rather than ink-3 so it stays above the 4.5:1
+     contrast floor at this size. */
+  .homecaveat { font-size:.88rem !important; color:var(--ink-2) !important;
+                border-left:2px solid var(--rule-2); padding-left:1rem;
+                margin-top:1.2rem !important; }
+
   .homecta { text-align:center; margin:var(--s3) 0 var(--s5); }
   .bigbtn { display:inline-block; font-family:var(--sans); font-size:1.02rem;
             font-weight:600; padding:.95rem 2.2rem; background:var(--accent);
@@ -1490,6 +1497,42 @@
     <p>Some have been unseen for two hundred years and then turned up in a stream nobody
       had surveyed. One was identified from a photograph a tourist posted online. The
       work is not hopeless. It is just unfunded, and pointed at the wrong places.</p>
+  </div>
+
+  <!-- The Connect & Conserve scrape, 2026-08-18. These figures come from a SISTER PROJECT
+       and not from this site's build, so 15_check_figures.py cannot anchor them the way it
+       anchors 3,062 or 2,128: there is no local artifact to check them against. The date is
+       stated in the text for that reason. If C&C re-runs the scrape, this paragraph needs
+       updating by hand.
+
+       The dollar figures are RATIOS on purpose. C&C's own methods note records that class
+       money is not additive -- an organisation working on six classes has its whole revenue
+       counted in all six, so the naive class sum is $54.6B against $17.6B of real 2022
+       revenue. The comparison between classes survives that; the absolute per-species
+       numbers do not, and are left out. -->
+  <div class="prose">
+    <h3>Who is actually working on them?</h3>
+    <p>We wondered whether anybody was, so we checked. Our sister project
+      <a href="https://connectandconserve.org" target="_blank" rel="noopener">Connect &amp;
+      Conserve</a> maps the conservation sector, every organization it can find and what each
+      one says it works on. In August 2026 it searched those organizations for every
+      one of the <strong>8,100 species</strong> on the four lists here.</p>
+    <p><strong>Sixty three came back.</strong> Not sixty three percent, not sixty three
+      hundred. Sixty three species, out of eight thousand one hundred, have any organization
+      anywhere that names them. For every species with somebody's name attached, a hundred
+      and twenty eight have nobody at all.</p>
+    <p>And the money follows the same shape. Ray-finned fishes are half of the Black List, by
+      far the largest group of species nobody can categorize, and per species they receive
+      roughly <strong>a sixth</strong> of what mammals do. Birds carry barely one percent of
+      that burden and are funded better than fishes on every measure. None of this is anyone
+      behaving badly. It is what happens when attention follows what people already know the
+      names of.</p>
+    <p class="homecaveat">One honest caveat, because it cuts against us. Searching for a
+      species means searching for its name, and a frog described in 2019 usually has no common
+      name yet, only a Latin one. Our newest list scored lowest of the four, and part of that
+      is our own vocabulary rather than the world's neglect. We are fixing it by pulling names
+      out of the papers the species were described in. The comparison between the older lists
+      holds either way.</p>
   </div>
 
   <div class="prose">
