@@ -190,6 +190,37 @@
            color:var(--ink-2); cursor:pointer; }
   .ghost:hover { border-color:var(--accent); color:var(--accent); }
 
+
+  /* ---- data download, foot of every Black List view ----------------------
+     Centred like the site's titles and buttons, and deliberately the heaviest thing on
+     the page after the register itself. It replaces a 0.74rem ghost button in the
+     masthead that read as a preference control. Accent-soft ground rather than a filled
+     accent block: it should be findable at a glance without shouting over the species. */
+  .datagrab { max-width:46rem; margin:var(--s4) auto 0; padding:1.6rem 1.4rem 1.4rem;
+              background:var(--accent-soft); border:1px solid var(--rule);
+              border-top:3px solid var(--accent); border-radius:2px; text-align:center; }
+  .datagrab h3 { font-family:var(--serif); font-size:1.28rem; color:var(--ink);
+                 margin:0 0 .5rem; }
+  .datagrab p { font-family:var(--sans); font-size:.9rem; color:var(--ink-2);
+                max-width:34rem; margin:0 auto 1.1rem; line-height:1.55; }
+  .datagrab-btn { display:inline-flex; flex-direction:column; align-items:center;
+                  gap:.2rem; font-family:var(--sans); font-size:1.02rem; font-weight:600;
+                  text-decoration:none; padding:.85rem 1.9rem; border-radius:3px;
+                  background:var(--accent); color:var(--ground);
+                  border:1px solid var(--accent); transition:filter .12s; }
+  .datagrab-btn span { font-family:var(--mono); font-size:.72rem; font-weight:400;
+                       opacity:.85; letter-spacing:.01em; }
+  .datagrab-btn:hover, .datagrab-btn:focus-visible { filter:brightness(1.12); }
+  /* ink-2, NOT ink-3. ink-3 is calibrated against the page ground; on this block's
+     tinted accent-soft it measures 3.31:1, under the 4.5:1 that 0.78rem body text needs.
+     ink-2 gives 6.37:1 light and 6.68:1 dark and still reads as the quiet line. */
+  .datagrab-note { font-size:.78rem !important; color:var(--ink-2) !important;
+                   opacity:.85; margin:1rem auto 0 !important; }
+  @media (max-width:560px) {
+    .datagrab { padding:1.3rem 1rem 1.1rem; }
+    .datagrab-btn { width:100%; padding:.85rem 1rem; }
+  }
+
   /* ---- nav tabs --------------------------------------------------------- */
   nav { border-bottom:1px solid var(--rule); background:var(--surface); }
   /* Wraps rather than scrolls. `justify-content:center` plus `overflow-x:auto`
@@ -1274,7 +1305,6 @@
     </a>
     <div class="mast-right">
       <button class="ghost" id="theme">Theme</button>
-      <a class="ghost" href="/data.json" download style="text-decoration:none">Download Black List data</a>
     </div>
   </div>
   <div class="wrap mast-title">
@@ -1635,6 +1665,22 @@
     </ul>
 
   </div>
+
+  <!-- The data download. Authored once in scratchpad/datagrab.py and inserted into every
+       Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
+  <aside class="datagrab">
+    <h3>Take the data</h3>
+    <p>The whole register as one JSON file: all <strong>3,062</strong> species with their
+      tier, evidence, locality text, threats and Red List history. No sign-up, no
+      licence to accept beyond IUCN's own terms, cited in the footer.</p>
+    <a class="datagrab-btn" href="/data.json" download>
+      Download the Black List
+      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
+    </a>
+    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
+      List v2026&#8209;1. Rebuilt whenever the register changes, at the same address, so a
+      script can fetch it on a schedule.</p>
+  </aside>
 </section>
 
 <!-- ========================= BLACK LIST OVERVIEW ========================= -->
