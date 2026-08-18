@@ -1536,27 +1536,37 @@
        numbers do not, and are left out. -->
   <div class="prose">
     <h3>Who is actually working on them?</h3>
+    <!-- "all eight thousand" and not 8,100. 8,100 is the number of ROWS we sent Connect &
+         Conserve; resolving synonyms makes it 8,079 species by their count and 8,089 by
+         ours, the difference being the same animal filed twice under two genus placements.
+         Rounding is the honest way to say a number that two careful counts disagree about
+         by ten.
+         127 and not 128: 8,016 species nobody names, divided by the 63 somebody does,
+         is 127.2. 128 is what you get dividing the TOTAL by 63, which is a different
+         sentence from the one written here. -->
     <p>We wondered whether anybody was, so we checked. Our sister project
       <a href="https://connectandconserve.org" target="_blank" rel="noopener">Connect &amp;
-      Conserve</a> maps the conservation sector, every organization it can find and what each
-      one says it works on. In August 2026 it searched those organizations for every
-      one of the <strong>8,100 species</strong> on the four lists here.</p>
-    <p><strong>Sixty three came back.</strong> Not sixty three percent, not sixty three
-      hundred. Sixty three species, out of eight thousand one hundred, have any organization
-      anywhere that names them. For every species with somebody's name attached, a hundred
-      and twenty eight have nobody at all.</p>
+      Conserve</a> maps every organization worldwide. We pointed it at all eight thousand
+      species on these four lists. For every Black List species an org mentions,
+      <strong>127</strong> have no mention at all. That is Life Overlooked.</p>
     <p>And the money follows the same shape. Ray-finned fishes are half of the Black List, by
       far the largest group of species nobody can categorize, and per species they receive
       roughly <strong>a sixth</strong> of what mammals do. Birds carry barely one percent of
       that burden and are funded better than fishes on every measure. None of this is anyone
       behaving badly. It is what happens when attention follows what people already know the
       names of.</p>
-    <p class="homecaveat">One honest caveat, because it cuts against us. Searching for a
+    <!-- REWRITTEN 2026-08-18, because the caveat it replaced has since been tested and is
+         wrong. It said the newest list's low score was partly our own vocabulary and that we
+         were fixing it. Connect & Conserve then added 1,878 common names and re-ran the
+         entire search: 15,959 search surfaces against 14,085 before, and not one additional
+         organization named one additional species. A caveat that has been tested is no
+         longer a caveat, and leaving it up would have understated our own finding. -->
+    <p class="homecaveat">One caveat, because we thought it cut against us. Searching for a
       species means searching for its name, and a frog described in 2019 usually has no common
-      name yet, only a Latin one. Our newest list scored lowest of the four, and part of that
-      is our own vocabulary rather than the world's neglect. We are fixing it by pulling names
-      out of the papers the species were described in. The comparison between the older lists
-      holds either way.</p>
+      name yet, only a Latin one. Our newest list scored lowest of the four, so we went and
+      found 1,878 of those missing names and ran the whole search again. Nothing moved. These
+      species go unmentioned in English exactly as thoroughly as they go unmentioned in
+      Latin.</p>
   </div>
 
   <div class="prose">
@@ -3694,23 +3704,28 @@ function boot() {
      (53.6% to 55.6%), so a typed 162 would have quietly drifted away from the two figures
      it is derived from and from the methods page that states them.
 
-     NO COUNT OF THE NARROW-RANGE STRATUM, for two reasons. It would be the second number in
-     a sentence whose whole purpose is to carry one, and the obvious value to reach for is
-     wrong: priority_dd is 1,113 and counts Data Deficient only, while this sentence spans
-     Data Deficient AND Not Evaluated, where the stratum is 1,120. The count is not carrying
-     the message, so it goes.
+     "stuck at Data Deficient" and NOT "Data Deficient and Not Evaluated", which is what
+     scopes the 1,113 correctly. priority_dd counts the narrow-range stratum among the Data
+     Deficient only; across Data Deficient plus the 31 Not Evaluated it is 1,120. Naming one
+     category in the sentence and its own count beside it is exact. Naming both categories
+     and then quoting the Data Deficient count would be off by the seven Not Evaluated
+     species that sit in the stratum.
 
-     "flags the ones whose records" and not the whole register: the Black List is all 3,062
-     Data Deficient and Not Evaluated vertebrates, and the narrow-range stratum is a subset.
-     The efficiency gain comes from preferring that stratum OVER the broader-range species,
-     so a sentence implying the whole list delivers it is claiming more than was measured. */
+     BOTH NUMBERS ARE READ FROM THE DATA, neither is typed. The rates behind the multiplier
+     move whenever IUCN reassesses more of the validation set, and they moved once already
+     this month, 53.6% to 55.6%. priority_dd is anchored by 15_check_figures.py, so if the
+     stratum changes size this sentence changes with it or the build fails.
+
+     The gain comes from preferring the narrow-range stratum OVER the broader-range species,
+     which is why the sentence says "than by choosing species with broader ranges" and not
+     "than otherwise". The reader should never have to reconstruct the comparison group. */
   const A = m.across_lists;
   if (v && v.high && v.low && v.low.rate) {
     const gain = Math.round((v.high.rate / v.low.rate - 1) * 100);
-    STATS.push(`The Black List holds every vertebrate stuck at Data Deficient and Not
-      Evaluated, and flags the ones whose records already describe a tiny range. Start there
-      and threatened species are uncovered <strong>${gain}%</strong> more efficiently than
-      by choosing species with broader ranges.`);
+    STATS.push(`The Black List holds every vertebrate stuck at Data Deficient and flags the
+      <strong>${n(c.priority_dd)}</strong> whose records already describe a tiny range. If
+      IUCN assessed these then threatened species are uncovered <strong>${gain}%</strong>
+      more efficiently than by choosing species with broader ranges.`);
   }
   if (A && A.central) {
     // Rounded to the nearest hundred. "Roughly 2,697" claims a precision the number

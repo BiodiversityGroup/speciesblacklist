@@ -3690,23 +3690,28 @@ function boot() {
      (53.6% to 55.6%), so a typed 162 would have quietly drifted away from the two figures
      it is derived from and from the methods page that states them.
 
-     NO COUNT OF THE NARROW-RANGE STRATUM, for two reasons. It would be the second number in
-     a sentence whose whole purpose is to carry one, and the obvious value to reach for is
-     wrong: priority_dd is 1,113 and counts Data Deficient only, while this sentence spans
-     Data Deficient AND Not Evaluated, where the stratum is 1,120. The count is not carrying
-     the message, so it goes.
+     "stuck at Data Deficient" and NOT "Data Deficient and Not Evaluated", which is what
+     scopes the 1,113 correctly. priority_dd counts the narrow-range stratum among the Data
+     Deficient only; across Data Deficient plus the 31 Not Evaluated it is 1,120. Naming one
+     category in the sentence and its own count beside it is exact. Naming both categories
+     and then quoting the Data Deficient count would be off by the seven Not Evaluated
+     species that sit in the stratum.
 
-     "flags the ones whose records" and not the whole register: the Black List is all 3,062
-     Data Deficient and Not Evaluated vertebrates, and the narrow-range stratum is a subset.
-     The efficiency gain comes from preferring that stratum OVER the broader-range species,
-     so a sentence implying the whole list delivers it is claiming more than was measured. */
+     BOTH NUMBERS ARE READ FROM THE DATA, neither is typed. The rates behind the multiplier
+     move whenever IUCN reassesses more of the validation set, and they moved once already
+     this month, 53.6% to 55.6%. priority_dd is anchored by 15_check_figures.py, so if the
+     stratum changes size this sentence changes with it or the build fails.
+
+     The gain comes from preferring the narrow-range stratum OVER the broader-range species,
+     which is why the sentence says "than by choosing species with broader ranges" and not
+     "than otherwise". The reader should never have to reconstruct the comparison group. */
   const A = m.across_lists;
   if (v && v.high && v.low && v.low.rate) {
     const gain = Math.round((v.high.rate / v.low.rate - 1) * 100);
-    STATS.push(`The Black List holds every vertebrate stuck at Data Deficient and Not
-      Evaluated, and flags the ones whose records already describe a tiny range. Start there
-      and threatened species are uncovered <strong>${gain}%</strong> more efficiently than
-      by choosing species with broader ranges.`);
+    STATS.push(`The Black List holds every vertebrate stuck at Data Deficient and flags the
+      <strong>${n(c.priority_dd)}</strong> whose records already describe a tiny range. If
+      IUCN assessed these then threatened species are uncovered <strong>${gain}%</strong>
+      more efficiently than by choosing species with broader ranges.`);
   }
   if (A && A.central) {
     // Rounded to the nearest hundred. "Roughly 2,697" claims a precision the number
