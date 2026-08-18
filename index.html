@@ -1544,11 +1544,18 @@
          127 and not 128: 8,016 species nobody names, divided by the 63 somebody does,
          is 127.2. 128 is what you get dividing the TOTAL by 63, which is a different
          sentence from the one written here. -->
+    <!-- The condensed form of this is a headline in the rotation at the top of the page.
+         This is the long form and they must not converge: a reader who has just read the
+         headline should get the detail here, not the same three sentences again. -->
     <p>We wondered whether anybody was, so we checked. Our sister project
       <a href="https://connectandconserve.org" target="_blank" rel="noopener">Connect &amp;
-      Conserve</a> maps every organization worldwide. We pointed it at all eight thousand
-      species on these four lists. For every Black List species an org mentions,
-      <strong>127</strong> have no mention at all. That is Life Overlooked.</p>
+      Conserve</a> maps the conservation sector, every organization it can find and what each
+      one says it works on. In August 2026 it searched those organizations for every one of
+      the eight thousand species on the four lists here.</p>
+    <p><strong>Sixty three came back.</strong> Not sixty three percent, not sixty three
+      hundred. Sixty three species, out of eight thousand, have any organization anywhere
+      that names them. For every species with somebody's name attached, <strong>127</strong>
+      have nobody at all.</p>
     <p>And the money follows the same shape. Ray-finned fishes are half of the Black List, by
       far the largest group of species nobody can categorize, and per species they receive
       roughly <strong>a sixth</strong> of what mammals do. Birds carry barely one percent of
@@ -3727,6 +3734,21 @@ function boot() {
       IUCN assessed these then threatened species are uncovered <strong>${gain}%</strong>
       more efficiently than by choosing species with broader ranges.`);
   }
+  /* SECOND. The two headlines Scott wrote sit together: the first says what the list is for,
+     this one says what the sector currently does about it.
+
+     THESE TWO FIGURES ARE TYPED, and they are the only typed numbers in this array. They
+     come from Connect & Conserve's August 2026 pass over its own organization corpus, not
+     from anything this build computes, so there is no local artifact for 15_check_figures.py
+     to anchor them against. If C&C re-runs the scrape, this line has to be edited by hand.
+     The derivation, so the next person can redo it: 63 species are named by at least one
+     organization and 8,016 by none, and 8,016 / 63 = 127.2. NOT 8,079 / 63 = 128.2, which
+     answers a different question than the sentence asks. */
+  STATS.push(`Our sister project <a href="https://connectandconserve.org" target="_blank"
+    rel="noopener">Connect &amp; Conserve</a> maps every conservation organization worldwide.
+    We pointed it at all eight thousand species on these four lists. For every Black List
+    species an org mentions, <strong>127</strong> have no mention at all. That is Life
+    Overlooked.`);
   if (A && A.central) {
     // Rounded to the nearest hundred. "Roughly 2,697" claims a precision the number
     // does not have, and a headline that says roughly should look roughly.

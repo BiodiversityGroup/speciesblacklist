@@ -3867,6 +3867,21 @@ function boot() {
       IUCN assessed these then threatened species are uncovered <strong>${gain}%</strong>
       more efficiently than by choosing species with broader ranges.`);
   }
+  /* SECOND. The two headlines Scott wrote sit together: the first says what the list is for,
+     this one says what the sector currently does about it.
+
+     THESE TWO FIGURES ARE TYPED, and they are the only typed numbers in this array. They
+     come from Connect & Conserve's August 2026 pass over its own organization corpus, not
+     from anything this build computes, so there is no local artifact for 15_check_figures.py
+     to anchor them against. If C&C re-runs the scrape, this line has to be edited by hand.
+     The derivation, so the next person can redo it: 63 species are named by at least one
+     organization and 8,016 by none, and 8,016 / 63 = 127.2. NOT 8,079 / 63 = 128.2, which
+     answers a different question than the sentence asks. */
+  STATS.push(`Our sister project <a href="https://connectandconserve.org" target="_blank"
+    rel="noopener">Connect &amp; Conserve</a> maps every conservation organization worldwide.
+    We pointed it at all eight thousand species on these four lists. For every Black List
+    species an org mentions, <strong>127</strong> have no mention at all. That is Life
+    Overlooked.`);
   if (A && A.central) {
     // Rounded to the nearest hundred. "Roughly 2,697" claims a precision the number
     // does not have, and a headline that says roughly should look roughly.
