@@ -3640,19 +3640,23 @@ function boot() {
      (53.6% to 55.6%), so a typed 162 would have quietly drifted away from the two figures
      it is derived from and from the methods page that states them.
 
-     "the 1,120 whose records" and not the whole register: the Black List is all 3,062 Data
-     Deficient and Not Evaluated vertebrates, and the narrow-range stratum is 1,120 of them.
+     NO COUNT OF THE NARROW-RANGE STRATUM, for two reasons. It would be the second number in
+     a sentence whose whole purpose is to carry one, and the obvious value to reach for is
+     wrong: priority_dd is 1,113 and counts Data Deficient only, while this sentence spans
+     Data Deficient AND Not Evaluated, where the stratum is 1,120. The count is not carrying
+     the message, so it goes.
+
+     "flags the ones whose records" and not the whole register: the Black List is all 3,062
+     Data Deficient and Not Evaluated vertebrates, and the narrow-range stratum is a subset.
      The efficiency gain comes from preferring that stratum OVER the broader-range species,
      so a sentence implying the whole list delivers it is claiming more than was measured. */
   const A = m.across_lists;
   if (v && v.high && v.low && v.low.rate) {
     const gain = Math.round((v.high.rate / v.low.rate - 1) * 100);
-    const narrow = (m.counts && m.counts.priority_dd) || c.priority_dd;
     STATS.push(`The Black List holds every vertebrate stuck at Data Deficient and Not
-      Evaluated, and flags the <strong>${n(narrow)}</strong> whose records already describe
-      a tiny range. Start there and threatened species are uncovered
-      <strong>${gain}%</strong> more efficiently than by choosing species with broader
-      ranges.`);
+      Evaluated, and flags the ones whose records already describe a tiny range. Start there
+      and threatened species are uncovered <strong>${gain}%</strong> more efficiently than
+      by choosing species with broader ranges.`);
   }
   if (A && A.central) {
     // Rounded to the nearest hundred. "Roughly 2,697" claims a precision the number
