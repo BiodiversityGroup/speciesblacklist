@@ -1,14 +1,14 @@
 {
-"built": "2026-08-16",
+"built": "2026-08-19",
 "counts": {
-"stories": 121,
-"raw_items": 303,
-"with_species": 76,
-"distinct_species": 161,
-"distinct_species_firm": 31,
-"multi_species_cards": 30,
-"with_image": 120,
-"syndicated": 55,
+"stories": 127,
+"raw_items": 315,
+"with_species": 77,
+"distinct_species": 163,
+"distinct_species_firm": 33,
+"multi_species_cards": 31,
+"with_image": 124,
+"syndicated": 56,
 "on_tbg_list": 22,
 "on_list_breakdown": {
 "on our lost-species list": 19,
@@ -17,8 +17,8 @@
 "undated": 0,
 "newest": "Thu, 13 Aug 2026",
 "tracked_names": 6709,
-"image_local": 115,
-"archived": 92
+"image_local": 119,
+"archived": 94
 },
 "cards": [
 {
@@ -79,6 +79,46 @@
 "image": "/rd-img/bed6b28e1b0a31cc.jpg",
 "wayback": "",
 "desc": "The wild capture and release of a female big cat into a nature reserve is the first step towards reintroducing a population that hasn\u2019t been seen for 70 years",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "Kenyan Birders rediscover rare Red Weaver bird in Boni Forest after 12 years",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Citizen Digital",
+"date": "Thu, 06 Aug 2026",
+"ts": 1785999600,
+"first_seen": "2026-08-19",
+"link": "https://citizen.digital/article/kenyan-birders-rediscover-rare-red-weaver-bird-in-boni-forest-after-12-years-n387839",
+"image": "/rd-img/83e1d6a31dc0f355.jpg",
+"wayback": "",
+"desc": "Two Kenyan birders, James Apolloh Omenya and Simon Odhiambo, have gained global acclaim after their recent sighting of the elusive Red Weaver Bird in the Boni-Dodori Forest in Lamu County last month.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "A rare yellow-flowered California plant unseen since 1957 has been rediscovered after 68 years",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "The Times of India",
+"date": "Wed, 05 Aug 2026",
+"ts": 1785913200,
+"first_seen": "2026-08-19",
+"link": "https://timesofindia.indiatimes.com/science/a-rare-yellow-flowered-california-plant-unseen-since-1957-has-been-rediscovered-after-68-years/articleshow/132847809.cms",
+"image": "/rd-img/36ec521b2e0e8e42.jpg",
+"wayback": "",
+"desc": "A small, yellow-flowered California native plant that had not been documented in nearly seven decades has been rediscovered in the hills of eastern Contra Costa County. The caper-fruited Tropidocarpum, last recorded in 1957, was found on March 3, 2025, by bota",
 "citation": "",
 "kind": "",
 "note": "",
@@ -189,6 +229,53 @@
 "note": "",
 "outlets": 1,
 "also": []
+},
+{
+"title": "The Rediscovery of Lost Species in Arunachal Pradesh: A Frontier of Scientific Discovery",
+"species": [
+"Vaccinium piliferum",
+"Hemipilia basifoliata",
+"Geum macrosepalum"
+],
+"species_firm": [
+"Vaccinium piliferum"
+],
+"on_list": "",
+"detail": "",
+"publisher": "MyGov Blogs",
+"date": "Thu, 02 Jul 2026",
+"ts": 1782975600,
+"first_seen": "2026-08-10",
+"link": "https://blog.mygov.in/the-rediscovery-of-lost-species-in-arunachal-pradesh-a-frontier-of-scientific-discovery/",
+"image": "/rd-img/aba6544582a7f025.jpg",
+"wayback": "http://web.archive.org/web/20260812123330/https://theprint.in/india/rare-blueberry-species-rediscovered-in-arunachal-after-188-years/2942194/",
+"desc": "Itanagar, May 26 (PTI) Researchers have rediscovered \u2018Vaccinium piliferum\u2019, a rare and endangered wild relative of the blueberry, in the remote forests of Vijoynagar in Arunachal Pradesh\u2019s Changlang district, nearly 188 years after it was first recorded in 183",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 10,
+"also": [
+{
+"publisher": "GK Today",
+"link": "https://www.gktoday.in/rare-blueberry-species-rediscovered-in-arunachal-pradesh/"
+},
+{
+"publisher": "India Today NE",
+"link": "https://www.indiatodayne.in/arunachal-pradesh/story/rare-wild-blueberry-relative-rediscovered-in-arunachal-after-188-years-1398132-2026-05-26"
+},
+{
+"publisher": "Northeast Live",
+"link": "https://northeastlivetv.com/topnews/rare-blueberry-species-rediscovered-in-arunachal-forest-after-188-years/"
+},
+{
+"publisher": "Northeast Live",
+"link": "https://northeastlivetv.com/topnews/rare-blueberry-species-rediscovered-in-arunachal-forest-after-188-years/"
+},
+{
+"publisher": "MyGov Blogs",
+"link": "https://blog.mygov.in/the-rediscovery-of-lost-species-in-arunachal-pradesh-a-frontier-of-scientific-discovery/"
+}
+]
 },
 {
 "title": "Rare flowering plant rediscovered in Mount Apo after 122 years",
@@ -429,51 +516,6 @@
 ]
 },
 {
-"title": "Rare blueberry species rediscovered in Arunachal after 188 years",
-"species": [
-"Vaccinium piliferum"
-],
-"species_firm": [
-"Vaccinium piliferum"
-],
-"on_list": "",
-"detail": "",
-"publisher": "ThePrint",
-"date": "Tue, 26 May 2026",
-"ts": 1779778800,
-"first_seen": "2026-08-10",
-"link": "https://theprint.in/india/rare-blueberry-species-rediscovered-in-arunachal-after-188-years/2942194/",
-"image": "/rd-img/aba6544582a7f025.jpg",
-"wayback": "http://web.archive.org/web/20260812123330/https://theprint.in/india/rare-blueberry-species-rediscovered-in-arunachal-after-188-years/2942194/",
-"desc": "Itanagar, May 26 (PTI) Researchers have rediscovered \u2018Vaccinium piliferum\u2019, a rare and endangered wild relative of the blueberry, in the remote forests of Vijoynagar in Arunachal Pradesh\u2019s Changlang district, nearly 188 years after it was first recorded in 183",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 8,
-"also": [
-{
-"publisher": "GK Today",
-"link": "https://www.gktoday.in/rare-blueberry-species-rediscovered-in-arunachal-pradesh/"
-},
-{
-"publisher": "India Today NE",
-"link": "https://www.indiatodayne.in/arunachal-pradesh/story/rare-wild-blueberry-relative-rediscovered-in-arunachal-after-188-years-1398132-2026-05-26"
-},
-{
-"publisher": "Northeast Live",
-"link": "https://northeastlivetv.com/topnews/rare-blueberry-species-rediscovered-in-arunachal-forest-after-188-years/"
-},
-{
-"publisher": "Northeast Live",
-"link": "https://northeastlivetv.com/topnews/rare-blueberry-species-rediscovered-in-arunachal-forest-after-188-years/"
-},
-{
-"publisher": "Wiley Online Library",
-"link": "https://onlinelibrary.wiley.com/doi/10.1002/fedr.70107"
-}
-]
-},
-{
 "title": "Massive rediscovery after $20m spend on Aussie island",
 "species": [
 "Panesthia lata"
@@ -528,7 +570,9 @@
 "Thismia kobensis",
 "Erica cunoniensis"
 ],
-"species_firm": [],
+"species_firm": [
+"Ptilotus senarius"
+],
 "on_list": "",
 "detail": "",
 "publisher": "ScienceDaily",
@@ -536,25 +580,33 @@
 "ts": 1779087600,
 "first_seen": "2026-08-10",
 "link": "https://www.sciencedaily.com/releases/2026/05/260517211447.htm",
-"image": "/rd-img/378fe96dccb976db.jpg",
-"wayback": "http://web.archive.org/web/20260209175711/https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years",
-"desc": "\u2018Extinct\u2019 Queensland plant rediscovered after 58 years\n\t\t\t\t\t\n\t\t\tA plant species presumed extinct in the wild has been rediscovered in northern Queensland\u2014thanks to a sharp-eyed observer, a smartpho",
+"image": "/rd-img/adcc41bbee7e7859.jpg",
+"wayback": "http://web.archive.org/web/20260718182246/https://www.sciencedaily.com/releases/2026/05/260517211447.htm",
+"desc": "A random photo snapped in the Australian outback has led to the rediscovery of a plant thought extinct for nearly 60 years \u2014 proving that ordinary people with smartphones are quietly transforming science. After bird bander Aaron Bean uploaded pictures of a str",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 10,
+"outlets": 11,
 "also": [
 {
-"publisher": "Scimex",
-"link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
+"publisher": "ScienceDaily",
+"link": "https://www.sciencedaily.com/releases/2026/05/260517211447.htm"
 },
 {
 "publisher": "ScienceDaily",
 "link": "https://www.sciencedaily.com/releases/2026/05/260517211447.htm"
 },
 {
-"publisher": "Newsweek",
-"link": "https://www.newsweek.com/botany-plant-believed-extinct-half-century-found-queensland-australia-11373400"
+"publisher": "SciTechDaily",
+"link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/"
+},
+{
+"publisher": "The Cool Down",
+"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/"
+},
+{
+"publisher": "scimex.org",
+"link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
 }
 ]
 },
@@ -1256,9 +1308,7 @@
 },
 {
 "title": "Elusive wild cat feared extinct rediscovered in Thailand",
-"species": [
-"Prionailurus planiceps"
-],
+"species": [],
 "species_firm": [],
 "on_list": "",
 "detail": "",
@@ -1276,18 +1326,40 @@
 "outlets": 4,
 "also": [
 {
-"publisher": "The News International",
-"link": "https://www.thenews.com.pk/latest/1386222-worlds-rarest-flat-headed-cats-rediscovered-in-thailand-after-30-years"
-},
-{
 "publisher": "Moneycontrol",
 "link": "https://www.moneycontrol.com/science/a-rare-flat-headed-cat-rediscovered-in-thailand-after-nearly-30-years-article-13744154.html"
 },
 {
 "publisher": "france24.com",
 "link": "https://www.france24.com/en/live-news/20251226-elusive-wild-cat-feared-extinct-rediscovered-in-thailand"
+},
+{
+"publisher": "Asia News Network",
+"link": "https://asianews.network/elusive-wild-flat-headed-cat-rediscovered-in-thailand/"
 }
 ]
+},
+{
+"title": "World's rarest flat-headed cats rediscovered in Thailand after 30 years",
+"species": [
+"Prionailurus planiceps"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "The News International",
+"date": "Fri, 26 Dec 2025",
+"ts": 1766736000,
+"first_seen": "2026-08-10",
+"link": "https://www.thenews.com.pk/latest/1386222-worlds-rarest-flat-headed-cats-rediscovered-in-thailand-after-30-years",
+"image": "/rd-img/849a672bd7975f0c.jpg",
+"wayback": "http://web.archive.org/web/20260811152631/https://www.thenews.com.pk/latest/1386222-worlds-rarest-flat-headed-cats-rediscovered-in-thailand-after-30-years",
+"desc": "In a recent unique discovery, researchers have photographed the world",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
 },
 {
 "title": "Back from the dead: \u201cExtinct\u201d fish rediscovered in a remote Bolivian pond after 20 years",
@@ -1506,7 +1578,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
 {
 "publisher": "Deccan Herald",
@@ -1575,7 +1647,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
 {
 "publisher": "Miami Herald",
@@ -2209,7 +2281,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 15,
+"outlets": 16,
 "also": [
 {
 "publisher": "The Independent",
@@ -2577,6 +2649,46 @@
 "image": "/rd-img/56fdd0b49c5ce632.jpg",
 "wayback": "http://web.archive.org/web/20260812045113/https://timesofindia.indiatimes.com/world/rest-of-world/lost-species-of-chilean-angel-shark-resurfaces-after-more-than-a-century/articleshow/109660434.cms",
 "desc": "Rest of World News: Artisanal fishermen off the Chilean coast accidentally rediscovered a presumed lost species, the Chilean angel shark, described in the 1880s. A recent",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "\u2018Lost\u2019 species rediscovered after 100 years when Florida university gets donation",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Miami Herald",
+"date": "Wed, 17 Apr 2024",
+"ts": 1713337200,
+"first_seen": "2026-08-19",
+"link": "https://www.miamiherald.com/news/state/florida/article287765085.html",
+"image": "",
+"wayback": "",
+"desc": "",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "\u2018Spectacular\u2019 bird \u2014 lost for decades \u2014 is rediscovered. See the \u2018mind-blowing\u2019 photo",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Miami Herald",
+"date": "Fri, 23 Feb 2024",
+"ts": 1708675200,
+"first_seen": "2026-08-19",
+"link": "https://www.miamiherald.com/news/nation-world/world/article285739561.html",
+"image": "",
+"wayback": "",
+"desc": "",
 "citation": "",
 "kind": "",
 "note": "",
@@ -3072,6 +3184,39 @@
 "note": "",
 "outlets": 1,
 "also": []
+},
+{
+"title": "Lost species of chameleon rediscovered by scientists",
+"species": [
+"Furcifer voeltzkowi"
+],
+"species_firm": [
+"Furcifer voeltzkowi"
+],
+"on_list": "",
+"detail": "",
+"publisher": "cnn.com",
+"date": "Sat, 31 Oct 2020",
+"ts": 1604127600,
+"first_seen": "2026-08-10",
+"link": "https://www.cnn.com/videos/us/2020/10/31/lost-chameleon-species-furcifer-voeltzkowi-found-orig-kj.cnn",
+"image": "/rd-img/6697bf8b1372da09.jpg",
+"wayback": "http://web.archive.org/web/20260811154943/https://www.cnn.com/videos/us/2020/10/31/lost-chameleon-species-furcifer-voeltzkowi-found-orig-kj.cnn",
+"desc": "Furcifer voeltzkowi chameleons were found in Madagascar, including females whose color pattern changes when stressed, pregnant or encountering males.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 3,
+"also": [
+{
+"publisher": "CNN",
+"link": "https://www.cnn.com/videos/us/2020/10/31/lost-chameleon-species-furcifer-voeltzkowi-found-orig-kj.cnn"
+},
+{
+"publisher": "Labroots",
+"link": "https://www.labroots.com/trending/nature/19101/scientists-rediscover-lost-chameleon-species-madagascar"
+}
+]
 },
 {
 "title": "Tiny Elephant Shrew Resurfaces After More Than 50 Years On Lost Species List",
