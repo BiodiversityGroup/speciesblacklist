@@ -12904,8 +12904,8 @@
 ]
 ],
 "meta": {
-"n_species": 2123,
-"n_mapped": 2067,
+"n_species": 2121,
+"n_mapped": 2065,
 "n_unmapped": 56,
 "n_places": 208,
 "compiled": "January 2023",
@@ -12950,7 +12950,7 @@
 "EX": 81,
 "EN": 98,
 "LC": 206,
-"not in IUCN index": 280,
+"not in IUCN index": 278,
 "VU": 58,
 "NT": 21,
 "NE": 90,
@@ -12958,10 +12958,10 @@
 },
 "oldest_record": 1790,
 "median_last": 1965,
-"n_dated": 1870,
-"n_1800s": 266,
+"n_dated": 1868,
+"n_1800s": 265,
 "by_date_precision": {
-"year": 1774,
+"year": 1772,
 "none": 223,
 "decade": 96,
 "century": 26,
@@ -13517,16 +13517,16 @@
 "place": "Vietnam",
 "lat": 15.927,
 "lon": 107.965,
-"n": 35,
+"n": 34,
 "grp": {
-"Reptile": 22,
+"Reptile": 21,
 "Bivalve molluscs (clams, oysters, mussels, scallops, etc.)": 4,
 "Mammal": 2,
 "Wingless Anthropods": 2,
 "Insect": 1
 },
 "cls": {
-"lost": 23,
+"lost": 22,
 "long-lost": 8,
 "unclassified": 4
 },
@@ -13534,8 +13534,8 @@
 "DD": 15,
 "CR(PE)": 7,
 "CR": 4,
-"not in IUCN index": 4,
 "LC": 4,
+"not in IUCN index": 3,
 "NT": 1
 },
 "examples": [
@@ -14851,33 +14851,6 @@
 "cc": "Syria"
 },
 {
-"place": "Sulawesi",
-"lat": -1.976,
-"lon": 120.295,
-"n": 7,
-"grp": {
-"Reptile": 5,
-"Fish": 2
-},
-"cls": {
-"lost": 4,
-"long-lost": 3
-},
-"rl": {
-"DD": 3,
-"not in IUCN index": 3,
-"CR(PE)": 1
-},
-"examples": [
-"Adrianichthys kruyti",
-"Cyrtodactylus batik",
-"Luperosaurus iskandari",
-"Pseudorabdion sirambense"
-],
-"oldest": 1890,
-"cc": ""
-},
-{
 "place": "Nigeria",
 "lat": 9.6,
 "lon": 8.0,
@@ -15085,6 +15058,33 @@
 "Guadeloupe: Grande Terre"
 ],
 "cc": "Guadeloupe"
+},
+{
+"place": "Sulawesi",
+"lat": -1.976,
+"lon": 120.295,
+"n": 6,
+"grp": {
+"Reptile": 4,
+"Fish": 2
+},
+"cls": {
+"lost": 4,
+"long-lost": 2
+},
+"rl": {
+"DD": 3,
+"not in IUCN index": 2,
+"CR(PE)": 1
+},
+"examples": [
+"Adrianichthys kruyti",
+"Cyrtodactylus batik",
+"Luperosaurus iskandari",
+"Pseudorabdion sirambense"
+],
+"oldest": 1890,
+"cc": ""
 },
 {
 "place": "Guinea",
@@ -18646,12 +18646,12 @@
 "range": "United States (Hawaii)"
 },
 {
-"sp": "Paracontias rothschildi",
-"common": "Rothschild's Skink",
-"descriptor": "Madagascan reptile",
+"sp": "Petracola angustisoma",
+"common": "",
+"descriptor": "Peruvian reptile",
 "group": "Reptile",
 "last": 2007,
-"range": "Madagascar"
+"range": "Peru"
 },
 {
 "sp": "Isbrueckerichthys alipionis",
@@ -18838,12 +18838,12 @@
 "range": "Ethiopia"
 },
 {
-"sp": "Calotes bhutanensis",
-"common": "Bhutan-Sch\u00f6nechse",
-"descriptor": "Reptile from Bhutan",
+"sp": "Copeoglossum margaritae",
+"common": "Margarita Skink",
+"descriptor": "Reptile from Isla de Margarita",
 "group": "Reptile",
 "last": 1967,
-"range": "Bhutan"
+"range": "Isla de Margarita"
 },
 {
 "sp": "Leptolebias splendens",
@@ -18990,8 +18990,8 @@
 "range": "New Caledonia"
 },
 {
-"sp": "Emoia loyaltiensis",
-"common": "Roux's Emo Skink",
+"sp": "Lerista puncticauda",
+"common": "Dotty-tailed Robust Slider",
 "descriptor": "Reptile from Australasia",
 "group": "Reptile",
 "last": 2003,
@@ -19118,12 +19118,12 @@
 "range": "South Africa"
 },
 {
-"sp": "Lepidophyma chicoasensis",
-"common": "Sumidero Tropical Night Lizard",
-"descriptor": "Mexican reptile",
+"sp": "Lerista quadrivincula",
+"common": "Four-chained Slider",
+"descriptor": "Australian reptile",
 "group": "Reptile",
 "last": 1980,
-"range": "Mexico"
+"range": "Australia"
 },
 {
 "sp": "Deuterodon rosae",
@@ -19544,7 +19544,7 @@
 },
 {
 "c": "Vietnam",
-"lost": 29,
+"lost": 28,
 "new": 64
 },
 {

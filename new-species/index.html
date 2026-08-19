@@ -2325,7 +2325,7 @@ function nightReveal(s, found, total) {
   const yr = s.last ? String(s.last) : "?";
   const gap = s.last ? (new Date().getFullYear() - s.last) : null;
   const card = $("#nightCard");
-  const n = (LOST && LOST.meta && LOST.meta.n_species) || 2123;
+  const n = (LOST && LOST.meta && LOST.meta.n_species) || 2121;
   const kicker = NIGHT_LINES[nightLine % NIGHT_LINES.length](n);
   nightLine++;
   const grp = s.group || "";
