@@ -1422,18 +1422,25 @@
   </div>
 
   <!-- ONE DROPDOWN PER TOPIC, replacing a single "New & Lost Species" group, so each
-       list can have its own page beside the analysis it comes from. The shape copies the
-       Black List group above: "What this is" for the essay, the list's own name for the
-       table. "What this is" now appears in three menus, which is deliberate. A reader sees
-       one menu open at a time, so the repetition never shows, and the label means the same
-       thing everywhere it appears. -->
+       list can have its own page beside the analysis it comes from.
+
+       NAMING, on Scott's instruction of 2026-08-19. The essay child carries the topic's
+       own name and the table child is "The List". That repeats the group label on its
+       first child, the same trade the Black List group above already makes and for the
+       same reason: a page should be called what it is, not what you do on it. The earlier
+       version used "What this is" for the essay, which read as a description of an action
+       rather than a name.
+
+       "The List" now appears in both menus. A reader sees one menu open at a time, so the
+       repetition never shows, and inside a menu headed "New Species" there is no question
+       which list it means. -->
   <div class="navgroup" data-group="newtaxa">
     <button class="navitem navtoggle" type="button" aria-expanded="false"
             aria-controls="navm-newtaxa">New Species <span class="caret"
             aria-hidden="true">&#9662;</span></button>
     <div class="navmenu" id="navm-newtaxa" hidden>
-      <a href="/new-species/" data-v="newtaxa">What this is</a>
-      <a href="/new-species-list/" data-v="newtaxa-list">New Species</a>
+      <a href="/new-species/" data-v="newtaxa">New Species</a>
+      <a href="/new-species-list/" data-v="newtaxa-list">The List</a>
     </div>
   </div>
 
@@ -1442,8 +1449,8 @@
             aria-controls="navm-lost">Lost Species <span class="caret"
             aria-hidden="true">&#9662;</span></button>
     <div class="navmenu" id="navm-lost" hidden>
-      <a href="/lost-species/" data-v="lost">What this is</a>
-      <a href="/lost-species-list/" data-v="lost-list">Lost Species</a>
+      <a href="/lost-species/" data-v="lost">Lost Species</a>
+      <a href="/lost-species-list/" data-v="lost-list">The List</a>
     </div>
   </div>
 
