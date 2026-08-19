@@ -3432,6 +3432,11 @@ function markClippable(root) {
   }
   addEventListener("resize", schedule);
   addEventListener("load", schedule);
+  // AFTER THE FONT SWAPS. Measured against the fallback face, ten cells in the register
+  // reported that they fitted and then overflowed once the real font arrived, so they
+  // rendered with no way to open them. Line height is a function of the font, so any
+  // measurement taken before it loads is a measurement of the wrong document.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
   schedule();
 })();
 
