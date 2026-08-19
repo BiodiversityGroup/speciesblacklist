@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Map · The Species Black List</title>
+<title>New Species: the full list · The Species Black List</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Density of georeferenced specimen records for Data Deficient and unassessed vertebrates, layered by restriction tier, with cross-checked locality points.">
+<meta name="description" content="Search and filter every reptile, amphibian, bird and mammal described since 2015 that the IUCN Red List has never assessed, by family, country, geographic extent and how far the evidence for a narrow range can be trusted.">
 <meta name="color-scheme" content="light dark">
-<link rel="canonical" href="https://speciesblacklist.org/map/">
+<link rel="canonical" href="https://speciesblacklist.org/new-species-list/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
 <!-- Shared-link previews. The advocacy case for this list travels by link,
      so a bare URL with no card is a wasted send. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Biodiversity Group">
-<meta property="og:url" content="https://speciesblacklist.org/map/">
-<meta property="og:title" content="Map · The Species Black List">
-<meta property="og:description" content="Density of georeferenced specimen records for Data Deficient and unassessed vertebrates, layered by restriction tier, with cross-checked locality points.">
+<meta property="og:url" content="https://speciesblacklist.org/new-species-list/">
+<meta property="og:title" content="New Species: the full list · The Species Black List">
+<meta property="og:description" content="Search and filter every reptile, amphibian, bird and mammal described since 2015 that the IUCN Red List has never assessed, by family, country, geographic extent and how far the evidence for a narrow range can be trusted.">
 <!-- Purpose-built card, drawn by scripts/23_build_og_card.py. The previous one was a
      screenshot of the homepage: correctly 1200x630, but with page-sized type, so once
      a composer scaled and cropped it to fill, the title read "ecies Black List" and the
@@ -28,8 +28,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="A dark card. A small amber label reads THE SPECIES BLACK LIST, then in large serif type, Life Overlooked. Below it: Not endangered. Not extinct. Just unaccounted for. Then smaller text saying thousands of species have no extinction risk category at all, so nothing protects them and nobody is counting. Across the lower third runs a band of small squares in shades of amber and rust, one for each species. The foot reads speciesblacklist.org and THE BIODIVERSITY GROUP.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Map · The Species Black List">
-<meta name="twitter:description" content="Density of georeferenced specimen records for Data Deficient and unassessed vertebrates, layered by restriction tier, with cross-checked locality points.">
+<meta name="twitter:title" content="New Species: the full list · The Species Black List">
+<meta name="twitter:description" content="Search and filter every reptile, amphibian, bird and mammal described since 2015 that the IUCN Red List has never assessed, by family, country, geographic extent and how far the evidence for a narrow range can be trusted.">
 <meta name="twitter:image" content="https://speciesblacklist.org/og-card.png?v=b0c62c2a87">
 <meta name="twitter:image:alt" content="Life Overlooked. Not endangered, not extinct, just unaccounted for. Over a band of amber marks, one per species.">
 
@@ -1453,370 +1453,30 @@
 
 <!-- ============================== OVERVIEW ============================== -->
 <!-- ============================ SITE OVERVIEW ============================ -->
-<section class="view" id="v-overview" hidden>
- <div class="hero">
-  <div class="wrap">
-    <div class="intro">
-      <p class="eyebrow">What this is</p>
-      <h2>A species can be lost without ever having been counted as at risk.</h2>
-      <p class="lede">The IUCN Red List is the world's authority on extinction risk, and
-        it has two blind spots. Some species are assessed and come back
-        <strong>Data Deficient</strong>, meaning IUCN looked and there was not enough
-        information to say. Others are <strong>Not Evaluated</strong>, meaning nobody has
-        looked at all. In practice both are treated as though the species were safe.</p>
-      <p class="lede"><strong>The gap is much bigger than this list.</strong> IUCN
-        v2026&#8209;1 records <strong>8,659</strong> vertebrates as Data Deficient, and the
-        number never assessed is larger again; nobody knows it precisely. The Reptile
-        Database alone holds <strong>2,345 reptiles</strong> the Red List has no entry
-        for, and <a href="/new-species/" data-goto="newtaxa">a separate count</a> finds
-        3,088 reptiles, amphibians, birds and mammals described since 2015 that have
-        never been assessed. What follows is a <em>ranked subset</em> of that gap, not a
-        measure of it.</p>
-      <!-- The scale caveat above has always been here. What was missing is the SAMPLING
-           FRAME, which is the sharper objection: a reader who works out unaided that this
-           all comes from one book will reasonably assume the coverage claim was the claim.
-           It is stated here rather than on the site's front page, because it is true of the
-           register and not of the lost-species or new-species work. -->
-      <p class="lede"><strong>Where this list comes from.</strong> One source: Matthew
-        Richardson's <em>Threatened and Recently Extinct Vertebrates of the World</em>
-        (2023). The list inherits that book's scope, vertebrates the book documents, so a
-        Data Deficient species Richardson does not cover will not appear here. That cuts
-        both ways. The book is a compendium of species somebody was already worried
-        about, which is a narrower starting point than "the species nobody
-        counted".</p>
-    </div>
-
-    <div class="counts" id="counts"></div>
-
-    <figure class="feature" id="feature">
-      <p class="eyebrow">What the record actually says</p>
-      <blockquote id="fqQuote"></blockquote>
-      <figcaption id="fqCap"></figcaption>
-    </figure>
-
-    <div class="stakes">
-      <h3>Why it matters that these species have no category</h3>
-      <p>Neither category is covered by the commitment that counts. <strong>Target 4 of
-        the Kunming-Montreal Global Biodiversity Framework</strong> binds governments to
-        halting the extinction of <em>known threatened species</em>, wording that
-        excludes both groups by definition. The money follows the same line: under
-        <strong>3.5%</strong> of Mohamed bin Zayed Species Conservation Fund awards
-        have gone to Data Deficient taxa, under <strong>1%</strong> at the People's
-        Trust for Endangered Species.</p>
-      <p>IUCN's own guidance says Data Deficient species should receive the same
-        attention as threatened ones. It is not followed. So the gap is not only a
-        gap in knowledge. It is an exclusion written into policy and funding, and it
-        is the reason for compiling this list at all.</p>
-    </div>
-
-    <div class="field-wrap">
-      <div class="tierkey" id="tierkey">
-        <p class="eyebrow">What the tiers mean</p>
-        <p class="tierkey-intro">Every species sits in one of five
-          <strong>restriction tiers</strong> by how narrow its published record is.
-          That is all the tier measures, and it is the axis the whole list is ranked
-          on: a smaller known range is what qualifies a species as threatened under
-          IUCN <strong>Criterion B</strong>. <strong>Tiers 3, 4 and 5 are the priority
-          stratum</strong>, tested against IUCN's own reassessments, and the tested
-          break in risk falls between tier 2 and tier 3.</p>
-        <ul id="tierlist"></ul>
-      </div>
-
-      <div class="field-head">
-        <p class="eyebrow">Every species on the Black List, one mark each</p>
-      </div>
-      <p class="field-note" style="margin-bottom:.6rem">Where these species are in the
-        world is on the <a href="/map/" data-goto="map">map</a>, and the places holding
-        several at once are listed under
-        <a href="/sites/" data-goto="sites">localities</a>.</p>
-      <canvas id="field" role="img"
-              aria-label="A dense field of marks, one for each of the 2,407 species in
-              the list, shaded by how narrowly restricted its published record is.
-              The same data is listed in full under The Black List."></canvas>
-      <p class="field-note">Hover a mark to name the species; select one to open its
-        record. How the tiers were built and tested, and what the ranking cannot tell you,
-        is set out in <a href="/methods/" data-goto="methods">methods and limits</a>.</p>
-
-    </div>
-  </div>
- </div>
-
- <div class="wrap">
-
-  
-
-  <div class="panel">
-    <p class="eyebrow">Held-out test</p>
-    <h3>Does the ranking agree with IUCN's own verdict?</h3>
-    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0;
-       ">Between the previous data and v2026&#8209;1, IUCN independently
-      reassessed <span class="num">108</span> of these species. The ranking rules
-      never saw those outcomes, so they work as an answer key. Two caveats: only
-      <span class="num">28</span> of the reassessed sit in the priority stratum, so
-      the interval matters more than the point; and ranking and assessment read the
-      same primary literature, so this is two readings of one evidence base agreeing,
-      not a blind prediction. Share reassessed as threatened or extinct:</p>
-    <div class="plot" id="plot"></div>
-    <p class="stat" id="pstat"></p>
-    <!-- The number the validated rates actually imply, with a real interval. Rendered from
-         meta.estimate so it moves when the rates or the tier counts do. -->
-    <p class="estimate" id="estimate"></p>
-    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);
-       margin:1.1rem 0 0"><strong>Does that depend on trusting IUCN's
-      &ldquo;not threatened&rdquo; calls?</strong> A fair question. The backlog is being
-      worked down by specialist consensus rather than new fieldwork, so a species can
-      reach Least Concern because nobody reported a threat. We tested that by throwing
-      out the thinnest calls, and the result gets <em>stronger</em>, not weaker: set
-      aside every call resting on five or fewer specimen records worldwide and 53.6%
-      becomes 62.5%; keep only the reassessments citing new research on that particular
-      species and it reaches 83.3%. The honest concession is that most reassessments
-      cite no new species-specific research at all, on both sides of the ledger, so it
-      does not tilt the comparison. Methods §4a has the tables and the limit of the
-      argument.</p>
+<section class="view wrap" id="v-newtaxa-list" hidden>
+  <div class="ntlead">
+    <p class="ntkicker">The list</p>
+    <h2>Every species described since 2015 that the Red List has never assessed</h2>
+    <p class="lede">Three checklists, one table. Search a name you know, or filter by how
+      far the evidence for a narrow range can be trusted. The analysis behind it, and the
+      map of where these species come from, are on
+      <a href="/new-species/">the new species page</a>.</p>
   </div>
 
-  <div class="panel">
-    <p class="eyebrow">Composition</p>
-    <h3>Where the gap falls</h3>
-    <div style="display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-         margin-top:1.1rem">
-      <div>
-        <p class="eyebrow" style="font-size:.68rem">By class</p>
-        <div class="bars" id="barsClass"></div>
-      </div>
-      <div>
-        <p class="eyebrow" style="font-size:.68rem">By restriction tier</p>
-        <div class="bars" id="barsTier"></div>
-      </div>
-    </div>
-  </div>
- </div>
-
-  <!-- The data download. Authored once in scratchpad/datagrab.py and inserted into every
-       Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
-  <aside class="datagrab">
-    <h3>Take the data</h3>
-    <p>The whole register as one JSON file: all <strong>3,062</strong> species with their
-      tier, evidence, locality text, threats and Red List history. No sign-up, no
-      licence to accept beyond IUCN's own terms, cited in the footer.</p>
-    <a class="datagrab-btn" href="/data.json" download>
-      Download the Black List
-      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
-    </a>
-    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
-      List v2026&#8209;1. Rebuilt whenever the register changes, at the same address, so a
-      script can fetch it on a schedule.</p>
-  </aside>
-</section>
-<section class="view wrap" id="v-register" hidden>
-  <div class="prose" style="margin-bottom:.5rem">
-    <h2 style="font-size:var(--fs-h2)">The Black List</h2>
-    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);
-       margin:.5rem 0 0;text-align:center">
-      <!-- Said only "the sentence it was judged on", which assumes the reader already knows
-           there is a book, that the ranking is read from its wording, and that a row can be
-           opened. Someone landing here from a search knows none of that. -->
-      Every species here was ranked on one sentence about it in Matthew Richardson's
-      <em>Threatened and Recently Extinct Vertebrates of the World</em> (2023). Click any
-      row to read that sentence and see how it was scored.</p>
-  </div>
-  <details class="tierhelp">
-    <!-- Was "how narrow the published record is. Open for definitions." Two problems Scott
-         hit at once: "narrow" is not defined anywhere the reader has been yet, and "Open"
-         reads as a description rather than an instruction because display:flex on a summary
-         suppresses the browser's disclosure triangle, so there was nothing to suggest the
-         box did anything. Hence plain wording and an explicit caret. -->
-    <summary>Tier <span class="tierchip t5">5</span> to <span class="tierchip t1">1</span>
-      &middot; how small an area each species has actually been recorded from. Tap to see
-      what the five tiers mean.<span class="caret" aria-hidden="true">&#9662;</span></summary>
-    <div id="tierhelpBody"></div>
-  </details>
-
+  <!-- ===================== THE LIST ===================== -->
+  <h3 class="siteshead">The list</h3>
   <div class="filters">
-    <input type="search" id="q" placeholder="Search name, species, or locality&hellip;"
-           aria-label="Search the Black List">
-    <select id="fClass" aria-label="Filter by class"><option value="">All classes</option></select>
-    <select id="fList" aria-label="Filter by list">
-      <option value="">Both lists</option>
-      <option value="dd">Data Deficient</option>
-      <option value="ne">Never assessed</option>
-    </select>
-    <select id="fRealm" aria-label="Filter by biogeographic realm">
-      <option value="">All realms</option>
-    </select>
-    <select id="fDur" aria-label="Filter by how long the species has been Data Deficient">
-      <option value="">Any duration</option>
-      <option value="10">Data Deficient 10+ years</option>
-      <option value="15">Data Deficient 15+ years</option>
-      <option value="20">Data Deficient 20+ years</option>
-      <option value="re">Re-affirmed Data Deficient at least once</option>
-    </select>
-    <select id="fTier" aria-label="Filter by restriction tier">
-      <option value="">All tiers</option>
-    </select>
-    <div class="chipset">
-      <button class="chip" id="cPri" aria-pressed="false">Priority only</button>
-      <button class="chip" id="cSil" aria-pressed="false">No recent record</button>
-      <button class="sitechip" id="siteChip" hidden></button>
-      <button class="sitechip" id="cellChip" hidden></button>
-      <button class="chip clear" id="cClear" hidden>Clear filters</button>
-    </div>
+    <input id="ntQ" type="search" placeholder="Search species, family, country&hellip;"
+           aria-label="Search the list">
+    <select id="ntEv" aria-label="Filter by evidence of the gap"></select>
+    <select id="mgCls" aria-label="Filter by class"></select>
+    <select id="ntRc" aria-label="Filter by geographic extent"></select>
+    <select id="ntFam" aria-label="Filter by family"></select>
   </div>
+  <p id="ntShowing" style="font-family:var(--sans);font-size:.82rem;
+     color:var(--ink-3);margin:.6rem 0 .2rem"></p>
+  <div id="ntTable"></div>
 
-  <p class="resultline" id="resultline"></p>
-  <p class="noresults" id="noresults" hidden></p>
-  <div class="tablewrap">
-    <table id="tbl">
-      <thead><tr>
-        <th class="sev" aria-hidden="true"></th>
-        <th data-sort="name">Species</th><th data-sort="c">Class</th>
-        <th data-sort="t">Tier</th><th data-sort="b">Basis</th>
-        <th data-sort="s">Locality</th>
-        <th data-sort="r" title="Biogeographic realm, from the corpus's own structure">Realm</th>
-        <th data-sort="ddy" title="Years listed Data Deficient, and how many times IUCN has assessed it and written Data Deficient again">DD&nbsp;since</th><th></th>
-      </tr></thead>
-      <tbody id="tbody"></tbody>
-    </table>
-  </div>
-  <button class="more" id="more" hidden>Show more</button>
-
-  <!-- The data download. Authored once in scratchpad/datagrab.py and inserted into every
-       Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
-  <aside class="datagrab">
-    <h3>Take the data</h3>
-    <p>The whole register as one JSON file: all <strong>3,062</strong> species with their
-      tier, evidence, locality text, threats and Red List history. No sign-up, no
-      licence to accept beyond IUCN's own terms, cited in the footer.</p>
-    <a class="datagrab-btn" href="/data.json" download>
-      Download the Black List
-      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
-    </a>
-    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
-      List v2026&#8209;1. Rebuilt whenever the register changes, at the same address, so a
-      script can fetch it on a schedule.</p>
-  </aside>
-</section>
-<section class="view wrap" id="v-map" hidden>
-  <div class="prose prose-full">
-    <h2 style="font-size:var(--fs-h2)">Where the record actually is</h2>
-    <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0">
-      Where museum specimens and field sightings of these species have actually been
-      recorded, for every record that carries map coordinates. The data comes from GBIF,
-      a global archive of biodiversity records. Switch layers to isolate a single
-      restriction tier or view them together. <strong>Select any shaded cell or ring to
-      open its species in the Black List.</strong> Scroll or pinch to zoom, drag to
-      pan; cells subdivide as you zoom in, so finer clusters resolve rather than
-      the same blocks getting bigger.</p>
-  </div>
-
-  <!-- ORDER: controls, map, legend, count, caveats. The map used to sit fourth, under two
-       blocks of qualification, so a reader arriving on this page met the warnings before
-       the thing being warned about. The layer buttons stay above it because they operate
-       it; everything that qualifies what the map shows now sits underneath, where it reads
-       as a footnote to something you have already looked at. -->
-  <div class="mapsource" style="margin-top:var(--s3)">
-    <span class="eyebrow">Show</span>
-    <button id="srcGbif"  aria-pressed="true">Specimen records</button>
-    <button id="srcLoc"   aria-pressed="true">Localities (cross-checked)</button>
-    <button id="srcLocU"  aria-pressed="false">+ unverified localities</button>
-  </div>
-  <div class="maplayers" id="mapLayers"></div>
-
-  <div class="mapwrap">
-    <div class="mapzoom">
-      <button id="zIn"    aria-label="Zoom in">+</button>
-      <button id="zOut"   aria-label="Zoom out">&minus;</button>
-      <button id="zReset" aria-label="Reset zoom" title="Reset">Reset</button>
-    </div>
-    <canvas id="mapCanvas" role="img"
-            aria-label="World map shading where records of these species carry map
-            coordinates. The same data is available as a table under The Black
-            List."></canvas>
-  </div>
-  <div class="maplegend" id="mapLegend"></div>
-  <p class="mapstats" id="mapStats"></p>
-  <p class="mapcaveat" id="mapCaveat"></p>
-
-  <div class="warn" style="margin-top:var(--s3)">
-    <!-- The old heading compressed this into a phrase about sampling bias and left the
-         reader to unpack it. The paragraph under it already says the thing plainly, so the
-         heading now says it too. -->
-    <h3>A dark patch means people collected there, not that more species live there</h3>
-    <p>A dense patch means <strong>records exist there</strong>, which is not the same
-      as species being concentrated there. Records pile up around universities, museums,
-      expedition routes and coastlines somebody surveyed. Read the map as
-      a picture of where the evidence sits, not of where the risk is.</p>
-    <p>These are point records, <strong>not range maps</strong>, and they come from a
-      different source than the localities on the Localities page, so the two will not
-      correspond exactly. Individual records can also be plain wrong; GBIF's own
-      flagged coordinate errors are excluded, but some survive. That is why this shows
-      density rather than authoritative dots.</p>
-  </div>
-  <div id="mapTip" aria-hidden="true"></div>
-
-  <!-- The data download. Authored once in scratchpad/datagrab.py and inserted into every
-       Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
-  <aside class="datagrab">
-    <h3>Take the data</h3>
-    <p>The whole register as one JSON file: all <strong>3,062</strong> species with their
-      tier, evidence, locality text, threats and Red List history. No sign-up, no
-      licence to accept beyond IUCN's own terms, cited in the footer.</p>
-    <a class="datagrab-btn" href="/data.json" download>
-      Download the Black List
-      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
-    </a>
-    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
-      List v2026&#8209;1. Rebuilt whenever the register changes, at the same address, so a
-      script can fetch it on a schedule.</p>
-  </aside>
-</section>
-<section class="view wrap" id="v-sites" hidden>
-  <div class="prose prose-full">
-    <h2 style="font-size:1.4rem">Localities holding several gap species</h2>
-    <p style="margin:.6rem 0 0;color:var(--ink-2)">The source is organized
-      geographically, so species cluster by place. Where a single locality carries
-      many of them, one protected area could cover the lot, which is the cheapest form of
-      conservation available.</p>
-    <p style="font-family:var(--sans);font-size:.82rem;color:var(--ink-3);margin:.9rem 0 0">
-      Caveat: these localities are extracted at inconsistent grain. Some are a single
-      named river, some an entire ocean basin. Treat the small, specific ones as
-      actionable and the broad ones as an artefact of the source.</p>
-    <p id="sitesCoverage" style="font-family:var(--sans);font-size:.82rem;
-       color:var(--ink-3);margin:.6rem 0 0"></p>
-  </div>
-
-  <h3 class="siteshead">Localities</h3>
-  <p class="siteslede">Where a locality has an account of its own in the book, that
-    account's opening sentence is shown, which is what disambiguates a name like
-    <em>Espiritu Santo</em> or <em>Cordillera Central</em>, both of which occur more
-    than once in the world and one of which occurs twice in this book. The rest were
-    recovered from the species' own records, where the place is named in the entry
-    itself; those lines say so. Nothing here is geocoded or inferred. Select a locality
-    to open its species in the Black List.</p>
-  <div id="siteList"></div>
-
-  <h3 class="siteshead">Habitat types</h3>
-  <p class="siteslede">These are not places. They are habitat categories the source
-    defines and then groups species under: <em>terra firma</em> forest, <em>cerrado</em>,
-    <em>miombo</em> woodland. They are kept because the groupings are real, but no
-    protected area can be drawn around them.</p>
-  <div id="habList"></div>
-
-  <!-- The data download. Authored once in scratchpad/datagrab.py and inserted into every
-       Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
-  <aside class="datagrab">
-    <h3>Take the data</h3>
-    <p>The whole register as one JSON file: all <strong>3,062</strong> species with their
-      tier, evidence, locality text, threats and Red List history. No sign-up, no
-      licence to accept beyond IUCN's own terms, cited in the footer.</p>
-    <a class="datagrab-btn" href="/data.json" download>
-      Download the Black List
-      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
-    </a>
-    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
-      List v2026&#8209;1. Rebuilt whenever the register changes, at the same address, so a
-      script can fetch it on a schedule.</p>
-  </aside>
 </section>
 
 <!-- ========================= BLACK LIST OVERVIEW ========================= -->

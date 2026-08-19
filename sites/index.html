@@ -1421,13 +1421,29 @@
     </div>
   </div>
 
-  <div class="navgroup" data-group="search">
+  <!-- ONE DROPDOWN PER TOPIC, replacing a single "New & Lost Species" group, so each
+       list can have its own page beside the analysis it comes from. The shape copies the
+       Black List group above: "What this is" for the essay, the list's own name for the
+       table. "What this is" now appears in three menus, which is deliberate. A reader sees
+       one menu open at a time, so the repetition never shows, and the label means the same
+       thing everywhere it appears. -->
+  <div class="navgroup" data-group="newtaxa">
     <button class="navitem navtoggle" type="button" aria-expanded="false"
-            aria-controls="navm-search">New &amp; Lost Species <span class="caret"
+            aria-controls="navm-newtaxa">New Species <span class="caret"
             aria-hidden="true">&#9662;</span></button>
-    <div class="navmenu" id="navm-search" hidden>
-      <a href="/new-species/" data-v="newtaxa">New Species</a>
-      <a href="/lost-species/" data-v="lost">Lost Species</a>
+    <div class="navmenu" id="navm-newtaxa" hidden>
+      <a href="/new-species/" data-v="newtaxa">What this is</a>
+      <a href="/new-species-list/" data-v="newtaxa-list">New Species</a>
+    </div>
+  </div>
+
+  <div class="navgroup" data-group="lost">
+    <button class="navitem navtoggle" type="button" aria-expanded="false"
+            aria-controls="navm-lost">Lost Species <span class="caret"
+            aria-hidden="true">&#9662;</span></button>
+    <div class="navmenu" id="navm-lost" hidden>
+      <a href="/lost-species/" data-v="lost">What this is</a>
+      <a href="/lost-species-list/" data-v="lost-list">Lost Species</a>
     </div>
   </div>
 
@@ -2007,8 +2023,9 @@ function repaintCanvases() {
    introduction and moved to /black-list/ when the site grew past being one list. */
 const ROUTES = {home:"/", overview:"/black-list-overview/", register:"/the-black-list/", map:"/map/",
                 sites:"/sites/", methods:"/methods/", newtaxa:"/new-species/",
-                lost:"/lost-species/", redisc:"/rediscoveries/",
-                involved:"/get-involved/"};
+                "newtaxa-list":"/new-species-list/",
+                lost:"/lost-species/", "lost-list":"/lost-species-list/",
+                redisc:"/rediscoveries/", involved:"/get-involved/"};
 const viewForPath = p => {
   p = p.replace(/\/index\.html$/, "/");
   if (!p.endsWith("/")) p += "/";
@@ -2046,6 +2063,15 @@ function showView(name, push) {
   // reptiles.json is a second payload and most visitors never open this view, so it is
   // fetched on first arrival rather than at boot. Not gated on DATA: this list is a
   // separate effort and does not depend on the register's data.
+  /* The list routes fetch the same payloads as their analysis pages but skip the map
+     work, which is the point of splitting them: a reader who wants the table should not
+     wait on a canvas they are not looking at. */
+  if (name === "newtaxa-list") {
+    ensureReptiles();
+    ensureAmphibians();
+    ensureBirdsMammals();
+  }
+  if (name === "lost-list") lsLoad();
   if (name === "newtaxa") {
     ensureReptiles();
     ensureAmphibians();
