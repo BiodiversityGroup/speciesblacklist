@@ -845,6 +845,16 @@
      tooltip was a static, unstyled div: setting opacity and left/top on it did nothing a
      reader could see, and the map answered no hover anywhere. Scott found it on the
      countries; it was equally dead over the circles. */
+  /* The register chips used a native title=, whose delay before appearing is set by the
+     browser at roughly a second and cannot be changed from the page. On a table where the
+     label is three characters and the explanation is the whole point ("B, One province"),
+     a second is long enough that a reader gives up before it opens. Same visual language
+     as the map tooltips below, shown in 60ms. */
+  #chipTip { position:fixed; z-index:60; pointer-events:none; opacity:0;
+             transition:opacity .06s; background:var(--ink); color:var(--ground);
+             font-family:var(--sans); font-size:var(--fs-small); padding:.45rem .65rem;
+             border-radius:3px; line-height:1.4; text-align:left; max-width:280px; }
+  #chipTip.on { opacity:1; }
   #lostTip, #nsTip { position:fixed; z-index:50; pointer-events:none; opacity:0;
              transition:opacity .12s; background:var(--ink); color:var(--ground);
              font-family:var(--sans); font-size:var(--fs-small); padding:.5rem .7rem;
@@ -1226,13 +1236,18 @@
      way back. A citation truncated mid-author-list is unusable, and on a phone the
      column is narrow enough that most of them were. */
   .ntdist { color:var(--ink-2); font-size:.82rem; max-width:24rem; }
-  .ntdist.clip { cursor:pointer; }
+  /* .can-expand, not .clip. The affordance used to sit on every clamped cell whether or
+     not its text ran past two lines, so most rows in the register offered a "more" that
+     did nothing when clicked. Only markClippable() adds .can-expand, and only after
+     measuring the cell. A control that does nothing teaches a reader to stop trying the
+     ones that work. */
+  .ntdist.clip.can-expand { cursor:pointer; }
   .ntdist.clip .clipin { display:-webkit-box; -webkit-line-clamp:2; line-clamp:2;
                          -webkit-box-orient:vertical; overflow:hidden; }
   .ntdist.clip.open .clipin { display:block; }
-  .ntdist.clip::after { content:"more"; display:block; margin-top:.15rem;
+  .ntdist.clip.can-expand::after { content:"more"; display:block; margin-top:.15rem;
                         font-family:var(--sans); font-size:.74rem; color:var(--accent); }
-  .ntdist.clip.open::after { content:"less"; }
+  .ntdist.clip.can-expand.open::after { content:"less"; }
   .ntcite-title { color:var(--ink); }
   @media (max-width:640px) { .ntdist { max-width:14rem; } }
   .ntfine { color:var(--ink-2); font-size:.82rem; white-space:nowrap; }
@@ -2047,13 +2062,19 @@ function showView(name, push) {
   if (name === "redisc") ensureRedisc();
   // Same reason as the register map: a hidden canvas has zero width, so the lost-species
   // map can only be laid out once its section is visible.
-  if (name === "lost") Promise.all([ensureLost(), ensureCountries()]).then(([ok]) => {
-    if (ok) {
-      drawLost();
-      attachHeatZoom("#lostCanvas", lostView, drawLost,
-                     {in: "#lostZIn", out: "#lostZOut", reset: "#lostZReset"});
-    }
-  });
+  if (name === "lost") {
+    // Started alongside the map rather than after it. The two payloads are independent and
+    // the table is what a reader scrolls to; making it wait on the map's fetch and first
+    // paint would leave it blank for no reason.
+    lsLoad();
+    Promise.all([ensureLost(), ensureCountries()]).then(([ok]) => {
+      if (ok) {
+        drawLost();
+        attachHeatZoom("#lostCanvas", lostView, drawLost,
+                       {in: "#lostZIn", out: "#lostZOut", reset: "#lostZReset"});
+      }
+    });
+  }
 }
 
 /* ============================== LOST SPECIES =================================
@@ -3174,7 +3195,7 @@ function mergedDraw() {
   const esc = x => (x || "").replace(/[<>&]/g, m =>
     ({"<": "&lt;", ">": "&gt;", "&": "&amp;"}[m]));
   const rcCell = r => r.rc && NT_RC[r.rc]
-    ? `<span class="ntrc ntrc-${r.rc}" title="${esc(NT_RC[r.rc][1])}">${r.rc} · ${NT_RC[r.rc][0]}</span>`
+    ? `<span class="ntrc ntrc-${r.rc}" data-tip="${esc(NT_RC[r.rc][1])}" aria-label="${esc(NT_RC[r.rc][1])}">${r.rc} · ${NT_RC[r.rc][0]}</span>`
     : `<span style="color:var(--ink-3)" title="This class's source does not state a range at that resolution.">not stated</span>`;
   host.innerHTML = `<table class="nttable">
     <thead><tr><th>Species</th><th>Class</th><th>Described</th><th>Family</th>
@@ -3354,9 +3375,91 @@ function citeCell(ref, esc) {
 
 /* One delegated handler for every clamped cell on the page, present and future. */
 document.addEventListener("click", ev => {
-  const cell = ev.target.closest && ev.target.closest(".ntdist.clip");
+  const cell = ev.target.closest && ev.target.closest(".ntdist.clip.can-expand");
   if (cell) cell.classList.toggle("open");
 });
+
+/* CHIP TOOLTIPS, because a native title= opens on the browser's schedule and that is about
+   a second. The chip reads "B, One province" and the sentence explaining what that means is
+   the reason anyone hovers it, so the delay was the whole interaction.
+
+   One element, one delegated listener, created on first use rather than at boot: the
+   register is one of ten routes and the other nine never hover a chip. */
+(function () {
+  let el = null;
+  function tip() {
+    if (!el) {
+      el = document.createElement("div");
+      el.id = "chipTip";
+      el.setAttribute("aria-hidden", "true");
+      document.body.appendChild(el);
+    }
+    return el;
+  }
+  function place(ev, t) {
+    const pad = 12, w = t.offsetWidth, h = t.offsetHeight;
+    // Flip rather than overflow. A chip near the right edge of a wide table would push the
+    // tooltip off screen, and the table scrolls horizontally so it could not be reached.
+    let x = ev.clientX + pad, y = ev.clientY + pad;
+    if (x + w > innerWidth - 8) x = ev.clientX - w - pad;
+    if (y + h > innerHeight - 8) y = ev.clientY - h - pad;
+    t.style.left = Math.max(8, x) + "px";
+    t.style.top = Math.max(8, y) + "px";
+  }
+  document.addEventListener("mouseover", function (ev) {
+    const chip = ev.target.closest && ev.target.closest("[data-tip]");
+    if (!chip) return;
+    const txt = chip.getAttribute("data-tip") || "";
+    if (!txt) return;
+    const t = tip();
+    t.textContent = txt;
+    t.classList.add("on");
+    place(ev, t);
+  });
+  document.addEventListener("mousemove", function (ev) {
+    if (el && el.classList.contains("on") && ev.target.closest &&
+        ev.target.closest("[data-tip]")) place(ev, el);
+  });
+  document.addEventListener("mouseout", function (ev) {
+    if (el && ev.target.closest && ev.target.closest("[data-tip]")) el.classList.remove("on");
+  });
+  // A tooltip that outlives the scroll it was anchored to is worse than none at all.
+  addEventListener("scroll", function () { if (el) el.classList.remove("on"); }, true);
+})();
+
+/* WHICH CELLS ACTUALLY HAVE MORE TO SHOW.
+   The two-line clamp is CSS, so nothing in the markup knows whether a given cell's text
+   overran it. The affordance was therefore printed on every clamped cell, and most of the
+   register offered a "more" that did nothing. This measures instead: a cell whose content
+   is taller than its clamped box gets .can-expand, and only that cell gets the label and
+   the pointer.
+
+   Cells already open are skipped rather than remeasured. An open cell reports equal
+   scroll and client height by definition, so remeasuring it would strip the affordance
+   from the one cell the reader is using. */
+function markClippable(root) {
+  (root || document).querySelectorAll(".ntdist.clip:not(.open)").forEach(cell => {
+    const inner = cell.querySelector(".clipin");
+    if (inner) cell.classList.toggle("can-expand", inner.scrollHeight - inner.clientHeight > 1);
+  });
+}
+
+/* Re-measured on render and on resize, because the answer depends on column width: the
+   same string wraps to two lines on a desktop and four on a phone. Observing the document
+   rather than calling this from each of the four table renderers keeps a fifth table from
+   quietly shipping without it. */
+(function () {
+  let queued = false;
+  const run = () => { queued = false; markClippable(); };
+  const schedule = () => { if (!queued) { queued = true; requestAnimationFrame(run); } };
+  if (window.MutationObserver) {
+    new MutationObserver(schedule).observe(document.documentElement,
+                                           {childList: true, subtree: true});
+  }
+  addEventListener("resize", schedule);
+  addEventListener("load", schedule);
+  schedule();
+})();
 
 function ampDraw() {
   if (!AMP) return;
@@ -3387,7 +3490,7 @@ function ampDraw() {
       <td><i>${esc(r.sp)}</i></td>
       <td>${r.yr || "—"}</td>
       <td>${esc(r.fam)}</td>
-      <td><span class="ntev ntev-${r.ev}" title="${esc(NT_EV[r.ev][1])}">${NT_EV[r.ev][0]}</span></td>
+      <td><span class="ntev ntev-${r.ev}" data-tip="${esc(NT_EV[r.ev][1])}" aria-label="${esc(NT_EV[r.ev][1])}">${NT_EV[r.ev][0]}</span></td>
       <td>${esc(r.cty) || "<span style='color:var(--ink-3)'>—</span>"}</td>
       ${citeCell(r.ref, esc)}
     </tr>`).join("")}</tbody></table>` +
@@ -3519,8 +3622,8 @@ function ntRender() {
       <td><i>${esc(r.sp)}</i></td>
       <td>${r.yr || "—"}</td>
       <td>${esc(r.fam)}</td>
-      <td><span class="ntev ntev-${r.ev}" title="${esc(NT_EV[r.ev][1])}">${NT_EV[r.ev][0]}</span></td>
-      <td><span class="ntrc ntrc-${r.rc}" title="${esc(NT_RC[r.rc][1])}">${r.rc} · ${NT_RC[r.rc][0]}</span></td>
+      <td><span class="ntev ntev-${r.ev}" data-tip="${esc(NT_EV[r.ev][1])}" aria-label="${esc(NT_EV[r.ev][1])}">${NT_EV[r.ev][0]}</span></td>
+      <td><span class="ntrc ntrc-${r.rc}" data-tip="${esc(NT_RC[r.rc][1])}" aria-label="${esc(NT_RC[r.rc][1])}">${r.rc} · ${NT_RC[r.rc][0]}</span></td>
       <td class="ntfine">${esc(r.fine) || "<span style='color:var(--ink-3)'>—</span>"}</td>
       <td class="ntdist clip" title="${esc(r.dist)}"><span class="clipin">${esc(r.dist)
         || "<span style='color:var(--ink-3)'>not stated</span>"}</span></td>
@@ -3531,6 +3634,119 @@ function ntRender() {
       : "")
     : "";
 }
+
+/* ========================= THE LOST SPECIES LIST ========================= */
+/* Its own payload, fetched when the lost view opens rather than at boot. lost.json is
+   169 KB the map needs before it can draw; this is another 393 KB nobody reading the map
+   is waiting for. Same split the new-species register already uses. */
+let LS_DATA = null, lsLoading = false;
+
+const LS_CLS = {
+  "lost":         ["Lost", "Not confirmed alive by photographic, audio or genetic evidence for more than 10 years."],
+  "long-lost":    ["Long lost", "Approximately 50 years unobserved."],
+  "unclassified": ["Undated", "Carries too little date information to place in either class. It is on the list, but the clock cannot be read."]
+};
+
+function lsLoad() {
+  if (LS_DATA || lsLoading) { lsRender(); return; }
+  lsLoading = true;
+  fetch("/lost-species.json").then(r => r.json()).then(d => {
+    LS_DATA = d; lsLoading = false; lsInit();
+  }).catch(() => {
+    lsLoading = false;
+    const t = $("#lsTable");
+    /* Say so rather than showing an empty table. A silent blank reads as "no species
+       match these filters", which is a claim about the data instead of about the fetch. */
+    if (t) t.innerHTML = '<p class="siteslede">The list could not be loaded. The map and '
+      + 'the figures above are unaffected. Reloading the page usually fixes it.</p>';
+  });
+}
+
+function lsInit() {
+  if (!LS_DATA) return;
+  const uniq = k => [...new Set(LS_DATA.rows.map(r => r[k]))].filter(Boolean).sort();
+  const opt = (sel, blank, pairs) => {
+    const el = $(sel); if (!el) return;
+    el.innerHTML = '<option value="">' + blank + '</option>'
+      + pairs.map(p => '<option value="' + p[0] + '">' + p[1] + '</option>').join("");
+  };
+  /* Ordered by how long unseen, not alphabetically. The filter is a scale. */
+  opt("#lsCls", "Any length of absence",
+      ["lost", "long-lost", "unclassified"]
+        .filter(k => LS_DATA.rows.some(r => r.cls === k))
+        .map(k => [k, LS_CLS[k] ? LS_CLS[k][0] : k]));
+  opt("#lsGrp", "Any group", uniq("grp").map(g => [g, g]));
+  opt("#lsRl", "Any Red List category", uniq("rl").map(g => [g, g]));
+  opt("#lsReg", "Any region", uniq("reg").map(g => [g, g]));
+  ["#lsQ", "#lsCls", "#lsGrp", "#lsRl", "#lsReg"].forEach(s => {
+    if (!$(s)) return;
+    $(s).oninput = lsRender; $(s).onchange = lsRender;
+  });
+  lsRender();
+}
+
+function lsRender() {
+  if (!LS_DATA) return;
+  const val = s => (($(s) || {}).value || "");
+  const q = val("#lsQ").trim().toLowerCase();
+  const cls = val("#lsCls"), grp = val("#lsGrp"), rl = val("#lsRl"), reg = val("#lsReg");
+  const rows = LS_DATA.rows.filter(r =>
+    (!cls || r.cls === cls) && (!grp || r.grp === grp) &&
+    (!rl || r.rl === rl) && (!reg || r.reg === reg) &&
+    (!q || (r.sp + " " + (r.v || "") + " " + r.cty + " " + r.grp)
+             .toLowerCase().includes(q)));
+
+  const showing = $("#lsShowing");
+  if (showing) showing.textContent =
+    "Showing " + rows.length.toLocaleString() + " of "
+    + LS_DATA.rows.length.toLocaleString() + " species"
+    + (rows.length ? "" : ". No species match these filters.");
+
+  const CAP = 400;
+  const esc = s => (s || "").replace(/[<>&]/g, m =>
+    ({"<": "&lt;", ">": "&gt;", "&": "&amp;"}[m]));
+  const dash = "<span style='color:var(--ink-3)'>&mdash;</span>";
+  /* A decade is printed as a decade. "1936" and "1930s" are different claims, the parser
+     already recorded which it read, and flattening them here would throw that away.
+     The stored value is the midpoint, so it is turned back: 1985 -> 1980s. */
+  const when = r => !r.last
+    ? "<span style='color:var(--ink-3)'>not recorded</span>"
+    : (r.prec === "decade" ? String(r.last - 5) + "s"
+      : r.prec === "century" ? String(Math.floor((r.last - 50) / 100) + 1) + "th c."
+      : String(r.last));
+  /* The chip reuses the register's colour classes so the two tables read as one system:
+     A is the most restricted swatch there and long-lost is the gravest state here. */
+  const chip = r => LS_CLS[r.cls]
+    ? '<span class="ntrc ntrc-'
+      + (r.cls === "long-lost" ? "A" : r.cls === "lost" ? "B" : "F")
+      + '" data-tip="' + esc(LS_CLS[r.cls][1]) + '" aria-label="' + esc(LS_CLS[r.cls][1])
+      + '">' + LS_CLS[r.cls][0] + "</span>"
+    : dash;
+
+  const tbl = $("#lsTable");
+  if (!tbl) return;
+  tbl.innerHTML = rows.length
+    ? '<table class="nttable"><thead><tr><th>Species</th><th>Group</th>'
+      + "<th>Last recorded</th><th>How long unseen</th><th>Red List</th>"
+      + "<th>Country</th></tr></thead><tbody>"
+      + rows.slice(0, CAP).map(r => "<tr>"
+        + "<td>" + (r.v ? '<span class="ntcn">' + esc(r.v) + "</span>" : "")
+          + "<i>" + esc(r.sp) + "</i></td>"
+        + "<td>" + (esc(r.grp) || dash) + "</td>"
+        + '<td class="ntfine">' + when(r) + "</td>"
+        + "<td>" + chip(r) + "</td>"
+        + '<td class="ntfine">' + (esc(r.rl) || dash) + "</td>"
+        + '<td class="ntdist clip" title="' + esc(r.cty) + '"><span class="clipin">'
+          + (esc(r.cty) || dash) + "</span></td>"
+        + "</tr>").join("")
+      + "</tbody></table>"
+      + (rows.length > CAP
+        ? '<p class="siteslede">Showing the first ' + CAP + " of "
+          + rows.length.toLocaleString() + ". Narrow the filters to see the rest.</p>"
+        : "")
+    : "";
+}
+
 
 /* ========================= REDISCOVERIES (news layer) ========================= */
 /* A separate payload again, and a separate claim. Everything else on this site is
