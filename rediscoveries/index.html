@@ -3252,8 +3252,16 @@ function markClippable(root) {
   const run = () => { queued = false; markClippable(); };
   const schedule = () => { if (!queued) { queued = true; requestAnimationFrame(run); } };
   if (window.MutationObserver) {
+    // attributeFilter ["hidden"] is the one that matters. Every view but the current one
+    // is hidden, an element inside a hidden subtree reports zero for both scrollHeight and
+    // clientHeight, and zero minus zero is not an overflow. So the tables were measured
+    // while invisible, all 400 cells looked as though they fitted, and nothing measured
+    // them again once the view opened. Watching childList alone found the rows and missed
+    // the moment they became measurable.
     new MutationObserver(schedule).observe(document.documentElement,
-                                           {childList: true, subtree: true});
+                                           {childList: true, subtree: true,
+                                            attributes: true,
+                                            attributeFilter: ["hidden"]});
   }
   addEventListener("resize", schedule);
   addEventListener("load", schedule);
