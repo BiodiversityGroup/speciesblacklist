@@ -1,26 +1,48 @@
 {
-"built": "2026-08-19",
+"built": "2026-08-21",
 "counts": {
-"stories": 127,
-"raw_items": 315,
+"stories": 128,
+"raw_items": 318,
 "with_species": 77,
-"distinct_species": 163,
-"distinct_species_firm": 33,
+"distinct_species": 164,
+"distinct_species_firm": 32,
 "multi_species_cards": 31,
-"with_image": 124,
-"syndicated": 56,
+"with_image": 125,
+"syndicated": 57,
 "on_tbg_list": 22,
 "on_list_breakdown": {
 "on our lost-species list": 19,
 "on the Black List": 3
 },
 "undated": 0,
-"newest": "Thu, 13 Aug 2026",
+"newest": "Fri, 21 Aug 2026",
 "tracked_names": 6709,
-"image_local": 119,
-"archived": 94
+"image_local": 120,
+"archived": 101
 },
 "cards": [
+{
+"title": "<strong>Rediscovery of <em>Ypthima albipuncta</em> Lee, 1985 (Lepidoptera, Nymphalidae, Satyrinae), with revision of its taxonomic status</strong>",
+"species": [
+"Ypthima methora"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Zootaxa",
+"date": "Fri, 21 Aug 2026",
+"ts": 1787227200,
+"first_seen": "2026-08-21",
+"link": "https://www.mapress.com/zt/article/view/zootaxa.5873.2.9",
+"image": "/rd-img/8c9e3d739c75ed87.jpg",
+"wayback": "",
+"desc": "Ypthima albipuncta Lee, 1985 is a little-known species originally described based on a holotype by monotypy from Yiliang, northeastern Yunnan Province, southwestern China, and has never been recorded since then. In the present paper, it has been rediscovered i",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "Timor green pigeon nears extinction after decades of inaction, study warns",
 "species": [
@@ -494,7 +516,7 @@
 "first_seen": "2026-08-10",
 "link": "https://www.guwahatiplus.com/assam/rare-dragonfly-species-rediscovered-in-arunachal-pradesh-after-more-than-100-years",
 "image": "/rd-img/4a768f31a9647e11.jpg",
-"wayback": "http://web.archive.org/web/20260812044832/https://www.etvbharat.com/en/state/rare-dragonfly-rediscovered-in-arunachal-pradesh-after-110-years-enn26052705904",
+"wayback": "http://web.archive.org/web/20260812043825/https://northeasttoday.in/northeast/arunachal-pradesh/rare-dragonfly-rediscovered-in-arunachal-pradesh-after-110-years/",
 "desc": "A rare dragonfly species has been rediscovered in Arunachal Pradesh after more than 100 years, marking a significant breakthrough in India\u2019s biodiversity records.",
 "citation": "",
 "kind": "",
@@ -570,9 +592,7 @@
 "Thismia kobensis",
 "Erica cunoniensis"
 ],
-"species_firm": [
-"Ptilotus senarius"
-],
+"species_firm": [],
 "on_list": "",
 "detail": "",
 "publisher": "ScienceDaily",
@@ -580,33 +600,25 @@
 "ts": 1779087600,
 "first_seen": "2026-08-10",
 "link": "https://www.sciencedaily.com/releases/2026/05/260517211447.htm",
-"image": "/rd-img/adcc41bbee7e7859.jpg",
-"wayback": "http://web.archive.org/web/20260718182246/https://www.sciencedaily.com/releases/2026/05/260517211447.htm",
-"desc": "A random photo snapped in the Australian outback has led to the rediscovery of a plant thought extinct for nearly 60 years \u2014 proving that ordinary people with smartphones are quietly transforming science. After bird bander Aaron Bean uploaded pictures of a str",
+"image": "/rd-img/378fe96dccb976db.jpg",
+"wayback": "http://web.archive.org/web/20260209175711/https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years",
+"desc": "\u2018Extinct\u2019 Queensland plant rediscovered after 58 years\n\t\t\t\t\t\n\t\t\tA plant species presumed extinct in the wild has been rediscovered in northern Queensland\u2014thanks to a sharp-eyed observer, a smartpho",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 11,
 "also": [
 {
-"publisher": "ScienceDaily",
-"link": "https://www.sciencedaily.com/releases/2026/05/260517211447.htm"
-},
-{
-"publisher": "ScienceDaily",
-"link": "https://www.sciencedaily.com/releases/2026/05/260517211447.htm"
-},
-{
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/"
-},
-{
-"publisher": "The Cool Down",
-"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/"
-},
-{
-"publisher": "scimex.org",
+"publisher": "Scimex",
 "link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
+},
+{
+"publisher": "ScienceDaily",
+"link": "https://www.sciencedaily.com/releases/2026/05/260517211447.htm"
+},
+{
+"publisher": "Newsweek",
+"link": "https://www.newsweek.com/botany-plant-believed-extinct-half-century-found-queensland-australia-11373400"
 }
 ]
 },
@@ -1073,30 +1085,6 @@
 "also": []
 },
 {
-"title": "Endemic plant believed extinct for 135 years rediscovered in a canyon in Alta Verapaz, Guatemala",
-"species": [
-"Passiflora clypeophylla"
-],
-"species_firm": [
-"Passiflora clypeophylla"
-],
-"on_list": "",
-"detail": "",
-"publisher": "Noticias Ambientales",
-"date": "Wed, 11 Feb 2026",
-"ts": 1770796800,
-"first_seen": "2026-08-16",
-"link": "https://noticiasambientales.com/science/endemic-plant-believed-extinct-for-135-years-rediscovered-in-a-canyon-in-alta-verapaz-guatemala/",
-"image": "/rd-img/77c2b063db8fab77.jpg",
-"wayback": "",
-"desc": "For 135 years, Passiflora clypeophylla remained hidden on the steep cliffs of the Rubel Cruz community, in the department of Alta Verapaz, Guatemala. The",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "Hope Returns to Panama\u2019s Forests With the Rediscovery of Four Missing Frog Species",
 "species": [
 "Triprion spinosus",
@@ -1187,7 +1175,7 @@
 "first_seen": "2026-08-10",
 "link": "https://themeghalayanexpress.com/rare-orchid-species-rediscovered-in-meghalaya-after-175-years/",
 "image": "/rd-img/3c24a9c4502e7fc1.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260812043754/https://themeghalayanexpress.com/rare-orchid-species-rediscovered-in-meghalaya-after-175-years/",
 "desc": "ROOPAK GOSWAMI",
 "citation": "",
 "kind": "",
@@ -1217,7 +1205,7 @@
 "first_seen": "2026-08-10",
 "link": "https://mg.co.za/the-green-guardian/2026-01-19-endangered-grasshopper-rediscovered-in-kzn-after-45-years/",
 "image": "/rd-img/a4655de18f7cb00b.webp",
-"wayback": "http://web.archive.org/web/20260811152135/https://www.timeout.com/durban/news/kzn-great-grasshopper-rediscovery-011626",
+"wayback": "http://web.archive.org/web/20260812043345/https://mg.co.za/the-green-guardian/2026-01-19-endangered-grasshopper-rediscovered-in-kzn-after-45-years/",
 "desc": "Scientists have rediscovered an endangered grasshopper species in KwaZulu-Natal, underscoring the importance of small protected areas \u2014 and the often-overlooked invertebrates they shelter",
 "citation": "",
 "kind": "",
@@ -1330,12 +1318,12 @@
 "link": "https://www.moneycontrol.com/science/a-rare-flat-headed-cat-rediscovered-in-thailand-after-nearly-30-years-article-13744154.html"
 },
 {
-"publisher": "france24.com",
-"link": "https://www.france24.com/en/live-news/20251226-elusive-wild-cat-feared-extinct-rediscovered-in-thailand"
-},
-{
 "publisher": "Asia News Network",
 "link": "https://asianews.network/elusive-wild-flat-headed-cat-rediscovered-in-thailand/"
+},
+{
+"publisher": "france24.com",
+"link": "https://www.france24.com/en/live-news/20251226-elusive-wild-cat-feared-extinct-rediscovered-in-thailand"
 }
 ]
 },
@@ -1427,7 +1415,7 @@
 "first_seen": "2026-08-10",
 "link": "https://www.newindianexpress.com/states/kerala/2025/Dec/23/rare-octopus-rediscovered-after-50-years-off-kerala-coast-3",
 "image": "/rd-img/4cee6d8e61cd553d.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260812043957/https://www.newindianexpress.com/states/kerala/2025/Dec/23/rare-octopus-rediscovered-after-50-years-off-kerala-coast-3",
 "desc": "KOLLAM: Arare deep-sea octopus species, believed to have vanished from scientific records for nearly five decades, has been rediscovered off the Kerala coast.Th",
 "citation": "",
 "kind": "",
@@ -1454,7 +1442,7 @@
 "first_seen": "2026-08-10",
 "link": "https://www.thecooldown.com/outdoors/moema-claudiae-fish-species-bolivia-rivulida/",
 "image": "/rd-img/7700f8d34f8a20ab.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260812123019/https://www.thecooldown.com/outdoors/moema-claudiae-fish-species-bolivia-rivulida/",
 "desc": "A fish species not recorded in the wild for more than 20 years was rediscovered in Bolivia.",
 "citation": "",
 "kind": "",
@@ -1573,7 +1561,7 @@
 "first_seen": "2026-08-10",
 "link": "https://timesofindia.indiatimes.com/etimes/trending/bamboo-shrimp-rediscovered-in-india-after-72-years-revealing-hidden-freshwater-biodiversity-and-its-habitat/articleshow/125669402.cms",
 "image": "/rd-img/f9705a62bcb7b933.jpg",
-"wayback": "http://web.archive.org/web/20260812124207/https://indianexpress.com/article/cities/bangalore/shrimp-species-rediscovered-karnataka-odisha-72-years-10393444/",
+"wayback": "http://web.archive.org/web/20260812044109/https://www.deccanherald.com/india/karnataka/bamboo-shrimp-rediscovered-after-7-decades-3822538",
 "desc": "A team of researchers from the Centre for Climate Change Studies in Chennai\u2019s Sathyabama Institute of Science and Technology rediscovered Indian populations of the bamboo shrimp.",
 "citation": "",
 "kind": "",
@@ -1702,8 +1690,28 @@
 "first_seen": "2026-08-10",
 "link": "https://researchmatters.in/news/jumping-spider-genus-rediscovered-after-123-years-new-species-identified",
 "image": "/rd-img/304640ae05fb8fd9.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260812044221/https://researchmatters.in/news/jumping-spider-genus-rediscovered-after-123-years-new-species-identified",
 "desc": "Pilia, an enigmatic genus of jumping spider has just been rediscovered in the tropical forests of Western Ghats after a staggering 123 years. The find has not only led to the description of a brand-new species, Pilia malenadu, but,\u00a0 also allowed researchers to",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "Meet 4 \u2018Extinct\u2019 Animals That Were Miraculously Rediscovered (Hint: One Was An Ancient Fish Found In A Fishing Net In 1938)",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Forbes",
+"date": "Sat, 01 Nov 2025",
+"ts": 1761980400,
+"first_seen": "2026-08-21",
+"link": "https://www.forbes.com/sites/scotttravers/2025/11/01/meet-4-extinct-animals-that-were-miraculously-rediscovered-hint-one-was-an-ancient-fish-found-in-a-fishing-net-in-1938/",
+"image": "/rd-img/360a925edf5429ce.jpg",
+"wayback": "",
+"desc": "Just because a species is presumed extinct doesn\u2019t mean it\u2019s gone forever. Here are four glowing examples of this unique, and felicitous, phenomenon.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -1972,7 +1980,7 @@
 "first_seen": "2026-08-10",
 "link": "https://news.mongabay.com/short-article/extinct-in-the-wild-plant-rediscovered-in-sri-lanka-thanks-to-social-media/",
 "image": "/rd-img/196aa2facf4efca2.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260812043600/https://news.mongabay.com/2025/08/social-media-post-sparks-rediscovery-of-endemic-sri-lanka-rainforest-plant/",
 "desc": "Rediscovered in Sri Lanka after being declared extinct in the wild, the Doona ovalifolia tree is sparking conservation and community revival.",
 "citation": "",
 "kind": "",
@@ -2087,9 +2095,12 @@
 "title": "Lost plant species rediscovered in Blyde Canyon",
 "species": [
 "Plectranthus succulentus",
-"Thorncroftia succulenta"
+"Thorncroftia succulenta",
+"Passiflora clypeophylla"
 ],
-"species_firm": [],
+"species_firm": [
+"Passiflora clypeophylla"
+],
 "on_list": "",
 "detail": "",
 "publisher": "Letaba Herald",
@@ -2103,8 +2114,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Noticias Ambientales",
+"link": "https://noticiasambientales.com/science/endemic-plant-believed-extinct-for-135-years-rediscovered-in-a-canyon-in-alta-verapaz-guatemala/"
+}
+]
 },
 {
 "title": "Scientists find the world's smallest snake, once feared extinct, hanging out under a rock",
@@ -2261,51 +2277,6 @@
 "also": []
 },
 {
-"title": "SA scientists rediscover gecko species, 33 years after first recorded",
-"species": [
-"Afroedura rondavelica"
-],
-"species_firm": [
-"Afroedura rondavelica"
-],
-"on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
-"publisher": "News24",
-"date": "Fri, 20 Jun 2025",
-"ts": 1750402800,
-"first_seen": "2026-08-10",
-"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871",
-"image": "/rd-img/ebeb9577f29af63d.jpg",
-"wayback": "http://web.archive.org/web/20260811164632/https://www.euronews.com/2025/05/15/scientists-thought-this-gecko-was-extinct-or-didnt-exist-now-its-been-rediscovered-after-3",
-"desc": "Since it was identified in 1991, mystery surrounded this elusive little lizard for more than three decades.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 16,
-"also": [
-{
-"publisher": "The Independent",
-"link": "https://www.independent.co.uk/bulletin/news/blyde-rondavel-gecko-rediscovered-b2751737.html"
-},
-{
-"publisher": "IOL",
-"link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "Sunday Tribune",
-"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "Sunday Independent",
-"link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "News24",
-"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871"
-}
-]
-},
-{
 "title": "Rediscovery of the Losgna genus in India: a new species of parasitic wasp discovered in Chandigarh, named - \u2018Losgna Occidentalis\u2019",
 "species": [],
 "species_firm": [],
@@ -2378,6 +2349,47 @@
 ]
 },
 {
+"title": "'Lost' gecko species thought to be extinct rediscovered in South Africa after more than 30 years",
+"species": [
+"Afroedura rondavelica"
+],
+"species_firm": [
+"Afroedura rondavelica"
+],
+"on_list": "Lost Species",
+"detail": "Reptile, lost, last seen 1991",
+"publisher": "euronews",
+"date": "Thu, 15 May 2025",
+"ts": 1747292400,
+"first_seen": "2026-08-10",
+"link": "https://www.euronews.com/2025/05/15/scientists-thought-this-gecko-was-extinct-or-didnt-exist-now-its-been-rediscovered-after-3",
+"image": "/rd-img/ebeb9577f29af63d.jpg",
+"wayback": "http://web.archive.org/web/20260811164632/https://www.euronews.com/2025/05/15/scientists-thought-this-gecko-was-extinct-or-didnt-exist-now-its-been-rediscovered-after-3",
+"desc": "Since it was identified in 1991, mystery surrounded this elusive little lizard for more than three decades.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 17,
+"also": [
+{
+"publisher": "The Independent",
+"link": "https://www.independent.co.uk/bulletin/news/blyde-rondavel-gecko-rediscovered-b2751737.html"
+},
+{
+"publisher": "News24",
+"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871"
+},
+{
+"publisher": "IOL",
+"link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "Sunday Tribune",
+"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+}
+]
+},
+{
 "title": "ATREE researchers rediscover long-lost species after 111 years",
 "species": [
 "Typhloperipatus williamsoni"
@@ -2420,7 +2432,7 @@
 "first_seen": "2026-08-10",
 "link": "https://timesofindia.indiatimes.com/etimes/trending/7-species-that-were-rediscovered-after-many-years-of-extinction/photostory/118967853.cms",
 "image": "/rd-img/9065e1acbc837912.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260812124323/https://timesofindia.indiatimes.com/etimes/trending/7-species-that-were-rediscovered-after-many-years-of-extinction/photostory/118967853.cms",
 "desc": "The rediscovery of species once thought extinct gives a beacon of hope for biodiversity and the conservation of critically endangered wildlife. The cases of survival of these species tell a story of relentless effort of nature and the crucial role of ongoing s",
 "citation": "",
 "kind": "",
@@ -2789,7 +2801,7 @@
 "first_seen": "2026-08-14",
 "link": "https://petapixel.com/2023/11/13/egg-laying-mammal-thought-to-be-extinct-rediscovered-on-trail-camera/",
 "image": "/rd-img/8e7ca02245a03251.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260812042946/https://www.msn.com/en-us/news/other/trail-camera-captures-rare-rediscovery-of-species-that-hasn-t-been-seen-in-80-years-a-fantastic-surprise/ar-AA1WfMfY?apiversion",
 "desc": "The echidna had not been seen in 60 years.",
 "citation": "",
 "kind": "",
