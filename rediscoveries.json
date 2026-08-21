@@ -3,8 +3,8 @@
 "counts": {
 "stories": 128,
 "raw_items": 318,
-"with_species": 77,
-"distinct_species": 164,
+"with_species": 76,
+"distinct_species": 163,
 "distinct_species_firm": 32,
 "multi_species_cards": 31,
 "with_image": 125,
@@ -23,9 +23,7 @@
 "cards": [
 {
 "title": "Rediscovery of Ypthima albipuncta Lee, 1985 (Lepidoptera, Nymphalidae, Satyrinae), with revision of its taxonomic status",
-"species": [
-"Ypthima methora"
-],
+"species": [],
 "species_firm": [],
 "on_list": "",
 "detail": "",
