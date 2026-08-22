@@ -12904,8 +12904,8 @@
 ]
 ],
 "meta": {
-"n_species": 2121,
-"n_mapped": 2065,
+"n_species": 2120,
+"n_mapped": 2064,
 "n_unmapped": 56,
 "n_places": 208,
 "compiled": "January 2023",
@@ -12949,7 +12949,7 @@
 "DD": 458,
 "EX": 81,
 "EN": 98,
-"LC": 206,
+"LC": 205,
 "not in IUCN index": 278,
 "VU": 58,
 "NT": 21,
@@ -12958,10 +12958,10 @@
 },
 "oldest_record": 1790,
 "median_last": 1965,
-"n_dated": 1868,
+"n_dated": 1867,
 "n_1800s": 265,
 "by_date_precision": {
-"year": 1772,
+"year": 1771,
 "none": 223,
 "decade": 96,
 "century": 26,
@@ -12973,21 +12973,21 @@
 "place": "Brazil",
 "lat": -10.333,
 "lon": -53.2,
-"n": 268,
+"n": 267,
 "grp": {
-"Fish": 188,
+"Fish": 187,
 "Amphibian": 41,
 "Reptile": 20,
 "Bird": 6,
 "Insect": 5
 },
 "cls": {
-"long-lost": 238,
+"long-lost": 237,
 "lost": 24,
 "unclassified": 6
 },
 "rl": {
-"LC": 116,
+"LC": 115,
 "DD": 43,
 "not in IUCN index": 36,
 "CR(PE)": 23,
@@ -18454,8 +18454,8 @@
 "range": "Sierra Leone"
 },
 {
-"sp": "Cynopoecilus melanotaenia",
-"common": "Killifish",
+"sp": "Hypostomus variostictus",
+"common": "",
 "descriptor": "Brazilian fish",
 "group": "Fish",
 "last": 1912,
@@ -18654,7 +18654,7 @@
 "range": "Peru"
 },
 {
-"sp": "Isbrueckerichthys alipionis",
+"sp": "Isbrueckerichthys duseni",
 "common": "",
 "descriptor": "Brazilian fish",
 "group": "Fish",
@@ -18846,8 +18846,8 @@
 "range": "Isla de Margarita"
 },
 {
-"sp": "Leptolebias splendens",
-"common": "",
+"sp": "Nematolebias whitei",
+"common": "White's Pearlfish or Rio Pearlfish",
 "descriptor": "Brazilian fish",
 "group": "Fish",
 "last": 1942,
@@ -18998,12 +18998,12 @@
 "range": "Australasia"
 },
 {
-"sp": "Haplochromis vonlinnei",
-"common": "",
-"descriptor": "Tanzanian fish",
+"sp": "Hypostomus luteus",
+"common": "Golden Sailfin Pleco",
+"descriptor": "Brazilian fish",
 "group": "Fish",
 "last": 1980,
-"range": "Tanzania"
+"range": "Brazil"
 },
 {
 "sp": "Halodule ciliata",
@@ -19509,7 +19509,7 @@
 "rows": [
 {
 "c": "Brazil",
-"lost": 265,
+"lost": 264,
 "new": 87
 },
 {

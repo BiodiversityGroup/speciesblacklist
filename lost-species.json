@@ -6366,19 +6366,6 @@
 "prec": "year"
 },
 {
-"sp": "Cynopoecilus melanotaenia",
-"v": "Killifish",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "LC",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1912,
-"prec": "year",
-"rd": 1,
-"rdfirm": 1
-},
-{
 "sp": "Cynops wolterstorffi",
 "v": "Yunnan Lake Newt",
 "grp": "Amphibian",
@@ -23375,7 +23362,7 @@
 }
 ],
 "meta": {
-"n": 2121,
+"n": 2120,
 "built": "",
 "note": "Country resolution only. Localities are deliberately not published for lost species."
 }
