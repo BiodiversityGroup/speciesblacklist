@@ -1272,6 +1272,10 @@
   .ntrc-A, .ntrc-B { background:var(--accent-soft); color:var(--accent);
     border-color:var(--accent); }
   .ntrc-F { font-style:italic; }
+  /* "Found again", the one good-news class on the lost list, so it gets its own swatch
+     rather than the accent used for degrees of restriction. Amber reads as a state change
+     next to the blue chips, which all mean the same kind of thing. */
+  .ntrc-E { background:var(--t1); color:var(--t5); border-color:var(--t3); }
 
   /* ---- rediscovery cards -------------------------------------------------
      auto-fill rather than auto-fit: with a handful of results left after a
@@ -3655,7 +3659,12 @@ let LS_DATA = null, lsLoading = false;
 const LS_CLS = {
   "lost":         ["Lost", "Not confirmed alive by photographic, audio or genetic evidence for more than 10 years."],
   "long-lost":    ["Long lost", "Approximately 50 years unobserved."],
-  "unclassified": ["Undated", "Carries too little date information to place in either class. It is on the list, but the clock cannot be read."]
+  "unclassified": ["Undated", "Carries too little date information to place in either class. It is on the list, but the clock cannot be read."],
+  /* THE UPSTREAM LIST ALREADY HAS THIS CLASS and I missed it. I built this map from the
+     three values I happened to see and never asked the data for the full set, so the two
+     species carrying it rendered as a dash: the one status a reader would most want to see
+     was the one the table dropped. Enumerate the column, do not eyeball it. */
+  "rediscovered": ["Found again", "Confirmed alive since it was listed as lost. It stays on the list as a record of what was found, not as an outstanding search."]
 };
 
 function lsLoad() {
@@ -3774,7 +3783,8 @@ function lsRender() {
      A is the most restricted swatch there and long-lost is the gravest state here. */
   const chip = r => LS_CLS[r.cls]
     ? '<span class="ntrc ntrc-'
-      + (r.cls === "long-lost" ? "A" : r.cls === "lost" ? "B" : "F")
+      + (r.cls === "long-lost" ? "A" : r.cls === "lost" ? "B"
+         : r.cls === "rediscovered" ? "E" : "F")
       + '" data-tip="' + esc(LS_CLS[r.cls][1]) + '" aria-label="' + esc(LS_CLS[r.cls][1])
       + '">' + LS_CLS[r.cls][0] + "</span>"
     : dash;
