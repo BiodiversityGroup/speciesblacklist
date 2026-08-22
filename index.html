@@ -1671,22 +1671,24 @@
       That is a bargain and an embarrassment at the same time.</p>
     <p>Here is the number nobody has published. There are
       <strong id="cost_dd">8,659</strong> Data Deficient vertebrates on the Red List. At
-      what it costs to run one species through an assessment workshop, clearing every one
-      of them comes to about <strong id="cost_total">$4 million</strong>. That is
-      <strong id="cost_months">seven months</strong> of the Red List's own annual budget,
-      and <strong>0.03%</strong> of a single year of US conservation revenue.</p>
+      what it costs to run one species through an assessment workshop, looking at every one
+      of them comes to about <strong id="cost_total">$2.9 million</strong>. That is
+      <strong id="cost_months">seven months</strong> of the Red List's own annual
+      budget.</p>
     <p>And it would not be a shot in the dark. We tested the Black List's own ranking
-      against species IUCN has since reassessed: where the record already pins a species to
-      one small area, <strong id="cost_hit">56%</strong> came back threatened. Fifteen of
-      twenty seven, so read it as a direction and not a decimal, but the direction held
-      against every treatment we tried.</p>
+      against the species IUCN has since reassessed. Where the record already pins a species
+      to one small area, <strong id="cost_hit">56%</strong> came back threatened, against
+      <strong id="cost_base">21%</strong> for the rest. Fifteen of twenty seven, so read it
+      as a direction and not a decimal, but the direction held against every treatment we
+      tried.</p>
     <p class="homecaveat">The caveat we will not bury, because it is the whole field's
       caveat and not ours. That per species cost traces to a single unpublished personal
-      communication from 2013, recycled in the literature ever since. And a reassessment
-      does not always resolve anything: <strong>1,210</strong> of our Data Deficient
-      species, four in ten, have been assessed more than once and come back Data Deficient
-      every time. Money spent on looking is not the same as money spent on finding out, and
-      anyone budgeting from these numbers should read
+      communication from 2013, recycled in the literature ever since. And an assessment does
+      not always resolve anything: of the <strong id="cost_ourdd">3,031</strong> Data
+      Deficient species on our own list, <strong id="cost_repeat">1,210</strong>,
+      <span id="cost_repeat_frac">four in ten</span>, have been assessed more than once and
+      come back Data Deficient every time. Money spent on looking is not money spent on
+      finding out, and anyone budgeting from these numbers should read
       <a href="/methods/">the methods page</a> first.</p>
   </div>
 
@@ -4068,6 +4070,21 @@ function boot() {
     const months = Math.round(total / REDLIST_YEAR_2013 * 12);
     put("cost_months", months + (months === 1 ? " month" : " months"));
     if (v && v.high && v.high.rate) put("cost_hit", Math.round(v.high.rate) + "%");
+    // The baseline the 56% is measured against. Without it the number is unreadable: a
+    // reader cannot tell whether 56% is good. Both rates come from the same block.
+    if (v && v.low && v.low.rate) put("cost_base", Math.round(v.low.rate) + "%");
+    // The repeat-assessment figure. 1,210 is from REASSESSMENTS_for_cnc.csv (2026-08-19)
+    // and is not yet in data.json, so it lives here. The DENOMINATOR and the FRACTION are
+    // both derived from c.dd so the sentence cannot contradict itself if the list changes.
+    const DD_REPEATED = 1210;
+    if (c.dd) {
+      put("cost_ourdd", n(c.dd));
+      put("cost_repeat", n(DD_REPEATED));
+      const tenths = Math.round(DD_REPEATED / c.dd * 10);
+      const WORD = ["zero", "one", "two", "three", "four", "five",
+                    "six", "seven", "eight", "nine", "ten"];
+      put("cost_repeat_frac", (WORD[tenths] || tenths) + " in ten");
+    }
   })();
 
   const STATS = [];
