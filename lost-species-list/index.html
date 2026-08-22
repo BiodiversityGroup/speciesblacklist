@@ -3410,16 +3410,61 @@ function lsInit() {
   lsRender();
 }
 
+/* REGION SEARCH, because the region column cannot answer a region question.
+   Reported by a reader: searching "Oceania" returned 6 species while "Papua New Guinea"
+   returned 17. Both numbers were real. The search read species, common name, country and
+   group, never the region, so "Oceania" only matched the six rows carrying that literal
+   string as their country.
+
+   Fixing the region column was not an option. Its values are Islands 482, Asia 289,
+   Australia 74, Oceania 6, and "Islands" is a landform rather than a place: it holds Saint
+   Helena, the Seychelles, Cuba, Haiti, the Azores and Sri Lanka alongside Fiji and Palau.
+   Mapping Islands to Oceania would put Cuba in the Pacific.
+
+   So a region word expands to the COUNTRIES in it, which is the field that knows. Every
+   token below was read off the data rather than recalled, and two decisions are worth
+   recording. NIAS ISLAND IS DELIBERATELY ABSENT: it is off Sumatra, so it is Indonesia, and
+   a keyword sweep for Pacific names caught it. NEW GUINEA IS DELIBERATELY PRESENT: the
+   island is Melanesian even though its western half is Indonesian, which is the ambiguity
+   the reader flagged, and a species there belongs in an Oceania search either way. */
+const GEO_ALIAS = {
+  oceania: ["oceania", "australasia", "australia", "melanesia", "micronesia", "polynesia",
+            "papua new guinea", "new guinea", "new caledonia", "new zealand",
+            "south island", "fiji", "palau", "solomon", "samoa", "tonga", "tuvalu",
+            "vanuatu", "kiribati", "nauru", "marshall island", "guam", "mariana",
+            "cook island", "niue", "tokelau", "pitcairn", "wallis", "futuna", "norfolk",
+            "christmas island", "hawaii"],
+  caribbean: ["caribbean", "cuba", "haiti", "jamaica", "dominican republic", "puerto rico",
+              "virgin island", "barbados", "martinique", "guadeloupe", "grenada",
+              "saint lucia", "st. lucia", "trinidad", "tobago", "bahamas", "antigua",
+              "dominica", "montserrat", "cayman", "curacao", "aruba", "bonaire",
+              "saint vincent", "st. vincent", "hispaniola", "lesser antilles",
+              "greater antilles"]
+};
+
+/* A query expands only when it is at least four characters and names a region in the map
+   above. Three would make "oce" and "car" expand, and a reader typing three letters is
+   still typing. */
+function geoExpand(q) {
+  if (q.length < 4) return null;
+  for (const k in GEO_ALIAS) {
+    if (k.indexOf(q) === 0) return GEO_ALIAS[k];
+  }
+  return null;
+}
+
 function lsRender() {
   if (!LS_DATA) return;
   const val = s => (($(s) || {}).value || "");
   const q = val("#lsQ").trim().toLowerCase();
   const cls = val("#lsCls"), grp = val("#lsGrp"), rl = val("#lsRl"), reg = val("#lsReg");
+  const geo = geoExpand(q);
   const rows = LS_DATA.rows.filter(r =>
     (!cls || r.cls === cls) && (!grp || r.grp === grp) &&
     (!rl || r.rl === rl) && (!reg || r.reg === reg) &&
-    (!q || (r.sp + " " + (r.v || "") + " " + r.cty + " " + r.grp)
-             .toLowerCase().includes(q)));
+    (!q || (r.sp + " " + (r.v || "") + " " + r.cty + " " + r.grp + " " + (r.reg || ""))
+             .toLowerCase().includes(q)
+        || (geo && geo.some(t => r.cty.toLowerCase().includes(t)))));
 
   const showing = $("#lsShowing");
   if (showing) showing.textContent =
@@ -3868,6 +3913,21 @@ function boot() {
     const months = Math.round(total / REDLIST_YEAR_2013 * 12);
     put("cost_months", months + (months === 1 ? " month" : " months"));
     if (v && v.high && v.high.rate) put("cost_hit", Math.round(v.high.rate) + "%");
+    // The baseline the 56% is measured against. Without it the number is unreadable: a
+    // reader cannot tell whether 56% is good. Both rates come from the same block.
+    if (v && v.low && v.low.rate) put("cost_base", Math.round(v.low.rate) + "%");
+    // The repeat-assessment figure. 1,210 is from REASSESSMENTS_for_cnc.csv (2026-08-19)
+    // and is not yet in data.json, so it lives here. The DENOMINATOR and the FRACTION are
+    // both derived from c.dd so the sentence cannot contradict itself if the list changes.
+    const DD_REPEATED = 1210;
+    if (c.dd) {
+      put("cost_ourdd", n(c.dd));
+      put("cost_repeat", n(DD_REPEATED));
+      const tenths = Math.round(DD_REPEATED / c.dd * 10);
+      const WORD = ["zero", "one", "two", "three", "four", "five",
+                    "six", "seven", "eight", "nine", "ten"];
+      put("cost_repeat_frac", (WORD[tenths] || tenths) + " in ten");
+    }
   })();
 
   const STATS = [];
