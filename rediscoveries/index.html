@@ -3962,7 +3962,10 @@ function boot() {
      2016). BOTH SIDES STAY IN 2013 DOLLARS: inflation cancels in a ratio, and inflating
      only the numerator turned seven months of budget into nine. */
   (function () {
-    const PER_ASSESSMENT_2013 = 333, REDLIST_YEAR_2013 = 4.7e6, AZA_TITHE = 244.5e6;
+    // AZA tithe comparison removed 2026-08-19: a reader who does not already know what
+    // the AZA is learns nothing from it, and the division was mixing a recent dollar
+    // figure with a 2013 cost, which is the same fault as the nine-months error.
+    const PER_ASSESSMENT_2013 = 333, REDLIST_YEAR_2013 = 4.7e6;
     const dd = c.iucn_dd_vertebrates;
     if (!dd) return;
     const total = dd * PER_ASSESSMENT_2013;
@@ -3973,7 +3976,6 @@ function boot() {
     put("cost_total", "$" + (Math.round(total / 1e5) / 10).toFixed(1) + " million");
     const months = Math.round(total / REDLIST_YEAR_2013 * 12);
     put("cost_months", months + (months === 1 ? " month" : " months"));
-    put("cost_aza", String(Math.round(AZA_TITHE / total)));
     if (v && v.high && v.high.rate) put("cost_hit", Math.round(v.high.rate) + "%");
   })();
 

@@ -1662,9 +1662,7 @@
       what it costs to run one species through an assessment workshop, clearing every one
       of them comes to about <strong id="cost_total">$4 million</strong>. That is
       <strong id="cost_months">seven months</strong> of the Red List's own annual budget,
-      and <strong>0.03%</strong> of a single year of US conservation revenue. The AZA
-      members' ten percent tithe alone, $244.5 million, would cover it
-      <strong id="cost_aza">59</strong> times over.</p>
+      and <strong>0.03%</strong> of a single year of US conservation revenue.</p>
     <p>And it would not be a shot in the dark. We tested the Black List's own ranking
       against species IUCN has since reassessed: where the record already pins a species to
       one small area, <strong id="cost_hit">56%</strong> came back threatened. Fifteen of
@@ -4032,7 +4030,10 @@ function boot() {
      2016). BOTH SIDES STAY IN 2013 DOLLARS: inflation cancels in a ratio, and inflating
      only the numerator turned seven months of budget into nine. */
   (function () {
-    const PER_ASSESSMENT_2013 = 333, REDLIST_YEAR_2013 = 4.7e6, AZA_TITHE = 244.5e6;
+    // AZA tithe comparison removed 2026-08-19: a reader who does not already know what
+    // the AZA is learns nothing from it, and the division was mixing a recent dollar
+    // figure with a 2013 cost, which is the same fault as the nine-months error.
+    const PER_ASSESSMENT_2013 = 333, REDLIST_YEAR_2013 = 4.7e6;
     const dd = c.iucn_dd_vertebrates;
     if (!dd) return;
     const total = dd * PER_ASSESSMENT_2013;
@@ -4043,7 +4044,6 @@ function boot() {
     put("cost_total", "$" + (Math.round(total / 1e5) / 10).toFixed(1) + " million");
     const months = Math.round(total / REDLIST_YEAR_2013 * 12);
     put("cost_months", months + (months === 1 ? " month" : " months"));
-    put("cost_aza", String(Math.round(AZA_TITHE / total)));
     if (v && v.high && v.high.rate) put("cost_hit", Math.round(v.high.rate) + "%");
   })();
 
