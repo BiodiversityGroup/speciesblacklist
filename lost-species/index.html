@@ -850,6 +850,18 @@
      label is three characters and the explanation is the whole point ("B, One province"),
      a second is long enough that a reader gives up before it opens. Same visual language
      as the map tooltips below, shown in 60ms. */
+  /* A press report, marked as one. Not a status: the rediscoveries layer is coverage and
+     nothing in it is checked against IUCN, so this says a story exists and links to it.
+     Firm and soft look different because they are: a firm name came from a headline or two
+     outlets, a soft one was read out of article text where a species mentioned for
+     comparison reads exactly like one that was refound. */
+  .rdflag { font-family:var(--sans); font-size:.68rem; font-weight:600; letter-spacing:.03em;
+            text-transform:uppercase; padding:.1rem .35rem; border-radius:2px;
+            text-decoration:none; white-space:nowrap; margin-left:.35rem;
+            border:1px solid var(--t3); color:var(--t3); }
+  .rdflag.soft { border-color:var(--rule-2); color:var(--ink-3); }
+  .rdflag:hover { background:var(--t3); color:var(--ground); }
+  .rdflag.soft:hover { background:var(--ink-3); color:var(--ground); }
   #chipTip { position:fixed; z-index:60; pointer-events:none; opacity:0;
              transition:opacity .06s; background:var(--ink); color:var(--ground);
              font-family:var(--sans); font-size:var(--fs-small); padding:.45rem .65rem;
@@ -3722,6 +3734,17 @@ function lsRender() {
       + '">' + LS_CLS[r.cls][0] + "</span>"
     : dash;
 
+  /* Says a report exists. Deliberately not "Rediscovered": this site publishes the news
+     layer as press coverage and says nothing in it is checked against IUCN, and 19 of the
+     21 matches here are soft names read out of article text. The species keeps whatever
+     class the evidence gives it, and the reader gets the link. */
+  const rdflag = r => !r.rd ? "" :
+    '<a class="rdflag' + (r.rdfirm ? '' : ' soft') + '" href="/rediscoveries/" '
+    + 'data-tip="' + (r.rdfirm
+        ? 'A news report names this species as found again. Reported, not verified: nothing in our rediscoveries layer is checked against IUCN.'
+        : 'A news article mentions this species. The name was read from article text, so it may be a species mentioned in passing rather than one that was refound.')
+    + '">' + (r.rdfirm ? 'reported found' : 'in the news') + '</a>';
+
   const tbl = $("#lsTable");
   if (!tbl) return;
   tbl.innerHTML = rows.length
@@ -3730,7 +3753,7 @@ function lsRender() {
       + "<th>Country</th></tr></thead><tbody>"
       + rows.slice(0, CAP).map(r => "<tr>"
         + "<td>" + (r.v ? '<span class="ntcn">' + esc(r.v) + "</span>" : "")
-          + "<i>" + esc(r.sp) + "</i></td>"
+          + "<i>" + esc(r.sp) + "</i>" + rdflag(r) + "</td>"
         + "<td>" + (esc(r.grp) || dash) + "</td>"
         + '<td class="ntfine">' + when(r) + "</td>"
         + "<td>" + chip(r) + "</td>"

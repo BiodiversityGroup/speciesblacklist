@@ -361,7 +361,9 @@
 "cty": "Sierra Leone",
 "reg": "Africa",
 "last": 1790,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Afrithelphusa gerhildae",
@@ -383,7 +385,9 @@
 "cty": "Sierra Leone",
 "reg": "Africa",
 "last": 1955,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Afrixalus schneideri",
@@ -405,7 +409,9 @@
 "cty": "South Africa",
 "reg": "Africa",
 "last": 1991,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 1
 },
 {
 "sp": "Afrogarypus seychellesensis",
@@ -1461,7 +1467,9 @@
 "cty": "Bolivia",
 "reg": "South America",
 "last": 2003,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 1
 },
 {
 "sp": "Aplastodiscus musicus",
@@ -2319,7 +2327,9 @@
 "cty": "Ecuador",
 "reg": "South America",
 "last": 1988,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Atelopus guitarraensis",
@@ -4266,7 +4276,9 @@
 "cty": "United States, Cuba",
 "reg": "Islands",
 "last": 1944,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Campichthys galei",
@@ -4310,7 +4322,9 @@
 "cty": "Colombia",
 "reg": "South America",
 "last": "",
-"prec": ""
+"prec": "",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Canarinus demaisoni",
@@ -5795,7 +5809,9 @@
 "cty": "South Africa",
 "reg": "Africa",
 "last": 1937,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 1
 },
 {
 "sp": "Cryptochloris zyli",
@@ -5806,7 +5822,9 @@
 "cty": "South Africa",
 "reg": "Africa",
 "last": "",
-"prec": ""
+"prec": "",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Cryptothylax minutus",
@@ -6356,7 +6374,9 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1912,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 1
 },
 {
 "sp": "Cynops wolterstorffi",
@@ -6587,7 +6607,9 @@
 "cty": "United States (Hawaii)",
 "reg": "Islands",
 "last": 1943,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Cyrtodactylus batik",
@@ -8116,7 +8138,9 @@
 "cty": "Ecuador",
 "reg": "South America",
 "last": 1966,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 1
 },
 {
 "sp": "Emoia aneityumensis",
@@ -8655,7 +8679,9 @@
 "cty": "Barbados",
 "reg": "Islands",
 "last": 1963,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Erythrolamprus williamsi",
@@ -14210,7 +14236,9 @@
 "cty": "Haiti",
 "reg": "Islands",
 "last": 1985,
-"prec": "decade"
+"prec": "decade",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Magnolia wolfii",
@@ -14727,7 +14755,9 @@
 "cty": "Indonesia",
 "reg": "Asia",
 "last": 1920,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Melomys rubicola",
@@ -16663,7 +16693,9 @@
 "cty": "Turkey",
 "reg": "Europe",
 "last": 1975,
-"prec": "decade"
+"prec": "decade",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Paratelmatobius lutzii",
@@ -19556,7 +19588,9 @@
 "cty": "India",
 "reg": "Asia",
 "last": 2009,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Rhinotus albifrons",
@@ -19589,7 +19623,9 @@
 "cty": "Ecuador",
 "reg": "South America",
 "last": 2000,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 1
 },
 {
 "sp": "Rhizosomichthys totae",
@@ -21547,7 +21583,9 @@
 "cty": "Mexico",
 "reg": "North America",
 "last": 1950,
-"prec": "century"
+"prec": "century",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Sympetrum dilatatum",
@@ -23043,7 +23081,9 @@
 "cty": "Cuba, United States",
 "reg": "North America",
 "last": 1988,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Viburnum divaricatum",
@@ -23263,7 +23303,9 @@
 "cty": "Indonesia",
 "reg": "Asia",
 "last": 1961,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Zaumia sanctizaumi",
