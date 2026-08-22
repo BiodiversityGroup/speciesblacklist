@@ -1631,6 +1631,55 @@
       Latin.</p>
   </div>
 
+  <!-- THE COST ARGUMENT.
+       Every figure here is sourced in Dropbox/TBG/COSTS PAGE - one IUCN Red List
+       assessment.md, and two of its rules are load-bearing.
+
+       ONE DOLLAR BASIS PER RATIO. The unit cost is $333 in 2013 dollars (Rondinini et al.
+       2014) and the Red List's running cost is $4.7M in 2013 dollars (Juffe-Bignoli et al.
+       2016). Divide the inflated cost by the uninflated budget and the backlog looks like
+       nine months of it; on one basis, either year, it is seven. Inflation cancels in a
+       ratio, so the honest number is the smaller one.
+
+       ASSESSMENT, NOT REASSESSMENT. $333 is a workshop assessment; the paper's $68.50 is
+       online reassessment of BIRDS, the best known group on Earth. Data Deficient is
+       precisely where the cheap route is least likely to work, since the reason a species
+       is Data Deficient is usually that nobody has the data. So the expensive figure is the
+       right one here, and using the cheap one would understate by a factor of five.
+
+       AND THE CANDOR PARAGRAPH STAYS. The most cited cost figure in conservation is an
+       unpublished personal communication from 2013. Saying so is the site's own standard,
+       and a reader who checks the citation will find it out anyway. -->
+  <div class="prose">
+    <h3>What would it cost to just go and look?</h3>
+    <p>The whole Red List, every group, runs on roughly <strong>five million dollars a
+      year</strong>. US conservation organizations took in <strong>$15.85 billion</strong>
+      in 2022. So the one instrument the entire field uses to decide what is endangered
+      costs about <strong>three cents in every hundred dollars</strong> the sector raises.
+      That is a bargain and an embarrassment at the same time.</p>
+    <p>Here is the number nobody has published. There are
+      <strong id="cost_dd">8,659</strong> Data Deficient vertebrates on the Red List. At
+      what it costs to run one species through an assessment workshop, clearing every one
+      of them comes to about <strong id="cost_total">$4 million</strong>. That is
+      <strong id="cost_months">seven months</strong> of the Red List's own annual budget,
+      and <strong>0.03%</strong> of a single year of US conservation revenue. The AZA
+      members' ten percent tithe alone, $244.5 million, would cover it
+      <strong id="cost_aza">59</strong> times over.</p>
+    <p>And it would not be a shot in the dark. We tested the Black List's own ranking
+      against species IUCN has since reassessed: where the record already pins a species to
+      one small area, <strong id="cost_hit">56%</strong> came back threatened. Fifteen of
+      twenty seven, so read it as a direction and not a decimal, but the direction held
+      against every treatment we tried.</p>
+    <p class="homecaveat">The caveat we will not bury, because it is the whole field's
+      caveat and not ours. That per species cost traces to a single unpublished personal
+      communication from 2013, recycled in the literature ever since. And a reassessment
+      does not always resolve anything: <strong>1,210</strong> of our Data Deficient
+      species, four in ten, have been assessed more than once and come back Data Deficient
+      every time. Money spent on looking is not the same as money spent on finding out, and
+      anyone budgeting from these numbers should read
+      <a href="/methods/">the methods page</a> first.</p>
+  </div>
+
   <div class="prose">
     <h3>What would actually help</h3>
     <!-- Four, in the order Get Involved lists them. It said three and skipped the
@@ -3975,6 +4024,29 @@ function boot() {
      Nothing here says or implies that IUCN is at fault. The subject of each sentence is
      the species or the record. */
   const D = m.duration, n = x => (x || 0).toLocaleString();
+
+  /* THE COST FIGURES, computed rather than typed.
+     Constants and their sources are in Dropbox/TBG/COSTS PAGE - one IUCN Red List
+     assessment.md. $333 is a workshop assessment in 2013 dollars (Rondinini et al. 2014)
+     and $4.7M is the Red List's annual running cost in the same year (Juffe-Bignoli et al.
+     2016). BOTH SIDES STAY IN 2013 DOLLARS: inflation cancels in a ratio, and inflating
+     only the numerator turned seven months of budget into nine. */
+  (function () {
+    const PER_ASSESSMENT_2013 = 333, REDLIST_YEAR_2013 = 4.7e6, AZA_TITHE = 244.5e6;
+    const dd = c.iucn_dd_vertebrates;
+    if (!dd) return;
+    const total = dd * PER_ASSESSMENT_2013;
+    const put = (id, txt) => { const e = $("#" + id); if (e) e.textContent = txt; };
+    put("cost_dd", n(dd));
+    // Rounded to the nearest tenth of a million. "$2.884M" claims a precision a personal
+    // communication from 2013 cannot support.
+    put("cost_total", "$" + (Math.round(total / 1e5) / 10).toFixed(1) + " million");
+    const months = Math.round(total / REDLIST_YEAR_2013 * 12);
+    put("cost_months", months + (months === 1 ? " month" : " months"));
+    put("cost_aza", String(Math.round(AZA_TITHE / total)));
+    if (v && v.high && v.high.rate) put("cost_hit", Math.round(v.high.rate) + "%");
+  })();
+
   const STATS = [];
   /* FIRST, because it is the whole site in one sentence. Written for someone who has never
      heard of a Red List category: no percentages, no strata, no interval. "Probably" and
