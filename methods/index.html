@@ -4229,11 +4229,13 @@ function boot() {
     // The baseline the 56% is measured against. Without it the number is unreadable: a
     // reader cannot tell whether 56% is good. Both rates come from the same block.
     if (v && v.low && v.low.rate) put("cost_base", Math.round(v.low.rate) + "%");
-    // The repeat-assessment figure. 1,210 is from REASSESSMENTS_for_cnc.csv (2026-08-19)
-    // and is not yet in data.json, so it lives here. The DENOMINATOR and the FRACTION are
-    // both derived from c.dd so the sentence cannot contradict itself if the list changes.
-    const DD_REPEATED = 1210;
-    if (c.dd) {
+    // The repeat-assessment figure, READ FROM THE PAYLOAD since 2026-08-23. It was a
+    // constant here, which meant audit 5 could not see it: that audit only watches figures
+    // that reach a payload. Connect & Conserve republishes this number verbatim, so a
+    // stale value would have gone stale on two sites with neither pipeline noticing. Their
+    // session asked for it to be emitted and they were right.
+    const DD_REPEATED = c.dd_reassessed_still_dd;
+    if (c.dd && DD_REPEATED) {
       put("cost_ourdd", n(c.dd));
       put("cost_repeat", n(DD_REPEATED));
       const tenths = Math.round(DD_REPEATED / c.dd * 10);
