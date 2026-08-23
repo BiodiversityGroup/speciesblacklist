@@ -609,6 +609,17 @@
   /* The caveat under the Connect & Conserve figures. Quieter than body copy, because it
      qualifies rather than argues, and ink-2 rather than ink-3 so it stays above the 4.5:1
      contrast floor at this size. */
+  /* Three numbers a reader can take in before deciding whether to read the prose.
+     Serif figures at quote size over a one-line label, matching the .num language the
+     site already uses. Grid, not flex, so the three cells stay equal and the strip
+     collapses to a single column on a phone instead of squeezing. */
+  .statstrip { display:grid; grid-template-columns:repeat(3, 1fr); gap:var(--s2);
+               margin:var(--s3) auto; max-width:46rem; text-align:center; }
+  .statstrip b { display:block; font-family:var(--serif); font-weight:700;
+                 font-size:var(--fs-quote); color:var(--ink); letter-spacing:-.01em; }
+  .statstrip span { display:block; font-family:var(--sans); font-size:.8rem;
+                    color:var(--ink-3); line-height:1.45; margin-top:.25rem; }
+  @media (max-width:560px) { .statstrip { grid-template-columns:1fr; gap:var(--s2); } }
   .homecaveat { font-size:.88rem !important; color:var(--ink-2) !important;
                 border-left:2px solid var(--rule-2); padding-left:1rem;
                 margin-top:1.2rem !important; }
@@ -1113,6 +1124,11 @@
   .statarrow:hover { border-color:var(--accent); color:var(--accent); }
   @media (max-width:520px) { .statarrow { display:none; } }  /* thumbs swipe instead */
   #overdueHead { transition:opacity .35s; min-height:4.2em; }
+  /* Long stats at quote size, not display size. The 162% headline is 43 words; at
+     --fs-display it was nine lines and the entire first screen on both desktop and
+     phone. Applied by the rotation code from measured text length, so any future long
+     stat gets the same treatment without anyone remembering. */
+  #overdueHead.long { font-size:var(--fs-quote); letter-spacing:0; }
   #overdueHead.fading { opacity:0; }
   @media (min-width:700px) { #overdueHead { min-height:3.1em; } }
   .statdots { display:flex; justify-content:center; gap:.45rem; margin:.2rem 0 0; }
@@ -1647,7 +1663,7 @@
 
 <footer><div class="wrap">
   <p><strong>Cite the underlying data as:</strong> IUCN (2026). The IUCN Red List of
-    Threatened Species. Version 2026&#8209;1. iucnredlist.org —
+    Threatened Species. Version 2026&#8209;1. iucnredlist.org.
     doi:10.15468/0qnb58, accessed via GBIF.org. IUCN Red List Terms of Use apply.</p>
   <p>Species accounts derive from Richardson, M. (2023) <em>Threatened and Recently
     Extinct Vertebrates of the World</em>, Cambridge University Press.</p>
@@ -3998,7 +4014,7 @@ function boot() {
 
   // Written before either branch can return, because every route has a footer.
   $("#builtline").textContent =
-    `Register built ${m.built} against IUCN Red List v${m.redlist_version}, `
+    `List built ${m.built} against IUCN Red List v${m.redlist_version}, `
     + `accessed ${m.redlist_accessed}. `
     + `${DATA.species.length.toLocaleString()} species accounts. `
     + `Anyone re-checking a claim against a later Red List release should expect `
@@ -4039,6 +4055,7 @@ function boot() {
     put("cost_total", "$" + (Math.round(total / 1e5) / 10).toFixed(1) + " million");
     const months = Math.round(total / REDLIST_YEAR_2013 * 12);
     put("cost_months", months + (months === 1 ? " month" : " months"));
+    put("cost_months_tile", months + (months === 1 ? " month" : " months"));
     if (v && v.high && v.high.rate) put("cost_hit", Math.round(v.high.rate) + "%");
     // The baseline the 56% is measured against. Without it the number is unreadable: a
     // reader cannot tell whether 56% is good. Both rates come from the same block.
@@ -4157,6 +4174,9 @@ function boot() {
     const show = i => {
       at = (i + STATS.length) % STATS.length;
       head.innerHTML = STATS[at];
+      // A 40-word stat at display size fills the whole first screen. Long ones drop
+      // to quote size so the lede and the dots stay visible above the fold.
+      head.classList.toggle("long", head.textContent.trim().length > 170);
       if (dots) {
         [...dots.children].forEach((b, k) =>
           b.setAttribute("aria-current", k === at ? "true" : "false"));

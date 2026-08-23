@@ -609,6 +609,17 @@
   /* The caveat under the Connect & Conserve figures. Quieter than body copy, because it
      qualifies rather than argues, and ink-2 rather than ink-3 so it stays above the 4.5:1
      contrast floor at this size. */
+  /* Three numbers a reader can take in before deciding whether to read the prose.
+     Serif figures at quote size over a one-line label, matching the .num language the
+     site already uses. Grid, not flex, so the three cells stay equal and the strip
+     collapses to a single column on a phone instead of squeezing. */
+  .statstrip { display:grid; grid-template-columns:repeat(3, 1fr); gap:var(--s2);
+               margin:var(--s3) auto; max-width:46rem; text-align:center; }
+  .statstrip b { display:block; font-family:var(--serif); font-weight:700;
+                 font-size:var(--fs-quote); color:var(--ink); letter-spacing:-.01em; }
+  .statstrip span { display:block; font-family:var(--sans); font-size:.8rem;
+                    color:var(--ink-3); line-height:1.45; margin-top:.25rem; }
+  @media (max-width:560px) { .statstrip { grid-template-columns:1fr; gap:var(--s2); } }
   .homecaveat { font-size:.88rem !important; color:var(--ink-2) !important;
                 border-left:2px solid var(--rule-2); padding-left:1rem;
                 margin-top:1.2rem !important; }
@@ -1113,6 +1124,11 @@
   .statarrow:hover { border-color:var(--accent); color:var(--accent); }
   @media (max-width:520px) { .statarrow { display:none; } }  /* thumbs swipe instead */
   #overdueHead { transition:opacity .35s; min-height:4.2em; }
+  /* Long stats at quote size, not display size. The 162% headline is 43 words; at
+     --fs-display it was nine lines and the entire first screen on both desktop and
+     phone. Applied by the rotation code from measured text length, so any future long
+     stat gets the same treatment without anyone remembering. */
+  #overdueHead.long { font-size:var(--fs-quote); letter-spacing:0; }
   #overdueHead.fading { opacity:0; }
   @media (min-width:700px) { #overdueHead { min-height:3.1em; } }
   .statdots { display:flex; justify-content:center; gap:.45rem; margin:.2rem 0 0; }
@@ -1567,11 +1583,10 @@
     <article class="homecard">
       <p class="eyebrow">The core list</p>
       <h4><a href="/black-list-overview/" data-goto="overview">The Black List</a></h4>
-      <p>Species that the IUCN Red List has assessed and been unable to categorize, or
-        has not yet assessed, ranked by how narrowly restricted the published record
-        says they are. If a species here turns out to be in trouble, this is where you
-        would have seen it first. This page is aimed mostly at researchers and IUCN
-        members.</p>
+      <p>Species the IUCN Red List has been unable to categorize, or has not yet
+        assessed, ranked by how narrowly restricted the published record says they are.
+        If a species here turns out to be in trouble, this is where you would have seen
+        it first.</p>
     </article>
 
     <article class="homecard">
@@ -1637,9 +1652,8 @@
          headline should get the detail here, not the same three sentences again. -->
     <p>We wondered whether anybody was, so we checked. Our sister project
       <a href="https://connectandconserve.org" target="_blank" rel="noopener">Connect &amp;
-      Conserve</a> maps the conservation sector, every organization it can find and what each
-      one says it works on. In August 2026 it searched those organizations for every one of
-      the eight thousand species on the four lists here.</p>
+      Conserve</a> maps every conservation organization it can find and what each one
+      says it works on, and we pointed it at all eight thousand species here.</p>
     <p><strong>Sixty three came back.</strong> Not sixty three percent, not sixty three
       hundred. Sixty three species, out of eight thousand, have any organization anywhere
       that names them. For every species with somebody's name attached, <strong>127</strong>
@@ -1656,12 +1670,10 @@
          entire search: 15,959 search surfaces against 14,085 before, and not one additional
          organization named one additional species. A caveat that has been tested is no
          longer a caveat, and leaving it up would have understated our own finding. -->
-    <p class="homecaveat">One caveat, because we thought it cut against us. Searching for a
-      species means searching for its name, and a frog described in 2019 usually has no common
-      name yet, only a Latin one. Our newest list scored lowest of the four, so we went and
-      found 1,878 of those missing names and ran the whole search again. Nothing moved. These
-      species go unmentioned in English exactly as thoroughly as they go unmentioned in
-      Latin.</p>
+    <p class="homecaveat">We thought the deck was stacked: a frog described in 2019
+      usually has no common name yet, so nobody can search for it. So we found 1,878 of
+      the missing names and ran the whole search again. Nothing moved. These species go
+      unmentioned in English exactly as thoroughly as they go unmentioned in Latin.</p>
   </div>
 
   <!-- THE COST ARGUMENT.
@@ -1695,32 +1707,33 @@
        and a reader who checks the citation will find it out anyway. -->
   <div class="prose">
     <h3>What would it cost to just go and look?</h3>
-    <p>The whole Red List, every group, runs on roughly <strong>five million dollars a
-      year</strong>. US conservation organizations took in about
-      <strong>$16 billion</strong> in 2022. So the one instrument the entire field uses to decide what is endangered
-      costs about <strong>three cents in every hundred dollars</strong> the sector raises.
-      That is a bargain and an embarrassment at the same time.</p>
+    <div class="statstrip" aria-label="What assessment costs">
+      <div><b>$5M</b><span>runs the whole Red List for a year</span></div>
+      <div><b>3&cent;</b><span>of every $100 US conservation raises</span></div>
+      <div><b id="cost_months_tile">7 months</b><span>of that budget clears every Data
+        Deficient vertebrate</span></div>
+    </div>
+    <p>The whole Red List, every group, runs on roughly five million dollars a year,
+      against about <strong>$16 billion</strong> the US conservation sector took in
+      during 2022. The one instrument the entire field uses to decide what is
+      endangered is a rounding error on it. That is a bargain and an embarrassment at
+      the same time.</p>
     <p>Here is the number nobody has published. There are
-      <strong id="cost_dd">8,659</strong> Data Deficient vertebrates on the Red List. At
-      what it costs to run one species through an assessment workshop, looking at every one
-      of them comes to about <strong id="cost_total">$2.9 million</strong>. That is
-      <strong id="cost_months">seven months</strong> of the Red List's own annual
-      budget.</p>
-    <p>And it would not be a shot in the dark. We tested the Black List's own ranking
-      against the species IUCN has since reassessed. Where the record already pins a species
-      to one small area, <strong id="cost_hit">56%</strong> came back threatened, against
-      <strong id="cost_base">21%</strong> for the rest. Fifteen of twenty seven, so read it
-      as a direction and not a decimal, but the direction held against every treatment we
-      tried.</p>
-    <p class="homecaveat">The caveat we will not bury, because it is the whole field's
-      caveat and not ours. That per species cost traces to a single unpublished personal
-      communication from 2013, recycled in the literature ever since. And an assessment does
-      not always resolve anything: of the <strong id="cost_ourdd">3,031</strong> Data
-      Deficient species on our own list, <strong id="cost_repeat">1,210</strong>,
-      <span id="cost_repeat_frac">four in ten</span>, have been assessed more than once and
-      come back Data Deficient every time. Money spent on looking is not money spent on
-      finding out, and anyone budgeting from these numbers should read
-      <a href="/methods/">the methods page</a> first.</p>
+      <strong id="cost_dd">8,659</strong> Data Deficient vertebrates on the Red List,
+      and at workshop rates, looking at every one of them comes to about
+      <strong id="cost_total">$2.9 million</strong>, <span id="cost_months">seven
+      months</span> of the Red List's own budget. And it would not be a shot in the
+      dark: where the record already pins a species to one small area,
+      <strong id="cost_hit">56%</strong> came back threatened when IUCN looked again,
+      against <strong id="cost_base">21%</strong> for the rest. Fifteen of twenty
+      seven, so read it as a direction and not a decimal.</p>
+    <p class="homecaveat">The caveat we will not bury: that per species cost traces to
+      one unpublished personal communication from 2013, and of the
+      <strong id="cost_ourdd">3,031</strong> Data Deficient species on our own list,
+      <strong id="cost_repeat">1,210</strong>, <span id="cost_repeat_frac">four in
+      ten</span>, have been assessed more than once and come back Data Deficient every
+      time. Money spent on looking is not money spent on finding out. Budgeting from
+      these numbers starts at <a href="/methods/">the methods page</a>.</p>
   </div>
 
   <div class="prose">
@@ -1759,7 +1772,7 @@
 
 <footer><div class="wrap">
   <p><strong>Cite the underlying data as:</strong> IUCN (2026). The IUCN Red List of
-    Threatened Species. Version 2026&#8209;1. iucnredlist.org —
+    Threatened Species. Version 2026&#8209;1. iucnredlist.org.
     doi:10.15468/0qnb58, accessed via GBIF.org. IUCN Red List Terms of Use apply.</p>
   <p>Species accounts derive from Richardson, M. (2023) <em>Threatened and Recently
     Extinct Vertebrates of the World</em>, Cambridge University Press.</p>
@@ -4110,7 +4123,7 @@ function boot() {
 
   // Written before either branch can return, because every route has a footer.
   $("#builtline").textContent =
-    `Register built ${m.built} against IUCN Red List v${m.redlist_version}, `
+    `List built ${m.built} against IUCN Red List v${m.redlist_version}, `
     + `accessed ${m.redlist_accessed}. `
     + `${DATA.species.length.toLocaleString()} species accounts. `
     + `Anyone re-checking a claim against a later Red List release should expect `
@@ -4151,6 +4164,7 @@ function boot() {
     put("cost_total", "$" + (Math.round(total / 1e5) / 10).toFixed(1) + " million");
     const months = Math.round(total / REDLIST_YEAR_2013 * 12);
     put("cost_months", months + (months === 1 ? " month" : " months"));
+    put("cost_months_tile", months + (months === 1 ? " month" : " months"));
     if (v && v.high && v.high.rate) put("cost_hit", Math.round(v.high.rate) + "%");
     // The baseline the 56% is measured against. Without it the number is unreadable: a
     // reader cannot tell whether 56% is good. Both rates come from the same block.
@@ -4269,6 +4283,9 @@ function boot() {
     const show = i => {
       at = (i + STATS.length) % STATS.length;
       head.innerHTML = STATS[at];
+      // A 40-word stat at display size fills the whole first screen. Long ones drop
+      // to quote size so the lede and the dots stay visible above the fold.
+      head.classList.toggle("long", head.textContent.trim().length > 170);
       if (dots) {
         [...dots.children].forEach((b, k) =>
           b.setAttribute("aria-current", k === at ? "true" : "false"));

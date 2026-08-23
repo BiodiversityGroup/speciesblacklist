@@ -609,6 +609,17 @@
   /* The caveat under the Connect & Conserve figures. Quieter than body copy, because it
      qualifies rather than argues, and ink-2 rather than ink-3 so it stays above the 4.5:1
      contrast floor at this size. */
+  /* Three numbers a reader can take in before deciding whether to read the prose.
+     Serif figures at quote size over a one-line label, matching the .num language the
+     site already uses. Grid, not flex, so the three cells stay equal and the strip
+     collapses to a single column on a phone instead of squeezing. */
+  .statstrip { display:grid; grid-template-columns:repeat(3, 1fr); gap:var(--s2);
+               margin:var(--s3) auto; max-width:46rem; text-align:center; }
+  .statstrip b { display:block; font-family:var(--serif); font-weight:700;
+                 font-size:var(--fs-quote); color:var(--ink); letter-spacing:-.01em; }
+  .statstrip span { display:block; font-family:var(--sans); font-size:.8rem;
+                    color:var(--ink-3); line-height:1.45; margin-top:.25rem; }
+  @media (max-width:560px) { .statstrip { grid-template-columns:1fr; gap:var(--s2); } }
   .homecaveat { font-size:.88rem !important; color:var(--ink-2) !important;
                 border-left:2px solid var(--rule-2); padding-left:1rem;
                 margin-top:1.2rem !important; }
@@ -1113,6 +1124,11 @@
   .statarrow:hover { border-color:var(--accent); color:var(--accent); }
   @media (max-width:520px) { .statarrow { display:none; } }  /* thumbs swipe instead */
   #overdueHead { transition:opacity .35s; min-height:4.2em; }
+  /* Long stats at quote size, not display size. The 162% headline is 43 words; at
+     --fs-display it was nine lines and the entire first screen on both desktop and
+     phone. Applied by the rotation code from measured text length, so any future long
+     stat gets the same treatment without anyone remembering. */
+  #overdueHead.long { font-size:var(--fs-quote); letter-spacing:0; }
   #overdueHead.fading { opacity:0; }
   @media (min-width:700px) { #overdueHead { min-height:3.1em; } }
   .statdots { display:flex; justify-content:center; gap:.45rem; margin:.2rem 0 0; }
@@ -1520,14 +1536,16 @@
       <span class="num">475</span> have held the label for twenty years or more. And
       <span class="num">1,210</span> of them, 40%, have been assessed more
       than once, meaning IUCN returned, looked again, and wrote Data Deficient a second or
-      third time. Those are not species awaiting a first look. For scale, the median time
+      third time. Those are not species awaiting a first look.</p>
+    <p>For scale, the median time
       IUCN has actually taken to resolve a Data Deficient listing is
       <span class="num">16</span> years, so
       <span class="num">1,011</span> species in this list are already past it.</p>
     <p><strong>The species outside were screened out, not overlooked.</strong> Richardson
       takes an explicit position on the Data Deficient category: most of it, in his
       judgment, is junior synonyms or valid species not in immediate danger, while
-      genuinely threatened species get lost there for want of follow-up research. He admits
+      genuinely threatened species get lost there for want of follow-up research.</p>
+    <p>He admits
       a Data Deficient species when its record is narrow enough to imply risk, and that
       screen is measurable, since he kept <span class="num">28%</span> of IUCN's Data
       Deficient ray-finned fishes against <span class="num">72%</span> of the birds,
@@ -1609,8 +1627,8 @@
     <h3>What the test showed</h3>
     <p id="valprose"></p>
     <p>The priority rate lands close to the 56% that Borgelt et al. (2022,
-      <em>Communications Biology</em>) predicted for Data Deficient species generally —
-      which suggests that figure belongs to the narrowly restricted subset, and that an
+      <em>Communications Biology</em>) predicted for Data Deficient species generally.
+      That suggests the figure belongs to the narrowly restricted subset, and that an
       unranked list dilutes a real signal with vague-range species.</p>
     <p id="valcaveats"></p>
 
@@ -1635,7 +1653,7 @@
       paragraph. This is the stronger provenance and it covers
       <span class="num">518</span> species.</p>
     <p><strong>From the species entry itself.</strong> Where a species is not inside a
-      locality account, the place is very often named in its own sentence anyway —
+      locality account, the place is very often named in its own sentence anyway:
       <em>"collected from the upper Pungwe River"</em>, <em>"collected off
       Mauritius"</em>. Pattern extraction over those sentences recovers a locality for
       a further <span class="num">1,211</span> species, taking coverage from
@@ -1662,12 +1680,13 @@
       <span class="num">1,729</span> species with a locality string, fewer than half are
       specific enough to place at all, and the largest single value is "The Tropical
       Atlantic Region", covering 63 species. That is faithful to the source and coarser
-      than the three examples above suggest. Those strings were <strong>not</strong> run
+      than the three examples above suggest.</p>
+    <p>Those strings were <strong>not</strong> run
       through a gazetteer to make the map: place-name geocoding is ambiguous exactly
       where this corpus is ambiguous, and a map that confidently places a species in
       the wrong ocean is worse than no map. The points are real museum specimens and
-      field sightings that already carry map coordinates &mdash; &ldquo;georeferenced&rdquo;
-      records &mdash; taken from <strong>GBIF</strong> and queried per species.</p>
+      field sightings that already carry map coordinates (&ldquo;georeferenced&rdquo;
+      records), taken from <strong>GBIF</strong> and queried per species.</p>
     <p>One trap governed that query, and it is the same species of error that wrecked
       the first never-assessed list. GBIF's free-text name search must not be used,
       because many of these names are synonyms and it silently returns records of the
@@ -1699,8 +1718,8 @@
       Cordillera Central", Nominatim returns a <em>university</em> in Baguio. A name
       ending "River" must come back as a waterway, "Island" as an island; buildings,
       roads and campuses are rejected outright. That removed
-      <span class="num" id="geoRejected">—</span> of
-      <span class="num" id="geoCandidates">—</span> candidates.</p>
+      <span class="num" id="geoRejected">&hellip;</span> of
+      <span class="num" id="geoCandidates">&hellip;</span> candidates.</p>
     <p><strong>But type agreement cannot see a same-type homonym</strong>, and those are
       common. "Congo River" resolved to a real river of that name in Sierra Leone,
       4,000&nbsp;km from the Congo, passing cleanly as river/river. "Dunk Island"
@@ -1726,12 +1745,12 @@
     <p><strong>Around one in six checkable geocodes was wrong by more than
       500&nbsp;km</strong>, and none of those errors was detectable from the name or the
       feature type alone. That rate is the reason the unverified
-      <span class="num" id="geoUnverified2">—</span> are not plotted by
+      <span class="num" id="geoUnverified2">&hellip;</span> are not plotted by
       default: there is no reason to think they are cleaner, and they cannot be tested.
-      The validated rings add <span class="num" id="geoNewly">—</span> species that have
+      The validated rings add <span class="num" id="geoNewly">&hellip;</span> species that have
       no georeferenced record of their own, modest, but every one is corroborated.</p>
     <p><strong>A locality naming two places is kept but never plotted.</strong>
-      <span class="num" id="geoCompound">—</span> strings in the list are compounds
+      <span class="num" id="geoCompound">&hellip;</span> strings in the list are compounds
      , "Athi and Tana River", "Caroline and Marshall Islands". There is no single
       coordinate for them, and every way of reducing one to a single place either drops
       the noun that identified it ("Caroline") or manufactures somewhere that does not
@@ -1799,15 +1818,15 @@
        Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
   <aside class="datagrab">
     <h3>Take the data</h3>
-    <p>The whole register as one JSON file: all <strong>3,062</strong> species with their
+    <p>The whole Black List as one JSON file: all <strong>3,062</strong> species with their
       tier, evidence, locality text, threats and Red List history. No sign-up, no
-      licence to accept beyond IUCN's own terms, cited in the footer.</p>
+      license to accept beyond IUCN's own terms, cited in the footer.</p>
     <a class="datagrab-btn" href="/data.json" download>
       Download the Black List
       <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
     </a>
     <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
-      List v2026&#8209;1. Rebuilt whenever the register changes, at the same address, so a
+      List v2026&#8209;1. Rebuilt whenever the list changes, at the same address, so a
       script can fetch it on a schedule.</p>
   </aside>
 </section>
@@ -1833,7 +1852,7 @@
 
 <footer><div class="wrap">
   <p><strong>Cite the underlying data as:</strong> IUCN (2026). The IUCN Red List of
-    Threatened Species. Version 2026&#8209;1. iucnredlist.org —
+    Threatened Species. Version 2026&#8209;1. iucnredlist.org.
     doi:10.15468/0qnb58, accessed via GBIF.org. IUCN Red List Terms of Use apply.</p>
   <p>Species accounts derive from Richardson, M. (2023) <em>Threatened and Recently
     Extinct Vertebrates of the World</em>, Cambridge University Press.</p>
@@ -4184,7 +4203,7 @@ function boot() {
 
   // Written before either branch can return, because every route has a footer.
   $("#builtline").textContent =
-    `Register built ${m.built} against IUCN Red List v${m.redlist_version}, `
+    `List built ${m.built} against IUCN Red List v${m.redlist_version}, `
     + `accessed ${m.redlist_accessed}. `
     + `${DATA.species.length.toLocaleString()} species accounts. `
     + `Anyone re-checking a claim against a later Red List release should expect `
@@ -4225,6 +4244,7 @@ function boot() {
     put("cost_total", "$" + (Math.round(total / 1e5) / 10).toFixed(1) + " million");
     const months = Math.round(total / REDLIST_YEAR_2013 * 12);
     put("cost_months", months + (months === 1 ? " month" : " months"));
+    put("cost_months_tile", months + (months === 1 ? " month" : " months"));
     if (v && v.high && v.high.rate) put("cost_hit", Math.round(v.high.rate) + "%");
     // The baseline the 56% is measured against. Without it the number is unreadable: a
     // reader cannot tell whether 56% is good. Both rates come from the same block.
@@ -4343,6 +4363,9 @@ function boot() {
     const show = i => {
       at = (i + STATS.length) % STATS.length;
       head.innerHTML = STATS[at];
+      // A 40-word stat at display size fills the whole first screen. Long ones drop
+      // to quote size so the lede and the dots stay visible above the fold.
+      head.classList.toggle("long", head.textContent.trim().length > 170);
       if (dots) {
         [...dots.children].forEach((b, k) =>
           b.setAttribute("aria-current", k === at ? "true" : "false"));
