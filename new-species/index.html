@@ -2443,6 +2443,17 @@ function renderLostStats() {
   $("#lostStats").innerHTML = cells.map(
     ([n, l]) => `<div class="loststat"><b>${n}</b><span>${l}</span></div>`).join("");
 
+  // The three class counts in the defs box, computed like every other figure here.
+  // They were typed, went stale through two exclusions and a reclass, and summed to
+  // 2,133 one screen below a lede that said 2,120.
+  const bc = m.by_class || {}, br = m.by_redlist || {};
+  [["clsLost", bc["lost"]], ["clsLong", bc["long-lost"]],
+   ["clsUndated", bc["unclassified"]], ["clsFound", bc["rediscovered"]],
+   ["clsLC", br["LC"]], ["clsDD", br["DD"]]].forEach(([id, v]) => {
+    const e = $("#" + id);
+    if (e && v != null) e.textContent = v.toLocaleString();
+  });
+
   // Say what is missing from the map rather than letting the map imply it is everything.
   const u = $("#lostUnmapped");
   if (u && m.n_unmapped) {

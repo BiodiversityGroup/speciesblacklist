@@ -1529,18 +1529,22 @@
       <dt>Lost</dt>
       <dd>Not confirmed alive by photographic, audio or genetic evidence for more than
         <strong>10 years</strong>. This is the threshold for everything on this page:
-        <strong>816</strong> species qualify.</dd>
+        <strong id="clsLost">&hellip;</strong> species qualify.</dd>
       <dt>Long lost</dt>
       <dd>Approximately <strong>50 years</strong> unobserved. Most of this list,
-        <strong>1,135</strong> species, is in this category, and a further
-        <strong>182</strong> carry too little date information to be placed in either.</dd>
+        <strong id="clsLong">&hellip;</strong> species, is in this category, and a further
+        <strong id="clsUndated">&hellip;</strong> carry too little date information to be
+        placed in either.</dd>
     </dl>
     <p class="defsrc">Definitions from Long &amp; Rodríguez 2022, <em>Oryx</em> 56(4),
       "Lost but not forgotten", which is the vocabulary the underlying list uses. Note
       what they turn on: <strong>evidence</strong>, not conservation status. A species
       can be missing for a decade and still be assessed as fine:
-      <strong>208</strong> species here are currently listed Least Concern, and another
-      <strong>462</strong> are Data Deficient.</p>
+      <strong id="clsLC">&hellip;</strong> species here are currently listed Least
+      Concern, and another <strong id="clsDD">&hellip;</strong> are Data Deficient. And
+      the news can outrun the record: <strong id="clsFound">&hellip;</strong> species on
+      this list have been confirmed alive again, and they stay here marked
+      &ldquo;found again&rdquo; rather than quietly vanishing.</p>
   </div>
 
   <div class="loststats" id="lostStats"></div>
@@ -2547,6 +2551,17 @@ function renderLostStats() {
   ];
   $("#lostStats").innerHTML = cells.map(
     ([n, l]) => `<div class="loststat"><b>${n}</b><span>${l}</span></div>`).join("");
+
+  // The three class counts in the defs box, computed like every other figure here.
+  // They were typed, went stale through two exclusions and a reclass, and summed to
+  // 2,133 one screen below a lede that said 2,120.
+  const bc = m.by_class || {}, br = m.by_redlist || {};
+  [["clsLost", bc["lost"]], ["clsLong", bc["long-lost"]],
+   ["clsUndated", bc["unclassified"]], ["clsFound", bc["rediscovered"]],
+   ["clsLC", br["LC"]], ["clsDD", br["DD"]]].forEach(([id, v]) => {
+    const e = $("#" + id);
+    if (e && v != null) e.textContent = v.toLocaleString();
+  });
 
   // Say what is missing from the map rather than letting the map imply it is everything.
   const u = $("#lostUnmapped");
