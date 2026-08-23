@@ -683,13 +683,30 @@
   .gistep ul { font-family:var(--sans); font-size:.88rem; color:var(--ink-2);
                margin:.6rem 0 0; padding-left:1.2rem; }
   .gistep li { margin:.35rem 0; }
+  /* SOMEBODY ELSE'S LIVE SEARCH, boxed so it reads as an action rather than another
+     paragraph. Accent-soft with a top rule, the same treatment the data download gets,
+     because both are the one thing on their page a reader can go and do. Distinct from
+     .gipost, which is dashed and is text to copy rather than a place to go. */
+  .gicall { background:var(--accent-soft); border:1px solid var(--rule);
+            border-top:3px solid var(--accent); border-radius:2px;
+            padding:1.3rem 1.5rem; margin:var(--s3) auto 0; max-width:52rem; }
+  .gicall h4, .gicall h3 { font-family:var(--serif); font-size:1.16rem; color:var(--ink);
+                           margin:0 0 .5rem; }
+  .gicall p { font-family:var(--sans); font-size:.9rem; color:var(--ink-2);
+              line-height:1.6; margin:0 0 .7rem; }
+  .gicall p:last-child { margin:0; }
+  .gicall .gicallwho { font-size:.8rem; color:var(--ink-3); }
+  @media (max-width:560px) { .gicall { padding:1.1rem 1rem; } }
+
   /* A ready-to-paste post, set apart so it is obviously a quotable block and not
      the page talking. */
   .gilead { text-align:center; }
   .gipost { background:var(--ground); border:1px dashed var(--rule-2);
             padding:1.2rem 1.4rem; margin:.9rem auto .3rem; font-family:var(--sans);
             font-size:.88rem; color:var(--ink); line-height:1.6;
-            text-align:center; max-width:52ch; }
+            text-align:center; max-width:78ch; }   /* 52ch + 50%, Scott 2026-08-22. The block is a
+            post somebody will paste, not body copy, so the reading measure that governs
+            prose does not apply to it. */
   .gipost p { margin:0 0 .6rem; font-family:var(--sans); color:var(--ink); }
   .gipost p:last-child { margin:0; }
   /* Share row. Each is a plain link to the network's own compose URL, so no third-party
