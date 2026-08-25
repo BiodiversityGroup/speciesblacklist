@@ -3796,7 +3796,138 @@ const LIST_LABEL = {
   "Never assessed (reptiles)": "never assessed",
 };
 
+/* ---- the classics: pre-feed rediscoveries ------------------------------------------
+   Static and curated, NOT from the payload: the feed regenerates nightly and reaches
+   back only to 2020, while these are settled history. Every date below was checked on
+   2026-08-25 against the linked Lost & Found Nature page, which is also where each card
+   sends the reader. Oldest find first, so the grid reads as a century of people going
+   back to look. `found` is a string on the one species that was refound twice. */
+const RD_CLASSICS = [
+ {c:"Coelacanth", s:"Latimeria chalumnae", g:"Fish", w:"South Africa",
+  lost:"known only from fossils", found:1938,
+  t:"Believed extinct for 66 million years until a trawler off East London brought one up and museum curator Marjorie Courtenay-Latimer recognized what she was looking at.",
+  u:"https://www.lostandfoundnature.com/species/coelacanth/"},
+ {c:"South Island takahē", s:"Porphyrio hochstetteri", g:"Bird", w:"New Zealand",
+  lost:"last seen 1898", found:1948,
+  t:"Declared extinct after four specimens in the 1800s; physician Geoffrey Orbell followed rumors and strange calls into the Murchison Mountains and walked into a living population.",
+  u:"https://www.lostandfoundnature.com/species/south-island-takahe/"},
+ {c:"Bermuda petrel", s:"Pterodroma cahow", g:"Bird", w:"Bermuda",
+  lost:"missing for about 330 years", found:1951,
+  t:"Written off in the 1620s after colonists, their pigs and their rats ate through the nesting colonies; eighteen pairs were found alive on rocky islets in Castle Harbour.",
+  u:"https://www.lostandfoundnature.com/species/bermuda-petrel/"},
+ {c:"Leadbeater's possum", s:"Gymnobelideus leadbeateri", g:"Mammal", w:"Australia",
+  lost:"last confirmed 1909", found:1961,
+  t:"Feared extinct for half a century until one was spotted in mountain ash forest near Marysville, Victoria; it is now the state's faunal emblem.",
+  u:"https://www.lostandfoundnature.com/species/leadbeaters-possum/"},
+ {c:"Noisy scrub-bird", s:"Atrichornis clamosus", g:"Bird", w:"Australia",
+  lost:"last seen 1889", found:1961,
+  t:"Silent for 72 years until its unmistakable song rang out again at Two Peoples Bay, and the town planned for that exact site was shelved.",
+  u:"https://www.lostandfoundnature.com/species/noisy-scrub-bird/"},
+ {c:"Golden-fronted bowerbird", s:"Amblyornis flavifrons", g:"Bird", w:"Indonesia",
+  lost:"trade skins bought in 1895", found:1981,
+  t:"For 86 years science knew it only from millinery-trade skins with no locality; Jared Diamond found it alive and displaying in the Foja Mountains of New Guinea.",
+  u:"https://www.lostandfoundnature.com/species/golden-fronted-bower-bird/"},
+ {c:"Fiji petrel", s:"Pseudobulweria macgillivrayi", g:"Bird", w:"Fiji",
+  lost:"one specimen from 1855", found:1984,
+  t:"A single young bird collected in 1855 was all anyone had for 129 years, until an adult flew into Dick Watling's survey camp on Gau island at night.",
+  u:"https://www.lostandfoundnature.com/species/fiji-petrel/"},
+ {c:"Romer's tree frog", s:"Liuixalus romeri", g:"Amphibian", w:"Hong Kong",
+  lost:"its only cave collapsed in 1953", found:1984,
+  t:"John Romer found it in one cave in 1952; the cave collapsed the next year and the frog was presumed extinct until it reappeared on the same island three decades later.",
+  u:"https://www.lostandfoundnature.com/species/romers-tree-frog/"},
+ {c:"Bulmer's fruit bat", s:"Aproteles bulmerae", g:"Mammal", w:"Papua New Guinea",
+  lost:"vanished from its one cave by 1977", found:1992,
+  t:"Described from 10,000-year-old bones, discovered alive in the 1970s, hunted out of its single known cave by 1977, and found flying there again in 1992.",
+  u:"https://www.lostandfoundnature.com/species/bulmers-fruit-bat/"},
+ {c:"Woolly flying squirrel", s:"Eupetaurus cinereus", g:"Mammal", w:"Pakistan",
+  lost:"last recorded in 1924", found:1994,
+  t:"The largest gliding mammal, missing for seventy years, until two men who claimed they could catch one brought a live animal to researcher Peter Zahler in northern Pakistan.",
+  u:"https://www.lostandfoundnature.com/species/woolly-flying-squirrel/"},
+ {c:"Arakan forest turtle", s:"Heosemys depressa", g:"Reptile", w:"Myanmar",
+  lost:"last recorded 1908", found:1994,
+  t:"Missing for 86 years until specimens turned up for sale in an Asian food market; wild ones were later confirmed in the bamboo forests of the Arakan hills.",
+  u:"https://www.lostandfoundnature.com/species/arakan-forest-turtle/"},
+ {c:"Crambione cookii", s:"", g:"Jellyfish", w:"Australia",
+  lost:"described in 1910, then nothing", found:2000,
+  t:"A pink jellyfish described from Cooktown in 1910 and unrecorded for ninety years until aquarist Puk Scivyer photographed one off a Sunshine Coast beach; she caught one alive in 2013.",
+  u:"https://www.lostandfoundnature.com/species/crambione-cooki/"},
+ {c:"Lord Howe Island stick insect", s:"Dryococelus australis", g:"Insect", w:"Australia",
+  lost:"eaten off its island by rats by 1920", found:2001,
+  t:"Presumed extinct for 80 years until climbers found about two dozen living under a single shrub on Ball's Pyramid, a sea stack 23 kilometers from Lord Howe.",
+  u:"https://www.lostandfoundnature.com/species/lord-howe-island-stick-insect/"},
+ {c:"Bocourt's terrific skink", s:"Phoboscincus bocourti", g:"Reptile", w:"New Caledonia",
+  lost:"one specimen, about 1876", found:2003,
+  t:"Known from a single 19th-century specimen for 127 years until Ivan Ineich met one hunting through the leaf litter of an islet off the Isle of Pines.",
+  u:"https://www.lostandfoundnature.com/species/bocourts-terrific-skink/"},
+ {c:"Flat-headed myotis", s:"Myotis planiceps", g:"Mammal", w:"Mexico",
+  lost:"last seen 1970, declared extinct 1996", found:2004,
+  t:"One of the world's smallest bats was declared extinct in 1996; a net stretched across a desert pond in 2004 caught it alive.",
+  u:"https://www.lostandfoundnature.com/species/844/"},
+ {c:"Franciscan manzanita", s:"Arctostaphylos franciscana", g:"Plant", w:"United States",
+  lost:"extinct in the wild since 1947", found:2009,
+  t:"For 62 years it existed only in gardens, until a botanist driving home from a conference spotted one wild plant growing in a San Francisco highway median.",
+  u:"https://www.lostandfoundnature.com/species/franciscan-manzanita/"},
+ {c:"Cave splayfoot salamander", s:"Chiropterotriton mosaueri", g:"Amphibian", w:"Mexico",
+  lost:"unseen for more than 70 years", found:2010,
+  t:"Known from a cave in Hidalgo and lost since the 1930s; Sean Rovito went down the same cave during the global search for lost amphibians and found it still there.",
+  u:"https://www.lostandfoundnature.com/species/cave-splayfooted-salamander/"},
+ {c:"Ascension Island parsley fern", s:"Anogramma ascensionis", g:"Plant", w:"Ascension Island",
+  lost:"a single plant seen in 1958", found:2010,
+  t:"Given up for extinct until four tiny ferns were found clinging to a volcanic ridge on Green Mountain, and nursed into cultivation from spores.",
+  u:"https://www.lostandfoundnature.com/species/parsley-fern/"},
+ {c:"Bornean rainbow toad", s:"Ansonia latidisca", g:"Amphibian", w:"Malaysia",
+  lost:"last seen 1924", found:2011,
+  t:"Missing for 87 years and never once photographed until Indraneil Das's team found three on a ridge at night and took the first pictures of it that exist.",
+  u:"https://www.lostandfoundnature.com/species/bornean-rainbow-toad/"},
+ {c:"Red-crested tree rat", s:"Santamartamys rufodorsalis", g:"Mammal", w:"Colombia",
+  lost:"last seen about 1913", found:2011,
+  t:"Unseen for nearly a century until one climbed the handrail of an ecolodge in the Sierra Nevada de Santa Marta and sat for photographs for two hours.",
+  u:"https://www.lostandfoundnature.com/species/red-crested-tree-rat/"},
+ {c:"Coral tree", s:"Erythrina schliebenii", g:"Plant", w:"Tanzania",
+  lost:"declared extinct 1998", found:"2001 and 2012",
+  t:"Declared extinct in 1998 after 63 years missing, found in 2001, feared lost again, and found once more in 2012 in a last scrap of coastal forest near Kilwa.",
+  u:"https://www.lostandfoundnature.com/species/coral-tree/"},
+ {c:"Mangarahara cichlid", s:"Ptychochromis insolitus", g:"Fish", w:"Madagascar",
+  lost:"feared extinct in the wild", found:2013,
+  t:"Down to a few aging males in aquariums after its river was dammed; a worldwide appeal and a 2013 expedition found a wild population holding on in a drying riverbed.",
+  u:"https://www.lostandfoundnature.com/species/mangarahara-cichlid/"},
+ {c:"Basilewsky's cranefly", s:"Dicranomyia basilewskyana", g:"Insect", w:"Saint Helena",
+  lost:"last seen about 1971", found:2016,
+  t:"Feared extinct for 45 years until one flew in through the window of a moving car on Saint Helena and landed on the entomologist inside.",
+  u:"https://www.lostandfoundnature.com/species/basilewskys-cranefly/"},
+ {c:"Pycnandra longiflora", s:"", g:"Plant", w:"New Caledonia",
+  lost:"believed extinct", found:2016,
+  t:"A rainforest tree of New Caledonia written off as extinct until botanists relocated it; the rediscovery was published in 2016.",
+  u:"https://www.lostandfoundnature.com/species/pycnandra-longiflora/"},
+ {c:"Fairy lantern", s:"Thismia neptunis", g:"Plant", w:"Malaysia",
+  lost:"sketched once in 1866", found:2017,
+  t:"Odoardo Beccari drew this ghostly flower, which feeds on underground fungi, in Borneo in 1866; nobody saw it again for 151 years until Czech botanists found it blooming in the same forest.",
+  u:"https://www.lostandfoundnature.com/species/fairy-lantern/"},
+];
+
+function renderClassics() {
+  const el = document.getElementById("rdClassics");
+  if (!el || el.childElementCount) return;
+  el.innerHTML = RD_CLASSICS.map(c => `<article class="rdcard noimg">
+    <a class="rdlink" href="${esc(c.u)}" target="_blank" rel="noopener">
+      <div class="rdbody">
+        <h4 class="rdtitle">${esc(c.c)}</h4>
+        ${c.s ? `<p class="rdsp">${esc(c.s)}</p>` : ""}
+        <p class="rddesc">${esc(c.t)}</p>
+        <p class="rdmeta">
+          <span class="rdtag rdtag-kind">${esc(c.g)}</span>
+          <span>${esc(c.w)}</span>
+          <span>${esc(c.lost)}</span>
+          <span class="rdpub">found again ${esc(c.found)}</span>
+        </p>
+      </div>
+    </a>
+  </article>`).join("");
+}
+
 function ensureRedisc() {
+  // The classics are static, so they render whether or not the payload loads.
+  renderClassics();
   if (RD || rdLoading) { if (RD) rdRender(); return; }
   rdLoading = true;
   getJSON("/rediscoveries.json").then(d => {
