@@ -123,6 +123,19 @@
      column lands left of the page's center line, which reads as a mistake rather
      than as centring. */
   .prose { max-width:66ch; margin-inline:auto; }
+  /* BODY COPY IS CENTERED ON THIS SITE. Scott's standing rule, and he has now had to
+     restate it because sessions keep writing left-aligned blocks and reasoning their way
+     around it (a comment on .lostbody once argued the other pages "stay left" for their
+     tables; that judgment is overridden). The rule targets PARAGRAPHS, headings and
+     definition text, not containers, so tables, lists and code keep their own alignment
+     and nothing tabular breaks. 17_check_dom_contract.py fails the build if this rule
+     disappears, so forgetting it is no longer possible silently. */
+  .prose p, .prose h2, .prose h3, .prose h4,
+  .stakes p, .stakes h3,
+  .defs dd, .defs dt,
+  .homecard p, .gistep p, .gistep h4, .giend p, .giend h3,
+  .methods p, .warn p, .ntdisc p { text-align:center; }
+  .prose ul, .prose ol, .gistep ul, .ntdisc ul { text-align:left; }
   /* All titles centered. Body prose stays left-aligned, centered running text is
      genuinely hard to read, and the ragged left edge would hurt the tables and
      evidence sentences that make up most of this site. Headings inside a bordered
