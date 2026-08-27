@@ -1811,15 +1811,12 @@
          because it is a one-off analysis on a fixed labelled set, not a nightly figure;
          the script is idempotent and the report is dated. -->
     <h3>Testing the effort objection, and the interval on the ratio</h3>
-    <p>Both caveats above can be tested with data this project already holds, so they were.
-      The script is <code>analysis/validation_robustness.py</code> and it writes a dated
-      report; what follows is read from it.</p>
     <p><strong>The odds ratio, with its interval.</strong> The 4.64 above comes from 15 of
       27 against 24 of 113. Its 95% confidence interval, by conditional maximum likelihood,
-      runs from <strong>1.74 to 12.33</strong>, with a Fisher exact p of 0.0007. So the
-      direction is solid, because the interval excludes 1, and the magnitude is not,
-      because it spans a factor of seven. The defensible claim is the floor rather than the
-      point estimate, and this page should have said so from the start.</p>
+      runs from <strong>1.74 to 12.33</strong>, with a Fisher exact p of 0.0007. The
+      direction is solid, because the interval excludes 1. The magnitude is not, because it
+      spans a factor of seven. The defensible claim is the floor, not the point
+      estimate.</p>
     <p><strong>The effort objection is real in this data, and the signal survives it.</strong>
       Narrowly recorded species here do have fewer occurrence records, a median of 7 against
       19 for the broader-range group, which is exactly the entanglement Cazalis et al.
@@ -1973,14 +1970,15 @@
       cannot be placed even by a cross-checked locality. They are the least visible
       members of an already invisible group, and they are absent from the map.</p>
 
-    <h3>What was discarded</h3>
-    <p>An earlier composite score added points for a species not having been recorded
-      recently and for threats named at its locality. Testing destroyed it: the
-      composite was non-monotonic, and naming a site-level threat turned out
-      <em>inversely</em> associated with being threatened. The reason is legible in
-      hindsight, broad, well-documented regions attract threat prose but hold
-      wide-ranging species, while a genuine type-locality endemic gets one terse line.
-      Those fields survive on each record as description, and are not ranked on.</p>
+    <h3>What is not ranked on</h3>
+    <p>Two fields that look like risk signals are recorded on each species and
+      deliberately kept out of the ranking: whether it has gone unrecorded recently, and
+      whether a threat is named at its locality. Combined with restriction they produce a
+      non-monotonic score, and <strong>naming a site-level threat is
+      <em>inversely</em> associated with being threatened</strong>. The reason is legible:
+      broad, well-documented regions attract threat prose but hold wide-ranging species,
+      while a genuine type-locality endemic gets one terse line. Both fields stay on the
+      record as description, and neither is ranked on.</p>
 
     <h3>Why the never-assessed list is short</h3>
     <p>Proving that IUCN has <em>never</em> assessed a species is much harder than it
