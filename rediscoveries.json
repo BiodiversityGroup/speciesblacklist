@@ -1,8 +1,8 @@
 {
-"built": "2026-08-26",
+"built": "2026-08-27",
 "counts": {
 "stories": 162,
-"raw_items": 380,
+"raw_items": 381,
 "with_species": 98,
 "distinct_species": 201,
 "distinct_species_firm": 40,
@@ -1084,7 +1084,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "mint",
@@ -1093,6 +1093,10 @@
 {
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rare-plant-henckelia-monophylla-rediscovered-in-arunachal-pradesh/"
+},
+{
+"publisher": "Hub News Assam",
+"link": "https://themeghalayanexpress.com/rare-plant-species-rediscovered-in-arunachal-after-189-years/"
 }
 ]
 },
