@@ -1796,10 +1796,51 @@
       includes survey effort as a covariate</strong>, though at least 80% of biodiversity
       records for every taxon studied lie within 2.5&nbsp;km of a road
       (<a href="https://doi.org/10.1111/ecog.05926" target="_blank" rel="noopener">Hughes
-      et al. 2021</a>). Adding it here is the next test this list owes its readers.</p>
-    <p>So the honest position is that this ranking is a hypothesis with one small test
+      et al. 2021</a>). Since that is the strongest objection to this list and nobody had
+      run it, we ran it here. The result is in the next section.</p>
+    <p>So the honest position is that this ranking is a hypothesis with two small tests
       behind it, pointing the same way as some of the literature and against the
       best-audited reptile study in it.</p>
+
+    <!-- Added 2026-08-27. Both literature reviews found that no published model of Data
+         Deficient risk, in either five-year window, controls for survey effort, while
+         documenting the confound at length. That made it the strongest live objection to
+         this list and also an unclaimed test, so it was run. Every number below is read
+         from build_2026/validation_robustness.txt, written by
+         analysis/validation_robustness.py. Typed here rather than computed in the page
+         because it is a one-off analysis on a fixed labelled set, not a nightly figure;
+         the script is idempotent and the report is dated. -->
+    <h3>Testing the effort objection, and the interval on the ratio</h3>
+    <p>Both caveats above can be tested with data this project already holds, so they were.
+      The script is <code>analysis/validation_robustness.py</code> and it writes a dated
+      report; what follows is read from it.</p>
+    <p><strong>The odds ratio, with its interval.</strong> The 4.64 above comes from 15 of
+      27 against 24 of 113. Its 95% confidence interval, by conditional maximum likelihood,
+      runs from <strong>1.74 to 12.33</strong>, with a Fisher exact p of 0.0007. So the
+      direction is solid, because the interval excludes 1, and the magnitude is not,
+      because it spans a factor of seven. The defensible claim is the floor rather than the
+      point estimate, and this page should have said so from the start.</p>
+    <p><strong>The effort objection is real in this data, and the signal survives it.</strong>
+      Narrowly recorded species here do have fewer occurrence records, a median of 7 against
+      19 for the broader-range group, which is exactly the entanglement Cazalis et al.
+      describe. Adding the base-ten logarithm of each species' GBIF record count to the
+      model moves the odds ratio from 4.64 to <strong>4.14</strong> (95% CI 1.68 to 10.21,
+      p&nbsp;=&nbsp;0.002). That is a shrinkage of 11%, well inside the noise, and record
+      count on its own carries no significant signal (p&nbsp;=&nbsp;0.22).</p>
+    <p>Stratifying is more transparent than modelling at this sample size. Splitting the
+      labelled set into thirds by record count gives odds ratios of 3.05, 4.00 and 6.20
+      from the least to the most surveyed third, pooling to <strong>3.88</strong>
+      (Mantel-Haenszel, 95% CI 1.55 to 9.70). The artifact explanation predicts the
+      opposite shape: a large ratio among the poorly recorded species and nothing left
+      among the well recorded ones. That is not what this sample does. On this evidence
+      restriction is not simply a proxy for how much anybody has looked.</p>
+    <p><strong>One suggested refinement was tested and did not hold.</strong> Meiri et al.
+      propose that a species described long ago and still known from one locality is more
+      likely to be genuinely restricted than a recently described one. Split at the median
+      description year of 1966, the odds ratio is 2.65 among the older names and 8.64 among
+      the newer ones, which runs opposite to the proposal, and the interaction term is not
+      significant (p&nbsp;=&nbsp;0.25). With eight species in the smallest cell the honest
+      reading is that this cannot be measured here, rather than that it is absent.</p>
 
     <h3>Detectability, and what happens at sea</h3>
     <p>The tier is a rule over Richardson's wording, so it reads a phrase and cannot see
@@ -1931,14 +1972,6 @@
       have no georeferenced record anywhere in GBIF, and <span class="num">726</span>
       cannot be placed even by a cross-checked locality. They are the least visible
       members of an already invisible group, and they are absent from the map.</p>
-    <p>An earlier version of this page said 943 rather than 629. That figure was wrong:
-      the occurrence fetch had been running eight concurrent requests, GBIF answered
-      <span class="num">399</span> of them with HTTP 429, and the script cached those
-      failures as though they were results, so re-running never retried them and
-      16.6% of the list was silently recorded as having no records. Because the
-      list is sorted by tier, the failures landed disproportionately on tier 1,
-      which appeared to be 3.6% mappable when it is in fact 80%. The fetcher now backs
-      off exponentially, uses four threads, and never caches a failure.</p>
 
     <h3>What was discarded</h3>
     <p>An earlier composite score added points for a species not having been recorded
