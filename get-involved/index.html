@@ -215,7 +215,6 @@
   :root[data-theme="light"] #theme { color:#000; border-color:#000; }
   #theme:hover { border-color:var(--accent); color:var(--accent); }
 
-
   /* ---- data download, foot of every Black List view ----------------------
      Centred like the site's titles and buttons, and deliberately the heaviest thing on
      the page after the register itself. It replaces a 0.74rem ghost button in the
@@ -694,6 +693,22 @@
             background:var(--surface); border-left:4px solid var(--t3); }
   .gistep:nth-of-type(even) { background:var(--ground);
             border-left-color:var(--accent); }
+  /* Louder than .giend on purpose. This is the only block on the page that sends the
+     reader somewhere else, so it has to survive a scan that skips prose. Accent fill
+     rather than an accent rule, and the link reads as a destination, not a footnote. */
+  .giportal { border:2px solid var(--accent); border-radius:6px;
+              background:var(--surface); padding:1.5rem 1.6rem;
+              margin:var(--s3) 0 0; text-align:center;
+              box-shadow:0 2px 10px rgba(0,0,0,.06); }
+  .giportal h3 { margin-top:0; }
+  .giportal p { font-family:var(--sans); font-size:.9rem; color:var(--ink-2);
+                text-align:center; }
+  .giportal .gpgo { display:inline-block; margin-top:.9rem; padding:.6rem 1.25rem;
+                    background:var(--accent); color:#fff; border-radius:4px;
+                    font-family:var(--sans); font-weight:600; font-size:.92rem;
+                    text-decoration:none; letter-spacing:.01em; }
+  .giportal .gpgo:hover { filter:brightness(1.12); }
+  .giportal .gpnames { font-size:.84rem; color:var(--ink-3); margin-top:.7rem; }
   /* The closing block is a box like the rest, or it reads as an afterthought that
      fell off the end of the page. */
   .giend { border:1px solid var(--rule); border-top:3px solid var(--accent);
@@ -1587,20 +1602,7 @@
            to do; the Lost Mammals Initiative tells them WHICH animals, which is the harder
            half and somebody else has done it. Their list and their criteria, linked as
            theirs. -->
-      <div class="gicall">
-        <h4>Or look for something specific</h4>
-        <p>The mammalwatchers have published a target list. The
-          <a href="https://www.mammalwatching.com/community-post/introducing-the-lost-mammals-initiative/"
-             target="_blank" rel="noopener">Lost Mammals Initiative</a> names mammals that
-          are lost or barely known, from the tiny Thor's hero shrew to the
-          100&nbsp;kg saola, and asks the people most likely to run into one to go looking.
-          There are prizes: Mammalia Tours has put up a free place on a trip for the first
-          person under 35 to rediscover something on it.</p>
-        <p>A named list beats a hunch, and this is a better place to start than anything we
-          could hand you.</p>
-        <p class="gicallwho">Their list, their criteria, their judging. Run by
-          mammalwatching.com, not by us.</p>
-      </div>
+      
     </div>
 
     <div class="gistep">
@@ -1691,6 +1693,18 @@
         One of the rediscoveries on this site began as a photograph posted online by
         somebody who had no idea what they had found.</p>
     </div>
+
+    <div class="giportal">
+      <h3>Where else to look</h3>
+      <p>Other teams are searching the same gaps, and several keep their own most-wanted
+        lists. The Conservation Portal gathers them in one place, with a note on what each
+        one is for and who runs it.</p>
+      <p class="gpnames">Re:wild&rsquo;s Search for Lost Species &middot; SHOAL&rsquo;s Search for the
+        Lost Fishes &middot; Search for Lost Birds &middot; the Lost Mammals Initiative &middot;
+        Kew&rsquo;s Lost and Found Fungi, and more.</p>
+      <a class="gpgo" href="https://conservationportal.org/lost-species-and-rediscovery/"
+         target="_blank" rel="noopener">Browse lost species and rediscovery initiatives</a>
+    </div>
   </div>
 </section>
 
@@ -1707,7 +1721,6 @@
 
 <!-- ============================ REDISCOVERIES =========================== -->
 <!-- ============================ LOST SPECIES ============================= -->
-
 
 <!-- ============================ GET INVOLVED ============================= -->
 
@@ -3733,7 +3746,6 @@ function lsRender() {
         : "")
     : "";
 }
-
 
 /* ========================= REDISCOVERIES (news layer) ========================= */
 /* A separate payload again, and a separate claim. Everything else on this site is
