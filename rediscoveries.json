@@ -1,24 +1,24 @@
 {
-"built": "2026-08-27",
+"built": "2026-08-31",
 "counts": {
-"stories": 162,
-"raw_items": 381,
-"with_species": 98,
-"distinct_species": 201,
-"distinct_species_firm": 40,
-"multi_species_cards": 41,
-"with_image": 158,
+"stories": 165,
+"raw_items": 396,
+"with_species": 102,
+"distinct_species": 207,
+"distinct_species_firm": 41,
+"multi_species_cards": 43,
+"with_image": 159,
 "syndicated": 74,
 "on_tbg_list": 27,
 "on_list_breakdown": {
-"on our lost-species list": 23,
-"on the Black List": 4
+"on our lost-species list": 22,
+"on the Black List": 5
 },
 "undated": 0,
 "newest": "Tue, 25 Aug 2026",
 "tracked_names": 6709,
-"image_local": 152,
-"archived": 112
+"image_local": 153,
+"archived": 117
 },
 "cards": [
 {
@@ -340,16 +340,20 @@
 "publisher": "MyGov Blogs",
 "date": "Thu, 02 Jul 2026",
 "ts": 1782975600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-08-31",
 "link": "https://blog.mygov.in/the-rediscovery-of-lost-species-in-arunachal-pradesh-a-frontier-of-scientific-discovery/",
-"image": "/rd-img/aba6544582a7f025.jpg",
+"image": "/rd-img/40bd328b64d04b39.jpg",
 "wayback": "http://web.archive.org/web/20260812123330/https://theprint.in/india/rare-blueberry-species-rediscovered-in-arunachal-after-188-years/2942194/",
-"desc": "Itanagar, May 26 (PTI) Researchers have rediscovered \u2018Vaccinium piliferum\u2019, a rare and endangered wild relative of the blueberry, in the remote forests of Vijoynagar in Arunachal Pradesh\u2019s Changlang district, nearly 188 years after it was first recorded in 183",
+"desc": "Researchers rediscover an endangered blueberry relative, 'Vaccinium piliferum', in Arunachal Pradesh after 188 years, enriching India's biodiversity.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 10,
+"outlets": 11,
 "also": [
+{
+"publisher": "ThePrint",
+"link": "https://theprint.in/india/rare-blueberry-species-rediscovered-in-arunachal-after-188-years/2942194/"
+},
 {
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rare-blueberry-species-rediscovered-in-arunachal-pradesh/"
@@ -357,10 +361,6 @@
 {
 "publisher": "India Today NE",
 "link": "https://www.indiatodayne.in/arunachal-pradesh/story/rare-wild-blueberry-relative-rediscovered-in-arunachal-after-188-years-1398132-2026-05-26"
-},
-{
-"publisher": "Northeast Live",
-"link": "https://northeastlivetv.com/topnews/rare-blueberry-species-rediscovered-in-arunachal-forest-after-188-years/"
 },
 {
 "publisher": "Northeast Live",
@@ -453,26 +453,6 @@
 "link": "https://noticiasambientales.com/animals/rediscovery-of-the-cozumel-pygmy-fox-a-second-chance-for-the-conservation-of-this-species-in-mexico/"
 }
 ]
-},
-{
-"title": "Rediscovered in 2014, This Salamander\u2019s Habitat Was Almost Lost to Coffee - A-Z Animals",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "A-Z Animals",
-"date": "Sun, 21 Jun 2026",
-"ts": 1782025200,
-"first_seen": "2026-08-10",
-"link": "https://a-z-animals.com/articles/rediscovered-in-2014-this-salamanders-habitat-was-almost-lost-to-coffee/",
-"image": "/rd-img/d3da12c76c03bc1f.jpg",
-"wayback": "http://web.archive.org/web/20260812035237/https://a-z-animals.com/articles/rediscovered-in-2014-this-salamanders-habitat-was-almost-lost-to-coffee/",
-"desc": "The nimble long-limbed salamander is still a mystery to the scientific community, given its small habitat range and population size.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
 },
 {
 "title": "Rare Tiny Bat Species Rediscovered by Biologist After It Was Thought to Be Extinct",
@@ -1436,6 +1416,26 @@
 "also": []
 },
 {
+"title": "Near-extinct species rediscovered for first time in 200 years: \u2018Nature surprises us'",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "The Cool Down",
+"date": "Tue, 13 Jan 2026",
+"ts": 1768291200,
+"first_seen": "2026-08-31",
+"link": "https://www.thecooldown.com/outdoors/pernambuco-holly-brazil-peru/",
+"image": "/rd-img/e5b4a7322932a376.jpg",
+"wayback": "http://web.archive.org/web/20260315204525/https://www.thecooldown.com/outdoors/pernambuco-holly-brazil-peru/",
+"desc": "The Pernambuco holly was the ninth most wanted lost species \u2014 a list that comprises over 2,000 species across 160 countries.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "Endangered herb lepidagathis clavata rediscovered after 166 years in Western Ghats",
 "species": [
 "Lepidagathis clavata"
@@ -1806,29 +1806,29 @@
 "also": []
 },
 {
-"title": "Rediscovery of lost fish species provides a second chance for conservation",
+"title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Bombyx mori",
-"Moema claudiae"
+"Moema claudiae",
+"Bombyx mori"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
 ],
 "on_list": "Lost Species",
 "detail": "Fish, lost, last seen 2003",
-"publisher": "Phys.org",
-"date": "Fri, 14 Nov 2025",
-"ts": 1763107200,
+"publisher": "BIOENGINEER.ORG",
+"date": "Sat, 15 Nov 2025",
+"ts": 1763193600,
 "first_seen": "2026-08-10",
-"link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
 "image": "/rd-img/b73e2fd705e4740e.jpg",
 "wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
 "desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
 {
 "publisher": "Miami Herald",
@@ -1839,12 +1839,16 @@
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
 },
 {
-"publisher": "BIOENGINEER.ORG",
-"link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/"
-},
-{
 "publisher": "gktoday.in",
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
+},
+{
+"publisher": "BIOENGINEER.ORG",
+"link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/"
 }
 ]
 },
@@ -1930,23 +1934,36 @@
 },
 {
 "title": "Meet 4 \u2018Extinct\u2019 Animals That Were Miraculously Rediscovered (Hint: One Was An Ancient Fish Found In A Fishing Net In 1938)",
-"species": [],
+"species": [
+"Psoralea cataracta",
+"Polhillia ignota",
+"Aspalathus cordicarpa"
+],
 "species_firm": [],
 "on_list": "",
 "detail": "",
 "publisher": "Forbes",
 "date": "Sat, 01 Nov 2025",
 "ts": 1761980400,
-"first_seen": "2026-08-21",
+"first_seen": "2026-08-31",
 "link": "https://www.forbes.com/sites/scotttravers/2025/11/01/meet-4-extinct-animals-that-were-miraculously-rediscovered-hint-one-was-an-ancient-fish-found-in-a-fishing-net-in-1938/",
-"image": "/rd-img/360a925edf5429ce.jpg",
-"wayback": "",
-"desc": "Just because a species is presumed extinct doesn\u2019t mean it\u2019s gone forever. Here are four glowing examples of this unique, and felicitous, phenomenon.",
+"image": "/rd-img/0135710740ad6cf4.jpg",
+"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 4,
+"also": [
+{
+"publisher": "news.uct.ac.za",
+"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
+},
+{
+"publisher": "Forbes",
+"link": "https://www.forbes.com/sites/scotttravers/2025/11/01/meet-4-extinct-animals-that-were-miraculously-rediscovered-hint-one-was-an-ancient-fish-found-in-a-fishing-net-in-1938/"
+}
+]
 },
 {
 "title": "\u2018White-knuckled wolf spider\u2019 thought lost is rediscovered on Isle of Wight",
@@ -1986,6 +2003,26 @@
 "link": "https://www.countryfile.com/wildlife/insects-invertebrates/aulonia-albimana-isle-of-wight"
 }
 ]
+},
+{
+"title": "Cameras set for leopards spark \u2018rediscovery\u2019 of other creature at Indonesia park",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Miami Herald",
+"date": "Wed, 29 Oct 2025",
+"ts": 1761721200,
+"first_seen": "2026-08-31",
+"link": "https://www.miamiherald.com/news/nation-world/world/article312681837.html",
+"image": "",
+"wayback": "http://web.archive.org/web/20251029145638/https://www.miamiherald.com/news/nation-world/world/article312681837.html",
+"desc": "",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
 },
 {
 "title": "Rare Erica species rediscovered in Kogelberg after nearly four decades",
@@ -2329,6 +2366,47 @@
 ]
 },
 {
+"title": "Species rediscovered nearly five decades after it was last seen",
+"species": [
+"Afroedura rondavelica",
+"Tragulus versicolor",
+"Tragulus kanchil"
+],
+"species_firm": [],
+"on_list": "Lost Species",
+"detail": "Reptile, lost, last seen 1991",
+"publisher": "The Independent",
+"date": "Fri, 01 Aug 2025",
+"ts": 1754031600,
+"first_seen": "2026-08-31",
+"link": "https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
+"image": "/rd-img/7f5c2fd921dcbdf6.jpg",
+"wayback": "http://web.archive.org/web/20260819183224/https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
+"desc": "A rare gecko species last seen more than three decades ago has been rediscovered at a remote site in the Blyde River",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 19,
+"also": [
+{
+"publisher": "Good Things Guy",
+"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
+},
+{
+"publisher": "Good Things Guy",
+"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
+},
+{
+"publisher": "euronews",
+"link": "https://www.euronews.com/2025/05/15/scientists-thought-this-gecko-was-extinct-or-didnt-exist-now-its-been-rediscovered-after-3"
+},
+{
+"publisher": "News24",
+"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871"
+}
+]
+},
+{
 "title": "Scientists find the world's smallest snake, once feared extinct, hanging out under a rock",
 "species": [
 "Tetracheilostoma carlae",
@@ -2387,12 +2465,11 @@
 {
 "title": "Rare Gecko Species Rediscovered in Galapagos Following Island Restoration Success",
 "species": [
-"Phyllodactylus maresi",
-"Afroedura rondavelica"
+"Phyllodactylus maresi"
 ],
 "species_firm": [],
-"on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
+"on_list": "",
+"detail": "",
 "publisher": "Island Conservation",
 "date": "Tue, 22 Jul 2025",
 "ts": 1753167600,
@@ -2404,17 +2481,8 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
-"also": [
-{
-"publisher": "Good Things Guy",
-"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
-},
-{
-"publisher": "Good Things Guy",
-"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
-}
-]
+"outlets": 1,
+"also": []
 },
 {
 "title": "We Need a Process for Managing and Reassessing Rediscovered Species: A Case Study With the \u2018Extinct\u2019 Atriplex acutiloba - Doyle - 2025 - Austral Ecology",
@@ -2530,51 +2598,6 @@
 "note": "",
 "outlets": 1,
 "also": []
-},
-{
-"title": "SA scientists rediscover gecko species, 33 years after first recorded",
-"species": [
-"Afroedura rondavelica"
-],
-"species_firm": [
-"Afroedura rondavelica"
-],
-"on_list": "Lost Species",
-"detail": "Reptile, lost, last seen 1991",
-"publisher": "News24",
-"date": "Fri, 20 Jun 2025",
-"ts": 1750402800,
-"first_seen": "2026-08-10",
-"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871",
-"image": "/rd-img/ebeb9577f29af63d.jpg",
-"wayback": "http://web.archive.org/web/20260811164632/https://www.euronews.com/2025/05/15/scientists-thought-this-gecko-was-extinct-or-didnt-exist-now-its-been-rediscovered-after-3",
-"desc": "Since it was identified in 1991, mystery surrounded this elusive little lizard for more than three decades.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 15,
-"also": [
-{
-"publisher": "The Independent",
-"link": "https://www.independent.co.uk/bulletin/news/blyde-rondavel-gecko-rediscovered-b2751737.html"
-},
-{
-"publisher": "IOL",
-"link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "Sunday Tribune",
-"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "Sunday Independent",
-"link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "News24",
-"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871"
-}
-]
 },
 {
 "title": "Rediscovery of the Losgna genus in India: a new species of parasitic wasp discovered in Chandigarh, named - \u2018Losgna Occidentalis\u2019",
@@ -3540,6 +3563,30 @@
 "also": []
 },
 {
+"title": "'Extinct' flower rediscovered in Ecuador after forest destruction",
+"species": [
+"Gasteranthus extinctus"
+],
+"species_firm": [
+"Gasteranthus extinctus"
+],
+"on_list": "",
+"detail": "",
+"publisher": "Natural History Museum",
+"date": "Fri, 15 Apr 2022",
+"ts": 1650006000,
+"first_seen": "2026-08-31",
+"link": "https://www.nhm.ac.uk/discover/news/2022/april/extinct-flower-rediscovered-ecuador-after-forest-destruction.html",
+"image": "/rd-img/7bba22993241c796.jpg",
+"wayback": "http://web.archive.org/web/20260813012006/https://www.nhm.ac.uk/discover/news/2022/april/extinct-flower-rediscovered-ecuador-after-forest-destruction.html",
+"desc": "It may be extinct by name, but Gasteranthus extinctus is not extinct in nature.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "A narrowly endemic species of Begoniaceae: rediscovery, distribution and conservation of Begonia jocelinoi",
 "species": [
 "Begonia jocelinoi"
@@ -3574,25 +3621,48 @@
 "ts": 1644825600,
 "first_seen": "2026-08-10",
 "link": "https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/",
-"image": "/rd-img/60bdcd72db7dea00.jpg",
+"image": "",
 "wayback": "http://web.archive.org/web/20260811154530/https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/",
-"desc": "These are some of the species that have been rediscovered on conservation group Re:wild\u2019s top 25 \u2018Most Wanted Lost Species\u2019 list.",
+"desc": "",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 1,
+"also": []
+},
+{
+"title": "The \u2018most wanted\u2019 species rediscovered in the wild",
+"species": [
+"Tragulus versicolor",
+"Tragulus kanchil"
+],
+"species_firm": [],
+"on_list": "Black List (Data Deficient)",
+"detail": "tier 1",
+"publisher": "cnn.com",
+"date": "Fri, 27 Aug 2021",
+"ts": 1630047600,
+"first_seen": "2026-08-31",
+"link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl",
+"image": "/rd-img/5090f7b9e95b99ab.jpg",
+"wayback": "http://web.archive.org/web/20260812041739/https://news.mongabay.com/2019/11/rabbit-sized-deer-like-species-of-fanged-ungulate-rediscovered-in-vietnam/",
+"desc": "Local villagers and government forest rangers reported seeing a gray chevrotain in the vicinity of Nha Trang, a city in southern Vietnam. Based on those survey results, a team of researchers set up three camera traps in the most promising locations and ended u",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 7,
 "also": [
+{
+"publisher": "CTVNews",
+"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
+},
+{
+"publisher": "CTVNews",
+"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
+},
 {
 "publisher": "cnn.com",
 "link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl"
-},
-{
-"publisher": "CNN",
-"link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl"
-},
-{
-"publisher": "Yale E360",
-"link": "https://e360.yale.edu/digest/spinach-pipefish-rediscovered"
 }
 ]
 },
@@ -3775,8 +3845,12 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
+{
+"publisher": "https://www.wymt.com",
+"link": "https://www.wymt.com/2020/12/28/20-new-species-found-and-long-lost-species-rediscovered-in-bolivian-andes/"
+},
 {
 "publisher": "The World Economic Forum",
 "link": "https://www.weforum.org/stories/nature-and-biodiversity/scientists-biodviersity-new-rediscovered-andes/"
@@ -4007,31 +4081,6 @@
 "also": []
 },
 {
-"title": "Lost species of fanged 'mouse deer' spotted for first time in 30 years",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "CTVNews",
-"date": "Mon, 11 Nov 2019",
-"ts": 1573459200,
-"first_seen": "2026-08-11",
-"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/",
-"image": "/rd-img/68a90e0a94152f84.jpg",
-"wayback": "",
-"desc": "A lost species known as the silver-backed chevrotain, or the Vietnamese \u2018mouse deer,\u2019 has been caught on camera for the first time since 1990.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "CTVNews",
-"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
-}
-]
-},
-{
 "title": "Species Unseen for 47 Years Rediscovered Near Colombian Town Named for Miracles",
 "species": [],
 "species_firm": [],
@@ -4119,6 +4168,39 @@
 {
 "publisher": "Meteored UK",
 "link": "https://www.yourweather.co.uk/news/science/would-you-bee-lieve-it-researchers-rediscovery-rare-bee-species-in-cornwall.html"
+}
+]
+},
+{
+"title": "Brilliantly colored \u2018lost\u2019 salamander rediscovered after 42 years - news",
+"species": [
+"Bolitoglossa jacksoni"
+],
+"species_firm": [
+"Bolitoglossa jacksoni"
+],
+"on_list": "",
+"detail": "",
+"publisher": "Conservation news",
+"date": "Wed, 01 Nov 2017",
+"ts": 1509519600,
+"first_seen": "2026-08-31",
+"link": "https://news.mongabay.com/2017/11/brilliantly-colored-lost-salamander-rediscovered-after-42-years/",
+"image": "/rd-img/93215a4f4732ef6f.jpg",
+"wayback": "http://web.archive.org/web/20260413090040/https://news.mongabay.com/2017/11/brilliantly-colored-lost-salamander-rediscovered-after-42-years/",
+"desc": "A \u201clost\u201d species of salamander, feared extinct for more than 40 years, has been found again. The Jackson\u2019s climbing salamander (Bolitoglossa jacksoni), also called the golden wonder because of its brilliant yellow color, was first made known to science in 1975",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 3,
+"also": [
+{
+"publisher": "Live Science",
+"link": "https://www.livescience.com/60826-lost-salamander-rediscovered.html"
+},
+{
+"publisher": "A-Z Animals",
+"link": "https://a-z-animals.com/articles/rediscovered-in-2014-this-salamanders-habitat-was-almost-lost-to-coffee/"
 }
 ]
 },
