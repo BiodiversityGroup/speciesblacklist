@@ -4996,9 +4996,13 @@ function drawHomeMap() {
 function ensureHomeMap() {
   if (!document.getElementById("homeMapCanvas")) return;
   if (MAP) { drawHomeMap(); return; }
-  getJSON(stamped("/map.json"))
+  /* UNSTAMPED on purpose. stamped() builds its ?v= from DATA.meta.built, and on this
+     route DATA has not loaded when this runs, so stamping threw and the map stayed blank.
+     getJSON sends unstamped requests with cache:"no-cache", which revalidates against the
+     ETag and is a 304 when nothing changed, so the version stamp buys nothing here. */
+  getJSON("/map.json")
     .then(d => { MAP = d; drawHomeMap(); })
-    .catch(() => {});   // a decorative map that fails to load costs the reader nothing
+    .catch(e => console.warn("landing map: /map.json did not load", e));
 }
 
 async function ensureMap() {
