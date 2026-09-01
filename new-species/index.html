@@ -5175,9 +5175,19 @@ function drawHomeMap() {
   g.globalAlpha = 1;
 }
 
+/* Loads map.json and nothing else.
+
+   It must NOT call ensureMap(): that function also wires the interactive map's controls,
+   setting onclick on #srcGbif, #srcLoc, #srcLocU and writing to #mapCaveat, none of which
+   exist on the home route. Calling it here threw on the first null and left MAP unset, so
+   the canvas stayed blank. Loading and control-wiring are separate jobs and only the first
+   one belongs on this page. */
 function ensureHomeMap() {
   if (!document.getElementById("homeMapCanvas")) return;
-  ensureMap().then(ok => { if (ok) drawHomeMap(); });
+  if (MAP) { drawHomeMap(); return; }
+  getJSON(stamped("/map.json"))
+    .then(d => { MAP = d; drawHomeMap(); })
+    .catch(() => {});   // a decorative map that fails to load costs the reader nothing
 }
 
 async function ensureMap() {
