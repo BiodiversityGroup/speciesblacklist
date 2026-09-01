@@ -2111,9 +2111,14 @@ function showView(name, push) {
   if (name === "register" && DATA) resetFilters();
   // A hidden canvas has no width, so the map can only be drawn once visible.
   if (name === "map") ensureMap().then(ok => { if (ok) drawMap(); });
-  // Same reason drawField() is redrawn on reveal: a canvas in a hidden section has
-  // clientWidth 0, so the draw has to happen once the section is actually showing.
-  if (name === "home") ensureHomeMap();
+  /* DEFERRED, and it has to be. This function is called at boot from a line that sits
+     ABOVE `let MAP`, and ensureHomeMap reads MAP. A synchronous read there is inside the
+     temporal dead zone, throws, and kills the rest of the script -- exactly the failure
+     the comment at that boot call already describes for `let DATA` and /register/. The
+     map branch above survives only because ensureMap is async, so its TDZ read becomes a
+     rejected promise rather than a thrown error. A timeout runs after the script has
+     finished, by which point every declaration is live and the layout has settled. */
+  if (name === "home") setTimeout(ensureHomeMap, 0);
   /* The other half of the zero-width guard in drawField(). boot() draws the field once,
      and on any route where the overview starts hidden that draw is now skipped, so the
      field has to be drawn when its section is actually revealed or it stays empty. */
