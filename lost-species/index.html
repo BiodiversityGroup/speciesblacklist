@@ -482,6 +482,18 @@
 
   .mapwrap { border:1px solid var(--rule); background:var(--surface); overflow:hidden;
              position:relative; }
+  /* The landing page's static map. A link, not a widget: no zoom controls, no cursor
+     affordance suggesting drag, and the caption says where the interaction lives. */
+  .homemap { display:block; text-decoration:none; color:inherit;
+             border:1px solid var(--rule); background:var(--surface);
+             overflow:hidden; margin:var(--s3) 0 0; transition:border-color .15s; }
+  .homemap:hover, .homemap:focus-visible { border-color:var(--accent); }
+  .homemap canvas { display:block; width:100%; }
+  .homemapcap { display:block; padding:.7rem 1rem .8rem; text-align:center;
+                font-family:var(--sans); font-size:.8rem; line-height:1.5;
+                color:var(--ink-3); border-top:1px solid var(--rule); }
+  .homemap:hover .homemapcap strong, .homemap:focus-visible .homemapcap strong
+             { color:var(--accent); }
   /* touch-action:none so a one-finger drag pans the map instead of scrolling the
      page, which is what a map is expected to do. The map is short enough that the
      page is still easy to scroll past on either side of it.
@@ -2099,6 +2111,9 @@ function showView(name, push) {
   if (name === "register" && DATA) resetFilters();
   // A hidden canvas has no width, so the map can only be drawn once visible.
   if (name === "map") ensureMap().then(ok => { if (ok) drawMap(); });
+  // Same reason drawField() is redrawn on reveal: a canvas in a hidden section has
+  // clientWidth 0, so the draw has to happen once the section is actually showing.
+  if (name === "home") ensureHomeMap();
   /* The other half of the zero-width guard in drawField(). boot() draws the field once,
      and on any route where the overview starts hidden that draw is now skipped, so the
      field has to be drawn when its section is actually revealed or it stays empty. */
@@ -3597,6 +3612,11 @@ function ampDraw() {
 addEventListener("resize", () => {
   if (LOST && !$("#v-lost").hidden) drawLost();
   if (NSMAP && !$("#v-newtaxa").hidden) drawNsMap();
+  /* The landing map sizes itself from its container, so it has to be redrawn when that
+     container changes width. Looked up rather than assumed: #homeMapCanvas exists on the
+     home route only, and this listener is live on all twelve. */
+  const hm = document.getElementById("homeMapCanvas");
+  if (MAP && hm) drawHomeMap();
 });
 
 /* ================= DESCRIBED BUT NEVER ASSESSED (reptile list) ================= */
@@ -5186,6 +5206,73 @@ function mapColor(t) {
   return t === "all" ? getComputedStyle(document.documentElement)
                         .getPropertyValue("--accent").trim()
                      : tierColor(t);
+}
+
+/* THE LANDING PAGE'S MAP. Deliberately its own function and its own canvas.
+
+   drawMap() is single-instance by construction: `view`, `mapCells`, `mapDots` and
+   `mapGeom` are module-level and all keyed to #mapCanvas, and the pointer handlers write
+   to them. Parameterising all of that to serve two canvases would put a working page at
+   risk to add a preview, so this draws the same map.json through the same projection with
+   no state at all: fixed k=1, no pan, no layers, no hit testing. If the real map's
+   projection ever changes, this needs the same change, which is why the two sit together.
+
+   Guarded on the canvas, so the eleven routes that do not have it are unaffected. */
+function drawHomeMap() {
+  const cv = document.getElementById("homeMapCanvas");
+  if (!MAP || !cv) return;
+  const cssW = cv.parentElement.clientWidth;
+  if (!cssW) return;                       // hidden section: clientWidth 0 would wipe it
+  const cssH = Math.round(cssW / 2);       // 360x180 degrees, same as the full map
+  const dpr = Math.min(devicePixelRatio || 1, 2);
+  cv.width = Math.round(cssW * dpr);
+  cv.height = Math.round(cssH * dpr);
+  cv.style.height = cssH + "px";
+  const g = cv.getContext("2d");
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, cssW, cssH);
+  const X = lo => (lo + 180) / 360 * cssW;
+  const Y = la => (90 - la) / 180 * cssH;
+
+  const cs = getComputedStyle(document.documentElement);
+  g.strokeStyle = cs.getPropertyValue("--rule").trim();
+  g.lineWidth = 1;
+  for (let lo = -180; lo <= 180; lo += 30) {
+    g.beginPath(); g.moveTo(X(lo), 0); g.lineTo(X(lo), cssH); g.stroke();
+  }
+  for (let la = -60; la <= 60; la += 30) {
+    g.beginPath(); g.moveTo(0, Y(la)); g.lineTo(cssW, Y(la)); g.stroke();
+  }
+  g.fillStyle = cs.getPropertyValue("--surface-2").trim();
+  g.strokeStyle = cs.getPropertyValue("--rule-2").trim();
+  MAP.land.forEach(ring => {
+    g.beginPath();
+    ring.forEach(([lo, la], i) => i ? g.lineTo(X(lo), Y(la)) : g.moveTo(X(lo), Y(la)));
+    g.closePath(); g.fill(); g.stroke();
+  });
+
+  // Same equal-degree binning and single-hue shading as the full map at k=1.
+  const CELL = cssW > 700 ? 2.5 : 4;
+  const bins = new Map();
+  for (const [lo, la] of MAP.points) {
+    const k = Math.floor((lo + 180) / CELL) + "," + Math.floor((90 - la) / CELL);
+    bins.set(k, (bins.get(k) || 0) + 1);
+  }
+  const max = Math.max(1, ...bins.values());
+  const base = mapColor("all");
+  const w = CELL / 360 * cssW, h = CELL / 180 * cssH;
+  bins.forEach((count, k) => {
+    const [cx, cy] = k.split(",").map(Number);
+    g.globalAlpha = 0.25 + 0.75 * Math.sqrt(count / max);
+    g.fillStyle = base;
+    g.fillRect(X(cx * CELL - 180), Y(90 - cy * CELL), Math.max(1, w), Math.max(1, h));
+  });
+  g.globalAlpha = 1;
+}
+
+function ensureHomeMap() {
+  if (!document.getElementById("homeMapCanvas")) return;
+  ensureMap().then(ok => { if (ok) drawHomeMap(); });
 }
 
 async function ensureMap() {
