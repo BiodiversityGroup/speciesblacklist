@@ -5283,6 +5283,8 @@ function mapColor(t) {
    projection ever changes, this needs the same change, which is why the two sit together.
 
    Guarded on the canvas, so the eleven routes that do not have it are unaffected. */
+let homeCells = [];
+
 function drawHomeMap() {
   const cv = document.getElementById("homeMapCanvas");
   if (!MAP || !cv) return;
@@ -5318,19 +5320,28 @@ function drawHomeMap() {
 
   // Same equal-degree binning and single-hue shading as the full map at k=1.
   const CELL = cssW > 700 ? 2.5 : 4;
-  const bins = new Map();
-  for (const [lo, la] of MAP.points) {
+  const bins = new Map(), binSp = new Map();
+  for (const [lo, la, i] of MAP.points) {
     const k = Math.floor((lo + 180) / CELL) + "," + Math.floor((90 - la) / CELL);
     bins.set(k, (bins.get(k) || 0) + 1);
+    let set = binSp.get(k);
+    if (!set) binSp.set(k, set = new Set());
+    set.add(MAP.names[i]);
   }
   const max = Math.max(1, ...bins.values());
   const base = mapColor("all");
   const w = CELL / 360 * cssW, h = CELL / 180 * cssH;
+  homeCells = [];
   bins.forEach((count, k) => {
     const [cx, cy] = k.split(",").map(Number);
+    const lo = cx * CELL - 180, la = 90 - cy * CELL;
+    const x = X(lo), y = Y(la), cw = Math.max(1, w), ch = Math.max(1, h);
     g.globalAlpha = 0.25 + 0.75 * Math.sqrt(count / max);
     g.fillStyle = base;
-    g.fillRect(X(cx * CELL - 180), Y(90 - cy * CELL), Math.max(1, w), Math.max(1, h));
+    g.fillRect(x, y, cw, ch);
+    // Recorded for hover. Same shape the full map uses, minus the locality rings,
+    // which this map does not draw.
+    homeCells.push({x, y, w: cw, h: ch, count, species: binSp.get(k), lo, la});
   });
   g.globalAlpha = 1;
 }
@@ -5344,14 +5355,47 @@ function drawHomeMap() {
    one belongs on this page. */
 function ensureHomeMap() {
   if (!document.getElementById("homeMapCanvas")) return;
-  if (MAP) { drawHomeMap(); return; }
+  if (MAP) { drawHomeMap(); wireHomeMap(); return; }
   /* UNSTAMPED on purpose. stamped() builds its ?v= from DATA.meta.built, and on this
      route DATA has not loaded when this runs, so stamping threw and the map stayed blank.
      getJSON sends unstamped requests with cache:"no-cache", which revalidates against the
      ETag and is a 304 when nothing changed, so the version stamp buys nothing here. */
   getJSON("/map.json")
-    .then(d => { MAP = d; drawHomeMap(); })
+    .then(d => { MAP = d; drawHomeMap(); wireHomeMap(); })
     .catch(e => console.warn("landing map: /map.json did not load", e));
+}
+
+/* Hover readout for the landing map. Same content as the full map's, minus the locality
+   rings this map does not draw and minus "select to open in register", because a click
+   here opens the full map rather than filtering the table. Wired once, after the first
+   draw, so there is something to hit-test against. */
+let homeMapWired = false;
+function wireHomeMap() {
+  if (homeMapWired) return;
+  const cv = document.getElementById("homeMapCanvas");
+  const tip = document.getElementById("mapTip");
+  if (!cv || !tip) return;
+  homeMapWired = true;
+  const ns = n => (n < 0 ? Math.abs(n).toFixed(0) + "°S" : n.toFixed(0) + "°N");
+  const ew = n => (n < 0 ? Math.abs(n).toFixed(0) + "°W" : n.toFixed(0) + "°E");
+  cv.addEventListener("mousemove", ev => {
+    const r = cv.getBoundingClientRect();
+    const x = ev.clientX - r.left, y = ev.clientY - r.top;
+    const hit = homeCells.find(c =>
+      x >= c.x && x < c.x + c.w && y >= c.y && y < c.y + c.h);
+    if (!hit) { tip.style.opacity = 0; return; }
+    tip.innerHTML = `<b>${hit.count.toLocaleString()} record${
+      hit.count === 1 ? "" : "s"}</b>
+      ${(hit.species ? hit.species.size : 0).toLocaleString()} species
+      &middot; ${ns(hit.la)} ${ew(hit.lo)}
+      <span style="opacity:.7">open the full map to explore this area</span>`;
+    tip.style.opacity = 1;
+    let left = ev.clientX + 14, top = ev.clientY + 14;
+    if (left + tip.offsetWidth > innerWidth - 8) left = ev.clientX - tip.offsetWidth - 14;
+    if (top + tip.offsetHeight > innerHeight - 8) top = ev.clientY - tip.offsetHeight - 14;
+    tip.style.left = left + "px"; tip.style.top = top + "px";
+  });
+  cv.addEventListener("mouseleave", () => { tip.style.opacity = 0; });
 }
 
 async function ensureMap() {
