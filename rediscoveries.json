@@ -1,26 +1,50 @@
 {
-"built": "2026-09-04",
+"built": "2026-09-05",
 "counts": {
-"stories": 176,
-"raw_items": 425,
-"with_species": 110,
-"distinct_species": 219,
-"distinct_species_firm": 45,
+"stories": 178,
+"raw_items": 435,
+"with_species": 113,
+"distinct_species": 223,
+"distinct_species_firm": 46,
 "multi_species_cards": 45,
-"with_image": 169,
-"syndicated": 82,
-"on_tbg_list": 28,
+"with_image": 172,
+"syndicated": 83,
+"on_tbg_list": 29,
 "on_list_breakdown": {
-"on our lost-species list": 22,
+"on our lost-species list": 23,
 "on the Black List": 6
 },
 "undated": 0,
-"newest": "Tue, 25 Aug 2026",
+"newest": "Fri, 04 Sep 2026",
 "tracked_names": 6709,
-"image_local": 163,
+"image_local": 166,
 "archived": 125
 },
 "cards": [
+{
+"title": "Rare rattan species rediscovered",
+"species": [
+"Calamus vinosus"
+],
+"species_firm": [
+"Calamus vinosus"
+],
+"on_list": "",
+"detail": "",
+"publisher": "SunStar Publishing Inc.",
+"date": "Fri, 04 Sep 2026",
+"ts": 1788550882,
+"first_seen": "2026-09-05",
+"link": "https://www.sunstar.com.ph/davao/rare-rattan-species-rediscovered",
+"image": "/rd-img/59c59079b276a803.jpg",
+"wayback": "",
+"desc": "Researchers and Indigenous guards find Calamus vinosus, a rare rattan unseen since 1912, in Davao de Oro's Mt. Candalaga.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "In 1985, a fish on Australia\u2019s doorstep was 'lost'; now it\u2019s been rediscovered by woman fishing for prawns",
 "species": [
@@ -869,7 +893,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 8,
+"outlets": 9,
 "also": [
 {
 "publisher": "Conservation news",
@@ -1593,7 +1617,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 6,
 "also": [
 {
 "publisher": "Moneycontrol",
@@ -1608,8 +1632,8 @@
 "link": "https://www.sciencealert.com/flat-headed-wild-cat-not-seen-in-30-years-caught-on-camera-in-thailand"
 },
 {
-"publisher": "france24.com",
-"link": "https://www.france24.com/en/live-news/20251226-elusive-wild-cat-feared-extinct-rediscovered-in-thailand"
+"publisher": "The Straits Times",
+"link": "https://www.straitstimes.com/asia/se-asia/elusive-wild-cat-feared-extinct-last-seen-in-1995-rediscovered-in-thailand"
 }
 ]
 },
@@ -2061,12 +2085,8 @@
 "link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
 },
 {
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
-{
-"publisher": "Kids News",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+"publisher": "UCT News",
+"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
 },
 {
 "publisher": "Forbes",
@@ -2250,6 +2270,41 @@
 "also": []
 },
 {
+"title": "Bird not seen in 20 years is rediscovered using an audio recorder",
+"species": [
+"Rhinoptilus bitorquatus"
+],
+"species_firm": [],
+"on_list": "Lost Species",
+"detail": "Bird, lost, last seen 2009",
+"publisher": "Earth.com",
+"date": "Wed, 15 Oct 2025",
+"ts": 1760511600,
+"first_seen": "2026-08-10",
+"link": "https://www.earth.com/news/two-song-notes-confirms-rediscovery-of-jerdons-courser-bird-missing-for-20-years/",
+"image": "/rd-img/ce58ca29f452a4d6.jpg",
+"wayback": "http://web.archive.org/web/20260812035626/https://www.birdlife.org/news/2025/09/10/glimmer-of-hope-sought-after-lost-bird-rediscovered-in-india/",
+"desc": "After more than 20 years, the Critically Endangered Jerdon\u2019s Courser has been documented again.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 4,
+"also": [
+{
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+},
+{
+"publisher": "Kids News",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+},
+{
+"publisher": "Earth.com",
+"link": "https://www.earth.com/news/two-song-notes-confirms-rediscovery-of-jerdons-courser-bird-missing-for-20-years/"
+}
+]
+},
+{
 "title": "Whistler residents help document rediscovery of \u2018extinct\u2019 Ecuadorian toad",
 "species": [
 "Atelopus mindoensis",
@@ -2307,33 +2362,6 @@
 {
 "publisher": "Conservation news",
 "link": "https://news.mongabay.com/2025/08/social-media-post-sparks-rediscovery-of-endemic-sri-lanka-rainforest-plant/"
-}
-]
-},
-{
-"title": "Glimmer of hope: Sought-after lost bird rediscovered in India",
-"species": [
-"Rhinoptilus bitorquatus"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Bird, lost, last seen 2009",
-"publisher": "BirdLife International",
-"date": "Wed, 10 Sep 2025",
-"ts": 1757487600,
-"first_seen": "2026-08-10",
-"link": "https://www.birdlife.org/news/2025/09/10/glimmer-of-hope-sought-after-lost-bird-rediscovered-in-india/",
-"image": "/rd-img/ce58ca29f452a4d6.jpg",
-"wayback": "http://web.archive.org/web/20260812035626/https://www.birdlife.org/news/2025/09/10/glimmer-of-hope-sought-after-lost-bird-rediscovered-in-india/",
-"desc": "After more than 20 years, the Critically Endangered Jerdon\u2019s Courser has been documented again.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Earth.com",
-"link": "https://www.earth.com/news/two-song-notes-confirms-rediscovery-of-jerdons-courser-bird-missing-for-20-years/"
 }
 ]
 },
@@ -2659,7 +2687,9 @@
 },
 {
 "title": "Kiwi pukupuku/little spotted kiwi rediscovered on mainland Aotearoa after 50 years",
-"species": [],
+"species": [
+"Apteryx owenii"
+],
 "species_firm": [],
 "on_list": "",
 "detail": "",
@@ -2674,8 +2704,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "NZ Nature Fund",
+"link": "https://nznaturefund.org/news/lost-kiwi-species-rediscovered-on-mainland-aotearoa/"
+}
+]
 },
 {
 "title": "Coral once feared extinct rediscovered in the Gal\u00e1pagos after 25 years - news",
@@ -2892,13 +2927,8 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "WorldAtlas",
-"link": "https://www.worldatlas.com/articles/15-extinct-animals-found-again.html"
-}
-]
+"outlets": 1,
+"also": []
 },
 {
 "title": "Chel Snakehead: A Fish That Time Forgot, Rediscovered",
@@ -3174,7 +3204,11 @@
 "Fregetta maoriana",
 "Tragulus versicolor",
 "Ilex sapiiformis",
-"Atelopus longirostris"
+"Atelopus longirostris",
+"Varanus douarrha",
+"Furcifer voeltzkowi",
+"Hylaeus lactiferus",
+"Chelonoidis phantasticus"
 ],
 "species_firm": [],
 "on_list": "Lost Species",
@@ -3190,7 +3224,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "Conservation news",
@@ -3199,6 +3233,10 @@
 {
 "publisher": "Auckland Zoo",
 "link": "https://www.aucklandzoo.co.nz/news/rediscovering-a-species-lost-to-science-for-30-years"
+},
+{
+"publisher": "Inverse",
+"link": "https://www.inverse.com/science/animals-lost-then-found-by-scientists/amp"
 }
 ]
 },
@@ -3500,6 +3538,33 @@
 "note": "",
 "outlets": 1,
 "also": []
+},
+{
+"title": "Australian lizard species rediscovered following extinction fears",
+"species": [
+"Tympanocryptis pinguicolla"
+],
+"species_firm": [],
+"on_list": "Lost Species",
+"detail": "Reptile, lost, last seen ?",
+"publisher": "Phys.org",
+"date": "Sat, 01 Jul 2023",
+"ts": 1688194800,
+"first_seen": "2026-09-05",
+"link": "https://phys.org/news/2023-06-australian-lizard-species-rediscovered-extinction.html",
+"image": "/rd-img/5e8c373ba82ac19e.jpg",
+"wayback": "http://web.archive.org/web/20240622041923/https://phys.org/news/2023-06-australian-lizard-species-rediscovered-extinction.html",
+"desc": "The Victorian grassland earless dragon has been rediscovered 50 years after it was last seen.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "Natural History Museum",
+"link": "https://www.nhm.ac.uk/discover/news/2023/june/australian-lizard-species-rediscovered-following-extinction-fears.html"
+}
+]
 },
 {
 "title": "Rare Songbird Feared Extinct Rediscovered in Madagascar",
@@ -3862,26 +3927,6 @@
 },
 {
 "title": "\u2018Most Wanted\u2019 list leads to rediscovered species. Conservation group sets its sights on finding 8 more.",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "The Washington Post",
-"date": "Mon, 14 Feb 2022",
-"ts": 1644825600,
-"first_seen": "2026-08-10",
-"link": "https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/",
-"image": "",
-"wayback": "http://web.archive.org/web/20260811154530/https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/",
-"desc": "",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "The \u2018most wanted\u2019 species rediscovered in the wild",
 "species": [
 "Tragulus versicolor",
 "Tragulus kanchil"
@@ -3891,19 +3936,23 @@
 ],
 "on_list": "Black List (Data Deficient)",
 "detail": "tier 1",
-"publisher": "cnn.com",
-"date": "Fri, 27 Aug 2021",
-"ts": 1630047600,
+"publisher": "The Washington Post",
+"date": "Mon, 14 Feb 2022",
+"ts": 1644825600,
 "first_seen": "2026-08-10",
-"link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl",
+"link": "https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/",
 "image": "/rd-img/60bdcd72db7dea00.jpg",
-"wayback": "http://web.archive.org/web/20260811154743/https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl",
+"wayback": "http://web.archive.org/web/20260811154530/https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/",
 "desc": "These are some of the species that have been rediscovered on conservation group Re:wild\u2019s top 25 \u2018Most Wanted Lost Species\u2019 list.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
+{
+"publisher": "cnn.com",
+"link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl"
+},
 {
 "publisher": "CNN",
 "link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl"
@@ -4492,6 +4541,26 @@
 "also": []
 },
 {
+"title": "15 Previously Extinct Animals Who Were Rediscovered",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "WorldAtlas",
+"date": "Fri, 18 May 2018",
+"ts": 1526626800,
+"first_seen": "2026-08-25",
+"link": "https://www.worldatlas.com/articles/15-extinct-animals-found-again.html",
+"image": "/rd-img/afe2b65b986a1667.jpg",
+"wayback": "",
+"desc": "The Albany Adder snake joins the list of thought-to-be-extinct species that were rediscovered.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "Lost species of bee-mimicking moth rediscovered after 130 years",
 "species": [],
 "species_firm": [],
@@ -4532,7 +4601,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "Live Science",
@@ -4541,6 +4610,10 @@
 {
 "publisher": "A-Z Animals",
 "link": "https://a-z-animals.com/articles/rediscovered-in-2014-this-salamanders-habitat-was-almost-lost-to-coffee/"
+},
+{
+"publisher": "Animals",
+"link": "https://www.nationalgeographic.com/animals/article/salamanders-extinct-species-rediscovery-guatemala"
 }
 ]
 },
