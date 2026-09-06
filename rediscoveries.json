@@ -1,14 +1,14 @@
 {
-"built": "2026-09-05",
+"built": "2026-09-06",
 "counts": {
-"stories": 178,
-"raw_items": 435,
-"with_species": 113,
-"distinct_species": 223,
+"stories": 182,
+"raw_items": 451,
+"with_species": 114,
+"distinct_species": 226,
 "distinct_species_firm": 46,
-"multi_species_cards": 45,
-"with_image": 172,
-"syndicated": 83,
+"multi_species_cards": 46,
+"with_image": 176,
+"syndicated": 88,
 "on_tbg_list": 29,
 "on_list_breakdown": {
 "on our lost-species list": 23,
@@ -17,8 +17,8 @@
 "undated": 0,
 "newest": "Fri, 04 Sep 2026",
 "tracked_names": 6709,
-"image_local": 166,
-"archived": 125
+"image_local": 170,
+"archived": 129
 },
 "cards": [
 {
@@ -42,8 +42,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "SunStar Publishing Inc.",
+"link": "https://www.sunstar.com.ph/davao/rare-rattan-species-rediscovered"
+}
+]
 },
 {
 "title": "In 1985, a fish on Australia\u2019s doorstep was 'lost'; now it\u2019s been rediscovered by woman fishing for prawns",
@@ -574,7 +579,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 6,
 "also": [
 {
 "publisher": "floraldaily.com",
@@ -587,6 +592,10 @@
 {
 "publisher": "T\u00fcrkiye Today",
 "link": "https://www.turkiyetoday.com/lifestyle/lost-amasya-tulip-rediscovered-in-turkiye-after-130-years-3221803"
+},
+{
+"publisher": "Yeni \u015eafak English",
+"link": "https://en.yenisafak.com/turkiye/lost-amasya-tulip-rediscovered-in-turkiye-after-130-years-3719468"
 }
 ]
 },
@@ -971,26 +980,6 @@
 ]
 },
 {
-"title": "Rare night parrot rediscovered in Australia after being missing for nearly a century",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "The Times of India",
-"date": "Fri, 24 Apr 2026",
-"ts": 1777014000,
-"first_seen": "2026-08-10",
-"link": "https://timesofindia.indiatimes.com/etimes/animals/rare-night-parrot-rediscovered-in-australia-after-being-missing-for-nearly-a-century/articleshow/130485989.cms",
-"image": "/rd-img/cd1ab8b4b27224c5.jpg",
-"wayback": "http://web.archive.org/web/20260812040607/https://timesofindia.indiatimes.com/etimes/animals/rare-night-parrot-rediscovered-in-australia-after-being-missing-for-nearly-a-century/articleshow/130485989.cms",
-"desc": "Animals & Pets News: The Night Parrot, one of the most elusive birds on earth, has been found again in isolated locations of Australia after basically not being found in a.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "Five \u2018lost\u2019 bird species rediscovered in 2025 - news",
 "species": [
 "Ceyx websteri",
@@ -1023,7 +1012,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
 {
 "publisher": "Conservation news",
@@ -1135,7 +1124,10 @@
 {
 "title": "Rare plant species rediscovered in Arunachal after 189 years",
 "species": [
-"Henckelia monophylla"
+"Henckelia monophylla",
+"Psoralea cataracta",
+"Polhillia ignota",
+"Aspalathus cordicarpa"
 ],
 "species_firm": [
 "Henckelia monophylla"
@@ -1153,7 +1145,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 8,
 "also": [
 {
 "publisher": "mint",
@@ -1168,8 +1160,8 @@
 "link": "https://themeghalayanexpress.com/rare-plant-species-rediscovered-in-arunachal-after-189-years/"
 },
 {
-"publisher": "Nagaland Post - Nagaland Post delivers the latest breaking Nagaland news, politics, business, sports, culture, and local updates from Nagaland and the Northeast.",
-"link": "https://nagalandpost.com/rare-plant-species-rediscovered-in-arunachal-after-189-years/"
+"publisher": "news.uct.ac.za",
+"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
 }
 ]
 },
@@ -1315,11 +1307,10 @@
 "Ecnomiohyla veraguensis",
 "Batrachochytrium dendrobatidis",
 "Colostethus pratti",
-"Alsodes vittatus"
+"Ranoidea booroolongensis",
+"Ranoidea piperata"
 ],
-"species_firm": [
-"Alsodes vittatus"
-],
+"species_firm": [],
 "on_list": "",
 "detail": "",
 "publisher": "Smithsonian Magazine",
@@ -1328,20 +1319,16 @@
 "first_seen": "2026-08-10",
 "link": "https://www.smithsonianmag.com/blogs/national-zoo-conservation-biology-institute/2026/02/10/hope-returns-to-panamas-forests-with-the-rediscovery-of-four-missing-frog-species/",
 "image": "/rd-img/9bc6dda860c0aa10.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260510142042/https://australian.museum/blog/amri-news/frog-rediscovered-booroolong/",
 "desc": "Smithsonian researcher Brian Gratwicke and colleagues describe how acoustic technology aided the remarkable rediscovery of four amphibian populations thought to have vanished from Panama\u2019s mountain forests.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 2,
 "also": [
 {
-"publisher": "EurekAlert!",
-"link": "https://www.eurekalert.org/news-releases/1076327"
-},
-{
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/science/frog-species-once-thought-lost-for-130-years-rediscovered-in-chiles-untouched-ecosystems/articleshow/119438124.cms"
+"publisher": "The Australian Museum",
+"link": "https://australian.museum/blog/amri-news/frog-rediscovered-booroolong/"
 }
 ]
 },
@@ -1882,7 +1869,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 7,
+"outlets": 8,
 "also": [
 {
 "publisher": "Deccan Herald",
@@ -2070,27 +2057,23 @@
 "publisher": "Forbes",
 "date": "Sat, 01 Nov 2025",
 "ts": 1761980400,
-"first_seen": "2026-08-31",
+"first_seen": "2026-08-21",
 "link": "https://www.forbes.com/sites/scotttravers/2025/11/01/meet-4-extinct-animals-that-were-miraculously-rediscovered-hint-one-was-an-ancient-fish-found-in-a-fishing-net-in-1938/",
-"image": "/rd-img/0135710740ad6cf4.jpg",
-"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
-"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
+"image": "/rd-img/360a925edf5429ce.jpg",
+"wayback": "http://web.archive.org/web/20251018175425/https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/",
+"desc": "Just because a species is presumed extinct doesn\u2019t mean it\u2019s gone forever. Here are four glowing examples of this unique, and felicitous, phenomenon.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 3,
 "also": [
 {
-"publisher": "news.uct.ac.za",
-"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
+"publisher": "SciTechDaily",
+"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
 },
 {
-"publisher": "UCT News",
-"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
-},
-{
-"publisher": "Forbes",
-"link": "https://www.forbes.com/sites/scotttravers/2025/11/01/meet-4-extinct-animals-that-were-miraculously-rediscovered-hint-one-was-an-ancient-fish-found-in-a-fishing-net-in-1938/"
+"publisher": "scitechdaily.com",
+"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
 }
 ]
 },
@@ -2270,73 +2253,6 @@
 "also": []
 },
 {
-"title": "Bird not seen in 20 years is rediscovered using an audio recorder",
-"species": [
-"Rhinoptilus bitorquatus"
-],
-"species_firm": [],
-"on_list": "Lost Species",
-"detail": "Bird, lost, last seen 2009",
-"publisher": "Earth.com",
-"date": "Wed, 15 Oct 2025",
-"ts": 1760511600,
-"first_seen": "2026-08-10",
-"link": "https://www.earth.com/news/two-song-notes-confirms-rediscovery-of-jerdons-courser-bird-missing-for-20-years/",
-"image": "/rd-img/ce58ca29f452a4d6.jpg",
-"wayback": "http://web.archive.org/web/20260812035626/https://www.birdlife.org/news/2025/09/10/glimmer-of-hope-sought-after-lost-bird-rediscovered-in-india/",
-"desc": "After more than 20 years, the Critically Endangered Jerdon\u2019s Courser has been documented again.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 4,
-"also": [
-{
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
-{
-"publisher": "Kids News",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
-{
-"publisher": "Earth.com",
-"link": "https://www.earth.com/news/two-song-notes-confirms-rediscovery-of-jerdons-courser-bird-missing-for-20-years/"
-}
-]
-},
-{
-"title": "Whistler residents help document rediscovery of \u2018extinct\u2019 Ecuadorian toad",
-"species": [
-"Atelopus mindoensis",
-"Batrachochytrium dendrobatidis"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Pique Newsmagazine",
-"date": "Wed, 08 Oct 2025",
-"ts": 1759906800,
-"first_seen": "2026-08-10",
-"link": "https://www.piquenewsmagazine.com/animal-stories/whistler-residents-help-document-rediscovery-of-extinct-ecuadorian-toad-11318732",
-"image": "/rd-img/e9d426255a6088a3.jpg",
-"wayback": "http://web.archive.org/web/20251019222128/https://www.piquenewsmagazine.com/animal-stories/whistler-residents-help-document-rediscovery-of-extinct-ecuadorian-toad-11318732",
-"desc": "'We had the super scary task of then having to hike them back up this slippery, muddy, vertical jungle path with a bag of the only tadpoles ever found'",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
-"also": [
-{
-"publisher": "The Revelator",
-"link": "https://therevelator.org/harlequin-toad-rediscovered/"
-},
-{
-"publisher": "The Revelator",
-"link": "https://therevelator.org/harlequin-toad-rediscovered/"
-}
-]
-},
-{
 "title": "Extinct-in-the-wild plant rediscovered in Sri Lanka thanks to social media - news",
 "species": [
 "Doona ovalifolia"
@@ -2362,6 +2278,33 @@
 {
 "publisher": "Conservation news",
 "link": "https://news.mongabay.com/2025/08/social-media-post-sparks-rediscovery-of-endemic-sri-lanka-rainforest-plant/"
+}
+]
+},
+{
+"title": "Glimmer of hope: Sought-after lost bird rediscovered in India",
+"species": [
+"Rhinoptilus bitorquatus"
+],
+"species_firm": [],
+"on_list": "Lost Species",
+"detail": "Bird, lost, last seen 2009",
+"publisher": "BirdLife International",
+"date": "Wed, 10 Sep 2025",
+"ts": 1757487600,
+"first_seen": "2026-08-10",
+"link": "https://www.birdlife.org/news/2025/09/10/glimmer-of-hope-sought-after-lost-bird-rediscovered-in-india/",
+"image": "/rd-img/ce58ca29f452a4d6.jpg",
+"wayback": "http://web.archive.org/web/20260812035626/https://www.birdlife.org/news/2025/09/10/glimmer-of-hope-sought-after-lost-bird-rediscovered-in-india/",
+"desc": "After more than 20 years, the Critically Endangered Jerdon\u2019s Courser has been documented again.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "Earth.com",
+"link": "https://www.earth.com/news/two-song-notes-confirms-rediscovery-of-jerdons-courser-bird-missing-for-20-years/"
 }
 ]
 },
@@ -2704,10 +2647,14 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
 {
 "publisher": "NZ Nature Fund",
+"link": "https://nznaturefund.org/news/lost-kiwi-species-rediscovered-on-mainland-aotearoa/"
+},
+{
+"publisher": "nznaturefund.org",
 "link": "https://nznaturefund.org/news/lost-kiwi-species-rediscovered-on-mainland-aotearoa/"
 }
 ]
@@ -3003,6 +2950,35 @@
 "note": "",
 "outlets": 1,
 "also": []
+},
+{
+"title": "Rare frog rediscovered after 130 years",
+"species": [
+"Alsodes vittatus"
+],
+"species_firm": [
+"Alsodes vittatus"
+],
+"on_list": "",
+"detail": "",
+"publisher": "EurekAlert!",
+"date": "Tue, 11 Mar 2025",
+"ts": 1741676400,
+"first_seen": "2026-08-25",
+"link": "https://www.eurekalert.org/news-releases/1076327",
+"image": "/rd-img/adde6d88f4bb0326.jpg",
+"wayback": "",
+"desc": "A team of researchers has rediscovered a frog species which has not been seen in more than 130 years. First described in 1902, Alsodes vittatus had evaded detection since then, despite multiple search efforts. The researchers discovered two populations of the ",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/science/frog-species-once-thought-lost-for-130-years-rediscovered-in-chiles-untouched-ecosystems/articleshow/119438124.cms"
+}
+]
 },
 {
 "title": "A lace bug, last observed in 1917, rediscovered at S\u2019pore Botanic Gardens",
@@ -3401,7 +3377,8 @@
 "title": "Track-a-mole: Sniffer dog and eDNA help \u2018rediscover\u2019 South African golden mole - news",
 "species": [
 "Cryptochloris wintoni",
-"Cryptochloris zyli"
+"Cryptochloris zyli",
+"Eremitalpa granti"
 ],
 "species_firm": [
 "Cryptochloris wintoni"
@@ -3419,23 +3396,23 @@
 "citation": "",
 "kind": "",
 "note": "GBIF also holds specimens of this species dated 1938, 1949 and 1969, which look like sightings long after the 1937 our lost list carries. They are not. Two of those years are museum registration numbers rather than collection dates, and identification in this genus is unreliable enough that the rediscovery needed DNA to settle it, so a specimen labeled Cryptochloris wintoni in 1969 records that somebody applied the name. The 2021 material sample in GBIF is from the rediscovery work itself.",
-"outlets": 6,
+"outlets": 8,
 "also": [
-{
-"publisher": "euronews",
-"link": "https://www.euronews.com/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-co"
-},
-{
-"publisher": "Mail & Guardian",
-"link": "https://mg.co.za/the-green-guardian/2023-12-27-blind-golden-mole-that-swims-through-the-sand-rediscovered-in-sa/"
-},
-{
-"publisher": "euronews",
-"link": "https://www.euronews.com/green/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-"
-},
 {
 "publisher": "Metro",
 "link": "https://metro.co.uk/2023/11/30/golden-mole-missing-80-years-rediscovered-south-africa-19906928/"
+},
+{
+"publisher": "The Conversation",
+"link": "https://theconversation.com/golden-mole-that-swims-through-sand-is-rediscovered-in-south-africa-after-86-years-219022"
+},
+{
+"publisher": "Boing Boing",
+"link": "https://boingboing.net/2023/12/12/lost-species-de-wintons-golden-mole-found-after-86-years.html"
+},
+{
+"publisher": "euronews",
+"link": "https://www.euronews.com/2023/11/29/more-precious-than-gold-how-a-long-lost-mole-was-rediscovered-with-the-help-of-a-border-co"
 }
 ]
 },
@@ -3567,6 +3544,35 @@
 ]
 },
 {
+"title": "\u2018Extinct\u2019 species rediscovered in UK",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "SussexWorld",
+"date": "Sun, 30 Apr 2023",
+"ts": 1682838000,
+"first_seen": "2026-08-31",
+"link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"image": "/rd-img/0135710740ad6cf4.jpg",
+"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 3,
+"also": [
+{
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+},
+{
+"publisher": "Kids News",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+}
+]
+},
+{
 "title": "Rare Songbird Feared Extinct Rediscovered in Madagascar",
 "species": [
 "Xanthomixis tenebrosa"
@@ -3607,7 +3613,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "Audubon",
@@ -3616,6 +3622,10 @@
 {
 "publisher": "Business Insider",
 "link": "https://www.businessinsider.com/papua-new-guinea-bird-lost-to-science-140-years-rediscovered-2022-11"
+},
+{
+"publisher": "The Sydney Morning Herald",
+"link": "https://www.smh.com.au/environment/conservation/earless-dragon-rediscovery-like-finding-the-tasmanian-tiger-20230625-p5dj9o.html"
 }
 ]
 },
@@ -3695,8 +3705,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "The World Economic Forum",
+"link": "https://www.weforum.org/stories/all/how-extinct-animals-are-rediscovered-more-often-than-you-may-think/"
+}
+]
 },
 {
 "title": "Rare singing, emerald green and iridescent blue hummingbird unexpectedly rediscovered in Colombia",
@@ -3757,6 +3772,26 @@
 "link": "https://www.theguardian.com/environment/2022/aug/03/magnolia-species-lost-to-science-for-97-years-rediscovered-in-haiti"
 }
 ]
+},
+{
+"title": "Canadian Museum Rediscovers a New Ancient Shark Species - The First of its Kind",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "discovery.com",
+"date": "Thu, 21 Jul 2022",
+"ts": 1658386800,
+"first_seen": "2026-09-06",
+"link": "https://www.discovery.com/science/shark-fossil-rediscovered-in-canadian-museum",
+"image": "/rd-img/43ed63225409a4a7.jpg",
+"wayback": "http://web.archive.org/web/20260312010027/https://www.discovery.com/science/shark-fossil-rediscovered-in-canadian-museum",
+"desc": "The Canadian Fossil Discovery Centre has recently \u201crediscovered\u201d an ancient shark skeleton that has been sitting in the museum\u2019s collection for nearly 50 years. Could this shark be a part of a newly discovered ancient shark species?",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
 },
 {
 "title": "Lost but not forgotten: a new nomenclature to support a call to rediscover and conserve lost species",
@@ -4376,6 +4411,42 @@
 "also": []
 },
 {
+"title": "\u2018Extinct\u2019 toad rediscovery offers hope amid amphibian apocalypse",
+"species": [
+"Atelopus mindoensis",
+"Batrachochytrium dendrobatidis"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Animals",
+"date": "Mon, 27 Apr 2020",
+"ts": 1587970800,
+"first_seen": "2026-09-06",
+"link": "https://www.nationalgeographic.com/animals/article/extinct-toad-rediscovered-hope-amphibian-apocalypse",
+"image": "/rd-img/7445923e464dfc0e.jpg",
+"wayback": "http://web.archive.org/web/20260902182233/https://www.nationalgeographic.com/animals/article/extinct-toad-rediscovered-hope-amphibian-apocalypse",
+"desc": "If the Mindo harlequin toad has developed resistance to chytrid disease, that may be a sign that the global epidemic is abating.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 4,
+"also": [
+{
+"publisher": "Pique Newsmagazine",
+"link": "https://www.piquenewsmagazine.com/animal-stories/whistler-residents-help-document-rediscovery-of-extinct-ecuadorian-toad-11318732"
+},
+{
+"publisher": "The Revelator",
+"link": "https://therevelator.org/harlequin-toad-rediscovered/"
+},
+{
+"publisher": "The Revelator",
+"link": "https://therevelator.org/harlequin-toad-rediscovered/"
+}
+]
+},
+{
 "title": "\u2018Never Say Die\u2019: Genetic Sleuths Rediscover Extinct Species (Published 2020)",
 "species": [],
 "species_firm": [],
@@ -4443,6 +4514,26 @@
 "link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
 }
 ]
+},
+{
+"title": "Grasshopper that holds clues to evolution rediscovered in Victoria - ABC News & Headlines",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Australian Broadcasting Corporation",
+"date": "Tue, 24 Sep 2019",
+"ts": 1569308400,
+"first_seen": "2026-09-06",
+"link": "https://www.abc.net.au/news/2019-09-25/species-of-grasshopper-not-seen-since-60s-rediscovered/11542290",
+"image": "/rd-img/0dc4343bb3f7e250.jpg",
+"wayback": "http://web.archive.org/web/20260320041436/https://www.abc.net.au/news/2019-09-25/species-of-grasshopper-not-seen-since-60s-rediscovered/11542290",
+"desc": "A species of grasshopper that has not been seen in Victoria since the 1960s is rediscovered at Omeo in East Gippsland.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
 },
 {
 "title": "Rediscovering a \u2018lost\u2019 species",
@@ -4614,6 +4705,31 @@
 {
 "publisher": "Animals",
 "link": "https://www.nationalgeographic.com/animals/article/salamanders-extinct-species-rediscovery-guatemala"
+}
+]
+},
+{
+"title": "Still here: Night Parrot rediscovery in WA raises questions for mining",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "The Conversation",
+"date": "Wed, 29 Mar 2017",
+"ts": 1490770800,
+"first_seen": "2026-09-06",
+"link": "https://theconversation.com/still-here-night-parrot-rediscovery-in-wa-raises-questions-for-mining-75384",
+"image": "/rd-img/348e590ea210fcf6.jpg",
+"wayback": "http://web.archive.org/web/20251126094629/https://theconversation.com/still-here-night-parrot-rediscovery-in-wa-raises-questions-for-mining-75384",
+"desc": "A Night Parrot snapped in Western Australia confirms the mysterious species survives across Australia, but now the real conservation work begins.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/animals/rare-night-parrot-rediscovered-in-australia-after-being-missing-for-nearly-a-century/articleshow/130485989.cms"
 }
 ]
 },
