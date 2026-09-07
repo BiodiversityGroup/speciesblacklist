@@ -1,26 +1,52 @@
 {
-"built": "2026-09-06",
+"built": "2026-09-07",
 "counts": {
-"stories": 182,
-"raw_items": 451,
-"with_species": 114,
-"distinct_species": 226,
-"distinct_species_firm": 46,
-"multi_species_cards": 46,
-"with_image": 176,
-"syndicated": 88,
-"on_tbg_list": 29,
+"stories": 183,
+"raw_items": 459,
+"with_species": 116,
+"distinct_species": 229,
+"distinct_species_firm": 48,
+"multi_species_cards": 48,
+"with_image": 177,
+"syndicated": 91,
+"on_tbg_list": 31,
 "on_list_breakdown": {
-"on our lost-species list": 23,
-"on the Black List": 6
+"on our lost-species list": 24,
+"on the Black List": 7
 },
 "undated": 0,
-"newest": "Fri, 04 Sep 2026",
+"newest": "Mon, 07 Sep 2026",
 "tracked_names": 6709,
-"image_local": 170,
+"image_local": 171,
 "archived": 129
 },
 "cards": [
+{
+"title": "Long time no see: rediscovery, first molecular data, and redescriptions of two rare Dibamus species from Thailand (Squamata: Dibamidae)",
+"species": [
+"Dibamus alfredi",
+"Dibamus somsaki"
+],
+"species_firm": [
+"Dibamus alfredi",
+"Dibamus somsaki"
+],
+"on_list": "Lost Species",
+"detail": "Reptile, long-lost, last seen 1961",
+"publisher": "Zootaxa",
+"date": "Mon, 07 Sep 2026",
+"ts": 1788696000,
+"first_seen": "2026-09-07",
+"link": "https://www.mapress.com/zt/article/view/zootaxa.5875.4.1",
+"image": "/rd-img/91f7946a19a4e139.jpg",
+"wayback": "",
+"desc": "Alfred\u2019s blind skink, Dibamus alfredi Taylor, 1962, and Somsak\u2019s blind skink, Dibamus somsaki Honda, Nabhitabhata, Ota & Hikida, 1997, are two poorly known and rarely recorded members of the family Dibamidae endemic to Thailand. Since their original descriptio",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "Rare rattan species rediscovered",
 "species": [
@@ -83,8 +109,12 @@
 },
 {
 "title": "Rediscovery of Ypthima albipuncta Lee, 1985 (Lepidoptera, Nymphalidae, Satyrinae), with revision of its taxonomic status",
-"species": [],
-"species_firm": [],
+"species": [
+"Hylarana montivaga"
+],
+"species_firm": [
+"Hylarana montivaga"
+],
 "on_list": "",
 "detail": "",
 "publisher": "Zootaxa",
@@ -98,8 +128,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Zootaxa",
+"link": "https://www.mapress.com/zt/article/view/zootaxa.5875.4.4"
+}
+]
 },
 {
 "title": "Timor green pigeon nears extinction after decades of inaction, study warns",
@@ -377,8 +412,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "bigislandvideonews.com",
+"link": "https://www.bigislandvideonews.com/2026/07/19/pinapinao-hawaiian-damselfly-rediscovered-on-hawai%CA%BBi-island/"
+}
+]
 },
 {
 "title": "Trail camera captures rare 'rediscovery' of species that hasn't been seen in 80 years: 'A fantastic surprise'",
@@ -1227,8 +1267,12 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
+{
+"publisher": "The Independent",
+"link": "https://www.independent.co.uk/asia/southeast-asia/marsupials-extinct-new-guinea-tous-b2933259.html"
+},
 {
 "publisher": "Discover Wildlife",
 "link": "https://www.discoverwildlife.com/animal-facts/mammals/marsupials-rediscovered-new-guinea"
@@ -1240,10 +1284,6 @@
 {
 "publisher": "BirdGuides",
 "link": "https://www.birdguides.com/news/marsupials-thought-extinct-for-6-000-years-rediscovered-in-remote-west/"
-},
-{
-"publisher": "Kansas City Star",
-"link": "https://www.kansascity.com/living/article314982866.html"
 }
 ]
 },
@@ -2000,8 +2040,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Research Matters",
+"link": "https://researchmatters.in/news/jumping-spider-genus-rediscovered-after-123-years-new-species-identified"
+}
+]
 },
 {
 "title": "Long-eared species feared extinct for 55 years rediscovered in Turkmenistan",
@@ -2434,43 +2479,33 @@
 "species": [
 "Afroedura rondavelica"
 ],
-"species_firm": [
-"Afroedura rondavelica"
-],
+"species_firm": [],
 "on_list": "Lost Species",
 "detail": "Reptile, lost, last seen 1991",
 "publisher": "The Independent",
 "date": "Fri, 01 Aug 2025",
 "ts": 1754031600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-08-31",
 "link": "https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
-"image": "/rd-img/286e73d16ad525f8.jpg",
-"wayback": "http://web.archive.org/web/20251010172605/https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/",
-"desc": "The species was first discovered by Dr Niels Jacobsen in December 1991, when he collected two males.",
+"image": "/rd-img/7f5c2fd921dcbdf6.jpg",
+"wayback": "http://web.archive.org/web/20260819183224/https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
+"desc": "A rare gecko species last seen more than three decades ago has been rediscovered at a remote site in the Blyde River",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 17,
+"outlets": 18,
 "also": [
 {
-"publisher": "Sunday Tribune",
-"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+"publisher": "Good Things Guy",
+"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
 },
 {
-"publisher": "Sunday Independent",
-"link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+"publisher": "Good Things Guy",
+"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
 },
 {
-"publisher": "IOL",
-"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/"
-},
-{
-"publisher": "Jacaranda FM",
-"link": "https://www.jacarandafm.com/shows/drive/look-lost-gecko-species-rediscovered-mpumalanga/"
-},
-{
-"publisher": "The Independent",
-"link": "https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html"
+"publisher": "News24",
+"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871"
 }
 ]
 },
@@ -3180,13 +3215,11 @@
 "Fregetta maoriana",
 "Tragulus versicolor",
 "Ilex sapiiformis",
-"Atelopus longirostris",
-"Varanus douarrha",
-"Furcifer voeltzkowi",
-"Hylaeus lactiferus",
-"Chelonoidis phantasticus"
+"Atelopus longirostris"
 ],
-"species_firm": [],
+"species_firm": [
+"Ilex sapiiformis"
+],
 "on_list": "Lost Species",
 "detail": "Amphibian, lost, last seen 1988",
 "publisher": "Conservation news",
@@ -3200,19 +3233,23 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
 {
-"publisher": "Conservation news",
-"link": "https://news.mongabay.com/2019/11/rabbit-sized-deer-like-species-of-fanged-ungulate-rediscovered-in-vietnam/"
+"publisher": "euronews",
+"link": "https://www.euronews.com/2023/09/23/nature-surprises-us-scientists-in-brazil-rediscover-tree-thought-extinct-for-nearly-200-ye"
 },
 {
-"publisher": "Auckland Zoo",
-"link": "https://www.aucklandzoo.co.nz/news/rediscovering-a-species-lost-to-science-for-30-years"
+"publisher": "euronews",
+"link": "https://www.euronews.com/2023/09/23/nature-surprises-us-scientists-in-brazil-rediscover-tree-thought-extinct-for-nearly-200-ye"
 },
 {
-"publisher": "Inverse",
-"link": "https://www.inverse.com/science/animals-lost-then-found-by-scientists/amp"
+"publisher": "Business Insider",
+"link": "https://www.businessinsider.com/rare-pernambuco-holly-tree-rediscovered-after-186-years-2023-9"
+},
+{
+"publisher": "Newsweek",
+"link": "https://www.newsweek.com/tree-extinct-discovered-2-centuries-incredible-find-1828749"
 }
 ]
 },
@@ -3457,39 +3494,6 @@
 ]
 },
 {
-"title": "'Lost\u2019 Brazilian tree rediscovered after almost 200 years",
-"species": [
-"Ilex sapiiformis"
-],
-"species_firm": [
-"Ilex sapiiformis"
-],
-"on_list": "",
-"detail": "",
-"publisher": "euronews",
-"date": "Fri, 22 Sep 2023",
-"ts": 1695366000,
-"first_seen": "2026-08-10",
-"link": "https://www.euronews.com/2023/09/23/nature-surprises-us-scientists-in-brazil-rediscover-tree-thought-extinct-for-nearly-200-ye",
-"image": "/rd-img/f2c88e4ca006dcb5.jpg",
-"wayback": "http://web.archive.org/web/20260811132617/https://www.businessinsider.com/rare-pernambuco-holly-tree-rediscovered-after-186-years-2023-9",
-"desc": "A species of small holly tree last seen nearly two centuries ago has been rediscovered in Brazil.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
-"also": [
-{
-"publisher": "Business Insider",
-"link": "https://www.businessinsider.com/rare-pernambuco-holly-tree-rediscovered-after-186-years-2023-9"
-},
-{
-"publisher": "Newsweek",
-"link": "https://www.newsweek.com/tree-extinct-discovered-2-centuries-incredible-find-1828749"
-}
-]
-},
-{
 "title": "Forgotten tropical plants rediscovered after 100+ years with the help of community science",
 "species": [
 "Nasa humboldtiana",
@@ -3613,7 +3617,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
 {
 "publisher": "Audubon",
@@ -3626,6 +3630,10 @@
 {
 "publisher": "The Sydney Morning Herald",
 "link": "https://www.smh.com.au/environment/conservation/earless-dragon-rediscovery-like-finding-the-tasmanian-tiger-20230625-p5dj9o.html"
+},
+{
+"publisher": "CNN",
+"link": "https://www.cnn.com/2022/11/19/world/black-naped-pheasant-pigeon-scn-trnd"
 }
 ]
 },
@@ -4485,6 +4493,41 @@
 "note": "",
 "outlets": 1,
 "also": []
+},
+{
+"title": "Rabbit-sized, deer-like species of fanged ungulate rediscovered in Vietnam - news",
+"species": [
+"Tragulus versicolor",
+"Varanus douarrha",
+"Furcifer voeltzkowi",
+"Hylaeus lactiferus",
+"Chelonoidis phantasticus"
+],
+"species_firm": [],
+"on_list": "Black List (Data Deficient)",
+"detail": "tier 1",
+"publisher": "Conservation news",
+"date": "Mon, 18 Nov 2019",
+"ts": 1574064000,
+"first_seen": "2026-08-31",
+"link": "https://news.mongabay.com/2019/11/rabbit-sized-deer-like-species-of-fanged-ungulate-rediscovered-in-vietnam/",
+"image": "/rd-img/5090f7b9e95b99ab.jpg",
+"wayback": "http://web.archive.org/web/20260812041739/https://news.mongabay.com/2019/11/rabbit-sized-deer-like-species-of-fanged-ungulate-rediscovered-in-vietnam/",
+"desc": "Local villagers and government forest rangers reported seeing a gray chevrotain in the vicinity of Nha Trang, a city in southern Vietnam. Based on those survey results, a team of researchers set up three camera traps in the most promising locations and ended u",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 3,
+"also": [
+{
+"publisher": "Auckland Zoo",
+"link": "https://www.aucklandzoo.co.nz/news/rediscovering-a-species-lost-to-science-for-30-years"
+},
+{
+"publisher": "Inverse",
+"link": "https://www.inverse.com/science/animals-lost-then-found-by-scientists/amp"
+}
+]
 },
 {
 "title": "Mouse deer species not seen for nearly 30 years is found alive in Vietnam",
