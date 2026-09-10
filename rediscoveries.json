@@ -1,13 +1,13 @@
 {
-"built": "2026-09-07",
+"built": "2026-09-10",
 "counts": {
-"stories": 183,
-"raw_items": 459,
+"stories": 186,
+"raw_items": 463,
 "with_species": 116,
 "distinct_species": 229,
-"distinct_species_firm": 48,
-"multi_species_cards": 48,
-"with_image": 177,
+"distinct_species_firm": 49,
+"multi_species_cards": 47,
+"with_image": 178,
 "syndicated": 91,
 "on_tbg_list": 31,
 "on_list_breakdown": {
@@ -15,12 +15,52 @@
 "on the Black List": 7
 },
 "undated": 0,
-"newest": "Mon, 07 Sep 2026",
+"newest": "Wed, 09 Sep 2026",
 "tracked_names": 6709,
-"image_local": 171,
-"archived": 129
+"image_local": 172,
+"archived": 130
 },
 "cards": [
+{
+"title": "Long-lost fish species rediscovered in another section of the Inn River",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Phys.org",
+"date": "Wed, 09 Sep 2026",
+"ts": 1788990000,
+"first_seen": "2026-09-10",
+"link": "https://phys.org/news/2026-09-lost-fish-species-rediscovered-section.html",
+"image": "/rd-img/c7cc76234f472749.jpg",
+"wayback": "",
+"desc": "The Danube gudgeon had been considered extinct in the Inn River for more than 100 years. Only a few years ago, the highly endangered species was rediscovered there. Now, researchers at the Technical University of Munich (TUM) have documented the fish in anothe",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "The Einstein test: what happens when AI tries to rediscover relativity?",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Inoreader",
+"date": "Wed, 09 Sep 2026",
+"ts": 1788922800,
+"first_seen": "2026-09-10",
+"link": "https://www.nature.com/articles/d41586-026-02804-x",
+"image": "",
+"wayback": "",
+"desc": "",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "Long time no see: rediscovery, first molecular data, and redescriptions of two rare Dibamus species from Thailand (Squamata: Dibamidae)",
 "species": [
@@ -309,26 +349,31 @@
 "also": []
 },
 {
-"title": "Rare plant lost to science for 180 years rediscovered in Jatinga Hills",
+"title": "Assam: Rare plant rediscovered after 180 years",
 "species": [
 "Rungia mastersii"
 ],
 "species_firm": [],
 "on_list": "",
 "detail": "",
-"publisher": "The Times of India",
-"date": "Tue, 28 Jul 2026",
-"ts": 1785222000,
-"first_seen": "2026-09-04",
-"link": "https://timesofindia.indiatimes.com/city/guwahati/rare-plant-lost-to-science-for-180-years-rediscovered-in-jatinga-hills/articleshow/132684423.cms",
+"publisher": "EastMojo",
+"date": "Fri, 24 Jul 2026",
+"ts": 1784876400,
+"first_seen": "2026-09-09",
+"link": "https://eastmojo.com/assam/2026/07/24/assam-rare-plant-rediscovered-after-180-years/",
 "image": "/rd-img/5cce75bfdd102baa.jpg",
 "wayback": "http://web.archive.org/web/20260729020007/https://timesofindia.indiatimes.com/city/guwahati/rare-plant-lost-to-science-for-180-years-rediscovered-in-jatinga-hills/articleshow/132684423.cms",
-"desc": "Silchar: A plant lost to science for nearly 180 years has resurfaced in Assam\u2019s Jatinga Hills, spotlighting the northeast\u2019s hidden botanical wealth.",
+"desc": "Guwahati: A rare endemic flowering plant, missing from scientific records for 180 years, has been rediscovered in Assam, giving botanists a second",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/city/guwahati/rare-plant-lost-to-science-for-180-years-rediscovered-in-jatinga-hills/articleshow/132684423.cms"
+}
+]
 },
 {
 "title": "Rare alpine herb confirmed in India after 158 years",
@@ -1164,10 +1209,7 @@
 {
 "title": "Rare plant species rediscovered in Arunachal after 189 years",
 "species": [
-"Henckelia monophylla",
-"Psoralea cataracta",
-"Polhillia ignota",
-"Aspalathus cordicarpa"
+"Henckelia monophylla"
 ],
 "species_firm": [
 "Henckelia monophylla"
@@ -1185,7 +1227,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 8,
+"outlets": 6,
 "also": [
 {
 "publisher": "mint",
@@ -1200,8 +1242,8 @@
 "link": "https://themeghalayanexpress.com/rare-plant-species-rediscovered-in-arunachal-after-189-years/"
 },
 {
-"publisher": "news.uct.ac.za",
-"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
+"publisher": "Nagaland Post - Nagaland Post delivers the latest breaking Nagaland news, politics, business, sports, culture, and local updates from Nagaland and the Northeast.",
+"link": "https://nagalandpost.com/rare-plant-species-rediscovered-in-arunachal-after-189-years/"
 }
 ]
 },
@@ -1976,7 +2018,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 7,
+"outlets": 8,
 "also": [
 {
 "publisher": "Miami Herald",
@@ -2102,23 +2144,27 @@
 "publisher": "Forbes",
 "date": "Sat, 01 Nov 2025",
 "ts": 1761980400,
-"first_seen": "2026-08-21",
+"first_seen": "2026-08-31",
 "link": "https://www.forbes.com/sites/scotttravers/2025/11/01/meet-4-extinct-animals-that-were-miraculously-rediscovered-hint-one-was-an-ancient-fish-found-in-a-fishing-net-in-1938/",
-"image": "/rd-img/360a925edf5429ce.jpg",
-"wayback": "http://web.archive.org/web/20251018175425/https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/",
-"desc": "Just because a species is presumed extinct doesn\u2019t mean it\u2019s gone forever. Here are four glowing examples of this unique, and felicitous, phenomenon.",
+"image": "/rd-img/0135710740ad6cf4.jpg",
+"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 6,
 "also": [
 {
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
+"publisher": "news.uct.ac.za",
+"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
 },
 {
-"publisher": "scitechdaily.com",
-"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
+"publisher": "UCT News",
+"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
+},
+{
+"publisher": "Forbes",
+"link": "https://www.forbes.com/sites/scotttravers/2025/11/01/meet-4-extinct-animals-that-were-miraculously-rediscovered-hint-one-was-an-ancient-fish-found-in-a-fishing-net-in-1938/"
 }
 ]
 },
@@ -2479,33 +2525,43 @@
 "species": [
 "Afroedura rondavelica"
 ],
-"species_firm": [],
+"species_firm": [
+"Afroedura rondavelica"
+],
 "on_list": "Lost Species",
 "detail": "Reptile, lost, last seen 1991",
 "publisher": "The Independent",
 "date": "Fri, 01 Aug 2025",
 "ts": 1754031600,
-"first_seen": "2026-08-31",
+"first_seen": "2026-08-10",
 "link": "https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
-"image": "/rd-img/7f5c2fd921dcbdf6.jpg",
-"wayback": "http://web.archive.org/web/20260819183224/https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
-"desc": "A rare gecko species last seen more than three decades ago has been rediscovered at a remote site in the Blyde River",
+"image": "/rd-img/286e73d16ad525f8.jpg",
+"wayback": "http://web.archive.org/web/20251010172605/https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/",
+"desc": "The species was first discovered by Dr Niels Jacobsen in December 1991, when he collected two males.",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 18,
 "also": [
 {
-"publisher": "Good Things Guy",
-"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
+"publisher": "Sunday Tribune",
+"link": "https://sundaytribune.co.za/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
 },
 {
-"publisher": "Good Things Guy",
-"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
+"publisher": "Sunday Independent",
+"link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
 },
 {
-"publisher": "News24",
-"link": "https://www.news24.com/southafrica/news/sa-scientists-rediscover-gecko-species-33-years-after-first-recorded-20250620-0871"
+"publisher": "IOL",
+"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/"
+},
+{
+"publisher": "Jacaranda FM",
+"link": "https://www.jacarandafm.com/shows/drive/look-lost-gecko-species-rediscovered-mpumalanga/"
+},
+{
+"publisher": "The Independent",
+"link": "https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html"
 }
 ]
 },
@@ -2965,6 +3021,26 @@
 "link": "https://www.thehindu.com/sci-tech/science/atree-researchers-rediscover-long-lost-species-after-111-years/article69442309.ece"
 }
 ]
+},
+{
+"title": "Black-lored Waxbill rediscovery offers hope for conservationists",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "BirdGuides",
+"date": "Wed, 02 Apr 2025",
+"ts": 1743577200,
+"first_seen": "2026-08-31",
+"link": "https://www.birdguides.com/news/black-lored-waxbill-rediscovery-offers-hope-for-conservationists/",
+"image": "",
+"wayback": "http://web.archive.org/web/20250417052732/https://www.birdguides.com/news/black-lored-waxbill-rediscovery-offers-hope-for-conservationists/",
+"desc": "",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
 },
 {
 "title": "\u200b7 species that were rediscovered after many years of extinction\u200b",
@@ -3544,35 +3620,6 @@
 {
 "publisher": "Natural History Museum",
 "link": "https://www.nhm.ac.uk/discover/news/2023/june/australian-lizard-species-rediscovered-following-extinction-fears.html"
-}
-]
-},
-{
-"title": "\u2018Extinct\u2019 species rediscovered in UK",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "SussexWorld",
-"date": "Sun, 30 Apr 2023",
-"ts": 1682838000,
-"first_seen": "2026-08-31",
-"link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
-"image": "/rd-img/0135710740ad6cf4.jpg",
-"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
-"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
-"also": [
-{
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
-{
-"publisher": "Kids News",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 }
 ]
 },
@@ -4283,8 +4330,8 @@
 "outlets": 2,
 "also": [
 {
-"publisher": "Bored Panda",
-"link": "https://www.boredpanda.com/elephant-shrew-rediscovered-animal-lost-species-africa/"
+"publisher": "ScienceAlert",
+"link": "https://www.sciencealert.com/long-lost-elephant-shrew-has-been-rediscovered-in-africa"
 }
 ]
 },
@@ -4324,6 +4371,26 @@
 "image": "/rd-img/cd9b6dc6df379280.jpg",
 "wayback": "",
 "desc": "A team of researchers from the United States and the Republic of Djibouti has rediscovered the elusive Somali sengi (\u2018Elephantulus\u2019 revoilii) over 50 years after it was last recorded.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "Tiny Elephant Shrews Have Been Rediscovered In Africa After Being Classed As A \u2018Lost Species\u2019 For The Last 50 Years",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Bored Panda",
+"date": "Thu, 20 Aug 2020",
+"ts": 1597906800,
+"first_seen": "2026-09-04",
+"link": "https://www.boredpanda.com/elephant-shrew-rediscovered-animal-lost-species-africa/",
+"image": "/rd-img/9add278bd2e28868.jpg",
+"wayback": "http://web.archive.org/web/20260124060902/https://www.boredpanda.com/elephant-shrew-rediscovered-animal-lost-species-africa/",
+"desc": "It might sound shocking, but 2020 hasn",
 "citation": "",
 "kind": "",
 "note": "",
