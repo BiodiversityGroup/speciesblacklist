@@ -1,14 +1,14 @@
 {
 "built": "2026-09-11",
 "counts": {
-"stories": 185,
-"raw_items": 463,
-"with_species": 116,
-"distinct_species": 229,
+"stories": 187,
+"raw_items": 467,
+"with_species": 117,
+"distinct_species": 231,
 "distinct_species_firm": 49,
-"multi_species_cards": 47,
-"with_image": 178,
-"syndicated": 91,
+"multi_species_cards": 48,
+"with_image": 180,
+"syndicated": 92,
 "on_tbg_list": 31,
 "on_list_breakdown": {
 "on our lost-species list": 24,
@@ -17,7 +17,7 @@
 "undated": 0,
 "newest": "Wed, 09 Sep 2026",
 "tracked_names": 6709,
-"image_local": 172,
+"image_local": 174,
 "archived": 130
 },
 "cards": [
@@ -35,6 +35,26 @@
 "image": "/rd-img/c7cc76234f472749.jpg",
 "wayback": "",
 "desc": "The Danube gudgeon had been considered extinct in the Inn River for more than 100 years. Only a few years ago, the highly endangered species was rediscovered there. Now, researchers at the Technical University of Munich (TUM) have documented the fish in anothe",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "MSU entomologists rediscover beetle species first documented by Spartan scientist more than a century ago",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Michigan State University",
+"date": "Tue, 08 Sep 2026",
+"ts": 1788880164,
+"first_seen": "2026-09-11",
+"link": "https://msutoday.msu.edu/news/2026/09/rediscovering-a-beetle-species",
+"image": "/rd-img/f8cf3b4e6c07b9e2.jpg",
+"wayback": "",
+"desc": "MSU entomologists discovered a species of bark beetle in the Philippines that had not been documented since it was first collected in the early 1900s by Charles Fuller Baker, an MSU alumnus and pioneer entomologist.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -97,6 +117,34 @@
 ]
 },
 {
+"title": "\u2018Ghost\u2019 green mamba rediscovered after 90 years",
+"species": [
+"Dendroaspis jamesoni",
+"Dendroaspis viridis"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Discover Wildlife",
+"date": "Wed, 02 Sep 2026",
+"ts": 1788333842,
+"first_seen": "2026-09-11",
+"link": "https://www.discoverwildlife.com/animal-facts/reptiles/green-mamba-sao-tome",
+"image": "/rd-img/c74cb4f1ae9ac55c.jpg",
+"wayback": "",
+"desc": "Snake experts try to solve a 150-year-old mystery thanks to surprise discovery.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "Discover Wildlife",
+"link": "https://www.discoverwildlife.com/animal-facts/reptiles/green-mamba-sao-tome"
+}
+]
+},
+{
 "title": "In 1985, a fish on Australia\u2019s doorstep was 'lost'; now it\u2019s been rediscovered by woman fishing for prawns",
 "species": [
 "Microphis spinachioides"
@@ -148,11 +196,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
 {
 "publisher": "Zootaxa",
 "link": "https://www.mapress.com/zt/article/view/zootaxa.5875.4.4"
+},
+{
+"publisher": "Zootaxa",
+"link": "https://www.mapress.com/zt/article/view/zootaxa.5878.1.6"
 }
 ]
 },
@@ -1979,8 +2031,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Moema claudiae",
-"Bombyx mori"
+"Bombyx mori",
+"Moema claudiae"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -1990,35 +2042,27 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-08-16",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/b73e2fd705e4740e.jpg",
-"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
-"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
+"image": "/rd-img/bf92591b41aa53d3.jpg",
+"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
+"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 8,
 "also": [
 {
-"publisher": "Miami Herald",
-"link": "https://www.miamiherald.com/news/nation-world/world/article312920217.html"
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 },
 {
-"publisher": "GK Today",
-"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+"publisher": "Kids News",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 },
 {
-"publisher": "gktoday.in",
-"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
-},
-{
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
-},
-{
-"publisher": "BIOENGINEER.ORG",
-"link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/"
+"publisher": "Phys.org",
+"link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
 }
 ]
 },
