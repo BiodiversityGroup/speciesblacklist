@@ -1,14 +1,14 @@
 {
-"built": "2026-09-11",
+"built": "2026-09-13",
 "counts": {
-"stories": 187,
-"raw_items": 467,
+"stories": 189,
+"raw_items": 472,
 "with_species": 117,
 "distinct_species": 231,
 "distinct_species_firm": 49,
 "multi_species_cards": 48,
-"with_image": 180,
-"syndicated": 92,
+"with_image": 181,
+"syndicated": 94,
 "on_tbg_list": 31,
 "on_list_breakdown": {
 "on our lost-species list": 24,
@@ -17,7 +17,7 @@
 "undated": 0,
 "newest": "Wed, 09 Sep 2026",
 "tracked_names": 6709,
-"image_local": 174,
+"image_local": 175,
 "archived": 130
 },
 "cards": [
@@ -58,8 +58,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Michigan State University",
+"link": "https://msutoday.msu.edu/news/2026/09/rediscovering-a-beetle-species"
+}
+]
 },
 {
 "title": "Long time no see: rediscovery, first molecular data, and redescriptions of two rare Dibamus species from Thailand (Squamata: Dibamidae)",
@@ -652,9 +657,7 @@
 },
 {
 "title": "Rare Tiny Bat Species Rediscovered by Biologist After It Was Thought to Be Extinct",
-"species": [
-"Plecotus turkmenicus"
-],
+"species": [],
 "species_firm": [],
 "on_list": "",
 "detail": "",
@@ -664,18 +667,13 @@
 "first_seen": "2026-08-10",
 "link": "https://people.com/rare-tiny-bat-species-rediscovered-by-nigerian-biologist-after-it-was-feared-to-be-extinct-11999046",
 "image": "/rd-img/7335acbd5c68957d.jpg",
-"wayback": "http://web.archive.org/web/20260811153523/https://www.iflscience.com/bat-species-not-seen-in-55-years-rediscovered-and-photographed-for-first-time-just-look-at-those-ears-81436",
+"wayback": "",
 "desc": "2026 Goldman Prize award winner Iroro Tanshi rediscovered the short-tailed roundleaf bat in Nigeria in 2016, 45 years after it was last documented in the area. \u201cSomething that we thought was extinct was in this beautiful place that nobody goes to,\u201d Tanshi said",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "IFLScience",
-"link": "https://www.iflscience.com/bat-species-not-seen-in-55-years-rediscovered-and-photographed-for-first-time-just-look-at-those-ears-81436"
-}
-]
+"outlets": 1,
+"also": []
 },
 {
 "title": "Lost Amasya tulip rediscovered in T\u00fcrkiye after 130 years",
@@ -2031,8 +2029,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Bombyx mori",
-"Moema claudiae"
+"Moema claudiae",
+"Bombyx mori"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2042,27 +2040,35 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-16",
+"first_seen": "2026-08-10",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/bf92591b41aa53d3.jpg",
-"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
-"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
+"image": "/rd-img/b73e2fd705e4740e.jpg",
+"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 8,
 "also": [
 {
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+"publisher": "Miami Herald",
+"link": "https://www.miamiherald.com/news/nation-world/world/article312920217.html"
 },
 {
-"publisher": "Kids News",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+"publisher": "GK Today",
+"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
 },
 {
-"publisher": "Phys.org",
-"link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
+"publisher": "gktoday.in",
+"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
+},
+{
+"publisher": "BIOENGINEER.ORG",
+"link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/"
 }
 ]
 },
@@ -2154,6 +2160,28 @@
 "link": "https://idw-online.de/de/news860765"
 }
 ]
+},
+{
+"title": "Bat Species Not Seen In 55 Years Rediscovered And Filmed For First Time \u2013 Just Look At Those Ears",
+"species": [
+"Plecotus turkmenicus"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "IFLScience",
+"date": "Tue, 04 Nov 2025",
+"ts": 1762243200,
+"first_seen": "2026-08-10",
+"link": "https://www.iflscience.com/bat-species-not-seen-in-55-years-rediscovered-and-photographed-for-first-time-just-look-at-those-ears-81436",
+"image": "/rd-img/ac88643352c156d5.jpg",
+"wayback": "http://web.archive.org/web/20260811153523/https://www.iflscience.com/bat-species-not-seen-in-55-years-rediscovered-and-photographed-for-first-time-just-look-at-those-ears-81436",
+"desc": "All the better to hear you with.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
 },
 {
 "title": "Meet 4 \u2018Extinct\u2019 Animals That Were Miraculously Rediscovered (Hint: One Was An Ancient Fish Found In A Fishing Net In 1938)",
@@ -4040,6 +4068,31 @@
 "also": []
 },
 {
+"title": "Not seen for 40 years, critically endangered bats\u2019 species found in Rwanda",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "WION",
+"date": "Thu, 10 Mar 2022",
+"ts": 1646899200,
+"first_seen": "2026-09-13",
+"link": "https://www.wionews.com/world/not-seen-for-40-years-critically-endangered-bats-species-found-in-rwanda-460824",
+"image": "",
+"wayback": "",
+"desc": "",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "wionews.com",
+"link": "https://www.wionews.com/world/not-seen-for-40-years-critically-endangered-bats-species-found-in-rwanda-460824"
+}
+]
+},
+{
 "title": "\u2018Most Wanted\u2019 list leads to rediscovered species. Conservation group sets its sights on finding 8 more.",
 "species": [
 "Tragulus versicolor",
@@ -4203,8 +4256,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "newsinfo.inquirer.net",
+"link": "https://newsinfo.inquirer.net/1404149/biologists-rediscover-rare-frog-after-27-years"
+}
+]
 },
 {
 "title": "Bird missing for 172 years rediscovered in Borneo rainforest",
@@ -4289,8 +4347,12 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
+{
+"publisher": "https://www.wymt.com",
+"link": "https://www.wymt.com/2020/12/28/20-new-species-found-and-long-lost-species-rediscovered-in-bolivian-andes/"
+},
 {
 "publisher": "https://www.wymt.com",
 "link": "https://www.wymt.com/2020/12/28/20-new-species-found-and-long-lost-species-rediscovered-in-bolivian-andes/"
