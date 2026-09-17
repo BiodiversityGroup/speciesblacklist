@@ -1,14 +1,14 @@
 {
-"built": "2026-09-13",
+"built": "2026-09-17",
 "counts": {
-"stories": 189,
-"raw_items": 472,
+"stories": 188,
+"raw_items": 476,
 "with_species": 117,
 "distinct_species": 231,
-"distinct_species_firm": 49,
+"distinct_species_firm": 48,
 "multi_species_cards": 48,
 "with_image": 181,
-"syndicated": 94,
+"syndicated": 93,
 "on_tbg_list": 31,
 "on_list_breakdown": {
 "on our lost-species list": 24,
@@ -18,7 +18,7 @@
 "newest": "Wed, 09 Sep 2026",
 "tracked_names": 6709,
 "image_local": 175,
-"archived": 130
+"archived": 129
 },
 "cards": [
 {
@@ -434,7 +434,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 6,
 "also": [
 {
 "publisher": "Arunachal24 | Brings latest News of Arunachal Pradesh",
@@ -447,6 +447,10 @@
 {
 "publisher": "Guwahati Plus News",
 "link": "https://www.guwahatiplus.com/rare-himalayan-flower-rediscovered-in-arunachal-pradesh-after-158-years"
+},
+{
+"publisher": "G Plus News",
+"link": "https://guwahatiplus.com/northeast/rare-himalayan-flower-rediscovered-in-arunachal-pradesh-after-158-years"
 },
 {
 "publisher": "Conservation news",
@@ -1483,10 +1487,14 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
 {
 "publisher": "UWA",
+"link": "https://www.uwa.edu.au/news/article/2026/february/rare-fish-rediscovered-off-albany"
+},
+{
+"publisher": "The University of Western Australia",
 "link": "https://www.uwa.edu.au/news/article/2026/february/rare-fish-rediscovered-off-albany"
 }
 ]
@@ -2029,8 +2037,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Moema claudiae",
-"Bombyx mori"
+"Bombyx mori",
+"Moema claudiae"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2040,35 +2048,27 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-08-16",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/b73e2fd705e4740e.jpg",
-"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
-"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
+"image": "/rd-img/bf92591b41aa53d3.jpg",
+"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
+"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 8,
 "also": [
 {
-"publisher": "Miami Herald",
-"link": "https://www.miamiherald.com/news/nation-world/world/article312920217.html"
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 },
 {
-"publisher": "GK Today",
-"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+"publisher": "Kids News",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 },
 {
-"publisher": "gktoday.in",
-"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
-},
-{
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
-},
-{
-"publisher": "BIOENGINEER.ORG",
-"link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/"
+"publisher": "Phys.org",
+"link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
 }
 ]
 },
@@ -3716,7 +3716,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 6,
 "also": [
 {
 "publisher": "Audubon",
@@ -4073,14 +4073,14 @@
 "species_firm": [],
 "on_list": "",
 "detail": "",
-"publisher": "WION",
+"publisher": "Wion",
 "date": "Thu, 10 Mar 2022",
 "ts": 1646899200,
 "first_seen": "2026-09-13",
 "link": "https://www.wionews.com/world/not-seen-for-40-years-critically-endangered-bats-species-found-in-rwanda-460824",
-"image": "",
+"image": "/rd-img/be6a23d91aad7598.jpg",
 "wayback": "",
-"desc": "",
+"desc": "In a welcome development, a critically endangered species of bats, which was not sighted in 40 years, has been found in Rwanda. The \u201cincredible\u201d discovery seems to have delighted conservationists, who feared it was already extinct.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -4098,39 +4098,37 @@
 "Tragulus versicolor",
 "Tragulus kanchil"
 ],
-"species_firm": [
-"Tragulus versicolor"
-],
+"species_firm": [],
 "on_list": "Black List (Data Deficient)",
 "detail": "tier 1",
 "publisher": "The Washington Post",
 "date": "Mon, 14 Feb 2022",
 "ts": 1644825600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-09-04",
 "link": "https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/",
-"image": "/rd-img/60bdcd72db7dea00.jpg",
-"wayback": "http://web.archive.org/web/20260811154530/https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/",
-"desc": "These are some of the species that have been rediscovered on conservation group Re:wild\u2019s top 25 \u2018Most Wanted Lost Species\u2019 list.",
+"image": "/rd-img/2db1aae91e8054bb.jpg",
+"wayback": "",
+"desc": "Silver-backed chevrotain caught on camera after it was feared lost to science",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 5,
+"outlets": 9,
 "also": [
 {
-"publisher": "cnn.com",
-"link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl"
+"publisher": "CTVNews",
+"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
 },
 {
-"publisher": "CNN",
-"link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl"
+"publisher": "CTVNews",
+"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
 },
 {
-"publisher": "Yale E360",
-"link": "https://e360.yale.edu/digest/spinach-pipefish-rediscovered"
+"publisher": "scitechdaily.com",
+"link": "https://scitechdaily.com/lost-species-of-miniature-fanged-mouse-deer-rediscovered-sneaking-through-vietnams-coastal-forests/"
 },
 {
-"publisher": "EcoWatch",
-"link": "https://www.ecowatch.com/vietnam-species-discovered-2641314593.html"
+"publisher": "The Washington Post",
+"link": "https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/"
 }
 ]
 },
@@ -4679,35 +4677,6 @@
 {
 "publisher": "Inverse",
 "link": "https://www.inverse.com/science/animals-lost-then-found-by-scientists/amp"
-}
-]
-},
-{
-"title": "Mouse deer species not seen for nearly 30 years is found alive in Vietnam",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "the Guardian",
-"date": "Mon, 11 Nov 2019",
-"ts": 1573459200,
-"first_seen": "2026-09-04",
-"link": "https://www.theguardian.com/environment/2019/nov/11/mouse-deer-not-seen-nearly-30-years-found-alive-vietnam",
-"image": "/rd-img/2db1aae91e8054bb.jpg",
-"wayback": "",
-"desc": "Silver-backed chevrotain caught on camera after it was feared lost to science",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 3,
-"also": [
-{
-"publisher": "CTVNews",
-"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
-},
-{
-"publisher": "CTVNews",
-"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
 }
 ]
 },
