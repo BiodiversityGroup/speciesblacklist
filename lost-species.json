@@ -854,7 +854,7 @@
 "prec": ""
 },
 {
-"sp": "Anacamptodon marginata",
+"sp": "Anacamptodon marginatus",
 "v": "",
 "grp": "Plant - Mosses",
 "cls": "long-lost",
@@ -1019,7 +1019,7 @@
 "prec": "year"
 },
 {
-"sp": "Angraecum muscicolum",
+"sp": "Angraecum muscicola",
 "v": "",
 "grp": "Plant - Orchids",
 "cls": "long-lost",
@@ -1066,7 +1066,7 @@
 "sp": "Angraecum rubellum",
 "v": "",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -1088,7 +1088,7 @@
 "sp": "Angraecum sterrophyllum",
 "v": "",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -1472,17 +1472,6 @@
 "prec": "year"
 },
 {
-"sp": "Aquilegia micrantha",
-"v": "Mancos Columbine",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "United States",
-"reg": "North America",
-"last": 1892,
-"prec": "year"
-},
-{
 "sp": "Aquiloeurycea praecellens",
 "v": "Admirable False Brook Salamander",
 "grp": "Amphibian",
@@ -1524,17 +1513,6 @@
 "cty": "India",
 "reg": "Asia",
 "last": 1854,
-"prec": "year"
-},
-{
-"sp": "Argythamnia humilis",
-"v": "Low Silverbush",
-"grp": "Plant - Trees & Shrubs",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "United States",
-"reg": "North America",
-"last": 1996,
 "prec": "year"
 },
 {
@@ -1651,12 +1629,12 @@
 "sp": "Asperula friabilis",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1959,
+"prec": "year"
 },
 {
 "sp": "Aspidoras lakoi",
@@ -1704,17 +1682,6 @@
 },
 {
 "sp": "Aspidostemon inconspicuum",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Madagascar",
-"reg": "Africa",
-"last": 1955,
-"prec": "year"
-},
-{
-"sp": "Aspidostemon inconspicuus",
 "v": "Longotra",
 "grp": "Plant - Flowering plant (misc)",
 "cls": "long-lost",
@@ -1736,7 +1703,7 @@
 "prec": "year"
 },
 {
-"sp": "Aspidostemon occultum",
+"sp": "Aspidostemon occultus",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
 "cls": "long-lost",
@@ -1780,14 +1747,14 @@
 "prec": "decade"
 },
 {
-"sp": "Astragalus americanus",
-"v": "American Milkvetch",
-"grp": "Plant - Trees & Shrubs",
+"sp": "Astiria rosea",
+"v": "",
+"grp": "Plant - Flowering plant (misc)",
 "cls": "long-lost",
 "rl": "not in IUCN index",
-"cty": "United States, Canada",
-"reg": "North America",
-"last": 1862,
+"cty": "Mascarene Islands (Maurice Island)",
+"reg": "Islands",
+"last": 1860,
 "prec": "year"
 },
 {
@@ -1816,23 +1783,23 @@
 "sp": "Astragalus gillettii",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1947,
+"prec": "year"
 },
 {
 "sp": "Astragalus leucoptilus",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1867,
+"prec": "year"
 },
 {
 "sp": "Astragalus procerus",
@@ -1849,45 +1816,34 @@
 "sp": "Astragalus pseudofragrans",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1950,
+"prec": "year"
 },
 {
 "sp": "Astragalus pushtashanicus",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
-},
-{
-"sp": "Astragalus robbinsii",
-"v": "Robbin's Milkvetch",
-"grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
-"rl": "NE",
-"cty": "United States, Canada",
-"reg": "North America",
-"last": 1893,
+"last": 1957,
 "prec": "year"
 },
 {
 "sp": "Astragalus zoharyi",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1933,
+"prec": "year"
 },
 {
 "sp": "Astyanacinus goyanensis",
@@ -1997,17 +1953,6 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1842,
-"prec": "year"
-},
-{
-"sp": "Astyria rosea",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Mascarene Islands (Maurice Island)",
-"reg": "Islands",
-"last": 1860,
 "prec": "year"
 },
 {
@@ -2706,17 +2651,6 @@
 "prec": ""
 },
 {
-"sp": "Atriplex halimus",
-"v": "Gussone's Maltese Sea Orache",
-"grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
-"rl": "LC",
-"cty": "Malta",
-"reg": "Islands",
-"last": 1875,
-"prec": "year"
-},
-{
 "sp": "Atya brachyrhinus",
 "v": "",
 "grp": "Crustacean",
@@ -2940,7 +2874,7 @@
 "sp": "Beauprea penariensis",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR",
 "cty": "New Caledonia",
 "reg": "Islands",
@@ -3050,12 +2984,12 @@
 "sp": "Bellevalia parva",
 "v": "",
 "grp": "Plant - Grasses & Sedges",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1951,
+"prec": "year"
 },
 {
 "sp": "Bembidion derelictus",
@@ -3069,10 +3003,10 @@
 "prec": "year"
 },
 {
-"sp": "Benthamia nigro-vaginata",
+"sp": "Benthamia nigrovaginata",
 "v": "",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -3171,7 +3105,7 @@
 "sp": "Bocquillonia arborea",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "EN",
 "cty": "New Caledonia",
 "reg": "Islands",
@@ -3567,7 +3501,7 @@
 "sp": "Bulbophyllum barbatum",
 "v": "",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "not in IUCN index",
 "cty": "Brazil",
 "reg": "South America",
@@ -3578,7 +3512,7 @@
 "sp": "Bulbophyllum erythroglossum",
 "v": "",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -3589,7 +3523,7 @@
 "sp": "Bulbophyllum hirsutiusculum",
 "v": "Leopard Spotted Bulbophyllum",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "EN",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -4070,17 +4004,6 @@
 "prec": "year"
 },
 {
-"sp": "Campanula aparinoides",
-"v": "Marsh Bellflower",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
-"rl": "LC",
-"cty": "United States, Canada",
-"reg": "North America",
-"last": 1996,
-"prec": "year"
-},
-{
 "sp": "Campephilus imperialis",
 "v": "Imperial Woodpecker",
 "grp": "Bird",
@@ -4429,7 +4352,7 @@
 "sp": "Centropogon brachysiphoniatus",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Ecuador",
 "reg": "South America",
@@ -5056,9 +4979,9 @@
 "sp": "Consolea falcata",
 "v": "Caribbean Tree Cactus",
 "grp": "Plant - Cactus",
-"cls": "unclassified",
+"cls": "rediscovered",
 "rl": "CR",
-"cty": "Haiti",
+"cty": "Haiti, Dominican Republic",
 "reg": "Islands",
 "last": "",
 "prec": ""
@@ -5199,7 +5122,7 @@
 "sp": "Costus vinosus",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "CR",
 "cty": "Panama",
 "reg": "North America",
@@ -5218,21 +5141,10 @@
 "prec": "year"
 },
 {
-"sp": "Crassula aquatica",
-"v": "Water Pygmyweed",
-"grp": "Plant - Aquatic plant",
-"cls": "long-lost",
-"rl": "DD",
-"cty": "United States, Canada",
-"reg": "North America",
-"last": 1906,
-"prec": "year"
-},
-{
 "sp": "Crataegus ideae",
 "v": "Ide's Hawthorn",
 "grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "not in IUCN index",
 "cty": "United States",
 "reg": "North America",
@@ -5265,7 +5177,7 @@
 "sp": "Crataegus umbratilis",
 "v": "Shaded Hawthorn",
 "grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "not in IUCN index",
 "cty": "United States",
 "reg": "North America",
@@ -5629,7 +5541,7 @@
 "prec": ""
 },
 {
-"sp": "Ctenitis pallatangana",
+"sp": "Ctenitis palatangana",
 "v": "",
 "grp": "Plant - Ferns",
 "cls": "long-lost",
@@ -6061,7 +5973,7 @@
 "sp": "Cynorkis usambarae",
 "v": "",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Tanzania",
 "reg": "Africa",
@@ -6102,7 +6014,7 @@
 "prec": "century"
 },
 {
-"sp": "Cyperus neokunthiamus",
+"sp": "Cyperus neokunthianus",
 "v": "",
 "grp": "Plant - Grasses & Sedges",
 "cls": "long-lost",
@@ -6336,7 +6248,7 @@
 "sp": "Dalbergia occulta",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -6347,7 +6259,7 @@
 "sp": "Dalea sabinalis",
 "v": "Sabinal Prairie-clover",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "United States",
 "reg": "North America",
@@ -6655,12 +6567,12 @@
 "sp": "Devillea flagelliformis",
 "v": "",
 "grp": "Plant - Aquatic plant",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "CR(PE)",
 "cty": "Brazil",
 "reg": "South America",
-"last": 1845,
-"prec": "decade"
+"last": 2013,
+"prec": "year"
 },
 {
 "sp": "Dianella schlickumi",
@@ -6820,7 +6732,7 @@
 "sp": "Dictyota galapagensis",
 "v": "",
 "grp": "Plant - Aquatic plant",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Ecuador",
 "reg": "South America",
@@ -6883,17 +6795,6 @@
 "prec": "year"
 },
 {
-"sp": "Digitaria filiformis",
-"v": "Smooth-glumed Slender Crabgrass",
-"grp": "Plant - Grasses & Sedges",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "United States",
-"reg": "North America",
-"last": 1931,
-"prec": "year"
-},
-{
 "sp": "Diglossosternoides curiosus",
 "v": "",
 "grp": "Millipede",
@@ -6930,18 +6831,18 @@
 "sp": "Diospyros katendei",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
+"cls": "lost",
 "rl": "CR(PE)",
 "cty": "Uganda",
 "reg": "Africa",
-"last": "",
-"prec": ""
+"last": 1987,
+"prec": "year"
 },
 {
 "sp": "Diospyros ketsensis",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -6952,7 +6853,7 @@
 "sp": "Diospyros subtrinervis",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -6963,7 +6864,7 @@
 "sp": "Diospyros tetrapoda",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -7106,9 +7007,9 @@
 "sp": "Disperis egregia",
 "v": "The Two Toothed Bulbophyllum",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
-"cty": "Tanzania",
+"cty": "Tanzania, Kenya",
 "reg": "Africa",
 "last": 1944,
 "prec": "year"
@@ -7441,17 +7342,6 @@
 "cty": "The Democratic Republic of Congo, Zambia",
 "reg": "Africa",
 "last": 1965,
-"prec": "year"
-},
-{
-"sp": "Eleocharis fallax",
-"v": "Creeping Spikesedge",
-"grp": "Plant - Grasses & Sedges",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "United States",
-"reg": "North America",
-"last": 1919,
 "prec": "year"
 },
 {
@@ -8010,12 +7900,12 @@
 "sp": "Eremurus rechingeri",
 "v": "",
 "grp": "Plant - Grasses & Sedges",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1957,
+"prec": "year"
 },
 {
 "sp": "Eresus bifasciatus",
@@ -8340,7 +8230,7 @@
 "sp": "Euphorbia alcicornis",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "EN",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -8399,7 +8289,7 @@
 "rl": "NE",
 "cty": "Ecuador",
 "reg": "South America",
-"last": 1985,
+"last": 2012,
 "prec": "year"
 },
 {
@@ -8806,7 +8696,7 @@
 "rl": "NE",
 "cty": "Ecuador",
 "reg": "South America",
-"last": 1977,
+"last": 2014,
 "prec": "year"
 },
 {
@@ -8835,11 +8725,11 @@
 "sp": "Galaxaura barbata",
 "v": "",
 "grp": "Plant - Aquatic plant",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "CR(PE)",
 "cty": "Ecuador",
 "reg": "South America",
-"last": 1963,
+"last": 2012,
 "prec": "year"
 },
 {
@@ -8854,15 +8744,15 @@
 "prec": ""
 },
 {
-"sp": "Galium heinesii",
+"sp": "Galium hainesii",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1959,
+"prec": "year"
 },
 {
 "sp": "Gallicolumba menagei",
@@ -9220,12 +9110,12 @@
 "sp": "Glaucium cuneatum",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1964,
+"prec": "year"
 },
 {
 "sp": "Gnaphosa funerea",
@@ -9363,11 +9253,11 @@
 "sp": "Guzmania lepidota",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "CR(PE)",
 "cty": "Ecuador",
 "reg": "South America",
-"last": 1876,
+"last": 2014,
 "prec": "year"
 },
 {
@@ -9451,7 +9341,7 @@
 "sp": "Halodule bermudensis",
 "v": "Bermuda Shoalgrass",
 "grp": "Plant - Aquatic plant",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "DD",
 "cty": "Bermuda",
 "reg": "Islands",
@@ -10331,33 +10221,11 @@
 "sp": "Hesperis blakelockii",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
-},
-{
-"sp": "Hesperis kurdica",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
-"rl": "not in IUCN index",
-"cty": "Iraq",
-"reg": "Middle East",
-"last": "",
-"prec": ""
-},
-{
-"sp": "Hesperochiron pumilus",
-"v": "Dwarf Hesperochiron",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "United States, Canada",
-"reg": "North America",
-"last": 1996,
+"last": 1947,
 "prec": "year"
 },
 {
@@ -10391,17 +10259,6 @@
 "cty": "Colombia",
 "reg": "South America",
 "last": 1917,
-"prec": "year"
-},
-{
-"sp": "Heterocodon rariflorum",
-"v": "Western Pearl-flower",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "United States, Canada",
-"reg": "North America",
-"last": 1996,
 "prec": "year"
 },
 {
@@ -10584,7 +10441,7 @@
 "sp": "Hunteria hexaloba",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Gabon",
 "reg": "Africa",
@@ -11593,17 +11450,6 @@
 "prec": "year"
 },
 {
-"sp": "Isoetes sinensis",
-"v": "Narrow quillwort",
-"grp": "Plant - Mosses",
-"cls": "unclassified",
-"rl": "CR(PE)",
-"cty": "China",
-"reg": "Asia",
-"last": "",
-"prec": ""
-},
-{
 "sp": "Isthmohyla calypsa",
 "v": "",
 "grp": "Amphibian",
@@ -11739,7 +11585,7 @@
 "sp": "Jumellea brevifolia",
 "v": "",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "NE",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -13631,7 +13477,7 @@
 "sp": "Magnolia dixonii",
 "v": "Cucharillo",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "EN",
 "cty": "Ecuador",
 "reg": "South America",
@@ -13655,23 +13501,12 @@
 "sp": "Magnolia wolfii",
 "v": "Wolf's Magnolia",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "CR",
 "cty": "Colombia",
 "reg": "South America",
 "last": 2006,
 "prec": "year"
-},
-{
-"sp": "Mahonia haematocarpa",
-"v": "Colorado Mahonia",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
-"rl": "not in IUCN index",
-"cty": "United States",
-"reg": "North America",
-"last": "",
-"prec": ""
 },
 {
 "sp": "Malayotyphlops manilae",
@@ -13688,12 +13523,12 @@
 "sp": "Manettia canescens",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "CR(PE)",
 "cty": "Ecuador",
 "reg": "South America",
-"last": 1850,
-"prec": "century"
+"last": 2012,
+"prec": "year"
 },
 {
 "sp": "Manettia holwayi",
@@ -14073,7 +13908,7 @@
 "sp": "Melicope balloui",
 "v": "Rock Pelea",
 "grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "United States (Hawaii)",
 "reg": "Islands",
@@ -14081,7 +13916,7 @@
 "prec": "year"
 },
 {
-"sp": "Melicpoe wailauensis",
+"sp": "Melicope wailauensis",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
 "cls": "long-lost",
@@ -14413,17 +14248,6 @@
 "prec": "year"
 },
 {
-"sp": "Mimulus ringens",
-"v": "Square-stem Monkeyflower",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "LC",
-"cty": "United States, Canada",
-"reg": "North America",
-"last": 1895,
-"prec": "year"
-},
-{
 "sp": "Minervarya murthii",
 "v": "Ghats Wart Frog",
 "grp": "Amphibian",
@@ -14598,17 +14422,6 @@
 "reg": "South America",
 "last": 1899,
 "prec": "year"
-},
-{
-"sp": "Monolepis pusilla",
-"v": "Red Poverty-weed",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
-"rl": "not in IUCN index",
-"cty": "United States",
-"reg": "North America",
-"last": "",
-"prec": ""
 },
 {
 "sp": "Monopeltis adercae",
@@ -15516,12 +15329,12 @@
 "sp": "Orbexilum macrophyllum",
 "v": "Bigleaf Scurfpea",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "United States",
 "reg": "North America",
-"last": "",
-"prec": ""
+"last": 1899,
+"prec": "year"
 },
 {
 "sp": "Orchamus kaltenbachi",
@@ -15609,17 +15422,6 @@
 "cty": "Namibia",
 "reg": "Africa",
 "last": 2004,
-"prec": "year"
-},
-{
-"sp": "Pachystoma pubescens",
-"v": "The Hairy Pachystoma",
-"grp": "Plant - Orchids",
-"cls": "lost",
-"rl": "NE",
-"cty": "",
-"reg": "Asia",
-"last": 1980,
 "prec": "year"
 },
 {
@@ -16358,7 +16160,7 @@
 "rl": "CR",
 "cty": "United States (Hawaii)",
 "reg": "Islands",
-"last": 2000,
+"last": 2012,
 "prec": "year"
 },
 {
@@ -16717,7 +16519,7 @@
 "sp": "Phyllanthus golonensis",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "EN",
 "cty": "New Caledonia",
 "reg": "Islands",
@@ -17014,7 +16816,7 @@
 "sp": "Pittosporum leroyanum",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "New Caledonia",
 "reg": "Islands",
@@ -17245,7 +17047,7 @@
 "sp": "Podocarpus perrieri",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -17902,17 +17704,6 @@
 "prec": "year"
 },
 {
-"sp": "Prunus maritima",
-"v": "Grave's Beach Plum",
-"grp": "Plant - Trees & Shrubs",
-"cls": "lost",
-"rl": "DD",
-"cty": "United States",
-"reg": "North America",
-"last": 1986,
-"prec": "year"
-},
-{
 "sp": "Psalidodon gymnodontus",
 "v": "",
 "grp": "Fish",
@@ -18367,7 +18158,7 @@
 "sp": "Psychotria veillonii",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "New Caledonia",
 "reg": "Islands",
@@ -18762,17 +18553,6 @@
 "prec": "year"
 },
 {
-"sp": "Rhipsalis mesembryanthemoides",
-"v": "Clumpy mistletoe cactus",
-"grp": "Plant - Cactus",
-"cls": "unclassified",
-"rl": "CR",
-"cty": "Brazil",
-"reg": "South America",
-"last": "",
-"prec": ""
-},
-{
 "sp": "Rhizopsammia wellingtoni",
 "v": "Wellington's Solitary Coral",
 "grp": "Coral",
@@ -18987,12 +18767,12 @@
 "sp": "Romulea melitensis",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
-"cty": "Italy",
+"cty": "Malta",
 "reg": "Europe",
-"last": "",
-"prec": ""
+"last": 1876,
+"prec": "year"
 },
 {
 "sp": "Saccopteryx antioquensis",
@@ -19416,12 +19196,12 @@
 "sp": "Shorea dispar",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
+"cls": "lost",
 "rl": "CR",
 "cty": "Malaysia",
 "reg": "Asia",
-"last": "",
-"prec": ""
+"last": 1997,
+"prec": "year"
 },
 {
 "sp": "Sicyos pentagonus",
@@ -19435,7 +19215,7 @@
 "prec": "year"
 },
 {
-"sp": "Sicyos villosa",
+"sp": "Sicyos villosus",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
 "cls": "long-lost",
@@ -20681,7 +20461,7 @@
 "sp": "Sylvichadsia macrophylla",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "NE",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -21079,7 +20859,7 @@
 "sp": "Tetramolopium conyzoides",
 "v": "Smallhead Tetramolopium",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "not in IUCN index",
 "cty": "United States (Hawaii)",
 "reg": "Islands",
@@ -21173,17 +20953,6 @@
 "reg": "Islands",
 "last": 1908,
 "prec": "year"
-},
-{
-"sp": "Thelypodium paniculatum",
-"v": "Northwestern Thelypody",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
-"rl": "not in IUCN index",
-"cty": "United States",
-"reg": "North America",
-"last": "",
-"prec": ""
 },
 {
 "sp": "Thoracistus peringueyi",
@@ -22091,7 +21860,7 @@
 "sp": "Vanilla columbiana",
 "v": "",
 "grp": "Plant - Orchids",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "not in IUCN index",
 "cty": "Colombia",
 "reg": "South America",
@@ -22181,12 +21950,12 @@
 "sp": "Vicia singarensis",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
 "cty": "Iraq",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1867,
+"prec": "year"
 },
 {
 "sp": "Vietnascincus rugosus",
@@ -22445,7 +22214,7 @@
 }
 ],
 "meta": {
-"n": 2037,
+"n": 2016,
 "built": "",
 "note": "Country resolution only. Localities are deliberately not published for lost species."
 }

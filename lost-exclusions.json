@@ -129,6 +129,12 @@
    }
   },
   {
+   "sp": "Aquilegia micrantha",
+   "why": "the row means var. mancosana, one cavern in Colorado, presumed extinct and observed again at the original site; the binomial is a widespread living columbine. The page's unit is the species",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/357061231; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/357061141; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/358148612"
+  },
+  {
    "sp": "Argyroxiphium virescens",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3118116), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -145,6 +151,30 @@
     "iucn_name": "Argyroxiphium virescens Hillebr.",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3118116), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Argythamnia humilis",
+   "why": "a common Texas species; the row's entity (a variety, or a state record sharing the 1996 date with two sibling rows) could not be resolved, and none of its varieties is critically ranked",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/339617202; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/339085910; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/337823969"
+  },
+  {
+   "sp": "Astragalus americanus",
+   "why": "widespread across boreal Canada; NatureServe ranks it state-historic in Colorado and the 1862 date fits an early Colorado collection. A state-level record published with global scope",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "Canada human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/369925379; Canada human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/375131663; Canada human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/380831902"
+  },
+  {
+   "sp": "Astragalus robbinsii",
+   "why": "the row means var. robbinsii, one station on the Winooski River, Vermont, ranked presumed extinct; the other varieties are widespread and alive. The page's unit is the species",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "Canada human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/363869393; Canada human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/363867345; Canada human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/363108796"
+  },
+  {
+   "sp": "Atriplex halimus",
+   "why": "indigenous and very common in Malta today and Least Concern globally; the 1875 entity behind 'Gussone's Maltese Sea Orache' could not be identified after three search routes",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "France human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/333173410; Portugal human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/333557474; Portugal human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/334085335"
   },
   {
    "sp": "Barbodes pachycheilus",
@@ -314,6 +344,12 @@
    }
   },
   {
+   "sp": "Campanula aparinoides",
+   "why": "common across New England; the lost story that fits is the Colorado population, presumed extirpated and found again in 2018 at Sandstone Ranch. A state-level record with global scope",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/279448205; Canada human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/283833173; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/292429243"
+  },
+  {
    "sp": "Clermontia multiflora",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5407755), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -353,6 +389,12 @@
     "iucn_name": "Conus lugubris Reeve, 1849",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5728364), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Crassula aquatica",
+   "why": "widespread across North America; the row fits the Colorado state-historic pattern of its sibling rows and no critical rank exists anywhere for the species",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/369903551; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/343256126; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/343870919"
   },
   {
    "sp": "Cryptoblepharus egeriae",
@@ -779,6 +821,18 @@
    "class": "recorded alive since the list called it lost"
   },
   {
+   "sp": "Digitaria filiformis",
+   "why": "the list says last recorded 1931, but GBIF holds 1,255 records since, in 6 of the last six decades, with no silence longer than 1 years anywhere in the sequence; the species was never unaccounted for and the listing was the error",
+   "class": "records all along: a species that was never lost",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/280904565; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/319484817; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/311096903"
+  },
+  {
+   "sp": "Eleocharis fallax",
+   "why": "the list says last recorded 1919, but GBIF holds 333 records since, in 6 of the last six decades, with no silence longer than 5 years anywhere in the sequence; the species was never unaccounted for and the listing was the error",
+   "class": "records all along: a species that was never lost",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/181616213"
+  },
+  {
    "sp": "Erythrolamprus perfuscus",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9619895), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -813,6 +867,24 @@
     "iucn_name": "Galba vancouverensis (Baker, 1939)",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 10212133), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Hesperis kurdica",
+   "why": "the list carried no date and 2 research-grade photographs in 2023 confirm it alive inside the ten-year window; the row never met the definition of lost",
+   "class": "recorded alive since the list called it lost",
+   "evidence": "Iraq human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/162009013; Iraq human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/184227135"
+  },
+  {
+   "sp": "Hesperochiron pumilus",
+   "why": "widespread in the western United States; NatureServe ranks it state-historic in Colorado, which is the 1996 date the row carries. A state-level record published with global scope",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/345791528; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/345927232; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/345402428"
+  },
+  {
+   "sp": "Heterocodon rariflorum",
+   "why": "widespread from British Columbia to California, NatureServe Secure; state-historic in Colorado and Wyoming, which is the 1996 date the row carries",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/344825687; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/345208900; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/346187653"
   },
   {
    "sp": "Hibiscadelphus bombycinus",
@@ -885,6 +957,12 @@
     "iucn_name": "Hypolimnus pedderensis (Jamieson, 1974)",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9300059), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Isoetes sinensis",
+   "why": "110 GBIF records across 5 of the last six decades, the newest in 2022, and no date on the list; a species collected or photographed through the decades was never unaccounted for",
+   "class": "records all along: a species that was never lost",
+   "evidence": "China human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/175868116"
   },
   {
    "sp": "Kokia lanceolata",
@@ -982,6 +1060,12 @@
    }
   },
   {
+   "sp": "Mahonia haematocarpa",
+   "why": "2,290 GBIF records across 6 of the last six decades, the newest in 2026, and no date on the list; a species collected or photographed through the decades was never unaccounted for",
+   "class": "records all along: a species that was never lost",
+   "evidence": "United States preserved specimen ASU https://swbiodiversity.org/seinet/collections/individual/index.php?occid=10376711; United States preserved specimen ASU https://swbiodiversity.org/seinet/collections/individual/index.php?occid=4536093; United States preserved specimen ASC https://swbiodiversity.org/seinet/collections/individual/index.php?occid=12532286"
+  },
+  {
    "sp": "Megadytes ducalis",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791515), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -1054,6 +1138,12 @@
    }
   },
   {
+   "sp": "Mimulus ringens",
+   "why": "the common Allegheny monkeyflower, Least Concern, thousands of research-grade observations; state-historic in Colorado and Oklahoma, and its one rare variety is extant",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/333059893; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/333467480; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/335742623"
+  },
+  {
    "sp": "Mirogrex hulensis",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5787926), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -1070,6 +1160,12 @@
     "iucn_name": "Mirogrex hulensis Goren, Fishelson & Trewavas, 1973",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5787926), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Monolepis pusilla",
+   "why": "607 GBIF records across 6 of the last six decades, the newest in 2023, and no date on the list; a species collected or photographed through the decades was never unaccounted for",
+   "class": "records all along: a species that was never lost",
+   "evidence": "United States preserved specimen Vascular plants http://sweetgum.nybg.org/science/vh/specimen_details.php?irn=3049729; United States preserved specimen RENO https://intermountainbiota.org/portal/collections/individual/index.php?occid=15544062; United States preserved specimen RSA https://cch2.org/portal/collections/individual/index.php?occid=1216322"
   },
   {
    "sp": "Neocnemis occidentalis",
@@ -1129,6 +1225,12 @@
    "sp": "Onoclea sensibilis",
    "why": "sensitive fern, Least Concern, 110,472 GBIF records, observed 2026",
    "class": "recorded alive since the list called it lost"
+  },
+  {
+   "sp": "Pachystoma pubescens",
+   "why": "a widespread Asian orchid with research-grade photographs in 2026 from India, Indonesia and Hong Kong and records in most decades; the row carried no range at all",
+   "class": "records all along: a species that was never lost",
+   "evidence": "India human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/341474186; Indonesia human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/336346745; Hong Kong human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/347968779"
   },
   {
    "sp": "Pacifastacus nigrescens",
@@ -1339,6 +1441,12 @@
    }
   },
   {
+   "sp": "Prunus maritima",
+   "why": "the row means var. gravesii, one shrub at Groton Long Point, Connecticut, dead around 2000 and surviving in arboreta; the binomial is the common beach plum. The page's unit is the species",
+   "class": "a widespread species carried for a state-level or infraspecific record",
+   "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/334620558; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/335628081; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/345715189"
+  },
+  {
    "sp": "Psephurus gladius",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2402078), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -1409,6 +1517,12 @@
     "iucn_name": "Rhantus papuanus J. Balfour-Browne, 1939",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791520), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Rhipsalis mesembryanthemoides",
+   "why": "115 GBIF records across 6 of the last six decades, the newest in 2026, and no date on the list; a species collected or photographed through the decades was never unaccounted for",
+   "class": "records all along: a species that was never lost",
+   "evidence": "Brazil preserved specimen RB - Rio de Janeiro Botanical Garden Herbarium Collection; Brazil preserved specimen RB - Rio de Janeiro Botanical Garden Herbarium Collection; Brazil preserved specimen RB - Rio de Janeiro Botanical Garden Herbarium Collection"
   },
   {
    "sp": "Rhyacophila amabilis",
@@ -1534,6 +1648,12 @@
    }
   },
   {
+   "sp": "Thelypodium paniculatum",
+   "why": "the list carried no date and 1 specimen or survey record(s) in 2022 confirm it alive inside the ten-year window; the row never met the definition of lost",
+   "class": "recorded alive since the list called it lost",
+   "evidence": "United States preserved specimen KSP https://ngpherbaria.org/portal/collections/individual/index.php?occid=30486708"
+  },
+  {
    "sp": "Urolophus javanicus",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2419395), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -1571,7 +1691,7 @@
   }
  ],
  "meta": {
-  "n": 98,
+  "n": 118,
   "iucn_extinct_checked": "2026-09-18",
   "note": "Species removed from the Lost Species page, each with its reason. The upstream list is unchanged. Country resolution only."
  }
