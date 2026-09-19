@@ -1731,12 +1731,14 @@
       searched. A species can remain "lost" for a century without any evidence that it
       has declined at all. It can simply be that no qualified person has been to the
       right ridge in the right month.</p>
-    <p>Their overall estimate is that roughly <strong>a quarter</strong> of lost species
-      are probably already extinct. Which is a bleak number read one way, and an
-      extraordinary one read the other: it implies that most of the species on this map
-      are still out there.</p>
-    <p>They also found that tetrapods are being <strong>lost faster than they are being
-      found again</strong>. Rediscovery is slowing for amphibians, birds and mammals,
+    <p>IUCN has gone as far as the evidence allows for some of them:
+      <strong id="clsPE">&hellip;</strong> species on this list carry its Critically
+      Endangered (Possibly Extinct) tag, the Red List's way of saying probably gone,
+      not proven gone. Which is a bleak number read one way, and an extraordinary one
+      read the other: it leaves most of this list with no such verdict at all,
+      unaccounted for rather than written off.</p>
+    <p>Lindken and colleagues also found that tetrapods are being <strong>lost faster
+      than they are being found again</strong>. Rediscovery is slowing for amphibians, birds and mammals,
       while reptiles are being lost quickly. The gap is widening, and it will not be
       closed by the kind of survey that finds large animals near roads.</p>
     <p><strong>Plenty do come back.</strong> Of the tetrapods Lindken and colleagues
@@ -1839,6 +1841,17 @@
       in opposite directions, and the difference is the whole argument.</p>
     <p>Species from this list that have turned up again in the news are collected on the
       <a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a> page.</p>
+  </div>
+
+  <div class="prose">
+    <h3>Possibly extinct, not confirmed extinct</h3>
+    <p>People often reach this page by searching for possibly extinct animals, or for
+      species thought to be extinct. This is that list, and it holds plants as well as
+      animals. A species is here because nobody confirmed it alive for more than ten
+      years. Being here is not a declaration of extinction. That takes evidence of a
+      different kind, and for most of these species nobody has managed to gather it.
+      Species whose extinction is confirmed belong on a different list, and the best one
+      we know of is described below.</p>
   </div>
 
   <div class="prose">
@@ -2608,7 +2621,7 @@ function renderLostStats() {
   const bc = m.by_class || {}, br = m.by_redlist || {};
   [["clsLost", bc["lost"]], ["clsLong", bc["long-lost"]],
    ["clsUndated", bc["unclassified"]], ["clsFound", bc["rediscovered"]],
-   ["clsLC", br["LC"]], ["clsDD", br["DD"]]].forEach(([id, v]) => {
+   ["clsLC", br["LC"]], ["clsDD", br["DD"]], ["clsPE", br["CR(PE)"]]].forEach(([id, v]) => {
     const e = $("#" + id);
     if (e && v != null) e.textContent = v.toLocaleString();
   });
