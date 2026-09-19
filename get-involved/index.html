@@ -1662,8 +1662,9 @@
     </div>
 
     <div class="gistep">
-      <!-- Every claim in this step is checked against our own data. 794 = 464
-           invertebrates + 330 plants on the published lost list of 2,120. The 461 and
+      <!-- Every claim in this step is checked against our own data. 726 = 439
+           invertebrates + 287 plants on the published lost list of 2,037 (the earlier
+           794 had counted three cartilaginous fish as invertebrates). The 461 and
            the zero are Connect & Conserve's August 2026 scan across all four lists. The
            volunteer origin of the vertebrate authorities is the point of the whole ask:
            Reptile Database is a professor and volunteers, AmphibiaWeb sits at Berkeley
@@ -1681,7 +1682,7 @@
         list</a> are each a handful of people keeping a checklist current, and they are
         the reason we can say how many snakes exist and when one was last seen.</p>
       <p>Invertebrates and plants have almost none of that, and it shows everywhere on
-        this site. They are <strong>794</strong> of the <strong>2,120</strong> lost
+        this site. They are <strong>726</strong> of the <strong>2,037</strong> lost
         species here, we could not compute a single per-group rate for them because no
         authority publishes a count to divide by, and of the <strong>461</strong>
         invertebrates across our lists, <strong>not one</strong> is named by any
@@ -2378,7 +2379,7 @@ function nightReveal(s, found, total) {
   const yr = s.last ? String(s.last) : "?";
   const gap = s.last ? (new Date().getFullYear() - s.last) : null;
   const card = $("#nightCard");
-  const n = (LOST && LOST.meta && LOST.meta.n_species) || 2120;
+  const n = (LOST && LOST.meta && LOST.meta.n_species) || 2037;
   const kicker = NIGHT_LINES[nightLine % NIGHT_LINES.length](n);
   nightLine++;
   const grp = s.group || "";

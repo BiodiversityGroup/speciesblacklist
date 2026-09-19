@@ -89,17 +89,6 @@
 "prec": "year"
 },
 {
-"sp": "Acaena exigua",
-"v": "Liliwai",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 2000,
-"prec": "year"
-},
-{
 "sp": "Acanthobrama centisquama",
 "v": "Long-spine Bream",
 "grp": "Fish",
@@ -185,17 +174,6 @@
 "cty": "Italy",
 "reg": "Europe",
 "last": 1855,
-"prec": "year"
-},
-{
-"sp": "Achyranthes atollensis",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1964,
 "prec": "year"
 },
 {
@@ -601,17 +579,6 @@
 "prec": ""
 },
 {
-"sp": "Amaranthus brownii",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1983,
-"prec": "year"
-},
-{
 "sp": "Amazilia alfaroana",
 "v": "Guanacaste Hummingbird",
 "grp": "Bird",
@@ -631,17 +598,6 @@
 "cty": "Thailand",
 "reg": "Asia",
 "last": 1990,
-"prec": "year"
-},
-{
-"sp": "Ameles fasciipennis",
-"v": "Spined Dwarf Mantis",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Italy",
-"reg": "Europe",
-"last": 1871,
 "prec": "year"
 },
 {
@@ -1038,28 +994,6 @@
 "cty": "Ecuador",
 "reg": "South America",
 "last": 1841,
-"prec": "year"
-},
-{
-"sp": "Angraecopsis dolabriformis",
-"v": "",
-"grp": "Plant - Orchids",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "São Tomé",
-"reg": "Islands",
-"last": 1892,
-"prec": "year"
-},
-{
-"sp": "Angraecum astroarche",
-"v": "",
-"grp": "Plant - Orchids",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "São Tomé",
-"reg": "Islands",
-"last": 1888,
 "prec": "year"
 },
 {
@@ -1590,17 +1524,6 @@
 "cty": "India",
 "reg": "Asia",
 "last": 1854,
-"prec": "year"
-},
-{
-"sp": "Argyroxiphium virescens",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1996,
 "prec": "year"
 },
 {
@@ -2981,17 +2904,6 @@
 "prec": "decade"
 },
 {
-"sp": "Barbodes pachycheilus",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Philippines",
-"reg": "Asia",
-"last": 1921,
-"prec": "year"
-},
-{
 "sp": "Barbonymus platysoma",
 "v": "",
 "grp": "Fish",
@@ -3089,17 +3001,6 @@
 "reg": "Europe",
 "last": 1870,
 "prec": "year"
-},
-{
-"sp": "Belgrandiella boetersi",
-"v": "",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "unclassified",
-"rl": "EX",
-"cty": "Austria",
-"reg": "Europe",
-"last": "",
-"prec": ""
 },
 {
 "sp": "Belgrandiella cavernica",
@@ -3253,17 +3154,6 @@
 "cty": "Tanzania",
 "reg": "Africa",
 "last": 1971,
-"prec": "year"
-},
-{
-"sp": "Blutaparon rigidum",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Ecuador",
-"reg": "South America",
-"last": 1906,
 "prec": "year"
 },
 {
@@ -3542,17 +3432,6 @@
 "prec": "year"
 },
 {
-"sp": "Bradycellus chavesi",
-"v": "Ground-beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Azores",
-"reg": "Islands",
-"last": 1919,
-"prec": "year"
-},
-{
 "sp": "Bronchocela orlovi",
 "v": "Orlov’s Forest Lizard",
 "grp": "Reptile",
@@ -3606,17 +3485,6 @@
 "reg": "Africa",
 "last": "",
 "prec": ""
-},
-{
-"sp": "Brunoniella neocaledonica",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "New Caledonia",
-"reg": "Islands",
-"last": 1968,
-"prec": "year"
 },
 {
 "sp": "Brycon ferox",
@@ -4004,28 +3872,6 @@
 "prec": ""
 },
 {
-"sp": "Calathus extensicollis",
-"v": "Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Azores",
-"reg": "Islands",
-"last": 1859,
-"prec": "year"
-},
-{
-"sp": "Calathus vicenteorum",
-"v": "Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Azores",
-"reg": "Islands",
-"last": 1957,
-"prec": "year"
-},
-{
 "sp": "Calcochloris tytonis",
 "v": "Somali Golden Mole",
 "grp": "Mammal",
@@ -4191,17 +4037,6 @@
 "prec": "year"
 },
 {
-"sp": "Cambarellus alvarezi",
-"v": "",
-"grp": "Crustacean",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Mexico",
-"reg": "North America",
-"last": 1952,
-"prec": "year"
-},
-{
 "sp": "Cambarellus areolatus",
 "v": "",
 "grp": "Crustacean",
@@ -4211,17 +4046,6 @@
 "reg": "North America",
 "last": "",
 "prec": ""
-},
-{
-"sp": "Cambarellus chihuahuae",
-"v": "Chihuahua Dwarf crayfish",
-"grp": "Crustacean",
-"cls": "lost",
-"rl": "EX",
-"cty": "Mexico",
-"reg": "North America",
-"last": 1980,
-"prec": "year"
 },
 {
 "sp": "Cambaroides koshewnikowi",
@@ -4954,17 +4778,6 @@
 "prec": ""
 },
 {
-"sp": "Clermontia multiflora",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1870,
-"prec": "year"
-},
-{
 "sp": "Clitoria andrei",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
@@ -5260,17 +5073,6 @@
 "reg": "Islands",
 "last": 2000,
 "prec": "year"
-},
-{
-"sp": "Conus lugubris",
-"v": "",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "lost",
-"rl": "EX",
-"cty": "Cape Verde",
-"reg": "Islands",
-"last": 1985,
-"prec": "decade"
 },
 {
 "sp": "Copeoglossum margaritae",
@@ -5779,17 +5581,6 @@
 "prec": "year"
 },
 {
-"sp": "Cryptoblepharus egeriae",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "EW",
-"cty": "Indomalay",
-"reg": "Asia",
-"last": 2010,
-"prec": "year"
-},
-{
 "sp": "Cryptoblepharus wulbu",
 "v": "Spangled Snake-eyed Skink",
 "grp": "Reptile",
@@ -5981,72 +5772,6 @@
 "prec": "year"
 },
 {
-"sp": "Cyanea arborea",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1928,
-"prec": "year"
-},
-{
-"sp": "Cyanea comata",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1870,
-"prec": "year"
-},
-{
-"sp": "Cyanea cylindrocalyx",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1909,
-"prec": "year"
-},
-{
-"sp": "Cyanea dolichopoda",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1992,
-"prec": "year"
-},
-{
-"sp": "Cyanea eleeleensis",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1970,
-"prec": "year"
-},
-{
-"sp": "Cyanea giffardii",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1917,
-"prec": "year"
-},
-{
 "sp": "Cyanea kolekoleensis",
 "v": "Oha",
 "grp": "Plant - Flowering plant (misc)",
@@ -6058,17 +5783,6 @@
 "prec": "year"
 },
 {
-"sp": "Cyanea linearifolia",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1962,
-"prec": "year"
-},
-{
 "sp": "Cyanea longissima",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
@@ -6077,83 +5791,6 @@
 "cty": "United States (Hawaii)",
 "reg": "Islands",
 "last": 1927,
-"prec": "year"
-},
-{
-"sp": "Cyanea mauiensis",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1870,
-"prec": "year"
-},
-{
-"sp": "Cyanea minutiflora",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1916,
-"prec": "year"
-},
-{
-"sp": "Cyanea parvifolia",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1909,
-"prec": "year"
-},
-{
-"sp": "Cyanea pohaku",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1910,
-"prec": "year"
-},
-{
-"sp": "Cyanea pycnocarpa",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1872,
-"prec": "year"
-},
-{
-"sp": "Cyanea quercifolia",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1870,
-"prec": "year"
-},
-{
-"sp": "Cyanea sessilifolia",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1960,
 "prec": "year"
 },
 {
@@ -6476,17 +6113,6 @@
 "prec": "year"
 },
 {
-"sp": "Cyperus rockii",
-"v": "",
-"grp": "Plant - Grasses & Sedges",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1900,
-"prec": "year"
-},
-{
 "sp": "Cyprinus barbatus",
 "v": "",
 "grp": "Fish",
@@ -6531,17 +6157,6 @@
 "prec": ""
 },
 {
-"sp": "Cyprinus yilongensis",
-"v": "Yilong Carp",
-"grp": "Fish",
-"cls": "lost",
-"rl": "EX",
-"cty": "China",
-"reg": "Asia",
-"last": 1981,
-"prec": "year"
-},
-{
 "sp": "Cyprinus yunnanensis",
 "v": "Yunnan Carp",
 "grp": "Fish",
@@ -6564,17 +6179,6 @@
 "prec": "year"
 },
 {
-"sp": "Cyrtandra olona",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1909,
-"prec": "year"
-},
-{
 "sp": "Cyrtandra pruinosa",
 "v": "Frosted Cyrtandra",
 "grp": "Plant - Flowering plant (misc)",
@@ -6584,19 +6188,6 @@
 "reg": "Islands",
 "last": 1933,
 "prec": "year"
-},
-{
-"sp": "Cyrtandra waiolani",
-"v": "Fuzzyflower Cyrtandra",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EW",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1943,
-"prec": "year",
-"rd": 1,
-"rdfirm": 0
 },
 {
 "sp": "Cyrtodactylus batik",
@@ -6819,17 +6410,6 @@
 "prec": "year"
 },
 {
-"sp": "Delilia inelegans",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Ecuador",
-"reg": "South America",
-"last": 1835,
-"prec": "year"
-},
-{
 "sp": "Delissea fallax",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
@@ -6885,17 +6465,6 @@
 "prec": "year"
 },
 {
-"sp": "Delissea niihauensis",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1867,
-"prec": "year"
-},
-{
 "sp": "Delissea parviflora",
 "v": "Smallflower Delissea",
 "grp": "Plant - Flowering plant (misc)",
@@ -6907,17 +6476,6 @@
 "prec": "year"
 },
 {
-"sp": "Delissea sinuata",
-"v": "Kauaʻi Delissea",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1937,
-"prec": "year"
-},
-{
 "sp": "Delissea takeuchii",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
@@ -6926,17 +6484,6 @@
 "cty": "United States (Hawaii)",
 "reg": "Islands",
 "last": 1986,
-"prec": "year"
-},
-{
-"sp": "Delissea undulata",
-"v": "Undulata Delissea",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1872,
 "prec": "year"
 },
 {
@@ -8658,19 +8205,6 @@
 "prec": "year"
 },
 {
-"sp": "Erythrolamprus perfuscus",
-"v": "",
-"grp": "Reptile",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Barbados",
-"reg": "Islands",
-"last": 1963,
-"prec": "year",
-"rd": 1,
-"rdfirm": 0
-},
-{
 "sp": "Erythrolamprus williamsi",
 "v": "",
 "grp": "Reptile",
@@ -9314,17 +8848,6 @@
 "grp": "Gastropod molluscs (snails and slugs)",
 "cls": "unclassified",
 "rl": "DD",
-"cty": "Canada",
-"reg": "North America",
-"last": "",
-"prec": ""
-},
-{
-"sp": "Galba vancouverensis",
-"v": "",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "unclassified",
-"rl": "EX",
 "cty": "Canada",
 "reg": "North America",
 "last": "",
@@ -10893,39 +10416,6 @@
 "prec": "year"
 },
 {
-"sp": "Hibiscadelphus bombycinus",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1868,
-"prec": "year"
-},
-{
-"sp": "Hibiscadelphus crucibracteatus",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1985,
-"prec": "year"
-},
-{
-"sp": "Hibiscadelphus wilderianus",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1913,
-"prec": "year"
-},
-{
 "sp": "Hippocampus minotaur",
 "v": "Bullneck Seahorse",
 "grp": "Fish",
@@ -11418,17 +10908,6 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1916,
-"prec": "year"
-},
-{
-"sp": "Hypolimnus pedderensis",
-"v": "Lake Pedder Earthworm",
-"grp": "Worm",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Australia",
-"reg": "Australia",
-"last": 1972,
 "prec": "year"
 },
 {
@@ -12422,17 +11901,6 @@
 "prec": "year"
 },
 {
-"sp": "Kokia lanceolata",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1900,
-"prec": "year"
-},
-{
 "sp": "Kronichthys lacerta",
 "v": "",
 "grp": "Fish",
@@ -12485,17 +11953,6 @@
 "cty": "Spain",
 "reg": "Europe",
 "last": 1983,
-"prec": "year"
-},
-{
-"sp": "Labidura herculeana",
-"v": "St. Helena Giant Earwig",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Saint Helena, Ascension, Tristan da Cunha",
-"reg": "Islands",
-"last": 1967,
 "prec": "year"
 },
 {
@@ -12870,17 +12327,6 @@
 "cty": "Mexico",
 "reg": "North America",
 "last": 2007,
-"prec": "year"
-},
-{
-"sp": "Leporillus apicalis",
-"v": "Lesser Stick-nest Rat",
-"grp": "Mammal",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Australia",
-"reg": "Australia",
-"last": 1933,
 "prec": "year"
 },
 {
@@ -13676,17 +13122,6 @@
 "prec": "year"
 },
 {
-"sp": "Lithobates fisheri",
-"v": "Las Vegas Leopard Frog",
-"grp": "Amphibian",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States",
-"reg": "North America",
-"last": 1942,
-"prec": "year"
-},
-{
 "sp": "Lithobates pueblae",
 "v": "Puebla Frog",
 "grp": "Amphibian",
@@ -13707,17 +13142,6 @@
 "reg": "North America",
 "last": "",
 "prec": ""
-},
-{
-"sp": "Litoria nyakalensis",
-"v": "Mountain Mistfrog",
-"grp": "Amphibian",
-"cls": "lost",
-"rl": "EX",
-"cty": "Australia",
-"reg": "Australia",
-"last": 1990,
-"prec": "year"
 },
 {
 "sp": "Litoria piperata",
@@ -14448,17 +13872,6 @@
 "prec": "year"
 },
 {
-"sp": "Megadytes ducalis",
-"v": "Giant Amazon Diving Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1882,
-"prec": "year"
-},
-{
 "sp": "Megaelosia massarti",
 "v": "",
 "grp": "Amphibian",
@@ -14668,28 +14081,6 @@
 "prec": "year"
 },
 {
-"sp": "Melicope macropus",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1995,
-"prec": "year"
-},
-{
-"sp": "Melicope obovata",
-"v": "Obovate Melicope",
-"grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1880,
-"prec": "year"
-},
-{
 "sp": "Melicpoe wailauensis",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
@@ -14745,17 +14136,6 @@
 "prec": "year",
 "rd": 1,
 "rdfirm": 0
-},
-{
-"sp": "Melomys rubicola",
-"v": "Bramble Cay Melomys",
-"grp": "Mammal",
-"cls": "lost",
-"rl": "EX",
-"cty": "Australia",
-"reg": "Oceania",
-"last": "",
-"prec": ""
 },
 {
 "sp": "Melpomene brevipes",
@@ -15096,17 +14476,6 @@
 "cty": "Spain",
 "reg": "Europe",
 "last": 1993,
-"prec": "year"
-},
-{
-"sp": "Mirogrex hulensis",
-"v": "Hula Bream",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Israel",
-"reg": "Middle East",
-"last": 1975,
 "prec": "year"
 },
 {
@@ -15616,17 +14985,6 @@
 "prec": "year"
 },
 {
-"sp": "Neocnemis occidentalis",
-"v": "Weevil",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Azores",
-"reg": "Islands",
-"last": 1867,
-"prec": "year"
-},
-{
 "sp": "Neolissochilus bovanicus",
 "v": "Bovany Barb",
 "grp": "Fish",
@@ -15869,17 +15227,6 @@
 "prec": "year"
 },
 {
-"sp": "Nyctophilus howensis",
-"v": "Lord Howe Long-eared Bat",
-"grp": "Mammal",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Australia",
-"reg": "Australia",
-"last": 1972,
-"prec": "year"
-},
-{
 "sp": "Nyhimbricus wollastoni",
 "v": "Wollaston's Leafhopper",
 "grp": "Insect",
@@ -15921,17 +15268,6 @@
 "cty": "United States",
 "reg": "North America",
 "last": 1970,
-"prec": "year"
-},
-{
-"sp": "Ochrosia kilaueaensis",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1927,
 "prec": "year"
 },
 {
@@ -16287,17 +15623,6 @@
 "prec": "year"
 },
 {
-"sp": "Pacifastacus nigrescens",
-"v": "Sooty Crayfish",
-"grp": "Crustacean",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States",
-"reg": "North America",
-"last": 1850,
-"prec": "century"
-},
-{
 "sp": "Pacificagrion dolorosa",
 "v": "",
 "grp": "Insect",
@@ -16449,17 +15774,6 @@
 "cty": "Namibia",
 "reg": "Africa",
 "last": 1913,
-"prec": "year"
-},
-{
-"sp": "Pantanodon madagascariensis",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Madagascar",
-"reg": "Africa",
-"last": 1963,
 "prec": "year"
 },
 {
@@ -16861,17 +16175,6 @@
 "prec": "year"
 },
 {
-"sp": "Partula guamensis",
-"v": "Polynesian Tree Snail",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Micronesia",
-"reg": "Islands",
-"last": 1936,
-"prec": "year"
-},
-{
 "sp": "Partula leucothoe",
 "v": "",
 "grp": "Gastropod molluscs (snails and slugs)",
@@ -16891,17 +16194,6 @@
 "cty": "French Polynesia",
 "reg": "Islands",
 "last": 2006,
-"prec": "year"
-},
-{
-"sp": "Partula sagitta",
-"v": "Polynesian Tree Snail",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "French Polynesia",
-"reg": "Islands",
-"last": 1908,
 "prec": "year"
 },
 {
@@ -17015,17 +16307,6 @@
 "prec": "year"
 },
 {
-"sp": "Pentagenia robusta",
-"v": "Robust Burrowing Mayfly",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States",
-"reg": "North America",
-"last": 1926,
-"prec": "year"
-},
-{
 "sp": "Pentaphlebia gamblesi",
 "v": "Gambles's Relic",
 "grp": "Insect",
@@ -17057,17 +16338,6 @@
 "reg": "South America",
 "last": 1850,
 "prec": "century"
-},
-{
-"sp": "Peperomia degeneri",
-"v": "",
-"grp": "Plant - Epiphytes",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1928,
-"prec": "year"
 },
 {
 "sp": "Peperomia petraea",
@@ -17587,17 +16857,6 @@
 "prec": "year"
 },
 {
-"sp": "Pieris wollastoni",
-"v": "Madeiran Large White",
-"grp": "Insect",
-"cls": "lost",
-"rl": "EX",
-"cty": "Portugal",
-"reg": "Europe",
-"last": 1986,
-"prec": "year"
-},
-{
 "sp": "Piliocolobus langi",
 "v": "Lang's Red Colobus",
 "grp": "Mammal",
@@ -17807,17 +17066,6 @@
 "prec": ""
 },
 {
-"sp": "Platytropius siamensis",
-"v": "Siamese Flat-barbelled Catfish",
-"grp": "Fish",
-"cls": "lost",
-"rl": "EX",
-"cty": "Thailand",
-"reg": "Asia",
-"last": 1977,
-"prec": "year"
-},
-{
 "sp": "Plectophanes altus",
 "v": "",
 "grp": "Arachnid",
@@ -17925,17 +17173,6 @@
 "cty": "China",
 "reg": "Asia",
 "last": 1926,
-"prec": "year"
-},
-{
-"sp": "Plethodon ainsworthi",
-"v": "Ainsworth's Salamander",
-"grp": "Amphibian",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States",
-"reg": "North America",
-"last": 1964,
 "prec": "year"
 },
 {
@@ -18566,17 +17803,6 @@
 "prec": "year"
 },
 {
-"sp": "Procambarus angustatus",
-"v": "Sandhills Crayfish",
-"grp": "Crustacean",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States",
-"reg": "North America",
-"last": 1958,
-"prec": "year"
-},
-{
 "sp": "Procambarus delicatus",
 "v": "Big-cheeked Cave Crayfish",
 "grp": "Crustacean",
@@ -18676,17 +17902,6 @@
 "prec": "year"
 },
 {
-"sp": "Prototroctes oxyrhynchus",
-"v": "New Zealand Grayling",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "New Zealand",
-"reg": "Islands",
-"last": 1930,
-"prec": "year"
-},
-{
 "sp": "Prunus maritima",
 "v": "Grave's Beach Plum",
 "grp": "Plant - Trees & Shrubs",
@@ -18706,17 +17921,6 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1911,
-"prec": "year"
-},
-{
-"sp": "Psephurus gladius",
-"v": "Chinese Paddlefish",
-"grp": "Fish",
-"cls": "lost",
-"rl": "EX",
-"cty": "China",
-"reg": "Asia",
-"last": 2003,
 "prec": "year"
 },
 {
@@ -18893,17 +18097,6 @@
 "cty": "Guatemala, Mexico",
 "reg": "North America",
 "last": 1980,
-"prec": "year"
-},
-{
-"sp": "Pseudoeurycea exspectata",
-"v": "Jalpa False Brook Salamander",
-"grp": "Amphibian",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Guatemala",
-"reg": "North America",
-"last": 1976,
 "prec": "year"
 },
 {
@@ -19314,17 +18507,6 @@
 "prec": ""
 },
 {
-"sp": "Pycnandra micrantha",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "New Caledonia",
-"reg": "Islands",
-"last": 1865,
-"prec": "year"
-},
-{
 "sp": "Pyrrhura subandina",
 "v": "Sinu Parakeet",
 "grp": "Bird",
@@ -19477,17 +18659,6 @@
 "reg": "Africa",
 "last": "",
 "prec": ""
-},
-{
-"sp": "Rhantus papuanus",
-"v": "Papuan Diving Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Papua New Guinea",
-"reg": "Islands",
-"last": 1919,
-"prec": "year"
 },
 {
 "sp": "Rhaphidophora invalida",
@@ -19657,17 +18828,6 @@
 "reg": "Asia",
 "last": 1857,
 "prec": "year"
-},
-{
-"sp": "Rhyacophila amabilis",
-"v": "Castle Lake Caddisfly",
-"grp": "Insect",
-"cls": "unclassified",
-"rl": "EX",
-"cty": "United States",
-"reg": "North America",
-"last": "",
-"prec": ""
 },
 {
 "sp": "Rhynchomeles prattorum",
@@ -19857,17 +19017,6 @@
 "prec": "year"
 },
 {
-"sp": "Sanicula kauaiensis",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1950,
-"prec": "year"
-},
-{
 "sp": "Sarcohyla calvicollina",
 "v": "Cerro Pelón Treefrog",
 "grp": "Amphibian",
@@ -20019,17 +19168,6 @@
 "cty": "Bioko",
 "reg": "Islands",
 "last": 1895,
-"prec": "year"
-},
-{
-"sp": "Schiedea amplexicaulis",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1855,
 "prec": "year"
 },
 {
@@ -21575,17 +20713,6 @@
 "rdfirm": 0
 },
 {
-"sp": "Sympetrum dilatatum",
-"v": "St Helena Darter",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Saint Helena, Ascension, Tristan da Cunha",
-"reg": "Islands",
-"last": 1963,
-"prec": "year"
-},
-{
 "sp": "Systomus compressiformis",
 "v": "",
 "grp": "Fish",
@@ -21594,17 +20721,6 @@
 "cty": "Myanmar",
 "reg": "Asia",
 "last": 1994,
-"prec": "year"
-},
-{
-"sp": "Syzygium balfourii",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Mascarene Islands (Rodrigues Island)",
-"reg": "Islands",
-"last": 1874,
 "prec": "year"
 },
 {
@@ -21704,17 +20820,6 @@
 "cty": "Saint Helena",
 "reg": "Islands",
 "last": 1967,
-"prec": "year"
-},
-{
-"sp": "Taudactylus acutirostris",
-"v": "Sharp-snouted Day Frog",
-"grp": "Amphibian",
-"cls": "lost",
-"rl": "EX",
-"cty": "Australia",
-"reg": "Australia",
-"last": 1997,
 "prec": "year"
 },
 {
@@ -22895,17 +22000,6 @@
 "prec": "year"
 },
 {
-"sp": "Urolophus javanicus",
-"v": "Java Stingaree",
-"grp": "Cartilaginous Fish (sharks, rays, skates, and chimaeras)",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "Indonesia",
-"reg": "Asia",
-"last": 1850,
-"prec": "century"
-},
-{
 "sp": "Uromenus riggioi",
 "v": "Riggio's Saddle Bush-cricket",
 "grp": "Insect",
@@ -23194,17 +22288,6 @@
 "prec": "year"
 },
 {
-"sp": "Wikstroemia hanalei",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
-"rl": "EX",
-"cty": "United States (Hawaii)",
-"reg": "Islands",
-"last": 1976,
-"prec": "year"
-},
-{
 "sp": "Xenephias socotranus",
 "v": "",
 "grp": "Insect",
@@ -23362,7 +22445,7 @@
 }
 ],
 "meta": {
-"n": 2120,
+"n": 2037,
 "built": "",
 "note": "Country resolution only. Localities are deliberately not published for lost species."
 }
