@@ -1,14 +1,14 @@
 {
-"built": "2026-09-18",
+"built": "2026-09-21",
 "counts": {
 "stories": 188,
-"raw_items": 476,
-"with_species": 117,
+"raw_items": 480,
+"with_species": 118,
 "distinct_species": 231,
-"distinct_species_firm": 48,
+"distinct_species_firm": 49,
 "multi_species_cards": 48,
-"with_image": 181,
-"syndicated": 93,
+"with_image": 180,
+"syndicated": 94,
 "on_tbg_list": 31,
 "on_list_breakdown": {
 "on our lost-species list": 24,
@@ -17,7 +17,7 @@
 "undated": 0,
 "newest": "Wed, 09 Sep 2026",
 "tracked_names": 6709,
-"image_local": 175,
+"image_local": 174,
 "archived": 129
 },
 "cards": [
@@ -1655,11 +1655,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
 {
 "publisher": "The Cool Down",
 "link": "https://www.thecooldown.com/outdoors/pernambuco-holly-brazil-peru/"
+},
+{
+"publisher": "StudyFinds",
+"link": "https://studyfinds.com/blind-mole-rediscovered-1936/"
 }
 ]
 },
@@ -1929,6 +1933,30 @@
 "also": []
 },
 {
+"title": "Rediscovery of Meconopsis florindae Kingdon-Ward, a Critically Endangered alpine species endemic to China",
+"species": [
+"Meconopsis florindae"
+],
+"species_firm": [
+"Meconopsis florindae"
+],
+"on_list": "",
+"detail": "",
+"publisher": "Cambridge University Press & Assessment",
+"date": "Mon, 15 Dec 2025",
+"ts": 1765785600,
+"first_seen": "2026-09-21",
+"link": "https://www.cambridge.org/core/journals/oryx/article/rediscovery-of-meconopsis-florindae-kingdonward-a-critically-endangered-alpine-species-endemic-to-china/5C68D33B12B1CDA8D7F0E53D9F2C04A8",
+"image": "",
+"wayback": "",
+"desc": "",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "$1.4 million plan after rediscovery of Aussie animal thought extinct",
 "species": [],
 "species_firm": [],
@@ -2037,8 +2065,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Bombyx mori",
-"Moema claudiae"
+"Moema claudiae",
+"Bombyx mori"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2048,27 +2076,35 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-16",
+"first_seen": "2026-08-10",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/bf92591b41aa53d3.jpg",
-"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
-"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
+"image": "/rd-img/b73e2fd705e4740e.jpg",
+"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 8,
 "also": [
 {
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+"publisher": "Miami Herald",
+"link": "https://www.miamiherald.com/news/nation-world/world/article312920217.html"
 },
 {
-"publisher": "Kids News",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+"publisher": "GK Today",
+"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
 },
 {
-"publisher": "Phys.org",
-"link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
+"publisher": "gktoday.in",
+"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
+},
+{
+"publisher": "BIOENGINEER.ORG",
+"link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/"
 }
 ]
 },
@@ -2300,11 +2336,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "Daily Maverick",
 "link": "https://www.dailymaverick.co.za/article/2025-10-24-rare-fynbos-species-rediscovered-in-kogelberg-reserve-after-being-feared-extinct/"
+},
+{
+"publisher": "Cape Town ETC",
+"link": "https://www.capetownetc.com/news/rare-erica-plant-rediscovered-after-40-years-in-kogelberg/"
 },
 {
 "publisher": "Cape Town ETC",
@@ -2333,7 +2373,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 8,
+"outlets": 9,
 "also": [
 {
 "publisher": "ABS-CBN",
@@ -3017,8 +3057,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "WorldAtlas",
+"link": "https://www.worldatlas.com/articles/15-extinct-animals-found-again.html"
+}
+]
 },
 {
 "title": "Chel Snakehead: A Fish That Time Forgot, Rediscovered",
@@ -4790,26 +4835,6 @@
 "image": "/rd-img/a5b9966572d65cda.jpg",
 "wayback": "",
 "desc": "Reporting on nature is often about extinction, decline and loss. But this isn\u2019t the full picture. The Lost and Found project brings to life tales of rediscovered species once thought gone forever. The determination and passion of conservationists has led them ",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "15 Previously Extinct Animals Who Were Rediscovered",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "WorldAtlas",
-"date": "Fri, 18 May 2018",
-"ts": 1526626800,
-"first_seen": "2026-08-25",
-"link": "https://www.worldatlas.com/articles/15-extinct-animals-found-again.html",
-"image": "/rd-img/afe2b65b986a1667.jpg",
-"wayback": "",
-"desc": "The Albany Adder snake joins the list of thought-to-be-extinct species that were rediscovered.",
 "citation": "",
 "kind": "",
 "note": "",
