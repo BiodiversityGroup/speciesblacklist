@@ -1,8 +1,8 @@
 {
-"built": "2026-09-21",
+"built": "2026-09-22",
 "counts": {
 "stories": 188,
-"raw_items": 480,
+"raw_items": 482,
 "with_species": 118,
 "distinct_species": 231,
 "distinct_species_firm": 49,
@@ -1728,7 +1728,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
 {
 "publisher": "Moneycontrol",
@@ -2065,8 +2065,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Moema claudiae",
-"Bombyx mori"
+"Bombyx mori",
+"Moema claudiae"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2076,35 +2076,27 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-08-16",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/b73e2fd705e4740e.jpg",
-"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
-"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
+"image": "/rd-img/bf92591b41aa53d3.jpg",
+"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
+"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 8,
 "also": [
 {
-"publisher": "Miami Herald",
-"link": "https://www.miamiherald.com/news/nation-world/world/article312920217.html"
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 },
 {
-"publisher": "GK Today",
-"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+"publisher": "Kids News",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 },
 {
-"publisher": "gktoday.in",
-"link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
-},
-{
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
-},
-{
-"publisher": "BIOENGINEER.ORG",
-"link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/"
+"publisher": "Phys.org",
+"link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
 }
 ]
 },
@@ -2633,7 +2625,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 18,
+"outlets": 19,
 "also": [
 {
 "publisher": "Sunday Tribune",
