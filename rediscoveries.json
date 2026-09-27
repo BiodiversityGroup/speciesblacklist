@@ -1,8 +1,8 @@
 {
-"built": "2026-09-25",
+"built": "2026-09-27",
 "counts": {
 "stories": 188,
-"raw_items": 482,
+"raw_items": 483,
 "with_species": 118,
 "distinct_species": 231,
 "distinct_species_firm": 49,
@@ -1131,7 +1131,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 7,
+"outlets": 8,
 "also": [
 {
 "publisher": "Conservation news",
