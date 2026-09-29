@@ -1,24 +1,24 @@
 {
 "built": "2026-09-29",
 "counts": {
-"stories": 189,
+"stories": 190,
 "raw_items": 488,
-"with_species": 118,
-"distinct_species": 231,
+"with_species": 119,
+"distinct_species": 232,
 "distinct_species_firm": 48,
 "multi_species_cards": 48,
-"with_image": 181,
-"syndicated": 94,
-"on_tbg_list": 31,
+"with_image": 182,
+"syndicated": 95,
+"on_tbg_list": 32,
 "on_list_breakdown": {
-"on our lost-species list": 24,
+"on our lost-species list": 25,
 "on the Black List": 7
 },
 "undated": 0,
 "newest": "Mon, 28 Sep 2026",
 "tracked_names": 6709,
-"image_local": 175,
-"archived": 129
+"image_local": 176,
+"archived": 130
 },
 "cards": [
 {
@@ -1259,6 +1259,41 @@
 "note": "",
 "outlets": 1,
 "also": []
+},
+{
+"title": "How Do You Rediscover A \u201cLost\u201d Species? The Fagidle's Trapdoor Spider Was Lost For 92 Years. Not Anymore",
+"species": [
+"Nemesia berlandi"
+],
+"species_firm": [],
+"on_list": "Lost Species",
+"detail": "Arachnid, long-lost, last seen 1931",
+"publisher": "IFLScience",
+"date": "Thu, 19 Mar 2026",
+"ts": 1773903600,
+"first_seen": "2026-08-12",
+"link": "https://www.iflscience.com/how-do-you-rediscover-a-lost-species-we-spoke-to-the-experts-who-found-a-spider-lost-for-92-years-82907",
+"image": "/rd-img/6162925d21d31459.jpg",
+"wayback": "http://web.archive.org/web/20260305211944/https://www.weforum.org/stories/2024/06/rediscovered-species-biodiversity/",
+"desc": "There are more than 2,200 lost species across 160 countries \u2013 and scientists are searching for them. Here are some of the species that have been \u2018refound\u2019.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 5,
+"also": [
+{
+"publisher": "weforum.org",
+"link": "https://www.weforum.org/stories/2024/06/rediscovered-species-biodiversity/"
+},
+{
+"publisher": "IFLScience",
+"link": "https://www.iflscience.com/tap-dancing-spider-lost-to-science-for-92-years-rediscovered-in-portugal-72009"
+},
+{
+"publisher": "IFLScience",
+"link": "https://www.iflscience.com/how-do-you-rediscover-a-lost-species-we-spoke-to-the-experts-who-found-a-spider-lost-for-92-years-82907"
+}
+]
 },
 {
 "title": "Rare plant species rediscovered in Arunachal after 189 years",
