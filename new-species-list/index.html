@@ -1449,6 +1449,94 @@
   footer p { margin:.35rem 0; }
 
   @media (prefers-reduced-motion:reduce) { * { transition:none !important; } }
+  /* ======================== EXTINCTION (/extinction/) ======================== */
+  /* ---- /extinction/ ------------------------------------------------------
+     Chart colors were run through the dataviz validator against each theme's
+     surface. Light: declared #3B4E8C, flagged #6C86DC, final #B4762B, base
+     #C99B4F, highlight #90501A. Dark: #6F87DD, #3A54B4, #B4762B, #93561E,
+     #C6852F. The base bar and the dark flagged blue sit under 3:1 against the
+     surface, which the validator allows only with direct labels or a table
+     view; every chart has both. Marks take their color from classes, so the
+     static SVG follows the theme with no script. */
+  :root { --x-dec:#3B4E8C; --x-flag:#6C86DC; --x-fin:#B4762B; --x-base:#C99B4F; --x-hi:#90501A; }
+  @media (prefers-color-scheme:dark) {
+    :root:not([data-theme="light"]) { --x-dec:#6F87DD; --x-flag:#3A54B4; --x-fin:#B4762B; --x-base:#93561E; --x-hi:#C6852F; }
+  }
+  :root[data-theme="dark"] { --x-dec:#6F87DD; --x-flag:#3A54B4; --x-fin:#B4762B; --x-base:#93561E; --x-hi:#C6852F; }
+  :root[data-theme="light"] { --x-dec:#3B4E8C; --x-flag:#6C86DC; --x-fin:#B4762B; --x-base:#C99B4F; --x-hi:#90501A; }
+
+  .extsvg .xb { fill:var(--x-base); }
+  .extsvg .xh { fill:var(--x-hi); }
+  .extsvg .xd { fill:var(--x-dec); }
+  .extsvg .xf { fill:var(--x-flag); }
+  .extsvg .xbh { stroke:var(--x-base); stroke-width:1.5; }
+  .extsvg .xhatch { stroke:var(--x-base); stroke-width:3; }
+  .extsvg .xsurf { fill:var(--surface); }
+  .extsvg .xn { stroke:var(--x-fin); stroke-width:2.5; stroke-linecap:round; }
+  .extsvg .xnd { fill:var(--x-fin); stroke:var(--surface); stroke-width:2; }
+  .extsvg .xg { stroke:var(--rule); stroke-width:1; }
+  .extsvg text { font-family:var(--sans); }
+  .extsvg .xt { fill:var(--ink-2); }
+  .extsvg .xt1 { fill:var(--ink); }
+  .extsvg .xt3 { fill:var(--ink-3); }
+  .extsvg [data-tip] { cursor:default; }
+  .xd-bg { background:var(--x-dec); } .xf-bg { background:var(--x-flag); } .xn-bg { background:var(--x-fin); }
+  .xb-bg { background:var(--x-base); } .xh-bg { background:var(--x-hi); }
+  /* one SVG per width: the wide one above 620px, the phone one below, each drawn at
+     the size it is shown so its text stays legible */
+  .extsvg { display:block; width:100%; height:auto; }
+  .extsvg-n { display:none; }
+  @media (max-width:620px) { .extsvg-w { display:none; } .extsvg-n { display:block; } }
+
+  .extbody { text-align:center; }
+  .extbody .prose { max-width:64ch; margin:0 auto; }
+  .extbody .prose .sci { font-family:inherit; font-style:italic; }   /* binomials in running text */
+  .extbody h3 { margin-top:var(--s5); }
+  .extlede { font-size:var(--fs-lede); color:var(--ink-2); margin-top:var(--s2); }
+  .exthero { margin:var(--s4) auto var(--s3); font-family:var(--sans); max-width:34rem; }
+  .exthero b { display:block; font-family:var(--serif); font-size:clamp(3rem,9vw,4.6rem);
+               line-height:1; color:var(--ink); font-weight:700; }
+  .exthero span { display:block; color:var(--ink-2); font-size:.95rem; margin-top:.5rem; }
+  .extfig { margin:var(--s3) auto var(--s4); max-width:920px; background:var(--surface);
+            border:1px solid var(--rule); border-radius:6px; padding:var(--s3) var(--s3) var(--s2); }
+  .extchart { width:100%; }
+  .extfig figcaption { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
+                       max-width:70ch; margin:var(--s2) auto 0; }
+  .extlegend { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-2);
+               display:flex; flex-wrap:wrap; gap:.4rem 1.2rem; justify-content:center; margin-bottom:var(--s1); }
+  .extsw { display:inline-block; width:.8rem; height:.8rem; border-radius:2px; vertical-align:-1px; margin-right:.4rem; }
+  .extsw-dot { border-radius:50%; }
+  .exttable { font-family:var(--sans); font-size:var(--fs-small); margin-top:var(--s2); }
+  .exttable summary { cursor:pointer; color:var(--accent); }
+  .exttablewrap { overflow-x:auto; margin:var(--s2) auto 0; max-width:100%; }
+  .exttablewrap table { border-collapse:collapse; margin:0 auto; font-family:var(--sans); font-size:.82rem; }
+  .exttablewrap th, .exttablewrap td { padding:.4rem .65rem; border-bottom:1px solid var(--rule);
+                                       text-align:center; font-variant-numeric:tabular-nums; }
+  .exttablewrap th { font-weight:600; color:var(--ink-2); border-bottom:2px solid var(--rule-2); vertical-align:bottom; }
+  .exttablewrap td:first-child, .exttablewrap th:first-child { text-align:left; }
+  .extpd th { max-width:9rem; }
+  .extpd .exttot td { font-weight:700; border-top:2px solid var(--rule-2); }
+  .extsrc { font-family:var(--sans); font-size:var(--fs-small); color:var(--ink-3);
+            max-width:72ch; margin:var(--s2) auto var(--s3); }
+  .extcta { display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; margin-top:var(--s3) !important; }
+  .extcta a { font-family:var(--sans); font-size:.9rem; padding:.55rem 1rem; border-radius:4px;
+              border:1px solid var(--accent); text-decoration:none; }
+  .extcta a:first-child { background:var(--accent); color:var(--surface); }
+  .extbody .warn { text-align:center; max-width:66ch; margin:var(--s4) auto; }
+  .extbody .warn > summary { cursor:pointer; list-style-position:inside; text-align:center; }
+  .extbody .warn p b { color:var(--ink); }
+  /* running totals: the label column carries a short note under each date */
+  .extrt td { vertical-align:top; }
+  .extrt td span { color:var(--ink-3); font-size:.74rem; }
+  .extrt-lab { min-width:9.5rem; }
+  .extrt .extrt-na { font-style:italic; }
+  .extrt tr.extrt-fwd td { background:var(--surface-2); }
+  .extrt tbody tr:nth-child(7) td { border-top:2px solid var(--rule-2); }   /* first forward row */
+  #extTip { position:fixed; pointer-events:none; z-index:50; background:var(--surface);
+            color:var(--ink); border:1px solid var(--rule-2); border-radius:4px;
+            padding:.4rem .6rem; font-family:var(--sans); font-size:.8rem; line-height:1.35;
+            box-shadow:0 2px 10px rgba(0,0,0,.12); opacity:0; transition:opacity .08s; max-width:16rem; text-align:left; }
+  #extTip.on { opacity:1; }
 </style>
 </head>
 <body>
@@ -1547,6 +1635,7 @@
     </div>
   </div>
 
+  <a class="navitem" href="/extinction/" data-v="extinct">Extinction</a>
   <a class="navitem" href="/rediscoveries/" data-v="redisc">Rediscoveries</a>
   <a class="navitem" href="/get-involved/" data-v="involved">Get Involved</a>
 </div></nav>
@@ -1578,6 +1667,13 @@
   <div id="ntTable"></div>
 
 </section>
+<!-- ============================ EXTINCTION ============================ -->
+<!-- DRAFT for /extinction/. Every figure is recorded with its source and method in
+     build_2026/EXTINCTION_VS_REDISCOVERY_2026-10-02.md. Charts and tables between the
+     CHART markers are written by make_charts.py from chart_data.json; do not hand-edit
+     them. They are static SVG so they render without scripts; section.js only adds the
+     styled hover tooltip. -->
+
 
 <!-- ========================= BLACK LIST OVERVIEW ========================= -->
 <div id="fieldTip" aria-hidden="true"></div>
@@ -1784,7 +1880,7 @@ const ROUTES = {home:"/", overview:"/black-list-overview/", register:"/the-black
                 sites:"/sites/", methods:"/methods/", newtaxa:"/new-species/",
                 "newtaxa-list":"/new-species-list/",
                 lost:"/lost-species/", "lost-list":"/lost-species-list/",
-                redisc:"/rediscoveries/", involved:"/get-involved/"};
+                extinct:"/extinction/", redisc:"/rediscoveries/", involved:"/get-involved/"};
 const viewForPath = p => {
   p = p.replace(/\/index\.html$/, "/");
   if (!p.endsWith("/")) p += "/";
@@ -5591,6 +5687,27 @@ function toggle(tr) {
       shown for context and are not ranked on.</p>` : ""}
   </td></tr>`);
 }
+/* /extinction/ hover tooltips. The charts and tables are static markup written by
+   make_charts.py, so the page reads the same with scripts off; every mark already carries
+   a native <title>. This only swaps that for a styled tooltip that follows the pointer. */
+(function () {
+  "use strict";
+  const tip = document.getElementById("extTip");
+  if (!tip) return;
+  document.querySelectorAll("#v-extinct .extsvg [data-tip]").forEach(node => {
+    const t = node.querySelector("title");
+    if (t) t.remove();                       // one tooltip, not two
+    node.addEventListener("pointerenter", () => { tip.innerHTML = node.getAttribute("data-tip"); tip.classList.add("on"); });
+    node.addEventListener("pointermove", e => {
+      const w = tip.offsetWidth, h = tip.offsetHeight;
+      let x = e.clientX + 14, y = e.clientY - h - 12;
+      if (x + w > innerWidth - 8) x = e.clientX - w - 14;
+      if (y < 8) y = e.clientY + 16;
+      tip.style.left = x + "px"; tip.style.top = y + "px";
+    });
+    node.addEventListener("pointerleave", () => tip.classList.remove("on"));
+  });
+})();
 </script>
 </body>
 </html>
