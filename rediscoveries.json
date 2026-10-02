@@ -1,13 +1,13 @@
 {
 "built": "2026-10-02",
 "counts": {
-"stories": 192,
+"stories": 191,
 "raw_items": 494,
 "with_species": 120,
 "distinct_species": 235,
 "distinct_species_firm": 49,
 "multi_species_cards": 48,
-"with_image": 184,
+"with_image": 182,
 "syndicated": 80,
 "on_tbg_list": 32,
 "on_list_breakdown": {
@@ -17,8 +17,8 @@
 "undated": 0,
 "newest": "Mon, 28 Sep 2026",
 "tracked_names": 6709,
-"image_local": 178,
-"archived": 130
+"image_local": 176,
+"archived": 128
 },
 "cards": [
 {
@@ -927,9 +927,9 @@
 "date": "Wed, 13 May 2026",
 "ts": 1778664263,
 "first_seen": "2026-08-10",
-"link": "https://onlinelibrary.wiley.com/action/cookieAbsent",
-"image": "/rd-img/06d8b28ab2cab70d.png",
-"wayback": "http://web.archive.org/web/20260720132620/https://onlinelibrary.wiley.com/action/cookieAbsent",
+"link": "https://onlinelibrary.wiley.com/doi/10.1002/ece3.73517",
+"image": "",
+"wayback": "",
 "desc": "",
 "citation": "",
 "kind": "",
@@ -3866,26 +3866,6 @@
 "image": "/rd-img/7e2795f358ac815e.jpg",
 "wayback": "",
 "desc": "Conservationists find native magnolia for first time since 1925 after original habitat destroyed by deforestation",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Canadian Museum Rediscovers a New Ancient Shark Species - The First of its Kind",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "discovery.com",
-"date": "Thu, 21 Jul 2022",
-"ts": 1658386800,
-"first_seen": "2026-09-06",
-"link": "https://www.discovery.com/science/shark-fossil-rediscovered-in-canadian-museum",
-"image": "/rd-img/43ed63225409a4a7.jpg",
-"wayback": "http://web.archive.org/web/20260312010027/https://www.discovery.com/science/shark-fossil-rediscovered-in-canadian-museum",
-"desc": "The Canadian Fossil Discovery Centre has recently \u201crediscovered\u201d an ancient shark skeleton that has been sitting in the museum\u2019s collection for nearly 50 years. Could this shark be a part of a newly discovered ancient shark species?",
 "citation": "",
 "kind": "",
 "note": "",
