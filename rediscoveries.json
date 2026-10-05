@@ -1,14 +1,14 @@
 {
-"built": "2026-10-03",
+"built": "2026-10-05",
 "counts": {
-"stories": 191,
-"raw_items": 494,
-"with_species": 120,
+"stories": 192,
+"raw_items": 495,
+"with_species": 121,
 "distinct_species": 235,
-"distinct_species_firm": 49,
-"multi_species_cards": 48,
-"with_image": 182,
-"syndicated": 80,
+"distinct_species_firm": 48,
+"multi_species_cards": 49,
+"with_image": 183,
+"syndicated": 81,
 "on_tbg_list": 32,
 "on_list_breakdown": {
 "on our lost-species list": 25,
@@ -17,8 +17,8 @@
 "undated": 0,
 "newest": "Mon, 28 Sep 2026",
 "tracked_names": 6709,
-"image_local": 176,
-"archived": 128
+"image_local": 177,
+"archived": 129
 },
 "cards": [
 {
@@ -845,12 +845,9 @@
 "title": "Plant believed extinct for 60 years suddenly reappears",
 "species": [
 "Ptilotus senarius",
-"Thismia kobensis",
-"Erica cunoniensis"
+"Thismia kobensis"
 ],
-"species_firm": [
-"Ptilotus senarius"
-],
+"species_firm": [],
 "on_list": "",
 "detail": "",
 "publisher": "ScienceDaily",
@@ -864,16 +861,8 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 8,
+"outlets": 3,
 "also": [
-{
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/"
-},
-{
-"publisher": "The Cool Down",
-"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/"
-},
 {
 "publisher": "InDaily South Australia",
 "link": "https://www.indailysa.com.au/news/just-in/2026/01/19/photo-leads-to-rediscovery-of-extinct-aussie-plant"
@@ -1050,6 +1039,46 @@
 "note": "",
 "outlets": 1,
 "also": []
+},
+{
+"title": "Scientists Stunned After Finding Plant Thought Extinct for 60 Years",
+"species": [
+"Ptilotus senarius",
+"Erica cunoniensis"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "SciTechDaily",
+"date": "Sat, 25 Apr 2026",
+"ts": 1777100400,
+"first_seen": "2026-08-10",
+"link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/",
+"image": "/rd-img/378fe96dccb976db.jpg",
+"wayback": "http://web.archive.org/web/20260209175711/https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years",
+"desc": "\u2018Extinct\u2019 Queensland plant rediscovered after 58 years A plant species presumed extinct in the wild has been rediscovered in northern Queensland\u2014thanks to a sharp-eyed observer, a smartpho",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 6,
+"also": [
+{
+"publisher": "scimex.org",
+"link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
+},
+{
+"publisher": "Newsweek",
+"link": "https://www.newsweek.com/botany-plant-believed-extinct-half-century-found-queensland-australia-11373400"
+},
+{
+"publisher": "NDTV",
+"link": "https://www.ndtv.com/science/australian-plant-once-thought-extinct-rediscovered-after-60-years-in-unexpected-spot-10789666"
+},
+{
+"publisher": "The Cool Down",
+"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/"
+}
+]
 },
 {
 "title": "Rare native species rediscovered on Lanai",
@@ -2053,8 +2082,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Bombyx mori",
-"Moema claudiae"
+"Moema claudiae",
+"Bombyx mori"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2064,20 +2093,16 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-16",
+"first_seen": "2026-08-10",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/bf92591b41aa53d3.jpg",
-"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
-"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
+"image": "/rd-img/b73e2fd705e4740e.jpg",
+"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 6,
 "also": [
-{
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
 {
 "publisher": "Phys.org",
 "link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
@@ -2089,6 +2114,10 @@
 {
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
 }
 ]
 },
@@ -2203,16 +2232,20 @@
 "publisher": "Forbes",
 "date": "Sat, 01 Nov 2025",
 "ts": 1761980400,
-"first_seen": "2026-08-31",
+"first_seen": "2026-08-21",
 "link": "https://www.forbes.com/sites/scotttravers/2025/11/01/meet-4-extinct-animals-that-were-miraculously-rediscovered-hint-one-was-an-ancient-fish-found-in-a-fishing-net-in-1938/",
-"image": "/rd-img/0135710740ad6cf4.jpg",
-"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
-"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
+"image": "/rd-img/360a925edf5429ce.jpg",
+"wayback": "http://web.archive.org/web/20251018175425/https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/",
+"desc": "Just because a species is presumed extinct doesn\u2019t mean it\u2019s gone forever. Here are four glowing examples of this unique, and felicitous, phenomenon.",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 4,
 "also": [
+{
+"publisher": "SciTechDaily",
+"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
+},
 {
 "publisher": "SussexWorld",
 "link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032"
@@ -2220,10 +2253,6 @@
 {
 "publisher": "news.uct.ac.za",
 "link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
-},
-{
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
 }
 ]
 },
