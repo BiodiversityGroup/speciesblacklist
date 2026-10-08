@@ -1,26 +1,103 @@
 {
-"built": "2026-10-05",
+"built": "2026-10-08",
 "counts": {
-"stories": 192,
-"raw_items": 495,
+"stories": 193,
+"raw_items": 500,
 "with_species": 121,
 "distinct_species": 235,
 "distinct_species_firm": 48,
 "multi_species_cards": 49,
-"with_image": 183,
+"with_image": 184,
 "syndicated": 81,
 "on_tbg_list": 32,
 "on_list_breakdown": {
-"on our lost-species list": 25,
-"on the Black List": 7
+"on the Black List": 7,
+"on our lost-species list": 25
 },
 "undated": 0,
-"newest": "Mon, 28 Sep 2026",
+"newest": "Wed, 07 Oct 2026",
 "tracked_names": 6709,
-"image_local": 177,
+"image_local": 178,
 "archived": 129
 },
 "cards": [
+{
+"title": "Why rediscovering extinct species can actually be a bad thing",
+"species": [
+"Psoralea cataracta",
+"Polhillia ignota",
+"Aspalathus cordicarpa"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "New Scientist",
+"date": "Wed, 07 Oct 2026",
+"ts": 1791385273,
+"first_seen": "2026-08-31",
+"link": "https://www.newscientist.com/article/2590861-why-rediscovering-extinct-species-can-actually-be-a-bad-thing/",
+"image": "/rd-img/0135710740ad6cf4.jpg",
+"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 4,
+"also": [
+{
+"publisher": "SussexWorld",
+"link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032"
+},
+{
+"publisher": "news.uct.ac.za",
+"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
+},
+{
+"publisher": "SciTechDaily",
+"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
+}
+]
+},
+{
+"title": "Back from the lost: Meet the Silver-backed Chevrotain",
+"species": [
+"Tragulus versicolor",
+"Tragulus kanchil"
+],
+"species_firm": [],
+"on_list": "Black List (Data Deficient)",
+"detail": "tier 1",
+"publisher": "Re:wild",
+"date": "Mon, 05 Oct 2026",
+"ts": 1791212704,
+"first_seen": "2026-09-04",
+"link": "https://www.rewild.org/blog/silver-backed-chevrotain-rediscovery",
+"image": "/rd-img/2db1aae91e8054bb.jpg",
+"wayback": "",
+"desc": "Silver-backed chevrotain caught on camera after it was feared lost to science",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 9,
+"also": [
+{
+"publisher": "the Guardian",
+"link": "https://www.theguardian.com/environment/2019/nov/11/mouse-deer-not-seen-nearly-30-years-found-alive-vietnam"
+},
+{
+"publisher": "CTVNews",
+"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
+},
+{
+"publisher": "scitechdaily.com",
+"link": "https://scitechdaily.com/lost-species-of-miniature-fanged-mouse-deer-rediscovered-sneaking-through-vietnams-coastal-forests/"
+},
+{
+"publisher": "Auckland Zoo",
+"link": "https://www.aucklandzoo.co.nz/news/rediscovering-a-species-lost-to-science-for-30-years"
+}
+]
+},
 {
 "title": "Gorgeous Lost Bird Species The Ghana Cuckooshrike Rediscovered In Forests Of The Cote d'Ivoire",
 "species": [],
@@ -861,15 +938,11 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 2,
 "also": [
 {
-"publisher": "InDaily South Australia",
-"link": "https://www.indailysa.com.au/news/just-in/2026/01/19/photo-leads-to-rediscovery-of-extinct-aussie-plant"
-},
-{
-"publisher": "Yahoo News Australia",
-"link": "https://au.news.yahoo.com/photo-leads-to-rediscovery-of-aussie-plant-species-almost-60-years-after-extinction-130150844.html"
+"publisher": "UA.NEWS",
+"link": "https://ua.news/en/world/u-dikii-prirodi-avstraliyi-znovu-znaishli-roslinu-iaku-vvazhali-vimerloiu"
 }
 ]
 },
@@ -1060,23 +1133,23 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 8,
 "also": [
 {
 "publisher": "scimex.org",
 "link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
 },
 {
+"publisher": "InDaily South Australia",
+"link": "https://www.indailysa.com.au/news/just-in/2026/01/19/photo-leads-to-rediscovery-of-extinct-aussie-plant"
+},
+{
+"publisher": "Yahoo News Australia",
+"link": "https://au.news.yahoo.com/photo-leads-to-rediscovery-of-aussie-plant-species-almost-60-years-after-extinction-130150844.html"
+},
+{
 "publisher": "Newsweek",
 "link": "https://www.newsweek.com/botany-plant-believed-extinct-half-century-found-queensland-australia-11373400"
-},
-{
-"publisher": "NDTV",
-"link": "https://www.ndtv.com/science/australian-plant-once-thought-extinct-rediscovered-after-60-years-in-unexpected-spot-10789666"
-},
-{
-"publisher": "The Cool Down",
-"link": "https://www.thecooldown.com/outdoors/ptilotus-senarius-wildflower-plant-rediscovery-australia/"
 }
 ]
 },
@@ -2221,11 +2294,7 @@
 },
 {
 "title": "Meet 4 \u2018Extinct\u2019 Animals That Were Miraculously Rediscovered (Hint: One Was An Ancient Fish Found In A Fishing Net In 1938)",
-"species": [
-"Psoralea cataracta",
-"Polhillia ignota",
-"Aspalathus cordicarpa"
-],
+"species": [],
 "species_firm": [],
 "on_list": "",
 "detail": "",
@@ -2235,26 +2304,13 @@
 "first_seen": "2026-08-21",
 "link": "https://www.forbes.com/sites/scotttravers/2025/11/01/meet-4-extinct-animals-that-were-miraculously-rediscovered-hint-one-was-an-ancient-fish-found-in-a-fishing-net-in-1938/",
 "image": "/rd-img/360a925edf5429ce.jpg",
-"wayback": "http://web.archive.org/web/20251018175425/https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/",
+"wayback": "",
 "desc": "Just because a species is presumed extinct doesn\u2019t mean it\u2019s gone forever. Here are four glowing examples of this unique, and felicitous, phenomenon.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
-"also": [
-{
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
-},
-{
-"publisher": "SussexWorld",
-"link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032"
-},
-{
-"publisher": "news.uct.ac.za",
-"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
-}
-]
+"outlets": 1,
+"also": []
 },
 {
 "title": "\u2018White-knuckled wolf spider\u2019 thought lost is rediscovered on Isle of Wight",
@@ -3217,12 +3273,16 @@
 "link": "https://www.moneycontrol.com/science/8-incredible-species-rediscovered-after-being-lost-for-years-visual-story-2869904.html",
 "image": "/rd-img/519eb5244cf16d44.jpg",
 "wayback": "http://web.archive.org/web/20260817220547/https://au.news.yahoo.com/incredible-phone-footage-leads-to-rediscovery-of-lost-species-after-46-years-070206070.html",
-"desc": "The flightless bird was thought to be extinct on the mainland and hadn't been seen for almost 50 years. See the video of its unexpected discovery.",
+"desc": "* I agree to the updated privacy policy and I warrant that I am above 16 years of age",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
+{
+"publisher": "Moneycontrol",
+"link": "https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/science/8-incredible-species-rediscovered-after-being-lost-for-years-visual-story-2869904.html"
+},
 {
 "publisher": "Yahoo News Australia",
 "link": "https://au.news.yahoo.com/incredible-phone-footage-leads-to-rediscovery-of-lost-species-after-46-years-070206070.html"
@@ -3391,19 +3451,23 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
 {
 "publisher": "euronews",
 "link": "https://www.euronews.com/2023/09/23/nature-surprises-us-scientists-in-brazil-rediscover-tree-thought-extinct-for-nearly-200-ye"
 },
 {
+"publisher": "Newsweek",
+"link": "https://www.newsweek.com/tree-extinct-discovered-2-centuries-incredible-find-1828749"
+},
+{
 "publisher": "Business Insider",
 "link": "https://www.businessinsider.com/rare-pernambuco-holly-tree-rediscovered-after-186-years-2023-9"
 },
 {
-"publisher": "Newsweek",
-"link": "https://www.newsweek.com/tree-extinct-discovered-2-centuries-incredible-find-1828749"
+"publisher": "WION",
+"link": "https://www.wionews.com/science/scientists-in-brazil-rediscover-tree-deemed-extinct-for-200-years-639074"
 }
 ]
 },
@@ -4085,46 +4149,6 @@
 "also": []
 },
 {
-"title": "\u2018Most Wanted\u2019 list leads to rediscovered species. Conservation group sets its sights on finding 8 more.",
-"species": [
-"Tragulus versicolor",
-"Tragulus kanchil"
-],
-"species_firm": [],
-"on_list": "Black List (Data Deficient)",
-"detail": "tier 1",
-"publisher": "The Washington Post",
-"date": "Mon, 14 Feb 2022",
-"ts": 1644825600,
-"first_seen": "2026-09-04",
-"link": "https://www.washingtonpost.com/kidspost/2022/02/14/most-wanted-lost-species/",
-"image": "/rd-img/2db1aae91e8054bb.jpg",
-"wayback": "",
-"desc": "Silver-backed chevrotain caught on camera after it was feared lost to science",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 7,
-"also": [
-{
-"publisher": "the Guardian",
-"link": "https://www.theguardian.com/environment/2019/nov/11/mouse-deer-not-seen-nearly-30-years-found-alive-vietnam"
-},
-{
-"publisher": "CTVNews",
-"link": "https://www.ctvnews.ca/sci-tech/article/lost-species-of-fanged-mouse-deer-spotted-for-first-time-in-30-years/"
-},
-{
-"publisher": "scitechdaily.com",
-"link": "https://scitechdaily.com/lost-species-of-miniature-fanged-mouse-deer-rediscovered-sneaking-through-vietnams-coastal-forests/"
-},
-{
-"publisher": "cnn.com",
-"link": "https://www.cnn.com/2021/08/27/world/gallery/rewild-search-for-lost-species-c2e-spc-intl"
-}
-]
-},
-{
 "title": "Surprise rediscovery of threatened duck diverts species from extinction",
 "species": [
 "Melanitta fusca"
@@ -4638,12 +4662,8 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 2,
 "also": [
-{
-"publisher": "Auckland Zoo",
-"link": "https://www.aucklandzoo.co.nz/news/rediscovering-a-species-lost-to-science-for-30-years"
-},
 {
 "publisher": "Inverse",
 "link": "https://www.inverse.com/science/animals-lost-then-found-by-scientists/amp"
