@@ -1,13 +1,13 @@
 {
-"built": "2026-10-08",
+"built": "2026-10-10",
 "counts": {
-"stories": 193,
-"raw_items": 500,
-"with_species": 121,
-"distinct_species": 235,
-"distinct_species_firm": 48,
-"multi_species_cards": 49,
-"with_image": 184,
+"stories": 194,
+"raw_items": 502,
+"with_species": 122,
+"distinct_species": 238,
+"distinct_species_firm": 49,
+"multi_species_cards": 50,
+"with_image": 185,
 "syndicated": 81,
 "on_tbg_list": 32,
 "on_list_breakdown": {
@@ -15,12 +15,56 @@
 "on our lost-species list": 25
 },
 "undated": 0,
-"newest": "Wed, 07 Oct 2026",
+"newest": "Thu, 08 Oct 2026",
 "tracked_names": 6709,
-"image_local": 178,
-"archived": 129
+"image_local": 179,
+"archived": 130
 },
 "cards": [
+{
+"title": "Number of known species of giant waterlilies almost doubles",
+"species": [
+"Victoria amazonica",
+"Victoria cruziana",
+"Victoria boliviana"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "New Scientist",
+"date": "Thu, 08 Oct 2026",
+"ts": 1791475200,
+"first_seen": "2026-10-10",
+"link": "https://www.newscientist.com/article/2592896-the-number-of-known-species-of-giant-waterlilies-just-doubled/?utm_campaign=RSS%7CNSNS&utm_content=life&utm_medium=RSS&utm_source=NSNS",
+"image": "/rd-img/e1f87cabca77b556.jpg",
+"wayback": "",
+"desc": "A new species of giant waterlily identified with the help of social media and satellite photos is just one of three discovered in the past few years",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "Puerto Rico specimen reveals new giant isopod species that went unrecognized for decades",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Phys.org",
+"date": "Thu, 08 Oct 2026",
+"ts": 1791452400,
+"first_seen": "2026-10-10",
+"link": "https://phys.org/news/2026-10-puerto-rico-specimen-reveals-giant.html",
+"image": "/rd-img/c2d8d4bfae8304ba.jpg",
+"wayback": "http://web.archive.org/web/20261008173159/https://phys.org/news/2026-10-puerto-rico-specimen-reveals-giant.html",
+"desc": "A giant isopod from Puerto Rico, rediscovered in the depository of the University of T\u00fcbingen's Paleontological Collection, has turned out to be a previously unknown species.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "Why rediscovering extinct species can actually be a bad thing",
 "species": [
@@ -2669,26 +2713,24 @@
 "species": [
 "Afroedura rondavelica"
 ],
-"species_firm": [],
+"species_firm": [
+"Afroedura rondavelica"
+],
 "on_list": "Lost Species",
 "detail": "Reptile, lost, last seen 1991",
 "publisher": "The Independent",
 "date": "Fri, 01 Aug 2025",
 "ts": 1754031600,
-"first_seen": "2026-08-31",
+"first_seen": "2026-08-10",
 "link": "https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
-"image": "/rd-img/7f5c2fd921dcbdf6.jpg",
-"wayback": "http://web.archive.org/web/20260819183224/https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
-"desc": "A rare gecko species last seen more than three decades ago has been rediscovered at a remote site in the Blyde River",
+"image": "/rd-img/286e73d16ad525f8.jpg",
+"wayback": "http://web.archive.org/web/20251010172605/https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/",
+"desc": "The species was first discovered by Dr Niels Jacobsen in December 1991, when he collected two males.",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 14,
 "also": [
-{
-"publisher": "Good Things Guy",
-"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
-},
 {
 "publisher": "IOL",
 "link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
@@ -2700,6 +2742,10 @@
 {
 "publisher": "Sunday Independent",
 "link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "IOL",
+"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/"
 }
 ]
 },
@@ -2722,11 +2768,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "Tech Explorist",
 "link": "https://www.techexplorist.com/world-smallest-snake-lost-species-found/100396/"
+},
+{
+"publisher": "PBS News",
+"link": "https://www.pbs.org/newshour/science/worlds-smallest-known-snake-slithers-its-way-into-rediscovery-in-aha-moment-for-scientists"
 },
 {
 "publisher": "Good News Network",
@@ -2761,26 +2811,6 @@
 "link": "https://www.iflscience.com/the-worlds-tiniest-snake-was-lost-to-science-for-20-years-now-its-back-and-we-have-photos-80112"
 }
 ]
-},
-{
-"title": "World's smallest-known snake slithers its way into rediscovery in 'aha moment' for scientists",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "PBS News",
-"date": "Wed, 23 Jul 2025",
-"ts": 1753254000,
-"first_seen": "2026-08-25",
-"link": "https://www.pbs.org/newshour/science/worlds-smallest-known-snake-slithers-its-way-into-rediscovery-in-aha-moment-for-scientists",
-"image": "/rd-img/13ce53136bb527f7.jpg",
-"wayback": "",
-"desc": "The Barbados threadsnake, which reaches about four inches fully grown, has only been seen a handful of times since 1889.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
 },
 {
 "title": "Rare Gecko Species Rediscovered in Galapagos Following Island Restoration Success",
@@ -3466,7 +3496,7 @@
 "link": "https://www.businessinsider.com/rare-pernambuco-holly-tree-rediscovered-after-186-years-2023-9"
 },
 {
-"publisher": "WION",
+"publisher": "Wion",
 "link": "https://www.wionews.com/science/scientists-in-brazil-rediscover-tree-deemed-extinct-for-200-years-639074"
 }
 ]
