@@ -1,11 +1,11 @@
 {
-"built": "2026-10-10",
+"built": "2026-10-12",
 "counts": {
 "stories": 194,
-"raw_items": 502,
+"raw_items": 503,
 "with_species": 122,
 "distinct_species": 238,
-"distinct_species_firm": 49,
+"distinct_species_firm": 48,
 "multi_species_cards": 50,
 "with_image": 185,
 "syndicated": 81,
@@ -2199,8 +2199,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Moema claudiae",
-"Bombyx mori"
+"Bombyx mori",
+"Moema claudiae"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2210,16 +2210,20 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-08-16",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/b73e2fd705e4740e.jpg",
-"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
-"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
+"image": "/rd-img/bf92591b41aa53d3.jpg",
+"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
+"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 6,
 "also": [
+{
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+},
 {
 "publisher": "Phys.org",
 "link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
@@ -2231,10 +2235,6 @@
 {
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
-},
-{
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
 }
 ]
 },
@@ -2436,7 +2436,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "Daily Maverick",
@@ -2445,6 +2445,10 @@
 {
 "publisher": "Cape Town ETC",
 "link": "https://www.capetownetc.com/news/rare-erica-plant-rediscovered-after-40-years-in-kogelberg/"
+},
+{
+"publisher": "IOL",
+"link": "https://iol.co.za/weekend-argus/news/2025-10-23-rediscovery-of-the-endangered-erica-cunoniensis-a-beacon-of-hope-for-conservation/"
 }
 ]
 },
@@ -2713,24 +2717,26 @@
 "species": [
 "Afroedura rondavelica"
 ],
-"species_firm": [
-"Afroedura rondavelica"
-],
+"species_firm": [],
 "on_list": "Lost Species",
 "detail": "Reptile, lost, last seen 1991",
 "publisher": "The Independent",
 "date": "Fri, 01 Aug 2025",
 "ts": 1754031600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-08-31",
 "link": "https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
-"image": "/rd-img/286e73d16ad525f8.jpg",
-"wayback": "http://web.archive.org/web/20251010172605/https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/",
-"desc": "The species was first discovered by Dr Niels Jacobsen in December 1991, when he collected two males.",
+"image": "/rd-img/7f5c2fd921dcbdf6.jpg",
+"wayback": "http://web.archive.org/web/20260819183224/https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
+"desc": "A rare gecko species last seen more than three decades ago has been rediscovered at a remote site in the Blyde River",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 14,
 "also": [
+{
+"publisher": "Good Things Guy",
+"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
+},
 {
 "publisher": "IOL",
 "link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
@@ -2742,10 +2748,6 @@
 {
 "publisher": "Sunday Independent",
 "link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "IOL",
-"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/"
 }
 ]
 },
