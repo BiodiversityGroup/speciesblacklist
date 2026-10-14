@@ -231,6 +231,16 @@
    }
   },
   {
+   "sp": "Bokermannohyla izecksohni",
+   "why": "in-range records from 2008 to 2018 (10 GBIF records plus the verified ones) with no ten-year silence anywhere; the listing was the error; source: 10.15560/4.4.442",
+   "class": "records all along: a species that was never lost"
+  },
+  {
+   "sp": "Brachymeles lukbani",
+   "why": "in-range records from 2008 to 2026 (214 GBIF records plus the verified ones) with no ten-year silence anywhere; the listing was the error; source: https://www.gbif.org/occurrence/6456553309",
+   "class": "records all along: a species that was never lost"
+  },
+  {
    "sp": "Bradycellus chavesi",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 7546630), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -413,6 +423,11 @@
     "iucn_name": "Cryptoblepharus egeriae (Boulenger, 1888)",
     "reason": "IUCN Red List lists it Extinct in the Wild; GBIF's Red List mirror returns EXTINCT_IN_THE_WILD for the exact name match (usage 2463625), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Ctenosaura bakeri",
+   "why": "in-range records from 2003 to 2026 (105 GBIF records plus the verified ones) with no ten-year silence anywhere; the listing was the error; source: 10.1670/07-248r2.1",
+   "class": "records all along: a species that was never lost"
   },
   {
    "sp": "Cyanea arborea",
@@ -833,6 +848,11 @@
    "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/181616213"
   },
   {
+   "sp": "Elephantulus pilicaudus",
+   "why": "in-range records from 2008 to 2026 (13 GBIF records) with no ten-year silence anywhere; the listing was the error; source: https://www.gbif.org/occurrence/6479961766",
+   "class": "records all along: a species that was never lost"
+  },
+  {
    "sp": "Erythrolamprus perfuscus",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9619895), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -849,6 +869,11 @@
     "iucn_name": "Erythrolamprus perfuscus (Cope, 1862)",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9619895), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Eutropis macrophthalma",
+   "why": "in-range records from 1999 to 2026 (51 GBIF records plus the verified ones) with no ten-year silence anywhere; the listing was the error; source: https://www.gbif.org/occurrence/5147508522",
+   "class": "records all along: a species that was never lost"
   },
   {
    "sp": "Galba vancouverensis",
@@ -1022,6 +1047,11 @@
    "sp": "Linum aristatum",
    "why": "bristle flax, Not Evaluated, 972 GBIF records, observed 2026",
    "class": "recorded alive since the list called it lost"
+  },
+  {
+   "sp": "Liolaemus crandalli",
+   "why": "in-range records from 2009 to 2022 (4 GBIF records plus the verified ones) with no ten-year silence anywhere; the listing was the error; source: 10.11646/zootaxa.3947.1.4",
+   "class": "records all along: a species that was never lost"
   },
   {
    "sp": "Lithobates fisheri",
@@ -1274,6 +1304,12 @@
    "class": "the same species twice, under two names"
   },
   {
+   "sp": "Parietaria rechingeri",
+   "why": "the list carried no date and a research-grade photograph in 2024 confirms it alive inside the ten-year window; the row never met the definition of lost",
+   "class": "recorded alive since the list called it lost",
+   "evidence": "Iraq human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/233344942"
+  },
+  {
    "sp": "Partula guamensis",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5783032), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -1344,6 +1380,11 @@
     "iucn_name": "Peperomia degeneri Yunck.",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3086487), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Phelsuma gouldi",
+   "why": "in-range records from 2009 to 2026 (14 GBIF records plus the verified ones) with no ten-year silence anywhere; the listing was the error; source: 10.11646/zootaxa.2982.1.4",
+   "class": "records all along: a species that was never lost"
   },
   {
    "sp": "Pieris wollastoni",
@@ -1691,7 +1732,7 @@
   }
  ],
  "meta": {
-  "n": 118,
+  "n": 126,
   "iucn_extinct_checked": "2026-09-18",
   "note": "Species removed from the Lost Species page, each with its reason. The upstream list is unchanged. Country resolution only."
  }

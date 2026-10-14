@@ -442,8 +442,8 @@
    "src": "published payload"
   },
   "longest_contradicted_others": {
-   "t": "18",
-   "v": 18,
+   "t": "14",
+   "v": 14,
    "src": "longest_vetted.json: GBIF-contradicted candidates other than the two the page names"
   },
   "longest_first_contradicted": {
@@ -462,8 +462,8 @@
    "src": "longest_vetted.json: candidates rejected"
   },
   "lost_invert_and_plant": {
-   "t": "705",
-   "v": 705,
+   "t": "704",
+   "v": 704,
    "src": "published payload"
   },
   "lost_invertebrates": {
@@ -472,18 +472,18 @@
    "src": "published payload"
   },
   "lost_n_species": {
-   "t": "2,016",
-   "v": 2016,
+   "t": "2,008",
+   "v": 2008,
    "src": "published payload"
   },
   "lost_not_flagged_pe": {
-   "t": "1,395",
-   "v": 1395,
+   "t": "1,387",
+   "v": 1387,
    "src": "lost-species.json: rows whose Red List category is not CR(PE)"
   },
   "lost_total": {
-   "t": "2,016",
-   "v": 2016,
+   "t": "2,008",
+   "v": 2008,
    "src": "lost-species.json meta.n"
   },
   "lost_total_floor_1000": {
