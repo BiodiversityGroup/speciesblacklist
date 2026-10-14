@@ -12946,10 +12946,10 @@
 "by_redlist": {
 "CR(PE)": 621,
 "CR": 204,
-"DD": 454,
+"DD": 455,
 "EN": 98,
 "LC": 201,
-"not in IUCN index": 265,
+"not in IUCN index": 264,
 "VU": 57,
 "NT": 21,
 "NE": 87
@@ -13049,9 +13049,9 @@
 "Insect": 7
 },
 "cls": {
-"long-lost": 50,
+"long-lost": 45,
 "lost": 27,
-"rediscovered": 13,
+"rediscovered": 18,
 "unclassified": 8
 },
 "rl": {
@@ -13090,8 +13090,8 @@
 "rl": {
 "CR(PE)": 38,
 "CR": 26,
-"DD": 13,
-"not in IUCN index": 8,
+"DD": 14,
+"not in IUCN index": 7,
 "EN": 2,
 "LC": 1
 },
@@ -13117,9 +13117,9 @@
 "Plant - Trees & Shrubs": 4
 },
 "cls": {
-"lost": 44,
-"long-lost": 38,
-"rediscovered": 2
+"lost": 43,
+"long-lost": 37,
+"rediscovered": 4
 },
 "rl": {
 "CR(PE)": 66,
@@ -13185,8 +13185,8 @@
 },
 "cls": {
 "long-lost": 40,
-"lost": 12,
-"rediscovered": 2
+"lost": 11,
+"rediscovered": 3
 },
 "rl": {
 "not in IUCN index": 20,

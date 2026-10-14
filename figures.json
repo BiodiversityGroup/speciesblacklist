@@ -121,15 +121,25 @@
    "v": 3031,
    "src": "published payload"
   },
-  "expected_finds_sa_amphibians_2021_30": {
-   "t": "24",
-   "v": 23.62826188301511,
-   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+  "expected_finds_amphibians": {
+   "t": "65",
+   "v": 64.8,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
-  "expected_finds_total_2021_30": {
-   "t": "116",
-   "v": 115.69256409644716,
-   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+  "expected_finds_reptiles": {
+   "t": "84",
+   "v": 84.0,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
+  },
+  "expected_finds_sa_amphibians": {
+   "t": "37",
+   "v": 37.4,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
+  },
+  "expected_finds_total": {
+   "t": "187",
+   "v": 187.1,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "ext_mammal_rate_multiple": {
    "t": "5x",
@@ -552,14 +562,14 @@
    "src": "published payload"
   },
   "odds_birds_vs_amphibians": {
-   "t": "2.4x",
-   "v": 2.4238578682985037,
-   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+   "t": "2.3x",
+   "v": 2.33,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "odds_mammals_vs_amphibians": {
-   "t": "2.2x",
-   "v": 2.2048182152762656,
-   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+   "t": "2.1x",
+   "v": 2.07,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "pd_africa_lost_before1500_n": {
    "t": "18",
@@ -812,9 +822,69 @@
    "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_species.json"
   },
   "predict_candidates": {
-   "t": "840",
-   "v": 840,
-   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+   "t": "838",
+   "v": 838,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
+  },
+  "predict_early_first": {
+   "t": "1995",
+   "v": 1995,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics (meta.check.earlier_windows_v4)"
+  },
+  "predict_early_last": {
+   "t": "2014",
+   "v": 2014,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics (meta.check.earlier_windows_v4; each window is ten years)"
+  },
+  "predict_early_top_fifth_pct": {
+   "t": "46%",
+   "v": 46.400000000000006,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics (top-fifth finds over all finds, pooled)"
+  },
+  "predict_lead_countries": {
+   "t": "Colombia, Indonesia, Brazil and Mexico",
+   "v": "Colombia, Indonesia, Brazil and Mexico",
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
+  },
+  "predict_made": {
+   "t": "October 13, 2026",
+   "v": "October 13, 2026",
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics (meta.made)"
+  },
+  "predict_next_countries": {
+   "t": "Australia, Ecuador, Peru, Venezuela and India",
+   "v": "Australia, Ecuador, Peru, Venezuela and India",
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
+  },
+  "predict_recent_finds": {
+   "t": "31",
+   "v": 31,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics (check_2021_fold)"
+  },
+  "predict_top100_tbg_only": {
+   "t": "19",
+   "v": 19,
+   "src": "top100_select.py: the Top 100 as the page shows it"
+  },
+  "predict_train_first": {
+   "t": "1990",
+   "v": 1990,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
+  },
+  "predict_train_last": {
+   "t": "2015",
+   "v": 2015,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
+  },
+  "predict_window_first": {
+   "t": "2027",
+   "v": 2027,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
+  },
+  "predict_window_last": {
+   "t": "2036",
+   "v": 2036,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "rdb_reptiles_no_global_assessment": {
    "t": "2,467",
@@ -977,9 +1047,9 @@
    "src": "published payload"
   },
   "us_conservation_revenue_2022_busd": {
-   "t": "16",
-   "v": 15.91,
-   "src": "C:/Connect and Conserve/PowerBI_2022_Refresh/data2025/CnC_root_long.csv (Type==Revenue, Year==2022, EIN present); script C:/Connect and Conserve/derive_2022_rev"
+   "t": "17",
+   "v": 17.350853084,
+   "src": "C&C figures.json us_revenue_2022_usd_b (CnC_root_long.csv, 2022 Revenue rows with an EIN, summed)"
   },
   "validation_fisher_p": {
    "t": "0.0007",
