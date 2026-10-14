@@ -1827,7 +1827,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       says it works on, and we pointed it at all eight thousand species here.</p>
     <p><strong>Sixty three came back.</strong> Not sixty three percent, not sixty three
       hundred. Sixty three species, out of eight thousand, have any organization anywhere
-      that names them. For every species with somebody's name attached, <strong>127</strong>
+      that names them. For every species with somebody's name attached, <strong><span data-fig="cnc_unnamed_per_named">127</span></strong>
       have nobody at all.</p>
     <p>And the money follows the same shape. Ray-finned fishes are half of the Black List, by
       far the largest group of species nobody can categorize, and per species they receive
@@ -1885,23 +1885,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         Deficient vertebrate</span></div>
     </div>
     <p>The whole Red List, every group, runs on roughly five million dollars a year,
-      against about <strong>$16 billion</strong> the US conservation sector took in
+      against about <strong>$<span data-fig="us_conservation_revenue_2022_busd">16</span> billion</strong> the US conservation sector took in
       during 2022. The one instrument the entire field uses to decide what is
       endangered is a rounding error on it. That is a bargain and an embarrassment at
       the same time.</p>
     <p>Here is the number nobody has published. There are
-      <strong id="cost_dd">8,659</strong> Data Deficient vertebrates on the Red List,
+      <strong id="cost_dd"><span data-fig="iucn_dd_vertebrates">8,659</span></strong> Data Deficient vertebrates on the Red List,
       and at workshop rates, looking at every one of them comes to about
-      <strong id="cost_total">$2.9 million</strong>, <span id="cost_months">seven
+      <strong id="cost_total">$<span data-fig="dd_assessment_cost_musd">2.9</span> million</strong>, <span id="cost_months">seven
       months</span> of the Red List's own budget. And it would not be a shot in the
       dark: where the record already pins a species to one small area,
-      <strong id="cost_hit">56%</strong> came back threatened when IUCN looked again,
-      against <strong id="cost_base">21%</strong> for the rest. Fifteen of twenty
+      <strong id="cost_hit"><span data-fig="validation_high_rate_pct0">56%</span></strong> came back threatened when IUCN looked again,
+      against <strong id="cost_base"><span data-fig="validation_low_rate">21%</span></strong> for the rest. Fifteen of twenty
       seven, so read it as a direction and not a decimal.</p>
     <p class="homecaveat">The caveat we will not bury: that per species cost traces to
       one unpublished personal communication from 2013, and of the
-      <strong id="cost_ourdd">3,031</strong> Data Deficient species on our own list,
-      <strong id="cost_repeat">1,210</strong>, <span id="cost_repeat_frac">four in
+      <strong id="cost_ourdd"><span data-fig="register_dd">3,031</span></strong> Data Deficient species on our own list,
+      <strong id="cost_repeat"><span data-fig="dd_reassessed_still_dd">1,210</span></strong>, <span id="cost_repeat_frac">four in
       ten</span>, have been assessed more than once and come back Data Deficient every
       time. Money spent on looking is not money spent on finding out. Budgeting from
       these numbers starts at <a href="/methods/">the methods page</a>.</p>
@@ -3112,11 +3112,15 @@ function ensureNsMap() {
     .then(d => {
       NSMAP = d;
       const m = d.meta || {}, n = $("#nsMapNote");
-      if (n && m.unplaced) {
-        n.textContent = `${m.placed.toLocaleString()} of ${m.total.toLocaleString()} `
-          + `species are placed here, across ${m.places} countries. The other `
-          + `${m.unplaced} give a distribution this map could not resolve to a single `
-          + `country and are not drawn.`;
+      /* SPECIES, not rows. meta.total and meta.placed count rows, one per country for a
+         mammal listed from several, so this note used to print "3,167 of 3,225 species"
+         while the lists held 3,089. species_* are counted once per species. */
+      if (n && m.species) {
+        n.textContent = `${m.species_placed.toLocaleString()} of ${m.species.toLocaleString()} `
+          + `species are placed here, across ${m.places} countries`
+          + (m.species_unplaced ? `. The other ${m.species_unplaced} give a distribution this `
+             + `map could not resolve to a single country and are not drawn` : "")
+          + `. A mammal recorded from several countries is counted in each.`;
       }
       return true;
     }).catch(() => false);
@@ -3698,7 +3702,7 @@ const NT_EV = {
    predicts threat at OR 2.46, p = 0.00005 — and unlike coordinates it exists for every
    species on the list. The finer, coordinate-led classes it replaced were both
    unvalidated (island endemism came back at p = 1) and unobtainable: geocoding the
-   locality prose measured a 53 km median error with a 5,469 km worst case. */
+   locality prose was measured against published coordinates (figures.json geo_acc_*: re-measured 2026-10-13 after the first record of that test was lost). */
 const NT_RC = {
   A: ["One landform", "Confined to a single named landform (a massif, lake or reserve) within one province. The narrowest statement the published distribution makes."],
   B: ["One province", "Endemic to a single country and a single province or island."],
@@ -3995,7 +3999,10 @@ let RD = null, rdLoading = false;
 const LIST_LABEL = {
   "Lost Species": "was on our lost list",
   "Black List (Data Deficient)": "on the Black List",
+  "Black List (Not Evaluated)": "on the Black List",
   "Never assessed (reptiles)": "never assessed",
+  "Never assessed (amphibians)": "never assessed",
+  "Never assessed (birds and mammals)": "never assessed",
 };
 
 /* ---- the classics: pre-feed rediscoveries ------------------------------------------
@@ -4435,6 +4442,24 @@ function loadData() {
 }
 loadData();
 
+/* EVERY FIGURE IN THE PROSE, REFRESHED FROM THE DATA ON EACH LOAD.
+   A number written in the page sits in an element carrying data-fig="key". The build
+   (scripts/28_build_figures.py) computes every key from the payloads, writes figures.json and
+   writes the same text into the HTML, so a crawler or a reader without scripts already sees
+   the current value. This refreshes those elements from /figures.json, so a payload published
+   between full builds (the daily rediscoveries feed) shows without one. On a failed load the
+   text from the build simply stays: it is the last good value, never a blank. */
+function fillFigures() {
+  getJSON("/figures.json").then(d => {
+    const F = (d && d.figures) || {};
+    document.querySelectorAll("[data-fig]").forEach(el => {
+      const f = F[el.getAttribute("data-fig")];
+      if (f && typeof f.t === "string" && el.textContent !== f.t) el.textContent = f.t;
+    });
+  }, err => console.warn("figures.json did not load; showing the figures from the build:", err));
+}
+fillFigures();
+
 function boot() {
   const m = DATA.meta, c = m.counts, v = m.validation;
   /* Lowest tier counted as priority. Read from the payload so the page and
@@ -4746,8 +4771,9 @@ function boot() {
      the mistake this project has a rule against: IUCN v2026-1 alone holds 8,659 Data
      Deficient vertebrates, and the never-assessed count is larger still and genuinely
      unknown (the separate new-species work found 1,729 reptiles and 974 amphibians
-     described since 2015, and a checklist comparison leaves 2,345 reptiles the Red List
-     has no record of). Label a coverage figure as coverage. */
+     described since 2015, and a checklist comparison leaves thousands of reptiles with no
+     global Red List assessment: figures.json rdb_reptiles_no_global_assessment). Label a
+     coverage figure as coverage. */
   /* THE SCALE TILE LEADS, because without it a reader has no way to tell whether 3,062 is
      most of the problem or a slice of it, and every previous version of this table invited
      the second reading by starting with the register's own size. 8,659 is counted from the
@@ -4756,8 +4782,10 @@ function boot() {
 
      The never-assessed half is deliberately worded rather than numbered. IUCN publishes no
      count of what it has not looked at, and any figure would be invented. "Thousands more"
-     is defensible from the site's own work: 2,345 reptiles have no Red List entry at all,
-     and 1,729 reptiles plus 974 amphibians described since 2015 have never been assessed. */
+     is defensible from the site's own work (figures.json: rdb_reptiles_no_global_assessment,
+     reptiles in the Reptile Database with no global Red List assessment, and nev_total,
+     species described since 2015 never assessed). The 2,345 once quoted here was a
+     subtraction of two totals against the 2024 Red List, not a count; corrected 2026-10-13. */
   $("#counts").innerHTML = [
     /* "at all" twice over read as a dig at IUCN, which is not the argument. The point is
        that the gap is large and that the register covers a slice of it, and that reads
@@ -5424,7 +5452,7 @@ async function ensureMap() {
     species that sit there. <strong>${ck.validated || 0}</strong> agree and are
     plotted; <strong>${ck.contradicted || 0}</strong> disagreed by more than
     ${GEO.threshold_km}&nbsp;km and are discarded. "Congo River" first resolved to a
-    real river of that name in Sierra Leone, 4,000&nbsp;km from the Congo, and passed a
+    real river of that name in Sierra Leone, about 3,500&nbsp;km from the Congo records, and passed a
     type check as river/river; it was later recovered by asking the gazetteer only about
     the basin the fish live in. <strong>${ck.unverified || 0}</strong> have no species
     with records to check against, so they cannot be verified either way; those are

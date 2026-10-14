@@ -1660,9 +1660,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         it has two blind spots. Some species are assessed and come back
         <strong>Data Deficient</strong>, meaning IUCN looked and there was not enough
         information to say. Others are <strong>Not Evaluated</strong>, meaning nobody has
-        looked at all. Lost species fall into these blind spots more than most: of the 856
+        looked at all. Lost species fall into these blind spots more than most: of the <span data-fig="lindken_still_lost">856</span>
         amphibians, reptiles, birds and mammals still missing in <a href="https://doi.org/10.1111/gcb.17107" target="_blank" rel="noopener">a 2024 global
-        study</a>, about half have no usable assessment, 207 never evaluated and 214 Data
+        study</a>, about half have no usable assessment, <span data-fig="lindken_still_lost_ne">207</span> never evaluated and <span data-fig="lindken_still_lost_dd">214</span> Data
         Deficient. In practice both are treated as though the species were safe.</p>
       <!-- Added 2026-08-27. "Treated as though safe" was the one claim on this page with
            no evidence behind it, and the 2021-2026 literature review found this to be the
@@ -1682,11 +1682,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         species (<a href="https://doi.org/10.1071/PC24048" target="_blank"
         rel="noopener">Bonifacio et al. 2024</a>).</p>
       <p class="lede"><strong>The gap is much bigger than this list.</strong> IUCN
-        v2026&#8209;1 records <strong>8,659</strong> vertebrates as Data Deficient, and the
+        v2026&#8209;1 records <strong data-fig="iucn_dd_vertebrates">8,659</strong> vertebrates as Data Deficient, and the
         number never assessed is larger again; nobody knows it precisely. The Reptile
-        Database alone holds <strong>2,345 reptiles</strong> the Red List has no entry
-        for, and <a href="/new-species/" data-goto="newtaxa">a separate count</a> finds
-        3,088 reptiles, amphibians, birds and mammals described since 2015 that have
+        Database alone holds <strong><span data-fig="rdb_reptiles_no_global_assessment">2,467</span> reptiles</strong> with no global Red List
+        assessment, and <a href="/new-species/" data-goto="newtaxa">a separate count</a> finds
+        <span data-fig="nev_total">3,089</span> reptiles, amphibians, birds and mammals described since 2015 that have
         never been assessed. What follows is a <em>ranked subset</em> of that gap, not a
         measure of it.</p>
       <!-- The scale caveat above has always been here. What was missing is the SAMPLING
@@ -1747,8 +1747,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         several at once are listed under
         <a href="/sites/" data-goto="sites">localities</a>.</p>
       <canvas id="field" role="img"
-              aria-label="A dense field of marks, one for each of the 2,407 species in
-              the list, shaded by how narrowly restricted its published record is.
+              aria-label="A dense field of marks, one for each species in the list,
+              shaded by how narrowly restricted its published record is.
               The same data is listed in full under The Black List."></canvas>
       <p class="field-note">Hover a mark to name the species; select one to open its
         record. How the tiers were built and tested, and what the ranking cannot tell you,
@@ -1766,9 +1766,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <h3>Does the ranking agree with IUCN's own verdict?</h3>
     <p style="font-family:var(--sans);font-size:.88rem;color:var(--ink-2);margin:.5rem 0 0;
        ">Between the previous data and v2026&#8209;1, IUCN independently
-      reassessed <span class="num">108</span> of these species. The ranking rules
+      reassessed <span class="num"><span data-fig="validation_n_labelled">140</span></span> of these species. The ranking rules
       never saw those outcomes, so they work as an answer key. Two caveats: only
-      <span class="num">28</span> of the reassessed sit in the priority stratum, so
+      <span class="num"><span data-fig="validation_high_n">27</span></span> of the reassessed sit in the priority stratum, so
       the interval matters more than the point; and ranking and assessment read the
       same primary literature, so this is two readings of one evidence base agreeing,
       not a blind prediction. Share reassessed as threatened or extinct:</p>
@@ -1783,9 +1783,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       worked down by specialist consensus rather than new fieldwork, so a species can
       reach Least Concern because nobody reported a threat. We tested that by throwing
       out the thinnest calls, and the result gets <em>stronger</em>, not weaker: set
-      aside every call resting on five or fewer specimen records worldwide and 53.6%
-      becomes 62.5%; keep only the reassessments citing new research on that particular
-      species and it reaches 83.3%. The honest concession is that most reassessments
+      aside every call resting on five or fewer specimen records worldwide and <span data-fig="validation_high_rate_pct1">55.6%</span>
+      becomes <span data-fig="sens_drop_thin_high_rate">65.2%</span>; keep only the reassessments citing new research on that particular
+      species and it reaches <span data-fig="sens_species_specific_high_rate">88.2%</span>. The honest concession is that most reassessments
       cite no new species-specific research at all, on both sides of the ledger, so it
       does not tilt the comparison. Methods §4a has the tables and the limit of the
       argument.</p>
@@ -1812,14 +1812,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
   <aside class="datagrab">
     <h3>Take the data</h3>
-    <p>The whole Black List as one JSON file: all <strong>3,062</strong> species with their
+    <p>The whole Black List as one JSON file: all <strong><span data-fig="register_total">3,062</span></strong> species with their
       tier, evidence, locality text, threats and Red List history. No sign-up, no
       license to accept beyond IUCN's own terms, cited in the footer.</p>
     <a class="datagrab-btn" href="/data.json" download>
       Download the Black List
-      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
+      <span>data.json &middot; <span data-fig="data_json_size_mb">1.7</span>&nbsp;MB &middot; <span data-fig="register_total">3,062</span> species</span>
     </a>
-    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
+    <p class="datagrab-note">Built <span id="dgBuilt" data-fig="data_built">2026-10-13</span> against IUCN Red
       List v2026&#8209;1. Rebuilt whenever the list changes, at the same address, so a
       script can fetch it on a schedule.</p>
   </aside>
@@ -1900,14 +1900,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
   <aside class="datagrab">
     <h3>Take the data</h3>
-    <p>The whole Black List as one JSON file: all <strong>3,062</strong> species with their
+    <p>The whole Black List as one JSON file: all <strong><span data-fig="register_total">3,062</span></strong> species with their
       tier, evidence, locality text, threats and Red List history. No sign-up, no
       license to accept beyond IUCN's own terms, cited in the footer.</p>
     <a class="datagrab-btn" href="/data.json" download>
       Download the Black List
-      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
+      <span>data.json &middot; <span data-fig="data_json_size_mb">1.7</span>&nbsp;MB &middot; <span data-fig="register_total">3,062</span> species</span>
     </a>
-    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
+    <p class="datagrab-note">Built <span id="dgBuilt" data-fig="data_built">2026-10-13</span> against IUCN Red
       List v2026&#8209;1. Rebuilt whenever the list changes, at the same address, so a
       script can fetch it on a schedule.</p>
   </aside>
@@ -1974,14 +1974,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
   <aside class="datagrab">
     <h3>Take the data</h3>
-    <p>The whole Black List as one JSON file: all <strong>3,062</strong> species with their
+    <p>The whole Black List as one JSON file: all <strong><span data-fig="register_total">3,062</span></strong> species with their
       tier, evidence, locality text, threats and Red List history. No sign-up, no
       license to accept beyond IUCN's own terms, cited in the footer.</p>
     <a class="datagrab-btn" href="/data.json" download>
       Download the Black List
-      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
+      <span>data.json &middot; <span data-fig="data_json_size_mb">1.7</span>&nbsp;MB &middot; <span data-fig="register_total">3,062</span> species</span>
     </a>
-    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
+    <p class="datagrab-note">Built <span id="dgBuilt" data-fig="data_built">2026-10-13</span> against IUCN Red
       List v2026&#8209;1. Rebuilt whenever the list changes, at the same address, so a
       script can fetch it on a schedule.</p>
   </aside>
@@ -2022,14 +2022,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
   <aside class="datagrab">
     <h3>Take the data</h3>
-    <p>The whole Black List as one JSON file: all <strong>3,062</strong> species with their
+    <p>The whole Black List as one JSON file: all <strong><span data-fig="register_total">3,062</span></strong> species with their
       tier, evidence, locality text, threats and Red List history. No sign-up, no
       license to accept beyond IUCN's own terms, cited in the footer.</p>
     <a class="datagrab-btn" href="/data.json" download>
       Download the Black List
-      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
+      <span>data.json &middot; <span data-fig="data_json_size_mb">1.7</span>&nbsp;MB &middot; <span data-fig="register_total">3,062</span> species</span>
     </a>
-    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
+    <p class="datagrab-note">Built <span id="dgBuilt" data-fig="data_built">2026-10-13</span> against IUCN Red
       List v2026&#8209;1. Rebuilt whenever the list changes, at the same address, so a
       script can fetch it on a schedule.</p>
   </aside>
@@ -3224,11 +3224,15 @@ function ensureNsMap() {
     .then(d => {
       NSMAP = d;
       const m = d.meta || {}, n = $("#nsMapNote");
-      if (n && m.unplaced) {
-        n.textContent = `${m.placed.toLocaleString()} of ${m.total.toLocaleString()} `
-          + `species are placed here, across ${m.places} countries. The other `
-          + `${m.unplaced} give a distribution this map could not resolve to a single `
-          + `country and are not drawn.`;
+      /* SPECIES, not rows. meta.total and meta.placed count rows, one per country for a
+         mammal listed from several, so this note used to print "3,167 of 3,225 species"
+         while the lists held 3,089. species_* are counted once per species. */
+      if (n && m.species) {
+        n.textContent = `${m.species_placed.toLocaleString()} of ${m.species.toLocaleString()} `
+          + `species are placed here, across ${m.places} countries`
+          + (m.species_unplaced ? `. The other ${m.species_unplaced} give a distribution this `
+             + `map could not resolve to a single country and are not drawn` : "")
+          + `. A mammal recorded from several countries is counted in each.`;
       }
       return true;
     }).catch(() => false);
@@ -3810,7 +3814,7 @@ const NT_EV = {
    predicts threat at OR 2.46, p = 0.00005 — and unlike coordinates it exists for every
    species on the list. The finer, coordinate-led classes it replaced were both
    unvalidated (island endemism came back at p = 1) and unobtainable: geocoding the
-   locality prose measured a 53 km median error with a 5,469 km worst case. */
+   locality prose was measured against published coordinates (figures.json geo_acc_*: re-measured 2026-10-13 after the first record of that test was lost). */
 const NT_RC = {
   A: ["One landform", "Confined to a single named landform (a massif, lake or reserve) within one province. The narrowest statement the published distribution makes."],
   B: ["One province", "Endemic to a single country and a single province or island."],
@@ -4107,7 +4111,10 @@ let RD = null, rdLoading = false;
 const LIST_LABEL = {
   "Lost Species": "was on our lost list",
   "Black List (Data Deficient)": "on the Black List",
+  "Black List (Not Evaluated)": "on the Black List",
   "Never assessed (reptiles)": "never assessed",
+  "Never assessed (amphibians)": "never assessed",
+  "Never assessed (birds and mammals)": "never assessed",
 };
 
 /* ---- the classics: pre-feed rediscoveries ------------------------------------------
@@ -4547,6 +4554,24 @@ function loadData() {
 }
 loadData();
 
+/* EVERY FIGURE IN THE PROSE, REFRESHED FROM THE DATA ON EACH LOAD.
+   A number written in the page sits in an element carrying data-fig="key". The build
+   (scripts/28_build_figures.py) computes every key from the payloads, writes figures.json and
+   writes the same text into the HTML, so a crawler or a reader without scripts already sees
+   the current value. This refreshes those elements from /figures.json, so a payload published
+   between full builds (the daily rediscoveries feed) shows without one. On a failed load the
+   text from the build simply stays: it is the last good value, never a blank. */
+function fillFigures() {
+  getJSON("/figures.json").then(d => {
+    const F = (d && d.figures) || {};
+    document.querySelectorAll("[data-fig]").forEach(el => {
+      const f = F[el.getAttribute("data-fig")];
+      if (f && typeof f.t === "string" && el.textContent !== f.t) el.textContent = f.t;
+    });
+  }, err => console.warn("figures.json did not load; showing the figures from the build:", err));
+}
+fillFigures();
+
 function boot() {
   const m = DATA.meta, c = m.counts, v = m.validation;
   /* Lowest tier counted as priority. Read from the payload so the page and
@@ -4858,8 +4883,9 @@ function boot() {
      the mistake this project has a rule against: IUCN v2026-1 alone holds 8,659 Data
      Deficient vertebrates, and the never-assessed count is larger still and genuinely
      unknown (the separate new-species work found 1,729 reptiles and 974 amphibians
-     described since 2015, and a checklist comparison leaves 2,345 reptiles the Red List
-     has no record of). Label a coverage figure as coverage. */
+     described since 2015, and a checklist comparison leaves thousands of reptiles with no
+     global Red List assessment: figures.json rdb_reptiles_no_global_assessment). Label a
+     coverage figure as coverage. */
   /* THE SCALE TILE LEADS, because without it a reader has no way to tell whether 3,062 is
      most of the problem or a slice of it, and every previous version of this table invited
      the second reading by starting with the register's own size. 8,659 is counted from the
@@ -4868,8 +4894,10 @@ function boot() {
 
      The never-assessed half is deliberately worded rather than numbered. IUCN publishes no
      count of what it has not looked at, and any figure would be invented. "Thousands more"
-     is defensible from the site's own work: 2,345 reptiles have no Red List entry at all,
-     and 1,729 reptiles plus 974 amphibians described since 2015 have never been assessed. */
+     is defensible from the site's own work (figures.json: rdb_reptiles_no_global_assessment,
+     reptiles in the Reptile Database with no global Red List assessment, and nev_total,
+     species described since 2015 never assessed). The 2,345 once quoted here was a
+     subtraction of two totals against the 2024 Red List, not a count; corrected 2026-10-13. */
   $("#counts").innerHTML = [
     /* "at all" twice over read as a dig at IUCN, which is not the argument. The point is
        that the gap is large and that the register covers a slice of it, and that reads
@@ -5536,7 +5564,7 @@ async function ensureMap() {
     species that sit there. <strong>${ck.validated || 0}</strong> agree and are
     plotted; <strong>${ck.contradicted || 0}</strong> disagreed by more than
     ${GEO.threshold_km}&nbsp;km and are discarded. "Congo River" first resolved to a
-    real river of that name in Sierra Leone, 4,000&nbsp;km from the Congo, and passed a
+    real river of that name in Sierra Leone, about 3,500&nbsp;km from the Congo records, and passed a
     type check as river/river; it was later recovered by asking the gazetteer only about
     the basin the fish live in. <strong>${ck.unverified || 0}</strong> have no species
     with records to check against, so they cannot be verified either way; those are

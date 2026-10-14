@@ -17,7 +17,7 @@ others like them?
 | | |
 |---|---|
 | Taxonomy | Reptile Database checklist **2026_06** (Uetz, Freed, Reyes, Kudera & Hošek), 12,650 accepted species |
-| Assessed set | IUCN v2026-1, the three local exports, filtered to REPTILIA — **10,305** unique binomials |
+| Assessed set | IUCN Red List exports, filtered to REPTILIA — **10,305** unique binomials. CORRECTED 2026-10-13: these three local exports are release **v2024-1** (newest assessment dated 2024-05-09), not v2026-1 as this row said. The never-assessed list itself is unaffected, because every species was verified one at a time against the live v4 API (row below). The count of Reptile Database species with no global assessment is now computed against v2026-1 by scripts/reptile_pilot/count_rdb_without_redlist.py |
 | Verification | IUCN Red List API v4, per species |
 | Cross-reference | GBIF backbone, for synonym resolution |
 
@@ -309,6 +309,14 @@ Every candidate query now carries the state named in the distribution field, and
 must match that state. Re-measurement on a **different** 45 species is outstanding. Until
 that number exists, **the geocoded points are not used and not published**, and the 186
 remain "restriction unknown".
+
+**Re-measured 2026-10-13** (scripts/reptile_pilot/geocode_accuracy.py, seed 777, output
+geocode_accuracy_v2.json). An earlier re-measurement is recorded only in a code comment in
+reptile_assemble.py (median 53 km, worst 5,469 km); its output file and the first run's
+geocode_accuracy.json no longer exist, so this run could not exclude the first 45 species and may
+overlap them. Result: of 45 species, the geocoder placed 13 at all; median error 39.3 km, 75th
+percentile 172 km, worst 3,377 km. The conclusion stands: geocoded points are not used and not
+published. The page states these figures from the file (figures.json geo_acc_*).
 
 ## The island re-test — inconclusive, not a refutation
 

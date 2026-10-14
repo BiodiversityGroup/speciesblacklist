@@ -12913,7 +12913,11 @@
 "mammal": 494
 },
 "unplaced": 58,
-"places": 107
+"places": 107,
+"species": 3089,
+"species_placed": 3041,
+"species_unplaced": 48,
+"rows_note": "total, placed and unplaced count rows: a mammal listed from several countries is one row per country"
 },
 "places": [
 {

@@ -1668,40 +1668,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       different</strong>, and that distinction, not the Data Deficient label, is
       what this list is for.</p>
     <p><strong>This is a ranked subset, not a census.</strong> IUCN v2026&#8209;1 holds
-      <span class="num">8,659</span> Data Deficient species in vertebrate classes; this
-      list covers <span class="num">3,031</span> of them, which is
-      <span class="num">35%</span>. The method needs a published sentence describing each
+      <span class="num"><span data-fig="iucn_dd_vertebrates">8,659</span></span> Data Deficient species in vertebrate classes; this
+      list covers <span class="num"><span data-fig="dd_total">3,031</span></span> of them, which is
+      <span class="num"><span data-fig="dd_coverage_pct">35%</span></span>. The method needs a published sentence describing each
       species' range, and the corpus behind it is one reference work. Of the
-      <span class="num">2,964</span> Data Deficient vertebrates that corpus names,
+      <span class="num"><span data-fig="corpus_named_dd">2,964</span></span> Data Deficient vertebrates that corpus names,
       <strong>every one is in the list</strong>; the other
-      <span class="num">5,628</span> are never named in it at all. So the right reading is
+      <span class="num"><span data-fig="dd_outside_register">5,628</span></span> are never named in it at all. So the right reading is
       "of the Data Deficient vertebrates with a usable published range statement, these are
       the most narrowly restricted", not "these are the ones that matter most".</p>
     <p><strong>How long is a blank allowed to stand?</strong> The Red List export says
       only that a species is Data Deficient now. Its assessment history, pulled from IUCN's
       API, says since when, and the answer reframes the list. The median species here
-      has been Data Deficient for <span class="num">16</span> years;
-      <span class="num">475</span> have held the label for twenty years or more. And
-      <span class="num">1,210</span> of them, 40%, have been assessed more
+      has been Data Deficient for <span class="num"><span data-fig="dd_median_years">16</span></span> years;
+      <span class="num"><span data-fig="dd_20plus_years">475</span></span> have held the label for twenty years or more. And
+      <span class="num"><span data-fig="dd_reaffirmed">1,210</span></span> of them, <span data-fig="dd_reaffirmed_pct">40%</span>, have been assessed more
       than once, meaning IUCN returned, looked again, and wrote Data Deficient a second or
       third time. Those are not species awaiting a first look.</p>
     <p>For scale, the median time
       IUCN has actually taken to resolve a Data Deficient listing is
-      <span class="num">16</span> years, so
-      <span class="num">1,011</span> species in this list are already past it.</p>
+      <span class="num"><span data-fig="dd_median_time_to_resolution">16</span></span> years, so
+      <span class="num"><span data-fig="dd_overdue">1,011</span></span> species in this list are already past it.</p>
     <p><strong>The species outside were screened out, not overlooked.</strong> Richardson
       takes an explicit position on the Data Deficient category: most of it, in his
       judgment, is junior synonyms or valid species not in immediate danger, while
       genuinely threatened species get lost there for want of follow-up research.</p>
     <p>He admits
       a Data Deficient species when its record is narrow enough to imply risk, and that
-      screen is measurable, since he kept <span class="num">28%</span> of IUCN's Data
-      Deficient ray-finned fishes against <span class="num">72%</span> of the birds,
+      screen is measurable, since he kept <span class="num"><span data-fig="corpus_kept_fish_pct">28%</span></span> of IUCN's Data
+      Deficient ray-finned fishes against <span class="num"><span data-fig="corpus_kept_birds_pct">72%</span></span> of the birds,
       dropping the deep-sea groups almost entirely because naturally rare is not the same
       as threatened. So the omitted species are neither unexamined nor shown to be safe:
       one author's judgment, made without the research he says the category lacks, is not
       an assessment. It also means this corpus is pre-selected for the trait the list
-      ranks on, which is why <span class="num">92%</span> of records state some
+      ranks on, which is why <span class="num"><span data-fig="restriction_stated_pct">92%</span></span> of records state some
       restriction. The list tests an expert's screen against IUCN's later verdicts
       rather than discovering the pattern from scratch.</p>
   </div>
@@ -1738,8 +1738,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <tr><th>Evidence of risk</th><td>Matthew Richardson, <em>Threatened and Recently
         Extinct Vertebrates of the World: A Biogeographic Approach</em>, Cambridge
         University Press, 2023. Vertebrates only, the scope follows the book's.</td></tr>
-      <tr><th>Extinction risk</th><td>IUCN Red List v2026&#8209;1, 178,011 taxa,
-        via GBIF's Darwin Core mirror (accessed 2026&#8209;07&#8209;28).</td></tr>
+      <tr><th>Extinction risk</th><td>IUCN Red List v2026&#8209;1, <span data-fig="iucn_taxa_total">178,011</span> taxa,
+        via GBIF's Darwin Core mirror (accessed <span data-fig="redlist_accessed_nb">2026‑07‑28</span>).</td></tr>
       <tr><th>Taxonomy</th><td>GBIF Backbone, for synonym resolution and for
         independent verification of assessment status.</td></tr>
       <tr><th>Map points</th><td>GBIF georeferenced occurrence records, queried by
@@ -1768,7 +1768,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <strong>Tiers 3, 4 and 5 together are the priority stratum</strong>,
       and they are the only part of the ranking that has been tested. The boundary
       sits there because that is where the tested risk actually jumps, tier 2 came
-      out threatened at 20%, tier 3 at 67%, and not because the top of the scale
+      out threatened at <span data-fig="tier2_validated_threatened_pct">19%</span>, tier 3 at <span data-fig="tier3_validated_threatened_pct">67%</span>, and not because the top of the scale
       is the most severe: it is not, see Methods.</p>
     <table class="ftable" id="tierTable">
       <thead><tr><th>Tier</th><th>Basis</th><th>Species</th></tr></thead><tbody></tbody>
@@ -1919,7 +1919,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p><strong>What almost nobody has measured.</strong> No published study reports the
       comparison this list actually makes, narrow-range Data Deficient species against
       broader-range Data Deficient species, checked against later confirmed assessments,
-      at any scale beyond the 140 tested here. Reviewing both five-year windows found no
+      at any scale beyond the <span data-fig="validation_n_labelled">140</span> tested here. Reviewing both five-year windows found no
       analogue in either. That cuts two ways: the test behind this ranking is of a kind
       nobody else has run, and it is therefore also unreplicated. There is likewise no
       published figure for how long a species stays Data Deficient, and no Data Deficient
@@ -1942,32 +1942,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          because it is a one-off analysis on a fixed labelled set, not a nightly figure;
          the script is idempotent and the report is dated. -->
     <h3>Testing the effort objection, and the interval on the ratio</h3>
-    <p><strong>The odds ratio, with its interval.</strong> The 4.64 above comes from 15 of
-      27 against 24 of 113. Its 95% confidence interval, by conditional maximum likelihood,
-      runs from <strong>1.74 to 12.33</strong>, with a Fisher exact p of 0.0007. The
+    <p><strong>The odds ratio, with its interval.</strong> The <span data-fig="validation_odds_ratio">4.64</span> above comes from <span data-fig="validation_high_threatened">15</span> of
+      <span data-fig="validation_high_n">27</span> against <span data-fig="validation_low_threatened">24</span> of <span data-fig="validation_low_n">113</span>. Its 95% confidence interval, by conditional maximum likelihood,
+      runs from <strong><span data-fig="validation_or_ci_lo">1.74</span> to <span data-fig="validation_or_ci_hi">12.33</span></strong>, with a Fisher exact p of <span data-fig="validation_fisher_p">0.0007</span>. The
       direction is solid, because the interval excludes 1. The magnitude is not, because it
       spans a factor of seven. The defensible claim is the floor, not the point
       estimate.</p>
     <p><strong>The effort objection is real in this data, and the signal survives it.</strong>
       Narrowly recorded species here do have fewer occurrence records, a median of 7 against
-      19 for the broader-range group, which is exactly the entanglement Cazalis et al.
+      <span data-fig="validation_median_records_low">19</span> for the broader-range group, which is exactly the entanglement Cazalis et al.
       describe. Adding the base-ten logarithm of each species' GBIF record count to the
-      model moves the odds ratio from 4.64 to <strong>4.14</strong> (95% CI 1.68 to 10.21,
-      p&nbsp;=&nbsp;0.002). That is a shrinkage of 11%, well inside the noise, and record
-      count on its own carries no significant signal (p&nbsp;=&nbsp;0.22).</p>
+      model moves the odds ratio from <span data-fig="validation_odds_ratio">4.64</span> to <strong><span data-fig="validation_or_adj">4.14</span></strong> (95% CI <span data-fig="validation_or_adj_lo">1.68</span> to <span data-fig="validation_or_adj_hi">10.21</span>,
+      p&nbsp;=&nbsp;<span data-fig="validation_or_adj_p">0.002</span>). That is a shrinkage of <span data-fig="validation_or_shrinkage_pct">11%</span>, well inside the noise, and record
+      count on its own carries no significant signal (p&nbsp;=&nbsp;<span data-fig="validation_records_p">0.22</span>).</p>
     <p>Stratifying is more transparent than modelling at this sample size. Splitting the
-      labelled set into thirds by record count gives odds ratios of 3.05, 4.00 and 6.20
-      from the least to the most surveyed third, pooling to <strong>3.88</strong>
-      (Mantel-Haenszel, 95% CI 1.55 to 9.70). The artifact explanation predicts the
+      labelled set into thirds by record count gives odds ratios of <span data-fig="validation_or_tertile_low">3.05</span>, <span data-fig="validation_or_tertile_mid">4.00</span> and <span data-fig="validation_or_tertile_high">6.20</span>
+      from the least to the most surveyed third, pooling to <strong><span data-fig="validation_mh_or">3.88</span></strong>
+      (Mantel-Haenszel, 95% CI <span data-fig="validation_mh_or_lo">1.55</span> to <span data-fig="validation_mh_or_hi">9.70</span>). The artifact explanation predicts the
       opposite shape: a large ratio among the poorly recorded species and nothing left
       among the well recorded ones. That is not what this sample does. On this evidence
       restriction is not simply a proxy for how much anybody has looked.</p>
     <p><strong>One suggested refinement was tested and did not hold.</strong> Meiri et al.
       propose that a species described long ago and still known from one locality is more
       likely to be genuinely restricted than a recently described one. Split at the median
-      description year of 1966, the odds ratio is 2.65 among the older names and 8.64 among
+      description year of 1966, the odds ratio is <span data-fig="validation_or_older">2.65</span> among the older names and <span data-fig="validation_or_newer">8.64</span> among
       the newer ones, which runs opposite to the proposal, and the interaction term is not
-      significant (p&nbsp;=&nbsp;0.25). With eight species in the smallest cell the honest
+      significant (p&nbsp;=&nbsp;<span data-fig="validation_interaction_p">0.25</span>). With eight species in the smallest cell the honest
       reading is that this cannot be measured here, rather than that it is absent.</p>
 
     <h3>Detectability, and what happens at sea</h3>
@@ -1989,21 +1989,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       geographically, so most species sit inside a paragraph introduced by a place.
       That place, and its opening sentence, are attached to every species in the
       paragraph. This is the stronger provenance and it covers
-      <span class="num">518</span> species.</p>
+      <span class="num"><span data-fig="locality_from_account">518</span></span> species.</p>
     <p><strong>From the species entry itself.</strong> Where a species is not inside a
       locality account, the place is very often named in its own sentence anyway:
       <em>"collected from the upper Pungwe River"</em>, <em>"collected off
       Mauritius"</em>. Pattern extraction over those sentences recovers a locality for
-      a further <span class="num">1,211</span> species, taking coverage from
-      <strong>19% to 60%</strong> of the list and the site list from 42 to 102.
+      a further <span class="num"><span data-fig="locality_from_evidence">1,211</span></span> species, taking coverage from
+      <strong><span data-fig="locality_cov_before_pct">17%</span> to <span data-fig="locality_cov_after_pct">56%</span></strong> of the list and the site list from <span data-fig="site_list_before">46</span> to <span data-fig="site_list_after">127</span>.
       Clusters that were entirely invisible before appear this way, the Gulf of
-      California holds 19 species, none of which had a locality until now.</p>
+      California holds <span data-fig="gulf_of_california_species">19</span> species, none of which had a locality until now.</p>
     <p>Named physical features (<em>Salween River</em>, <em>Gulf of Panama</em>,
       <em>Mount Kinabalu</em>) are preferred over a bare capitalized word after a
       preposition, and a capture is rejected if it collides with the species' own
       common name or genus. <strong>The place is only ever taken from the text, never
       guessed</strong>, if the sentence names no place, the species keeps no locality,
-      which is why <span class="num">1,333</span> still have none.</p>
+      which is why <span class="num"><span data-fig="no_locality">1,333</span></span> still have none.</p>
     <p>These names are then looked up in a gazetteer to place them on the map, which
       is a separate step with its own failure modes and its own verification, see
       <em>Geocoding the locality names</em> below. Nothing in the list or on the
@@ -2015,9 +2015,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       River", "Arrowsmith Bank", "Espiritu Santo". Those examples are the specific end of
       a range: the field carries whatever resolution the book gives, so it also holds
       section headings and habitat descriptions. Of the
-      <span class="num">1,729</span> species with a locality string, fewer than half are
+      <span class="num"><span data-fig="with_locality">1,729</span></span> species with a locality string, fewer than half are
       specific enough to place at all, and the largest single value is "The Tropical
-      Atlantic Region", covering 63 species. That is faithful to the source and coarser
+      Atlantic Region", covering <span data-fig="largest_site_count">63</span> species. That is faithful to the source and coarser
       than the three examples above suggest.</p>
     <p>Those strings were <strong>not</strong> run
       through a gazetteer to make the map: place-name geocoding is ambiguous exactly
@@ -2039,7 +2039,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       to <span class="sci">Anampses caeruleopunctatus</span>, its widespread senior
       synonym. Every name is therefore resolved to a GBIF usage key by strict match
       first, and records are pulled by taxon key. Records GBIF itself flags as having
-      bad coordinates are excluded, and points are capped at 30 per species so
+      bad coordinates are excluded, and points are capped at <span data-fig="map_points_cap">30</span> per species so
       well-collected species cannot dominate the surface.</p>
     <p><strong>What the map is not.</strong> Not range maps, these are point records.
       Not a picture of where risk is concentrated, it maps collecting effort at least
@@ -2060,15 +2060,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <span class="num" id="geoCandidates">&hellip;</span> candidates.</p>
     <p><strong>But type agreement cannot see a same-type homonym</strong>, and those are
       common. "Congo River" resolved to a real river of that name in Sierra Leone,
-      4,000&nbsp;km from the Congo, passing cleanly as river/river. "Dunk Island"
+      about 3,500&nbsp;km from the species&rsquo; own records on the Congo, passing cleanly as river/river. "Dunk Island"
       resolved near Sydney rather than Queensland. So each geocode is then measured
       against the GBIF records of the species that sit at that locality, an
       independent witness already held:</p>
     <p>A geocode that fails that test is not simply dropped. Disagreement says the
       coordinate and the records are at odds, not which one is wrong, so the failures
       were worked back through. Asking the gazetteer only about the country the species
-      lives in recovered 13. Asking it only about the box its own records sit in
-      recovered 13 more, Congo River included: the Sierra Leone river cannot come back at
+      lives in recovered <span data-fig="geocode_repaired_by_country">13</span>. Asking it only about the box its own records sit in
+      recovered <span data-fig="geocode_repaired_by_box">13</span> more, Congo River included: the Sierra Leone river cannot come back at
       all when the question is restricted to the Congo basin. Reading the remainder by
       hand recovered 8 and showed 16 had been right all along, refused only because the
       feature or the species is bigger than 500&nbsp;km.</p>
@@ -2096,8 +2096,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       from the gazetteer, and the evidence sentence shows both places.</p>
 
     <p><strong>The most telling number is the one that cannot be plotted.</strong> Of
-      the <span class="num">3,062</span> species here, <span class="num">805</span>
-      have no georeferenced record anywhere in GBIF, and <span class="num">726</span>
+      the <span class="num"><span data-fig="register_total">3,062</span></span> species here, <span class="num"><span data-fig="no_gbif_record">805</span></span>
+      have no georeferenced record anywhere in GBIF, and <span class="num"><span data-fig="unplaceable">726</span></span>
       cannot be placed even by a cross-checked locality. They are the least visible
       members of an already invisible group, and they are absent from the map.</p>
 
@@ -2149,14 +2149,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        Black List view; 17_check_dom_contract.py fails the build if the copies drift. -->
   <aside class="datagrab">
     <h3>Take the data</h3>
-    <p>The whole Black List as one JSON file: all <strong>3,062</strong> species with their
+    <p>The whole Black List as one JSON file: all <strong><span data-fig="register_total">3,062</span></strong> species with their
       tier, evidence, locality text, threats and Red List history. No sign-up, no
       license to accept beyond IUCN's own terms, cited in the footer.</p>
     <a class="datagrab-btn" href="/data.json" download>
       Download the Black List
-      <span>data.json &middot; 1.7&nbsp;MB &middot; 3,062 species</span>
+      <span>data.json &middot; <span data-fig="data_json_size_mb">1.7</span>&nbsp;MB &middot; <span data-fig="register_total">3,062</span> species</span>
     </a>
-    <p class="datagrab-note">Built <span id="dgBuilt">2026-08-03</span> against IUCN Red
+    <p class="datagrab-note">Built <span id="dgBuilt" data-fig="data_built">2026-10-13</span> against IUCN Red
       List v2026&#8209;1. Rebuilt whenever the list changes, at the same address, so a
       script can fetch it on a schedule.</p>
   </aside>
@@ -3344,11 +3344,15 @@ function ensureNsMap() {
     .then(d => {
       NSMAP = d;
       const m = d.meta || {}, n = $("#nsMapNote");
-      if (n && m.unplaced) {
-        n.textContent = `${m.placed.toLocaleString()} of ${m.total.toLocaleString()} `
-          + `species are placed here, across ${m.places} countries. The other `
-          + `${m.unplaced} give a distribution this map could not resolve to a single `
-          + `country and are not drawn.`;
+      /* SPECIES, not rows. meta.total and meta.placed count rows, one per country for a
+         mammal listed from several, so this note used to print "3,167 of 3,225 species"
+         while the lists held 3,089. species_* are counted once per species. */
+      if (n && m.species) {
+        n.textContent = `${m.species_placed.toLocaleString()} of ${m.species.toLocaleString()} `
+          + `species are placed here, across ${m.places} countries`
+          + (m.species_unplaced ? `. The other ${m.species_unplaced} give a distribution this `
+             + `map could not resolve to a single country and are not drawn` : "")
+          + `. A mammal recorded from several countries is counted in each.`;
       }
       return true;
     }).catch(() => false);
@@ -3930,7 +3934,7 @@ const NT_EV = {
    predicts threat at OR 2.46, p = 0.00005 — and unlike coordinates it exists for every
    species on the list. The finer, coordinate-led classes it replaced were both
    unvalidated (island endemism came back at p = 1) and unobtainable: geocoding the
-   locality prose measured a 53 km median error with a 5,469 km worst case. */
+   locality prose was measured against published coordinates (figures.json geo_acc_*: re-measured 2026-10-13 after the first record of that test was lost). */
 const NT_RC = {
   A: ["One landform", "Confined to a single named landform (a massif, lake or reserve) within one province. The narrowest statement the published distribution makes."],
   B: ["One province", "Endemic to a single country and a single province or island."],
@@ -4227,7 +4231,10 @@ let RD = null, rdLoading = false;
 const LIST_LABEL = {
   "Lost Species": "was on our lost list",
   "Black List (Data Deficient)": "on the Black List",
+  "Black List (Not Evaluated)": "on the Black List",
   "Never assessed (reptiles)": "never assessed",
+  "Never assessed (amphibians)": "never assessed",
+  "Never assessed (birds and mammals)": "never assessed",
 };
 
 /* ---- the classics: pre-feed rediscoveries ------------------------------------------
@@ -4667,6 +4674,24 @@ function loadData() {
 }
 loadData();
 
+/* EVERY FIGURE IN THE PROSE, REFRESHED FROM THE DATA ON EACH LOAD.
+   A number written in the page sits in an element carrying data-fig="key". The build
+   (scripts/28_build_figures.py) computes every key from the payloads, writes figures.json and
+   writes the same text into the HTML, so a crawler or a reader without scripts already sees
+   the current value. This refreshes those elements from /figures.json, so a payload published
+   between full builds (the daily rediscoveries feed) shows without one. On a failed load the
+   text from the build simply stays: it is the last good value, never a blank. */
+function fillFigures() {
+  getJSON("/figures.json").then(d => {
+    const F = (d && d.figures) || {};
+    document.querySelectorAll("[data-fig]").forEach(el => {
+      const f = F[el.getAttribute("data-fig")];
+      if (f && typeof f.t === "string" && el.textContent !== f.t) el.textContent = f.t;
+    });
+  }, err => console.warn("figures.json did not load; showing the figures from the build:", err));
+}
+fillFigures();
+
 function boot() {
   const m = DATA.meta, c = m.counts, v = m.validation;
   /* Lowest tier counted as priority. Read from the payload so the page and
@@ -4978,8 +5003,9 @@ function boot() {
      the mistake this project has a rule against: IUCN v2026-1 alone holds 8,659 Data
      Deficient vertebrates, and the never-assessed count is larger still and genuinely
      unknown (the separate new-species work found 1,729 reptiles and 974 amphibians
-     described since 2015, and a checklist comparison leaves 2,345 reptiles the Red List
-     has no record of). Label a coverage figure as coverage. */
+     described since 2015, and a checklist comparison leaves thousands of reptiles with no
+     global Red List assessment: figures.json rdb_reptiles_no_global_assessment). Label a
+     coverage figure as coverage. */
   /* THE SCALE TILE LEADS, because without it a reader has no way to tell whether 3,062 is
      most of the problem or a slice of it, and every previous version of this table invited
      the second reading by starting with the register's own size. 8,659 is counted from the
@@ -4988,8 +5014,10 @@ function boot() {
 
      The never-assessed half is deliberately worded rather than numbered. IUCN publishes no
      count of what it has not looked at, and any figure would be invented. "Thousands more"
-     is defensible from the site's own work: 2,345 reptiles have no Red List entry at all,
-     and 1,729 reptiles plus 974 amphibians described since 2015 have never been assessed. */
+     is defensible from the site's own work (figures.json: rdb_reptiles_no_global_assessment,
+     reptiles in the Reptile Database with no global Red List assessment, and nev_total,
+     species described since 2015 never assessed). The 2,345 once quoted here was a
+     subtraction of two totals against the 2024 Red List, not a count; corrected 2026-10-13. */
   $("#counts").innerHTML = [
     /* "at all" twice over read as a dig at IUCN, which is not the argument. The point is
        that the gap is large and that the register covers a slice of it, and that reads
@@ -5656,7 +5684,7 @@ async function ensureMap() {
     species that sit there. <strong>${ck.validated || 0}</strong> agree and are
     plotted; <strong>${ck.contradicted || 0}</strong> disagreed by more than
     ${GEO.threshold_km}&nbsp;km and are discarded. "Congo River" first resolved to a
-    real river of that name in Sierra Leone, 4,000&nbsp;km from the Congo, and passed a
+    real river of that name in Sierra Leone, about 3,500&nbsp;km from the Congo records, and passed a
     type check as river/river; it was later recovered by asking the gazetteer only about
     the basin the fish live in. <strong>${ck.unverified || 0}</strong> have no species
     with records to check against, so they cannot be verified either way; those are

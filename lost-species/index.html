@@ -1655,7 +1655,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <div class="prose">
     <h2 style="font-size:var(--fs-h2)">Species nobody has seen for a very long time</h2>
-    <p class="lostlede"><strong class="num">2,016</strong> species that have not been
+    <p class="lostlede"><strong class="num"><span data-fig="lost_n_species">2,016</span></strong> species that have not been
       recorded in years, in some cases in centuries, and that nobody has been able to
       declare extinct. They are not gone. They are <em>unaccounted for</em>, which is a
       different thing, and the difference is where the work is.</p>
@@ -1760,21 +1760,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <details class="warn">
     <summary>What had to be thrown out to build this table</summary>
     <p>Taking simply the oldest date in each group produced a table we could not stand
-      behind. <strong>Ten of the first twenty-one entries were contradicted by
+      behind. <strong><span data-fig="longest_first_contradicted">Five</span> of the first <span data-fig="longest_groups">twenty-one</span> entries were contradicted by
       <a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF</a></strong>, the
       global occurrence database, showing the animal turning up long after the date
       this list gives as its last.</p>
     <p>The fish was the worst of them. <span class="sci">Astyanax scabripinnis</span>, a
       Brazilian tetra, sits in the source list with a last record of <strong>1842</strong>.
-      GBIF holds <strong>1,488 occurrences</strong> of it, the most recent from
-      <strong>2018</strong>. It is not a lost species. The same was true of
-      <span class="sci">Cycloramphus fuliginosus</span>, a frog with 152 records running to
-      2014, and of eight others.</p>
+      GBIF holds <strong><span data-fig="gbif_astyanax_occurrences">1,488</span> occurrences</strong> of it, the most recent from
+      <strong><span data-fig="gbif_astyanax_latest_year">2018</span></strong>. It is not a lost species. The same was true of
+      <span class="sci">Cycloramphus fuliginosus</span>, a frog with <span data-fig="gbif_cycloramphus_occurrences">152</span> records running to
+      <span data-fig="gbif_cycloramphus_latest_year">2014</span>, and of <span data-fig="longest_contradicted_others">18</span> other candidates.</p>
     <p>Each group therefore shows its oldest candidate that GBIF does <em>not</em>
-      contradict, and all 23 rejections are recorded with their reasons. Two cautions had
-      to be built into that check. Evidence counts only where the scientific name matches
-      exactly. An apparent 7,537 records for one spider turned out to be a loose match to
-      a common European species. And an <em>absence</em> of recent records proves nothing
+      contradict, and all <span data-fig="longest_rejections">24</span> rejections are published with their reasons, in
+      <a href="/lost.json">lost.json</a> under longest_rejected. Two cautions had to be
+      built into that check. Evidence counts only where the scientific name matches
+      exactly: an apparent match with thousands of records for one spider turned out to
+      be a loose match to a common European species. And an <em>absence</em> of recent records proves nothing
       either: a Sierra Leone crab had none, and had still been found again. <strong>These
       are errors in the lost-species list, not in the Red List</strong>, and they are why
       this page treats its own inputs as claims to be checked rather than facts to be
@@ -1844,27 +1845,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       up, but the gap will not be closed by the kind of survey that finds large animals
       near roads.</p>
     <p><strong>Who gets found is changing.</strong> In the species-level data behind
-      Lindken and colleagues' study, birds and mammals made up 80 to 85% of rediscoveries in
-      every decade from the 1960s to the 1990s, and 29% in the 2010s. Reptiles went from 5 to
-      8% of finds in the 1980s, 1990s and 2000s to <strong>49% in the 2010s</strong>. The
-      species found are getting smaller, from a median of 50 grams in the 1990s to 25 grams
+      Lindken and colleagues' study, birds and mammals made up <span data-fig="bm_share_finds_low">80</span> to <span data-fig="bm_share_finds_high">86%</span> of rediscoveries in
+      every decade from the 1960s to the 1990s, and <span data-fig="bm_share_finds_2010s">29%</span> in the 2010s. Reptiles went from 5 to
+      <span data-fig="reptile_share_finds_high">8%</span> of finds in the 1980s, 1990s and 2000s to <strong><span data-fig="reptile_share_finds_2010s">49%</span> in the 2010s</strong>. The
+      species found are getting smaller, from a median of <span data-fig="median_mass_found_1990s_g">50</span> grams in the 1990s to <span data-fig="median_mass_found_2010s_g">25</span> grams
       in the 2010s, and since the 1980s more of them have come from countries lower on the
       UN's Human Development Index. One threat stands out: a species threatened by invasive
       species has <strong>about half the odds of being found again</strong> of one that is
       not, after allowing for how long each has been missing.</p>
-    <p>Who goes missing is changing too. Amphibians and reptiles were 40 to 60% of the
-      tetrapods last seen in each decade from the 1900s to the 1950s, and 93% of those last
-      seen in the 2000s; the median newly lost species shrank from about 25 grams to 9. Birds
-      and mammals are now 7% of new losses.</p>
+    <p>Who goes missing is changing too. Amphibians and reptiles were <span data-fig="herp_share_last_seen_low">40</span> to <span data-fig="herp_share_last_seen_high">59%</span> of the
+      tetrapods last seen in each decade from the 1900s to the 1950s, and <span data-fig="herp_share_last_seen_2000s">93%</span> of those last
+      seen in the 2000s; the median newly lost species shrank from about <span data-fig="median_mass_newly_lost_early_g">25</span> grams to 9. Birds
+      and mammals are now <span data-fig="bm_share_last_seen_2000s">7%</span> of new losses.</p>
     <p><strong>A long absence is not a lost cause.</strong> For tetrapods last seen since about
       1850, a longer absence has not lowered the chance of a find. From 1990 to 2020, species
-      missing 60 to 99 years turned up at 21 per 100 per decade, more than twice the rate of
+      missing 60 to 99 years turned up at <span data-fig="find_rate_missing_60_99_per100_decade">21</span> per 100 per decade, more than twice the rate of
       those missing 10 to 29 years (9 per 100), and that held for amphibians, reptiles, birds
       and mammals alike. Few species unseen since before 1850 are still counted as lost, since
       most have been declared extinct, so this says nothing about them.</p>
     <p><strong>Looking works.</strong> From 2010 to 2020, more than half of the tetrapods found
-      again (47 of 88) were species someone had searched for at least moderately, against a
-      quarter (39 of 152) in the 2000s. Finding sooner is a mainland story: on the mainland,
+      again (<span data-fig="finds_2010_2020_moderate_effort">47</span> of <span data-fig="finds_2010_2020_all">88</span>) were species someone had searched for at least moderately, against a
+      quarter (<span data-fig="finds_2000s_moderate_effort">39</span> of <span data-fig="finds_2000s_all">152</span>) in the 2000s. Finding sooner is a mainland story: on the mainland,
       each decade later a species was lost has raised the odds of finding it within 30 years
       by about two thirds, while on small islands the change is too small to tell from
       chance, which fits the toll of invasive species there.</p>
@@ -1873,19 +1874,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       five a year from 1997 to 2009, in the years of alarm over amphibian declines and the
       identification of the chytrid fungus in 1998. Reptiles followed a decade later: under
       one a year from 1990 to 2008, about four a year from 2009 to 2020. The searching changed
-      at the same point. Before 2009, 18% of the amphibians and reptiles found again had been
-      searched for at least moderately; from 2009, 51% had.</p>
+      at the same point. Before 2009, <span data-fig="herp_finds_moderate_effort_share_before_2009">18%</span> of the amphibians and reptiles found again had been
+      searched for at least moderately; from 2009, <span data-fig="herp_finds_moderate_effort_share_from_2009">51%</span> had.</p>
     <p>Rediscovery has moved to the countries richest in species. India and Colombia each
-      recorded one rediscovery before 1990 and 23 from 1990 to 2020; Brazil went from 7 to 32
-      and Indonesia from 7 to 31. Australia is the exception, with more of its finds before
-      1990 than after. The fewest lost species have been found again in Haiti (none of 19),
-      Venezuela (3 of 40), New Caledonia (3 of 30) and Vietnam (4 of 28).</p>
-    <p>Found is not the same as safe. Of the 424 tetrapods found again, 269 (63%) are
-      threatened today, 114 of them Critically Endangered. And of the 856 still missing, about
-      half have no usable Red List assessment: 207 have never been evaluated and 214 are listed
-      as Data Deficient.</p>
+      recorded one rediscovery before 1990 and <span data-fig="finds_1990_2020_india_colombia">23</span> from 1990 to 2020; Brazil went from 7 to <span data-fig="finds_1990_2020_brazil">32</span>
+      and Indonesia from 7 to <span data-fig="finds_1990_2020_indonesia">31</span>. Australia is the exception, with more of its finds before
+      1990 than after. The fewest lost species have been found again in Haiti (none of <span data-fig="lindken_species_haiti">19</span>),
+      Venezuela (3 of <span data-fig="lindken_species_venezuela">40</span>), New Caledonia (3 of <span data-fig="lindken_species_new_caledonia">30</span>) and Vietnam (4 of <span data-fig="lindken_species_vietnam">28</span>).</p>
+    <p>Found is not the same as safe. When Lindken and colleagues compiled their data, <span data-fig="found_again_threatened">269</span>
+      (<span data-fig="found_again_threatened_pct">63%</span>) of the <span data-fig="lindken_found_again">424</span> tetrapods found again were threatened, <span data-fig="found_again_cr">114</span> of them Critically
+      Endangered. And of the <span data-fig="lindken_still_lost">856</span> still missing, about half had no usable Red List
+      assessment: <span data-fig="still_lost_not_evaluated">207</span> had never been evaluated and <span data-fig="still_lost_data_deficient">214</span> were listed as Data Deficient.</p>
     <p><strong>Plenty do come back.</strong> Of the tetrapods Lindken and colleagues
-      traced, <strong>424 of 1,280</strong>, a third of them, had already been found again by
+      traced, <strong><span data-fig="lindken_found_again">424</span> of <span data-fig="lindken_tetrapods_traced">1,280</span></strong>, a third of them, had already been found again by
       the time they published. This page carries the ones still missing, so a rediscovery
       is a species <em>leaving</em> it. The longest documented wait on record here is a
       Sierra Leone freshwater crab, <span class="sci">Afrithelphusa afzelii</span>, refound
@@ -1911,11 +1912,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
         Biodiversity Group</a>'s Scott Trageser and Ross Maynard found one: the second
         individual of this species ever recorded, and the first photographed alive. The
-        rediscovery was published in 2021, <strong>54 years</strong> after the first.</p>
+        rediscovery was published in 2021, <strong>more than half a century</strong> after
+        the only other record.</p>
       <p>The paper recommends the species be listed Critically Endangered, because the
         reserve where it was found is under imminent threat from mining. The IUCN still
-        lists it as <strong>Data Deficient</strong>, assessed in 2016 and not revisited
-        since it was found again.</p>
+        lists it as <strong>Data Deficient</strong>, in an assessment made in 2014 and
+        published in 2016, and has not revisited it since it was found again.</p>
       <p class="lostcite"><a
         href="https://checklist.pensoft.net/article/60009/" target="_blank"
         rel="noopener">Maynard et al. 2021, <em>Check List</em> 17(1)</a></p>
@@ -1978,7 +1980,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       spreadsheet. Fifteen names are treated by one authority as valid species and by
       another as synonyms of something else. When a narrow endemic is absorbed
       into a widespread species, it leaves conservation attention by clerical means
-      rather than by evidence. A further 149 were removed from the source list by IUCN
+      rather than by evidence. A further <span data-fig="specialist_exclusions">149</span> were removed from the source list by IUCN
       SSC specialists for reasons that were never recorded per species: some because
       they had been found, some because nobody had ever looked. Those two reasons point
       in opposite directions, and the difference is the whole argument.</p>
@@ -2016,8 +2018,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       from the British flora for ninety years, turning up on one roadside. This page
       counts species missing from <em>science</em>, everywhere, at once. Both are real
       losses and both matter; they are simply different questions.</p>
-    <p>The gap is measurable. We compared the two: of 1,063 species in their
-      rediscoveries listing, exactly <strong>one</strong> also appears among the 2,016
+    <p>The gap is measurable. We compared the two: of <span data-fig="repad_local_rediscoveries_extracted">1,063</span> species in their
+      rediscoveries listing, exactly <strong>one</strong> also appears among the <span data-fig="lost_n_species">2,016</span>
       here: <span class="sci">Amphilophus lyonsi</span>, a Costa Rican cichlid, and it
       has indeed been found again. That near-total absence is not a disagreement between
       the lists. It is the two definitions doing their jobs.</p>
@@ -3225,11 +3227,15 @@ function ensureNsMap() {
     .then(d => {
       NSMAP = d;
       const m = d.meta || {}, n = $("#nsMapNote");
-      if (n && m.unplaced) {
-        n.textContent = `${m.placed.toLocaleString()} of ${m.total.toLocaleString()} `
-          + `species are placed here, across ${m.places} countries. The other `
-          + `${m.unplaced} give a distribution this map could not resolve to a single `
-          + `country and are not drawn.`;
+      /* SPECIES, not rows. meta.total and meta.placed count rows, one per country for a
+         mammal listed from several, so this note used to print "3,167 of 3,225 species"
+         while the lists held 3,089. species_* are counted once per species. */
+      if (n && m.species) {
+        n.textContent = `${m.species_placed.toLocaleString()} of ${m.species.toLocaleString()} `
+          + `species are placed here, across ${m.places} countries`
+          + (m.species_unplaced ? `. The other ${m.species_unplaced} give a distribution this `
+             + `map could not resolve to a single country and are not drawn` : "")
+          + `. A mammal recorded from several countries is counted in each.`;
       }
       return true;
     }).catch(() => false);
@@ -3811,7 +3817,7 @@ const NT_EV = {
    predicts threat at OR 2.46, p = 0.00005 — and unlike coordinates it exists for every
    species on the list. The finer, coordinate-led classes it replaced were both
    unvalidated (island endemism came back at p = 1) and unobtainable: geocoding the
-   locality prose measured a 53 km median error with a 5,469 km worst case. */
+   locality prose was measured against published coordinates (figures.json geo_acc_*: re-measured 2026-10-13 after the first record of that test was lost). */
 const NT_RC = {
   A: ["One landform", "Confined to a single named landform (a massif, lake or reserve) within one province. The narrowest statement the published distribution makes."],
   B: ["One province", "Endemic to a single country and a single province or island."],
@@ -4108,7 +4114,10 @@ let RD = null, rdLoading = false;
 const LIST_LABEL = {
   "Lost Species": "was on our lost list",
   "Black List (Data Deficient)": "on the Black List",
+  "Black List (Not Evaluated)": "on the Black List",
   "Never assessed (reptiles)": "never assessed",
+  "Never assessed (amphibians)": "never assessed",
+  "Never assessed (birds and mammals)": "never assessed",
 };
 
 /* ---- the classics: pre-feed rediscoveries ------------------------------------------
@@ -4548,6 +4557,24 @@ function loadData() {
 }
 loadData();
 
+/* EVERY FIGURE IN THE PROSE, REFRESHED FROM THE DATA ON EACH LOAD.
+   A number written in the page sits in an element carrying data-fig="key". The build
+   (scripts/28_build_figures.py) computes every key from the payloads, writes figures.json and
+   writes the same text into the HTML, so a crawler or a reader without scripts already sees
+   the current value. This refreshes those elements from /figures.json, so a payload published
+   between full builds (the daily rediscoveries feed) shows without one. On a failed load the
+   text from the build simply stays: it is the last good value, never a blank. */
+function fillFigures() {
+  getJSON("/figures.json").then(d => {
+    const F = (d && d.figures) || {};
+    document.querySelectorAll("[data-fig]").forEach(el => {
+      const f = F[el.getAttribute("data-fig")];
+      if (f && typeof f.t === "string" && el.textContent !== f.t) el.textContent = f.t;
+    });
+  }, err => console.warn("figures.json did not load; showing the figures from the build:", err));
+}
+fillFigures();
+
 function boot() {
   const m = DATA.meta, c = m.counts, v = m.validation;
   /* Lowest tier counted as priority. Read from the payload so the page and
@@ -4859,8 +4886,9 @@ function boot() {
      the mistake this project has a rule against: IUCN v2026-1 alone holds 8,659 Data
      Deficient vertebrates, and the never-assessed count is larger still and genuinely
      unknown (the separate new-species work found 1,729 reptiles and 974 amphibians
-     described since 2015, and a checklist comparison leaves 2,345 reptiles the Red List
-     has no record of). Label a coverage figure as coverage. */
+     described since 2015, and a checklist comparison leaves thousands of reptiles with no
+     global Red List assessment: figures.json rdb_reptiles_no_global_assessment). Label a
+     coverage figure as coverage. */
   /* THE SCALE TILE LEADS, because without it a reader has no way to tell whether 3,062 is
      most of the problem or a slice of it, and every previous version of this table invited
      the second reading by starting with the register's own size. 8,659 is counted from the
@@ -4869,8 +4897,10 @@ function boot() {
 
      The never-assessed half is deliberately worded rather than numbered. IUCN publishes no
      count of what it has not looked at, and any figure would be invented. "Thousands more"
-     is defensible from the site's own work: 2,345 reptiles have no Red List entry at all,
-     and 1,729 reptiles plus 974 amphibians described since 2015 have never been assessed. */
+     is defensible from the site's own work (figures.json: rdb_reptiles_no_global_assessment,
+     reptiles in the Reptile Database with no global Red List assessment, and nev_total,
+     species described since 2015 never assessed). The 2,345 once quoted here was a
+     subtraction of two totals against the 2024 Red List, not a count; corrected 2026-10-13. */
   $("#counts").innerHTML = [
     /* "at all" twice over read as a dig at IUCN, which is not the argument. The point is
        that the gap is large and that the register covers a slice of it, and that reads
@@ -5537,7 +5567,7 @@ async function ensureMap() {
     species that sit there. <strong>${ck.validated || 0}</strong> agree and are
     plotted; <strong>${ck.contradicted || 0}</strong> disagreed by more than
     ${GEO.threshold_km}&nbsp;km and are discarded. "Congo River" first resolved to a
-    real river of that name in Sierra Leone, 4,000&nbsp;km from the Congo, and passed a
+    real river of that name in Sierra Leone, about 3,500&nbsp;km from the Congo records, and passed a
     type check as river/river; it was later recovered by asking the gazetteer only about
     the basin the fish live in. <strong>${ck.unverified || 0}</strong> have no species
     with records to check against, so they cannot be verified either way; those are

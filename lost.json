@@ -19080,233 +19080,461 @@
 {
 "group": "Snakes",
 "sp": "Epictia undecimstriata",
-"common": "--",
+"common": "Eleven-striped Blind Snake",
 "last": 1839,
+"gap": 187,
 "range": "Bolivia",
 "family": "Leptotyphlopidae",
 "rl": "DD",
 "n_dated": 24,
-"gap": 187
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Lizards",
-"sp": "Trachylepis maculata",
-"common": "Spotted Mabuya",
-"last": 1839,
-"range": "Brazil",
+"sp": "Cryptoblepharus ahli",
+"common": "Ahl's Snake-eyed Skink",
+"last": 1848,
+"gap": 178,
+"range": "Afrotropic",
 "family": "Scincidae",
 "rl": "DD",
 "n_dated": 458,
-"gap": 187
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Worm lizards",
 "sp": "Cynisca degrysi",
 "common": "Sierra Leone Worm Lizard",
 "last": 1888,
+"gap": 138,
 "range": "Sierra Leone",
 "family": "Amphisbaenidae",
 "rl": "DD",
 "n_dated": 24,
-"gap": 138
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Turtles & tortoises",
 "sp": "Kinosternon hirtipes megacephalum",
 "common": "Rough-footed Mud Turtle",
 "last": 1965,
+"gap": 61,
 "range": "Mexico",
 "family": "Kinosternidae",
 "rl": "LC",
 "n_dated": 3,
-"gap": 61
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Frogs",
-"sp": "Cycloramphus fuliginosus",
-"common": "--",
-"last": 1838,
-"range": "Brazil",
-"family": "Cycloramphidae",
-"rl": "LC",
+"sp": "Philautus microdiscus",
+"common": "Kobo Bubble-nest Frog",
+"last": 1912,
+"gap": 114,
+"range": "India",
+"family": "Rhacophoridae",
+"rl": "CR",
 "n_dated": 176,
-"gap": 188
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Toads",
 "sp": "Duttaphrynus valhallae",
-"common": "--",
+"common": "Pulo Weh Toad",
 "last": 1909,
+"gap": 117,
 "range": "Indonesia",
 "family": "Bufonidae",
 "rl": "DD",
 "n_dated": 64,
-"gap": 117
+"gbif_total": 5,
+"gbif_latest": 1910
 },
 {
 "group": "Salamanders & newts",
 "sp": "Hynobius turkestanicus",
 "common": "Turkestanian Salamander",
 "last": 1909,
+"gap": 117,
 "range": "Kyrgyzstan, Tajikistan, Uzbekistan",
 "family": "Hynobiidae",
 "rl": "DD",
 "n_dated": 18,
-"gap": 117
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Caecilians",
 "sp": "Ichthyophis singaporensis",
 "common": "Singapore Caecilian",
 "last": 1847,
+"gap": 179,
 "range": "Singapore",
 "family": "Ichthyophiidae",
 "rl": "DD",
 "n_dated": 5,
-"gap": 179
+"gbif_total": 3,
+"gbif_latest": null
 },
 {
 "group": "Birds",
-"sp": "Eriocnemis godini",
-"common": "Turquoise-throated Puffleg",
-"last": 1850,
-"range": "Ecuador",
-"family": "Trochilidae",
-"rl": "CR(PE)",
+"sp": "Otus siaoensis",
+"common": "Siau Scops-owl",
+"last": 1866,
+"gap": 160,
+"range": "Indonesia",
+"family": "Strigidae",
+"rl": "CR",
 "n_dated": 47,
-"gap": 176
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Mammals",
 "sp": "Uromys imperator",
 "common": "Emperor Rat",
 "last": 1887,
+"gap": 139,
 "range": "Solomon Islands",
 "family": "Muridae",
 "rl": "CR(PE)",
 "n_dated": 57,
-"gap": 139
+"gbif_total": 4,
+"gbif_latest": null
 },
 {
 "group": "Fish",
-"sp": "Astyanax scabripinnis",
-"common": "Banded Astyanax\t/ Tetra",
-"last": 1842,
-"range": "Brazil",
-"family": "Characidae",
-"rl": "LC",
+"sp": "Barbonymus platysoma",
+"common": "",
+"last": 1855,
+"gap": 171,
+"range": "Java",
+"family": "Cyprinidae",
+"rl": "CR(PE)",
 "n_dated": 313,
-"gap": 184
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Insects",
 "sp": "Heteragrion beschkii",
-"common": "--",
+"common": "",
 "last": 1834,
+"gap": 192,
 "range": "Brazil",
 "family": "Heteragrionidae",
 "rl": "DD",
 "n_dated": 197,
-"gap": 192
+"gbif_total": 2,
+"gbif_latest": null
 },
 {
 "group": "Spiders & scorpions",
-"sp": "Eresus quartuorguttata",
-"common": "--",
-"last": 1804,
-"range": "Italy",
+"sp": "Eresus pharaonis",
+"common": "",
+"last": 1829,
+"gap": 197,
+"range": "Egypt",
 "family": "Eresidae",
 "rl": "not in IUCN index",
 "n_dated": 54,
-"gap": 222
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Snails & slugs",
 "sp": "Omphalotropis ingens",
-"common": "--",
+"common": "",
 "last": 1855,
+"gap": 171,
 "range": "Fiji",
 "family": "Assimineidae",
 "rl": "CR(PE)",
 "n_dated": 73,
-"gap": 171
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Clams & mussels",
-"sp": "Cuneopsis demangei",
-"common": "--",
-"last": 1929,
-"range": "Vietnam",
+"sp": "Epioblasma othcaloogensis",
+"common": "Southern Acron Riffle Shell",
+"last": 1974,
+"gap": 52,
+"range": "United States",
 "family": "Unionidae",
 "rl": "CR(PE)",
 "n_dated": 6,
-"gap": 97
+"gbif_total": 113,
+"gbif_latest": 1974
 },
 {
 "group": "Crustaceans",
-"sp": "Afrithelphusa afzelii",
-"common": "Afzeli's Crab",
-"last": 1790,
-"range": "Sierra Leone",
-"family": "Deckeniidae",
-"rl": "CR(PE)",
+"sp": "Potamonautes dubius",
+"common": "Kunene River Crab",
+"last": 1890,
+"gap": 136,
+"range": "Angola, Namibia",
+"family": "Potamonautidae",
+"rl": "DD",
 "n_dated": 31,
-"gap": 236
+"gbif_total": 5,
+"gbif_latest": null
 },
 {
 "group": "Corals",
 "sp": "Plexaurella obesa",
-"common": "--",
+"common": "",
 "last": 1985,
+"gap": 41,
 "range": "Brazil",
 "family": "Plexaurellidae",
 "rl": "not in IUCN index",
 "n_dated": 3,
-"gap": 41
+"gbif_total": 6,
+"gbif_latest": 1982
 },
 {
 "group": "Millipedes & centipedes",
 "sp": "Mecistocephalus cyclops",
-"common": "--",
+"common": "",
 "last": 1892,
+"gap": 134,
 "range": "Seychelles",
 "family": "Mecistocephalidae",
 "rl": "CR(PE)",
 "n_dated": 5,
-"gap": 134
+"gbif_total": 0,
+"gbif_latest": null
 },
 {
 "group": "Springtails & relatives",
 "sp": "Delamarephorura tami",
-"common": "--",
+"common": "",
 "last": 2004,
+"gap": 22,
 "range": "Vietnam",
 "family": "Tullbergiidae",
 "rl": "CR(PE)",
 "n_dated": 2,
-"gap": 22
+"gbif_total": 3,
+"gbif_latest": null
 },
 {
 "group": "Worms",
 "sp": "Prosadenoporus agricola",
-"common": "--",
+"common": "Bermuda land nemertean",
 "last": 1966,
+"gap": 60,
 "range": "Bermuda",
 "family": "Prosorhochmidae",
 "rl": "CR(PE)",
 "n_dated": 1,
-"gap": 60
+"gbif_total": 9,
+"gbif_latest": 1906
 },
 {
 "group": "Plants",
 "sp": "Eugenia guayaquilensis",
-"common": "--",
+"common": "",
 "last": 1823,
+"gap": 203,
 "range": "Ecuador",
 "family": "Myrtaceae",
 "rl": "CR(PE)",
 "n_dated": 254,
-"gap": 203
+"gbif_total": 15,
+"gbif_latest": 1828
+}
+],
+"longest_rejected": [
+{
+"group": "Lizards",
+"sp": "Trachylepis maculata",
+"last": 1839,
+"why": "GBIF holds occurrences to 1943",
+"gbif_latest": 1943,
+"gbif_total": 6
+},
+{
+"group": "Lizards",
+"sp": "Celestus occiduus",
+"last": 1840,
+"why": "GBIF holds occurrences to 1937",
+"gbif_latest": 1937,
+"gbif_total": 30
+},
+{
+"group": "Frogs",
+"sp": "Cycloramphus fuliginosus",
+"last": 1838,
+"why": "GBIF holds occurrences to 2014",
+"gbif_latest": 2014,
+"gbif_total": 152
+},
+{
+"group": "Frogs",
+"sp": "Cycloramphus brasiliensis",
+"last": 1864,
+"why": "GBIF holds occurrences to 2026",
+"gbif_latest": 2026,
+"gbif_total": 98
+},
+{
+"group": "Frogs",
+"sp": "Micrixalus silvaticus",
+"last": 1882,
+"why": "GBIF holds occurrences to 2023",
+"gbif_latest": 2023,
+"gbif_total": 7
+},
+{
+"group": "Frogs",
+"sp": "Afrixalus schneideri",
+"last": 1889,
+"why": "GBIF holds occurrences to 1957",
+"gbif_latest": 1957,
+"gbif_total": 10
+},
+{
+"group": "Frogs",
+"sp": "Cycloramphus asper",
+"last": 1899,
+"why": "GBIF holds occurrences to 1979",
+"gbif_latest": 1979,
+"gbif_total": 133
+},
+{
+"group": "Frogs",
+"sp": "Cycloramphus bolitoglossus",
+"last": 1899,
+"why": "GBIF holds occurrences to 2026",
+"gbif_latest": 2026,
+"gbif_total": 52
+},
+{
+"group": "Frogs",
+"sp": "Cycloramphus ohausi",
+"last": 1907,
+"why": "GBIF holds occurrences to 1977",
+"gbif_latest": 1977,
+"gbif_total": 62
+},
+{
+"group": "Frogs",
+"sp": "Thoropa petropolitana",
+"last": 1907,
+"why": "GBIF holds occurrences to 1977",
+"gbif_latest": 1977,
+"gbif_total": 295
+},
+{
+"group": "Frogs",
+"sp": "Gastrotheca microdiscus",
+"last": 1910,
+"why": "GBIF holds occurrences to 2026",
+"gbif_latest": 2026,
+"gbif_total": 43
+},
+{
+"group": "Frogs",
+"sp": "Gastrotheca fulvorufa",
+"last": 1911,
+"why": "GBIF holds occurrences to 1977",
+"gbif_latest": 1977,
+"gbif_total": 4
+},
+{
+"group": "Frogs",
+"sp": "Philautus kempii",
+"last": 1912,
+"why": "GBIF holds occurrences to 1990",
+"gbif_latest": 1990,
+"gbif_total": 1
+},
+{
+"group": "Birds",
+"sp": "Eriocnemis godini",
+"last": 1850,
+"why": "GBIF holds occurrences to 2023",
+"gbif_latest": 2023,
+"gbif_total": 28
+},
+{
+"group": "Birds",
+"sp": "Siphonorhis americana",
+"last": 1860,
+"why": "GBIF holds occurrences to 1966",
+"gbif_latest": 1966,
+"gbif_total": 19
+},
+{
+"group": "Fish",
+"sp": "Astyanax scabripinnis",
+"last": 1842,
+"why": "GBIF holds occurrences to 2018",
+"gbif_latest": 2018,
+"gbif_total": 1488
+},
+{
+"group": "Fish",
+"sp": "Trichomycterus nigricans",
+"last": 1846,
+"why": "GBIF holds occurrences to 2002",
+"gbif_latest": 2002,
+"gbif_total": 6
+},
+{
+"group": "Fish",
+"sp": "Coregonis bezola",
+"last": 1850,
+"why": "GBIF name match was FUZZY, not EXACT"
+},
+{
+"group": "Fish",
+"sp": "Eigenmannia microstoma",
+"last": 1852,
+"why": "GBIF holds occurrences to 2017",
+"gbif_latest": 2017,
+"gbif_total": 64
+},
+{
+"group": "Spiders & scorpions",
+"sp": "Eresus quartuorguttata",
+"last": 1804,
+"why": "GBIF name match was HIGHERRANK, not EXACT"
+},
+{
+"group": "Spiders & scorpions",
+"sp": "Eresus frontalis",
+"last": 1808,
+"why": "GBIF name match was HIGHERRANK, not EXACT"
+},
+{
+"group": "Clams & mussels",
+"sp": "Cuneopsis demangei",
+"last": 1929,
+"why": "GBIF holds occurrences to 2021",
+"gbif_latest": 2021,
+"gbif_total": 11
+},
+{
+"group": "Clams & mussels",
+"sp": "Obovaria haddletoni",
+"last": 1970,
+"why": "GBIF holds occurrences to 1999",
+"gbif_latest": 1999,
+"gbif_total": 5
+},
+{
+"group": "Crustaceans",
+"sp": "Afrithelphusa afzelii",
+"last": 1790,
+"why": "refound; cited on this site as the 225-year record"
 }
 ],
 "rates": [
@@ -19394,64 +19622,64 @@
 "compare": {
 "rows": [
 {
-"c": "Brazil",
-"lost": 262,
-"new": 87
-},
-{
 "c": "China",
 "lost": 26,
-"new": 225
+"new": 469
 },
 {
-"c": "Madagascar",
-"lost": 98,
-"new": 97
-},
-{
-"c": "Ecuador",
-"lost": 108,
-"new": 85
-},
-{
-"c": "Colombia",
-"lost": 87,
-"new": 52
-},
-{
-"c": "United States",
-"lost": 91,
-"new": 16
-},
-{
-"c": "Peru",
-"lost": 36,
-"new": 66
-},
-{
-"c": "Vietnam",
-"lost": 28,
-"new": 64
+"c": "Brazil",
+"lost": 262,
+"new": 220
 },
 {
 "c": "India",
 "lost": 40,
-"new": 43
+"new": 252
+},
+{
+"c": "Ecuador",
+"lost": 108,
+"new": 159
+},
+{
+"c": "Madagascar",
+"lost": 98,
+"new": 156
+},
+{
+"c": "Peru",
+"lost": 36,
+"new": 181
+},
+{
+"c": "Colombia",
+"lost": 87,
+"new": 106
+},
+{
+"c": "Vietnam",
+"lost": 28,
+"new": 156
 },
 {
 "c": "Mexico",
 "lost": 60,
-"new": 22
+"new": 91
 },
 {
-"c": "Tanzania",
-"lost": 66,
-"new": 0
+"c": "Australia",
+"lost": 33,
+"new": 104
 },
 {
-"c": "Indonesia",
-"lost": 15,
-"new": 41
+"c": "Papua New Guinea",
+"lost": 14,
+"new": 98
+},
+{
+"c": "United States",
+"lost": 91,
+"new": 18
 }
 ],
 "overlap": [
@@ -19463,8 +19691,8 @@
 "India",
 "Madagascar",
 "Mexico",
+"New Caledonia",
 "Peru",
-"United States",
 "Vietnam"
 ],
 "n_overlap": 11,

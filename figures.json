@@ -1,0 +1,1135 @@
+{
+ "note": "Every figure stated in the site's prose, computed from the published data by scripts/28_build_figures.py. t is the text as printed, v the value, src where it comes from.",
+ "figures": {
+  "amph_listing_total": {
+   "t": "1,721",
+   "v": 1721,
+   "src": "published payload"
+  },
+  "andermann_dated_extinct_mammals": {
+   "t": "351",
+   "v": 351,
+   "src": "D:/claude-scratch/30c2bf09/andermann_data/data/raw/last_occurrence_data/extinct_taxa_final_lo_ranges.txt (Andermann et al. 2020 data, Zenodo 2621252; NOT inside"
+  },
+  "bm_share_finds_2010s": {
+   "t": "29%",
+   "v": 28.749999999999996,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "bm_share_finds_high": {
+   "t": "86%",
+   "v": 85.71428571428571,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "bm_share_finds_low": {
+   "t": "80",
+   "v": 80.0,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "bm_share_last_seen_2000s": {
+   "t": "7%",
+   "v": 6.8493150684931505,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "cnc_unnamed_per_named": {
+   "t": "127",
+   "v": 127.23809523809524,
+   "src": "C:/Connect and Conserve/SPECIES_BLACK_LIST_named_by_nobody.csv + SPECIES_BLACK_LIST_named_by_orgs.csv"
+  },
+  "corpus_kept_birds_pct": {
+   "t": "72%",
+   "v": 72,
+   "src": "build_2026/scored_dd.csv + build_2026/iucn_2026_index.csv"
+  },
+  "corpus_kept_fish_pct": {
+   "t": "28%",
+   "v": 28,
+   "src": "build_2026/scored_dd.csv + build_2026/iucn_2026_index.csv"
+  },
+  "corpus_named_dd": {
+   "t": "2,964",
+   "v": 2964,
+   "src": "build_2026/scored_dd.csv"
+  },
+  "data_built": {
+   "t": "2026-10-13",
+   "v": "2026-10-13",
+   "src": "data.json meta.built"
+  },
+  "data_json_mb": {
+   "t": "1.7",
+   "v": 1.7,
+   "src": "site/data.json"
+  },
+  "data_json_size_mb": {
+   "t": "1.7",
+   "v": 1.669172,
+   "src": "published payload"
+  },
+  "dd_20plus_years": {
+   "t": "475",
+   "v": 475,
+   "src": "published payload"
+  },
+  "dd_assessment_cost_musd": {
+   "t": "2.9",
+   "v": 2.9,
+   "src": "published payload"
+  },
+  "dd_coverage_pct": {
+   "t": "35%",
+   "v": 35,
+   "src": "published payload"
+  },
+  "dd_median_time_to_resolution": {
+   "t": "16",
+   "v": 16,
+   "src": "published payload"
+  },
+  "dd_median_years": {
+   "t": "16",
+   "v": 16,
+   "src": "published payload"
+  },
+  "dd_outside_register": {
+   "t": "5,628",
+   "v": 5628,
+   "src": "published payload"
+  },
+  "dd_overdue": {
+   "t": "1,011",
+   "v": 1011,
+   "src": "published payload"
+  },
+  "dd_reaffirmed": {
+   "t": "1,210",
+   "v": 1210,
+   "src": "published payload"
+  },
+  "dd_reaffirmed_pct": {
+   "t": "40%",
+   "v": 40,
+   "src": "published payload"
+  },
+  "dd_reassessed_still_dd": {
+   "t": "1,210",
+   "v": 1210,
+   "src": "data.json meta.counts.dd_reassessed_still_dd"
+  },
+  "dd_total": {
+   "t": "3,031",
+   "v": 3031,
+   "src": "published payload"
+  },
+  "expected_finds_sa_amphibians_2021_30": {
+   "t": "24",
+   "v": 23.62826188301511,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+  },
+  "expected_finds_total_2021_30": {
+   "t": "116",
+   "v": 115.69256409644716,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+  },
+  "ext_mammal_rate_multiple": {
+   "t": "5x",
+   "v": 5.134957463263728,
+   "src": "chart_data.json mammal_bins: last 500 years' rate over the highest earlier rate"
+  },
+  "ext_peak_from": {
+   "t": "2,000",
+   "v": 2000,
+   "src": "chart_data.json: start of the highest earlier bin, years ago"
+  },
+  "ext_peak_to": {
+   "t": "500",
+   "v": 500,
+   "src": "chart_data.json: end of the highest earlier bin, years ago"
+  },
+  "ext_years_per_mammal_peak": {
+   "t": "39",
+   "v": 38.669760247486465,
+   "src": "chart_data.json mammal_bins: 1,000 / the highest earlier rate"
+  },
+  "ext_years_per_mammal_since1500": {
+   "t": "7.5",
+   "v": 7.530687551773477,
+   "src": "chart_data.json mammal_bins: 1,000 / the last 500 years' rate per 1,000 years"
+  },
+  "feed_newest": {
+   "t": "October 2026",
+   "v": 1791475200,
+   "src": "rediscoveries.json: newest card date"
+  },
+  "feed_oldest": {
+   "t": "September 2010",
+   "v": 1285138800,
+   "src": "rediscoveries.json: oldest card date"
+  },
+  "feed_recent_share": {
+   "t": "64%",
+   "v": 63.91752577319588,
+   "src": "rediscoveries.json: share of cards dated in the two most recent years"
+  },
+  "feed_recent_y1": {
+   "t": "2025",
+   "v": 2025,
+   "src": "rediscoveries.json: the year before the newest card's year"
+  },
+  "feed_recent_y2": {
+   "t": "2026",
+   "v": 2026,
+   "src": "rediscoveries.json: newest card's year"
+  },
+  "find_papers_2010_2019": {
+   "t": "72",
+   "v": 72,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/lit_find_papers.json"
+  },
+  "find_papers_2020_2026": {
+   "t": "95",
+   "v": 95,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/lit_find_papers.json"
+  },
+  "find_rate_missing_60_99_per100_decade": {
+   "t": "21",
+   "v": 21.16163890139577,
+   "src": "Lost Species/analysis/data/lindken/appendixG_rows.json"
+  },
+  "finds_1990_2020_brazil": {
+   "t": "32",
+   "v": 32,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "finds_1990_2020_india_colombia": {
+   "t": "23",
+   "v": 23,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "finds_1990_2020_indonesia": {
+   "t": "31",
+   "v": 31,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "finds_2000s_all": {
+   "t": "152",
+   "v": 152,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "finds_2000s_moderate_effort": {
+   "t": "39",
+   "v": 39,
+   "src": "Lost Species/analysis/data/lindken/appendixG_rows.json"
+  },
+  "finds_2010_2020_all": {
+   "t": "88",
+   "v": 88,
+   "src": "Lost Species/analysis/data/lindken/appendixG_rows.json"
+  },
+  "finds_2010_2020_moderate_effort": {
+   "t": "47",
+   "v": 47,
+   "src": "Lost Species/analysis/data/lindken/appendixG_rows.json"
+  },
+  "fishes_flagged_reassessed_n": {
+   "t": "22",
+   "v": 22,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/iucn_finals_v2.json"
+  },
+  "found_again_cr": {
+   "t": "114",
+   "v": 114,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "found_again_threatened": {
+   "t": "269",
+   "v": 269,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "found_again_threatened_pct": {
+   "t": "63%",
+   "v": 63.443396226415096,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "gbif_astyanax_latest_year": {
+   "t": "2018",
+   "v": 2018,
+   "src": "Species Black List/analysis/data/gbif_latest_cache.json"
+  },
+  "gbif_astyanax_occurrences": {
+   "t": "1,488",
+   "v": 1488,
+   "src": "Species Black List/analysis/data/gbif_latest_cache.json"
+  },
+  "gbif_cycloramphus_latest_year": {
+   "t": "2014",
+   "v": 2014,
+   "src": "Species Black List/analysis/data/gbif_latest_cache.json"
+  },
+  "gbif_cycloramphus_occurrences": {
+   "t": "152",
+   "v": 152,
+   "src": "Species Black List/analysis/data/gbif_latest_cache.json"
+  },
+  "geo_acc_median_km": {
+   "t": "39",
+   "v": 39.3,
+   "src": "geocode_accuracy_v2.json: median error, km"
+  },
+  "geo_acc_placed": {
+   "t": "13",
+   "v": 13,
+   "src": "geocode_accuracy_v2.json: species the geocoder placed at all"
+  },
+  "geo_acc_sampled": {
+   "t": "45",
+   "v": 45,
+   "src": "reptile_pilot/geocode_accuracy_v2.json: species tested"
+  },
+  "geo_acc_worst_km": {
+   "t": "3,377",
+   "v": 3376.7,
+   "src": "geocode_accuracy_v2.json: worst error, km"
+  },
+  "geocode_repaired_by_box": {
+   "t": "13",
+   "v": 13,
+   "src": "build_2026/geocode_cache.json"
+  },
+  "geocode_repaired_by_country": {
+   "t": "13",
+   "v": 13,
+   "src": "build_2026/geocode_cache.json"
+  },
+  "gulf_of_california_species": {
+   "t": "19",
+   "v": 19,
+   "src": "published payload"
+  },
+  "herp_finds_moderate_effort_share_before_2009": {
+   "t": "18%",
+   "v": 17.97752808988764,
+   "src": "Lost Species/analysis/data/lindken/lindken_herp_inflection.json"
+  },
+  "herp_finds_moderate_effort_share_from_2009": {
+   "t": "51%",
+   "v": 51.35135135135135,
+   "src": "Lost Species/analysis/data/lindken/lindken_herp_inflection.json"
+  },
+  "herp_share_last_seen_2000s": {
+   "t": "93%",
+   "v": 93.15068493150685,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "herp_share_last_seen_high": {
+   "t": "59%",
+   "v": 58.92857142857143,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "herp_share_last_seen_low": {
+   "t": "40",
+   "v": 39.53488372093023,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "iucn_dd_vertebrates": {
+   "t": "8,659",
+   "v": 8659,
+   "src": "data.json meta.counts.iucn_dd_vertebrates (IUCN Red List DD species in vertebrate classes)"
+  },
+  "iucn_taxa_total": {
+   "t": "178,011",
+   "v": 178011,
+   "src": "build_2026/iucn_2026_index.csv"
+  },
+  "largest_site_count": {
+   "t": "63",
+   "v": 63,
+   "src": "published payload"
+  },
+  "lindken_finds_per100_1990s": {
+   "t": "15",
+   "v": 15,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "lindken_finds_per100_2000s": {
+   "t": "22",
+   "v": 22,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "lindken_found_again": {
+   "t": "424",
+   "v": 424,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "lindken_found_within_20y_1990s_share": {
+   "t": "12%",
+   "v": 12,
+   "src": "Lost Species/analysis/data/lindken/appendixG_rows.json"
+  },
+  "lindken_found_within_20y_before_1970_share": {
+   "t": "1%",
+   "v": 0.67,
+   "src": "Lost Species/analysis/data/lindken/appendixG_rows.json"
+  },
+  "lindken_rediscoveries_2000s": {
+   "t": "150",
+   "v": 150,
+   "src": "build_2026/extinction_page/chart_data.json"
+  },
+  "lindken_share_found_since_1900": {
+   "t": "29%",
+   "v": 29,
+   "src": "Lost Species/analysis/data/lindken/appendixG_rows.json"
+  },
+  "lindken_species_haiti": {
+   "t": "19",
+   "v": 19,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "lindken_species_new_caledonia": {
+   "t": "30",
+   "v": 30,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "lindken_species_venezuela": {
+   "t": "40",
+   "v": 40,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "lindken_species_vietnam": {
+   "t": "28",
+   "v": 28,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "lindken_still_lost": {
+   "t": "856",
+   "v": 856,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json (6_redlist_status.'still lost'); source rows lindken/appendixG_rows.json + AppendixE xlsx"
+  },
+  "lindken_still_lost_dd": {
+   "t": "214",
+   "v": 214,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json (6_redlist_status.'still lost'.DD)"
+  },
+  "lindken_still_lost_ne": {
+   "t": "207",
+   "v": 207,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json (6_redlist_status.'still lost'.NE)"
+  },
+  "lindken_tetrapods_traced": {
+   "t": "1,280",
+   "v": 1280,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "locality_cov_after_pct": {
+   "t": "56%",
+   "v": 56,
+   "src": "published payload"
+  },
+  "locality_cov_before_pct": {
+   "t": "17%",
+   "v": 17,
+   "src": "published payload"
+  },
+  "locality_from_account": {
+   "t": "518",
+   "v": 518,
+   "src": "published payload"
+  },
+  "locality_from_evidence": {
+   "t": "1,211",
+   "v": 1211,
+   "src": "published payload"
+  },
+  "longest_contradicted_others": {
+   "t": "18",
+   "v": 18,
+   "src": "longest_vetted.json: GBIF-contradicted candidates other than the two the page names"
+  },
+  "longest_first_contradicted": {
+   "t": "Five",
+   "v": 5,
+   "src": "longest_vetted.json: groups whose oldest candidate GBIF contradicts"
+  },
+  "longest_groups": {
+   "t": "twenty-one",
+   "v": 21,
+   "src": "analysis/data/longest_vetted.json: groups with a record holder"
+  },
+  "longest_rejections": {
+   "t": "24",
+   "v": 24,
+   "src": "longest_vetted.json: candidates rejected"
+  },
+  "lost_invert_and_plant": {
+   "t": "705",
+   "v": 705,
+   "src": "published payload"
+  },
+  "lost_invertebrates": {
+   "t": "439",
+   "v": 439,
+   "src": "published payload"
+  },
+  "lost_n_species": {
+   "t": "2,016",
+   "v": 2016,
+   "src": "published payload"
+  },
+  "lost_not_flagged_pe": {
+   "t": "1,395",
+   "v": 1395,
+   "src": "lost-species.json: rows whose Red List category is not CR(PE)"
+  },
+  "lost_total": {
+   "t": "2,016",
+   "v": 2016,
+   "src": "lost-species.json meta.n"
+  },
+  "lost_total_floor_1000": {
+   "t": "2,000",
+   "v": 2000,
+   "src": "published payload"
+  },
+  "mammal_rows": {
+   "t": "373",
+   "v": 373,
+   "src": "published payload"
+  },
+  "mammals_multi_country": {
+   "t": "76",
+   "v": 76,
+   "src": "published payload"
+  },
+  "map_points_cap": {
+   "t": "30",
+   "v": 30,
+   "src": "published payload"
+  },
+  "median_mass_found_1990s_g": {
+   "t": "50",
+   "v": 50.0,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "median_mass_found_2010s_g": {
+   "t": "25",
+   "v": 25.36,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "median_mass_newly_lost_early_g": {
+   "t": "25",
+   "v": 24.86,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "nev_amphibians": {
+   "t": "974",
+   "v": 974,
+   "src": "amphibians.json rows"
+  },
+  "nev_birdsmammals": {
+   "t": "386",
+   "v": 386,
+   "src": "birdsmammals.json rows"
+  },
+  "nev_reptiles": {
+   "t": "1,729",
+   "v": 1729,
+   "src": "reptiles.json rows"
+  },
+  "nev_total": {
+   "t": "3,089",
+   "v": 3089,
+   "src": "distinct species across reptiles.json, amphibians.json and birdsmammals.json"
+  },
+  "no_gbif_record": {
+   "t": "805",
+   "v": 805,
+   "src": "published payload"
+  },
+  "no_locality": {
+   "t": "1,333",
+   "v": 1333,
+   "src": "published payload"
+  },
+  "odds_birds_vs_amphibians": {
+   "t": "2.4x",
+   "v": 2.4238578682985037,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+  },
+  "odds_mammals_vs_amphibians": {
+   "t": "2.2x",
+   "v": 2.2048182152762656,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+  },
+  "pd_africa_lost_before1500_n": {
+   "t": "18",
+   "v": 18,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_africa_native_species": {
+   "t": "1,168",
+   "v": 1168,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_africa_pd_before1500_myr": {
+   "t": "157",
+   "v": 157,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_africa_pd_before1500_share_pct": {
+   "t": "1.6%",
+   "v": 1.6,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_africa_pd_since1500_myr": {
+   "t": "13",
+   "v": 13,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_africa_share_before1500": {
+   "t": "1.6%",
+   "v": 1.5646180519168538,
+   "src": "phy_pd_results.json: Africa's share of evolutionary history lost before 1500"
+  },
+  "pd_caribbean_lost_before1500_n": {
+   "t": "27",
+   "v": 27,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_caribbean_lost_since1500_n": {
+   "t": "23",
+   "v": 23,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_caribbean_native_species": {
+   "t": "131",
+   "v": 131,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_caribbean_pd_before1500_myr": {
+   "t": "292",
+   "v": 292,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_caribbean_pd_before1500_share_pct": {
+   "t": "10.6%",
+   "v": 10.6,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_caribbean_pd_since1500_myr": {
+   "t": "507",
+   "v": 507,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_eurasia_lost_before1500_n": {
+   "t": "104",
+   "v": 104,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_eurasia_lost_since1500_n": {
+   "t": "13",
+   "v": 13,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_eurasia_native_species": {
+   "t": "2,149",
+   "v": 2149,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_eurasia_pd_before1500_myr": {
+   "t": "984",
+   "v": 984,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_eurasia_pd_before1500_share_pct": {
+   "t": "5.1%",
+   "v": 5.1,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_eurasia_pd_since1500_myr": {
+   "t": "74",
+   "v": 74,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_lost_world_total_billion_years": {
+   "t": "2.7",
+   "v": 2.7,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_madagascar_lost_before1500_n": {
+   "t": "17",
+   "v": 17,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_madagascar_native_species": {
+   "t": "226",
+   "v": 226,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_madagascar_pd_before1500_myr": {
+   "t": "198",
+   "v": 198,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_madagascar_pd_before1500_share_pct": {
+   "t": "6.4%",
+   "v": 6.4,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_madagascar_pd_since1500_myr": {
+   "t": "115",
+   "v": 115,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_north_america_lost_before1500_n": {
+   "t": "56",
+   "v": 56,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_north_america_native_species": {
+   "t": "893",
+   "v": 893,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_north_america_pd_before1500_myr": {
+   "t": "760",
+   "v": 760,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_north_america_pd_before1500_share_pct": {
+   "t": "8.2%",
+   "v": 8.2,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_north_america_pd_since1500_myr": {
+   "t": "47",
+   "v": 47,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_oceanic_islands_native_species": {
+   "t": "155",
+   "v": 155,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_oceanic_islands_pd_since1500_myr": {
+   "t": "32",
+   "v": 32,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_oceanic_share_before1500": {
+   "t": "0.2%",
+   "v": 0.21617308776109348,
+   "src": "phy_pd_results.json: oceanic islands' share lost before 1500 (checked as 'under 1%')"
+  },
+  "pd_sahul_lost_before1500_n": {
+   "t": "41",
+   "v": 41,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_sahul_lost_since1500_n": {
+   "t": "24",
+   "v": 24,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_sahul_native_species": {
+   "t": "608",
+   "v": 608,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_sahul_pd_before1500_myr": {
+   "t": "269",
+   "v": 269,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_sahul_pd_before1500_share_pct": {
+   "t": "5.0%",
+   "v": 5.0,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_sahul_pd_since1500_myr": {
+   "t": "114",
+   "v": 114,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_south_america_lost_before1500_n": {
+   "t": "58",
+   "v": 58,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_south_america_native_species": {
+   "t": "1,271",
+   "v": 1271,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_south_america_pd_before1500_myr": {
+   "t": "832",
+   "v": 832,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_south_america_pd_before1500_share_pct": {
+   "t": "7.2%",
+   "v": 7.2,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_south_america_pd_since1500_myr": {
+   "t": "20",
+   "v": 20,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_world_lost_before1500_n": {
+   "t": "270",
+   "v": 270,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_world_lost_since1500_n": {
+   "t": "82",
+   "v": 82,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_world_native_species": {
+   "t": "5,726",
+   "v": 5726,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_world_pd_before1500_myr": {
+   "t": "2,056",
+   "v": 2056,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_world_pd_before1500_share_pct": {
+   "t": "5.0%",
+   "v": 5.0,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "pd_world_pd_since1500_myr": {
+   "t": "608",
+   "v": 608,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_pd_results.json"
+  },
+  "phylacine_species_total": {
+   "t": "5,831",
+   "v": 5831,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_species.json"
+  },
+  "predict_candidates": {
+   "t": "840",
+   "v": 840,
+   "src": "Lost Species/analysis/data/lindken/lindken_predict_v2_noeffort.json"
+  },
+  "rdb_reptiles_no_global_assessment": {
+   "t": "2,467",
+   "v": 2467,
+   "src": "build_2026/rdb_redlist_gap.json (scripts/reptile_pilot/count_rdb_without_redlist.py)"
+  },
+  "redlist_accessed_nb": {
+   "t": "2026‑07‑28",
+   "v": "2026-07-28",
+   "src": "data.json meta.redlist_accessed"
+  },
+  "regional_find_papers": {
+   "t": "156",
+   "v": 156,
+   "src": "build_2026/lit_rediscovery_multilang_screened_2026-10-02.csv + build_2026/extinction_vs_rediscovery_2026-10-02/lit_screen_final.json"
+  },
+  "register_dd": {
+   "t": "3,031",
+   "v": 3031,
+   "src": "data.json meta.counts.dd"
+  },
+  "register_ne": {
+   "t": "31",
+   "v": 31,
+   "src": "data.json meta.counts.ne"
+  },
+  "register_total": {
+   "t": "3,062",
+   "v": 3062,
+   "src": "data.json: species rows"
+  },
+  "repad_local_rediscoveries_extracted": {
+   "t": "1,063",
+   "v": 1063,
+   "src": "Lost Species/analysis/data/repad_crosscheck.json"
+  },
+  "rept_island_odds_ratio": {
+   "t": "0.92",
+   "v": 0.92,
+   "src": "REPTILE_PILOT.md validation table ('tier 5 (island) vs rest', OR 0.92, p 1.0; n=41 island)"
+  },
+  "rept_multi_country_threat_rate": {
+   "t": "13.2%",
+   "v": 13.178294573643411,
+   "src": "REPTILE_PILOT.md validation table, tier 1 multi-country"
+  },
+  "rept_single_country_threat_rate": {
+   "t": "27.2%",
+   "v": 27.156549520766774,
+   "src": "REPTILE_PILOT.md 'Validation of the restriction classes' tables (script scripts/reptile_pilot/reptile_validate.py; its output reptile_validation.json is no long"
+  },
+  "rept_validation_sample": {
+   "t": "600",
+   "v": 600,
+   "src": "REPTILE_PILOT.md ('a seeded random sample of 600 from the 8,750 assessed reptiles'; 571 scored to a usable tier)"
+  },
+  "reptile_authority_matches": {
+   "t": "169",
+   "v": 169,
+   "src": "scripts/reptile_pilot/reptile_pilot_diff.py on reptile_checklist_2026_06.xlsx + IUCN export taxonomy.csv (REPTILE_PILOT.md line 36)"
+  },
+  "reptile_dropped_assessed": {
+   "t": "51",
+   "v": 51,
+   "src": "published payload"
+  },
+  "reptile_false_gap_rate": {
+   "t": "2.9%",
+   "v": 2.865168539325843,
+   "src": "published payload"
+  },
+  "reptile_share_finds_2010s": {
+   "t": "49%",
+   "v": 48.75,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "reptile_share_finds_high": {
+   "t": "8%",
+   "v": 7.894736842105263,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
+  },
+  "restriction_stated_pct": {
+   "t": "92%",
+   "v": 92,
+   "src": "published payload"
+  },
+  "sahul_since1500_share_about": {
+   "t": "40%",
+   "v": 40,
+   "src": "phy_pd_results.json: Sahul's loss since 1500 as a share of its prehistoric loss, to the nearest 10 ('about')"
+  },
+  "sens_drop_thin_high_rate": {
+   "t": "65.2%",
+   "v": 65.2,
+   "src": "build_2026/outcome_sensitivity.json rows[1] (scripts/16_outcome_sensitivity.py)"
+  },
+  "sens_species_specific_high_rate": {
+   "t": "88.2%",
+   "v": 88.2353,
+   "src": "build_2026/outcome_species_specific.json (analysis/outcome_species_specific.py)"
+  },
+  "site_list_after": {
+   "t": "127",
+   "v": 127,
+   "src": "published payload"
+  },
+  "site_list_before": {
+   "t": "46",
+   "v": 46,
+   "src": "published payload"
+  },
+  "specialist_exclusions": {
+   "t": "149",
+   "v": 149,
+   "src": "Lost Species/analysis/data/review_queue_148.json"
+  },
+  "still_lost_data_deficient": {
+   "t": "214",
+   "v": 214,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "still_lost_not_evaluated": {
+   "t": "207",
+   "v": 207,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
+  },
+  "tetrapods_first_declared_2000_2004": {
+   "t": "40",
+   "v": 40,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/iucn_lag_rows.json"
+  },
+  "tetrapods_first_declared_2020_2024": {
+   "t": "16",
+   "v": 16,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/iucn_lag_rows.json"
+  },
+  "tetrapods_first_flagged_2000_2004": {
+   "t": "59",
+   "v": 59,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/iucn_lag_rows.json"
+  },
+  "tetrapods_first_flagged_2020_2024": {
+   "t": "90",
+   "v": 90,
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/iucn_lag_rows.json"
+  },
+  "tier2_validated_threatened_pct": {
+   "t": "19%",
+   "v": 19,
+   "src": "published payload"
+  },
+  "tier3_validated_threatened_pct": {
+   "t": "67%",
+   "v": 67,
+   "src": "published payload"
+  },
+  "unplaceable": {
+   "t": "726",
+   "v": 726,
+   "src": "published payload"
+  },
+  "us_conservation_revenue_2022_busd": {
+   "t": "16",
+   "v": 15.91,
+   "src": "C:/Connect and Conserve/PowerBI_2022_Refresh/data2025/CnC_root_long.csv (Type==Revenue, Year==2022, EIN present); script C:/Connect and Conserve/derive_2022_rev"
+  },
+  "validation_fisher_p": {
+   "t": "0.0007",
+   "v": 0.0007,
+   "src": "published payload"
+  },
+  "validation_high_n": {
+   "t": "27",
+   "v": 27,
+   "src": "data.json meta.validation.high.n (reassessed species in the priority stratum)"
+  },
+  "validation_high_rate1": {
+   "t": "55.6%",
+   "v": 55.6,
+   "src": "data.json meta.validation.high.rate"
+  },
+  "validation_high_rate_pct0": {
+   "t": "56%",
+   "v": 55.6,
+   "src": "published payload"
+  },
+  "validation_high_rate_pct1": {
+   "t": "55.6%",
+   "v": 55.6,
+   "src": "published payload"
+  },
+  "validation_high_threatened": {
+   "t": "15",
+   "v": 15,
+   "src": "published payload"
+  },
+  "validation_interaction_p": {
+   "t": "0.25",
+   "v": 0.2474,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_low_n": {
+   "t": "113",
+   "v": 113,
+   "src": "published payload"
+  },
+  "validation_low_rate": {
+   "t": "21%",
+   "v": 21.2,
+   "src": "published payload"
+  },
+  "validation_low_threatened": {
+   "t": "24",
+   "v": 24,
+   "src": "published payload"
+  },
+  "validation_median_records_low": {
+   "t": "19",
+   "v": "19",
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_mh_or": {
+   "t": "3.88",
+   "v": 3.88,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_mh_or_hi": {
+   "t": "9.70",
+   "v": 9.7,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_mh_or_lo": {
+   "t": "1.55",
+   "v": 1.55,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_n_labelled": {
+   "t": "140",
+   "v": 140,
+   "src": "data.json meta.validation.n_labelled (DD species IUCN reassessed, the answer key)"
+  },
+  "validation_odds_ratio": {
+   "t": "4.64",
+   "v": 4.64,
+   "src": "published payload"
+  },
+  "validation_or_adj": {
+   "t": "4.14",
+   "v": 4.14,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_adj_hi": {
+   "t": "10.21",
+   "v": 10.21,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_adj_lo": {
+   "t": "1.68",
+   "v": 1.68,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_adj_p": {
+   "t": "0.002",
+   "v": 0.002,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_ci_hi": {
+   "t": "12.33",
+   "v": 12.33,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_ci_lo": {
+   "t": "1.74",
+   "v": 1.74,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_newer": {
+   "t": "8.64",
+   "v": 8.64,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_older": {
+   "t": "2.65",
+   "v": 2.65,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_shrinkage_pct": {
+   "t": "11%",
+   "v": 11.0,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_tertile_high": {
+   "t": "6.20",
+   "v": 6.2,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_tertile_low": {
+   "t": "3.05",
+   "v": 3.05,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_or_tertile_mid": {
+   "t": "4.00",
+   "v": 4.0,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "validation_records_p": {
+   "t": "0.22",
+   "v": 0.2208,
+   "src": "build_2026/validation_robustness.txt"
+  },
+  "with_locality": {
+   "t": "1,729",
+   "v": 1729,
+   "src": "published payload"
+  }
+ }
+}
