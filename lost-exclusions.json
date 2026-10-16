@@ -876,6 +876,12 @@
    "class": "records all along: a species that was never lost"
   },
   {
+   "sp": "Fibigia thesigeri",
+   "why": "German et al. (2016, Phytotaxa 258, doi:10.11646/phytotaxa.258.1.5) showed it is the widespread Physoptychis caspica, and GBIF, WCVP and the Catalogue of Life follow them; the Red List holds no assessment of either name. Research-grade photographs from Iraq itself in 2025 and specialist-identified Iranian sheets of 2016",
+   "class": "records all along: a species that was never lost",
+   "evidence": "Iran (Islamic Republic of) preserved specimen Edinburgh (E) Herbarium Specimens; Iran (Islamic Republic of) preserved specimen W"
+  },
+  {
    "sp": "Galba vancouverensis",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 10212133), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -1094,6 +1100,12 @@
    "why": "2,290 GBIF records across 6 of the last six decades, the newest in 2026, and no date on the list; a species collected or photographed through the decades was never unaccounted for",
    "class": "records all along: a species that was never lost",
    "evidence": "United States preserved specimen ASU https://swbiodiversity.org/seinet/collections/individual/index.php?occid=10376711; United States preserved specimen ASU https://swbiodiversity.org/seinet/collections/individual/index.php?occid=4536093; United States preserved specimen ASC https://swbiodiversity.org/seinet/collections/individual/index.php?occid=12532286"
+  },
+  {
+   "sp": "Maxillaria guadalupensis",
+   "why": "Blanco (2013, Selbyana 31) placed the name under the widespread Maxillaria virguncula, and GBIF, WCVP and TAXREF follow him; the Red List holds no assessment of either name. The species has verified wild records in every decade since the 1960s and research-grade photographs in 2026, so it was never lost",
+   "class": "records all along: a species that was never lost",
+   "evidence": "Colombia human observation Consultoría Colombiana S.A.; Colombia human observation Consultoría Colombiana S.A.; Colombia human observation Consultoría Colombiana S.A."
   },
   {
    "sp": "Megadytes ducalis",
@@ -1403,6 +1415,12 @@
     "iucn_name": "Pieris wollastoni (Butler, 1886)",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4535297), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Piper molliusculum",
+   "why": "the list gives Ecuador and no date; WCVP and the Colombian plant catalogue also give Colombia, where herbarium sheets run from 1994 to 2016, several identified by the Piper specialist Ricardo Callejas. A species collected through the decades was never unaccounted for",
+   "class": "records all along: a species that was never lost",
+   "evidence": "Colombia preserved specimen Instituto Amazónico de Investigaciones Científicas - SINCHI https://herbario.sinchi.org.co/herbario_v/especimenes/ficha/97283/; Colombia preserved specimen Instituto Amazónico de Investigaciones Científicas - SINCHI https://herbario.sinchi.org.co/herbario_v/especimenes/ficha/91892/; Colombia preserved specimen Instituto Amazónico de Investigaciones Científicas - SINCHI "
   },
   {
    "sp": "Platytropius siamensis",
@@ -1732,7 +1750,7 @@
   }
  ],
  "meta": {
-  "n": 126,
+  "n": 129,
   "iucn_extinct_checked": "2026-09-18",
   "note": "Species removed from the Lost Species page, each with its reason. The upstream list is unchanged. Country resolution only."
  }

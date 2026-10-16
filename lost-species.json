@@ -116,7 +116,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Peninsular Malaysia",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 2008,
 "prec": "year"
@@ -226,7 +226,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Sulawesi",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1983,
 "prec": "year"
@@ -259,7 +259,7 @@
 "grp": "Plant - Orchids",
 "cls": "long-lost",
 "rl": "EN",
-"cty": "São Tomé",
+"cty": "Sao Tome and Principe",
 "reg": "Islands",
 "last": 1894,
 "prec": "year"
@@ -408,7 +408,7 @@
 "grp": "Insect",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1972,
 "prec": "year"
@@ -474,7 +474,7 @@
 "grp": "Mammal",
 "cls": "lost",
 "rl": "LC",
-"cty": "Ethiopia, Etrea, Sudan",
+"cty": "Ethiopia, Eritrea, Sudan",
 "reg": "Africa",
 "last": 1999,
 "prec": "year"
@@ -606,7 +606,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "not in IUCN index",
-"cty": "Côte d'Ivoire",
+"cty": "Côte d'Ivoire",
 "reg": "Africa",
 "last": 1977,
 "prec": "year"
@@ -1035,7 +1035,7 @@
 "grp": "Plant - Orchids",
 "cls": "unclassified",
 "rl": "NE",
-"cty": "Mascarene Islands (Mauritius Island)",
+"cty": "Mauritius",
 "reg": "Islands",
 "last": 2005,
 "prec": "decade"
@@ -1156,7 +1156,7 @@
 "grp": "Bird",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Argentina, Paragua, Uruguay, Brazil",
+"cty": "Argentina, Paraguay, Uruguay, Brazil",
 "reg": "South America",
 "last": 1965,
 "prec": "decade"
@@ -1299,7 +1299,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "United States (Puerto Rico, U.S. Virgin Islands), Britain (British Virgin Islands)",
+"cty": "United States (Puerto Rico), United States (U.S. Virgin Islands), British Virgin Islands",
 "reg": "Islands",
 "last": 1932,
 "prec": "year"
@@ -1442,7 +1442,7 @@
 "sp": "Aponogeton cordatus",
 "v": "",
 "grp": "Plant - Aquatic plant",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "DD",
 "cty": "Madagascar",
 "reg": "Africa",
@@ -1675,7 +1675,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "not in IUCN index",
-"cty": "Monserrate Island",
+"cty": "Mexico",
 "reg": "Islands",
 "last": 2001,
 "prec": "year"
@@ -1752,7 +1752,7 @@
 "grp": "Plant - Flowering plant (misc)",
 "cls": "long-lost",
 "rl": "not in IUCN index",
-"cty": "Mascarene Islands (Maurice Island)",
+"cty": "Mauritius",
 "reg": "Islands",
 "last": 1860,
 "prec": "year"
@@ -1772,12 +1772,12 @@
 "sp": "Astragalus ecbatanus",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
+"cls": "lost",
 "rl": "NE",
-"cty": "Iraq",
+"cty": "Iraq, Iran",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 2001,
+"prec": "year"
 },
 {
 "sp": "Astragalus gillettii",
@@ -1805,12 +1805,12 @@
 "sp": "Astragalus procerus",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "not in IUCN index",
-"cty": "Iraq",
+"cty": "Iraq, Iran",
 "reg": "Middle East",
-"last": "",
-"prec": ""
+"last": 1959,
+"prec": "year"
 },
 {
 "sp": "Astragalus pseudofragrans",
@@ -2348,7 +2348,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Ecuador; Peru",
+"cty": "Ecuador, Peru",
 "reg": "South America",
 "last": "",
 "prec": ""
@@ -2458,7 +2458,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Ecuador; Peru",
+"cty": "Ecuador, Peru",
 "reg": "South America",
 "last": "",
 "prec": ""
@@ -2579,7 +2579,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR",
-"cty": "Colombia; Venezuela",
+"cty": "Colombia, Venezuela",
 "reg": "South America",
 "last": 1987,
 "prec": "year"
@@ -2832,7 +2832,7 @@
 "grp": "Fish",
 "cls": "long-lost",
 "rl": "VU",
-"cty": "Java",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1865,
 "prec": "decade"
@@ -2843,7 +2843,7 @@
 "grp": "Fish",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Java",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1855,
 "prec": "year"
@@ -3173,7 +3173,7 @@
 "grp": "Insect",
 "cls": "long-lost",
 "rl": "NE",
-"cty": "Sumatra",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1880,
 "prec": "year"
@@ -3195,7 +3195,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "CR(PE)",
-"cty": "St Croix",
+"cty": "United States (U.S. Virgin Islands)",
 "reg": "Islands",
 "last": "",
 "prec": ""
@@ -3228,7 +3228,7 @@
 "grp": "Plant - Orchids",
 "cls": "long-lost",
 "rl": "not in IUCN index",
-"cty": "United States (Puerto Rico)",
+"cty": "United States (Puerto Rico)",
 "reg": "Islands",
 "last": 1969,
 "prec": "year"
@@ -3261,7 +3261,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "Tablas Island",
+"cty": "Philippines",
 "reg": "Islands",
 "last": 1972,
 "prec": "year"
@@ -3272,7 +3272,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Luzon",
+"cty": "Philippines",
 "reg": "Asia",
 "last": 2009,
 "prec": "year"
@@ -3283,7 +3283,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Lubang Island",
+"cty": "Philippines",
 "reg": "Islands",
 "last": 2009,
 "prec": "year"
@@ -3305,7 +3305,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Luzon",
+"cty": "Philippines",
 "reg": "Asia",
 "last": 1950,
 "prec": "century"
@@ -4101,7 +4101,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Guadeloupe: Marie-Galante",
+"cty": "Guadeloupe",
 "reg": "Islands",
 "last": 1862,
 "prec": "year"
@@ -4123,7 +4123,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "United States (U.S. Virgin Islands)",
+"cty": "United States (U.S. Virgin Islands)",
 "reg": "Islands",
 "last": 1875,
 "prec": "year"
@@ -4156,7 +4156,7 @@
 "grp": "Cartilaginous Fish (sharks, rays, skates, and chimaeras)",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Indonesia (Borneo), Thailand and Vietnam",
+"cty": "Malaysia, Thailand, Vietnam",
 "reg": "Asia",
 "last": 1935,
 "prec": "decade"
@@ -4200,7 +4200,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "New Guinea",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 2002,
 "prec": "year"
@@ -4211,7 +4211,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "NT",
-"cty": "Pulau Tindjil",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1990,
 "prec": "year"
@@ -4222,7 +4222,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Pulau Sukur",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1908,
 "prec": "year"
@@ -4266,7 +4266,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "not in IUCN index",
-"cty": "Dominican Republic",
+"cty": "Dominican Republic",
 "reg": "Islands",
 "last": 1977,
 "prec": "year"
@@ -4310,7 +4310,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "not in IUCN index",
-"cty": "Colombia; Ecuador",
+"cty": "Colombia, Ecuador",
 "reg": "South America",
 "last": 1997,
 "prec": "year"
@@ -4585,7 +4585,7 @@
 "grp": "Insect",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1935,
 "prec": "year"
@@ -4596,7 +4596,7 @@
 "grp": "Insect",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1935,
 "prec": "year"
@@ -4717,7 +4717,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Andamans, Narcondam Island",
+"cty": "India",
 "reg": "Islands",
 "last": 1905,
 "prec": "year"
@@ -4728,7 +4728,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "VU",
-"cty": "Peninsular Malaysia",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 2008,
 "prec": "year"
@@ -4739,7 +4739,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Nias Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 2009,
 "prec": "year"
@@ -4750,7 +4750,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Simeulue Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1913,
 "prec": "year"
@@ -4794,7 +4794,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "Sumatra",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 2007,
 "prec": "year"
@@ -4816,7 +4816,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Pagai Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 2009,
 "prec": "year"
@@ -4838,7 +4838,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "VU",
-"cty": "Sumatra",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1996,
 "prec": "year"
@@ -4849,7 +4849,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Siantan Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1925,
 "prec": "year"
@@ -4860,7 +4860,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "Sumatra",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1975,
 "prec": "year"
@@ -4915,7 +4915,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Sarawak)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 2004,
 "prec": "year"
@@ -4981,7 +4981,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Isla de Margarita",
+"cty": "Venezuela",
 "reg": "Islands",
 "last": 1967,
 "prec": "year"
@@ -5025,7 +5025,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "New Caledonia, Île Art, in the Îles Belep group more than 40 km north-west of Grande Terre, New Caledonia",
+"cty": "New Caledonia",
 "reg": "Islands",
 "last": 2002,
 "prec": "year"
@@ -5201,7 +5201,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Costa Rica; Panama",
+"cty": "Costa Rica, Panama",
 "reg": "North America",
 "last": 1990,
 "prec": "year"
@@ -5256,7 +5256,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR",
-"cty": "Costa Rica; Panama",
+"cty": "Costa Rica, Panama",
 "reg": "North America",
 "last": 2010,
 "prec": "year"
@@ -5333,7 +5333,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Costa Rica; Panama",
+"cty": "Costa Rica, Panama",
 "reg": "North America",
 "last": 1982,
 "prec": "year"
@@ -5410,7 +5410,7 @@
 "grp": "Mammal",
 "cls": "long-lost",
 "rl": "CR",
-"cty": "Côte d'Ivoire",
+"cty": "Côte d'Ivoire",
 "reg": "Africa",
 "last": 1976,
 "prec": "year"
@@ -5513,7 +5513,7 @@
 "grp": "Amphibian",
 "cls": "unclassified",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -5535,7 +5535,7 @@
 "grp": "Arachnid",
 "cls": "unclassified",
 "rl": "not in IUCN index",
-"cty": "Sardinia",
+"cty": "Italy",
 "reg": "Islands",
 "last": "",
 "prec": ""
@@ -5546,7 +5546,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "VU",
-"cty": "San Pedro Nolasco Island",
+"cty": "Mexico",
 "reg": "Islands",
 "last": 2001,
 "prec": "year"
@@ -6074,7 +6074,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Sulawesi",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 2009,
 "prec": "year"
@@ -6107,7 +6107,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Vietnam: Hon Son Island,",
+"cty": "Vietnam",
 "reg": "Islands",
 "last": 2006,
 "prec": "year"
@@ -6151,7 +6151,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "NE",
-"cty": "New Guinea",
+"cty": "Papua New Guinea",
 "reg": "Asia",
 "last": "",
 "prec": ""
@@ -6184,7 +6184,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "LC",
-"cty": "Surin Islands",
+"cty": "Thailand",
 "reg": "Islands",
 "last": 2005,
 "prec": "year"
@@ -6239,7 +6239,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "VU",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -6250,7 +6250,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "EN",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1932,
 "prec": "year"
@@ -6593,7 +6593,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Peninsular Malaysia",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 2001,
 "prec": "year"
@@ -6615,7 +6615,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Nias Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1910,
 "prec": "year"
@@ -6626,7 +6626,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Sarawak)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1989,
 "prec": "year"
@@ -6637,7 +6637,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "NT",
-"cty": "Vietnam: Kondao Island",
+"cty": "Vietnam",
 "reg": "Islands",
 "last": 1987,
 "prec": "year"
@@ -6672,7 +6672,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Mentawai Archipelago: Pulau Simeuleu",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1913,
 "prec": "year"
@@ -6683,7 +6683,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Sarawak)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1990,
 "prec": "year"
@@ -6716,7 +6716,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "New Caledonia, Île Baaba",
+"cty": "New Caledonia",
 "reg": "Islands",
 "last": 2006,
 "prec": "year"
@@ -6870,7 +6870,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "British West Indies: Montserrat",
+"cty": "Montserrat",
 "reg": "Islands",
 "last": 2006,
 "prec": "year"
@@ -7035,7 +7035,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Biaro Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1998,
 "prec": "year"
@@ -7046,7 +7046,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Sulawesi: Tahulandang Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1998,
 "prec": "year"
@@ -7156,7 +7156,7 @@
 "grp": "Plant - Trees & Shrubs",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "??",
+"cty": "Madagascar",
 "reg": "unknown",
 "last": 2005,
 "prec": "year"
@@ -7297,9 +7297,9 @@
 "sp": "Elaphoglossum polytrichum",
 "v": "",
 "grp": "Plant - Ferns",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
-"cty": "Ecuador",
+"cty": "Ecuador, Colombia",
 "reg": "South America",
 "last": 1850,
 "prec": "century"
@@ -7343,7 +7343,7 @@
 "grp": "Mammal",
 "cls": "lost",
 "rl": "DD",
-"cty": "Malawi, Mozambique, Zimbabwe",
+"cty": "Malawi, Mozambique, Zambia",
 "reg": "Africa",
 "last": 2005,
 "prec": "year"
@@ -7365,7 +7365,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "United States (Puerto Rico)",
+"cty": "United States (Puerto Rico)",
 "reg": "Islands",
 "last": 1990,
 "prec": "year"
@@ -7398,7 +7398,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "United States (Puerto Rico)",
+"cty": "United States (Puerto Rico)",
 "reg": "Islands",
 "last": 1981,
 "prec": "year"
@@ -7420,7 +7420,7 @@
 "grp": "Amphibian",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "United States (Puerto Rico)",
+"cty": "United States (Puerto Rico)",
 "reg": "Islands",
 "last": 1976,
 "prec": "year"
@@ -7464,7 +7464,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Dominican Republic",
+"cty": "Dominican Republic",
 "reg": "Islands",
 "last": 1986,
 "prec": "year"
@@ -7543,7 +7543,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "EN",
-"cty": "Viti Levu",
+"cty": "Fiji",
 "reg": "Islands",
 "last": 1983,
 "prec": "year"
@@ -7565,7 +7565,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "New Guinea",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1938,
 "prec": "year"
@@ -7609,7 +7609,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "NE",
-"cty": "Rotuma Island",
+"cty": "Fiji",
 "reg": "Islands",
 "last": 1986,
 "prec": "year"
@@ -7642,7 +7642,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Solomon Islands: Santa Cruz",
+"cty": "Solomon Islands",
 "reg": "Islands",
 "last": 1981,
 "prec": "year"
@@ -7653,7 +7653,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "VU",
-"cty": "Cook Islands (Rarotonga)",
+"cty": "Cook Islands",
 "reg": "Islands",
 "last": 2000,
 "prec": "year"
@@ -7851,7 +7851,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "EN",
-"cty": "Sumba Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1989,
 "prec": "year"
@@ -8027,7 +8027,7 @@
 "grp": "Crustacean",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1931,
 "prec": "year"
@@ -8115,7 +8115,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Sula Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1914,
 "prec": "year"
@@ -8572,17 +8572,6 @@
 "prec": "year"
 },
 {
-"sp": "Fibigia thesigeri",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
-"rl": "not in IUCN index",
-"cty": "Iraq",
-"reg": "Middle East",
-"last": "",
-"prec": ""
-},
-{
 "sp": "Flexiseps stylus",
 "v": "",
 "grp": "Reptile",
@@ -8665,7 +8654,7 @@
 "grp": "Gastropod molluscs (snails and slugs)",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1975,
 "prec": "decade"
@@ -8753,7 +8742,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Colombia; Ecuador",
+"cty": "Colombia, Ecuador",
 "reg": "South America",
 "last": 1995,
 "prec": "decade"
@@ -8808,7 +8797,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "DD",
-"cty": "Colombia; Ecuador",
+"cty": "Colombia, Ecuador",
 "reg": "South America",
 "last": 1996,
 "prec": "year"
@@ -8830,7 +8819,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "DD",
-"cty": "Guishan Island",
+"cty": "Taiwan",
 "reg": "Islands",
 "last": 1998,
 "prec": "year"
@@ -9149,7 +9138,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "LC",
-"cty": "Sumatra",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1990,
 "prec": "year"
@@ -9160,7 +9149,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Sarawak)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1924,
 "prec": "year"
@@ -9303,7 +9292,7 @@
 "grp": "Plant - Aquatic plant",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Gulf of Panama",
+"cty": "Panama",
 "reg": "North America",
 "last": 1960,
 "prec": "year"
@@ -9435,7 +9424,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Lake Victoria",
+"cty": "Tanzania, Uganda",
 "reg": "Africa",
 "last": 1980,
 "prec": "year"
@@ -9479,7 +9468,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Lake Victoria",
+"cty": "Tanzania, Uganda",
 "reg": "Africa",
 "last": 1984,
 "prec": "year"
@@ -9633,7 +9622,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Lake Victoria",
+"cty": "Tanzania",
 "reg": "Africa",
 "last": 1986,
 "prec": "year"
@@ -9644,7 +9633,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Lake Victoria",
+"cty": "Tanzania",
 "reg": "Africa",
 "last": 1986,
 "prec": "year"
@@ -9699,7 +9688,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Lake Victoria",
+"cty": "Tanzania",
 "reg": "Africa",
 "last": 1984,
 "prec": "year"
@@ -9710,7 +9699,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Lake Victoria",
+"cty": "Kenya, Tanzania",
 "reg": "Africa",
 "last": 1983,
 "prec": "year"
@@ -9776,7 +9765,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Lake Victoria",
+"cty": "Kenya, Uganda",
 "reg": "Africa",
 "last": 1985,
 "prec": "year"
@@ -9864,7 +9853,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Nias Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1912,
 "prec": "year"
@@ -9941,7 +9930,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "not in IUCN index",
-"cty": "Indonesia: probably W Kalimantan",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": "",
 "prec": ""
@@ -10007,7 +9996,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Annobon Island",
+"cty": "Equatorial Guinea",
 "reg": "Islands",
 "last": 1903,
 "prec": "year"
@@ -10040,7 +10029,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Cape Verde Islands (Fogo)",
+"cty": "Cape Verde",
 "reg": "Islands",
 "last": 1997,
 "prec": "year"
@@ -10062,7 +10051,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Annobon Island",
+"cty": "Equatorial Guinea",
 "reg": "Islands",
 "last": 1897,
 "prec": "year"
@@ -10117,7 +10106,7 @@
 "grp": "Fish",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Java",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1950,
 "prec": "year"
@@ -10425,7 +10414,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "DD",
-"cty": "Malaysia, Thailand, Indonesia, Singapore, Viet Nam, Borneo, Java",
+"cty": "Malaysia, Thailand, Indonesia, Singapore, Viet Nam",
 "reg": "Asia",
 "last": "",
 "prec": ""
@@ -10546,7 +10535,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR",
-"cty": "Colombia; Ecuador",
+"cty": "Colombia, Ecuador",
 "reg": "South America",
 "last": "",
 "prec": ""
@@ -10942,7 +10931,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "New Guinea",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1874,
 "prec": "year"
@@ -11019,7 +11008,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "EN",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1925,
 "prec": "year"
@@ -11030,7 +11019,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "DD",
-"cty": "Lake Tanganyika coast",
+"cty": "Tanzania",
 "reg": "Africa",
 "last": 1896,
 "prec": "year"
@@ -11195,7 +11184,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Palawan",
+"cty": "Philippines",
 "reg": "Islands",
 "last": 2007,
 "prec": "year"
@@ -11404,7 +11393,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Costa Rica; Panama",
+"cty": "Costa Rica, Panama",
 "reg": "North America",
 "last": 2002,
 "prec": "year"
@@ -11646,7 +11635,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -11657,7 +11646,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "CR",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -11767,7 +11756,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Java",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1956,
 "prec": "year"
@@ -11855,7 +11844,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1927,
 "prec": "year"
@@ -11899,7 +11888,7 @@
 "grp": "Amphibian",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1950,
 "prec": "year"
@@ -11921,7 +11910,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "VU",
-"cty": "East Plana Cay",
+"cty": "Bahamas",
 "reg": "Islands",
 "last": 1981,
 "prec": "year"
@@ -12031,7 +12020,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Espirito Santo Island",
+"cty": "Vanuatu",
 "reg": "Islands",
 "last": 2006,
 "prec": "year"
@@ -12075,7 +12064,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "Polynesia (Tuvalu)",
+"cty": "Tuvalu",
 "reg": "Islands",
 "last": 1998,
 "prec": "year"
@@ -12328,7 +12317,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1955,
 "prec": "year"
@@ -12381,11 +12370,11 @@
 "sp": "Lepturopetium kuniense",
 "v": "",
 "grp": "Plant - Grasses & Sedges",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "DD",
-"cty": "New Caledonia",
+"cty": "New Caledonia, Marshall Islands, Tuvalu, American Samoa, Samoa, Tokelau",
 "reg": "Islands",
-"last": 1967,
+"last": 2001,
 "prec": "year"
 },
 {
@@ -12460,7 +12449,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Australia: Kinghall Island",
+"cty": "Australia",
 "reg": "Islands",
 "last": 1982,
 "prec": "year"
@@ -12779,7 +12768,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Pulau Miang",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1901,
 "prec": "year"
@@ -12867,7 +12856,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Mindanao",
+"cty": "Philippines",
 "reg": "Asia",
 "last": 1959,
 "prec": "year"
@@ -12966,7 +12955,7 @@
 "grp": "Fish",
 "cls": "long-lost",
 "rl": "not in IUCN index",
-"cty": "Java",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1857,
 "prec": "year"
@@ -12977,7 +12966,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "not in IUCN index",
-"cty": "New Guinea",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1997,
 "prec": "year"
@@ -13054,7 +13043,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "not in IUCN index",
-"cty": "Palawan",
+"cty": "Philippines",
 "reg": "Islands",
 "last": 2007,
 "prec": "year"
@@ -13065,7 +13054,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "not in IUCN index",
-"cty": "Sulawesi",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1998,
 "prec": "year"
@@ -13076,7 +13065,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Luzon",
+"cty": "Philippines",
 "reg": "Asia",
 "last": 2003,
 "prec": "year"
@@ -13087,7 +13076,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Kalimantan)",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1994,
 "prec": "year"
@@ -13263,7 +13252,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Guadeloupe: Îlet à Cochons",
+"cty": "Guadeloupe",
 "reg": "Islands",
 "last": 1963,
 "prec": "year"
@@ -13274,7 +13263,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Guadeloupe: Grande Terre",
+"cty": "Guadeloupe",
 "reg": "Islands",
 "last": 1920,
 "prec": "year"
@@ -13285,7 +13274,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Basse-Terre, Guadeloupe",
+"cty": "Guadeloupe",
 "reg": "Islands",
 "last": 1892,
 "prec": "year"
@@ -13296,7 +13285,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Dominican Republic",
+"cty": "Dominican Republic",
 "reg": "Islands",
 "last": 1937,
 "prec": "year"
@@ -13318,7 +13307,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "British West Indies: Montserrat",
+"cty": "Montserrat",
 "reg": "Islands",
 "last": 1970,
 "prec": "year"
@@ -13518,7 +13507,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Great Corn Island",
+"cty": "Nicaragua",
 "reg": "Islands",
 "last": 1928,
 "prec": "year"
@@ -13573,7 +13562,7 @@
 "grp": "Insect",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1963,
 "prec": "year"
@@ -13588,17 +13577,6 @@
 "reg": "South America",
 "last": 1850,
 "prec": "century"
-},
-{
-"sp": "Maxillaria guadalupensis",
-"v": "",
-"grp": "Plant - Orchids",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Guadeloupe (French Caribbean)",
-"reg": "Islands",
-"last": 1950,
-"prec": "year"
 },
 {
 "sp": "Maytenus manabiensis",
@@ -13727,7 +13705,7 @@
 "grp": "Gastropod molluscs (snails and slugs)",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1941,
 "prec": "year"
@@ -14325,7 +14303,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "South Island (New Zealand)",
+"cty": "New Zealand",
 "reg": "Oceania",
 "last": "",
 "prec": ""
@@ -14369,7 +14347,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "NT",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -14380,7 +14358,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "LC",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -14479,7 +14457,7 @@
 "grp": "Mammal",
 "cls": "long-lost",
 "rl": "CR",
-"cty": "Guinea",
+"cty": "Equatorial Guinea",
 "reg": "Africa",
 "last": 1968,
 "prec": "year"
@@ -14534,7 +14512,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Rossel Island",
+"cty": "Papua New Guinea",
 "reg": "Islands",
 "last": 2004,
 "prec": "year"
@@ -14567,7 +14545,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "DD",
-"cty": "Bali, Sumba, Indonesia",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1983,
 "prec": "year"
@@ -14767,7 +14745,7 @@
 "grp": "Gastropod molluscs (snails and slugs)",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Côte d'Ivoire",
+"cty": "Côte d'Ivoire",
 "reg": "Africa",
 "last": 1980,
 "prec": "year"
@@ -14877,7 +14855,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "not in IUCN index",
-"cty": "Australia: Pedra Branca islet off Tasmania",
+"cty": "Australia",
 "reg": "Islands",
 "last": 2001,
 "prec": "year"
@@ -14976,7 +14954,7 @@
 "grp": "Mammal",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Island of Banka",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1937,
 "prec": "year"
@@ -15119,7 +15097,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "New Zealand South Island",
+"cty": "New Zealand",
 "reg": "Islands",
 "last": 2008,
 "prec": "year"
@@ -15130,7 +15108,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "VU",
-"cty": "New Zealand South Island",
+"cty": "New Zealand",
 "reg": "Islands",
 "last": 2008,
 "prec": "year"
@@ -15460,7 +15438,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1932,
 "prec": "year"
@@ -15482,7 +15460,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1925,
 "prec": "year"
@@ -15592,7 +15570,7 @@
 "grp": "Bird",
 "cls": "unclassified",
 "rl": "CR",
-"cty": "Argentina; Paraguay; Brazil",
+"cty": "Argentina, Paraguay, Brazil",
 "reg": "South America",
 "last": 2005,
 "prec": "decade"
@@ -15946,7 +15924,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Luzon",
+"cty": "Philippines",
 "reg": "Asia",
 "last": 2009,
 "prec": "year"
@@ -15957,7 +15935,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "VU",
-"cty": "Luzon",
+"cty": "Philippines",
 "reg": "Asia",
 "last": 2001,
 "prec": "year"
@@ -15968,7 +15946,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Luzon",
+"cty": "Philippines",
 "reg": "Asia",
 "last": 2001,
 "prec": "year"
@@ -15979,7 +15957,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Luzon",
+"cty": "Philippines",
 "reg": "Asia",
 "last": 2007,
 "prec": "year"
@@ -15990,7 +15968,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "VU",
-"cty": "Palawan",
+"cty": "Philippines",
 "reg": "Islands",
 "last": 1961,
 "prec": "year"
@@ -16001,7 +15979,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "EN",
-"cty": "Panay Island",
+"cty": "Philippines",
 "reg": "Islands",
 "last": 1992,
 "prec": "year"
@@ -16023,7 +16001,7 @@
 "grp": "Amphibian",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Dominican Republic",
+"cty": "Dominican Republic",
 "reg": "Islands",
 "last": 1972,
 "prec": "year"
@@ -16144,7 +16122,7 @@
 "grp": "Mammal",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "Eastern African countries",
+"cty": "Kenya",
 "reg": "Africa",
 "last": 1938,
 "prec": "year"
@@ -16309,7 +16287,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "not in IUCN index",
-"cty": "Rodrigues Island",
+"cty": "Mauritius",
 "reg": "Islands",
 "last": 1917,
 "prec": "year"
@@ -16584,7 +16562,7 @@
 "grp": "Mammal",
 "cls": "rediscovered",
 "rl": "EN",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1985,
 "prec": "decade"
@@ -16595,7 +16573,7 @@
 "grp": "Mammal",
 "cls": "lost",
 "rl": "VU",
-"cty": "Uganda",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1991,
 "prec": "year"
@@ -16606,7 +16584,7 @@
 "grp": "Mammal",
 "cls": "lost",
 "rl": "CR",
-"cty": "Cote d'Ivoire, Guinea, Liberia",
+"cty": "Cote d'Ivoire, Ghana",
 "reg": "Africa",
 "last": 1978,
 "prec": "year"
@@ -16722,17 +16700,6 @@
 "prec": "year"
 },
 {
-"sp": "Piper molliusculum",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
-"rl": "CR(PE)",
-"cty": "Ecuador",
-"reg": "South America",
-"last": "",
-"prec": ""
-},
-{
 "sp": "Pittosporum leroyanum",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
@@ -16771,7 +16738,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "DD",
-"cty": "China: \"Yunnan\"",
+"cty": "China",
 "reg": "Asia",
 "last": "",
 "prec": ""
@@ -17101,7 +17068,7 @@
 "grp": "Crustacean",
 "cls": "unclassified",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -17123,7 +17090,7 @@
 "grp": "Crustacean",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1955,
 "prec": "year"
@@ -17156,7 +17123,7 @@
 "grp": "Crustacean",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1934,
 "prec": "year"
@@ -17167,7 +17134,7 @@
 "grp": "Crustacean",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1934,
 "prec": "year"
@@ -17200,7 +17167,7 @@
 "grp": "Crustacean",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1936,
 "prec": "year"
@@ -17233,7 +17200,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "New Guinea",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1913,
 "prec": "year"
@@ -17310,7 +17277,7 @@
 "grp": "Amphibian",
 "cls": "rediscovered",
 "rl": "CR",
-"cty": "Colombia; Ecuador",
+"cty": "Colombia, Ecuador",
 "reg": "South America",
 "last": 1984,
 "prec": "year"
@@ -17453,7 +17420,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR",
-"cty": "Colombia; Ecuador",
+"cty": "Colombia, Ecuador",
 "reg": "South America",
 "last": 1995,
 "prec": "decade"
@@ -17519,7 +17486,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Hanish al-Kabir Island",
+"cty": "Yemen",
 "reg": "Islands",
 "last": 2004,
 "prec": "year"
@@ -17717,7 +17684,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "VU",
-"cty": "Madagascar: Nosy Be",
+"cty": "Madagascar",
 "reg": "Africa",
 "last": 2000,
 "prec": "year"
@@ -17728,7 +17695,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Sarawak)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1993,
 "prec": "year"
@@ -17816,7 +17783,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR",
-"cty": "Guatemala; Mexico",
+"cty": "Guatemala, Mexico",
 "reg": "North America",
 "last": 2006,
 "prec": "year"
@@ -17860,7 +17827,7 @@
 "grp": "Gastropod molluscs (snails and slugs)",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1925,
 "prec": "decade"
@@ -18003,7 +17970,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Sumatra (but some uncertainty about provenance)",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1894,
 "prec": "year"
@@ -18014,7 +17981,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Sulawesi",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1890,
 "prec": "year"
@@ -18069,7 +18036,7 @@
 "grp": "Plant - Trees & Shrubs",
 "cls": "long-lost",
 "rl": "NE",
-"cty": "Mascarene Islands (Rodrigues Island)",
+"cty": "Mauritius",
 "reg": "Islands",
 "last": 1941,
 "prec": "year"
@@ -18091,7 +18058,7 @@
 "grp": "Mammal",
 "cls": "lost",
 "rl": "CR",
-"cty": "Papua New Guinea; Solomon Islands",
+"cty": "Papua New Guinea, Solomon Islands",
 "reg": "Oceania",
 "last": 2000,
 "prec": "year"
@@ -18366,7 +18333,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "CR",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -18854,7 +18821,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Benguerua Island, Mozambique",
+"cty": "Mozambique",
 "reg": "Islands",
 "last": 1990,
 "prec": "year"
@@ -18865,7 +18832,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Bioko",
+"cty": "Equatorial Guinea",
 "reg": "Islands",
 "last": 1895,
 "prec": "year"
@@ -18975,7 +18942,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Great Nicobar Island",
+"cty": "India",
 "reg": "Islands",
 "last": 1867,
 "prec": "year"
@@ -19204,12 +19171,12 @@
 "sp": "Siphocampylus loxensis",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
+"cls": "long-lost",
 "rl": "CR(PE)",
 "cty": "Ecuador",
 "reg": "South America",
-"last": "",
-"prec": ""
+"last": 1945,
+"prec": "year"
 },
 {
 "sp": "Siphonorhis americana",
@@ -19404,7 +19371,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "CR",
-"cty": "Dominican Republic",
+"cty": "Dominican Republic",
 "reg": "Islands",
 "last": 2008,
 "prec": "year"
@@ -19426,7 +19393,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "Dominican Republic",
+"cty": "Dominican Republic",
 "reg": "Islands",
 "last": 1991,
 "prec": "year"
@@ -19459,7 +19426,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "United States (Puerto Rico: Isla Monito)",
+"cty": "United States (Puerto Rico)",
 "reg": "Islands",
 "last": 2005,
 "prec": "year"
@@ -19481,7 +19448,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "EN",
-"cty": "Dominican Republic",
+"cty": "Dominican Republic",
 "reg": "Islands",
 "last": 1991,
 "prec": "year"
@@ -19525,7 +19492,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Kalimantan)",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1894,
 "prec": "year"
@@ -19536,7 +19503,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Kai Besar",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1923,
 "prec": "year"
@@ -19591,7 +19558,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Sarawak)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1990,
 "prec": "year"
@@ -19723,7 +19690,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "not in IUCN index",
-"cty": "Mentawi Islands: Sipura",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1894,
 "prec": "year"
@@ -19734,7 +19701,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Sarawak)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1999,
 "prec": "year"
@@ -19800,7 +19767,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "EN",
-"cty": "Sula Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1924,
 "prec": "year"
@@ -19822,7 +19789,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Sarawak)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1900,
 "prec": "year"
@@ -19855,7 +19822,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Sarawak)",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1890,
 "prec": "year"
@@ -19877,7 +19844,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Solomon Islands: Bougainville Island",
+"cty": "Papua New Guinea",
 "reg": "Islands",
 "last": 1962,
 "prec": "year"
@@ -19932,7 +19899,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "DD",
-"cty": "Sulawesi",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1932,
 "prec": "year"
@@ -19965,7 +19932,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Anegada, British Virgin Islands",
+"cty": "British Virgin Islands",
 "reg": "Islands",
 "last": 1968,
 "prec": "year"
@@ -19998,7 +19965,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "British Virgin Islands: Carrot Rock",
+"cty": "British Virgin Islands",
 "reg": "Islands",
 "last": 1996,
 "prec": "year"
@@ -20009,7 +19976,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "United States (U.S. Virgin Islands)",
+"cty": "United States (U.S. Virgin Islands)",
 "reg": "Islands",
 "last": 2000,
 "prec": "year"
@@ -20020,7 +19987,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "St. Martin Island: Sint Maarten",
+"cty": "Saint Martin, Sint Maarten",
 "reg": "Islands",
 "last": 1965,
 "prec": "year"
@@ -20031,7 +19998,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "United States (Puerto Rico: Mona Island)",
+"cty": "United States (Puerto Rico)",
 "reg": "Islands",
 "last": 1994,
 "prec": "year"
@@ -20042,7 +20009,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "United States (U.S. Virgin Islands)",
+"cty": "United States (U.S. Virgin Islands)",
 "reg": "Islands",
 "last": 1877,
 "prec": "year"
@@ -20328,7 +20295,7 @@
 "grp": "Amphibian",
 "cls": "lost",
 "rl": "CR(PE)",
-"cty": "Colombia; Ecuador",
+"cty": "Colombia, Ecuador",
 "reg": "South America",
 "last": 1995,
 "prec": "year"
@@ -20394,7 +20361,7 @@
 "grp": "Bird",
 "cls": "long-lost",
 "rl": "CR",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": 1942,
 "prec": "year"
@@ -20836,7 +20803,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "not in IUCN index",
-"cty": "Sumatra",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1924,
 "prec": "year"
@@ -21001,7 +20968,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "VU",
-"cty": "Tinhosa Grande islet, Gulf of Guinea",
+"cty": "Sao Tome and Principe",
 "reg": "Islands",
 "last": 1971,
 "prec": "year"
@@ -21023,7 +20990,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "VU",
-"cty": "Lolui Island, Lake Victoria",
+"cty": "Uganda",
 "reg": "Islands",
 "last": 2007,
 "prec": "year"
@@ -21144,7 +21111,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "NE",
-"cty": "Buka Island",
+"cty": "Papua New Guinea",
 "reg": "Islands",
 "last": 2005,
 "prec": "year"
@@ -21353,7 +21320,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "The Democratic Republic of Congo, Guinea, Gabon, Congo",
+"cty": "The Democratic Republic of Congo, Equatorial Guinea, Gabon, Congo",
 "reg": "Africa",
 "last": 1930,
 "prec": "year"
@@ -21419,7 +21386,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Indonesia (Borneo, Kalimantan)",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1894,
 "prec": "year"
@@ -21608,7 +21575,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Tioman Island",
+"cty": "Malaysia",
 "reg": "Islands",
 "last": 2004,
 "prec": "year"
@@ -21619,7 +21586,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Perhentian Island",
+"cty": "Malaysia",
 "reg": "Islands",
 "last": 2007,
 "prec": "year"
@@ -21762,7 +21729,7 @@
 "grp": "Gastropod molluscs (snails and slugs)",
 "cls": "unclassified",
 "rl": "CR(PE)",
-"cty": "The Democratic Republic of Congo",
+"cty": "The Democratic Republic of Congo",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -21795,7 +21762,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "EN",
-"cty": "Roti Island",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 2005,
 "prec": "year"
@@ -21817,7 +21784,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Rossel Island",
+"cty": "Papua New Guinea",
 "reg": "Islands",
 "last": 1915,
 "prec": "decade"
@@ -21828,7 +21795,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indonesia (Halmahera Island)",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1980,
 "prec": "year"
@@ -21951,7 +21918,7 @@
 "grp": "Fish",
 "cls": "lost",
 "rl": "not in IUCN index",
-"cty": "Sulawesi",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1987,
 "prec": "year"
@@ -22118,7 +22085,7 @@
 "grp": "Insect",
 "cls": "long-lost",
 "rl": "CR",
-"cty": "Côte d'Ivoire",
+"cty": "Côte d'Ivoire",
 "reg": "Africa",
 "last": 1969,
 "prec": "year"
@@ -22136,7 +22103,7 @@
 }
 ],
 "meta": {
-"n": 2008,
+"n": 2005,
 "built": "",
 "note": "Country resolution only. Localities are deliberately not published for lost species."
 }

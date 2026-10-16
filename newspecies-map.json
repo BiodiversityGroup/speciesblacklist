@@ -12905,18 +12905,18 @@
 ],
 "meta": {
 "total": 3225,
-"placed": 3167,
+"placed": 3168,
 "by_class": {
 "reptile": 1689,
-"amphibian": 971,
+"amphibian": 972,
 "bird": 13,
 "mammal": 494
 },
-"unplaced": 58,
-"places": 107,
+"unplaced": 57,
+"places": 108,
 "species": 3089,
-"species_placed": 3041,
-"species_unplaced": 48,
+"species_placed": 3042,
+"species_unplaced": 47,
 "rows_note": "total, placed and unplaced count rows: a mammal listed from several countries is one row per country"
 },
 "places": [
@@ -14929,7 +14929,7 @@
 },
 {
 "place": "French Guiana",
-"lat": 4.0,
+"lat": 4.004,
 "lon": -53.0,
 "n": 8,
 "grp": {
@@ -15237,8 +15237,8 @@
 },
 {
 "place": "Equatorial Guinea",
-"lat": 1.6,
-"lon": 10.3,
+"lat": 1.613,
+"lon": 10.517,
 "n": 4,
 "grp": {
 "Vespertilionidae": 3,
@@ -15285,8 +15285,8 @@
 },
 {
 "place": "Nicaragua",
-"lat": 12.9,
-"lon": -85.2,
+"lat": 12.351,
+"lon": -85.784,
 "n": 3,
 "grp": {
 "Leptotyphlopidae": 1,
@@ -16001,6 +16001,25 @@
 },
 "newest": 2024,
 "cc": "Portugal"
+},
+{
+"place": "Montserrat",
+"lat": 16.742,
+"lon": -62.192,
+"n": 1,
+"grp": {
+"Eleutherodactylidae": 1
+},
+"cls": {
+"amphibian": 1
+},
+"yr": {
+"amphibian": {
+"2022": 1
+}
+},
+"newest": 2022,
+"cc": "Montserrat"
 },
 {
 "place": "South Korea",
