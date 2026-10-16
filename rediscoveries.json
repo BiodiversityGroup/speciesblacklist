@@ -1,23 +1,23 @@
 {
-"built": "2026-10-14",
+"built": "2026-10-16",
 "counts": {
-"stories": 194,
-"raw_items": 503,
-"with_species": 122,
+"stories": 195,
+"raw_items": 505,
+"with_species": 123,
 "distinct_species": 238,
 "distinct_species_firm": 48,
 "multi_species_cards": 50,
-"with_image": 185,
+"with_image": 186,
 "syndicated": 81,
-"on_tbg_list": 31,
+"on_tbg_list": 32,
 "on_list_breakdown": {
 "on the Black List": 8,
-"on our lost-species list": 23
+"on our lost-species list": 24
 },
 "undated": 0,
 "newest": "Thu, 08 Oct 2026",
 "tracked_names": 7974,
-"image_local": 179,
+"image_local": 180,
 "archived": 130
 },
 "cards": [
@@ -2337,6 +2337,28 @@
 "also": []
 },
 {
+"title": "Experts celebrate rediscovery of rare species 120 years after it went missing: 'I was completely amazed'",
+"species": [
+"Sylvilagus insonus"
+],
+"species_firm": [],
+"on_list": "Lost Species",
+"detail": "Mammal, rediscovered, last seen 1950",
+"publisher": "The Cool Down",
+"date": "Sun, 02 Nov 2025",
+"ts": 1762066800,
+"first_seen": "2026-10-15",
+"link": "https://www.thecooldown.com/outdoors/rediscovery-omiltemi-cottontail-rabbit-elusive-species/",
+"image": "/rd-img/c204b2daf0a413c5.jpg",
+"wayback": "",
+"desc": "After 120 years, scientists in Mexico have rediscovered the Omiltemi cottontail rabbit, an elusive species thought to be extinct.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
 "title": "Meet 4 \u2018Extinct\u2019 Animals That Were Miraculously Rediscovered (Hint: One Was An Ancient Fish Found In A Fishing Net In 1938)",
 "species": [],
 "species_firm": [],
@@ -2731,7 +2753,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 14,
+"outlets": 15,
 "also": [
 {
 "publisher": "Good Things Guy",
