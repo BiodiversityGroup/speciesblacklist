@@ -34,16 +34,17 @@ the accounting closes:
 | | |
 |---|---|
 | IUCN DD vertebrates, v2026-1 | 8,659 |
-| named anywhere in the corpus | 2,964 |
-| of those, in the register | **2,964 — all of them** |
-| never named in the corpus | 5,695 (66%) |
-| register total, incl. synonym and rank recoveries | 3,031 |
+| named in the corpus under IUCN's own name | 2,964 |
+| named under another name (a synonym or another rank), matched to IUCN's | 67 |
+| named in the corpus in all | 3,031 |
+| of those, in the register | **3,031, all of them** |
+| never named in the corpus | 5,628 (65%) |
 
 So the honest statement is narrow and checkable: **every Data Deficient vertebrate this
 corpus names is in the register, and two thirds of IUCN's DD vertebrates are not in the
 corpus at all.**
 
-### The 5,695 outside were screened out, not overlooked
+### The 5,628 outside were screened out, not overlooked
 
 An earlier draft of this section called them "unexamined". That is also wrong, and it
 matters more than the arithmetic did. Richardson discusses the Data Deficient category
@@ -80,7 +81,7 @@ IUCN's later verdicts. That test is still real: the outcomes are held out and po
 January 2022 manuscript. But the tier distribution is a property of a curated sample, not of
 the Data Deficient category.
 
-**Against over-reading the omissions.** Read-across to the 5,695 is invalid in *both*
+**Against over-reading the omissions.** Read-across to the 5,628 is invalid in *both*
 directions. They are not unexamined, and they are not demonstrably safe either: one
 author's judgement, made without the follow-up research he says the category lacks, is not
 an assessment. What can be said is narrow — the register is **the DD vertebrates one expert

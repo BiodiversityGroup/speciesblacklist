@@ -49,7 +49,7 @@
   "corpus_named_dd": {
    "t": "2,964",
    "v": 2964,
-   "src": "build_2026/scored_dd.csv"
+   "src": "build_2026/scored_dd.csv: DD vertebrates the corpus names under IUCN's own name (the scorer's direct matches)"
   },
   "data_built": {
    "t": "2026-10-16",
@@ -90,6 +90,11 @@
    "t": "16",
    "v": 16,
    "src": "published payload"
+  },
+  "dd_named_other_name": {
+   "t": "67",
+   "v": 67,
+   "src": "build_2026/SPECIES_BLACK_LIST_dd.csv: rows recovered_from_ne_audit = yes"
   },
   "dd_outside_register": {
    "t": "5,628",
