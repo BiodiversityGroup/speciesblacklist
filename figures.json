@@ -482,18 +482,18 @@
    "src": "published payload"
   },
   "lost_n_species": {
-   "t": "2,005",
-   "v": 2005,
+   "t": "2,002",
+   "v": 2002,
    "src": "published payload"
   },
   "lost_not_flagged_pe": {
-   "t": "1,385",
-   "v": 1385,
+   "t": "1,382",
+   "v": 1382,
    "src": "lost-species.json: rows whose Red List category is not CR(PE)"
   },
   "lost_total": {
-   "t": "2,005",
-   "v": 2005,
+   "t": "2,002",
+   "v": 2002,
    "src": "lost-species.json meta.n"
   },
   "lost_total_floor_1000": {

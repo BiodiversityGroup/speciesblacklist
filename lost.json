@@ -12904,21 +12904,21 @@
 ]
 ],
 "meta": {
-"n_species": 2005,
-"n_mapped": 1998,
+"n_species": 2002,
+"n_mapped": 1995,
 "n_unmapped": 7,
 "n_places": 160,
 "compiled": "January 2023",
 "nomenclature": "Long & Rodriguez 2022, Oryx 56(4)",
 "by_class": {
-"long-lost": 1002,
-"lost": 718,
+"long-lost": 998,
+"lost": 717,
 "unclassified": 138,
-"rediscovered": 147
+"rediscovered": 149
 },
 "by_group": {
 "Snails & slugs": 109,
-"Reptile": 568,
+"Reptile": 566,
 "Fish": 318,
 "Insect": 200,
 "Bird": 54,
@@ -12928,7 +12928,7 @@
 "Amphibian": 298,
 "Arachnids": 72,
 "Plant - Trees & Shrubs": 58,
-"Mammal": 64,
+"Mammal": 63,
 "Plant - Mosses": 3,
 "Plant - Grasses & Sedges": 12,
 "Plant - Aquatic plant": 10,
@@ -12945,21 +12945,21 @@
 },
 "by_redlist": {
 "CR(PE)": 620,
-"CR": 204,
+"CR": 203,
 "DD": 455,
-"EN": 98,
+"EN": 97,
 "LC": 201,
-"not in IUCN index": 262,
+"not in IUCN index": 261,
 "VU": 57,
 "NT": 21,
 "NE": 87
 },
 "oldest_record": 1790,
 "median_last": 1966,
-"n_dated": 1787,
+"n_dated": 1784,
 "n_1800s": 243,
 "by_date_precision": {
-"year": 1693,
+"year": 1690,
 "none": 191,
 "decade": 94,
 "century": 23,
@@ -13151,8 +13151,8 @@
 "Insect": 2
 },
 "cls": {
-"long-lost": 43,
-"lost": 33,
+"long-lost": 42,
+"lost": 34,
 "unclassified": 8
 },
 "rl": {
@@ -13176,17 +13176,17 @@
 "place": "Mexico",
 "lat": 23.659,
 "lon": -102.008,
-"n": 65,
+"n": 64,
 "grp": {
 "Amphibian": 24,
-"Reptile": 16,
+"Reptile": 15,
 "Insect": 7,
 "Mammal": 7,
 "Crustaceans": 4
 },
 "cls": {
 "lost": 35,
-"long-lost": 27,
+"long-lost": 26,
 "unclassified": 3
 },
 "rl": {
@@ -13195,7 +13195,7 @@
 "CR": 8,
 "NE": 7,
 "VU": 4,
-"not in IUCN index": 3
+"not in IUCN index": 2
 },
 "examples": [
 "Abronia mitchelli",
@@ -13233,39 +13233,6 @@
 "cc": "United States of America"
 },
 {
-"place": "Australia",
-"lat": -24.776,
-"lon": 134.755,
-"n": 50,
-"grp": {
-"Reptile": 32,
-"Fish": 11,
-"Insect": 2,
-"Mammal": 1,
-"Amphibian": 1
-},
-"cls": {
-"lost": 39,
-"long-lost": 6,
-"unclassified": 5
-},
-"rl": {
-"DD": 18,
-"LC": 15,
-"EN": 5,
-"CR": 4,
-"not in IUCN index": 3
-},
-"examples": [
-"Acentronura larsonae",
-"Aipysurus fuscus",
-"Austroablepharus barrylyoni",
-"Beddomeia tumida"
-],
-"oldest": 1889,
-"cc": "Australia"
-},
-{
 "place": "India",
 "lat": 22.351,
 "lon": 78.668,
@@ -13298,6 +13265,38 @@
 ],
 "oldest": 1854,
 "cc": "India"
+},
+{
+"place": "Australia",
+"lat": -24.776,
+"lon": 134.755,
+"n": 49,
+"grp": {
+"Reptile": 32,
+"Fish": 11,
+"Insect": 2,
+"Amphibian": 1
+},
+"cls": {
+"lost": 38,
+"long-lost": 6,
+"unclassified": 5
+},
+"rl": {
+"DD": 18,
+"LC": 15,
+"EN": 5,
+"CR": 3,
+"not in IUCN index": 3
+},
+"examples": [
+"Acentronura larsonae",
+"Aipysurus fuscus",
+"Austroablepharus barrylyoni",
+"Beddomeia tumida"
+],
+"oldest": 1889,
+"cc": "Australia"
 },
 {
 "place": "Saint Helena",
@@ -13675,8 +13674,8 @@
 "Mammal": 1
 },
 "cls": {
-"long-lost": 14,
-"lost": 10,
+"long-lost": 13,
+"lost": 11,
 "unclassified": 5
 },
 "rl": {
@@ -14243,37 +14242,6 @@
 "cc": "Solomon Islands"
 },
 {
-"place": "Cuba",
-"lat": 23.013,
-"lon": -80.833,
-"n": 14,
-"grp": {
-"Reptile": 9,
-"Mammal": 3,
-"Bird": 2
-},
-"cls": {
-"lost": 11,
-"long-lost": 3
-},
-"rl": {
-"DD": 4,
-"CR(PE)": 3,
-"NT": 2,
-"EN": 2,
-"CR": 2,
-"not in IUCN index": 1
-},
-"examples": [
-"Amphisbaena carlgansi",
-"Anolis alfaroi",
-"Anolis altitudinalis",
-"Anolis birama"
-],
-"oldest": 1937,
-"cc": "Cuba"
-},
-{
 "place": "Jamaica",
 "lat": 18.185,
 "lon": -77.395,
@@ -14303,6 +14271,37 @@
 ],
 "oldest": 1840,
 "cc": "Jamaica"
+},
+{
+"place": "Cuba",
+"lat": 23.013,
+"lon": -80.833,
+"n": 13,
+"grp": {
+"Reptile": 8,
+"Mammal": 3,
+"Bird": 2
+},
+"cls": {
+"lost": 10,
+"long-lost": 3
+},
+"rl": {
+"DD": 4,
+"CR(PE)": 3,
+"NT": 2,
+"CR": 2,
+"EN": 1,
+"not in IUCN index": 1
+},
+"examples": [
+"Amphisbaena carlgansi",
+"Anolis alfaroi",
+"Anolis altitudinalis",
+"Anolis birama"
+],
+"oldest": 1937,
+"cc": "Cuba"
 },
 {
 "place": "Honduras",
@@ -17365,12 +17364,12 @@
 "range": "United States (Hawaii)"
 },
 {
-"sp": "Tropiocolotes wolfgangboehmei",
-"common": "Wolfgang\u2019s Sand Gecko",
-"descriptor": "Reptile from Saudi Arabia",
+"sp": "Amphisbaena bagual",
+"common": "",
+"descriptor": "Argentine reptile",
 "group": "Reptile",
-"last": 2001,
-"range": "Saudi Arabia"
+"last": 2002,
+"range": "Argentina"
 },
 {
 "sp": "Haplochromis pyrrhopteryx",
@@ -17725,12 +17724,12 @@
 "range": "Saint Helena"
 },
 {
-"sp": "Centrolene pipilatum",
-"common": "Amazon Giant Glass Frog",
-"descriptor": "Ecuadorian amphibian",
+"sp": "Prostherapis dunni",
+"common": "Dunn's Marsupial Frog",
+"descriptor": "Venezuelan amphibian",
 "group": "Amphibian",
 "last": 1977,
-"range": "Ecuador"
+"range": "Venezuela"
 },
 {
 "sp": "Bellevalia parva",
@@ -17741,12 +17740,12 @@
 "range": "Iraq"
 },
 {
-"sp": "Lepidodactylus oligoporus",
-"common": "Mortlock Islands Scaly-toed Gecko",
-"descriptor": "Malaysian reptile",
+"sp": "Lerista speciosa",
+"common": "Pale-striped Mulch Slider",
+"descriptor": "Australian reptile",
 "group": "Reptile",
 "last": 2004,
-"range": "Malaysia"
+"range": "Australia"
 },
 {
 "sp": "Hyphessobrycon balbus",
@@ -17797,12 +17796,12 @@
 "range": "Namibia"
 },
 {
-"sp": "Crocidura trichura",
-"common": "Christmas Island Shrew",
-"descriptor": "Mammal from Christmas Island",
+"sp": "Piliocolobus langi",
+"common": "Lang's Red Colobus",
+"descriptor": "Mammal from The Democratic Republic of Congo",
 "group": "Mammal",
 "last": 1985,
-"range": "Christmas Island"
+"range": "The Democratic Republic of Congo"
 },
 {
 "sp": "Desmarestia tropica",
@@ -17893,12 +17892,12 @@
 "range": "United States (Hawaii)"
 },
 {
-"sp": "Lerista quadrivincula",
-"common": "Four-chained Slider",
-"descriptor": "Australian reptile",
+"sp": "Varanus zugorum",
+"common": "Zugs' Monitor",
+"descriptor": "Indonesian reptile",
 "group": "Reptile",
 "last": 1980,
-"range": "Australia"
+"range": "Indonesia"
 },
 {
 "sp": "Cephalosilurus fowleri",
@@ -17941,12 +17940,12 @@
 "range": "Costa Rica"
 },
 {
-"sp": "Rhynchomeles prattorum",
-"common": "Seram Long-nosed Bandicoot",
-"descriptor": "Indonesian mammal",
+"sp": "Nilopegamys plumbeus",
+"common": "Ethiopian Amphibious Rat",
+"descriptor": "Ethiopian mammal",
 "group": "Mammal",
-"last": 1920,
-"range": "Indonesia"
+"last": 1925,
+"range": "Ethiopia"
 },
 {
 "sp": "Halodule ciliata",
@@ -18005,12 +18004,12 @@
 "range": "Saint Helena"
 },
 {
-"sp": "Atelopus gigas",
-"common": "Giant Stubfoot Toad",
-"descriptor": "Colombian amphibian",
+"sp": "Peltophryne fluviatica",
+"common": "Hispaniolan Crestless Toad",
+"descriptor": "Dominican amphibian",
 "group": "Amphibian",
-"last": 1970,
-"range": "Colombia"
+"last": 1972,
+"range": "Dominican Republic"
 },
 {
 "sp": "Panicum pearsonii",
@@ -18021,12 +18020,12 @@
 "range": "Namibia"
 },
 {
-"sp": "Ophiodes luciae",
-"common": "Lucy\u2019s Worm Lizard",
-"descriptor": "Reptile from Paraguay",
+"sp": "Plica pansticta",
+"common": "Speckled Treerunner",
+"descriptor": "Venezuelan reptile",
 "group": "Reptile",
 "last": 1995,
-"range": "Paraguay"
+"range": "Venezuela"
 },
 {
 "sp": "Rhamdella papariae",
@@ -18069,12 +18068,12 @@
 "range": "New Caledonia"
 },
 {
-"sp": "Nilopegamys plumbeus",
-"common": "Ethiopian Amphibious Rat",
-"descriptor": "Ethiopian mammal",
+"sp": "Neonycteris pusillus",
+"common": "Least Big-eared Bat",
+"descriptor": "Brazilian mammal",
 "group": "Mammal",
-"last": 1925,
-"range": "Ethiopia"
+"last": 1929,
+"range": "Brazil"
 },
 {
 "sp": "Dictyota galapagensis",
@@ -18132,7 +18131,7 @@
 "range": "Mozambique",
 "family": "Scincidae",
 "rl": "DD",
-"n_dated": 453,
+"n_dated": 451,
 "gbif_total": 0,
 "gbif_latest": null
 },
@@ -18236,7 +18235,7 @@
 "range": "Solomon Islands",
 "family": "Muridae",
 "rl": "CR(PE)",
-"n_dated": 56,
+"n_dated": 55,
 "gbif_total": 4,
 "gbif_latest": null
 },
@@ -18573,9 +18572,9 @@
 },
 {
 "group": "Lizards",
-"lost": 476,
+"lost": 474,
 "described": 8003,
-"per_1000": 59.5,
+"per_1000": 59.2,
 "source": "Reptile Database",
 "as_of": "June 2026"
 },
@@ -18621,9 +18620,9 @@
 },
 {
 "group": "Mammals",
-"lost": 64,
+"lost": 63,
 "described": 6774,
-"per_1000": 9.4,
+"per_1000": 9.3,
 "source": "Mammal Diversity Database v2.5",
 "as_of": "28 Jul 2026"
 },
@@ -18692,14 +18691,14 @@
 "new": 93
 },
 {
-"c": "Australia",
-"lost": 48,
-"new": 104
+"c": "Mexico",
+"lost": 60,
+"new": 91
 },
 {
-"c": "Mexico",
-"lost": 61,
-"new": 91
+"c": "Australia",
+"lost": 47,
+"new": 104
 },
 {
 "c": "Papua New Guinea",

@@ -1206,17 +1206,6 @@
 "prec": "year"
 },
 {
-"sp": "Anolis garridoi",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "EN",
-"cty": "Cuba",
-"reg": "Islands",
-"last": 1991,
-"prec": "year"
-},
-{
 "sp": "Anolis incredulus",
 "v": "",
 "grp": "Reptile",
@@ -5408,7 +5397,7 @@
 "sp": "Crocidura wimmeri",
 "v": "Wimmer's Shrew",
 "grp": "Mammal",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR",
 "cty": "Côte d'Ivoire",
 "reg": "Africa",
@@ -12084,11 +12073,11 @@
 "sp": "Lepidophyma dontomasi",
 "v": "MacDougall's Tropical Night Lizard",
 "grp": "Reptile",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "DD",
 "cty": "Mexico",
 "reg": "North America",
-"last": 1972,
+"last": 1989,
 "prec": "year"
 },
 {
@@ -12100,17 +12089,6 @@
 "cty": "Mexico",
 "reg": "North America",
 "last": 1991,
-"prec": "year"
-},
-{
-"sp": "Lepidophyma zongolica",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Mexico",
-"reg": "North America",
-"last": 2007,
 "prec": "year"
 },
 {
@@ -13879,11 +13857,11 @@
 "sp": "Melomys fulgens",
 "v": "Seram Long-tailed Melomys",
 "grp": "Mammal",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "DD",
 "cty": "Indonesia",
 "reg": "Asia",
-"last": 1920,
+"last": 1994,
 "prec": "year",
 "rd": 1,
 "rdfirm": 0
@@ -16846,7 +16824,7 @@
 "sp": "Plestiodon nietoi",
 "v": "",
 "grp": "Reptile",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "NE",
 "cty": "Mexico",
 "reg": "North America",
@@ -18155,11 +18133,11 @@
 "sp": "Pulchrana melanomenta",
 "v": "Papahag Frog",
 "grp": "Amphibian",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "DD",
 "cty": "Philippines",
 "reg": "Asia",
-"last": 1920,
+"last": 1982,
 "prec": "year"
 },
 {
@@ -22089,21 +22067,10 @@
 "reg": "Africa",
 "last": 1969,
 "prec": "year"
-},
-{
-"sp": "Zyzomys pedunculatus",
-"v": "Central Rock-rat",
-"grp": "Mammal",
-"cls": "lost",
-"rl": "CR",
-"cty": "Australia",
-"reg": "Australia",
-"last": 2001,
-"prec": "year"
 }
 ],
 "meta": {
-"n": 2005,
+"n": 2002,
 "built": "",
 "note": "Country resolution only. Localities are deliberately not published for lost species."
 }

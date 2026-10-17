@@ -129,6 +129,11 @@
    }
   },
   {
+   "sp": "Anolis garridoi",
+   "why": "The list's year 1991 is the type collection. Verified records follow in 1995, 2001, 2010 and then nearly every year to 2019 and 2025, so there is no ten-year silence anywhere (the longest gap is about nine years) and the listing was the error; source: 10.17161/randa.v29i1.18113",
+   "class": "records all along: a species that was never lost"
+  },
+  {
    "sp": "Aquilegia micrantha",
    "why": "the row means var. mancosana, one cavern in Colorado, presumed extinct and observed again at the original site; the binomial is a widespread living columbine. The page's unit is the species",
    "class": "a widespread species carried for a state-level or infraspecific record",
@@ -1032,6 +1037,11 @@
    }
   },
   {
+   "sp": "Lepidophyma zongolica",
+   "why": "The list's last record is the 2007 type series. Determined specimens follow in 2015 (8 years later), 2016, 2019 and every year to 2021, then photographs to 2024, so there is no ten-year silence and the listing was the error; source: https://biozoojournals.ro/nwjz/content/v19n2/nwjz_e231508_Valdenegro-Brito.pdf (no DOI; also GBIF https://www.gbif.org/occurrence/4102783488)",
+   "class": "records all along: a species that was never lost"
+  },
+  {
    "sp": "Leporillus apicalis",
    "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2437781), checked 2026-09-18",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
@@ -1747,10 +1757,15 @@
     "iucn_name": "Wikstroemia hanalei Wawra",
     "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5420861), checked 2026-09-18"
    }
+  },
+  {
+   "sp": "Zyzomys pedunculatus",
+   "why": "The list's last year is 2001. Verified records follow in 2003, 2009 to 2012, 2014 and the 2020s, and the longest gap is 6 years (2003 to 2009), so there is no ten-year silence and the listing was the error; source: https://www.gbif.org/occurrence/5760992528",
+   "class": "records all along: a species that was never lost"
   }
  ],
  "meta": {
-  "n": 129,
+  "n": 132,
   "iucn_extinct_checked": "2026-09-18",
   "note": "Species removed from the Lost Species page, each with its reason. The upstream list is unchanged. Country resolution only."
  }
