@@ -857,11 +857,11 @@
 "sp": "Anacamptodon marginatus",
 "v": "",
 "grp": "Plant - Mosses",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "not in IUCN index",
-"cty": "Zimbabwe",
+"cty": "Zimbabwe, South Africa, Kenya",
 "reg": "Africa",
-"last": 1870,
+"last": 2016,
 "prec": "year"
 },
 {
@@ -7796,7 +7796,7 @@
 "grp": "Mammal",
 "cls": "long-lost",
 "rl": "CR",
-"cty": "Eritrea",
+"cty": "Egypt, Ethiopia, Sudan",
 "reg": "Africa",
 "last": 1950,
 "prec": "year"
@@ -10051,9 +10051,9 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "NE",
-"cty": "Iran",
+"cty": "Iran, Iraq",
 "reg": "Middle East",
-"last": 2007,
+"last": 2016,
 "prec": "year"
 },
 {

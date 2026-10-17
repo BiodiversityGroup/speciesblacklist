@@ -12911,8 +12911,8 @@
 "compiled": "January 2023",
 "nomenclature": "Long & Rodriguez 2022, Oryx 56(4)",
 "by_class": {
-"long-lost": 998,
-"lost": 717,
+"long-lost": 997,
+"lost": 718,
 "unclassified": 138,
 "rediscovered": 149
 },
@@ -12957,7 +12957,7 @@
 "oldest_record": 1790,
 "median_last": 1966,
 "n_dated": 1784,
-"n_1800s": 243,
+"n_1800s": 242,
 "by_date_precision": {
 "year": 1690,
 "none": 191,
@@ -13784,6 +13784,41 @@
 "cc": "Portugal"
 },
 {
+"place": "Kenya",
+"lat": 1.442,
+"lon": 38.431,
+"n": 23,
+"grp": {
+"Fish": 11,
+"Reptile": 3,
+"Insect": 2,
+"Crustaceans": 2,
+"Plant - Mosses": 1
+},
+"cls": {
+"lost": 14,
+"long-lost": 7,
+"rediscovered": 1,
+"unclassified": 1
+},
+"rl": {
+"CR(PE)": 14,
+"DD": 3,
+"not in IUCN index": 2,
+"NT": 2,
+"EN": 1,
+"LC": 1
+},
+"examples": [
+"Anacamptodon marginatus",
+"Arthroleptides dutoiti",
+"Disperis egregia",
+"Euschmidtia somereni"
+],
+"oldest": 1909,
+"cc": "Kenya"
+},
+{
 "place": "Thailand",
 "lat": 14.897,
 "lon": 100.833,
@@ -13852,41 +13887,6 @@
 "cc": "Panama"
 },
 {
-"place": "Kenya",
-"lat": 1.442,
-"lon": 38.431,
-"n": 22,
-"grp": {
-"Fish": 11,
-"Reptile": 3,
-"Insect": 2,
-"Crustaceans": 2,
-"Amphibian": 1
-},
-"cls": {
-"lost": 13,
-"long-lost": 7,
-"rediscovered": 1,
-"unclassified": 1
-},
-"rl": {
-"CR(PE)": 14,
-"DD": 3,
-"NT": 2,
-"EN": 1,
-"not in IUCN index": 1,
-"LC": 1
-},
-"examples": [
-"Arthroleptides dutoiti",
-"Disperis egregia",
-"Euschmidtia somereni",
-"Haplochromis dentex"
-],
-"oldest": 1909,
-"cc": "Kenya"
-},
-{
 "place": "Sri Lanka",
 "lat": 7.555,
 "lon": 80.714,
@@ -13951,24 +13951,24 @@
 "place": "South Africa",
 "lat": -28.817,
 "lon": 24.992,
-"n": 19,
+"n": 20,
 "grp": {
 "Insect": 7,
 "Mammal": 4,
 "Reptile": 4,
 "Plant - Trees & Shrubs": 2,
-"Flowering plants": 1
+"Plant - Mosses": 1
 },
 "cls": {
 "long-lost": 10,
-"lost": 7,
+"lost": 8,
 "unclassified": 2
 },
 "rl": {
 "DD": 7,
 "CR": 4,
 "CR(PE)": 4,
-"not in IUCN index": 2,
+"not in IUCN index": 3,
 "VU": 1,
 "EN": 1
 },
@@ -13976,7 +13976,7 @@
 "Acilacris furcatus",
 "Afroedura rondavelica",
 "Afrotettix fursti",
-"Anaxipha natalensis"
+"Anacamptodon marginatus"
 ],
 "oldest": 1879,
 "cc": "South Africa"
@@ -13985,22 +13985,22 @@
 "place": "Iraq",
 "lat": 33.096,
 "lon": 44.175,
-"n": 18,
+"n": 19,
 "grp": {
 "Plant - Trees & Shrubs": 8,
 "Flowering plants": 6,
+"Reptile": 2,
 "Plant - Grasses & Sedges": 2,
-"Reptile": 1,
 "Fish": 1
 },
 "cls": {
 "long-lost": 13,
-"lost": 3,
+"lost": 4,
 "unclassified": 2
 },
 "rl": {
 "not in IUCN index": 15,
-"NE": 2,
+"NE": 3,
 "CR(PE)": 1
 },
 "examples": [
@@ -14356,6 +14356,39 @@
 "cc": "Palau"
 },
 {
+"place": "Ethiopia",
+"lat": 10.212,
+"lon": 38.652,
+"n": 12,
+"grp": {
+"Mammal": 3,
+"Insect": 3,
+"Reptile": 2,
+"Amphibian": 2,
+"Flowering plants": 1
+},
+"cls": {
+"long-lost": 9,
+"lost": 3
+},
+"rl": {
+"CR(PE)": 4,
+"DD": 2,
+"VU": 2,
+"CR": 2,
+"LC": 1,
+"not in IUCN index": 1
+},
+"examples": [
+"Aeschynomene ruspoliana",
+"Agama lucyae",
+"Alcelaphus buselaphus tora",
+"Altiphrynoides osgoodi"
+],
+"oldest": 1839,
+"cc": "Ethiopia"
+},
+{
 "place": "Myanmar",
 "lat": 17.175,
 "lon": 96.0,
@@ -14477,39 +14510,6 @@
 ],
 "oldest": 1957,
 "cc": "Turkey"
-},
-{
-"place": "Ethiopia",
-"lat": 10.212,
-"lon": 38.652,
-"n": 11,
-"grp": {
-"Insect": 3,
-"Reptile": 2,
-"Mammal": 2,
-"Amphibian": 2,
-"Flowering plants": 1
-},
-"cls": {
-"long-lost": 8,
-"lost": 3
-},
-"rl": {
-"CR(PE)": 4,
-"DD": 2,
-"VU": 2,
-"LC": 1,
-"not in IUCN index": 1,
-"CR": 1
-},
-"examples": [
-"Aeschynomene ruspoliana",
-"Agama lucyae",
-"Alcelaphus buselaphus tora",
-"Altiphrynoides osgoodi"
-],
-"oldest": 1839,
-"cc": "Ethiopia"
 },
 {
 "place": "Pakistan",
@@ -14999,6 +14999,33 @@
 "cc": "Russia"
 },
 {
+"place": "Sudan",
+"lat": 14.584,
+"lon": 29.492,
+"n": 5,
+"grp": {
+"Reptile": 3,
+"Mammal": 2
+},
+"cls": {
+"lost": 3,
+"long-lost": 2
+},
+"rl": {
+"CR": 2,
+"DD": 2,
+"LC": 1
+},
+"examples": [
+"Alcelaphus buselaphus tora",
+"Cyclanorbis elegans",
+"Equus africanus africanus",
+"Panaspis wilsoni"
+],
+"oldest": 1914,
+"cc": "Sudan"
+},
+{
 "place": "United States (U.S. Virgin Islands)",
 "lat": 17.789,
 "lon": -64.708,
@@ -15189,33 +15216,6 @@
 ],
 "oldest": 1908,
 "cc": "French Polynesia"
-},
-{
-"place": "Sudan",
-"lat": 14.584,
-"lon": 29.492,
-"n": 4,
-"grp": {
-"Reptile": 3,
-"Mammal": 1
-},
-"cls": {
-"lost": 3,
-"long-lost": 1
-},
-"rl": {
-"DD": 2,
-"LC": 1,
-"CR": 1
-},
-"examples": [
-"Alcelaphus buselaphus tora",
-"Cyclanorbis elegans",
-"Panaspis wilsoni",
-"Trioceros kinetensis"
-],
-"oldest": 1914,
-"cc": "Sudan"
 },
 {
 "place": "Guyana",
@@ -15581,32 +15581,6 @@
 "cc": "Guinea"
 },
 {
-"place": "Eritrea",
-"lat": 15.95,
-"lon": 38.0,
-"n": 3,
-"grp": {
-"Mammal": 2,
-"Insect": 1
-},
-"cls": {
-"long-lost": 2,
-"lost": 1
-},
-"rl": {
-"LC": 1,
-"CR": 1,
-"not in IUCN index": 1
-},
-"examples": [
-"Alcelaphus buselaphus tora",
-"Equus africanus africanus",
-"Hypotrigona gribodoi"
-],
-"oldest": 1932,
-"cc": "Eritrea"
-},
-{
 "place": "Ukraine",
 "lat": 49.487,
 "lon": 31.272,
@@ -15806,6 +15780,32 @@
 "cc": "Vanuatu"
 },
 {
+"place": "Egypt",
+"lat": 26.254,
+"lon": 29.268,
+"n": 3,
+"grp": {
+"Mammal": 1,
+"Arachnids": 1,
+"Fish": 1
+},
+"cls": {
+"long-lost": 3
+},
+"rl": {
+"CR": 1,
+"not in IUCN index": 1,
+"LC": 1
+},
+"examples": [
+"Equus africanus africanus",
+"Eresus pharaonis",
+"Lissocampus bannwarthi"
+],
+"oldest": 1829,
+"cc": "Egypt"
+},
+{
 "place": "Bangladesh",
 "lat": 24.477,
 "lon": 90.293,
@@ -15956,6 +15956,30 @@
 "cc": "S\u00e3o Tom\u00e9 and Pr\u00edncipe"
 },
 {
+"place": "Eritrea",
+"lat": 15.95,
+"lon": 38.0,
+"n": 2,
+"grp": {
+"Mammal": 1,
+"Insect": 1
+},
+"cls": {
+"lost": 1,
+"long-lost": 1
+},
+"rl": {
+"LC": 1,
+"not in IUCN index": 1
+},
+"examples": [
+"Alcelaphus buselaphus tora",
+"Hypotrigona gribodoi"
+],
+"oldest": 1932,
+"cc": "Eritrea"
+},
+{
 "place": "Zimbabwe",
 "lat": -18.455,
 "lon": 29.747,
@@ -15965,7 +15989,8 @@
 "Insect": 1
 },
 "cls": {
-"long-lost": 2
+"lost": 1,
+"long-lost": 1
 },
 "rl": {
 "not in IUCN index": 1,
@@ -15975,7 +16000,7 @@
 "Anacamptodon marginatus",
 "Henicothericles spectabilis"
 ],
-"oldest": 1870,
+"oldest": 1968,
 "cc": "Zimbabwe"
 },
 {
@@ -16348,29 +16373,6 @@
 ],
 "oldest": 1967,
 "cc": "Georgia"
-},
-{
-"place": "Egypt",
-"lat": 26.254,
-"lon": 29.268,
-"n": 2,
-"grp": {
-"Arachnids": 1,
-"Fish": 1
-},
-"cls": {
-"long-lost": 2
-},
-"rl": {
-"not in IUCN index": 1,
-"LC": 1
-},
-"examples": [
-"Eresus pharaonis",
-"Lissocampus bannwarthi"
-],
-"oldest": 1829,
-"cc": "Egypt"
 },
 {
 "place": "Tonga",
@@ -17412,12 +17414,12 @@
 "range": "United States, Cuba"
 },
 {
-"sp": "Anacamptodon marginatus",
-"common": "",
-"descriptor": "Moss from Zimbabwe",
+"sp": "Isoetes heldreichii",
+"common": "Pindus Quillwort",
+"descriptor": "Greek moss",
 "group": "Plant - Mosses",
-"last": 1870,
-"range": "Zimbabwe"
+"last": 1885,
+"range": "Greece"
 },
 {
 "sp": "Alcelaphus buselaphus tora",
@@ -17612,12 +17614,12 @@
 "range": "Indonesia"
 },
 {
-"sp": "Isoetes heldreichii",
-"common": "Pindus Quillwort",
-"descriptor": "Greek moss",
+"sp": "Leucoperichaetium eremophilum",
+"common": "",
+"descriptor": "Moss from Namibia",
 "group": "Plant - Mosses",
-"last": 1885,
-"range": "Greece"
+"last": 1978,
+"range": "Namibia"
 },
 {
 "sp": "Oryzorictes tetradactylus",
@@ -17788,12 +17790,12 @@
 "range": "Bahamas, Dominica, Guadeloupe, Jamaica"
 },
 {
-"sp": "Leucoperichaetium eremophilum",
+"sp": "Anacamptodon marginatus",
 "common": "",
-"descriptor": "Moss from Namibia",
+"descriptor": "Moss from Zimbabwe, South Africa, Kenya",
 "group": "Plant - Mosses",
-"last": 1978,
-"range": "Namibia"
+"last": 2016,
+"range": "Zimbabwe, South Africa, Kenya"
 },
 {
 "sp": "Piliocolobus langi",
