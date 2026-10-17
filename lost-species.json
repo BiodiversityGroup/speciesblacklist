@@ -1176,7 +1176,7 @@
 "sp": "Anolis altitudinalis",
 "v": "",
 "grp": "Reptile",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "NT",
 "cty": "Cuba",
 "reg": "Islands",
@@ -2678,7 +2678,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "CR",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 1984,
 "prec": "year"
@@ -2757,7 +2757,7 @@
 "rl": "DD",
 "cty": "Brazil",
 "reg": "South America",
-"last": 2001,
+"last": 2015,
 "prec": "year"
 },
 {
@@ -2854,7 +2854,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "Indomalay",
+"cty": "India",
 "reg": "Asia",
 "last": 1978,
 "prec": "year"
@@ -3294,7 +3294,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "VU",
-"cty": "Indomalay",
+"cty": "Philippines",
 "reg": "Asia",
 "last": "",
 "prec": ""
@@ -4539,7 +4539,7 @@
 "sp": "Chelodina kuchlingi",
 "v": "Kuchling’s Snake-necked Turtle",
 "grp": "Reptile",
-"cls": "unclassified",
+"cls": "rediscovered",
 "rl": "NE",
 "cty": "Australia",
 "reg": "Australia",
@@ -4715,7 +4715,7 @@
 "sp": "Cnemaspis andersonii",
 "v": "",
 "grp": "Reptile",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "DD",
 "cty": "India",
 "reg": "Islands",
@@ -4770,7 +4770,7 @@
 "sp": "Cnemaspis latha",
 "v": "",
 "grp": "Reptile",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "CR",
 "cty": "Sri Lanka",
 "reg": "Islands",
@@ -5465,7 +5465,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Afrotropic",
+"cty": "Mozambique",
 "reg": "Africa",
 "last": 1848,
 "prec": "year"
@@ -5474,7 +5474,7 @@
 "sp": "Cryptoblepharus wulbu",
 "v": "Spangled Snake-eyed Skink",
 "grp": "Reptile",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "LC",
 "cty": "Australia",
 "reg": "Australia",
@@ -5568,7 +5568,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 2008,
 "prec": "year"
@@ -5579,7 +5579,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 1990,
 "prec": "year"
@@ -5590,7 +5590,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 1989,
 "prec": "year"
@@ -7532,7 +7532,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "EN",
-"cty": "Australasia",
+"cty": "Vanuatu",
 "reg": "Australia",
 "last": 2004,
 "prec": "year"
@@ -7576,7 +7576,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "VU",
-"cty": "Australasia",
+"cty": "Vanuatu",
 "reg": "Australia",
 "last": 2005,
 "prec": "year"
@@ -7598,7 +7598,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "VU",
-"cty": "Australasia",
+"cty": "New Caledonia",
 "reg": "Australia",
 "last": 2003,
 "prec": "year"
@@ -7631,7 +7631,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Solomon Islands",
 "reg": "Australia",
 "last": 1998,
 "prec": "year"
@@ -8566,7 +8566,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "Afrotropic",
+"cty": "Gabon",
 "reg": "Africa",
 "last": 1917,
 "prec": "year"
@@ -9006,7 +9006,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 1960,
 "prec": "year"
@@ -11248,11 +11248,11 @@
 "sp": "Ischnocnema venancioi",
 "v": "",
 "grp": "Amphibian",
-"cls": "long-lost",
+"cls": "lost",
 "rl": "LC",
 "cty": "Brazil",
 "reg": "South America",
-"last": 1958,
+"last": 2014,
 "prec": "year"
 },
 {
@@ -12295,7 +12295,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indomalay",
+"cty": "Vietnam",
 "reg": "Asia",
 "last": 2005,
 "prec": "year"
@@ -12381,9 +12381,9 @@
 "sp": "Lerista ameles",
 "v": "",
 "grp": "Reptile",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "EN",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 2006,
 "prec": "year"
@@ -12394,7 +12394,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "EN",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 1995,
 "prec": "year"
@@ -12427,7 +12427,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 2009,
 "prec": "year"
@@ -12438,7 +12438,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 1995,
 "prec": "year"
@@ -12460,7 +12460,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "EN",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 2003,
 "prec": "year"
@@ -12493,7 +12493,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 2004,
 "prec": "year"
@@ -12515,7 +12515,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "NT",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 2009,
 "prec": "year"
@@ -12678,7 +12678,7 @@
 "sp": "Liolaemus montanezi",
 "v": "",
 "grp": "Reptile",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "DD",
 "cty": "Argentina",
 "reg": "South America",
@@ -12735,7 +12735,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Oceania",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1989,
 "prec": "year"
@@ -12746,7 +12746,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Oceania",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1894,
 "prec": "year"
@@ -12757,7 +12757,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "LC",
-"cty": "Indomalay",
+"cty": "Indonesia, Malaysia",
 "reg": "Asia",
 "last": 2000,
 "prec": "year"
@@ -12779,7 +12779,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indomalay",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1999,
 "prec": "year"
@@ -12801,7 +12801,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Oceania",
+"cty": "Indonesia",
 "reg": "Islands",
 "last": 1962,
 "prec": "year"
@@ -12812,7 +12812,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Indomalay",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 2009,
 "prec": "year"
@@ -12823,7 +12823,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "DD",
-"cty": "Indomalay",
+"cty": "Philippines",
 "reg": "Asia",
 "last": "",
 "prec": ""
@@ -12834,7 +12834,7 @@
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "NT",
-"cty": "Indomalay",
+"cty": "Indonesia, Philippines",
 "reg": "Asia",
 "last": "",
 "prec": ""
@@ -13120,7 +13120,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Australia",
 "reg": "Australia",
 "last": 2008,
 "prec": "year"
@@ -13186,7 +13186,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Indomalay",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1895,
 "prec": "decade"
@@ -13219,7 +13219,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Indomalay",
+"cty": "Indonesia",
 "reg": "Asia",
 "last": 1900,
 "prec": "year"
@@ -14578,7 +14578,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "EN",
-"cty": "Australasia",
+"cty": "New Caledonia",
 "reg": "Australia",
 "last": 1996,
 "prec": "year"
@@ -14611,7 +14611,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "CR",
-"cty": "Australasia",
+"cty": "New Caledonia",
 "reg": "Australia",
 "last": 1998,
 "prec": "year"
@@ -15086,7 +15086,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "CR(PE)",
-"cty": "Australasia",
+"cty": "New Zealand",
 "reg": "Australia",
 "last": 1887,
 "prec": "year"
@@ -15471,7 +15471,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Afrotropic",
+"cty": "Ethiopia",
 "reg": "Africa",
 "last": 1908,
 "prec": "year"
@@ -16162,7 +16162,7 @@
 },
 {
 "sp": "Petaurillus emiliae",
-"v": "Lesser Pygymy Flying Squirrel",
+"v": "Lesser Pygmy Flying Squirrel",
 "grp": "Mammal",
 "cls": "long-lost",
 "rl": "DD",
@@ -18964,7 +18964,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Indomalay",
+"cty": "Vietnam",
 "reg": "Asia",
 "last": 1997,
 "prec": "year"
@@ -18975,7 +18975,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Indomalay",
+"cty": "Myanmar",
 "reg": "Asia",
 "last": 2007,
 "prec": "year"
@@ -19008,7 +19008,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Afrotropic",
+"cty": "Tanzania",
 "reg": "Africa",
 "last": 1913,
 "prec": "year"
@@ -19514,7 +19514,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Australasia",
+"cty": "Papua New Guinea",
 "reg": "Australia",
 "last": 1969,
 "prec": "year"
@@ -19525,7 +19525,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Australasia",
+"cty": "Indonesia",
 "reg": "Australia",
 "last": 2006,
 "prec": "year"
@@ -19547,7 +19547,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "Indomalay",
+"cty": "China, India",
 "reg": "Asia",
 "last": 1912,
 "prec": "year"
@@ -19580,7 +19580,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Australasia",
+"cty": "Papua New Guinea",
 "reg": "Australia",
 "last": 1966,
 "prec": "year"
@@ -19591,7 +19591,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Indonesia, Papua New Guinea",
 "reg": "Australia",
 "last": 2005,
 "prec": "year"
@@ -19613,7 +19613,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "DD",
-"cty": "Indomalay",
+"cty": "Malaysia",
 "reg": "Asia",
 "last": 1984,
 "prec": "year"
@@ -19635,7 +19635,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Papua New Guinea",
 "reg": "Australia",
 "last": 1986,
 "prec": "year"
@@ -19646,7 +19646,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Indonesia, Papua New Guinea",
 "reg": "Australia",
 "last": 2000,
 "prec": "year"
@@ -19657,7 +19657,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Papua New Guinea",
 "reg": "Australia",
 "last": 2004,
 "prec": "year"
@@ -19679,7 +19679,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Australasia",
+"cty": "Indonesia",
 "reg": "Australia",
 "last": 1997,
 "prec": "year"
@@ -19712,7 +19712,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Papua New Guinea",
 "reg": "Australia",
 "last": 1988,
 "prec": "year"
@@ -19723,7 +19723,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Indonesia, Papua New Guinea",
 "reg": "Australia",
 "last": 2009,
 "prec": "year"
@@ -19734,7 +19734,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Indomalay",
+"cty": "Myanmar",
 "reg": "Asia",
 "last": 2005,
 "prec": "year"
@@ -19778,7 +19778,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Indonesia",
 "reg": "Australia",
 "last": 1969,
 "prec": "year"
@@ -19800,7 +19800,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Australasia",
+"cty": "Papua New Guinea, Solomon Islands",
 "reg": "Australia",
 "last": 1999,
 "prec": "year"
@@ -19811,7 +19811,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "DD",
-"cty": "Australasia",
+"cty": "Papua New Guinea",
 "reg": "Australia",
 "last": 1966,
 "prec": "year"
@@ -19833,7 +19833,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "LC",
-"cty": "Indomalay",
+"cty": "Vietnam",
 "reg": "Asia",
 "last": 2005,
 "prec": "year"
@@ -19855,7 +19855,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "NT",
-"cty": "Indomalay",
+"cty": "Laos, Vietnam",
 "reg": "Asia",
 "last": 2007,
 "prec": "year"
@@ -19866,7 +19866,7 @@
 "grp": "Reptile",
 "cls": "long-lost",
 "rl": "NT",
-"cty": "Indomalay",
+"cty": "Vietnam",
 "reg": "Asia",
 "last": 1937,
 "prec": "year"
@@ -21012,7 +21012,7 @@
 "grp": "Reptile",
 "cls": "rediscovered",
 "rl": "EN",
-"cty": "Afrotropic",
+"cty": "Cameroon",
 "reg": "Africa",
 "last": 1998,
 "prec": "year"
@@ -21122,7 +21122,7 @@
 "grp": "Reptile",
 "cls": "lost",
 "rl": "DD",
-"cty": "Australasia",
+"cty": "Papua New Guinea, Solomon Islands",
 "reg": "Australia",
 "last": 1986,
 "prec": "year"
@@ -21650,7 +21650,7 @@
 "sp": "Urocotyledon rasmusseni",
 "v": "Rasmussen's Gecko",
 "grp": "Reptile",
-"cls": "lost",
+"cls": "rediscovered",
 "rl": "DD",
 "cty": "Tanzania",
 "reg": "Africa",

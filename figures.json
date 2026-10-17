@@ -122,23 +122,23 @@
    "src": "published payload"
   },
   "expected_finds_amphibians": {
-   "t": "65",
-   "v": 64.8,
+   "t": "66",
+   "v": 65.7,
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "expected_finds_reptiles": {
-   "t": "84",
-   "v": 84.0,
+   "t": "83",
+   "v": 83.1,
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "expected_finds_sa_amphibians": {
-   "t": "37",
-   "v": 37.4,
+   "t": "38",
+   "v": 37.5,
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "expected_finds_total": {
-   "t": "187",
-   "v": 187.1,
+   "t": "188",
+   "v": 187.6,
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "ext_mammal_rate_multiple": {
@@ -568,7 +568,7 @@
   },
   "odds_mammals_vs_amphibians": {
    "t": "2.1x",
-   "v": 2.07,
+   "v": 2.08,
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "pd_africa_lost_before1500_n": {
@@ -822,8 +822,8 @@
    "src": "build_2026/extinction_vs_rediscovery_2026-10-02/phy_species.json"
   },
   "predict_candidates": {
-   "t": "838",
-   "v": 838,
+   "t": "831",
+   "v": 831,
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "predict_early_first": {
@@ -847,23 +847,23 @@
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "predict_made": {
-   "t": "October 13, 2026",
-   "v": "October 13, 2026",
+   "t": "October 16, 2026",
+   "v": "October 16, 2026",
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics (meta.made)"
   },
   "predict_next_countries": {
-   "t": "Australia, Ecuador, Peru, Venezuela and India",
-   "v": "Australia, Ecuador, Peru, Venezuela and India",
+   "t": "Australia, Peru, Ecuador, Venezuela and India",
+   "v": "Australia, Peru, Ecuador, Venezuela and India",
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics"
   },
   "predict_recent_finds": {
-   "t": "31",
-   "v": 31,
+   "t": "35",
+   "v": 35,
    "src": "Lost Species/analysis/data/lindken/lindken_predict_v4_current_*.json (newest), meta.page_statistics (check_2021_fold)"
   },
   "predict_top100_tbg_only": {
-   "t": "19",
-   "v": 19,
+   "t": "20",
+   "v": 20,
    "src": "top100_select.py: the Top 100 as the page shows it"
   },
   "predict_train_first": {
