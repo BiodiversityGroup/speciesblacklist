@@ -13600,6 +13600,39 @@
 "cc": "Papua New Guinea"
 },
 {
+"place": "China",
+"lat": 34.541,
+"lon": 108.924,
+"n": 31,
+"grp": {
+"Fish": 10,
+"Reptile": 6,
+"Amphibian": 4,
+"Plant - Trees & Shrubs": 3,
+"Crustaceans": 2
+},
+"cls": {
+"long-lost": 14,
+"lost": 11,
+"unclassified": 6
+},
+"rl": {
+"CR(PE)": 17,
+"DD": 6,
+"CR": 4,
+"not in IUCN index": 3,
+"LC": 1
+},
+"examples": [
+"Alnus henryi",
+"Amolops mengyangensis",
+"Anabarilius qiluensis",
+"Anabarilius yangzonensis"
+],
+"oldest": 1880,
+"cc": "People's Republic of China"
+},
+{
 "place": "Seychelles",
 "lat": -4.657,
 "lon": 55.454,
@@ -13627,39 +13660,6 @@
 ],
 "oldest": 1892,
 "cc": "Seychelles"
-},
-{
-"place": "China",
-"lat": 34.541,
-"lon": 108.924,
-"n": 30,
-"grp": {
-"Fish": 10,
-"Reptile": 6,
-"Amphibian": 4,
-"Plant - Trees & Shrubs": 3,
-"Crustaceans": 2
-},
-"cls": {
-"long-lost": 13,
-"lost": 11,
-"unclassified": 6
-},
-"rl": {
-"CR(PE)": 17,
-"DD": 6,
-"CR": 3,
-"not in IUCN index": 3,
-"LC": 1
-},
-"examples": [
-"Alnus henryi",
-"Amolops mengyangensis",
-"Anabarilius qiluensis",
-"Anabarilius yangzonensis"
-],
-"oldest": 1880,
-"cc": "People's Republic of China"
 },
 {
 "place": "Philippines",
@@ -15433,6 +15433,35 @@
 "cc": "Namibia"
 },
 {
+"place": "Japan",
+"lat": 36.575,
+"lon": 139.239,
+"n": 4,
+"grp": {
+"Fish": 2,
+"Mammal": 1,
+"Bird": 1
+},
+"cls": {
+"long-lost": 3,
+"lost": 1
+},
+"rl": {
+"DD": 1,
+"CR(PE)": 1,
+"LC": 1,
+"CR": 1
+},
+"examples": [
+"Maroubra yasudai",
+"Murina tenebrosa",
+"Pungitius kaibarae",
+"Tadorna cristata"
+],
+"oldest": 1962,
+"cc": "Japan"
+},
+{
 "place": "Chile",
 "lat": -31.761,
 "lon": -71.319,
@@ -15878,32 +15907,6 @@
 ],
 "oldest": 1952,
 "cc": ""
-},
-{
-"place": "Japan",
-"lat": 36.575,
-"lon": 139.239,
-"n": 3,
-"grp": {
-"Fish": 2,
-"Mammal": 1
-},
-"cls": {
-"long-lost": 2,
-"lost": 1
-},
-"rl": {
-"DD": 1,
-"CR(PE)": 1,
-"LC": 1
-},
-"examples": [
-"Maroubra yasudai",
-"Murina tenebrosa",
-"Pungitius kaibarae"
-],
-"oldest": 1962,
-"cc": "Japan"
 },
 {
 "place": "Yemen",
@@ -16578,6 +16581,29 @@
 "cc": "North Macedonia"
 },
 {
+"place": "South Korea",
+"lat": 36.638,
+"lon": 127.696,
+"n": 2,
+"grp": {
+"Reptile": 1,
+"Bird": 1
+},
+"cls": {
+"long-lost": 2
+},
+"rl": {
+"DD": 1,
+"CR": 1
+},
+"examples": [
+"Plestiodon coreensis",
+"Tadorna cristata"
+],
+"oldest": 1937,
+"cc": "South Korea"
+},
+{
 "place": "French Guiana",
 "lat": 4.004,
 "lon": -53.0,
@@ -16624,32 +16650,6 @@
 "Saint Lucia"
 ],
 "cc": "Saint Lucia"
-},
-{
-"place": "South Korea",
-"lat": 36.638,
-"lon": 127.696,
-"n": 2,
-"grp": {
-"Reptile": 1,
-"Bird": 1
-},
-"cls": {
-"long-lost": 2
-},
-"rl": {
-"DD": 1,
-"CR": 1
-},
-"examples": [
-"Plestiodon coreensis",
-"Tadorna cristata"
-],
-"oldest": 1937,
-"merged_from": [
-"Korea"
-],
-"cc": "South Korea"
 },
 {
 "place": "Micronesia",
@@ -18660,7 +18660,7 @@
 {
 "c": "India",
 "lost": 43,
-"new": 252
+"new": 253
 },
 {
 "c": "Ecuador",

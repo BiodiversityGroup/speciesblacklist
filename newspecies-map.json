@@ -12905,18 +12905,18 @@
 ],
 "meta": {
 "total": 3225,
-"placed": 3168,
+"placed": 3169,
 "by_class": {
 "reptile": 1689,
 "amphibian": 972,
 "bird": 13,
-"mammal": 494
+"mammal": 495
 },
-"unplaced": 57,
+"unplaced": 56,
 "places": 108,
 "species": 3089,
-"species_placed": 3042,
-"species_unplaced": 47,
+"species_placed": 3043,
+"species_unplaced": 46,
 "rows_note": "total, placed and unplaced count rows: a mammal listed from several countries is one row per country"
 },
 "places": [
@@ -12983,7 +12983,7 @@
 "place": "India",
 "lat": 22.351,
 "lon": 78.668,
-"n": 252,
+"n": 253,
 "grp": {
 "Gekkonidae": 132,
 "Colubridae": 21,
@@ -12994,7 +12994,7 @@
 "cls": {
 "reptile": 203,
 "amphibian": 41,
-"mammal": 8
+"mammal": 9
 },
 "yr": {
 "reptile": {
@@ -13024,7 +13024,7 @@
 "2025": 2,
 "2023": 1,
 "2022": 3,
-"2021": 1,
+"2021": 2,
 "2018": 1
 }
 },
@@ -16023,8 +16023,8 @@
 },
 {
 "place": "South Korea",
-"lat": 36.638,
-"lon": 127.696,
+"lat": 36.4,
+"lon": 127.9,
 "n": 1,
 "grp": {
 "Hynobiidae": 1

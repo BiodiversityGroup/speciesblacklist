@@ -859,7 +859,7 @@
 "fam": "Caprimulgidae",
 "rc": "D",
 "rcwhy": "Timor, Rote and Wetar -- Timor spans two states",
-"cty": "Timor, Rote and Wetar (e Lesser Sundas)",
+"cty": "Indonesia",
 "v": "Timor Nightjar"
 },
 {
@@ -2009,7 +2009,7 @@
 "fam": "Soricidae",
 "rc": "",
 "rcwhy": "",
-"cty": "Andaman and Nicobar Islands",
+"cty": "India",
 "v": "Narcondam White-toothed Shrew"
 },
 {
@@ -2469,7 +2469,7 @@
 "fam": "Grallariidae",
 "rc": "C",
 "rcwhy": "w Colombia (nw Antioquia to nw Cauca)",
-"cty": "w Colombia (nw Antioquia to nw Cauca)",
+"cty": "Colombia",
 "v": "Chami Antpitta"
 },
 {
@@ -2479,7 +2479,7 @@
 "fam": "Grallariidae",
 "rc": "B",
 "rcwhy": "sc Peru (Ayacucho) -- one department",
-"cty": "sc Peru (Ayacucho)",
+"cty": "Peru",
 "v": "Ayacucho Antpitta"
 },
 {
@@ -2489,7 +2489,7 @@
 "fam": "Grallariidae",
 "rc": "C",
 "rcwhy": "ec Peru (Huanuco through Pasco)",
-"cty": "ec Peru (Huánuco south of the Río Huallaga through Pasco to Junín west of the Río Ene and north of the Río Mantaro)",
+"cty": "Peru",
 "v": "Oxapampa Antpitta"
 },
 {
@@ -2499,7 +2499,7 @@
 "fam": "Grallariidae",
 "rc": "C",
 "rcwhy": "nc, c Peru (Amazonas and San Martin)",
-"cty": "nc, c Peru (Amazonas and San Martín south and east of the Río Marañón, south to Huánuco north of Río Huallaga)",
+"cty": "Peru",
 "v": "Chachapoyas Antpitta"
 },
 {
@@ -2509,7 +2509,7 @@
 "fam": "Grallariidae",
 "rc": "C",
 "rcwhy": "ec Peru (Huanuco and Pasco)",
-"cty": "ec Peru (Huánuco and Pasco, south of the Río Huallaga and north of the Río Perené)",
+"cty": "Peru",
 "v": "Panao Antpitta"
 },
 {
@@ -2519,7 +2519,7 @@
 "fam": "Grallariidae",
 "rc": "D",
 "rcwhy": "s Peru (Puno) and extreme w Bolivia (w La Paz)",
-"cty": "s Peru (Puno) and extreme w Bolivia (w La Paz)",
+"cty": "Peru, Bolivia",
 "v": "Puno Antpitta"
 },
 {
@@ -2669,7 +2669,7 @@
 "fam": "Meliphagidae",
 "rc": "A",
 "rcwhy": "Taliabu (Sula Is.) -- one island",
-"cty": "Taliabu (Sula Is., e of Sulawesi)",
+"cty": "Indonesia",
 "v": "Taliabu Myzomela"
 },
 {
@@ -2809,7 +2809,7 @@
 "fam": "Rhipiduridae",
 "rc": "A",
 "rcwhy": "montane Peleng (Banggai Is.) -- one island, montane",
-"cty": "montane Peleng (Banggai Is., e of Sulawesi)",
+"cty": "Indonesia",
 "v": "Peleng Fantail"
 },
 {
@@ -2819,7 +2819,7 @@
 "fam": "Rhinocryptidae",
 "rc": "C",
 "rcwhy": "c Peru (Huanuco to Junin)",
-"cty": "c Peru (Huanuco to Junin)",
+"cty": "Peru",
 "v": "Jalca Tapaculo"
 },
 {
@@ -2829,7 +2829,7 @@
 "fam": "Rhinocryptidae",
 "rc": "C",
 "rcwhy": "nc Peru (n Amazonas to Huanuco)",
-"cty": "nc Peru (n Amazonas to Huánuco)",
+"cty": "Peru",
 "v": "White-winged Tapaculo"
 },
 {
@@ -2839,7 +2839,7 @@
 "fam": "Rhinocryptidae",
 "rc": "C",
 "rcwhy": "s Peru (Ayacucho and Apurimac)",
-"cty": "s Peru (Ayacucho and Apurímac)",
+"cty": "Peru",
 "v": "Ampay Tapaculo"
 },
 {
@@ -3469,7 +3469,7 @@
 "fam": "Meliphagidae",
 "rc": "A",
 "rcwhy": "Rote (ec Lesser Sundas) -- one island",
-"cty": "Rote (ec Lesser Sundas)",
+"cty": "Indonesia",
 "v": "Rote Myzomela"
 },
 {
