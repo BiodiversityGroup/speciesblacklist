@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WPS9W8QL');</script>
 <title>Lost Species · The Species Black List</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="More than 2,000 species not recorded for years or centuries and not declared extinct, mapped by where they were last seen, with what is known about why some are found again and most are not.">
+<meta name="description" content="More than 1,800 species not recorded for years or centuries and not declared extinct, mapped by where they were last seen, with what is known about why some are found again and most are not.">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="https://speciesblacklist.org/lost-species/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:site_name" content="The Biodiversity Group">
 <meta property="og:url" content="https://speciesblacklist.org/lost-species/">
 <meta property="og:title" content="Lost Species · The Species Black List">
-<meta property="og:description" content="More than 2,000 species not recorded for years or centuries and not declared extinct, mapped by where they were last seen, with what is known about why some are found again and most are not.">
+<meta property="og:description" content="More than 1,800 species not recorded for years or centuries and not declared extinct, mapped by where they were last seen, with what is known about why some are found again and most are not.">
 <!-- Purpose-built card, drawn by scripts/23_build_og_card.py. The previous one was a
      screenshot of the homepage: correctly 1200x630, but with page-sized type, so once
      a composer scaled and cropped it to fill, the title read "ecies Black List" and the
@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:image:alt" content="A dark card. A small amber label reads THE SPECIES BLACK LIST, then in large serif type, Life Overlooked. Below it: Not endangered. Not extinct. Just unaccounted for. Then smaller text saying thousands of species have no extinction risk category at all, so nothing protects them and nobody is counting. Across the lower third runs a band of small squares in shades of amber and rust, one for each species. The foot reads speciesblacklist.org and THE BIODIVERSITY GROUP.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Lost Species · The Species Black List">
-<meta name="twitter:description" content="More than 2,000 species not recorded for years or centuries and not declared extinct, mapped by where they were last seen, with what is known about why some are found again and most are not.">
+<meta name="twitter:description" content="More than 1,800 species not recorded for years or centuries and not declared extinct, mapped by where they were last seen, with what is known about why some are found again and most are not.">
 <meta name="twitter:image" content="https://speciesblacklist.org/og-card.png?v=b0c62c2a87">
 <meta name="twitter:image:alt" content="Life Overlooked. Not endangered, not extinct, just unaccounted for. Over a band of amber marks, one per species.">
 
@@ -1655,7 +1655,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <div class="prose">
     <h2 style="font-size:var(--fs-h2)">Species nobody has seen for a very long time</h2>
-    <p class="lostlede"><strong class="num"><span data-fig="lost_n_species">2,002</span></strong> species that have not been
+    <p class="lostlede"><strong class="num"><span data-fig="lost_still_n">1,853</span></strong> species that have not been
       recorded in years, in some cases in centuries, and that nobody has been able to
       declare extinct. They are not gone. They are <em>unaccounted for</em>, which is a
       different thing, and the difference is where the work is.</p>
@@ -1879,7 +1879,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p>Rediscovery has moved to the countries richest in species. India and Colombia each
       recorded one rediscovery before 1990 and <span data-fig="finds_1990_2020_india_colombia">23</span> from 1990 to 2020; Brazil went from 7 to <span data-fig="finds_1990_2020_brazil">32</span>
       and Indonesia from 7 to <span data-fig="finds_1990_2020_indonesia">31</span>. Australia is the exception, with more of its finds before
-      1990 than after. The fewest lost species have been found again in Haiti (none of <span data-fig="lindken_species_haiti">19</span>),
+      1990 than after. The fewest lost species have been found again in Haiti (not one of <span data-fig="lindken_species_haiti">19</span>),
       Venezuela (3 of <span data-fig="lindken_species_venezuela">40</span>), New Caledonia (3 of <span data-fig="lindken_species_new_caledonia">30</span>) and Vietnam (4 of <span data-fig="lindken_species_vietnam">28</span>).</p>
     <p>Found is not the same as safe. When Lindken and colleagues compiled their data, <span data-fig="found_again_threatened">269</span>
       (<span data-fig="found_again_threatened_pct">63%</span>) of the <span data-fig="lindken_found_again">424</span> tetrapods found again were threatened, <span data-fig="found_again_cr">114</span> of them Critically
@@ -2704,8 +2704,12 @@ function nightReveal(s, found, total) {
   const yr = s.last ? String(s.last) : "?";
   const gap = s.last ? (new Date().getFullYear() - s.last) : null;
   const card = $("#nightCard");
-  const n = (LOST && LOST.meta && LOST.meta.n_species) || 2016;
-  const kicker = NIGHT_LINES[nightLine % NIGHT_LINES.length](n);
+  // Still missing, less this one: the line says nobody has found it, so species confirmed
+  // found again (on the list, marked) are not "others". No payload, no count: skip that line.
+  const m = LOST && LOST.meta;
+  const n = m ? m.n_species - ((m.by_class || {}).rediscovered || 0) - 1 : 0;
+  const lines = n > 0 ? NIGHT_LINES : NIGHT_LINES.slice(1);
+  const kicker = lines[nightLine % lines.length](n);
   nightLine++;
   const grp = s.group || "";
   const note = /^Plant|Flowering|Orchid|Fern|Grass|Moss|Cactus|Epiphyte/.test(grp)
@@ -2761,9 +2765,10 @@ function renderLostStats() {
   const m = LOST.meta, byc = m.by_class || {};
   // NOT a "found again" count. An earlier version showed one, and it read as though only
   // two species had ever been refound — because the two are simply the ones reclassified
-  // in place here. This is a list of species STILL missing; the ones that come back leave
-  // it, and Lindken et al.'s figures for how many that is are in the prose below, where
-  // they can carry their source. A headline number cannot.
+  // in place here. Species confirmed found again stay on the list, marked, so the first
+  // cell is labelled "on the list", not "missing"; Lindken et
+  // al.'s figures for how many come back are in the prose below, where they can carry
+  // their source. A headline number cannot.
   const cells = [
     [m.n_species.toLocaleString(), "on the list"],
     [(byc["long-lost"] || 0).toLocaleString(), "lost over 50 years"],

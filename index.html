@@ -2592,8 +2592,12 @@ function nightReveal(s, found, total) {
   const yr = s.last ? String(s.last) : "?";
   const gap = s.last ? (new Date().getFullYear() - s.last) : null;
   const card = $("#nightCard");
-  const n = (LOST && LOST.meta && LOST.meta.n_species) || 2016;
-  const kicker = NIGHT_LINES[nightLine % NIGHT_LINES.length](n);
+  // Still missing, less this one: the line says nobody has found it, so species confirmed
+  // found again (on the list, marked) are not "others". No payload, no count: skip that line.
+  const m = LOST && LOST.meta;
+  const n = m ? m.n_species - ((m.by_class || {}).rediscovered || 0) - 1 : 0;
+  const lines = n > 0 ? NIGHT_LINES : NIGHT_LINES.slice(1);
+  const kicker = lines[nightLine % lines.length](n);
   nightLine++;
   const grp = s.group || "";
   const note = /^Plant|Flowering|Orchid|Fern|Grass|Moss|Cactus|Epiphyte/.test(grp)
@@ -2649,9 +2653,10 @@ function renderLostStats() {
   const m = LOST.meta, byc = m.by_class || {};
   // NOT a "found again" count. An earlier version showed one, and it read as though only
   // two species had ever been refound — because the two are simply the ones reclassified
-  // in place here. This is a list of species STILL missing; the ones that come back leave
-  // it, and Lindken et al.'s figures for how many that is are in the prose below, where
-  // they can carry their source. A headline number cannot.
+  // in place here. Species confirmed found again stay on the list, marked, so the first
+  // cell is labelled "on the list", not "missing"; Lindken et
+  // al.'s figures for how many come back are in the prose below, where they can carry
+  // their source. A headline number cannot.
   const cells = [
     [m.n_species.toLocaleString(), "on the list"],
     [(byc["long-lost"] || 0).toLocaleString(), "lost over 50 years"],

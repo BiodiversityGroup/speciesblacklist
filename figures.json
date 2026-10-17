@@ -491,6 +491,26 @@
    "v": 1382,
    "src": "lost-species.json: rows whose Red List category is not CR(PE)"
   },
+  "lost_still_floor_100": {
+   "t": "1,800",
+   "v": 1800,
+   "src": "lost-species.json: rows not marked found again, floored to hundreds"
+  },
+  "lost_still_invert_and_plant": {
+   "t": "655",
+   "v": 655,
+   "src": "lost-species.json: invertebrates and plants not marked found again"
+  },
+  "lost_still_n": {
+   "t": "1,853",
+   "v": 1853,
+   "src": "lost-species.json: rows not marked found again"
+  },
+  "lost_still_not_flagged_pe": {
+   "t": "1,260",
+   "v": 1260,
+   "src": "lost-species.json: rows not marked found again whose Red List category is not CR(PE)"
+  },
   "lost_total": {
    "t": "2,002",
    "v": 2002,
