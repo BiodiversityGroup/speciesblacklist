@@ -1,13 +1,13 @@
 {
-"built": "2026-10-17",
+"built": "2026-10-19",
 "counts": {
-"stories": 195,
-"raw_items": 505,
-"with_species": 123,
-"distinct_species": 238,
-"distinct_species_firm": 48,
+"stories": 197,
+"raw_items": 510,
+"with_species": 124,
+"distinct_species": 239,
+"distinct_species_firm": 49,
 "multi_species_cards": 50,
-"with_image": 186,
+"with_image": 188,
 "syndicated": 81,
 "on_tbg_list": 32,
 "on_list_breakdown": {
@@ -15,12 +15,34 @@
 "on our lost-species list": 24
 },
 "undated": 0,
-"newest": "Thu, 08 Oct 2026",
+"newest": "Mon, 19 Oct 2026",
 "tracked_names": 7968,
-"image_local": 180,
-"archived": 130
+"image_local": 182,
+"archived": 131
 },
 "cards": [
+{
+"title": "Lost for 160 years, tiny cave snail types rediscovered in Vienna collection",
+"species": [
+"Zospeum schmidtii"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "BIOENGINEER.ORG",
+"date": "Mon, 19 Oct 2026",
+"ts": 1792426581,
+"first_seen": "2026-10-19",
+"link": "https://bioengineer.org/lost-for-160-years-tiny-cave-snail-types-rediscovered-in-vienna-collection/",
+"image": "/rd-img/f1e11d5add9c5bd1.jpg",
+"wayback": "",
+"desc": "Syntypes of two 1856 cave snail species, lost for over 160 years, have been rediscovered in the Dominik Bilimek collection at BOKU University in Vienna. Using Micro-CT, SEM, and light microscopy,",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "Number of known species of giant waterlilies almost doubles",
 "species": [
@@ -702,7 +724,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 8,
+"outlets": 9,
 "also": [
 {
 "publisher": "The Hindu",
@@ -742,11 +764,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
 {
 "publisher": "Philstar.com",
 "link": "https://www.philstar.com/headlines/2026/07/02/2539243/rare-plant-rediscovered-mount-apo-park"
+},
+{
+"publisher": "Facebook",
+"link": "https://www.facebook.com/gmanews/posts/rare-plant-rediscovered-on-mount-apo-after-122-years-denr-davao-region/1585171436987841/"
 }
 ]
 },
@@ -1113,7 +1139,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 8,
+"outlets": 9,
 "also": [
 {
 "publisher": "Conservation news",
@@ -2739,26 +2765,24 @@
 "species": [
 "Afroedura rondavelica"
 ],
-"species_firm": [],
+"species_firm": [
+"Afroedura rondavelica"
+],
 "on_list": "Lost Species",
 "detail": "Reptile, rediscovered, last seen 1991",
 "publisher": "The Independent",
 "date": "Fri, 01 Aug 2025",
 "ts": 1754031600,
-"first_seen": "2026-08-31",
+"first_seen": "2026-08-10",
 "link": "https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
-"image": "/rd-img/7f5c2fd921dcbdf6.jpg",
-"wayback": "http://web.archive.org/web/20260819183224/https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
-"desc": "A rare gecko species last seen more than three decades ago has been rediscovered at a remote site in the Blyde River",
+"image": "/rd-img/286e73d16ad525f8.jpg",
+"wayback": "http://web.archive.org/web/20251010172605/https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/",
+"desc": "The species was first discovered by Dr Niels Jacobsen in December 1991, when he collected two males.",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 15,
 "also": [
-{
-"publisher": "Good Things Guy",
-"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
-},
 {
 "publisher": "IOL",
 "link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
@@ -2770,6 +2794,10 @@
 {
 "publisher": "Sunday Independent",
 "link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
+},
+{
+"publisher": "IOL",
+"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/"
 }
 ]
 },
@@ -3453,6 +3481,26 @@
 "link": "https://www.iflscience.com/giant-millipede-lost-for-over-120-years-rediscovered-in-madagascan-forest-75145"
 }
 ]
+},
+{
+"title": "Man searching for newts in UK catches something in trap. It was a long-lost species",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Miami Herald",
+"date": "Fri, 19 Jul 2024",
+"ts": 1721372400,
+"first_seen": "2026-10-19",
+"link": "https://www.miamiherald.com/news/nation-world/world/article290249584.html",
+"image": "/rd-img/df0ba7def12e9f2b.jpg",
+"wayback": "http://web.archive.org/web/20240722011948/https://www.miamiherald.com/news/nation-world/world/article290249584.html",
+"desc": "The \u201csilver\u201d creature hasn\u2019t been seen in the area since 1938, a researcher said.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
 },
 {
 "title": "Comprehensive list of birds not seen in last decade released",
