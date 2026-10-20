@@ -1,13 +1,13 @@
 {
 "built": "2026-10-19",
 "counts": {
-"stories": 197,
+"stories": 195,
 "raw_items": 510,
-"with_species": 124,
-"distinct_species": 239,
+"with_species": 123,
+"distinct_species": 238,
 "distinct_species_firm": 49,
 "multi_species_cards": 50,
-"with_image": 188,
+"with_image": 186,
 "syndicated": 81,
 "on_tbg_list": 32,
 "on_list_breakdown": {
@@ -15,34 +15,12 @@
 "on our lost-species list": 24
 },
 "undated": 0,
-"newest": "Mon, 19 Oct 2026",
+"newest": "Thu, 08 Oct 2026",
 "tracked_names": 7968,
-"image_local": 182,
-"archived": 131
+"image_local": 180,
+"archived": 130
 },
 "cards": [
-{
-"title": "Lost for 160 years, tiny cave snail types rediscovered in Vienna collection",
-"species": [
-"Zospeum schmidtii"
-],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "BIOENGINEER.ORG",
-"date": "Mon, 19 Oct 2026",
-"ts": 1792426581,
-"first_seen": "2026-10-19",
-"link": "https://bioengineer.org/lost-for-160-years-tiny-cave-snail-types-rediscovered-in-vienna-collection/",
-"image": "/rd-img/f1e11d5add9c5bd1.jpg",
-"wayback": "",
-"desc": "Syntypes of two 1856 cave snail species, lost for over 160 years, have been rediscovered in the Dominik Bilimek collection at BOKU University in Vienna. Using Micro-CT, SEM, and light microscopy,",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
 {
 "title": "Number of known species of giant waterlilies almost doubles",
 "species": [
@@ -61,26 +39,6 @@
 "image": "/rd-img/e1f87cabca77b556.jpg",
 "wayback": "",
 "desc": "A new species of giant waterlily identified with the help of social media and satellite photos is just one of three discovered in the past few years",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
-"title": "Puerto Rico specimen reveals new giant isopod species that went unrecognized for decades",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "Phys.org",
-"date": "Thu, 08 Oct 2026",
-"ts": 1791452400,
-"first_seen": "2026-10-10",
-"link": "https://phys.org/news/2026-10-puerto-rico-specimen-reveals-giant.html",
-"image": "/rd-img/c2d8d4bfae8304ba.jpg",
-"wayback": "http://web.archive.org/web/20261008173159/https://phys.org/news/2026-10-puerto-rico-specimen-reveals-giant.html",
-"desc": "A giant isopod from Puerto Rico, rediscovered in the depository of the University of T\u00fcbingen's Paleontological Collection, has turned out to be a previously unknown species.",
 "citation": "",
 "kind": "",
 "note": "",
