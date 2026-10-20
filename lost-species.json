@@ -389,7 +389,7 @@
 "last": 1991,
 "prec": "year",
 "rd": 1,
-"rdfirm": 1
+"rdfirm": 0
 },
 {
 "sp": "Afrogarypus seychellesensis",
@@ -14935,7 +14935,9 @@
 "cty": "Indonesia",
 "reg": "Islands",
 "last": 1937,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Nyhimbricus wollastoni",
