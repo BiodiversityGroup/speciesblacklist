@@ -1,26 +1,48 @@
 {
-"built": "2026-10-19",
+"built": "2026-10-20",
 "counts": {
-"stories": 195,
-"raw_items": 510,
-"with_species": 123,
-"distinct_species": 238,
-"distinct_species_firm": 49,
-"multi_species_cards": 50,
-"with_image": 186,
-"syndicated": 81,
-"on_tbg_list": 32,
+"stories": 197,
+"raw_items": 516,
+"with_species": 124,
+"distinct_species": 244,
+"distinct_species_firm": 48,
+"multi_species_cards": 51,
+"with_image": 187,
+"syndicated": 82,
+"on_tbg_list": 33,
 "on_list_breakdown": {
-"on the Black List": 8,
-"on our lost-species list": 24
+"on our lost-species list": 25,
+"on the Black List": 8
 },
 "undated": 0,
-"newest": "Thu, 08 Oct 2026",
+"newest": "Tue, 20 Oct 2026",
 "tracked_names": 7968,
-"image_local": 180,
+"image_local": 181,
 "archived": 130
 },
 "cards": [
+{
+"title": "Venomous primate lost to science for nearly a century turns up in gardens and on roads, where local rescuers have found it for a decade",
+"species": [
+"Nycticebus bancanus"
+],
+"species_firm": [],
+"on_list": "Lost Species",
+"detail": "Mammal, long-lost, last seen 1937",
+"publisher": "Re:wild",
+"date": "Tue, 20 Oct 2026",
+"ts": 1792479420,
+"first_seen": "2026-10-20",
+"link": "https://www.rewild.org/press/bangka-slow-loris-rediscovered",
+"image": "/rd-img/d87840b567505bf6.jpg",
+"wayback": "",
+"desc": "Lost for nearly a century, the venomous Bangka slow loris has been quietly surviving in Indonesia\u2014a new study confirms it\u2019s not extinct.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "Number of known species of giant waterlilies almost doubles",
 "species": [
@@ -102,7 +124,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 9,
+"outlets": 10,
 "also": [
 {
 "publisher": "the Guardian",
@@ -117,8 +139,8 @@
 "link": "https://scitechdaily.com/lost-species-of-miniature-fanged-mouse-deer-rediscovered-sneaking-through-vietnams-coastal-forests/"
 },
 {
-"publisher": "Auckland Zoo",
-"link": "https://www.aucklandzoo.co.nz/news/rediscovering-a-species-lost-to-science-for-30-years"
+"publisher": "ZME Science",
+"link": "https://www.zmescience.com/ecology/animals-ecology/lost-deer-species-rediscovered-after-30-years/"
 }
 ]
 },
@@ -636,8 +658,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "University of Hawaii System",
+"link": "https://www.hawaii.edu/news/2021/12/07/blue-tailed-lizard-rediscovered/"
+}
+]
 },
 {
 "title": "Trail camera captures rare 'rediscovery' of species that hasn't been seen in 80 years: 'A fantastic surprise'",
@@ -722,7 +749,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 3,
+"outlets": 4,
 "also": [
 {
 "publisher": "Philstar.com",
@@ -731,6 +758,10 @@
 {
 "publisher": "Facebook",
 "link": "https://www.facebook.com/gmanews/posts/rare-plant-rediscovered-on-mount-apo-after-122-years-denr-davao-region/1585171436987841/"
+},
+{
+"publisher": "Facebook",
+"link": "https://www.facebook.com/sunstardavaonews/posts/rare-plant-rediscovered-on-mt-apo-after-122-years-the-department-of-environment-/1498475918987285/"
 }
 ]
 },
@@ -2183,8 +2214,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Bombyx mori",
-"Moema claudiae"
+"Moema claudiae",
+"Bombyx mori"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2194,20 +2225,16 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-16",
+"first_seen": "2026-08-10",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/bf92591b41aa53d3.jpg",
-"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
-"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
+"image": "/rd-img/b73e2fd705e4740e.jpg",
+"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 6,
 "also": [
-{
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
 {
 "publisher": "Phys.org",
 "link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
@@ -2219,6 +2246,10 @@
 {
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
 }
 ]
 },
@@ -2723,24 +2754,26 @@
 "species": [
 "Afroedura rondavelica"
 ],
-"species_firm": [
-"Afroedura rondavelica"
-],
+"species_firm": [],
 "on_list": "Lost Species",
 "detail": "Reptile, rediscovered, last seen 1991",
 "publisher": "The Independent",
 "date": "Fri, 01 Aug 2025",
 "ts": 1754031600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-08-31",
 "link": "https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
-"image": "/rd-img/286e73d16ad525f8.jpg",
-"wayback": "http://web.archive.org/web/20251010172605/https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/",
-"desc": "The species was first discovered by Dr Niels Jacobsen in December 1991, when he collected two males.",
+"image": "/rd-img/7f5c2fd921dcbdf6.jpg",
+"wayback": "http://web.archive.org/web/20260819183224/https://www.independent.co.uk/bulletin/news/extinct-species-rediscovered-jellyfish-scotland-b2800480.html",
+"desc": "A rare gecko species last seen more than three decades ago has been rediscovered at a remote site in the Blyde River",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 15,
 "also": [
+{
+"publisher": "Good Things Guy",
+"link": "https://www.goodthingsguy.com/rare-gecko-last-seen-30-years-ago-rediscovered/"
+},
 {
 "publisher": "IOL",
 "link": "https://iol.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
@@ -2752,10 +2785,6 @@
 {
 "publisher": "Sunday Independent",
 "link": "https://sundayindependent.co.za/sunday-tribune/news/2025-05-15-lost-gecko-species-rediscovered-after-more-than-30-years/"
-},
-{
-"publisher": "IOL",
-"link": "https://iol.co.za/mercury/2025-05-14-lost-blyde-river-flat-gecko-rediscovered-after-33-years/"
 }
 ]
 },
@@ -3474,6 +3503,26 @@
 "image": "/rd-img/db96ad86f3cf4296.jpg",
 "wayback": "",
 "desc": "The UK\u2019s leading birdnews service since 1991. Sending over 90,000 instant and reliable birdnews reports each year. On pagers, smartphones, tablets and online.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "6 rediscovered species that were once lost to science",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "World Economic Forum",
+"date": "Thu, 06 Jun 2024",
+"ts": 1717657200,
+"first_seen": "2026-10-20",
+"link": "https://www.weforum.org/stories/2024/06/rediscovered-species-biodiversity/",
+"image": "",
+"wayback": "",
+"desc": "",
 "citation": "",
 "kind": "",
 "note": "",
@@ -4753,7 +4802,12 @@
 {
 "title": "Rediscovering a \u2018lost\u2019 species",
 "species": [
-"Keyacris scurra"
+"Keyacris scurra",
+"Oreobates zongoensis",
+"Euptychoides fida",
+"Pearcea hispidissima",
+"Stromanthe angustifolia",
+"Alzatea verticillata"
 ],
 "species_firm": [],
 "on_list": "",
@@ -4769,11 +4823,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
+"outlets": 3,
 "also": [
 {
 "publisher": "News24",
 "link": "https://www.news24.com/business/climate-future/environment/opinion-rediscovering-lost-species-and-why-it-matters-20250601-0864"
+},
+{
+"publisher": "Conservation International",
+"link": "https://www.conservation.org/research/rediscovering-lost-species-in-the-heart-of-bolivias-cloud-forest"
 }
 ]
 },
