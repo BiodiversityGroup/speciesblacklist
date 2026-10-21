@@ -1,26 +1,50 @@
 {
-"built": "2026-10-20",
+"built": "2026-10-21",
 "counts": {
-"stories": 197,
-"raw_items": 516,
-"with_species": 124,
-"distinct_species": 244,
-"distinct_species_firm": 48,
+"stories": 199,
+"raw_items": 519,
+"with_species": 125,
+"distinct_species": 245,
+"distinct_species_firm": 49,
 "multi_species_cards": 51,
-"with_image": 187,
-"syndicated": 82,
+"with_image": 188,
+"syndicated": 83,
 "on_tbg_list": 33,
 "on_list_breakdown": {
 "on our lost-species list": 25,
 "on the Black List": 8
 },
 "undated": 0,
-"newest": "Tue, 20 Oct 2026",
+"newest": "Wed, 21 Oct 2026",
 "tracked_names": 7968,
-"image_local": 181,
+"image_local": 182,
 "archived": 130
 },
 "cards": [
+{
+"title": "Remarks on the rare pelagic hyperiid Thyropus similis (Amphipoda: Parascelidae): global distribution and its rediscovery in the Mediterranean Sea",
+"species": [
+"Thyropus similis"
+],
+"species_firm": [
+"Thyropus similis"
+],
+"on_list": "",
+"detail": "",
+"publisher": "Zootaxa",
+"date": "Wed, 21 Oct 2026",
+"ts": 1792494000,
+"first_seen": "2026-10-21",
+"link": "https://www.mapress.com/zt/article/view/zootaxa.5894.1.10",
+"image": "/rd-img/31da9f0dc86dcb66.jpg",
+"wayback": "",
+"desc": "",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "Venomous primate lost to science for nearly a century turns up in gardens and on roads, where local rescuers have found it for a decade",
 "species": [
@@ -40,8 +64,13 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Reuters",
+"link": "https://www.reuters.com/business/environment/feared-extinct-bangka-slow-loris-primate-rediscovered-indonesia-2026-10-20/"
+}
+]
 },
 {
 "title": "Number of known species of giant waterlilies almost doubles",
@@ -158,6 +187,26 @@
 "image": "/rd-img/301adf77b9e37577.jpg",
 "wayback": "",
 "desc": "The bird had not been seen in over 13 years.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
+{
+"title": "45 Years Since Rediscovery",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Association of Zoos and Aquariums (AZA)",
+"date": "Sat, 26 Sep 2026",
+"ts": 1790406000,
+"first_seen": "2026-10-21",
+"link": "https://www.aza.org/connect-stories/stories/45-years-since-rediscovery",
+"image": "",
+"wayback": "",
+"desc": "",
 "citation": "",
 "kind": "",
 "note": "",
@@ -661,7 +710,7 @@
 "outlets": 2,
 "also": [
 {
-"publisher": "University of Hawaii System",
+"publisher": "University of Hawai\u02bbi System News",
 "link": "https://www.hawaii.edu/news/2021/12/07/blue-tailed-lizard-rediscovered/"
 }
 ]
@@ -757,11 +806,11 @@
 },
 {
 "publisher": "Facebook",
-"link": "https://www.facebook.com/gmanews/posts/rare-plant-rediscovered-on-mount-apo-after-122-years-denr-davao-region/1585171436987841/"
+"link": "https://www.facebook.com/sunstardavaonews/posts/rare-plant-rediscovered-on-mt-apo-after-122-years-the-department-of-environment-/1498475918987285/"
 },
 {
 "publisher": "Facebook",
-"link": "https://www.facebook.com/sunstardavaonews/posts/rare-plant-rediscovered-on-mt-apo-after-122-years-the-department-of-environment-/1498475918987285/"
+"link": "https://www.facebook.com/gmanews/posts/rare-plant-rediscovered-on-mount-apo-after-122-years-denr-davao-region/1585171436987841/"
 }
 ]
 },
