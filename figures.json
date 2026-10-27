@@ -1081,6 +1081,16 @@
    "v": 15.237646017,
    "src": "C&C figures.json us_revenue_2022_usd_b (CnC_root_long.csv, 2022 Revenue rows with an EIN, summed)"
   },
+  "us_gifts_2022_busd": {
+   "t": "8.7",
+   "v": 8.683832726689479,
+   "src": "C&C figures.json us_gifts_2022_usd_b2 (2022 revenue x each organization's Form 990 private-contributions share)"
+  },
+  "us_giving_share_2022_pct": {
+   "t": "1.7%",
+   "v": 1.739097,
+   "src": "C&C figures.json us_giving_share_2022_pct (us_gifts_2022 / all US giving in 2022, Giving USA 2023 edition)"
+  },
   "validation_fisher_p": {
    "t": "0.0007",
    "v": 0.0007,
