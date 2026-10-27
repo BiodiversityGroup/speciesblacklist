@@ -918,7 +918,7 @@
   },
   "red_list_cents_per_100usd": {
    "t": "3",
-   "v": 3.3761341112491823,
+   "v": 3.281346734542665,
    "src": "Red List budget $5M a year (literature, the tile beside it) / C&C figures.json us_revenue_2022_usd_b, per $100, in cents"
   },
   "redlist_accessed_nb": {
@@ -1078,7 +1078,7 @@
   },
   "us_conservation_revenue_2022_busd": {
    "t": "15",
-   "v": 14.809838221,
+   "v": 15.237646017,
    "src": "C&C figures.json us_revenue_2022_usd_b (CnC_root_long.csv, 2022 Revenue rows with an EIN, summed)"
   },
   "validation_fisher_p": {
