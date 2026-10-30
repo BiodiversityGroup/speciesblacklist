@@ -2915,7 +2915,7 @@ function drawNsMap() {
     note.textContent =
       `${shown.toLocaleString()} species across ${where} countries`
       + (nsYear ? ` described in ${nsYear}. ` : ". ")
-      + (nsClass || nsYear ? "" : `${m.unplaced} more give a distribution this map could `
+      + (nsClass || nsYear || !m.unplaced ? "" : `${m.unplaced} more give a distribution this map could `
                                 + `not resolve to a single country and are not drawn.`);
   }
 }

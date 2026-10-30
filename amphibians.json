@@ -22,7 +22,7 @@
 "2025": 147,
 "2026": 144
 },
-"single_country": 969,
+"single_country": 970,
 "with_reference": 1040,
 "families": 46,
 "countries": 89
@@ -1759,9 +1759,9 @@
 "yr": 2025,
 "fam": "Grandisoniidae",
 "ev": "uncorroborated",
-"cty": "",
+"cty": "India",
 "ref": "Dinesh KP, Shikalgar S, Adhav P, Jadhav BV, Kulkarni NB. 2025. Discovery of a new species of Gegeneophis (Gymnophiona: Grandisoniidae) highlights hidden diversity and implications for regional endemism in the Western Ghats, India. Phyllomedusa 24: 295–312. ( 10.11606/issn.2316-9079.v24i2p295-312 )",
-"one": false
+"one": true
 },
 {
 "sp": "Gracixalus huaping",
