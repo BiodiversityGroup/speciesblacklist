@@ -1,12 +1,12 @@
 {
 "generated_for": "amphibians described 2015+, AmphibiaWeb new-species listing vs IUCN Red List v4 API, checked one species at a time",
 "counts": {
-"total": 974,
+"total": 1040,
 "dropped_assessed": 747,
 "by_evidence": {
+"uncorroborated": 182,
 "airtight": 810,
-"uncorroborated": 122,
-"corroborated": 42
+"corroborated": 48
 },
 "by_year": {
 "2015": 2,
@@ -20,14 +20,23 @@
 "2023": 124,
 "2024": 114,
 "2025": 147,
-"2026": 78
+"2026": 144
 },
-"single_country": 908,
-"with_reference": 974,
-"families": 44,
-"countries": 84
+"single_country": 969,
+"with_reference": 1040,
+"families": 46,
+"countries": 89
 },
 "rows": [
+{
+"sp": "Allobates tanaru",
+"yr": 2026,
+"fam": "Aromobatidae",
+"ev": "uncorroborated",
+"cty": "Brazil",
+"ref": "Pereira Dantas S, Ferrão M, Cunha-Machado AS, Lima AP. 2026. The first chlorotic species of the superfamily Dendrobatoidea: a new nurse frog of the Allobates albiventris complex (Anura, Aromobatidae) with remarkably greenish hatchlings from Brazilian Amazonia. Brevoria 579: 1–35. ( 10.3099/0006-9698",
+"one": true
+},
 {
 "sp": "Ameerega kuriinti",
 "yr": 2026,
@@ -35,6 +44,33 @@
 "ev": "airtight",
 "cty": "Peru",
 "ref": "Geralds B, Twomey EM, Deutsch MS, Chávez G, Brown JL. 2026. Further complicated histories: A revision of the Ameerega bassleri species group (Anura: Dendrobatidae) and a new species from the Cordillera Escalera of Peru. Zootaxa 5759: 295–320. ( 10.11646/zootaxa.5759.3.4 )",
+"one": true
+},
+{
+"sp": "Amnihyla homuncula",
+"yr": 2026,
+"fam": "Hylidae",
+"ev": "uncorroborated",
+"cty": "Indonesia",
+"ref": "Oliver PM, Iskandar DT, Herlambang AEN, Richards SJ. 2026. A new species of torrent-breeding treefrog ( Amnihyla : Pelodryadidae) from the Maoke Mountains, Indonesia, that shows marked sexual size dimorphism. Zootaxa 5878: 389–404. ( 10.11646/zootaxa.5878.3.4 )",
+"one": true
+},
+{
+"sp": "Amolops ammachi",
+"yr": 2026,
+"fam": "Ranidae",
+"ev": "uncorroborated",
+"cty": "India",
+"ref": "Biju SD, Ellepola G, Akalabya Sarmah AND, Upadhyaya K R, Bisht K, Tajo T, Hanken J, Garg S. 2026. Systematics, molecular phylogeny, diversification, and biogeography of Cascade Frogs(Ranidae: Amolops ) from India: an integrative assessment with description of three new species. Bulletin of the Museu",
+"one": true
+},
+{
+"sp": "Amolops bella",
+"yr": 2026,
+"fam": "Ranidae",
+"ev": "uncorroborated",
+"cty": "India",
+"ref": "Biju SD, Ellepola G, Akalabya Sarmah AND, Upadhyaya K R, Bisht K, Tajo T, Hanken J, Garg S. 2026. Systematics, molecular phylogeny, diversification, and biogeography of Cascade Frogs(Ranidae: Amolops ) from India: an integrative assessment with description of three new species. Bulletin of the Museu",
 "one": true
 },
 {
@@ -63,6 +99,24 @@
 "ev": "airtight",
 "cty": "Viet Nam",
 "ref": "Pham,AV, Hoang CV, Nguyen TQ, Nguyen van TH, Nguyen TTT, Nguyen KD, Thai TC, Hoang NV and Pham CT. 2026. A new species of Amolops (Anura: Ranidae) from Vu Quang National Park—an ASEAN Heritage Park of Vietnam. Zootaxa, 5760 (2), 225–247. ( 10.11646/zootaxa.5760.2.4 )",
+"one": true
+},
+{
+"sp": "Amolops orlovi",
+"yr": 2026,
+"fam": "Ranidae",
+"ev": "uncorroborated",
+"cty": "Viet Nam",
+"ref": "Pham CT, Duong LC, Hoang CV, Dang PH, Ngo HN, Ziegler T, Nguyen TQ. 2026. A new species of Amolops (Anura: Ranidae) from Bach Ma National Park, Central Vietnam. Zootaxa 5884: 326–346. ( 10.11646/zootaxa.5884.2.5 )",
+"one": true
+},
+{
+"sp": "Amolops sendenyu",
+"yr": 2026,
+"fam": "Ranidae",
+"ev": "uncorroborated",
+"cty": "India",
+"ref": "Biju SD, Ellepola G, Akalabya Sarmah AND, Upadhyaya K R, Bisht K, Tajo T, Hanken J, Garg S. 2026. Systematics, molecular phylogeny, diversification, and biogeography of Cascade Frogs(Ranidae: Amolops ) from India: an integrative assessment with description of three new species. Bulletin of the Museu",
 "one": true
 },
 {
@@ -112,6 +166,15 @@
 "one": true
 },
 {
+"sp": "Boulenophrys calciphila",
+"yr": 2026,
+"fam": "Megophryidae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Zeng Z-C, Wang J, Qi S, Song H-M, Cai Y-Y, Zhu Y-S, Lin S-S, Li Y-H, Zhou D-Y, Yang H-C, Lyu Z-T, Yang Y-P, Wang Y-Y. 2026. A new species of Boulenophrys Fei, Ye & Jiang, 2016 (Anura, Megophryidae) from karst landscapes in northern Guangdong, China. Herpetozoa 39: 291–302. ( 10.3897/herpetozoa.39.e2",
+"one": true
+},
+{
 "sp": "Boulenophrys dongli",
 "yr": 2026,
 "fam": "Megophryidae",
@@ -137,6 +200,24 @@
 "cty": "China",
 "ref": "Xiao B, Zhu L, Wang L, Li H, Maimaiti A, Li S, Zhang G, Liu W, Fei D, Liao C, Tang X, Shi S and Mo X. 2026. A new species of the genus Boulenophrys (Anura, Megophryidae) from Nanshan National Park, Hunan Province, China. Zoosystematics and Evolution 102(1): 53-70. ( 10.3897/zse.102.175092 )",
 "one": true
+},
+{
+"sp": "Brachytarsophrys jinxiuensis",
+"yr": 2026,
+"fam": "Megophryidae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Liu S, Hou M, Rao D. 2026. A new species of the genus Brachytarsophrys Tian & Hu, 1983 (Anura: Megophryidae) from Guangxi, China. Amurian Zoological Journal 18: 586–598. ( 10.33910/2686-9519-2026-18-2-586-598 )",
+"one": true
+},
+{
+"sp": "Brachytarsophrys praestes",
+"yr": 2026,
+"fam": "Megophryidae",
+"ev": "uncorroborated",
+"cty": "Lao People's Democratic Republic; Viet Nam",
+"ref": "Mahony S, Phimmachak S, Seateun S, Sivongxay N, Hoang HD, Le DTT, Streicher JW, Rowley JJL, Stuart BL. 2026. A comprehensive review of the Megophrys ( Brachytarsophrys ) carinensis group (Amphibia: Megophryidae) reveals a new giant horned frog from Indochina and evidence for taxonomic inflation in t",
+"one": false
 },
 {
 "sp": "Brachytarsophrys wui",
@@ -167,6 +248,51 @@
 "one": true
 },
 {
+"sp": "Dryadobates caissara",
+"yr": 2026,
+"fam": "Aromobatidae",
+"ev": "uncorroborated",
+"cty": "Brazil",
+"ref": "Oliveira Homma MH, Noguiera Norbertino K, Grant T. 2026. A critically endangered new species of Dryadobates (Anura: Aromobatidae) from Espírito Santo, Brazil. Zootaxa 5845: 319–339. ( 10.11646/zootaxa.5845.2.6 )",
+"one": true
+},
+{
+"sp": "Duttaphrynus phawngpui",
+"yr": 2026,
+"fam": "Bufonidae",
+"ev": "uncorroborated",
+"cty": "India",
+"ref": "Dawngliana M, Warjri H, Amarasignhe AAT, Bal AK, Hruaia V, Hlychho MD, Lalremsanga HT, Vabeiryureilai M, Purkayastha J. 2026. A new montane toad species (Anura: Bufonidae: Duttaphrynus ) from Mizoram, northeastern India. Taprobanica 15: 298–309. ( 10.47605/tapro.v15i2.423 )",
+"one": true
+},
+{
+"sp": "Excidobates perplexus",
+"yr": 2026,
+"fam": "Dendrobatidae",
+"ev": "uncorroborated",
+"cty": "Ecuador",
+"ref": "Sánchez-Nivicela JC, Falcón-Reibán JM, Cabrera Lituma M, Fajardo-Torres JD, Urgiles VL, Apunte-Ramos K, Ron SR. 2026. Tiny jewels of the forest: A new and endangered species of Excidobates (Anura: Dendrobatidae) from southeastern Ecuador. Zootaxa 5886: 193–217. ( 10.11646/zootaxa.5886.2.2 )",
+"one": true
+},
+{
+"sp": "Feihyla changningensis",
+"yr": 2026,
+"fam": "Rhacophoridae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Liu S, Hou M, Gao Z, Mu Q, Hui Z, Wang Q, Zhang P, Zeng W, Rao D. 2026. Two additional new species of Feihyla sensu stricto (Anura, Rhacophoridae) from Yunnan Province, China. Taxonomy 6: 1–20. ( 10.3390/taxonomy6040063 )",
+"one": true
+},
+{
+"sp": "Feihyla menghaiensis",
+"yr": 2026,
+"fam": "Rhacophoridae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Liu S, Hou M, Gao Z, Mu Q, Hui Z, Wang Q, Zhang P, Zeng W, Rao D. 2026. Two additional new species of Feihyla sensu stricto (Anura, Rhacophoridae) from Yunnan Province, China. Taxonomy 6: 1–20. ( 10.3390/taxonomy6040063 )",
+"one": true
+},
+{
 "sp": "Feihyla wenshanensis",
 "yr": 2026,
 "fam": "Rhacophoridae",
@@ -183,6 +309,15 @@
 "ev": "airtight",
 "cty": "China",
 "ref": "Liu, S., Bu, C. Feng, Y., Zhang, Z., Yang, S., Ma, Z., Chen, Z., Chen, S., He, K., Zhong, W., & Rao, D.-Q. (2026). Two new species of the genus Feihyla (Anura: Rhacophoridae) previously confused with F. fuhua Fei, Ye & Jiang, 2010 from Yunnan, China. Ecologica Montenegrina 94 : 228–242. ( 10.37828/e",
+"one": true
+},
+{
+"sp": "Gastrotheca amaru",
+"yr": 2026,
+"fam": "Hemiphractidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Vargas VJ, Rivera L, Catenazzi A. 2026 A new species of marsupial frog (Anura: Gastrotheca ) from the humid forests of the Mantaro basin in the central Andes, and first record of Hyloscirtus armatus and Rhinella leptoscelis in Huancavelica, Peru. Zootaxa 5884(1): 97–118. ( 10.11646/zootaxa.5884.1.4",
 "one": true
 },
 {
@@ -204,6 +339,33 @@
 "one": true
 },
 {
+"sp": "Gegeneophis chandgadi",
+"yr": 2026,
+"fam": "Grandisoniidae",
+"ev": "uncorroborated",
+"cty": "India",
+"ref": "Shikalgar S, Patil RN, Adhav P, Kulkarni NU, Hiragond NC, Gramapurohit NP, Tripathy B, Dinesh KP. 2026. Exploring cryptic diversity in Gegeneophis Peters (Amphibia: Gymnophiona: Grandisoniidae) with a novel species from the northern Western Ghats, Maharashtra, India. Records of the Zoological Survey",
+"one": true
+},
+{
+"sp": "Graxicalus damingshanens",
+"yr": 2026,
+"fam": "Rhacophoridae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Chen W-C, Li P. 2026. A new species of Gracixalus (Anura, Rhacophoridae) from Damingshan National Nature Reserve, Guangxi, China. Zoosystematics and Evolution 102: 989–1003. ( 10.3897/zse.102.18642 )",
+"one": true
+},
+{
+"sp": "Ingerana aizawl",
+"yr": 2026,
+"fam": "Dicroglossidae",
+"ev": "uncorroborated",
+"cty": "India",
+"ref": "Tlawmte Lalremsanga H, Bharali M, Dawngliana M, Duasa Hlychho M, Malsawmtluanga, Bhattacharjee R, Kumar Hazarika A, Das N, Purkayastha J. 2026. Leaping from a university campus to the scientific records: a new species of Ingerana Dubois, 1987 (Anura: Dicroglossidae) from Mizoram, India. Zootaxa 5878",
+"one": true
+},
+{
 "sp": "Ingerana occidens",
 "yr": 2026,
 "fam": "Dicroglossidae",
@@ -220,6 +382,15 @@
 "ev": "airtight",
 "cty": "Brazil",
 "ref": "Silva-Soares, Thiago, Natália S. Campos, Erlan Pirovani-Silva, Leonora P. Costa & Marina Monjardim. 2026. A new species of Ischnocnema lactea series (Anura: Brachycephalidae) from the highlands of Serra do Caparaó, Atlantic Forest, southeastern Brazil. Zootaxa 5768(4): 503-524. ( 10.11646/zootaxa.57",
+"one": true
+},
+{
+"sp": "Isthmohyla nacientes",
+"yr": 2026,
+"fam": "Hylidae",
+"ev": "uncorroborated",
+"cty": "Costa Rica",
+"ref": "Chaves-Acuña W, Abarca J, Navarro-Picado J, Hidalgo-Mora E, Ureña-Chaves M, Valverde-Castillo A, Chaves G, Bolaños F, Faivovich J. 2026. A new species of stream-breeding Isthmohyla (Anura: Hylidae) from Costa Rica. Ichthyology & Herpetology 114: 337–356. ( 10.1643/h2024066 )",
 "one": true
 },
 {
@@ -248,6 +419,33 @@
 "ev": "airtight",
 "cty": "Viet Nam",
 "ref": "Do DT, Nguyen TQ, Hoang CV, Ziegler T, Pham CT. 2026. A new species of Leptobrachella Smith, 1925 (Anura, Megophryidae) from the coastal forest of Dak Lak Province, Vietnam. ZooKeys 1267:15–30. ( 10.3897/zookeys.1267.177118 )",
+"one": true
+},
+{
+"sp": "Leptobrachella jinzhongshanensis",
+"yr": 2026,
+"fam": "Megophryidae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Chen W-C, Su T-P, Yang H-J, Pan M-Y. 2026. A new species of Leptobrachella (Anura, Megophryidae) from Jinzhongshan National Nature Reserve, Guangxi, China. Zoosystematics and Evolution 102: 1089–1105. ( 10.3897/zse.102.195575 )",
+"one": true
+},
+{
+"sp": "Leptobrachella mayanghe",
+"yr": 2026,
+"fam": "Megophryidae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Yang Z, Liu J, Zhang F, Cheng Y, Zou Q, Chen Y, Mu L, Zhou J, Li S, Zhao H. 2026. A new Asian leaf litter toad of the genus Leptobrachella (Amphibia, Anura, Megophryidae) from northeastern Guizhou, China. ZooKeys 1295: 25–51. ( 10.3897/zookeys.1295.206395 )",
+"one": true
+},
+{
+"sp": "Leptobrachella quangninhensis",
+"yr": 2026,
+"fam": "Megophryidae",
+"ev": "uncorroborated",
+"cty": "Viet Nam",
+"ref": "Luong AM, Hoang CV, Pham CT, Ziegler T, Nguyen TQ. 2026. A new species of Leptobrachella Smith 1925 (Amphibia: Anura: Megophryidae) from Quang Ninh Province, Vietnam. Russian Journal of Herpetology 33: 197–216. ( 10.30906/1026-2296-2026-33-3-197-216 )",
 "one": true
 },
 {
@@ -287,6 +485,15 @@
 "one": true
 },
 {
+"sp": "Leptodactylus trinacria",
+"yr": 2026,
+"fam": "Leptodactylidae",
+"ev": "uncorroborated",
+"cty": "Venezuela",
+"ref": "La Marca E. 2026. A new Andean rocket frog (Amphibia: Anura: Leptodactylidae: Leptodactylus ) from urban spaces at Mérida, Venezuela. Anartia 42: 18–39. ( 10.5281/zenodo.21083898 )",
+"one": true
+},
+{
 "sp": "Limnonectes corvus",
 "yr": 2026,
 "fam": "Dicroglossidae",
@@ -304,6 +511,15 @@
 "cty": "India; Myanmar",
 "ref": "Borush B, Rajiv N, Dutta S, Das A. 2026. A new mud-nesting Fanged Frog (Anura: Dicroglossidae) from Arunachal Pradesh with notes on L. longchuanensis from India. Zootaxa 5796:551-71. ( 10.11646/zootaxa.5796.3.8 )",
 "one": false
+},
+{
+"sp": "Lynchius romolerouxae",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Ecuador",
+"ref": "Almendariz A, Brito J, Ron SR. 2026. A New Species of Frog of the Genus Lynchius (Strabomantidae: Strabomantinae) from Cordillera del Cóndor. Zootaxa 5874:126–140. ( 10.11646/zootaxa.5874.2.2 )",
+"one": true
 },
 {
 "sp": "Mantidactylus charlotteianus",
@@ -414,12 +630,30 @@
 "one": true
 },
 {
+"sp": "Niceforonia florezarum",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Colombia",
+"ref": "Pisso-Florez GA, Cardona-Giraldo A, Ramírez-Chaves HE, Liévano-Bonilla AF, Mazepa GO, Mulder KP. 2026. A new species of Niceforonia (Anura: Craugastoridae) from the Colombian Massif, southwestern Colombia. Zootaxa 5881: 301–326. ( 10.11646/zootaxa.5881.3.1 )",
+"one": true
+},
+{
 "sp": "Niceforonia quilloturo",
 "yr": 2026,
 "fam": "Strabomantidae",
 "ev": "airtight",
 "cty": "Ecuador",
 "ref": "Reyes-Puig JP, Yánez-Muñoz MH, Urgilés-Merchán M, Libke Z, Ron SR, Carrión-Olmedo JC. 2026. Two new terrestrial narrow-toed frogs ( Niceforonia : Strabomantidae, Anura) from remote unexplored mountains in the Ecuadorian Andes. PeerJ 14: e21182. https://doi.org/10.7717/peerj.21182 ( 10.7717/peerj.211",
+"one": true
+},
+{
+"sp": "Niceforonia tempestuosa",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Colombia",
+"ref": "Ospina-Sarria JJ, Rodríguez-Betancourt AF, Gómez-Sepúlveda X, Morales-Vertel ID, Vélez-Franco V, Gallego-Posada N, Herrera-Rengifo JD, Grajales Escobar JE, Ceballos-Castro I, García-Gómez I, Velásquez-Trujillo DA, Ortiz Baez AS, Mendez Narvaez J. 2026. A new species of Niceforonia (Amphibia, Anura,",
 "one": true
 },
 {
@@ -460,6 +694,15 @@
 "one": true
 },
 {
+"sp": "Odorrana chumu",
+"yr": 2026,
+"fam": "Ranidae",
+"ev": "uncorroborated",
+"cty": "Viet Nam",
+"ref": "Le MV, Nguyen LT, Stuart BL, Nguyen SN, McCormack TEM, Che J. 2026. A new species of the genus Odorrana Fei, Ye & Huang, 1990 from Southern Vietnam. Asiatic Herpetological Research 17: 293–308. ( 10.3724/ahr.2095-0357.2026.0048 )",
+"one": true
+},
+{
 "sp": "Odorrana nagao",
 "yr": 2026,
 "fam": "Ranidae",
@@ -486,6 +729,69 @@
 "ev": "airtight",
 "cty": "Brazil",
 "ref": "Carvalho D, Valencia-Zuleta A, Araujo-Vieira K, Faivovich J, Maciel NM & Brandão, RA. 2026. A new species of the Ololygon catharinae group from the Brazilian Cerrado (Anura, Hylidae, Scinaxini). Zootaxa, 5757 (6), 522–542. ( 10.11646/zootaxa.5757.6.2 )",
+"one": true
+},
+{
+"sp": "Oreobates azulensis",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Venegas PJ, Ttito JW, García-Ayachi LA, Gulman M, Valencia JD, Catenazzi A. 2026. Four New Species of Direct-Developing Frogs, Genus Oreobates (Anura: Strabomantidae), from Peru. Diversity 18:458. DOI: 10.3390/d18080458. ( 10.3390/d18080458 )",
+"one": true
+},
+{
+"sp": "Oreobates chirimoto",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Venegas PJ, Ttito JW, García-Ayachi LA, Gulman M, Valencia JD, Catenazzi A. 2026. Four New Species of Direct-Developing Frogs, Genus Oreobates (Anura: Strabomantidae), from Peru. Diversity 18:458. DOI: 10.3390/d18080458. ( 10.3390/d18080458 )",
+"one": true
+},
+{
+"sp": "Oreobates foliaspectrum",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Venegas PJ, Ttito JW, García-Ayachi LA, Gulman M, Valencia JD, Catenazzi A. 2026. Four New Species of Direct-Developing Frogs, Genus Oreobates (Anura: Strabomantidae), from Peru. Diversity 18:458. DOI: 10.3390/d18080458. ( 10.3390/d18080458 )",
+"one": true
+},
+{
+"sp": "Oreobates nigrumcompletum",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Venegas PJ, Ttito JW, García-Ayachi LA, Gulman M, Valencia JD, Catenazzi A. 2026. Four New Species of Direct-Developing Frogs, Genus Oreobates (Anura: Strabomantidae), from Peru. Diversity 18:458. DOI: 10.3390/d18080458. ( 10.3390/d18080458 )",
+"one": true
+},
+{
+"sp": "Oreolalax lizipingensis",
+"yr": 2026,
+"fam": "Megophryidae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Huang SN, Dai QL, Hou YM, Lin YH, Wang YF, Yu HQ, Lin XQ, Xie F. 2026. A new Oreolalax (Anura, Megophryidae) from southwest Sichuan, China. Zoosystematics and Evolution 102: 1107–1125. ( 10.3897/zse.102.183210 )",
+"one": true
+},
+{
+"sp": "Oreolalax wumengmontis",
+"yr": 2026,
+"fam": "Megophryidae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Li X, Li Z, Jiahan B, Liu X, Zhang Y, Li P, Zhang W, Li F, Huang J, Li X, Yuan Z. 2026. A new species of Oreolalax Myers & Leviton, 1962 (Anura, Megophryidae) from northeast Yunnan, China. Asian Herpetological Research 17: 67–83. ( 10.3724/ahr.2095-0357.2026.0014 )",
+"one": true
+},
+{
+"sp": "Pachytriton yeae",
+"yr": 2026,
+"fam": "Salamandridae",
+"ev": "uncorroborated",
+"cty": "China",
+"ref": "Zhang C, Xu S, Zhang H, Yi F, Shen Y, Yu L, Wang H, Yang J, Ye Y, Wengel PP, Wang B, Xie F, Li C, Jiang J, Zhang B. 2026. A new species of Pachytriton (Caudata: Salamandridae) from Jiangxi, China, honoring the partnership of Liang Fei and Changyuan Ye. Asian Herpetological Research 17: 107–121 ( 10.",
 "one": true
 },
 {
@@ -525,12 +831,57 @@
 "one": true
 },
 {
+"sp": "Platymantis habagatan",
+"yr": 2026,
+"fam": "Ceratobatrachidae",
+"ev": "uncorroborated",
+"cty": "Philippines",
+"ref": "Pitogo KME, Hoskins K, Tesfazion FH, Meneses CG, Cannon HW, Supsup CE, Decena SCP, Sanguila MB, Brown RM. 2026. Southern Philippine forest frogs (Anura; Ceratobatrachidae: Platymantis ) confused with P. dorsalis : validation and resurrection of P. jagorii (Peters, 1863) and P. laticeps (Taylor, 1920",
+"one": true
+},
+{
+"sp": "Pristimantis aisatipoki",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Venegas PJ, García-Ayachi LA, Catenazzi A, Ron SR. 2026. Five new species of the Pristimantis lacrimosus group (Anura: Strabomantidae) from the Peruvian Amazon. Zootaxa 5890: 301-344. ( 10.11646/zootaxa.5890.3.1 )",
+"one": true
+},
+{
+"sp": "Pristimantis basicordellum",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Venegas PJ, García-Ayachi LA, Catenazzi A, Ron SR. 2026. Five new species of the Pristimantis lacrimosus group (Anura: Strabomantidae) from the Peruvian Amazon. Zootaxa 5890: 301-344. ( 10.11646/zootaxa.5890.3.1 )",
+"one": true
+},
+{
 "sp": "Pristimantis cantorcaelestis",
 "yr": 2026,
 "fam": "Strabomantidae",
 "ev": "airtight",
 "cty": "Colombia",
 "ref": "Cuellar-Valencia OM, Bolaños-Molina BE, Bolívar-García W. 2026. Two new rain frogs of the Pristimantis leptolophus species group (Anura: Strabomantidae) from the high elevations of the Cordillera Occidental, Southwestern Colombia. Zootaxa 5807(2): 305–338. ( 10.11646/zootaxa.5807.2.4 )",
+"one": true
+},
+{
+"sp": "Pristimantis cantrix",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "corroborated",
+"cty": "Ecuador",
+"ref": "Franco-Mena D, Vega-Yánez MA, Bustos M, Guayasamin JM, Batallas D. 2026. Four new species of Pristimantis myersi group (Anura: Craugastoridae) from Carchi, Ecuador: cryptic diversity in unique and threatened high-Andean ecosystems. PeerJ 14: e21618. ( 10.7717/peerj.21618 )",
+"one": true
+},
+{
+"sp": "Pristimantis carchi",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "corroborated",
+"cty": "Ecuador",
+"ref": "Franco-Mena D, Vega-Yánez MA, Bustos M, Guayasamin JM, Batallas D. 2026. Four new species of Pristimantis myersi group (Anura: Craugastoridae) from Carchi, Ecuador: cryptic diversity in unique and threatened high-Andean ecosystems. PeerJ 14: e21618. ( 10.7717/peerj.21618 )",
 "one": true
 },
 {
@@ -553,6 +904,15 @@
 "one": true
 },
 {
+"sp": "Pristimantis culmecordellum",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Venegas PJ, García-Ayachi LA, Catenazzi A, Ron SR. 2026. Five new species of the Pristimantis lacrimosus group (Anura: Strabomantidae) from the Peruvian Amazon. Zootaxa 5890: 301-344. ( 10.11646/zootaxa.5890.3.1 )",
+"one": true
+},
+{
 "sp": "Pristimantis dinardoi",
 "yr": 2026,
 "fam": "Strabomantidae",
@@ -563,12 +923,39 @@
 "v": "Dinardo’s rainfrog"
 },
 {
+"sp": "Pristimantis etsa",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Ecuador",
+"ref": "Figueroa-Coronel E, Cisneros-Heredia DF, Brito-Zapata D, Carrión-Olmedo JC, Reyes-Puig C. 2026. A new rain frog of the genus Pristimantis (Anura, Craugastoridae) from the Cordillera del Cóndor, southeastern Ecuador. ZooKeys 1282:205–228. DOI: 10.3897/zookeys.1282.187506.",
+"one": true
+},
+{
 "sp": "Pristimantis fergusoni",
 "yr": 2026,
 "fam": "Strabomantidae",
 "ev": "airtight",
 "cty": "Ecuador",
 "ref": "Reyes Puig JP, Yánez-Muñoz MH, Ron SR, Venegas PJ, Ortega J, Carrión-Olmedo JC & Reyes-Puig C. 2026. A new spiny frog of the genus Pristimantis (Anura, Strabomantidae), from the eastern slopes of the Ecuadorian Andes. ZooKeys 1269: 83-105. ( 10.3897/zookeys.1269.162260 )",
+"one": true
+},
+{
+"sp": "Pristimantis levi",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Ecuador",
+"ref": "Franco-Mena D, Vega-Yánez MA, Bustos M, Guayasamin JM, Batallas D. 2026. Four new species of Pristimantis myersi group (Anura: Craugastoridae) from Carchi, Ecuador: cryptic diversity in unique and threatened high-Andean ecosystems. PeerJ 14: e21618. ( 10.7717/peerj.21618 )",
+"one": true
+},
+{
+"sp": "Pristimantis marquezi",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Ecuador",
+"ref": "Franco-Mena D, Vega-Yánez MA, Bustos M, Guayasamin JM, Batallas D. 2026. Four new species of Pristimantis myersi group (Anura: Craugastoridae) from Carchi, Ecuador: cryptic diversity in unique and threatened high-Andean ecosystems. PeerJ 14: e21618. ( 10.7717/peerj.21618 )",
 "one": true
 },
 {
@@ -587,6 +974,15 @@
 "ev": "airtight",
 "cty": "Ecuador",
 "ref": "Székely, P., Hualpa-Vega, S., Hualpa-Vega, D., and Székely, D. (2026). Three new Pristimantis species in the subgenus Huicundomantis (Amphibia: Anura: Strabomantidae) from Reserva Biológica Cerro Plateado, southern Ecuador. PeerJ 14 : e20930. ( 10.7717/peerj.20930 )",
+"one": true
+},
+{
+"sp": "Pristimantis milpe",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "corroborated",
+"cty": "Ecuador",
+"ref": "Ron SR, Paredes-Aguirre P, Paucar DA, López Y, Apunte K, Ortega JA. 2026. Long overdue: a new, widespread, species of Pristimantis (Anura, Strabomantidae) from the Chocó region and the synonymy of Pristimantis subsigillatus . ZooKeys 1286: 121–152. ( 10.3897/zookeys.1286.194383 )",
 "one": true
 },
 {
@@ -617,6 +1013,24 @@
 "one": true
 },
 {
+"sp": "Pristimantis rhodocanthus",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Venegas PJ, García-Ayachi LA, Catenazzi A, Ron SR. 2026. Five new species of the Pristimantis lacrimosus group (Anura: Strabomantidae) from the Peruvian Amazon. Zootaxa 5890: 301-344. ( 10.11646/zootaxa.5890.3.1 )",
+"one": true
+},
+{
+"sp": "Pristimantis solitarius",
+"yr": 2026,
+"fam": "Strabomantidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Venegas PJ, García-Ayachi LA, Catenazzi A, Ron SR. 2026. Five new species of the Pristimantis lacrimosus group (Anura: Strabomantidae) from the Peruvian Amazon. Zootaxa 5890: 301-344. ( 10.11646/zootaxa.5890.3.1 )",
+"one": true
+},
+{
 "sp": "Pristimantis translucidus",
 "yr": 2026,
 "fam": "Strabomantidae",
@@ -632,6 +1046,78 @@
 "ev": "airtight",
 "cty": "Ecuador",
 "ref": "Székely, P., Hualpa-Vega, S., Hualpa-Vega, D., and Székely, D. (2026). Three new Pristimantis species in the subgenus Huicundomantis (Amphibia: Anura: Strabomantidae) from Reserva Biológica Cerro Plateado, southern Ecuador. PeerJ 14 : e20930. ( 10.7717/peerj.20930 )",
+"one": true
+},
+{
+"sp": "Proteus bosniensis",
+"yr": 2026,
+"fam": "Proteidae",
+"ev": "uncorroborated",
+"cty": "Bosnia and Herzegovina",
+"ref": "Dufresnes C, Monod-Broca B, Jelić D, Šunje E, Manenti R, Barzaghi B, Zimić A, Chouchane K., Denoël M, Ohler A, and Jablonski D. (2026). \"Olm sweet olm: unearthing nine species of Proteus hidden beneath the Dinaric Karst.\" Amphibia-Reptilia ( 10.1163/15685381-bja10266 )",
+"one": false
+},
+{
+"sp": "Proteus carrarae",
+"yr": 2026,
+"fam": "Proteidae",
+"ev": "corroborated",
+"cty": "Bosnia and Herzegovina; Croatia",
+"ref": "Dufresnes C, Monod-Broca B, Jelić D, Šunje E, Manenti R, Barzaghi B, Zimić A, Chouchane K., Denoël M, Ohler A, and Jablonski D. (2026). \"Olm sweet olm: unearthing nine species of Proteus hidden beneath the Dinaric Karst.\" Amphibia-Reptilia ( 10.1163/15685381-bja10266 )",
+"one": false
+},
+{
+"sp": "Proteus croaticus",
+"yr": 2026,
+"fam": "Proteidae",
+"ev": "uncorroborated",
+"cty": "Croatia",
+"ref": "Dufresnes C, Monod-Broca B, Jelić D, Šunje E, Manenti R, Barzaghi B, Zimić A, Chouchane K., Denoël M, Ohler A, and Jablonski D. (2026). \"Olm sweet olm: unearthing nine species of Proteus hidden beneath the Dinaric Karst.\" Amphibia-Reptilia ( 10.1163/15685381-bja10266 )",
+"one": true
+},
+{
+"sp": "Proteus freyeri",
+"yr": 2026,
+"fam": "Proteidae",
+"ev": "uncorroborated",
+"cty": "Slovenia",
+"ref": "Dufresnes C, Monod-Broca B, Jelić D, Šunje E, Manenti R, Barzaghi B, Zimić A, Chouchane K., Denoël M, Ohler A, and Jablonski D. (2026). \"Olm sweet olm: unearthing nine species of Proteus hidden beneath the Dinaric Karst.\" Amphibia-Reptilia ( 10.1163/15685381-bja10266 )",
+"one": true
+},
+{
+"sp": "Proteus ikae",
+"yr": 2026,
+"fam": "Proteidae",
+"ev": "uncorroborated",
+"cty": "Croatia",
+"ref": "Dufresnes C, Monod-Broca B, Jelić D, Šunje E, Manenti R, Barzaghi B, Zimić A, Chouchane K., Denoël M, Ohler A, and Jablonski D. (2026). \"Olm sweet olm: unearthing nine species of Proteus hidden beneath the Dinaric Karst.\" Amphibia-Reptilia ( 10.1163/15685381-bja10266 )",
+"one": true
+},
+{
+"sp": "Proteus maurii",
+"yr": 2026,
+"fam": "Proteidae",
+"ev": "corroborated",
+"cty": "Italy; Slovenia",
+"ref": "Dufresnes C, Monod-Broca B, Jelić D, Šunje E, Manenti R, Barzaghi B, Zimić A, Chouchane K., Denoël M, Ohler A, and Jablonski D. (2026). \"Olm sweet olm: unearthing nine species of Proteus hidden beneath the Dinaric Karst.\" Amphibia-Reptilia ( 10.1163/15685381-bja10266 )",
+"one": false
+},
+{
+"sp": "Proteus parkelj",
+"yr": 2026,
+"fam": "Proteidae",
+"ev": "uncorroborated",
+"cty": "Slovenia",
+"ref": "Dufresnes C, Monod-Broca B, Jelić D, Šunje E, Manenti R, Barzaghi B, Zimić A, Chouchane K., Denoël M, Ohler A, and Jablonski D. (2026). \"Olm sweet olm: unearthing nine species of Proteus hidden beneath the Dinaric Karst.\" Amphibia-Reptilia ( 10.1163/15685381-bja10266 )",
+"one": true
+},
+{
+"sp": "Proteus xanthostictus",
+"yr": 2026,
+"fam": "Proteidae",
+"ev": "corroborated",
+"cty": "Slovenia",
+"ref": "Dufresnes C, Monod-Broca B, Jelić D, Šunje E, Manenti R, Barzaghi B, Zimić A, Chouchane K., Denoël M, Ohler A, and Jablonski D. (2026). \"Olm sweet olm: unearthing nine species of Proteus hidden beneath the Dinaric Karst.\" Amphibia-Reptilia",
 "one": true
 },
 {
@@ -711,6 +1197,105 @@
 "one": false
 },
 {
+"sp": "Rhombophryne anatiala",
+"yr": 2026,
+"fam": "Microhylidae",
+"ev": "uncorroborated",
+"cty": "Madagascar",
+"ref": "Scherz MD, Glaw F, Petzold A, Andreone F, Köhler J, Raselimanana AP, Hutter C, Belluardo F, Rakotoarison A, Hofreiter M, Vences M, Crottini A. 2026. A wealth of riches: A comprehensive revision of diamond frogs, genus Rhombophryne Boettger, 1880 (Microhylidae: Cophylinae), with the description of se",
+"one": true
+},
+{
+"sp": "Rhombophryne kilonjy",
+"yr": 2026,
+"fam": "Microhylidae",
+"ev": "uncorroborated",
+"cty": "Madagascar",
+"ref": "Scherz MD, Glaw F, Petzold A, Andreone F, Köhler J, Raselimanana AP, Hutter C, Belluardo F, Rakotoarison A, Hofreiter M, Vences M, Crottini A. 2026. A wealth of riches: A comprehensive revision of diamond frogs, genus Rhombophryne Boettger, 1880 (Microhylidae: Cophylinae), with the description of se",
+"one": true
+},
+{
+"sp": "Rhombophryne kotrobaratra",
+"yr": 2026,
+"fam": "Microhylidae",
+"ev": "uncorroborated",
+"cty": "Madagascar",
+"ref": "Scherz MD, Glaw F, Petzold A, Andreone F, Köhler J, Raselimanana AP, Hutter C, Belluardo F, Rakotoarison A, Hofreiter M, Vences M, Crottini A. 2026. A wealth of riches: A comprehensive revision of diamond frogs, genus Rhombophryne Boettger, 1880 (Microhylidae: Cophylinae), with the description of se",
+"one": true
+},
+{
+"sp": "Rhombophryne maraorao",
+"yr": 2026,
+"fam": "Microhylidae",
+"ev": "uncorroborated",
+"cty": "Madagascar",
+"ref": "Scherz MD, Glaw F, Petzold A, Andreone F, Köhler J, Raselimanana AP, Hutter C, Belluardo F, Rakotoarison A, Hofreiter M, Vences M, Crottini A. 2026. A wealth of riches: A comprehensive revision of diamond frogs, genus Rhombophryne Boettger, 1880 (Microhylidae: Cophylinae), with the description of se",
+"one": true
+},
+{
+"sp": "Rhombophryne mavokely",
+"yr": 2026,
+"fam": "Microhylidae",
+"ev": "uncorroborated",
+"cty": "Madagascar",
+"ref": "Scherz MD, Glaw F, Petzold A, Andreone F, Köhler J, Raselimanana AP, Hutter C, Belluardo F, Rakotoarison A, Hofreiter M, Vences M, Crottini A. 2026. A wealth of riches: A comprehensive revision of diamond frogs, genus Rhombophryne Boettger, 1880 (Microhylidae: Cophylinae), with the description of se",
+"one": true
+},
+{
+"sp": "Rhombophryne quentini",
+"yr": 2026,
+"fam": "Microhylidae",
+"ev": "uncorroborated",
+"cty": "Madagascar",
+"ref": "Scherz MD, Glaw F, Petzold A, Andreone F, Köhler J, Raselimanana AP, Hutter C, Belluardo F, Rakotoarison A, Hofreiter M, Vences M, Crottini A. 2026. A wealth of riches: A comprehensive revision of diamond frogs, genus Rhombophryne Boettger, 1880 (Microhylidae: Cophylinae), with the description of se",
+"one": true
+},
+{
+"sp": "Rhombophryne sonaliae",
+"yr": 2026,
+"fam": "Microhylidae",
+"ev": "uncorroborated",
+"cty": "Madagascar",
+"ref": "Scherz MD, Glaw F, Petzold A, Andreone F, Köhler J, Raselimanana AP, Hutter C, Belluardo F, Rakotoarison A, Hofreiter M, Vences M, Crottini A. 2026. A wealth of riches: A comprehensive revision of diamond frogs, genus Rhombophryne Boettger, 1880 (Microhylidae: Cophylinae), with the description of se",
+"one": true
+},
+{
+"sp": "Scinax divae",
+"yr": 2026,
+"fam": "Hylidae",
+"ev": "uncorroborated",
+"cty": "Brazil",
+"ref": "Ramos ARL, Fouquet A, Roberto IJ, Perez R, Ferrão M, De Carvalho VT, Almeida AP, Gordo M, Dantas SP, Chaparro JC, De Moura GJB, Ávila RW. 2026. A taxonomic revision of Scinax nebulosus (Anura: Hylidae) with the revalidation of Scinax cynocephalus and the description of three new species. Journal of",
+"one": true
+},
+{
+"sp": "Scinax galacticus",
+"yr": 2026,
+"fam": "Hylidae",
+"ev": "uncorroborated",
+"cty": "Brazil",
+"ref": "Ramos ARL, Fouquet A, Roberto IJ, Perez R, Ferrão M, De Carvalho VT, Almeida AP, Gordo M, Dantas SP, Chaparro JC, De Moura GJB, Ávila RW. 2026. A taxonomic revision of Scinax nebulosus (Anura: Hylidae) with the revalidation of Scinax cynocephalus and the description of three new species. Journal of",
+"one": true
+},
+{
+"sp": "Scinax guapore",
+"yr": 2026,
+"fam": "Hylidae",
+"ev": "uncorroborated",
+"cty": "Bolivia; Brazil",
+"ref": "Ramos ARL, Fouquet A, Roberto IJ, Perez R, Ferrão M, De Carvalho VT, Almeida AP, Gordo M, Dantas SP, Chaparro JC, De Moura GJB, Ávila RW. 2026. A taxonomic revision of Scinax nebulosus (Anura: Hylidae) with the revalidation of Scinax cynocephalus and the description of three new species. Journal of",
+"one": false
+},
+{
+"sp": "Siphonops maria",
+"yr": 2026,
+"fam": "Siphonopidae",
+"ev": "uncorroborated",
+"cty": "Brazil",
+"ref": "Oliveira Maciel A, de Oliveira Drummond L, Melo-Sampaio PR, Hernández-Morales C, Vieira dos Santos M, Sampaio I, Schneider H, de Souza Almeida L, Marcial de Castro T, Muscat E, Toledo LF, Kupfer A, Prudente ALC. 2026. Phylogenetic and osteological assessment of specimens assigned to Siphonops hardyi",
+"one": true
+},
+{
 "sp": "Tylototriton guilinensis",
 "yr": 2026,
 "fam": "Salamandridae",
@@ -747,6 +1332,15 @@
 "ev": "airtight",
 "cty": "Viet Nam",
 "ref": "Poyarkov NA, Gorin VA, Le SX, Trofimets AV, Duong TV, Nguyen DT, Pawangkhanant P, Suwannapoom C, Nguyen TV. 2026. A new microendemic species of Vietnamophryne (Anura: Microhylidae) from limestone karst of Quang Tri Province, Central Vietnam. Herpetozoa 39: 145–160. ( 10.3897/herpetozoa.39.e191333 )",
+"one": true
+},
+{
+"sp": "Vitreorana micaelae",
+"yr": 2026,
+"fam": "Centrolenidae",
+"ev": "uncorroborated",
+"cty": "Brazil",
+"ref": "Vaz-Silva W, Pereira de Andrade S, Filho Rocha C, Pereira Victor Jr. E, Albuquerque Brandão R, Medeiros Maciel N. 2026. Unveiling a small new glassfrog of the genus Vitreorana (Anura, Centrolenidae) from Cerrado, central Brazil. ZooKeys 1291: 93–110. ( 10.3897/zookeys.1291.193210 )",
 "one": true
 },
 {

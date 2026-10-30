@@ -2,14 +2,14 @@
  "note": "Every figure stated in the site's prose, computed from the published data by scripts/28_build_figures.py. t is the text as printed, v the value, src where it comes from.",
  "figures": {
   "amph_listing_total": {
-   "t": "1,721",
-   "v": 1721,
+   "t": "1,787",
+   "v": 1787,
    "src": "published payload"
   },
   "andermann_dated_extinct_mammals": {
    "t": "351",
    "v": 351,
-   "src": "D:/claude-scratch/30c2bf09/andermann_data/data/raw/last_occurrence_data/extinct_taxa_final_lo_ranges.txt (Andermann et al. 2020 data, Zenodo 2621252; NOT inside"
+   "src": "build_2026/extinction_vs_rediscovery_2026-10-02/andermann_2020_zenodo2621252/extinct_taxa_final_lo_ranges.txt (Andermann et al. 2020 data, Zenodo 2621252)"
   },
   "bm_share_finds_2010s": {
    "t": "29%",
@@ -52,8 +52,8 @@
    "src": "build_2026/scored_dd.csv: DD vertebrates the corpus names under IUCN's own name (the scorer's direct matches)"
   },
   "data_built": {
-   "t": "2026-10-16",
-   "v": "2026-10-16",
+   "t": "2026-10-30",
+   "v": "2026-10-30",
    "src": "data.json meta.built"
   },
   "data_json_mb": {
@@ -557,8 +557,8 @@
    "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
   },
   "nev_amphibians": {
-   "t": "974",
-   "v": 974,
+   "t": "1,040",
+   "v": 1040,
    "src": "amphibians.json rows"
   },
   "nev_birdsmammals": {
@@ -572,8 +572,8 @@
    "src": "reptiles.json rows"
   },
   "nev_total": {
-   "t": "3,089",
-   "v": 3089,
+   "t": "3,155",
+   "v": 3155,
    "src": "distinct species across reptiles.json, amphibians.json and birdsmammals.json"
   },
   "no_gbif_record": {
