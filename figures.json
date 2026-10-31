@@ -1083,12 +1083,12 @@
   },
   "us_gifts_2022_busd": {
    "t": "8.6",
-   "v": 8.635308582912014,
+   "v": 8.64930965015626,
    "src": "C&C figures.json us_gifts_2022_usd_b2 (2022 revenue x each organization's Form 990 private-contributions share)"
   },
   "us_giving_share_2022_pct": {
    "t": "1.7%",
-   "v": 1.729379,
+   "v": 1.732183,
    "src": "C&C figures.json us_giving_share_2022_pct (us_gifts_2022 / all US giving in 2022, Giving USA 2023 edition)"
   },
   "validation_fisher_p": {
