@@ -917,8 +917,8 @@
    "src": "build_2026/rdb_redlist_gap.json (scripts/reptile_pilot/count_rdb_without_redlist.py)"
   },
   "red_list_cents_per_100usd": {
-   "t": "3",
-   "v": 3.468098552612812,
+   "t": "4",
+   "v": 3.556060668401475,
    "src": "Red List budget $5M a year (literature, the tile beside it) / C&C figures.json us_revenue_2022_usd_b, per $100, in cents"
   },
   "redlist_accessed_nb": {
@@ -1078,17 +1078,17 @@
   },
   "us_conservation_revenue_2022_busd": {
    "t": "14",
-   "v": 14.417122017,
+   "v": 14.060502523,
    "src": "C&C figures.json us_revenue_2022_usd_b (CnC_root_long.csv, 2022 Revenue rows with an EIN, summed)"
   },
   "us_gifts_2022_busd": {
-   "t": "8.6",
-   "v": 8.64930965015626,
+   "t": "8.4",
+   "v": 8.435902767639181,
    "src": "C&C figures.json us_gifts_2022_usd_b2 (2022 revenue x each organization's Form 990 private-contributions share)"
   },
   "us_giving_share_2022_pct": {
    "t": "1.7%",
-   "v": 1.732183,
+   "v": 1.689444,
    "src": "C&C figures.json us_giving_share_2022_pct (us_gifts_2022 / all US giving in 2022, Giving USA 2023 edition)"
   },
   "validation_fisher_p": {
