@@ -1827,7 +1827,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       an unranked list dilutes a real signal with vague-range species. That reading is
       worth stating and worth doubting in the same breath: Borgelt's threatened
       predictions carry a precision of only 60% to 67%, and the best-audited reptile
-      study found no elevation among Data Deficient species at all. The section below
+      model predicted no elevation among Data Deficient species at all. The section below
       sets out both sides.</p>
     <p id="valcaveats"></p>
     <!-- TWO STRUCTURAL CAVEATS, added 2026-08-27 after a review of the 2021-2026
@@ -1868,6 +1868,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       amphibians once listed Data Deficient and later reassessed, 341, or 52%, came back
       threatened, against 40% of amphibians never listed Data Deficient. That is an
       elevation of roughly 1.3 times, not a doubling.
+      Birds point the same way, on a small sample: of 58 Data Deficient birds given a
+      category between 1988 and 2009, 11 came back threatened, 23% of the 48 that proved
+      to be valid species, against 12% of all birds
+      (<a href="https://doi.org/10.1016/j.biocon.2009.10.008" target="_blank" rel="noopener">Butchart
+      and Bird 2010</a>). The 14% often quoted from that paper is the authors' projection
+      for the 63 birds still Data Deficient, not an outcome.
       <a href="https://doi.org/10.1071/PC25096" target="_blank" rel="noopener">Chapple
       et al. (2026)</a> report that 16 of 42 Data Deficient Australian squamates, 38%,
       carry evidence of being threatened against 7% of data-sufficient species, and that
@@ -1877,9 +1883,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="https://doi.org/10.1016/j.biocon.2016.05.018" target="_blank" rel="noopener">Bland
       and B&ouml;hm (2016)</a>, who modeled every Data Deficient reptile in the Sampled Red
       List Index and found 19.2% predicted threatened, statistically indistinguishable
-      from 19.1% for data-sufficient reptiles. When 60 of those species were later
-      genuinely reassessed, 8 became threatened, 13%, which is below the baseline rather
-      than above it. That position is also IUCN's own: the
+      from 19.1% for data-sufficient reptiles. The same paper's real
+      outcomes lean the other way: of 60 Data Deficient reptiles later reassessed, 31
+      stayed Data Deficient, and 8 of the 29 given a category came back threatened, 28%,
+      above that baseline, though the authors say the 60 were not a random sample. The
+      model's position is also IUCN's own: the
       <a href="https://doi.org/10.1038/s41586-022-04664-7" target="_blank" rel="noopener">Global
       Reptile Assessment</a> derives its headline of 21.1% threatened by assuming Data
       Deficient reptiles are threatened at the <em>same</em> rate as assessed ones.
@@ -1932,7 +1940,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       run it, we ran it here. The result is in the next section.</p>
     <p>So the honest position is that this ranking is a hypothesis with two small tests
       behind it, pointing the same way as some of the literature and against the
-      best-audited reptile study in it.</p>
+      best-audited reptile model in it.</p>
 
     <!-- Added 2026-08-27. Both literature reviews found that no published model of Data
          Deficient risk, in either five-year window, controls for survey effort, while
@@ -5163,7 +5171,8 @@ function boot() {
         species</span></dd>`).join("")}</dl>
     <p class="note">The tier measures only how narrow the published record is. Tiers 4
       and 5 are the stratum whose ranking was tested against IUCN's own reassessments,
-      where 52.6% proved threatened against 20.2% for the rest.</p>`;
+      where ${DATA.meta.validation.high.rate}% proved threatened against
+      ${DATA.meta.validation.low.rate}% for the rest.</p>`;
 
   const cs = $("#fClass");
   Object.keys(DATA.classes).forEach(k =>

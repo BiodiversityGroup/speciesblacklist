@@ -4683,7 +4683,8 @@ function boot() {
         species</span></dd>`).join("")}</dl>
     <p class="note">The tier measures only how narrow the published record is. Tiers 4
       and 5 are the stratum whose ranking was tested against IUCN's own reassessments,
-      where 52.6% proved threatened against 20.2% for the rest.</p>`;
+      where ${DATA.meta.validation.high.rate}% proved threatened against
+      ${DATA.meta.validation.low.rate}% for the rest.</p>`;
 
   const cs = $("#fClass");
   Object.keys(DATA.classes).forEach(k =>
