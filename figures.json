@@ -52,8 +52,8 @@
    "src": "build_2026/scored_dd.csv: DD vertebrates the corpus names under IUCN's own name (the scorer's direct matches)"
   },
   "data_built": {
-   "t": "2026-10-30",
-   "v": "2026-10-30",
+   "t": "2026-11-08",
+   "v": "2026-11-08",
    "src": "data.json meta.built"
   },
   "data_json_mb": {
@@ -63,7 +63,7 @@
   },
   "data_json_size_mb": {
    "t": "1.7",
-   "v": 1.669172,
+   "v": 1.66996,
    "src": "published payload"
   },
   "dd_20plus_years": {

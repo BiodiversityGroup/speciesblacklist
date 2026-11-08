@@ -4713,8 +4713,11 @@ function boot() {
 
     $("#valprose").innerHTML = `Taken as one undifferentiated group, the
       <span class="num">${v.all.n}</span> reassessed species proved threatened at
-      <strong>${v.all.rate}%</strong> — indistinguishable from the ordinary all-species
-      rate of about ${v.baseline_all_species}%. Split by restriction, the priority
+      <strong>${v.all.rate}%</strong>, against ${v.baseline_matched.rate}% for vertebrates of
+      the same classes once Data Deficient species are set aside${
+        v.all.lo <= v.baseline_matched.rate && v.baseline_matched.rate <= v.all.hi
+          ? `, a gap inside this sample's uncertainty (${v.all.lo}% to ${v.all.hi}%)` : ""}.
+      Split by restriction, the priority
       stratum proved threatened at <strong>${v.high.rate}%</strong>
       (${v.high.threatened}/${v.high.n}) against <strong>${v.low.rate}%</strong>
       (${v.low.threatened}/${v.low.n}) for the rest.`;
@@ -4820,8 +4823,8 @@ function boot() {
       <div class="plab">${label}<br><span style="color:var(--ink-3);font-size:.74rem">
         n=${g.n}</span></div>
       <div class="ptrack">
-        <div class="baseline" style="left:${pos(v.baseline_all_species)}"
-             title="all assessed species ~${v.baseline_all_species}%"></div>
+        <div class="baseline" style="left:${pos(v.baseline_matched.rate)}"
+             title="data-sufficient vertebrates, same classes: ${v.baseline_matched.rate}%"></div>
         <div class="ci" style="left:${pos(g.lo)};width:${pos(g.hi - g.lo)}"
              title="95% confidence interval ${g.lo}–${g.hi}%"></div>
         <div class="dot ${cls}" style="left:${pos(g.rate)}"
@@ -4833,12 +4836,12 @@ function boot() {
     ${prow("Priority<br>tier 4–5", v.high, "hi")}
     ${prow("Rest<br>tier 1–3", v.low, "lo")}
     <div class="axis"><span>0%</span><span>40%</span><span>80%</span></div>
-    <p class="blegend"><i></i> vertical rule marks the all-species rate,
-      ~${v.baseline_all_species}%</p>`;
+    <p class="blegend"><i></i> vertical rule marks the rate for data-sufficient
+      vertebrates of the same classes, ${v.baseline_matched.rate}%</p>`;
   $("#pstat").innerHTML = `Fisher exact two-sided <code>p = ${v.p}</code>,
     odds ratio <code>${v.odds_ratio}</code>. Bars show 95% confidence intervals;
     they overlap only slightly, and the priority group is about
-    <strong>2.6&times;</strong> more likely to prove threatened.`;
+    <strong>${(v.high.rate / v.low.rate).toFixed(1)}&times;</strong> more likely to prove threatened.`;
 
   /* WHAT THE RATES IMPLY, with a genuine interval. Stratified: each tier band carries the
      rate measured on it, and because the two bands are independent binomial samples their

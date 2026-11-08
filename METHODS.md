@@ -293,9 +293,18 @@ Biology*) predicted for DD species generally — which suggests that figure belo
 narrowly restricted subset, and that a flat DD list dilutes a real signal with vague-range
 species.
 
-Read the base rate honestly: taken flat, the 140 came out threatened at 27.9%, which is
-the ordinary all-species rate of roughly 28%. **The unranked premise does not hold.** The
-ranking is what makes the list defensible, not the DD status by itself.
+Read the base rate honestly: taken flat, the 140 came out threatened at 27.9% (95% CI 21-36%),
+against **23.8%** for data-sufficient vertebrates of the same classes, counting EX and EW as the
+140 do, weighted to the 140's class mix (Sept 2024 IUCN vertebrate exports; computed in
+`04_validate_score.py` as `baseline_matched`). That is a little above baseline and inside the
+sample's uncertainty, so the unranked premise is weakly supported at most. The ranking is what
+makes the list defensible, not the DD status by itself.
+
+*Corrected 2026-11-08.* This paragraph compared the 27.9% with "the ordinary all-species rate of
+roughly 28%" and concluded "the unranked premise does not hold". That 28% is IUCN's all-life
+headline: it keeps Data Deficient species in its denominator and covers plants and invertebrates,
+while the 140 are vertebrates that all received a category. The matched rate by class: ray-finned
+fishes 16.7%, mammals 27.7%, sharks and rays 37.4%, amphibians 41.0%, reptiles 21.3%, birds 13.6%.
 
 ### Where the boundary sits, and why it is not at the top of the scale
 
@@ -533,7 +542,8 @@ Restricting the test to outcomes with species-specific new evidence keeps the ef
 
 The last row is the honest limit of this: the result *can* be broken, but only by assuming
 every unevidenced non-threatened call is wrong — which implies 79% of the low-restriction
-stratum is threatened against a 28% base rate. That is not a credible world. Between the
+stratum is threatened against a 24% matched base rate (23.8%; this said 28%, corrected 2026-11-08).
+That is not a credible world. Between the
 published row and that one, the effect survives.
 
 **A correction to an earlier claim about List 2.** This section previously said the API had
