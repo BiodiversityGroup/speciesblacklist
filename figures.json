@@ -172,8 +172,8 @@
    "src": "chart_data.json mammal_bins: 1,000 / the last 500 years' rate per 1,000 years"
   },
   "feed_newest": {
-   "t": "October 2026",
-   "v": 1792494000,
+   "t": "November 2026",
+   "v": 1793715360,
    "src": "rediscoveries.json: newest card date"
   },
   "feed_oldest": {
@@ -183,7 +183,7 @@
   },
   "feed_recent_share": {
    "t": "64%",
-   "v": 63.81909547738694,
+   "v": 64.28571428571429,
    "src": "rediscoveries.json: share of cards dated in the two most recent years"
   },
   "feed_recent_y1": {
