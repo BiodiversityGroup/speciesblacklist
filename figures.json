@@ -2,8 +2,8 @@
  "note": "Every figure stated in the site's prose, computed from the published data by scripts/28_build_figures.py. t is the text as printed, v the value, src where it comes from.",
  "figures": {
   "amph_listing_total": {
-   "t": "1,787",
-   "v": 1787,
+   "t": "1,795",
+   "v": 1795,
    "src": "published payload"
   },
   "andermann_dated_extinct_mammals": {
@@ -52,8 +52,8 @@
    "src": "build_2026/scored_dd.csv: DD vertebrates the corpus names under IUCN's own name (the scorer's direct matches)"
   },
   "data_built": {
-   "t": "2026-11-08",
-   "v": "2026-11-08",
+   "t": "2026-11-09",
+   "v": "2026-11-09",
    "src": "data.json meta.built"
   },
   "data_json_mb": {
@@ -557,8 +557,8 @@
    "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json"
   },
   "nev_amphibians": {
-   "t": "1,040",
-   "v": 1040,
+   "t": "1,048",
+   "v": 1048,
    "src": "amphibians.json rows"
   },
   "nev_birdsmammals": {
@@ -572,8 +572,8 @@
    "src": "reptiles.json rows"
   },
   "nev_total": {
-   "t": "3,155",
-   "v": 3155,
+   "t": "3,163",
+   "v": 3163,
    "src": "distinct species across reptiles.json, amphibians.json and birdsmammals.json"
   },
   "no_gbif_record": {
@@ -918,7 +918,7 @@
   },
   "red_list_cents_per_100usd": {
    "t": "4",
-   "v": 3.5580015863233365,
+   "v": 3.536781597771273,
    "src": "Red List budget $5M a year (literature, the tile beside it) / C&C figures.json us_revenue_2022_usd_b, per $100, in cents"
   },
   "redlist_accessed_nb": {
@@ -1078,17 +1078,17 @@
   },
   "us_conservation_revenue_2022_busd": {
    "t": "14",
-   "v": 14.052832408,
+   "v": 14.137146617,
    "src": "C&C figures.json us_revenue_2022_usd_b (CnC_root_long.csv, 2022 Revenue rows with an EIN, summed)"
   },
   "us_gifts_2022_busd": {
-   "t": "8.4",
-   "v": 8.429879799471296,
+   "t": "8.5",
+   "v": 8.48045740736,
    "src": "C&C figures.json us_gifts_2022_usd_b2 (2022 revenue x each organization's Form 990 private-contributions share)"
   },
   "us_giving_share_2022_pct": {
    "t": "1.7%",
-   "v": 1.688238,
+   "v": 1.698367,
    "src": "C&C figures.json us_giving_share_2022_pct (us_gifts_2022 / all US giving in 2022, Giving USA 2023 edition)"
   },
   "validation_fisher_p": {

@@ -1,10 +1,10 @@
 {
 "generated_for": "amphibians described 2015+, AmphibiaWeb new-species listing vs IUCN Red List v4 API, checked one species at a time",
 "counts": {
-"total": 1040,
+"total": 1048,
 "dropped_assessed": 747,
 "by_evidence": {
-"uncorroborated": 182,
+"uncorroborated": 190,
 "airtight": 810,
 "corroborated": 48
 },
@@ -20,12 +20,12 @@
 "2023": 124,
 "2024": 114,
 "2025": 147,
-"2026": 144
+"2026": 152
 },
-"single_country": 970,
-"with_reference": 1040,
+"single_country": 977,
+"with_reference": 1048,
 "families": 46,
-"countries": 89
+"countries": 90
 },
 "rows": [
 {
@@ -239,6 +239,60 @@
 "one": true
 },
 {
+"sp": "Colostethus bocatoro",
+"yr": 2026,
+"fam": "Dendrobatidae",
+"ev": "uncorroborated",
+"cty": "Panama",
+"ref": "Venkrbec T, Veselý M, Daza JM, Kusy D, Fuentes R, Quiroz M, Garcés O, Ibáñez R, Crawford AJ, Batista A. 2026. Six new species in the Colostethus latinasus group (Anura: Dendrobatidae) highlight hidden biodiversity in Panama. Vertebrate Zoology 76: 727–773. ( 10.3897/vz.76.e189911 )",
+"one": true
+},
+{
+"sp": "Colostethus chucantiensis",
+"yr": 2026,
+"fam": "Dendrobatidae",
+"ev": "uncorroborated",
+"cty": "Panama",
+"ref": "Venkrbec T, Veselý M, Daza JM, Kusy D, Fuentes R, Quiroz M, Garcés O, Ibáñez R, Crawford AJ, Batista A. 2026. Six new species in the Colostethus latinasus group (Anura: Dendrobatidae) highlight hidden biodiversity in Panama. Vertebrate Zoology 76: 727–773. ( 10.3897/vz.76.e189911 )",
+"one": true
+},
+{
+"sp": "Colostethus donosensis",
+"yr": 2026,
+"fam": "Dendrobatidae",
+"ev": "uncorroborated",
+"cty": "Panama",
+"ref": "Venkrbec T, Veselý M, Daza JM, Kusy D, Fuentes R, Quiroz M, Garcés O, Ibáñez R, Crawford AJ, Batista A. 2026. Six new species in the Colostethus latinasus group (Anura: Dendrobatidae) highlight hidden biodiversity in Panama. Vertebrate Zoology 76: 727–773. ( 10.3897/vz.76.e189911 )",
+"one": true
+},
+{
+"sp": "Colostethus kuara",
+"yr": 2026,
+"fam": "Dendrobatidae",
+"ev": "uncorroborated",
+"cty": "Panama",
+"ref": "Venkrbec T, Veselý M, Daza JM, Kusy D, Fuentes R, Quiroz M, Garcés O, Ibáñez R, Crawford AJ, Batista A. 2026. Six new species in the Colostethus latinasus group (Anura: Dendrobatidae) highlight hidden biodiversity in Panama. Vertebrate Zoology 76: 727–773. ( 10.3897/vz.76.e189911 )",
+"one": true
+},
+{
+"sp": "Colostethus portobelensis",
+"yr": 2026,
+"fam": "Dendrobatidae",
+"ev": "uncorroborated",
+"cty": "Panama",
+"ref": "Venkrbec T, Veselý M, Daza JM, Kusy D, Fuentes R, Quiroz M, Garcés O, Ibáñez R, Crawford AJ, Batista A. 2026. Six new species in the Colostethus latinasus group (Anura: Dendrobatidae) highlight hidden biodiversity in Panama. Vertebrate Zoology 76: 727–773. ( 10.3897/vz.76.e189911 )",
+"one": true
+},
+{
+"sp": "Colostethus sanblasensis",
+"yr": 2026,
+"fam": "Dendrobatidae",
+"ev": "uncorroborated",
+"cty": "Panama",
+"ref": "Venkrbec T, Veselý M, Daza JM, Kusy D, Fuentes R, Quiroz M, Garcés O, Ibáñez R, Crawford AJ, Batista A. 2026. Six new species in the Colostethus latinasus group (Anura: Dendrobatidae) highlight hidden biodiversity in Panama. Vertebrate Zoology 76: 727–773. ( 10.3897/vz.76.e189911 )",
+"one": true
+},
+{
 "sp": "Dendropsophus liliae",
 "yr": 2026,
 "fam": "Hylidae",
@@ -327,6 +381,15 @@
 "ev": "airtight",
 "cty": "Peru",
 "ref": "Venegas PJ, Echevarría L, García-Ayachi LA, Wong I, Chávez G, García-Bravo A, Catenazzi A, Castroviejo-Fisher S. 2026. A new species of marsupial frog (Hemiphractidae: Gastrotheca ) from the Andes of northern Peru and first country record of Gastrotheca turnerorum . Zootaxa 5777(3): 431–452. ( 10.11",
+"one": true
+},
+{
+"sp": "Gastrotheca sanmartin",
+"yr": 2026,
+"fam": "Hemiphractidae",
+"ev": "uncorroborated",
+"cty": "Peru",
+"ref": "Rodríguez D, Cusi JC, von May R. 2026. Redescription of Gastrotheca dissimilis (Anura: Hemiphractidae) and description of a new species of Gastrotheca from the Cordillera Oriental, northeastern Peru. Salamandra 62: 313–327.",
 "one": true
 },
 {
@@ -601,6 +664,15 @@
 "cty": "Madagascar",
 "ref": "Vences, M., Köhler, J., Mitze, A. S., Petzold, A., Preick, M., Raselimanana, A. P., Rakotoarison, A., Riemann, J. C., Rödel, M.-O., Wastyn, L., Scherz, M. D. & Glaw, F. (2026). A review of molecular diversity of Malagasy frogs of the subgenera Chonomantis and Ochthomantis (genus Mantidactylus ), wit",
 "one": true
+},
+{
+"sp": "Mesotriton simili",
+"yr": 2026,
+"fam": "Salamandridae",
+"ev": "uncorroborated",
+"cty": "Bulgaria; Serbia",
+"ref": "Wielstra B, Cvijanović M, Džukić G, Vukov T. 2026. A new alpine newt species from the Vlasina region of Serbia and Bulgaria. Zootaxa 5897 435–442. ( 10.11646/zootaxa.5897.4.8 )",
+"one": false
 },
 {
 "sp": "Nanorana wenshanensis",

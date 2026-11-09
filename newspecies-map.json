@@ -12904,18 +12904,18 @@
 ]
 ],
 "meta": {
-"total": 3291,
-"placed": 3291,
+"total": 3299,
+"placed": 3299,
 "by_class": {
 "reptile": 1729,
-"amphibian": 1040,
+"amphibian": 1048,
 "bird": 13,
 "mammal": 509
 },
 "unplaced": 0,
-"places": 123,
-"species": 3155,
-"species_placed": 3155,
+"places": 124,
+"species": 3163,
+"species_placed": 3163,
 "species_unplaced": 0,
 "rows_note": "total, placed and unplaced count rows: a mammal listed from several countries is one row per country"
 },
@@ -13097,7 +13097,7 @@
 "place": "Peru",
 "lat": -6.87,
 "lon": -75.046,
-"n": 195,
+"n": 196,
 "grp": {
 "Strabomantidae": 48,
 "Gymnophthalmidae": 25,
@@ -13107,7 +13107,7 @@
 },
 "cls": {
 "reptile": 74,
-"amphibian": 72,
+"amphibian": 73,
 "mammal": 41,
 "bird": 8
 },
@@ -13127,7 +13127,7 @@
 "2025": 2
 },
 "amphibian": {
-"2026": 13,
+"2026": 14,
 "2025": 9,
 "2024": 4,
 "2023": 8,
@@ -14145,6 +14145,44 @@
 "cc": "Philippines"
 },
 {
+"place": "Panama",
+"lat": 8.56,
+"lon": -81.131,
+"n": 24,
+"grp": {
+"Dendrobatidae": 6,
+"Colubridae": 4,
+"Anolidae": 3,
+"Sphaerodactylidae": 3,
+"Diploglossidae": 1
+},
+"cls": {
+"reptile": 12,
+"amphibian": 9,
+"mammal": 3
+},
+"yr": {
+"reptile": {
+"2015": 5,
+"2017": 1,
+"2023": 3,
+"2016": 3
+},
+"amphibian": {
+"2026": 6,
+"2022": 2,
+"2021": 1
+},
+"mammal": {
+"2021": 1,
+"2020": 1,
+"2018": 1
+}
+},
+"newest": 2026,
+"cc": "Panama"
+},
+{
 "place": "Democratic Republic of the Congo",
 "lat": -2.981,
 "lon": 23.822,
@@ -14404,43 +14442,6 @@
 },
 "newest": 2026,
 "cc": "Costa Rica"
-},
-{
-"place": "Panama",
-"lat": 8.56,
-"lon": -81.131,
-"n": 18,
-"grp": {
-"Colubridae": 4,
-"Anolidae": 3,
-"Sphaerodactylidae": 3,
-"Diploglossidae": 1,
-"Leptotyphlopidae": 1
-},
-"cls": {
-"reptile": 12,
-"amphibian": 3,
-"mammal": 3
-},
-"yr": {
-"reptile": {
-"2015": 5,
-"2017": 1,
-"2023": 3,
-"2016": 3
-},
-"amphibian": {
-"2022": 2,
-"2021": 1
-},
-"mammal": {
-"2021": 1,
-"2020": 1,
-"2018": 1
-}
-},
-"newest": 2023,
-"cc": "Panama"
 },
 {
 "place": "United States",
@@ -16332,6 +16333,25 @@
 },
 "newest": 2015,
 "cc": "Iraq"
+},
+{
+"place": "Bulgaria",
+"lat": 42.73,
+"lon": 25.49,
+"n": 1,
+"grp": {
+"Salamandridae": 1
+},
+"cls": {
+"amphibian": 1
+},
+"yr": {
+"amphibian": {
+"2026": 1
+}
+},
+"newest": 2026,
+"cc": "Bulgaria"
 },
 {
 "place": "Portugal",
