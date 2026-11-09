@@ -1,13 +1,13 @@
 {
-"built": "2026-11-08",
+"built": "2026-11-09",
 "counts": {
-"stories": 210,
-"raw_items": 553,
+"stories": 211,
+"raw_items": 555,
 "with_species": 128,
 "distinct_species": 255,
 "distinct_species_firm": 52,
 "multi_species_cards": 53,
-"with_image": 196,
+"with_image": 197,
 "syndicated": 85,
 "on_tbg_list": 33,
 "on_list_breakdown": {
@@ -15,12 +15,32 @@
 "on the Black List": 8
 },
 "undated": 0,
-"newest": "Tue, 03 Nov 2026",
+"newest": "Sat, 07 Nov 2026",
 "tracked_names": 8034,
-"image_local": 191,
+"image_local": 192,
 "archived": 134
 },
 "cards": [
+{
+"title": "A moth collected by Alfred Russel Wallace nearly 170 years ago was rediscovered in a museum drawer and he",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "The Times of India",
+"date": "Sat, 07 Nov 2026",
+"ts": 1794087000,
+"first_seen": "2026-11-09",
+"link": "https://timesofindia.indiatimes.com/science/wildlife/a-moth-collected-by-alfred-russel-wallace-nearly-170-years-ago-was-rediscovered-in-a-museum-drawer-and-helped-identify-11-new-species/articleshow/135537442.cms",
+"image": "/rd-img/ef87fd916bbbd0ce.jpg",
+"wayback": "",
+"desc": "A battered moth that had spent decades overlooked in the Natural History Museum's collection has helped scientists identify 11 species previously unknown to science. The tiny specimen was collected in Sarawak, Borneo, by British naturalist Alfred Russel Wallac",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "Photograph helps identify a West African bird not seen in 13 years",
 "species": [],
@@ -304,16 +324,20 @@
 "publisher": "New Scientist",
 "date": "Wed, 07 Oct 2026",
 "ts": 1791385273,
-"first_seen": "2026-08-31",
+"first_seen": "2026-10-08",
 "link": "https://www.newscientist.com/article/2590861-why-rediscovering-extinct-species-can-actually-be-a-bad-thing/",
-"image": "/rd-img/0135710740ad6cf4.jpg",
-"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
-"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
+"image": "/rd-img/25e43637f5b271a5.jpg",
+"wayback": "http://web.archive.org/web/20251018175425/https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/",
+"desc": "Finding that long-lost plants and animals are still alive often isn\u2019t an unmitigated cause for celebration, says evolutionary biologist Aelys Humphreys. To get to grips with the true scale of species loss, we need to completely change how we think about extinc",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 4,
 "also": [
+{
+"publisher": "SciTechDaily",
+"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
+},
 {
 "publisher": "SussexWorld",
 "link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032"
@@ -321,10 +345,6 @@
 {
 "publisher": "news.uct.ac.za",
 "link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
-},
-{
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
 }
 ]
 },
