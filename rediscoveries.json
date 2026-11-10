@@ -1,26 +1,48 @@
 {
 "built": "2026-11-10",
 "counts": {
-"stories": 211,
-"raw_items": 555,
-"with_species": 128,
-"distinct_species": 255,
+"stories": 212,
+"raw_items": 557,
+"with_species": 129,
+"distinct_species": 256,
 "distinct_species_firm": 52,
 "multi_species_cards": 53,
-"with_image": 197,
+"with_image": 198,
 "syndicated": 85,
-"on_tbg_list": 33,
+"on_tbg_list": 34,
 "on_list_breakdown": {
-"on our lost-species list": 25,
+"on our lost-species list": 26,
 "on the Black List": 8
 },
 "undated": 0,
-"newest": "Sat, 07 Nov 2026",
+"newest": "Mon, 09 Nov 2026",
 "tracked_names": 8042,
-"image_local": 192,
-"archived": 134
+"image_local": 193,
+"archived": 135
 },
 "cards": [
+{
+"title": "Scientists Thought This Amphibious Mouse Was Extinct. After Almost a Century, It's Reappeared.",
+"species": [
+"Nilopegamys plumbeus"
+],
+"species_firm": [],
+"on_list": "Lost Species",
+"detail": "Mammal, long-lost, last seen 1925",
+"publisher": "National Geographic",
+"date": "Mon, 09 Nov 2026",
+"ts": 1794240853,
+"first_seen": "2026-11-10",
+"link": "https://www.nationalgeographic.com/animals/article/ethiopia-water-mouse-extinct-rediscovery",
+"image": "/rd-img/a613c4b3c66d99b5.jpg",
+"wayback": "http://web.archive.org/web/20261110040222/https://www.nationalgeographic.com/animals/article/ethiopia-water-mouse-extinct-rediscovery",
+"desc": "Little is known about the rodent, aside from the fact that it frequents murky waterways. Once confirmed, the new find could reveal more about its life history.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": []
+},
 {
 "title": "A moth collected by Alfred Russel Wallace nearly 170 years ago was rediscovered in a museum drawer and he",
 "species": [],
@@ -324,20 +346,16 @@
 "publisher": "New Scientist",
 "date": "Wed, 07 Oct 2026",
 "ts": 1791385273,
-"first_seen": "2026-10-08",
+"first_seen": "2026-08-31",
 "link": "https://www.newscientist.com/article/2590861-why-rediscovering-extinct-species-can-actually-be-a-bad-thing/",
-"image": "/rd-img/25e43637f5b271a5.jpg",
-"wayback": "http://web.archive.org/web/20251018175425/https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/",
-"desc": "Finding that long-lost plants and animals are still alive often isn\u2019t an unmitigated cause for celebration, says evolutionary biologist Aelys Humphreys. To get to grips with the true scale of species loss, we need to completely change how we think about extinc",
+"image": "/rd-img/0135710740ad6cf4.jpg",
+"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 4,
 "also": [
-{
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
-},
 {
 "publisher": "SussexWorld",
 "link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032"
@@ -345,6 +363,10 @@
 {
 "publisher": "news.uct.ac.za",
 "link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
+},
+{
+"publisher": "SciTechDaily",
+"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
 }
 ]
 },
@@ -1412,11 +1434,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 9,
+"outlets": 10,
 "also": [
 {
 "publisher": "Conservation news",
 "link": "https://news.mongabay.com/2026/04/rediscovered-species-in-papua-spotlights-importance-of-indigenous-knowledge/"
+},
+{
+"publisher": "ABC News",
+"link": "https://abcnews.com/US/scientists-confirmed-existence-200-million-year-species-thought/story?id=122773046"
 },
 {
 "publisher": "Nature",
@@ -1425,10 +1451,6 @@
 {
 "publisher": "Australian Broadcasting Corporation",
 "link": "https://www.abc.net.au/news/2023-11-13/attenboroughs-long-beaked-echidna-rediscovered/103100456"
-},
-{
-"publisher": "Australian Broadcasting Corporation",
-"link": "https://www.abc.net.au/news/2023-11-10/long-beaked-echidna-rediscovered-in-papua-mountains/103089936"
 }
 ]
 },

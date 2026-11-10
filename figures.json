@@ -173,7 +173,7 @@
   },
   "feed_newest": {
    "t": "November 2026",
-   "v": 1794087000,
+   "v": 1794240853,
    "src": "rediscoveries.json: newest card date"
   },
   "feed_oldest": {
@@ -182,8 +182,8 @@
    "src": "rediscoveries.json: oldest card date"
   },
   "feed_recent_share": {
-   "t": "64%",
-   "v": 64.45497630331754,
+   "t": "65%",
+   "v": 64.62264150943396,
    "src": "rediscoveries.json: share of cards dated in the two most recent years"
   },
   "feed_recent_y1": {
