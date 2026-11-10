@@ -14820,12 +14820,14 @@
 "sp": "Nilopegamys plumbeus",
 "v": "Ethiopian Amphibious Rat",
 "grp": "Mammal",
-"cls": "long-lost",
+"cls": "rediscovered",
 "rl": "CR(PE)",
 "cty": "Ethiopia",
 "reg": "Africa",
 "last": 1925,
-"prec": "decade"
+"prec": "decade",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Niveoscincus palfreymani",

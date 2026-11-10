@@ -12911,10 +12911,10 @@
 "compiled": "January 2023",
 "nomenclature": "Long & Rodriguez 2022, Oryx 56(4)",
 "by_class": {
-"long-lost": 997,
+"long-lost": 996,
 "lost": 718,
 "unclassified": 138,
-"rediscovered": 149
+"rediscovered": 150
 },
 "by_group": {
 "Snails & slugs": 109,
@@ -17622,12 +17622,12 @@
 "range": "Namibia"
 },
 {
-"sp": "Dendromus vernayi",
-"common": "Vernay\u2019s Climbing Mouse",
-"descriptor": "Angolan mammal",
+"sp": "Mesocapromys nanus",
+"common": "Dwarf Hutia",
+"descriptor": "Cuban mammal",
 "group": "Mammal",
 "last": 1937,
-"range": "Angola"
+"range": "Cuba"
 },
 {
 "sp": "Mecistocephalus cyclops",
@@ -17942,12 +17942,12 @@
 "range": "New Caledonia"
 },
 {
-"sp": "Peromyscus guardia",
-"common": "Angel Island Mouse",
-"descriptor": "Mexican mammal",
+"sp": "Piliocolobus semlikiensis",
+"common": "Eastern/Semliki's Red Colobus",
+"descriptor": "Mammal from The Democratic Republic of Congo",
 "group": "Mammal",
 "last": 1991,
-"range": "Mexico"
+"range": "The Democratic Republic of Congo"
 },
 {
 "sp": "Cuneopsis demangei",
@@ -18070,12 +18070,12 @@
 "range": "New Zealand"
 },
 {
-"sp": "Pappogeomys alcorni",
-"common": "Alcorn\u2019s Pocket Gopher",
-"descriptor": "Mexican mammal",
+"sp": "Alcelaphus buselaphus tora",
+"common": "Hartebeest (subspecies)",
+"descriptor": "Mammal from Ethiopia, Eritrea, Sudan",
 "group": "Mammal",
-"last": 1998,
-"range": "Mexico"
+"last": 1999,
+"range": "Ethiopia, Eritrea, Sudan"
 },
 {
 "sp": "Pleurobema curtum",
