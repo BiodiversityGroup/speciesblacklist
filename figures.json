@@ -376,6 +376,16 @@
    "v": 63,
    "src": "published payload"
   },
+  "lindken_find_chance_rise_x": {
+   "t": "7x",
+   "v": 7.0076983840087825,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json: 2000s finds per 100 missing per decade over the pooled 1950s to 1970s rate"
+  },
+  "lindken_finds_per100_1950s_1970s": {
+   "t": "3",
+   "v": 3,
+   "src": "Lost Species/analysis/data/lindken/lindken_g_trends2.json: finds per 100 missing per decade, 1950s to 1970s pooled"
+  },
   "lindken_finds_per100_1990s": {
    "t": "15",
    "v": 15,

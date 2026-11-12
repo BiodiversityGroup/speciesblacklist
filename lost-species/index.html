@@ -703,20 +703,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .homecta { text-align:center; margin:var(--s3) 0 var(--s5); }
   .bigbtn { display:inline-block; font-family:var(--sans); font-size:1.02rem;
             font-weight:600; padding:.95rem 2.2rem; background:var(--accent);
-            color:#fff; text-decoration:none; border-radius:3px;
+            color:var(--on-accent); text-decoration:none; border-radius:3px;
             transition:background .15s; }
-  .bigbtn:hover, .bigbtn:focus-visible { background:var(--t4); color:#fff; }
+  .bigbtn:hover, .bigbtn:focus-visible { background:var(--accent-deep); color:var(--on-accent); }
 
   /* TBG's own donate button, rebuilt rather than screenshotted: their green (#5cbb7a,
      taken from the donate page) and their white frog, which is served from this domain
      so the page loads nothing from a third party. */
   .gidonate { text-align:center; margin:var(--s4) 0 .2rem; }
   .tbgdonate { display:inline-flex; flex-direction:column; align-items:center; gap:.45rem;
-               background:#5cbb7a; color:#fff; text-decoration:none;
+               background:#2E7D4F; color:#fff; text-decoration:none;   /* was #5cbb7a, 2.37:1 */
                padding:1.15rem 2.9rem 1.25rem; border-radius:10px;
                font-family:var(--sans); font-weight:700; font-size:1.55rem;
                line-height:1.1; transition:background .15s; }
-  .tbgdonate:hover, .tbgdonate:focus-visible { background:#4aa668; color:#fff; }
+  .tbgdonate:hover, .tbgdonate:focus-visible { background:#276B44; color:#fff; }
   .tbgdonate img { display:block; }
   @media (max-width:620px) {
     .tbgdonate { font-size:1.3rem; padding:1rem 2.2rem 1.1rem; }
@@ -768,7 +768,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .giportal p { font-family:var(--sans); font-size:.9rem; color:var(--ink-2);
                 text-align:center; }
   .giportal .gpgo { display:inline-block; margin-top:.9rem; padding:.6rem 1.25rem;
-                    background:var(--accent); color:#fff; border-radius:4px;
+                    background:var(--accent); color:var(--on-accent); border-radius:4px;
                     font-family:var(--sans); font-weight:600; font-size:.92rem;
                     text-decoration:none; letter-spacing:.01em; }
   .giportal .gpgo:hover { filter:brightness(1.12); }
@@ -925,7 +925,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #nightCard .kicker { border-top:1px solid var(--rule); margin-top:1rem;
                        padding-top:.9rem; font-size:.82rem; color:var(--ink-3); }
   #nightCard button { margin-top:1.1rem; font-family:var(--sans); font-size:.88rem;
-                      padding:.55rem 1.2rem; background:var(--accent); color:#fff;
+                      padding:.55rem 1.2rem; background:var(--accent); color:var(--on-accent);
                       border:0; cursor:pointer; }
   @media (prefers-reduced-motion:reduce) {
     #night .eye, #nightCard { transition:none; }
@@ -1051,7 +1051,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Active site filter, shown in the list's filter bar. */
   .sitechip { font-family:var(--sans); font-size:var(--fs-small);
               display:inline-flex; align-items:center; gap:.4rem; padding:.35rem .6rem;
-              background:var(--accent); color:#fff; border-radius:2px; border:0;
+              background:var(--accent); color:var(--on-accent); border-radius:2px; border:0;
               cursor:pointer; font-weight:600; }
   :root[data-theme="dark"] .sitechip,
   :root:not([data-theme="light"]) .sitechip { color:var(--ground); }
@@ -1204,7 +1204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           background:var(--surface); border:1px solid var(--rule-2); border-radius:2px;
           color:var(--ink-2); cursor:pointer; }
   .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent);
-          color:#fff; font-weight:600; }
+          color:var(--on-accent); font-weight:600; }
   .chip.clear { border-style:dashed; color:var(--t4); border-color:var(--t4); }
   .chip.clear:hover { background:var(--t4); color:var(--ground); border-style:solid; }
   :root[data-theme="dark"] .chip[aria-pressed="true"],
@@ -1707,6 +1707,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .fg-tile b span, .fg-fig span { line-height:inherit; }
   .fg-tiles.fg-two { grid-template-columns:repeat(2,1fr); max-width:660px; }
   @media (max-width:700px) { .fg-tiles.fg-two { grid-template-columns:1fr; } }
+  /* ---- the Extinction page (2026-11-12, CnC2 sbl_skin.css section 9). Selectors that other
+     pages share (.exttablewrap on Rediscoveries, details.warn on Methods) are scoped to
+     .extbody so this page's changes stay on this page. */
+  .fg-tiles.fg-one { grid-template-columns:1fr; max-width:34rem; }
+  /* CnC2's review, 2026-11-12: an eyebrow sits tight on its heading, as on the home page (the
+     older .extbody h3 margin predates the eyebrows); and on a narrow screen the two wide
+     tables say they scroll, since the running total's "All four groups" column is off-screen. */
+  .extbody .eyebrow + h3 { margin-top:.2rem; }
+  .extscroll { display:none; }
+  @media (max-width:800px) { .extbody .extscroll { display:block; font-size:.82rem; color:var(--ink-2);
+    text-align:center; margin:.6rem 0 .3rem; } }
+  /* Rediscoveries, 2026-11-12: a common name on a card is roman (the scientific name it
+     replaces stays italic), and the "Rediscoveries we expected" tile is a link. */
+  .rdsp .rdcn { font-style:normal; }
+  a.countlink { text-decoration:none; color:inherit; border-radius:6px; }
+  a.countlink span { text-decoration:underline; text-decoration-color:var(--accent);
+    text-underline-offset:3px; }
+  a.countlink:hover b, a.countlink:focus-visible b { color:var(--accent); }
+  .fg-tile b.fg-long { font-size:2.05rem; line-height:1.25; }   /* "more than 1,200" on one line in a third-width tile */
+  h4.fg-q { font-size:1.25rem; margin:1.6rem 0 .5rem; }
+  .fg-tile b .num, .fg-tile b.num { font-family:var(--serif); }
+  .fg-minitable { max-width:34rem; margin:1rem auto 1.4rem; background:var(--surface); border:1px solid var(--rule);
+    border-radius:8px; box-shadow:var(--plate-shadow); overflow:hidden; }
+  .fg-minitable table { width:100%; border-collapse:collapse; font-size:1rem; table-layout:fixed; min-width:0; margin:0; }
+  .fg-minitable caption { caption-side:top; padding:.7rem 1rem .5rem; font-size:.8rem; font-weight:800;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--eyebrow); text-align:center; }
+  .fg-minitable th, .fg-minitable td { padding:.6rem 1rem; border-top:1px dotted var(--rule-2); text-align:right; }
+  .fg-minitable th, .fg-minitable caption { white-space:normal; }
+  .fg-minitable thead th { font-size:.82rem; color:var(--ink-2); font-weight:700; background:var(--surface-2); border-top:0; }
+  .fg-minitable tbody th { text-align:left; font-weight:700; color:var(--ink-2); }
+  .fg-minitable thead th:first-child, .fg-minitable tbody th { width:34%; }
+  .fg-minitable td { font-family:var(--serif); font-size:1.5rem; font-weight:600; color:var(--figure); }
+  .fg-tile span span { display:inline; }
+  .extfig { border-radius:8px; box-shadow:var(--plate-shadow); }
+  .extbody .exttablewrap table { font-size:.92rem; }
+  .extsrc { font-size:.9rem; color:var(--ink-2); }
+  .extcta a { border-radius:999px; font-weight:800; padding:.6rem 1.2rem; }
+  .extcta a:first-child { background:var(--accent); color:var(--on-accent); }
+  .extlede { color:var(--ink); }
+  .extbody details.warn > summary { font-weight:800; color:var(--accent); }
+  .extbody h2 { font-size:2.3rem !important; }
+  @media (max-width:700px) { .extbody h2 { font-size:1.8rem !important; } }
 </style>
 </head>
 <body>
@@ -4478,12 +4520,18 @@ function rdBoot() {
      something nobody had checked. A figure whose caveat has been removed is worse than
      no figure. The species themselves stay in the payload and still drive the filter,
      where "named in this article" is exactly the right meaning. */
+  /* "Rediscoveries we expected" (Scott, 2026-11-12) replaces "Ones we were already watching".
+     It counts species on our Top 100 to be found next that the feed reports found
+     (counts.expected_finds), and links to that list. The old tile's 34 counted a match to ANY
+     of our lists, which is not the same claim; those cards keep their tags and the "On our
+     lists" filter. */
   $("#rdCounts").innerHTML = [
     ["Finds reported", c.stories.toLocaleString()],
-    ["Ones we were already watching", (c.on_tbg_list || 0).toLocaleString()],
+    ["Rediscoveries we expected", (c.expected_finds || 0).toLocaleString(), "#rd-top100"],
     ["Widely covered", (c.syndicated || 0).toLocaleString()]
-  ].map(([k, v]) =>
-    `<div class="count"><b>${v}</b><span>${k}</span></div>`).join("");
+  ].map(([k, v, href]) => href
+    ? `<a class="count countlink" href="${href}"><b>${v}</b><span>${k}</span></a>`
+    : `<div class="count"><b>${v}</b><span>${k}</span></div>`).join("");
 
   /* Preservation coverage, stated from the data rather than asserted in prose. The
      wording adapts to the actual ratio, so a bad night reads as a bad night instead of
@@ -4517,6 +4565,7 @@ function rdRender() {
     (f !== "list" || c.on_list) &&
     (f !== "multi" || c.outlets > 1) &&
     (!q || (c.title + " " + (c.species || []).join(" ") + " " +
+            (c.species || []).map(s => (RD.common || {})[s] || "").join(" ") + " " +
             c.publisher + " " + c.desc).toLowerCase().includes(q)));
 
   $("#rdShowing").textContent =
@@ -4544,14 +4593,22 @@ function rdRender() {
             const soft = (c.species || []).filter(s => !firm.includes(s));
             if (!firm.length && !soft.length) return "";
             const cap = 5;
-            return `<p class="rdsp">${firm.slice(0, cap).map(esc).join(", ")}${
+            /* Scott, 2026-11-12: the common name where one exists, the scientific name where
+               none does, and no "names" / "also names" prefix. Common names come from our
+               own lists or the IUCN Red List (payload "common"); the scientific name stays
+               on hover. Soft names keep their gray and their warning on hover. */
+            const nm = s => {
+              const v = (RD.common || {})[s];
+              return v ? `<span class="rdcn" title="${esc(s)}">${esc(v)}</span>`
+                       : `<i>${esc(s)}</i>`;
+            };
+            return `<p class="rdsp">${firm.slice(0, cap).map(nm).join(", ")}${
               firm.length > cap
                 ? ` <span class="rdspmore">+${firm.length - cap}</span>` : ""}${
               soft.length
-                ? `${firm.length ? " " : ""}<span class="rdspsoft"
+                ? `${firm.length ? ", " : ""}<span class="rdspsoft"
                      title="Read from the article text, so it may include a species mentioned in passing"
-                     >${firm.length ? "also names " : "names "}${
-                       soft.slice(0, cap).map(esc).join(", ")}${
+                     >${soft.slice(0, cap).map(nm).join(", ")}${
                        soft.length > cap ? ` +${soft.length - cap}` : ""}</span>`
                 : ""}</p>`;
           })()}
@@ -4568,7 +4625,13 @@ summary to show."}</p>`}
             ${date ? `<span>${esc(date)}</span>` : ""}
             ${c.outlets > 1
               ? `<span class="rdtag">${c.outlets} outlets</span>` : ""}
-            ${c.on_list
+            ${c.top100
+              /* Scott, 2026-11-12: a find of a species on our Top 100 to be found next is one
+                 we expected, and "was on our lost list" undersold it. The payload sets top100
+                 only when that species is a firm name on the card or its only name. */
+              ? `<span class="rdtag rdtag-list" title="${esc(c.detail || "")}"
+                   >was on our Top 100</span>`
+              : c.on_list
               ? `<span class="rdtag rdtag-list" title="${esc(c.detail || "")}"
                    >${esc(LIST_LABEL[c.on_list] || c.on_list)}</span>` : ""}
           </p>

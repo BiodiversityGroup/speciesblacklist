@@ -703,20 +703,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .homecta { text-align:center; margin:var(--s3) 0 var(--s5); }
   .bigbtn { display:inline-block; font-family:var(--sans); font-size:1.02rem;
             font-weight:600; padding:.95rem 2.2rem; background:var(--accent);
-            color:#fff; text-decoration:none; border-radius:3px;
+            color:var(--on-accent); text-decoration:none; border-radius:3px;
             transition:background .15s; }
-  .bigbtn:hover, .bigbtn:focus-visible { background:var(--t4); color:#fff; }
+  .bigbtn:hover, .bigbtn:focus-visible { background:var(--accent-deep); color:var(--on-accent); }
 
   /* TBG's own donate button, rebuilt rather than screenshotted: their green (#5cbb7a,
      taken from the donate page) and their white frog, which is served from this domain
      so the page loads nothing from a third party. */
   .gidonate { text-align:center; margin:var(--s4) 0 .2rem; }
   .tbgdonate { display:inline-flex; flex-direction:column; align-items:center; gap:.45rem;
-               background:#5cbb7a; color:#fff; text-decoration:none;
+               background:#2E7D4F; color:#fff; text-decoration:none;   /* was #5cbb7a, 2.37:1 */
                padding:1.15rem 2.9rem 1.25rem; border-radius:10px;
                font-family:var(--sans); font-weight:700; font-size:1.55rem;
                line-height:1.1; transition:background .15s; }
-  .tbgdonate:hover, .tbgdonate:focus-visible { background:#4aa668; color:#fff; }
+  .tbgdonate:hover, .tbgdonate:focus-visible { background:#276B44; color:#fff; }
   .tbgdonate img { display:block; }
   @media (max-width:620px) {
     .tbgdonate { font-size:1.3rem; padding:1rem 2.2rem 1.1rem; }
@@ -768,7 +768,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .giportal p { font-family:var(--sans); font-size:.9rem; color:var(--ink-2);
                 text-align:center; }
   .giportal .gpgo { display:inline-block; margin-top:.9rem; padding:.6rem 1.25rem;
-                    background:var(--accent); color:#fff; border-radius:4px;
+                    background:var(--accent); color:var(--on-accent); border-radius:4px;
                     font-family:var(--sans); font-weight:600; font-size:.92rem;
                     text-decoration:none; letter-spacing:.01em; }
   .giportal .gpgo:hover { filter:brightness(1.12); }
@@ -925,7 +925,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #nightCard .kicker { border-top:1px solid var(--rule); margin-top:1rem;
                        padding-top:.9rem; font-size:.82rem; color:var(--ink-3); }
   #nightCard button { margin-top:1.1rem; font-family:var(--sans); font-size:.88rem;
-                      padding:.55rem 1.2rem; background:var(--accent); color:#fff;
+                      padding:.55rem 1.2rem; background:var(--accent); color:var(--on-accent);
                       border:0; cursor:pointer; }
   @media (prefers-reduced-motion:reduce) {
     #night .eye, #nightCard { transition:none; }
@@ -1051,7 +1051,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Active site filter, shown in the list's filter bar. */
   .sitechip { font-family:var(--sans); font-size:var(--fs-small);
               display:inline-flex; align-items:center; gap:.4rem; padding:.35rem .6rem;
-              background:var(--accent); color:#fff; border-radius:2px; border:0;
+              background:var(--accent); color:var(--on-accent); border-radius:2px; border:0;
               cursor:pointer; font-weight:600; }
   :root[data-theme="dark"] .sitechip,
   :root:not([data-theme="light"]) .sitechip { color:var(--ground); }
@@ -1204,7 +1204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           background:var(--surface); border:1px solid var(--rule-2); border-radius:2px;
           color:var(--ink-2); cursor:pointer; }
   .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent);
-          color:#fff; font-weight:600; }
+          color:var(--on-accent); font-weight:600; }
   .chip.clear { border-style:dashed; color:var(--t4); border-color:var(--t4); }
   .chip.clear:hover { background:var(--t4); color:var(--ground); border-style:solid; }
   :root[data-theme="dark"] .chip[aria-pressed="true"],
@@ -1707,6 +1707,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .fg-tile b span, .fg-fig span { line-height:inherit; }
   .fg-tiles.fg-two { grid-template-columns:repeat(2,1fr); max-width:660px; }
   @media (max-width:700px) { .fg-tiles.fg-two { grid-template-columns:1fr; } }
+  /* ---- the Extinction page (2026-11-12, CnC2 sbl_skin.css section 9). Selectors that other
+     pages share (.exttablewrap on Rediscoveries, details.warn on Methods) are scoped to
+     .extbody so this page's changes stay on this page. */
+  .fg-tiles.fg-one { grid-template-columns:1fr; max-width:34rem; }
+  /* CnC2's review, 2026-11-12: an eyebrow sits tight on its heading, as on the home page (the
+     older .extbody h3 margin predates the eyebrows); and on a narrow screen the two wide
+     tables say they scroll, since the running total's "All four groups" column is off-screen. */
+  .extbody .eyebrow + h3 { margin-top:.2rem; }
+  .extscroll { display:none; }
+  @media (max-width:800px) { .extbody .extscroll { display:block; font-size:.82rem; color:var(--ink-2);
+    text-align:center; margin:.6rem 0 .3rem; } }
+  /* Rediscoveries, 2026-11-12: a common name on a card is roman (the scientific name it
+     replaces stays italic), and the "Rediscoveries we expected" tile is a link. */
+  .rdsp .rdcn { font-style:normal; }
+  a.countlink { text-decoration:none; color:inherit; border-radius:6px; }
+  a.countlink span { text-decoration:underline; text-decoration-color:var(--accent);
+    text-underline-offset:3px; }
+  a.countlink:hover b, a.countlink:focus-visible b { color:var(--accent); }
+  .fg-tile b.fg-long { font-size:2.05rem; line-height:1.25; }   /* "more than 1,200" on one line in a third-width tile */
+  h4.fg-q { font-size:1.25rem; margin:1.6rem 0 .5rem; }
+  .fg-tile b .num, .fg-tile b.num { font-family:var(--serif); }
+  .fg-minitable { max-width:34rem; margin:1rem auto 1.4rem; background:var(--surface); border:1px solid var(--rule);
+    border-radius:8px; box-shadow:var(--plate-shadow); overflow:hidden; }
+  .fg-minitable table { width:100%; border-collapse:collapse; font-size:1rem; table-layout:fixed; min-width:0; margin:0; }
+  .fg-minitable caption { caption-side:top; padding:.7rem 1rem .5rem; font-size:.8rem; font-weight:800;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--eyebrow); text-align:center; }
+  .fg-minitable th, .fg-minitable td { padding:.6rem 1rem; border-top:1px dotted var(--rule-2); text-align:right; }
+  .fg-minitable th, .fg-minitable caption { white-space:normal; }
+  .fg-minitable thead th { font-size:.82rem; color:var(--ink-2); font-weight:700; background:var(--surface-2); border-top:0; }
+  .fg-minitable tbody th { text-align:left; font-weight:700; color:var(--ink-2); }
+  .fg-minitable thead th:first-child, .fg-minitable tbody th { width:34%; }
+  .fg-minitable td { font-family:var(--serif); font-size:1.5rem; font-weight:600; color:var(--figure); }
+  .fg-tile span span { display:inline; }
+  .extfig { border-radius:8px; box-shadow:var(--plate-shadow); }
+  .extbody .exttablewrap table { font-size:.92rem; }
+  .extsrc { font-size:.9rem; color:var(--ink-2); }
+  .extcta a { border-radius:999px; font-weight:800; padding:.6rem 1.2rem; }
+  .extcta a:first-child { background:var(--accent); color:var(--on-accent); }
+  .extlede { color:var(--ink); }
+  .extbody details.warn > summary { font-weight:800; color:var(--accent); }
+  .extbody h2 { font-size:2.3rem !important; }
+  @media (max-width:700px) { .extbody h2 { font-size:1.8rem !important; } }
 </style>
 </head>
 <body>
@@ -1822,27 +1864,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="view wrap" id="v-extinct" hidden>
   <div class="extbody">
 
+  <!-- READABILITY PASS 2026-11-12 (Scott approved CnC2's Mockups E and F; the sentence-keyed list
+       is OneDrive/Documents/Claude/sbl-theme-2026-11-12/EXTINCTION_TEXT_CHANGES.md). Long
+       paragraphs split, headline figures moved into tiles, detail into "More information" folds.
+       Every figure is still bound or generated: TEXT:decades and TEXT:running are written by
+       build_2026/extinction_page/fill_text.py, the charts by make_charts.py. Number rulings that
+       day (Black List session): "on average" in both interval tiles; "about" kept on 2.7 billion
+       years (2.45 to 2.92 across trees); the 7x tile and its "about 3" are bound
+       (lindken_find_chance_rise_x, lindken_finds_per100_1950s_1970s) and name the decades they
+       compare, since the 2010s rate is lower and still filling in. -->
   <div class="prose">
+    <p class="eyebrow">Five hundred years against fifty thousand</p>
     <h2 style="font-size:var(--fs-h2)">Extinction, Then and Now</h2>
     <p class="extlede">Over the last 500 years, mammals have disappeared faster than at any
-      time in the 126,000 years before, including the great die-off of the Ice Age megafauna
-      that took the mammoths and the giant ground sloths.</p>
+      time in the 126,000 years before. That includes the great die-off of the Ice Age, which
+      took the mammoths and the giant ground sloths.</p>
   </div>
-
-  <div class="exthero">
-    <b class="num" data-fig="ext_mammal_rate_multiple">5x</b>
-    <span>the mammal extinction rate of the last 500 years, against the highest rate in the
-      record before 1500</span>
+  <div class="fg-tiles">
+    <div class="fg-tile"><b class="num" data-fig="ext_mammal_rate_multiple">5x</b><span>the mammal
+      extinction rate of the last 500 years, against the highest rate in the record before
+      1500</span></div>
+    <div class="fg-tile"><b><span data-fig="ext_years_per_mammal_since1500">7.5</span> years</b><span>between
+      one lost mammal species and the next, on average, since 1500</span></div>
+    <div class="fg-tile"><b><span data-fig="ext_years_per_mammal_peak">39</span> years</b><span>between
+      one and the next, on average, at the highest earlier rate,
+      <span data-fig="ext_peak_from">2,000</span> to <span data-fig="ext_peak_to">500</span> years
+      ago</span></div>
   </div>
-
   <div class="prose">
-    <p>That works out to about one mammal species lost every <span data-fig="ext_years_per_mammal_since1500">7.5</span> years since 1500,
-      against one every <span data-fig="ext_years_per_mammal_peak">39</span> years at the highest earlier rate, <span data-fig="ext_peak_from">2,000</span> to <span data-fig="ext_peak_to">500</span> years
-      ago. Fossils miss small animals, so the earlier rates are minimums and the real gap is
+    <p>Fossils miss small animals, so the earlier rates are minimums and the real gap is
       somewhat smaller than <span data-fig="ext_mammal_rate_multiple">5x</span>.</p>
   </div>
 
   <div class="prose">
+    <p class="eyebrow">The long record</p>
     <h3>Fifty Thousand Years of Losses</h3>
   </div>
   <figure class="extfig">
@@ -1856,25 +1911,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </figure>
 
   <div class="prose">
-    <p>Why does the rate jump when it does? North America lost most of its dated species
-      between 15,000 and 8,000 years ago, soon after people arrived, and Madagascar lost most
-      of its within the last 4,000 years, after people reached the island. When Andermann and
-      colleagues tested the whole record, human population size predicted these extinctions
-      with 96% accuracy, and past climate did no better than chance.</p>
+    <h4 class="fg-q">Why does the rate jump when it does?</h4>
+    <p>North America lost most of its dated species between 15,000 and 8,000 years ago, soon
+      after people arrived. Madagascar lost most of its within the last 4,000 years, after
+      people reached the island.</p>
+    <p>When Andermann and colleagues tested the whole record, human population size predicted
+      these extinctions with 96% accuracy. Past climate did no better than chance.</p>
     <p>A last record is not an extinction date. The last fossil of a species is the last
       animal anyone has found, so each species outlived its record, sometimes by thousands of
       years.</p>
   </div>
 
   <div class="prose">
+    <p class="eyebrow">A different measure</p>
     <h3>How Do You Weigh a Lost Species?</h3>
     <p>Counting species treats a lost shrew and the last of an entire order of hoofed mammals
-      alike. Evolutionary history does not. It is the length of the branches of the mammal
-      family tree that only the lost species carried, measured in millions of years, and since
-      the Late Pleistocene, about 130,000 years ago, the world has lost about
-      <strong><span data-fig="pd_lost_world_total_billion_years">2.7</span> billion years</strong> of it. That is more than half the age of the Earth.</p>
+      alike. Evolutionary history does not.</p>
+    <p>It is the length of the branches of the mammal family tree that only the lost species
+      carried, measured in millions of years.</p>
   </div>
-
+  <div class="fg-tiles fg-one">
+    <div class="fg-tile"><b>about <span data-fig="pd_lost_world_total_billion_years">2.7</span>
+      billion years</b><span>of evolutionary history lost since the Late Pleistocene, about
+      130,000 years ago. That is more than half the age of the Earth.</span></div>
+  </div>
+  <p class="extscroll">Scroll the table sideways to see every column.</p>
   <div class="exttablewrap">
     <table class="extpd">
       <thead><tr><th>Region</th><th>Native mammal species</th><th>Lost before 1500</th>
@@ -1893,42 +1954,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </tbody>
     </table>
   </div>
+  <div class="prose">
+    <details class="fg-more"><summary>More information: where this table comes from</summary>
   <p class="extsrc">From the <a href="https://doi.org/10.1002/ecy.2443" target="_blank" rel="noopener">PHYLACINE 1.2</a>
     mammal atlas (<span data-fig="phylacine_species_total">5,831</span> species), averaged over 100 of its family trees. A species counts in
     every region its natural range touches, so the rows overlap and do not add to the world
     total. The world figure matches the more than 2.5 billion years reported by
     <a href="https://doi.org/10.1073/pnas.1804906115" target="_blank" rel="noopener">Davis,
     Faurby and Svenning 2018</a>.</p>
-
-  <div class="prose">
-    <p>Before 1500, the largest losses of evolutionary history were in Eurasia, South America
-      and North America, between <span data-fig="pd_north_america_pd_before1500_myr">760</span> and <span data-fig="pd_eurasia_pd_before1500_myr">984</span> million years each. As a share of what a region
-      had, the Caribbean lost the most, <span data-fig="pd_caribbean_pd_before1500_share_pct">10.6%</span>, followed by North America at <span data-fig="pd_north_america_pd_before1500_share_pct">8.2%</span>; the world as
-      a whole lost <span data-fig="pd_world_pd_before1500_share_pct">5.0%</span>, and Africa the least of the continents, <span data-fig="pd_africa_share_before1500">1.6%</span>. Oceanic islands lost
-      under 1%.</p>
-    <p>Since 1500 the order changes. The Caribbean has lost <strong><span data-fig="pd_caribbean_pd_since1500_myr">507</span> million years, more
-      than in all of its prehistory</strong>, among them island shrews, hutias and rice rats.
-      Madagascar has lost <span data-fig="pd_madagascar_pd_since1500_myr">115</span> million years. Sahul, the single landmass that Australia, New
-      Guinea and Tasmania formed when sea levels were lower, has lost <span data-fig="pd_sahul_pd_since1500_myr">114</span> million, about <span data-fig="sahul_since1500_share_about">40%</span> of
-      its prehistoric total, with the thylacine (<span class="sci">Thylacinus cynocephalus</span>)
-      among its <span data-fig="pd_sahul_lost_since1500_n">24</span> species.</p>
-    <p>Birds fall outside the mammal atlas. <a href="https://doi.org/10.1038/s41467-023-43445-2"
-      target="_blank" rel="noopener">Cooke and colleagues</a> estimate that at least 1,300 to
-      1,500 bird species have been lost since the Late Pleistocene, 61% of them in the
-      Pacific, and describe a wave around 1300 CE as likely the largest extinction wave of
-      vertebrates that people have caused.</p>
+    </details>
   </div>
 
   <div class="prose">
+    <h4 class="fg-q">Before 1500</h4>
+    <p>The largest losses of evolutionary history were in Eurasia, South America and North
+      America, between <span data-fig="pd_north_america_pd_before1500_myr">760</span> and <span data-fig="pd_eurasia_pd_before1500_myr">984</span> million years each.</p>
+    <p>As a share of what a region had, the Caribbean lost the most, <span data-fig="pd_caribbean_pd_before1500_share_pct">10.6%</span>. Africa lost the
+      least of the continents, <span data-fig="pd_africa_share_before1500">1.6%</span>.</p>
+    <h4 class="fg-q">Since 1500</h4>
+    <p>The order changes. The Caribbean has lost <strong><span data-fig="pd_caribbean_pd_since1500_myr">507</span> million years, more
+      than in all of its prehistory</strong>, among them island shrews, hutias and rice rats.</p>
+    <p>Madagascar has lost <span data-fig="pd_madagascar_pd_since1500_myr">115</span> million years. Sahul, the single landmass that Australia, New
+      Guinea and Tasmania formed when sea levels were lower, has lost <span data-fig="pd_sahul_pd_since1500_myr">114</span> million, about <span data-fig="sahul_since1500_share_about">40%</span> of
+      its prehistoric total.</p>
+    <p>The thylacine (<span class="sci">Thylacinus cynocephalus</span>) is among Sahul's
+      <span data-fig="pd_sahul_lost_since1500_n">24</span> species.</p>
+    <h4 class="fg-q">And birds?</h4>
+    <p>Birds fall outside the mammal atlas. <a href="https://doi.org/10.1038/s41467-023-43445-2"
+      target="_blank" rel="noopener">Cooke and colleagues</a> estimate that at least 1,300 to
+      1,500 bird species have been lost since the Late Pleistocene, 61% of them in the
+      Pacific.</p>
+    <p>They describe a wave around 1300 CE as likely the largest extinction wave of vertebrates
+      that people have caused.</p>
+  </div>
+
+  <div class="prose">
+    <p class="eyebrow">The recent record</p>
     <h3>Is Extinction Slowing Down?</h3>
     <p>If you count the species declared extinct by the decade they were last seen,
       extinction seems to have peaked in the 1970s and eased since.
       <a href="https://doi.org/10.1098/rspb.2025.1717" target="_blank" rel="noopener">Saban
-      and Wiens</a> read the record that way across plants and animals in 2025. But declaring
-      a species extinct takes years of searches that find nothing, so the most recent decades
-      are still filling in. The Red List now records far more possible losses than declared
-      ones: from 2020 to 2024 it flagged <span data-fig="tetrapods_first_flagged_2020_2024">90</span> amphibians, reptiles, birds and mammals as
-      possibly extinct and declared <span data-fig="tetrapods_first_declared_2020_2024">16</span> extinct, against <span data-fig="tetrapods_first_flagged_2000_2004">59</span> and <span data-fig="tetrapods_first_declared_2000_2004">40</span> from 2000 to 2004.</p>
+      and Wiens</a> read the record that way across plants and animals in 2025.</p>
+    <p>But declaring a species extinct takes years of searches that find nothing, so the most
+      recent decades are still filling in. The Red List now records far more possible losses
+      than declared ones.</p>
+  </div>
+  <div class="fg-minitable">
+    <table>
+      <caption>Amphibians, reptiles, birds and mammals on the Red List</caption>
+      <thead><tr><th></th><th>Flagged as possibly extinct</th><th>Declared extinct</th></tr></thead>
+      <tbody>
+        <tr><th>2000 to 2004</th><td><span data-fig="tetrapods_first_flagged_2000_2004">59</span></td>
+          <td><span data-fig="tetrapods_first_declared_2000_2004">40</span></td></tr>
+        <tr><th>2020 to 2024</th><td><span data-fig="tetrapods_first_flagged_2020_2024">90</span></td>
+          <td><span data-fig="tetrapods_first_declared_2020_2024">16</span></td></tr>
+      </tbody>
+    </table>
   </div>
   <figure class="extfig">
     <div class="extlegend">
@@ -1942,48 +2023,77 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="exttablewrap"><!--CHART:T2--><table><thead><tr><th>Last seen</th><th>Declared extinct</th><th>Flagged possibly extinct</th><th>Reported alive, not counted</th><th>Expected final</th><th>Range</th></tr></thead><tbody><tr><td>1900s</td><td>19</td><td>3</td><td></td><td>20</td><td>19 to 21</td></tr><tr><td>1910s</td><td>7</td><td>6</td><td></td><td>11</td><td>10 to 12</td></tr><tr><td>1920s</td><td>11</td><td>6</td><td>1</td><td>15</td><td>14 to 16</td></tr><tr><td>1930s</td><td>18</td><td>7</td><td>1</td><td>22</td><td>21 to 23</td></tr><tr><td>1940s</td><td>7</td><td>6</td><td></td><td>11</td><td>10 to 12</td></tr><tr><td>1950s</td><td>10</td><td>9</td><td></td><td>16</td><td>15 to 18</td></tr><tr><td>1960s</td><td>12</td><td>24</td><td>3</td><td>30</td><td>26 to 35</td></tr><tr><td>1970s</td><td>16</td><td>39</td><td></td><td>47</td><td>38 to 56</td></tr><tr><td>1980s</td><td>15</td><td>63</td><td>1</td><td>69</td><td>55 to 86</td></tr><tr><td>1990s</td><td>6</td><td>54</td><td>1</td><td>54</td><td>42 to 68</td></tr><tr><td>2000s</td><td>7</td><td>32</td><td></td><td>57</td><td>38 to 85</td></tr><tr><td>2010s</td><td>4</td><td>4</td><td></td><td>41</td><td>27 to 62</td></tr></tbody></table><!--/CHART:T2--></div></details>
   </figure>
 
-  <div class="prose"><!--TEXT:decades-->
-    <p>A vertebrate is flagged as possibly extinct a median 17 years after it was last seen,
-      and only about half of the flagged amphibians, reptiles, birds and mammals are declared
-      extinct within 60 years of their last sighting. Allow for that lag and the decline
-      through the 2000s disappears. The count climbed, then held: <strong>about 60 species per
-      decade</strong> for those last seen in the 1980s, 1990s and 2000s (45 to 80), against
-      about 17 per decade early in the twentieth century. Fishes add about 40 per decade
-      (25 to 55), most of the 1980s from the cichlids of Lake Victoria.</p>
-    <p>The 2010s are too recent to read, since most of their losses will not be flagged before
-      the 2030s. Compare each decade five years after it ended: by then the Red List had
-      declared or flagged 8 of the amphibians, reptiles, birds and mammals last seen in the
-      2010s (in 2024), 10 of those last seen in the 1990s (in 2004) and 11 of those last
-      seen in the 2000s (in 2014). Counts that small cannot tell an easing from chance. Even the
-      uncorrected record does not show losses becoming rare: the Red List holds 36 to 78
-      amphibians, reptiles, birds and mammals declared or flagged as
-      possibly extinct for each decade from the 1960s to the 2000s, more than in any decade
-      from the 1900s to the 1950s (13 to 25). These animals are still being lost decade
-      after decade.</p>
-    <p>Species found again are not counted. Ten vertebrates still flagged in the 2024 data have
-      since been reported alive, among them the Fernandina giant tortoise
-      (<span class="sci">Chelonoidis phantasticus</span>) and De Winton's golden mole
-      (<span class="sci">Cryptochloris wintoni</span>), and they are left out. The expected
-      final count also allows for more to turn up. Of the 173 amphibians, reptiles, birds
-      and mammals the Red List flagged as possibly extinct and has since reassessed,
-      46 had been found alive, and the count assumes the same share of today's flagged
-      species will be found. Species already declared extinct turn up far less often, 5%
-      of those reassessed.</p>
+  <!--TEXT:decades-->
+  <div class="prose">
+    <p>A vertebrate is flagged as possibly extinct a median 17 years after it was last seen.
+      Only about half of the flagged amphibians, reptiles, birds and mammals are declared
+      extinct within 60 years of their last sighting.</p>
+    <p><strong>Allow for that lag and the decline through the 2000s disappears.</strong> The
+      count climbed, then held.</p>
+  </div>
+  <div class="fg-tiles fg-two">
+    <div class="fg-tile"><b>about 60</b><span>amphibians, reptiles, birds and mammals per
+      decade once the Red List catches up, for those last seen in the 1980s, 1990s and 2000s
+      (45 to 80)</span></div>
+    <div class="fg-tile"><b>about 17</b><span>per decade early in the twentieth century,
+      counted the same way</span></div>
+  </div>
+  <div class="prose">
+    <p>Fishes add about 40 per decade (25 to 55), most of the 1980s from the cichlids of
+      Lake Victoria.</p>
+    <h4 class="fg-q">What about the 2010s?</h4>
+    <p>They are too recent to read, since most of their losses will not be flagged before the
+      2030s.</p>
+    <p>Compare each decade five years after it ended. By then the Red List had declared or
+      flagged 8 of the amphibians, reptiles, birds and mammals last seen in the 2010s,
+      10 of those last seen in the 1990s and 11 of those last seen in the 2000s. Counts
+      that small cannot tell an easing from chance.</p>
+    <p>Even the uncorrected record does not show losses becoming rare. The Red List holds 36
+      to 78 amphibians, reptiles, birds and mammals declared or flagged as possibly extinct
+      for each decade from the 1960s to the 2000s, more than in any decade from the 1900s to
+      the 1950s (13 to 25).</p>
+    <p class="fg-pull">These animals are still being lost decade after decade.</p>
+    <details class="fg-more"><summary>More information: species found again are not counted</summary>
+      <p>Ten vertebrates still flagged in the 2024 data have since been reported alive,
+        among them the Fernandina giant tortoise (<span class="sci">Chelonoidis
+        phantasticus</span>) and De Winton's golden mole (<span class="sci">Cryptochloris
+        wintoni</span>), and they are left out.</p>
+      <p>The expected final count also allows for more to turn up. Of the 173 amphibians,
+        reptiles, birds and mammals the Red List flagged as possibly extinct and has since
+        reassessed, 46 had been found alive, and the count assumes the same share of
+        today's flagged species will be found.</p>
+      <p>Species already declared extinct turn up far less often, 5% of those
+        reassessed.</p>
+    </details>
+  </div>
+  <div class="prose">
+    <p class="eyebrow">Looking ahead</p>
     <h3>Expected Losses from 2020 to 2100</h3>
-    <p>The line forward assumes no new disease wave and no step change in climate. Nearly all
-      the amphibians in the 1980s to 2000s count, 123 of 133, have Red List assessments
-      that name chytrid, the fungal disease that swept through them, so the line leaves that
-      wave out and holds every other group to its 1980s to 2000s rate. On that line,
-      <strong>2020 to 2100 would add about 150 more amphibians, reptiles, birds and
-      mammals</strong> (120 to 200), on top of those lost since 1500, and about
-      220 fishes, leaving out the collapse of Lake Victoria's cichlids.</p>
-    <p>A single event can change that. The amphibians whose assessments name chytrid add up
-      to about 170 expected extinctions, so <strong>one more wave like it would roughly
-      double the line, to about 330</strong>. At chytrid's pace all century it would be about
-      480. The fishes flagged after Lake Victoria's collapse, which followed the
-      introduction of the Nile perch, add up to about 45, and one more collapse like it
-      would take the fish line to about 265. These are straight lines, not forecasts.</p>
-  <!--/TEXT:decades--></div>
+  </div>
+  <div class="fg-tiles">
+    <div class="fg-tile"><b>about 150</b><span>more amphibians, reptiles, birds and mammals
+      from 2020 to 2100 if recent rates hold (120 to 200)</span></div>
+    <div class="fg-tile"><b>about 330</b><span>in all, with one more wave like chytrid, the
+      fungal disease that swept through amphibians</span></div>
+    <div class="fg-tile"><b>about 480</b><span>in all, at chytrid's pace all
+      century</span></div>
+  </div>
+  <div class="prose">
+    <p>The line forward assumes no new disease wave and no step change in climate. It leaves
+      the chytrid wave out and holds every other group to its 1980s to 2000s rate.</p>
+    <p>For fishes the line adds about 220, leaving out the collapse of Lake Victoria's
+      cichlids. One more collapse like it would take the fish line to about 265.</p>
+    <p class="fg-pull">These are straight lines, not forecasts.</p>
+    <details class="fg-more"><summary>More information: how large the two waves were</summary>
+      <p>Nearly all the amphibians in the 1980s to 2000s count, 123 of 133, have Red
+        List assessments that name chytrid. Those amphibians add up to about 170 expected
+        extinctions.</p>
+      <p>The fishes flagged after Lake Victoria's collapse, which followed the introduction of
+        the Nile perch, add up to about 45.</p>
+      <p>The losses from 2020 to 2100 come on top of those lost since 1500.</p>
+    </details>
+  </div>
+  <!--/TEXT:decades-->
   <figure class="extfig">
     <div class="extlegend">
       <span><i class="extsw xb-bg"></i>the line with no new wave</span>
@@ -1996,19 +2106,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </figure>
 
   <div class="prose">
+    <p class="eyebrow">All of it, added up</p>
     <h3>The Running Total</h3>
-    <!--TEXT:running-->
-    <p>Counting only the species on record, <strong>more than 1,200 amphibians, reptiles, birds
-      and mammals have been lost in the last 50,000 years</strong>, as people spread across
-      Eurasia, Australia and New Guinea and then the rest of the world. Since 1500 the expected
-      total is about 590 (500 to 700), along with about 270 fishes. On the line
-      forward, the total since 1500 would reach about 750 by 2100, <strong>26% more than
-      the total to date</strong>, or 55% more with one more wave like chytrid. For fishes
-      it would be 81% more.</p>
-  <!--/TEXT:running-->
   </div>
+  <!--TEXT:running-->
+  <div class="fg-tiles">
+    <div class="fg-tile"><b class="fg-long">more than 1,200</b><span>amphibians, reptiles, birds and mammals
+      lost in the last 50,000 years, counting only the species on record</span></div>
+    <div class="fg-tile"><b>about 590</b><span>expected since 1500 (500 to 700),
+      along with about 270 fishes</span></div>
+    <div class="fg-tile"><b>about 750</b><span>since 1500 by 2100 if recent rates hold,
+      26% more than the total to date</span></div>
+  </div>
+  <div class="prose">
+    <p>The losses came as people spread across Eurasia, Australia and New Guinea and then the
+      rest of the world.</p>
+    <p>With one more wave like chytrid, the total since 1500 would be 55% more than the
+      total to date by 2100. On the line forward, fishes would add 81% to theirs.</p>
+  </div>
+  <!--/TEXT:running-->
+  <p class="extscroll">Scroll the table sideways to see every column.</p>
   <div class="exttablewrap"><!--CHART:T4--><table class="extrt"><thead><tr><th>Lost since</th><th>Mammals</th><th>Birds</th><th>Amphibians</th><th>Reptiles</th><th>All four groups</th><th>Fishes</th></tr></thead><tbody><tr><td class="extrt-lab"><b>50,000 years ago</b><br><span>people spreading across Eurasia, Australia and New Guinea</span></td><td>362</td><td>591</td><td>218+</td><td>83+</td><td>at least 1,254</td><td><span class="extrt-na">no record</span></td></tr><tr><td class="extrt-lab"><b>12,000 years ago</b><br><span>the end of the last ice age</span></td><td>262</td><td>505</td><td>218+</td><td>83+</td><td>at least 1,068</td><td><span class="extrt-na">no record</span></td></tr><tr><td class="extrt-lab"><b>1500</b><br><span>the start of the Red List's record</span></td><td>104</td><td>188</td><td>218</td><td>83</td><td>593<br><span>503 to 698</span></td><td>268<br><span>167 to 329</span></td></tr><tr><td class="extrt-lab"><b>1900</b></td><td>47</td><td>90</td><td>207</td><td>50</td><td>394<br><span>314 to 494</span></td><td>243<br><span>151 to 303</span></td></tr><tr><td class="extrt-lab"><b>1980</b></td><td>11</td><td>37</td><td>146</td><td>26</td><td>221<br><span>162 to 301</span></td><td>153<br><span>90 to 202</span></td></tr><tr><td class="extrt-lab"><b>2000</b></td><td>6</td><td>21</td><td>52</td><td>19</td><td>98<br><span>65 to 147</span></td><td>53<br><span>27 to 80</span></td></tr><tr class="extrt-fwd"><td class="extrt-lab"><b>2020 to 2100</b><br><span>if the 1980s to 2000s rate holds, without a new wave like chytrid</span></td><td>30</td><td>71</td><td>24</td><td>28</td><td>153<br><span>117 to 201</span></td><td>218<br><span>131 to 279</span></td></tr><tr class="extrt-fwd"><td class="extrt-lab"><b>1500 to 2100</b><br><span>on that line</span></td><td>134</td><td>259</td><td>242</td><td>111</td><td>746<br><span>620 to 899</span></td><td>485<br><span>298 to 608</span></td></tr></tbody></table><!--/CHART:T4--></div>
+  <div class="prose">
+    <details class="fg-more"><summary>More information: where these counts come from</summary>
   <p class="extsrc"><!--TEXT:running_note-->From 1500 on, every figure is an expected final count from the IUCN Red List, worked out as for the chart above. Before 1500, mammals come from the dated extinctions compiled by Andermann and colleagues and birds from the species known only from fossils compiled by Cooke and colleagues. Amphibians and reptiles have no compiled record before 1500, so those cells (+) carry the count since 1500, and every figure before 1500 is a minimum. Counting bird species that left no fossil yet found, Cooke and colleagues put birds alone at 1,300 to 1,500. Losses since 2020 cannot be counted yet, since most will not be flagged before the 2030s.<!--/TEXT:running_note--></p>
+    </details>
+  </div>
 
   <details class="warn">
     <summary>How the expected counts are worked out</summary>
@@ -2061,20 +2184,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </details>
 
   <div class="prose">
+    <p class="eyebrow">The hopeful part</p>
     <h3>Lost Is Not Gone</h3>
-    <p>About a third of the tetrapods ever listed as lost have turned up again: 424 of the
-      1,280 that <a href="https://doi.org/10.1111/gcb.17107" target="_blank" rel="noopener">Lindken
-      and colleagues</a> followed. Of those lost since 1900, <span data-fig="lindken_share_found_since_1900">29%</span> have been found again, and
-      <strong>species lost more recently are found sooner</strong>: of those last seen in the
+  </div>
+  <div class="fg-tiles">
+    <div class="fg-tile"><b>424</b><span>of the 1,280 tetrapods (amphibians, reptiles, birds and
+      mammals) ever listed as lost have turned up again, about a third
+      (<a href="https://doi.org/10.1111/gcb.17107" target="_blank" rel="noopener">Lindken and
+      colleagues</a>)</span></div>
+    <div class="fg-tile"><b><span data-fig="lindken_share_found_since_1900">29%</span></b><span>of
+      those lost since 1900 have been found again</span></div>
+    <div class="fg-tile"><b>about <span data-fig="lindken_find_chance_rise_x">7x</span></b><span>as
+      likely for a missing tetrapod to be found in the 2000s as in the 1950s to 1970s, counted
+      against how many were missing at the time</span></div>
+  </div>
+  <div class="prose">
+    <p><strong>Species lost more recently are found sooner.</strong> Of those last seen in the
       1990s, <span data-fig="lindken_found_within_20y_1990s_share">12%</span> turned up within 20 years, against fewer than <span data-fig="lindken_found_within_20y_before_1970_share">1%</span> of those last seen before
-      1970. Rediscoveries climbed for forty years to a peak of <span data-fig="lindken_rediscoveries_2000s">150</span> in the 2000s. The count for
-      the 2010s was gathered in 2020, so it is still filling in as well, and reptiles, rarely
-      found before, were nearly half of that decade's finds.</p>
-    <p>Counted against how many were missing at the time, <strong>the chance that a lost
-      tetrapod turns up has risen about sevenfold</strong>: for every 100 missing, about 3
-      were found per decade from the 1950s to the 1970s, <span data-fig="lindken_finds_per100_1990s">15</span> in the 1990s and <span data-fig="lindken_finds_per100_2000s">22</span> in the 2000s.
-      For reptiles it rose in every decade, from under 1 per 100 in the 1950s to 9 in the
-      2010s, even before that decade's count is complete.</p>
+      1970.</p>
+    <p>Rediscoveries climbed for forty years to a peak of <span data-fig="lindken_rediscoveries_2000s">150</span> in the 2000s. The count for
+      the 2010s was gathered in 2020, so it is still filling in as well.</p>
+    <p>For every 100 tetrapods missing, about <span data-fig="lindken_finds_per100_1950s_1970s">3</span> were found per decade from the 1950s to
+      the 1970s, <span data-fig="lindken_finds_per100_1990s">15</span> in the 1990s and <span data-fig="lindken_finds_per100_2000s">22</span> in the 2000s.</p>
+    <p>Reptiles, rarely found before, were nearly half of the 2010s finds. For reptiles the
+      chance rose in every decade, from under 1 per 100 in the 1950s to 9 in the 2010s, even
+      before that decade's count is complete.</p>
   </div>
   <figure class="extfig">
     <div class="extchart"><!--CHART:3--><svg class="extsvg extsvg-w" viewBox="0 0 880 280" role="img" aria-label="Rediscoveries of lost tetrapod species per decade. Values in the table below." preserveAspectRatio="xMidYMid meet"><defs><pattern id="extHatchW" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect class="xsurf" width="6" height="6"/><line class="xhatch" x1="0" y1="0" x2="0" y2="6"/></pattern></defs><line class="xg" x1="34" x2="874" y1="242.0" y2="242.0"/><text class="xt3" x="29.0" y="246.0" text-anchor="end" font-size="11">0</text><line class="xg" x1="34" x2="874" y1="187.0" y2="187.0"/><text class="xt3" x="29.0" y="191.0" text-anchor="end" font-size="11">40</text><line class="xg" x1="34" x2="874" y1="132.0" y2="132.0"/><text class="xt3" x="29.0" y="136.0" text-anchor="end" font-size="11">80</text><line class="xg" x1="34" x2="874" y1="77.0" y2="77.0"/><text class="xt3" x="29.0" y="81.0" text-anchor="end" font-size="11">120</text><line class="xg" x1="34" x2="874" y1="22.0" y2="22.0"/><text class="xt3" x="29.0" y="26.0" text-anchor="end" font-size="11">160</text><path class="xb" d="M57.8,242.0V219.9Q57.8,215.9 61.8,215.9H146.2Q150.2,215.9 150.2,219.9V242.0Z" data-tip="&lt;b&gt;Found in the 1960s&lt;/b&gt;&lt;br&gt;19 lost tetrapods found again"><title> Found in the 1960s  19 lost tetrapods found again</title></path><text class="xt" x="104.0" y="257.0" text-anchor="middle" font-size="11">1960s</text><path class="xb" d="M197.8,242.0V222.6Q197.8,218.6 201.8,218.6H286.2Q290.2,218.6 290.2,222.6V242.0Z" data-tip="&lt;b&gt;Found in the 1970s&lt;/b&gt;&lt;br&gt;17 lost tetrapods found again"><title> Found in the 1970s  17 lost tetrapods found again</title></path><text class="xt" x="244.0" y="257.0" text-anchor="middle" font-size="11">1970s</text><path class="xb" d="M337.8,242.0V192.4Q337.8,188.4 341.8,188.4H426.2Q430.2,188.4 430.2,192.4V242.0Z" data-tip="&lt;b&gt;Found in the 1980s&lt;/b&gt;&lt;br&gt;39 lost tetrapods found again"><title> Found in the 1980s  39 lost tetrapods found again</title></path><text class="xt" x="384.0" y="257.0" text-anchor="middle" font-size="11">1980s</text><path class="xb" d="M477.8,242.0V104.4Q477.8,100.4 481.8,100.4H566.2Q570.2,100.4 570.2,104.4V242.0Z" data-tip="&lt;b&gt;Found in the 1990s&lt;/b&gt;&lt;br&gt;103 lost tetrapods found again"><title> Found in the 1990s  103 lost tetrapods found again</title></path><text class="xt" x="524.0" y="257.0" text-anchor="middle" font-size="11">1990s</text><path class="xb" d="M617.8,242.0V39.8Q617.8,35.8 621.8,35.8H706.2Q710.2,35.8 710.2,39.8V242.0Z" data-tip="&lt;b&gt;Found in the 2000s&lt;/b&gt;&lt;br&gt;150 lost tetrapods found again"><title> Found in the 2000s  150 lost tetrapods found again</title></path><text class="xt1" x="664.0" y="28.8" text-anchor="middle" font-size="12" font-weight="600">150</text><text class="xt" x="664.0" y="257.0" text-anchor="middle" font-size="11">2000s</text><path class="xbh" fill="url(#extHatchW)" d="M757.8,242.0V140.1Q757.8,136.1 761.8,136.1H846.2Q850.2,136.1 850.2,140.1V242.0Z" data-tip="&lt;b&gt;Found in the 2010s&lt;/b&gt;&lt;br&gt;77 lost tetrapods found again&lt;br&gt;counted in 2020, still rising"><title> Found in the 2010s  77 lost tetrapods found again counted in 2020, still rising</title></path><text class="xt1" x="804.0" y="129.1" text-anchor="middle" font-size="12" font-weight="600">77</text><text class="xt" x="804.0" y="257.0" text-anchor="middle" font-size="11">2010s</text><text class="xt3" x="454.0" y="274.0" text-anchor="middle" font-size="11">decade found</text></svg><svg class="extsvg extsvg-n" viewBox="0 0 300 280" role="img" aria-label="Rediscoveries of lost tetrapod species per decade. Values in the table below." preserveAspectRatio="xMidYMid meet"><defs><pattern id="extHatchN" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect class="xsurf" width="6" height="6"/><line class="xhatch" x1="0" y1="0" x2="0" y2="6"/></pattern></defs><line class="xg" x1="34" x2="294" y1="242.0" y2="242.0"/><text class="xt3" x="29.0" y="246.0" text-anchor="end" font-size="10">0</text><line class="xg" x1="34" x2="294" y1="187.0" y2="187.0"/><text class="xt3" x="29.0" y="191.0" text-anchor="end" font-size="10">40</text><line class="xg" x1="34" x2="294" y1="132.0" y2="132.0"/><text class="xt3" x="29.0" y="136.0" text-anchor="end" font-size="10">80</text><line class="xg" x1="34" x2="294" y1="77.0" y2="77.0"/><text class="xt3" x="29.0" y="81.0" text-anchor="end" font-size="10">120</text><line class="xg" x1="34" x2="294" y1="22.0" y2="22.0"/><text class="xt3" x="29.0" y="26.0" text-anchor="end" font-size="10">160</text><path class="xb" d="M41.4,242.0V219.9Q41.4,215.9 45.4,215.9H66.0Q70.0,215.9 70.0,219.9V242.0Z" data-tip="&lt;b&gt;Found in the 1960s&lt;/b&gt;&lt;br&gt;19 lost tetrapods found again"><title> Found in the 1960s  19 lost tetrapods found again</title></path><text class="xt" x="55.7" y="257.0" text-anchor="middle" font-size="10">1960s</text><path class="xb" d="M84.7,242.0V222.6Q84.7,218.6 88.7,218.6H109.3Q113.3,218.6 113.3,222.6V242.0Z" data-tip="&lt;b&gt;Found in the 1970s&lt;/b&gt;&lt;br&gt;17 lost tetrapods found again"><title> Found in the 1970s  17 lost tetrapods found again</title></path><text class="xt" x="99.0" y="257.0" text-anchor="middle" font-size="10">1970s</text><path class="xb" d="M128.0,242.0V192.4Q128.0,188.4 132.0,188.4H152.6Q156.6,188.4 156.6,192.4V242.0Z" data-tip="&lt;b&gt;Found in the 1980s&lt;/b&gt;&lt;br&gt;39 lost tetrapods found again"><title> Found in the 1980s  39 lost tetrapods found again</title></path><text class="xt" x="142.3" y="257.0" text-anchor="middle" font-size="10">1980s</text><path class="xb" d="M171.4,242.0V104.4Q171.4,100.4 175.4,100.4H196.0Q200.0,100.4 200.0,104.4V242.0Z" data-tip="&lt;b&gt;Found in the 1990s&lt;/b&gt;&lt;br&gt;103 lost tetrapods found again"><title> Found in the 1990s  103 lost tetrapods found again</title></path><text class="xt" x="185.7" y="257.0" text-anchor="middle" font-size="10">1990s</text><path class="xb" d="M214.7,242.0V39.8Q214.7,35.8 218.7,35.8H239.3Q243.3,35.8 243.3,39.8V242.0Z" data-tip="&lt;b&gt;Found in the 2000s&lt;/b&gt;&lt;br&gt;150 lost tetrapods found again"><title> Found in the 2000s  150 lost tetrapods found again</title></path><text class="xt1" x="229.0" y="28.8" text-anchor="middle" font-size="11" font-weight="600">150</text><text class="xt" x="229.0" y="257.0" text-anchor="middle" font-size="10">2000s</text><path class="xbh" fill="url(#extHatchN)" d="M258.0,242.0V140.1Q258.0,136.1 262.0,136.1H282.6Q286.6,136.1 286.6,140.1V242.0Z" data-tip="&lt;b&gt;Found in the 2010s&lt;/b&gt;&lt;br&gt;77 lost tetrapods found again&lt;br&gt;counted in 2020, still rising"><title> Found in the 2010s  77 lost tetrapods found again counted in 2020, still rising</title></path><text class="xt1" x="272.3" y="129.1" text-anchor="middle" font-size="11" font-weight="600">77</text><text class="xt" x="272.3" y="257.0" text-anchor="middle" font-size="10">2010s</text><text class="xt3" x="164.0" y="274.0" text-anchor="middle" font-size="11">decade found</text></svg><!--/CHART:3--></div>
@@ -2085,21 +2219,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </figure>
 
   <div class="prose">
-    <p>The finds keep coming, in many languages. Across the scientific literature in 16
-      languages, <strong><span data-fig="find_papers_2020_2026">95</span> papers published from 2020 to 2026 reported a species found alive
-      after being lost, against <span data-fig="find_papers_2010_2019">72</span> published in all of 2010 to 2019</strong>. For amphibians,
-      reptiles, birds and mammals alone, the rate has doubled each decade, from about one paper
-      a year in the 2000s to two in the 2010s and four since 2020. Of the papers
-      that say when the find was made, about half describe one from an earlier decade, so
-      the count for the 2020s will keep growing.
-      Another <span data-fig="regional_find_papers">156</span> reported a species found again in a country or region where it had been
-      lost. After English, most of these were
-      published in Spanish, German, French and Portuguese. A search like this finds a minimum,
-      not a total. Lindken and colleagues also found that the species people went looking for
-      were the ones most likely to be found.</p>
+    <h4 class="fg-q">The finds keep coming, in many languages</h4>
+  </div>
+  <div class="fg-tiles fg-two">
+    <div class="fg-tile"><b><span data-fig="find_papers_2020_2026">95</span></b><span>papers published
+      from 2020 to 2026 reported a species found alive after being lost, across the scientific
+      literature in 16 languages</span></div>
+    <div class="fg-tile"><b><span data-fig="find_papers_2010_2019">72</span></b><span>papers reported
+      one in all of 2010 to 2019</span></div>
+  </div>
+  <div class="prose">
+    <p>For amphibians, reptiles, birds and mammals alone, the rate has doubled each decade, from
+      about one paper a year in the 2000s to two in the 2010s and four since 2020.</p>
+    <p>Of the papers that say when the find was made, about half describe one from an earlier
+      decade, so the count for the 2020s will keep growing.</p>
+    <p>Another <span data-fig="regional_find_papers">156</span> reported a species found again in a country or region where it had been
+      lost. After English, most of these were published in Spanish, German, French and
+      Portuguese.</p>
+    <p>A search like this finds a minimum, not a total. Lindken and colleagues also found that
+      the species people went looking for were the ones most likely to be found.</p>
+  </div>
+  <div class="fg-plate fg-narrow">
     <p>Of the <span data-fig="lost_still_n">1,852</span> species on our <a href="/lost-species/">lost list</a> still missing, <span data-fig="lost_still_not_flagged_pe">1,260</span> are not
-      flagged as possibly extinct. Each one is a search that could end with a
-      photograph.</p>
+      flagged as possibly extinct.</p>
+    <p class="fg-pull">Each one is a search that could end with a photograph.</p>
     <p class="extcta"><a href="/lost-species-list/">Browse the lost species</a>
       <a href="/get-involved/">Help look for them</a></p>
   </div>
@@ -4404,12 +4547,18 @@ function rdBoot() {
      something nobody had checked. A figure whose caveat has been removed is worse than
      no figure. The species themselves stay in the payload and still drive the filter,
      where "named in this article" is exactly the right meaning. */
+  /* "Rediscoveries we expected" (Scott, 2026-11-12) replaces "Ones we were already watching".
+     It counts species on our Top 100 to be found next that the feed reports found
+     (counts.expected_finds), and links to that list. The old tile's 34 counted a match to ANY
+     of our lists, which is not the same claim; those cards keep their tags and the "On our
+     lists" filter. */
   $("#rdCounts").innerHTML = [
     ["Finds reported", c.stories.toLocaleString()],
-    ["Ones we were already watching", (c.on_tbg_list || 0).toLocaleString()],
+    ["Rediscoveries we expected", (c.expected_finds || 0).toLocaleString(), "#rd-top100"],
     ["Widely covered", (c.syndicated || 0).toLocaleString()]
-  ].map(([k, v]) =>
-    `<div class="count"><b>${v}</b><span>${k}</span></div>`).join("");
+  ].map(([k, v, href]) => href
+    ? `<a class="count countlink" href="${href}"><b>${v}</b><span>${k}</span></a>`
+    : `<div class="count"><b>${v}</b><span>${k}</span></div>`).join("");
 
   /* Preservation coverage, stated from the data rather than asserted in prose. The
      wording adapts to the actual ratio, so a bad night reads as a bad night instead of
@@ -4443,6 +4592,7 @@ function rdRender() {
     (f !== "list" || c.on_list) &&
     (f !== "multi" || c.outlets > 1) &&
     (!q || (c.title + " " + (c.species || []).join(" ") + " " +
+            (c.species || []).map(s => (RD.common || {})[s] || "").join(" ") + " " +
             c.publisher + " " + c.desc).toLowerCase().includes(q)));
 
   $("#rdShowing").textContent =
@@ -4470,14 +4620,22 @@ function rdRender() {
             const soft = (c.species || []).filter(s => !firm.includes(s));
             if (!firm.length && !soft.length) return "";
             const cap = 5;
-            return `<p class="rdsp">${firm.slice(0, cap).map(esc).join(", ")}${
+            /* Scott, 2026-11-12: the common name where one exists, the scientific name where
+               none does, and no "names" / "also names" prefix. Common names come from our
+               own lists or the IUCN Red List (payload "common"); the scientific name stays
+               on hover. Soft names keep their gray and their warning on hover. */
+            const nm = s => {
+              const v = (RD.common || {})[s];
+              return v ? `<span class="rdcn" title="${esc(s)}">${esc(v)}</span>`
+                       : `<i>${esc(s)}</i>`;
+            };
+            return `<p class="rdsp">${firm.slice(0, cap).map(nm).join(", ")}${
               firm.length > cap
                 ? ` <span class="rdspmore">+${firm.length - cap}</span>` : ""}${
               soft.length
-                ? `${firm.length ? " " : ""}<span class="rdspsoft"
+                ? `${firm.length ? ", " : ""}<span class="rdspsoft"
                      title="Read from the article text, so it may include a species mentioned in passing"
-                     >${firm.length ? "also names " : "names "}${
-                       soft.slice(0, cap).map(esc).join(", ")}${
+                     >${soft.slice(0, cap).map(nm).join(", ")}${
                        soft.length > cap ? ` +${soft.length - cap}` : ""}</span>`
                 : ""}</p>`;
           })()}
@@ -4494,7 +4652,13 @@ summary to show."}</p>`}
             ${date ? `<span>${esc(date)}</span>` : ""}
             ${c.outlets > 1
               ? `<span class="rdtag">${c.outlets} outlets</span>` : ""}
-            ${c.on_list
+            ${c.top100
+              /* Scott, 2026-11-12: a find of a species on our Top 100 to be found next is one
+                 we expected, and "was on our lost list" undersold it. The payload sets top100
+                 only when that species is a firm name on the card or its only name. */
+              ? `<span class="rdtag rdtag-list" title="${esc(c.detail || "")}"
+                   >was on our Top 100</span>`
+              : c.on_list
               ? `<span class="rdtag rdtag-list" title="${esc(c.detail || "")}"
                    >${esc(LIST_LABEL[c.on_list] || c.on_list)}</span>` : ""}
           </p>
