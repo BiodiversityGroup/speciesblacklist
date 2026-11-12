@@ -1721,6 +1721,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Rediscoveries, 2026-11-12: a common name on a card is roman (the scientific name it
      replaces stays italic), and the "Rediscoveries we expected" tile is a link. */
   .rdsp .rdcn { font-style:normal; }
+  /* ---- Get Involved (2026-11-12, CnC2's Mockups Q and R), scoped to #v-involved: the steps in a
+     62-character reading column at reading size, with step headings above the text in size. */
+  #v-involved .gistep > p, #v-involved .giend > p, #v-involved .giportal > p { font-size:1.02rem;
+    max-width:62ch; margin-left:auto; margin-right:auto; }
+  #v-involved .gistep ul, #v-involved .gistep ol { max-width:60ch; margin-left:auto; margin-right:auto; }
+  #v-involved .gistep h4 { font-size:1.4rem; }
+  #v-involved .giend h3, #v-involved .giportal h3 { font-size:1.5rem; }
+  #v-involved .gistep { padding:1.8rem 2rem; }
+  @media (max-width:560px) { #v-involved .gistep { padding:1.3rem 1.1rem; } }
   /* ---- the Black List overview (2026-11-12, CnC2's Mockups O and P), scoped to #v-overview. */
   #v-overview details.fg-more > p.lede { font-size:1.02rem; max-width:62ch; margin-left:auto; margin-right:auto; }
   #v-overview .tierkey-intro, #v-overview .field-note { text-align:center; font-size:1rem; max-width:64ch;
@@ -3547,16 +3556,8 @@ function ensureNsMap() {
     .then(d => {
       NSMAP = d;
       const m = d.meta || {}, n = $("#nsMapNote");
-      /* SPECIES, not rows. meta.total and meta.placed count rows, one per country for a
-         mammal listed from several, so this note used to print "3,167 of 3,225 species"
-         while the lists held 3,089. species_* are counted once per species. */
-      if (n && m.species) {
-        n.textContent = `${m.species_placed.toLocaleString()} of ${m.species.toLocaleString()} `
-          + `species are placed here, across ${m.places} countries`
-          + (m.species_unplaced ? `. The other ${m.species_unplaced} give a distribution this `
-             + `map could not resolve to a single country and are not drawn` : "")
-          + `. A mammal recorded from several countries is counted in each.`;
-      }
+      /* SPECIES, not rows: see nsNoteText, now the one writer of this note. */
+      if (n && m.species) n.textContent = nsNoteText(m, m.placed, m.places);
       return true;
     }).catch(() => false);
   return nsLoading;
@@ -3575,6 +3576,24 @@ const NS_LABEL = {
   mammal: "Mammal records, by country, for species described since 2015 and never assessed",
 };
 
+/* ONE writer for the note under the new-species map (2026-11-12). Two used to write it, one
+   counting species at load and one counting country records on a redraw, so a reload could show
+   either. It states species for whatever slice is showing (meta.species_placed_by, keyed
+   "class|year", from 21_build_newspecies_map.py), and the country-record total as well when a
+   mammal's several countries make the two differ. */
+function nsNoteText(m, records, where) {
+  const n = x => (x || 0).toLocaleString();
+  const key = `${nsClass || ""}|${nsYear || ""}`;
+  const sp = key === "|" ? m.species_placed : (m.species_placed_by || {})[key];
+  if (sp == null) return `${n(records)} country records across ${where} countries.`;
+  let s = `${n(sp)} species` + (nsYear ? ` described in ${nsYear}` : "") + ` across ${where} countries.`;
+  if (records > sp) s += ` A mammal recorded from several countries is counted in each, which makes `
+                       + `${n(records)} country records.`;
+  if (!nsClass && !nsYear && m.species_unplaced) s += ` ${n(m.species_unplaced)} more give a `
+                       + `distribution this map could not resolve to a single country and are not drawn.`;
+  return s;
+}
+
 function drawNsMap() {
   nsGeom = paintHeat($("#nsCanvas"), NSMAP,
     {legend: "#nsLegend", view: nsView, classKey: nsClass, yearKey: nsYear,
@@ -3591,12 +3610,7 @@ function drawNsMap() {
     const where = nsGeom.hits.length + sh.size;
     /* A mammal is counted once in each country it lives in, so with mammals in view the sum
        is country records, not species (3,299 against the page's 3,163 on 2026-11-12). */
-    const unit = (nsClass && nsClass !== "mammal") ? "species" : "country records";
-    note.textContent =
-      `${shown.toLocaleString()} ${unit} across ${where} countries`
-      + (nsYear ? ` described in ${nsYear}. ` : ". ")
-      + (nsClass || nsYear || !m.unplaced ? "" : `${m.unplaced} more give a distribution this map could `
-                                + `not resolve to a single country and are not drawn.`);
+    note.textContent = nsNoteText(m, shown, where);
   }
 }
 
@@ -3912,8 +3926,9 @@ function ampRender() {
 
   // Same three grades as the reptile list, so the two are comparable at a glance.
   const ev = c.by_evidence || {};
+  /* No "never assessed" total tile since 2026-11-12 (Scott: "drop the boxes"): the headline
+     above states it, and the two tiles below add up to it. */
   const cells = [
-    [n(c.total), "never assessed"],
     [n(ev.airtight), "the Red List knows them and holds no assessment"],
     [n((ev.corroborated || 0) + (ev.uncorroborated || 0)),
      "not in the Red List index"],
@@ -4176,8 +4191,9 @@ function ntBoot() {
      back OR 0.92, p = 1), so presenting a priority count here would assert something
      the test refused. Endemic-to-one-country is the distinction that did hold. */
   $("#ntHero").textContent = c.total.toLocaleString();
+  /* No "Species" tile since 2026-11-12 (Scott: "drop the boxes"): the headline directly above
+     states the total, and the page's opening states it too. */
   $("#ntCounts").innerHTML = [
-    ["Species", c.total.toLocaleString(), "described since 2015, never assessed"],
     ["Endemic to one country", (c.single_country || 0).toLocaleString(),
      "the pattern that predicts threat"],
     ["Confirmed against IUCN's index", (c.by_evidence.airtight || 0).toLocaleString(),

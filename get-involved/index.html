@@ -1721,6 +1721,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Rediscoveries, 2026-11-12: a common name on a card is roman (the scientific name it
      replaces stays italic), and the "Rediscoveries we expected" tile is a link. */
   .rdsp .rdcn { font-style:normal; }
+  /* ---- Get Involved (2026-11-12, CnC2's Mockups Q and R), scoped to #v-involved: the steps in a
+     62-character reading column at reading size, with step headings above the text in size. */
+  #v-involved .gistep > p, #v-involved .giend > p, #v-involved .giportal > p { font-size:1.02rem;
+    max-width:62ch; margin-left:auto; margin-right:auto; }
+  #v-involved .gistep ul, #v-involved .gistep ol { max-width:60ch; margin-left:auto; margin-right:auto; }
+  #v-involved .gistep h4 { font-size:1.4rem; }
+  #v-involved .giend h3, #v-involved .giportal h3 { font-size:1.5rem; }
+  #v-involved .gistep { padding:1.8rem 2rem; }
+  @media (max-width:560px) { #v-involved .gistep { padding:1.3rem 1.1rem; } }
   /* ---- the Black List overview (2026-11-12, CnC2's Mockups O and P), scoped to #v-overview. */
   #v-overview details.fg-more > p.lede { font-size:1.02rem; max-width:62ch; margin-left:auto; margin-right:auto; }
   #v-overview .tierkey-intro, #v-overview .field-note { text-align:center; font-size:1rem; max-width:64ch;
@@ -1934,7 +1943,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="prose">
       <h2 style="font-size:var(--fs-h2)">How to help</h2>
       <p class="lostlede">These species are not short of scientific interest. They are
-        short of attention. Five things move that, and none of them require a degree:
+        short of attention.</p>
+    <p class="lostlede">Five things move that, and none of them require a degree:
         the people who built the databases this site runs on were volunteers too.</p>
     </div>
 
@@ -1966,30 +1976,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p>Here is how that actually plays out. In August 2014, Scott Trageser, who built
         this site and is Executive Director of <a href="https://biodiversitygroup.org"
         target="_blank" rel="noopener">The Biodiversity Group</a>, was running a citizen
-        science survey on the island of Hòn Cau in Vietnam. He came across a land snail
+        science survey on the island of Hòn Cau in Vietnam.</p>
+    <p>He came across a land snail
         nobody present could identify and posted it to
         <a href="https://www.inaturalist.org" target="_blank"
         rel="noopener">iNaturalist</a>, largely to set an example for the children he was
         teaching: when you find something you cannot name, this is what you do with it.</p>
       <p>More than a year later a malacologist in Malaysia, Junn Kitt Foon, came across the
-        photograph, recognized the shell, and got in touch. It was
+        photograph, recognized the shell, and got in touch.</p>
+    <p>It was
         <span class="sci">Myxostoma petiverianum</span>, whose last published record was
         from <strong>1905</strong>, and the photograph was the first ever taken of a live
         adult. They published it together.</p>
-      <p>No expedition. No permit. No budget. A photograph left somewhere public, one
-        person on the other side of the world who knew what he was looking at, and a
-        lesson for a class that turned out to be worth rather more than the lesson.</p>
+      <p class="fg-pull">No expedition. No permit. No budget.</p>
+      <p>A photograph left somewhere public, one person on the other side of the world who knew what he was
+        looking at, and a lesson for a class that turned out to be worth rather more than the lesson.</p>
       <p>So: if you see something you cannot name, especially somewhere remote, at night,
-        or very small, <strong>photograph it and upload it with a location</strong>. You
+        or very small, <strong>photograph it and upload it with a location</strong>.</p>
+    <p>You
         do not need to identify it. That is the whole point of putting it where the people
         who can will find it.</p>
       <p class="lostcite"><a
         href="https://news.mongabay.com/2016/07/citizen-science-leads-to-snail-rediscovery-in-vietnam/"
         target="_blank" rel="noopener">Mongabay's account of the rediscovery</a></p>
-      <!-- A named list beats "photograph anything". This item already tells a reader what
-           to do; the Lost Mammals Initiative tells them WHICH animals, which is the harder
-           half and somebody else has done it. Their list and their criteria, linked as
-           theirs. -->
+      <!-- A named list beats "photograph anything": the Lost Mammals Initiative tells a reader
+           WHICH animals, the harder half, and somebody else has done it. The pointer to it no
+           longer sits here; it is on the Rediscoveries page under "Somewhere to actually go
+           looking", their list and their criteria linked as theirs (noted 2026-11-12, when
+           CnC2's review found this comment describing nothing). -->
       
     </div>
 
@@ -1997,7 +2011,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <h4>3. Ask for these species to be prioritized</h4>
       <p>Every species on this site is excluded from the commitments that drive
         conservation spending, because those commitments are written around species
-        already known to be threatened. Changing that is a matter of people asking for
+        already known to be threatened.</p>
+    <p>Changing that is a matter of people asking for
         it, repeatedly, in the places where lists get written.</p>
       <ul>
         <li><strong>If you fund conservation:</strong> ask whether your criteria quietly
@@ -2048,7 +2063,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            exactly the scale a reader can imagine joining. -->
       <h4>5. Help build the databases that do not exist yet</h4>
       <p>Everything this site can say about vertebrates rests on checklists that
-        volunteers built. The
+        volunteers built.</p>
+    <p>The
         <a href="http://www.reptile-database.org" target="_blank"
            rel="noopener">Reptile Database</a>,
         <a href="https://amphibiaweb.org" target="_blank" rel="noopener">AmphibiaWeb</a>,
@@ -2057,18 +2073,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="https://www.worldbirdnames.org" target="_blank" rel="noopener">IOC bird
         list</a> are each a handful of people keeping a checklist current, and they are
         the reason we can say how many snakes exist and when one was last seen.</p>
-      <p>Invertebrates and plants have almost none of that, and it shows everywhere on
-        this site. They are <strong><span data-fig="lost_still_invert_and_plant">655</span></strong> of the <strong><span data-fig="lost_still_n">1,852</span></strong> species
-        still lost here, we could not compute a single per-group rate for them because no
-        authority publishes a count to divide by, and of the <strong><span data-fig="lost_invertebrates">439</span></strong>
-        invertebrates across our lists, <strong>not one</strong> is named by any
-        conservation organization we can find.</p>
+      <p>Invertebrates and plants have almost none of that, and it shows everywhere on this site.</p>
+      <div class="fg-tiles fg-two">
+        <div class="fg-tile"><b><span data-fig="lost_still_invert_and_plant">655</span></b><span>of the <span data-fig="lost_still_n">1,852</span> species still lost here are invertebrates and plants</span></div>
+        <div class="fg-tile"><b><span data-fig="lost_invertebrates">439</span></b><span>invertebrates are on our lists, and <strong>not one</strong> is named by any conservation organization we can find</span></div>
+      </div>
+      <p>We could not compute a single per-group rate for them, because no authority publishes a count to divide
+        by.</p>
       <p>So the ask: if you know a group, be its record keeper. A checklist for one
         beetle family or one orchid genus, published with a date on it and kept current,
-        is the same act that became the Reptile Database. Put your specimen records and
+        is the same act that became the Reptile Database.</p>
+    <p>Put your specimen records and
         photographs where <a href="https://www.gbif.org" target="_blank"
         rel="noopener">GBIF</a> can index them, because a record no database can see is
-        a species this site cannot watch. And if you are building one and want our data,
+        a species this site cannot watch.</p>
+    <p>And if you are building one and want our data,
         our scripts or our mistakes to learn from, write to us and take them; everything
         here is free.</p>
     </div>
@@ -2078,8 +2097,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p>That is the whole reason this list is public. If you have a record, a photograph
         or a museum specimen of anything on these pages, or you know a species has been
         found again, please tell us:
-        <a href="mailto:info@biodiversitygroup.org?subject=Species%20Black%20List">info@biodiversitygroup.org</a>.
-        One of the rediscoveries on this site began as a photograph posted online by
+        <a href="mailto:info@biodiversitygroup.org?subject=Species%20Black%20List">info@biodiversitygroup.org</a>.</p>
+    <p>One of the rediscoveries on this site began as a photograph posted online by
         somebody who had no idea what they had found.</p>
     </div>
 
@@ -3300,16 +3319,8 @@ function ensureNsMap() {
     .then(d => {
       NSMAP = d;
       const m = d.meta || {}, n = $("#nsMapNote");
-      /* SPECIES, not rows. meta.total and meta.placed count rows, one per country for a
-         mammal listed from several, so this note used to print "3,167 of 3,225 species"
-         while the lists held 3,089. species_* are counted once per species. */
-      if (n && m.species) {
-        n.textContent = `${m.species_placed.toLocaleString()} of ${m.species.toLocaleString()} `
-          + `species are placed here, across ${m.places} countries`
-          + (m.species_unplaced ? `. The other ${m.species_unplaced} give a distribution this `
-             + `map could not resolve to a single country and are not drawn` : "")
-          + `. A mammal recorded from several countries is counted in each.`;
-      }
+      /* SPECIES, not rows: see nsNoteText, now the one writer of this note. */
+      if (n && m.species) n.textContent = nsNoteText(m, m.placed, m.places);
       return true;
     }).catch(() => false);
   return nsLoading;
@@ -3328,6 +3339,24 @@ const NS_LABEL = {
   mammal: "Mammal records, by country, for species described since 2015 and never assessed",
 };
 
+/* ONE writer for the note under the new-species map (2026-11-12). Two used to write it, one
+   counting species at load and one counting country records on a redraw, so a reload could show
+   either. It states species for whatever slice is showing (meta.species_placed_by, keyed
+   "class|year", from 21_build_newspecies_map.py), and the country-record total as well when a
+   mammal's several countries make the two differ. */
+function nsNoteText(m, records, where) {
+  const n = x => (x || 0).toLocaleString();
+  const key = `${nsClass || ""}|${nsYear || ""}`;
+  const sp = key === "|" ? m.species_placed : (m.species_placed_by || {})[key];
+  if (sp == null) return `${n(records)} country records across ${where} countries.`;
+  let s = `${n(sp)} species` + (nsYear ? ` described in ${nsYear}` : "") + ` across ${where} countries.`;
+  if (records > sp) s += ` A mammal recorded from several countries is counted in each, which makes `
+                       + `${n(records)} country records.`;
+  if (!nsClass && !nsYear && m.species_unplaced) s += ` ${n(m.species_unplaced)} more give a `
+                       + `distribution this map could not resolve to a single country and are not drawn.`;
+  return s;
+}
+
 function drawNsMap() {
   nsGeom = paintHeat($("#nsCanvas"), NSMAP,
     {legend: "#nsLegend", view: nsView, classKey: nsClass, yearKey: nsYear,
@@ -3344,12 +3373,7 @@ function drawNsMap() {
     const where = nsGeom.hits.length + sh.size;
     /* A mammal is counted once in each country it lives in, so with mammals in view the sum
        is country records, not species (3,299 against the page's 3,163 on 2026-11-12). */
-    const unit = (nsClass && nsClass !== "mammal") ? "species" : "country records";
-    note.textContent =
-      `${shown.toLocaleString()} ${unit} across ${where} countries`
-      + (nsYear ? ` described in ${nsYear}. ` : ". ")
-      + (nsClass || nsYear || !m.unplaced ? "" : `${m.unplaced} more give a distribution this map could `
-                                + `not resolve to a single country and are not drawn.`);
+    note.textContent = nsNoteText(m, shown, where);
   }
 }
 
@@ -3665,8 +3689,9 @@ function ampRender() {
 
   // Same three grades as the reptile list, so the two are comparable at a glance.
   const ev = c.by_evidence || {};
+  /* No "never assessed" total tile since 2026-11-12 (Scott: "drop the boxes"): the headline
+     above states it, and the two tiles below add up to it. */
   const cells = [
-    [n(c.total), "never assessed"],
     [n(ev.airtight), "the Red List knows them and holds no assessment"],
     [n((ev.corroborated || 0) + (ev.uncorroborated || 0)),
      "not in the Red List index"],
@@ -3929,8 +3954,9 @@ function ntBoot() {
      back OR 0.92, p = 1), so presenting a priority count here would assert something
      the test refused. Endemic-to-one-country is the distinction that did hold. */
   $("#ntHero").textContent = c.total.toLocaleString();
+  /* No "Species" tile since 2026-11-12 (Scott: "drop the boxes"): the headline directly above
+     states the total, and the page's opening states it too. */
   $("#ntCounts").innerHTML = [
-    ["Species", c.total.toLocaleString(), "described since 2015, never assessed"],
     ["Endemic to one country", (c.single_country || 0).toLocaleString(),
      "the pattern that predicts threat"],
     ["Confirmed against IUCN's index", (c.by_evidence.airtight || 0).toLocaleString(),
