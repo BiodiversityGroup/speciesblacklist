@@ -31,6 +31,21 @@
    "v": 6.8493150684931505,
    "src": "Lost Species/analysis/data/lindken/lindken_g_trends.json"
   },
+  "cnc_fish_mammal_fraction": {
+   "t": "a seventh",
+   "v": "a seventh",
+   "src": "C&C figures.json bc_fish_mammal_fraction: named money per ray-finned fish species over per mammal species, as words"
+  },
+  "cnc_mammal_fish_x": {
+   "t": "7x",
+   "v": 7.341459,
+   "src": "C&C figures.json bc_mammal_fish_x: named money per mammal species over per ray-finned fish species, the default year"
+  },
+  "cnc_named_by_orgs": {
+   "t": "63",
+   "v": 63,
+   "src": "C:/Connect and Conserve/SPECIES_BLACK_LIST_named_by_orgs.csv: species at least one organization names"
+  },
   "cnc_unnamed_per_named": {
    "t": "127",
    "v": 127.23809523809524,
@@ -182,8 +197,8 @@
    "src": "rediscoveries.json: oldest card date"
   },
   "feed_recent_share": {
-   "t": "65%",
-   "v": 64.62264150943396,
+   "t": "64%",
+   "v": 63.84976525821596,
    "src": "rediscoveries.json: share of cards dated in the two most recent years"
   },
   "feed_recent_y1": {
@@ -918,7 +933,7 @@
   },
   "red_list_cents_per_100usd": {
    "t": "3",
-   "v": 3.3879158293366065,
+   "v": 3.385239702520696,
    "src": "Red List budget $5M a year (literature, the tile beside it) / C&C figures.json us_revenue_2022_usd_b, per $100, in cents"
   },
   "redlist_accessed_nb": {
@@ -1078,17 +1093,17 @@
   },
   "us_conservation_revenue_2022_busd": {
    "t": "15",
-   "v": 14.758335956,
+   "v": 14.770002834,
    "src": "C&C figures.json us_revenue_2022_usd_b (CnC_root_long.csv, 2022 Revenue rows with an EIN, summed)"
   },
   "us_gifts_2022_busd": {
-   "t": "8.6",
-   "v": 8.642669525990945,
+   "t": "8.7",
+   "v": 8.652587198069403,
    "src": "C&C figures.json us_gifts_2022_usd_b2 (2022 revenue x each organization's Form 990 private-contributions share)"
   },
   "us_giving_share_2022_pct": {
    "t": "1.7%",
-   "v": 1.730853,
+   "v": 1.732839,
    "src": "C&C figures.json us_giving_share_2022_pct (us_gifts_2022 / all US giving in 2022, Giving USA 2023 edition)"
   },
   "validation_fisher_p": {

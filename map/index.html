@@ -73,53 +73,98 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
+<link rel="preload" href="/fonts/nunito-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   *, *::before, *::after { box-sizing:border-box; }
   body { margin:0; }
-  /* ---- tokens: cool institutional ground, warm data ---------------------- */
+  /* ---- fonts: the field-guide theme (2026-11-12) -----------------------------------
+     The same self-hosted files Connect & Conserve uses (SIL Open Font License; the two
+     license texts are beside them in site/fonts/). latin-ext and italic files load only on
+     a page that needs them (unicode-range and font-style choose). If they 404 the stack
+     falls back to system fonts and nothing else breaks, which is also why 16_sync has to
+     ship site/fonts/ (TREES): a missing font fails silently.
+     "SBL Amp" holds one character, the ampersand, from Nunito Sans, and leads the heading
+     stack so a heading draws a plain "&" as C&C's do. */
+  @font-face { font-family:"Nunito Sans"; font-style:normal; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-wght-normal.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family:"Nunito Sans"; font-style:normal; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-ext-wght-normal.woff2) format("woff2"); unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family:"Nunito Sans"; font-style:italic; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-wght-italic.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family:Fraunces; font-style:normal; font-weight:100 900; font-display:swap;
+    src:url(/fonts/fraunces-latin-opsz-normal.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family:Fraunces; font-style:normal; font-weight:100 900; font-display:swap;
+    src:url(/fonts/fraunces-latin-ext-opsz-normal.woff2) format("woff2"); unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family:Fraunces; font-style:italic; font-weight:100 900; font-display:swap;
+    src:url(/fonts/fraunces-latin-opsz-italic.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family:"SBL Amp"; font-style:normal; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-wght-normal.woff2) format("woff2"); unicode-range:U+0026; }
+  @font-face { font-family:"SBL Amp"; font-style:italic; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-wght-italic.woff2) format("woff2"); unicode-range:U+0026; }
+  /* ---- tokens: the field-guide theme, shared with Connect & Conserve (2026-11-12) ----
+     Paper, forest and ochre in light; a green-black in dark (Scott, 2026-11-12, "yes to all
+     four" on the CnC2 proposal in OneDrive/Documents/Claude/sbl-theme-2026-11-12). Every text
+     and background pair was measured there: light body 13.99:1, quiet text 4.75:1, links
+     7.06:1; dark body 16.18:1, quiet 6.92:1. --figure in light is 3.45:1, so it is for LARGE
+     type only. The five tier colors are data and did not change. Nothing is set smaller than
+     13px: the two smallest sizes rose from .68rem and .78rem. Replaced the cool blue-grey
+     institutional set (#EDEEF0 ground, #3B4E8C accent), which is in
+     build_2026/theme_backup_2026-11-12/_source.html. */
   :root {
-    --ground:#EDEEF0; --surface:#F7F8F9; --surface-2:#E4E6EA;
-    --ink:#171A21; --ink-2:#4A5260; --ink-3:#767E8C;
-    --rule:#D3D7DE; --rule-2:#C0C6D0;
-    --accent:#3B4E8C; --accent-soft:#E3E7F3;
+    --ground:#FBF8F1; --surface:#FFFDF8; --surface-2:#F5F0E4;
+    --ink:#1F2A24; --ink-2:#56635A; --ink-3:#606C62;
+    --rule:#E2D9C6; --rule-2:#CFC4AC;
+    --accent:#2F5D50; --accent-deep:#24493F; --accent-soft:#E8EFE6;
+    --figure:#B47A14; --eyebrow:#8A5A0A; --ochre:#C2861F; --clay:#B5533C;
+    --on-accent:#FFFFFF;
+    --plate-shadow:0 10px 26px rgba(31,42,36,.05);
     --t1:#D9C08A; --t2:#C99B4F; --t3:#B4762B; --t4:#90501A; --t5:#6B300F;
-    --serif:Georgia,"Palatino Linotype",Palatino,"Book Antiqua",ui-serif,serif;
-    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
-    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --serif:"SBL Amp",Fraunces,"Iowan Old Style","Palatino Linotype",Georgia,serif;
+    --mono:var(--sans);
+    --sans:"Nunito Sans",-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     /* 1.35rem floor rather than 1rem: at 375px the list table, the sites
        list and the methods tables were all sitting ~16px off the edge, which
        reads as touching it once each of them has its own border. */
     --pad:clamp(1.35rem,4vw,2.5rem);
-    /* Type scale. Ratio ~1.28, with a deliberate jump to --fs-display so the
-       hero carries real weight against an otherwise dense, tabular page. */
-    --fs-micro:.68rem; --fs-small:.78rem; --fs-body:.9rem; --fs-base:1rem;
-    --fs-lede:1.16rem; --fs-h3:1.05rem; --fs-h2:1.4rem;
+    /* Type scale. A deliberate jump to --fs-display so the hero carries real weight. */
+    --fs-micro:.78rem; --fs-small:.86rem; --fs-body:1rem; --fs-base:1.06rem;
+    --fs-lede:1.2rem; --fs-h3:1.25rem; --fs-h2:1.7rem;
     --fs-quote:clamp(1.25rem,2.7vw,1.9rem);
     --fs-display:clamp(1.9rem,5.2vw,3.1rem);
     /* Spacing rhythm, 8px base, every gap below is drawn from this. */
     --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s5:3rem; --s6:4rem;
   }
   @media (prefers-color-scheme:dark) {
-    :root {
-      --ground:#12141A; --surface:#191C23; --surface-2:#22262F;
-      --ink:#E6E8EC; --ink-2:#A2AAB8; --ink-3:#79818F;
-      --rule:#2A2F39; --rule-2:#3A404C;
-      --accent:#8FA3E0; --accent-soft:#232A3D;
+    :root:not([data-theme="light"]) {
+      --ground:#0E1512; --surface:#161F1B; --surface-2:#1F2A25;
+      --ink:#ECF1EC; --ink-2:#B5C2B8; --ink-3:#93A297;
+      --rule:#2C3933; --rule-2:#3D4C45;
+      --accent:#93CFA9; --accent-deep:#B4E0C3; --accent-soft:#1B2B23;
+      --figure:#E5AC3F; --eyebrow:#DDA94A; --ochre:#C2861F; --clay:#E8927A;
+      --on-accent:#0E1512;
+      --plate-shadow:0 10px 26px rgba(0,0,0,.28);
       --t1:#EBD4A6; --t2:#DCB068; --t3:#C98A3C; --t4:#B4682A; --t5:#9A4C1C;
     }
   }
   :root[data-theme="dark"] {
-    --ground:#12141A; --surface:#191C23; --surface-2:#22262F;
-    --ink:#E6E8EC; --ink-2:#A2AAB8; --ink-3:#79818F;
-    --rule:#2A2F39; --rule-2:#3A404C;
-    --accent:#8FA3E0; --accent-soft:#232A3D;
+    --ground:#0E1512; --surface:#161F1B; --surface-2:#1F2A25;
+    --ink:#ECF1EC; --ink-2:#B5C2B8; --ink-3:#93A297;
+    --rule:#2C3933; --rule-2:#3D4C45;
+    --accent:#93CFA9; --accent-deep:#B4E0C3; --accent-soft:#1B2B23;
+    --figure:#E5AC3F; --eyebrow:#DDA94A; --ochre:#C2861F; --clay:#E8927A;
+    --on-accent:#0E1512;
+    --plate-shadow:0 10px 26px rgba(0,0,0,.28);
     --t1:#EBD4A6; --t2:#DCB068; --t3:#C98A3C; --t4:#B4682A; --t5:#9A4C1C;
   }
   :root[data-theme="light"] {
-    --ground:#EDEEF0; --surface:#F7F8F9; --surface-2:#E4E6EA;
-    --ink:#171A21; --ink-2:#4A5260; --ink-3:#767E8C;
-    --rule:#D3D7DE; --rule-2:#C0C6D0;
-    --accent:#3B4E8C; --accent-soft:#E3E7F3;
+    --ground:#FBF8F1; --surface:#FFFDF8; --surface-2:#F5F0E4;
+    --ink:#1F2A24; --ink-2:#56635A; --ink-3:#606C62;
+    --rule:#E2D9C6; --rule-2:#CFC4AC;
+    --accent:#2F5D50; --accent-deep:#24493F; --accent-soft:#E8EFE6;
+    --figure:#B47A14; --eyebrow:#8A5A0A; --ochre:#C2861F; --clay:#B5533C;
+    --on-accent:#FFFFFF;
+    --plate-shadow:0 10px 26px rgba(31,42,36,.05);
     --t1:#D9C08A; --t2:#C99B4F; --t3:#B4762B; --t4:#90501A; --t5:#6B300F;
   }
 
@@ -1544,6 +1589,124 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding:.4rem .6rem; font-family:var(--sans); font-size:.8rem; line-height:1.35;
             box-shadow:0 2px 10px rgba(0,0,0,.12); opacity:0; transition:opacity .08s; max-width:16rem; text-align:left; }
   #extTip.on { opacity:1; }
+  /* ======================== THE FIELD-GUIDE THEME (2026-11-12) ========================
+     CnC2's sbl_skin.css sections 2 to 8, placed last so they win the cascade exactly as they
+     did in the mockups Scott approved. Folding each rule into the one it overrides is a
+     later tidy-up; doing it now would change what Scott saw. The tokens are at the top. */
+
+  /* type */
+  body { font-family:var(--sans); font-size:17.5px; line-height:1.65; }
+  h1,h2,h3,h4 { font-family:var(--serif); font-weight:600; letter-spacing:-.01em; color:var(--accent); }
+  .sci { font-family:var(--sans); font-style:italic; }
+  .num { font-family:var(--sans); }
+  .eyebrow { font-size:.78rem; font-weight:800; letter-spacing:.16em; color:var(--eyebrow); }
+  .prose p, .lede { line-height:1.65; }
+  .lede { color:var(--ink); }
+
+  /* masthead and navigation */
+  .mast { border-bottom:0; border-top:3px solid var(--ochre); background:var(--surface-2); }
+  .mast h1 { color:var(--accent); }
+  .lockup .logomark { color:var(--accent); }
+  nav { background:var(--surface); box-shadow:0 1px 3px rgba(22,33,31,.05); }
+  .navitem { font-weight:700; color:var(--ink); }
+  .navitem:hover { color:var(--accent); border-bottom-color:var(--ochre); }
+  .navitem[aria-current="page"], .navgroup.on > .navtoggle { color:var(--accent); border-bottom-color:var(--ochre);
+    font-weight:800; }
+  .navmenu { background:var(--surface); border-radius:0 0 8px 8px; border-top-color:var(--ochre); }
+
+  /* buttons are pills */
+  .ghost, #theme, .datagrab-btn, .mapsource button, .maplayers button, .chip, .gishare a, .gishare button,
+  #nightCard button { border-radius:999px; }
+  #theme, :root[data-theme="light"] #theme, :root[data-theme="dark"] #theme,
+  :root:not([data-theme="light"]) #theme { color:var(--accent); border:2px solid var(--accent); font-weight:800; }
+  #theme:hover { background:var(--accent-soft); }
+  .datagrab-btn { background:var(--accent); border-color:var(--accent); color:var(--on-accent); font-weight:800; }
+
+  /* plates */
+  .loststat, .homecard, .warn, .datagrab, .stakes, .defs, .gistep, .statstrip > *, #nightCard {
+    border-radius:8px; }
+  .loststat, .homecard, .gistep { background:var(--surface); border:1px solid var(--rule); box-shadow:var(--plate-shadow); }
+  .homecard { border-top:4px solid var(--ochre); }
+  .homecard .eyebrow { color:var(--eyebrow); }
+  .warn { border:1px solid var(--rule); border-top:4px solid var(--ochre); border-left-width:1px;
+    box-shadow:var(--plate-shadow); }
+  .warn h3 { color:var(--accent); font-size:1.2rem; }
+  .stakes { border-left:0; border:1px solid var(--rule); border-top:4px solid var(--ochre); background:var(--surface);
+    box-shadow:var(--plate-shadow); padding:var(--s3); }
+  .stakes p { font-size:1rem; color:var(--ink); }
+  .datagrab { border-top:4px solid var(--ochre); }
+
+  /* figures: one big number, a label a person can read */
+  .loststat b, .statstrip b, .exthero b { font-family:var(--serif); font-weight:600; color:var(--figure);
+    font-variant-numeric:lining-nums; }
+  .loststat b { font-size:2.3rem; line-height:1.05; }
+  .loststat span { font-size:.8rem; letter-spacing:.08em; color:var(--ink-2); font-weight:700; }
+
+  /* readable sizes for the small text */
+  .homecard p, .stakes p, .homemapcap, .hint, .homelede, footer p { font-size:.98rem; line-height:1.55; }
+  .homecard p { color:var(--ink); }
+  .homecaveat { font-size:.95rem !important; }
+  .homecard h4 { font-size:1.35rem; min-height:0; }
+  .homecard h4 a { color:var(--accent); }
+  .homecard .eyebrow { min-height:0; justify-content:center; }
+  /* Four across, two by two, or one: never three and an orphan, which the old auto-fit
+     grid gave at widths around 760-1010px. */
+  .homecards { gap:18px; grid-template-columns:repeat(4,1fr); }
+  @media (max-width:940px) { .homecards { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px) { .homecards { grid-template-columns:1fr; } }
+  .homecard { padding:22px 18px 18px; text-align:center; }
+  .hint { border-radius:8px; }
+  .bigbtn { border-radius:999px; background:var(--accent); color:var(--on-accent); border:2px solid var(--accent);
+    font-weight:800; }
+  .bigbtn:hover, .bigbtn:focus-visible { background:var(--accent-deep); border-color:var(--accent-deep); color:var(--on-accent); }
+  .hero h2 { color:var(--accent); }
+  .prose > .eyebrow { margin:var(--s5) 0 .2rem; }
+  .prose h3 { font-size:1.7rem; margin-bottom:.6rem; }
+  .prose p { font-size:1.06rem; }
+
+  /* new pieces: the figure on a card, tiles, plates, folds, numbered steps.
+     All centered (Scott's standing rule) except the numbered list, which is a list. */
+  .fg-fig { display:block; font-family:var(--serif); font-weight:600; font-size:2rem; line-height:1.1;
+    color:var(--figure); margin:.1rem 0 .45rem; }
+  .fg-tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:980px; margin:1.2rem auto 1.4rem; }
+  .fg-tile { background:var(--surface); border:1px solid var(--rule); border-radius:8px; padding:22px 18px 18px;
+    text-align:center; box-shadow:var(--plate-shadow); }
+  .fg-tile b { display:block; font-family:var(--serif); font-weight:600; font-size:2.6rem; line-height:1.05;
+    color:var(--figure); margin-bottom:.45rem; }
+  .fg-tile span { display:block; font-size:.98rem; line-height:1.45; color:var(--ink); }
+  .fg-tile b span { display:inline; font-size:inherit; color:inherit; }
+  .fg-plate { background:var(--surface); border:1px solid var(--rule); border-top:4px solid var(--ochre);
+    border-radius:8px; padding:26px 28px 22px; box-shadow:var(--plate-shadow); text-align:center;
+    margin:var(--s5) auto 0; }
+  .fg-narrow { max-width:46rem; }
+  .fg-plate h3 { font-size:1.5rem; margin:.2rem 0 .7rem; }
+  .fg-plate p { font-size:1.06rem; margin:.6rem auto; max-width:58ch; }
+  .fg-pull { font-family:var(--serif); font-style:italic; font-size:1.45rem !important; line-height:1.3;
+    color:var(--accent); margin:1.1rem auto .6rem !important; }
+  .fg-caveat { border-top-color:var(--clay); margin-top:var(--s3); }
+  .fg-caveat h3 { font-size:1.2rem; }
+  details.fg-more { margin:1rem auto 0; text-align:center; }
+  details.fg-more > summary { display:inline-flex; align-items:center; gap:7px; cursor:pointer; list-style:none;
+    font-size:.92rem; font-weight:800; color:var(--accent); border:1.5px solid var(--rule-2); border-radius:999px;
+    padding:6px 15px; background:var(--surface); }
+  details.fg-more > summary::-webkit-details-marker { display:none; }
+  details.fg-more > summary:before { content:"+"; font-weight:800; }
+  details.fg-more[open] > summary:before { content:"\2212"; }
+  details.fg-more > summary:hover, details.fg-more > summary:focus-visible { border-color:var(--accent); }
+  details.fg-more > p { font-size:.98rem; color:var(--ink-2); max-width:60ch; margin:.8rem auto 0; text-align:center; }
+  ol.fg-steps { list-style:none; counter-reset:step; max-width:44rem; margin:1rem auto 0; padding:0; text-align:left; }
+  ol.fg-steps li { counter-increment:step; display:flex; align-items:center; gap:14px; background:var(--surface);
+    border:1px solid var(--rule); border-radius:8px; padding:12px 16px; margin-bottom:8px; font-size:1.04rem; }
+  ol.fg-steps li:before { content:counter(step); flex:0 0 2rem; height:2rem; border-radius:50%; display:grid;
+    place-items:center; background:var(--accent); color:var(--on-accent); font-weight:800; font-size:.95rem; }
+  @media (max-width:700px) {
+    .fg-tiles { grid-template-columns:1fr; gap:12px; }
+    .fg-plate { padding:20px 16px 18px; }
+    .prose h3 { font-size:1.4rem; }
+  }
+  .fg-tile b span, .fg-fig span { line-height:inherit; }
+  .fg-tiles.fg-two { grid-template-columns:repeat(2,1fr); max-width:660px; }
+  @media (max-width:700px) { .fg-tiles.fg-two { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -2232,9 +2395,16 @@ matchMedia("(prefers-color-scheme:dark)").addEventListener("change", repaintCanv
 
 /* Both the field and the map are painted into canvases, so neither inherits a CSS
    variable change the way the DOM does — each needs an explicit repaint. */
+/* GUARDED 2026-11-12. On the home route MAP is loaded (for the home map) but #v-map does not
+   exist, so $("#v-map").hidden threw on every theme press there: the double press never
+   reached nightOpen, and the home map kept the old theme's colors. It also repaints the home
+   map now, which nothing did. */
 function repaintCanvases() {
   if (typeof DATA !== "undefined" && DATA && typeof drawField === "function") drawField();
-  if (typeof MAP !== "undefined" && MAP && !$("#v-map").hidden) drawMap();
+  if (typeof MAP === "undefined" || !MAP) return;
+  const vmap = $("#v-map");
+  if (vmap && !vmap.hidden) drawMap();
+  if (document.getElementById("homeMapCanvas") && typeof drawHomeMap === "function") drawHomeMap();
 }
 
 /* ---------- routing --------------------------------------------------------
@@ -3791,9 +3961,14 @@ function ampDraw() {
     : "";
 }
 
+/* GUARDED 2026-11-12. Each route ships only its own sections, but LOST and NSMAP can load
+   anywhere: the night reveal (two presses of Theme) loads LOST on every route. After that,
+   every resize on a route without #v-lost threw here, and the throw also skipped the home
+   map redraw below. viewShown() is false for a section the route does not have. */
+function viewShown(sel) { const e = $(sel); return !!e && !e.hidden; }
 addEventListener("resize", () => {
-  if (LOST && !$("#v-lost").hidden) drawLost();
-  if (NSMAP && !$("#v-newtaxa").hidden) drawNsMap();
+  if (LOST && viewShown("#v-lost")) drawLost();
+  if (NSMAP && viewShown("#v-newtaxa")) drawNsMap();
   /* The landing map sizes itself from its container, so it has to be redrawn when that
      container changes width. Looked up rather than assumed: #homeMapCanvas exists on the
      home route only, and this listener is live on all twelve. */
@@ -4693,10 +4868,12 @@ function boot() {
   const A = m.across_lists;
   if (v && v.high && v.low && v.low.rate) {
     const gain = Math.round((v.high.rate / v.low.rate - 1) * 100);
-    STATS.push(`The Black List holds every vertebrate stuck at Data Deficient and flags the
-      <strong>${n(c.priority_dd)}</strong> whose records already describe a tiny range. If
-      IUCN assessed these then threatened species are uncovered <strong>${gain}%</strong>
-      more efficiently than by choosing species with broader ranges.`);
+    /* SHORTENED 2026-11-12 (cap of about 20 words, Scott). "Data Deficient species" keeps the
+       count scoped to Data Deficient only, as above; "than among broader-ranged species" keeps
+       the comparison group named. */
+    STATS.push(`Assess the <strong>${n(c.priority_dd)}</strong> Data Deficient species with the
+      narrowest recorded ranges first, and threatened species turn up
+      <strong>${gain}%</strong> more efficiently than among broader-ranged species.`);
   }
   /* SECOND. The two headlines Scott wrote sit together: the first says what the list is for,
      this one says what the sector currently does about it.
@@ -4708,18 +4885,23 @@ function boot() {
      The derivation, so the next person can redo it: 63 species are named by at least one
      organization and 8,016 by none, and 8,016 / 63 = 127.2. NOT 8,079 / 63 = 128.2, which
      answers a different question than the sentence asks. */
-  STATS.push(`Our sister project <a href="https://connectandconserve.org" target="_blank"
+  /* SINCE 2026-11-12 THE 127 IS NO LONGER TYPED: it is read from the bound figure in the
+     section below (cnc_unnamed_per_named, computed from C&C's exports at build time), so the
+     headline and the body cannot disagree. "127" is only the fallback if that element is gone.
+     Shortened the same day to the cap of about 20 words. */
+  const UNNAMED = ((document.querySelector('.homebody [data-fig="cnc_unnamed_per_named"]') || {})
+    .textContent || "127").trim();
+  STATS.push(`<a href="https://connectandconserve.org" target="_blank"
     rel="noopener">Connect &amp; Conserve</a> maps every conservation organization worldwide.
-    We pointed it at all eight thousand species on these four lists. For every Black List
-    species an org mentions, <strong>127</strong> have no mention at all. That is Life
-    Overlooked.`);
+    For every Black List species one of them mentions, <strong>${UNNAMED}</strong> go
+    unmentioned. That is Life Overlooked.`);
   if (A && A.central) {
     // Rounded to the nearest hundred. "Roughly 2,697" claims a precision the number
     // does not have, and a headline that says roughly should look roughly.
     const approx = (Math.round(A.central / 100) * 100).toLocaleString();
     STATS.push(`Roughly <strong>${approx}</strong> species on these lists are probably
-      heading for extinction, and none are recognized as being at risk. No one was
-      targeting them, but now we can!`);
+      heading for extinction. Not one is recognized as being at risk. Now we can target
+      them!`);
   }
   if (D && D.n_overdue && D.median_time_to_resolution) {
     STATS.push(`Most Data Deficient listings are resolved within
@@ -4729,8 +4911,8 @@ function boot() {
   }
   if (D && D.n_reaffirmed) {
     STATS.push(`<strong>${n(D.n_reaffirmed)}</strong> of these species have been assessed
-      more than once, and come back Data Deficient every time. Looking again is not the
-      same as finding out.`);
+      more than once and came back Data Deficient every time. Looking again is not finding
+      out.`);
   }
   /* The two-rate sentence that used to sit here was replaced by the efficiency headline at
      the top of this array, which is built from the same two figures. Both said the same
@@ -4746,9 +4928,12 @@ function boot() {
       <strong>${n(c.dd)}</strong> of them are ranked here.`);
   }
   if (c.priority_dd) {
+    /* "somebody should evaluate them" stands in for "the Red List's own Criterion B ought to
+       be evaluated" (2026-11-12): a first-time reader does not know Criterion B, and the
+       methods page names it. */
     STATS.push(`For <strong>${n(c.priority_dd)}</strong> of them the published range is
-      narrow enough that the Red List's own Criterion B ought to be evaluated. That is an
-      argument for looking, not a finding that they are threatened.`);
+      narrow enough that somebody should evaluate them. That is an argument for looking, not
+      a finding of threat.`);
   }
 
   const head = $("#overdueHead"), dots = $("#statDots");
@@ -5070,7 +5255,7 @@ function boot() {
     clearTimeout(rz);
     rz = setTimeout(() => {
       drawField();
-      if (MAP && !$("#v-map").hidden) drawMap();
+      if (MAP && viewShown("#v-map")) drawMap();
     }, 150);
   });
 

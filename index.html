@@ -73,53 +73,98 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 
+<link rel="preload" href="/fonts/nunito-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fraunces-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   *, *::before, *::after { box-sizing:border-box; }
   body { margin:0; }
-  /* ---- tokens: cool institutional ground, warm data ---------------------- */
+  /* ---- fonts: the field-guide theme (2026-11-12) -----------------------------------
+     The same self-hosted files Connect & Conserve uses (SIL Open Font License; the two
+     license texts are beside them in site/fonts/). latin-ext and italic files load only on
+     a page that needs them (unicode-range and font-style choose). If they 404 the stack
+     falls back to system fonts and nothing else breaks, which is also why 16_sync has to
+     ship site/fonts/ (TREES): a missing font fails silently.
+     "SBL Amp" holds one character, the ampersand, from Nunito Sans, and leads the heading
+     stack so a heading draws a plain "&" as C&C's do. */
+  @font-face { font-family:"Nunito Sans"; font-style:normal; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-wght-normal.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family:"Nunito Sans"; font-style:normal; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-ext-wght-normal.woff2) format("woff2"); unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family:"Nunito Sans"; font-style:italic; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-wght-italic.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family:Fraunces; font-style:normal; font-weight:100 900; font-display:swap;
+    src:url(/fonts/fraunces-latin-opsz-normal.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family:Fraunces; font-style:normal; font-weight:100 900; font-display:swap;
+    src:url(/fonts/fraunces-latin-ext-opsz-normal.woff2) format("woff2"); unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+  @font-face { font-family:Fraunces; font-style:italic; font-weight:100 900; font-display:swap;
+    src:url(/fonts/fraunces-latin-opsz-italic.woff2) format("woff2"); unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+  @font-face { font-family:"SBL Amp"; font-style:normal; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-wght-normal.woff2) format("woff2"); unicode-range:U+0026; }
+  @font-face { font-family:"SBL Amp"; font-style:italic; font-weight:200 1000; font-display:swap;
+    src:url(/fonts/nunito-sans-latin-wght-italic.woff2) format("woff2"); unicode-range:U+0026; }
+  /* ---- tokens: the field-guide theme, shared with Connect & Conserve (2026-11-12) ----
+     Paper, forest and ochre in light; a green-black in dark (Scott, 2026-11-12, "yes to all
+     four" on the CnC2 proposal in OneDrive/Documents/Claude/sbl-theme-2026-11-12). Every text
+     and background pair was measured there: light body 13.99:1, quiet text 4.75:1, links
+     7.06:1; dark body 16.18:1, quiet 6.92:1. --figure in light is 3.45:1, so it is for LARGE
+     type only. The five tier colors are data and did not change. Nothing is set smaller than
+     13px: the two smallest sizes rose from .68rem and .78rem. Replaced the cool blue-grey
+     institutional set (#EDEEF0 ground, #3B4E8C accent), which is in
+     build_2026/theme_backup_2026-11-12/_source.html. */
   :root {
-    --ground:#EDEEF0; --surface:#F7F8F9; --surface-2:#E4E6EA;
-    --ink:#171A21; --ink-2:#4A5260; --ink-3:#767E8C;
-    --rule:#D3D7DE; --rule-2:#C0C6D0;
-    --accent:#3B4E8C; --accent-soft:#E3E7F3;
+    --ground:#FBF8F1; --surface:#FFFDF8; --surface-2:#F5F0E4;
+    --ink:#1F2A24; --ink-2:#56635A; --ink-3:#606C62;
+    --rule:#E2D9C6; --rule-2:#CFC4AC;
+    --accent:#2F5D50; --accent-deep:#24493F; --accent-soft:#E8EFE6;
+    --figure:#B47A14; --eyebrow:#8A5A0A; --ochre:#C2861F; --clay:#B5533C;
+    --on-accent:#FFFFFF;
+    --plate-shadow:0 10px 26px rgba(31,42,36,.05);
     --t1:#D9C08A; --t2:#C99B4F; --t3:#B4762B; --t4:#90501A; --t5:#6B300F;
-    --serif:Georgia,"Palatino Linotype",Palatino,"Book Antiqua",ui-serif,serif;
-    --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
-    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --serif:"SBL Amp",Fraunces,"Iowan Old Style","Palatino Linotype",Georgia,serif;
+    --mono:var(--sans);
+    --sans:"Nunito Sans",-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     /* 1.35rem floor rather than 1rem: at 375px the list table, the sites
        list and the methods tables were all sitting ~16px off the edge, which
        reads as touching it once each of them has its own border. */
     --pad:clamp(1.35rem,4vw,2.5rem);
-    /* Type scale. Ratio ~1.28, with a deliberate jump to --fs-display so the
-       hero carries real weight against an otherwise dense, tabular page. */
-    --fs-micro:.68rem; --fs-small:.78rem; --fs-body:.9rem; --fs-base:1rem;
-    --fs-lede:1.16rem; --fs-h3:1.05rem; --fs-h2:1.4rem;
+    /* Type scale. A deliberate jump to --fs-display so the hero carries real weight. */
+    --fs-micro:.78rem; --fs-small:.86rem; --fs-body:1rem; --fs-base:1.06rem;
+    --fs-lede:1.2rem; --fs-h3:1.25rem; --fs-h2:1.7rem;
     --fs-quote:clamp(1.25rem,2.7vw,1.9rem);
     --fs-display:clamp(1.9rem,5.2vw,3.1rem);
     /* Spacing rhythm, 8px base, every gap below is drawn from this. */
     --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2rem; --s5:3rem; --s6:4rem;
   }
   @media (prefers-color-scheme:dark) {
-    :root {
-      --ground:#12141A; --surface:#191C23; --surface-2:#22262F;
-      --ink:#E6E8EC; --ink-2:#A2AAB8; --ink-3:#79818F;
-      --rule:#2A2F39; --rule-2:#3A404C;
-      --accent:#8FA3E0; --accent-soft:#232A3D;
+    :root:not([data-theme="light"]) {
+      --ground:#0E1512; --surface:#161F1B; --surface-2:#1F2A25;
+      --ink:#ECF1EC; --ink-2:#B5C2B8; --ink-3:#93A297;
+      --rule:#2C3933; --rule-2:#3D4C45;
+      --accent:#93CFA9; --accent-deep:#B4E0C3; --accent-soft:#1B2B23;
+      --figure:#E5AC3F; --eyebrow:#DDA94A; --ochre:#C2861F; --clay:#E8927A;
+      --on-accent:#0E1512;
+      --plate-shadow:0 10px 26px rgba(0,0,0,.28);
       --t1:#EBD4A6; --t2:#DCB068; --t3:#C98A3C; --t4:#B4682A; --t5:#9A4C1C;
     }
   }
   :root[data-theme="dark"] {
-    --ground:#12141A; --surface:#191C23; --surface-2:#22262F;
-    --ink:#E6E8EC; --ink-2:#A2AAB8; --ink-3:#79818F;
-    --rule:#2A2F39; --rule-2:#3A404C;
-    --accent:#8FA3E0; --accent-soft:#232A3D;
+    --ground:#0E1512; --surface:#161F1B; --surface-2:#1F2A25;
+    --ink:#ECF1EC; --ink-2:#B5C2B8; --ink-3:#93A297;
+    --rule:#2C3933; --rule-2:#3D4C45;
+    --accent:#93CFA9; --accent-deep:#B4E0C3; --accent-soft:#1B2B23;
+    --figure:#E5AC3F; --eyebrow:#DDA94A; --ochre:#C2861F; --clay:#E8927A;
+    --on-accent:#0E1512;
+    --plate-shadow:0 10px 26px rgba(0,0,0,.28);
     --t1:#EBD4A6; --t2:#DCB068; --t3:#C98A3C; --t4:#B4682A; --t5:#9A4C1C;
   }
   :root[data-theme="light"] {
-    --ground:#EDEEF0; --surface:#F7F8F9; --surface-2:#E4E6EA;
-    --ink:#171A21; --ink-2:#4A5260; --ink-3:#767E8C;
-    --rule:#D3D7DE; --rule-2:#C0C6D0;
-    --accent:#3B4E8C; --accent-soft:#E3E7F3;
+    --ground:#FBF8F1; --surface:#FFFDF8; --surface-2:#F5F0E4;
+    --ink:#1F2A24; --ink-2:#56635A; --ink-3:#606C62;
+    --rule:#E2D9C6; --rule-2:#CFC4AC;
+    --accent:#2F5D50; --accent-deep:#24493F; --accent-soft:#E8EFE6;
+    --figure:#B47A14; --eyebrow:#8A5A0A; --ochre:#C2861F; --clay:#B5533C;
+    --on-accent:#FFFFFF;
+    --plate-shadow:0 10px 26px rgba(31,42,36,.05);
     --t1:#D9C08A; --t2:#C99B4F; --t3:#B4762B; --t4:#90501A; --t5:#6B300F;
   }
 
@@ -1544,6 +1589,124 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding:.4rem .6rem; font-family:var(--sans); font-size:.8rem; line-height:1.35;
             box-shadow:0 2px 10px rgba(0,0,0,.12); opacity:0; transition:opacity .08s; max-width:16rem; text-align:left; }
   #extTip.on { opacity:1; }
+  /* ======================== THE FIELD-GUIDE THEME (2026-11-12) ========================
+     CnC2's sbl_skin.css sections 2 to 8, placed last so they win the cascade exactly as they
+     did in the mockups Scott approved. Folding each rule into the one it overrides is a
+     later tidy-up; doing it now would change what Scott saw. The tokens are at the top. */
+
+  /* type */
+  body { font-family:var(--sans); font-size:17.5px; line-height:1.65; }
+  h1,h2,h3,h4 { font-family:var(--serif); font-weight:600; letter-spacing:-.01em; color:var(--accent); }
+  .sci { font-family:var(--sans); font-style:italic; }
+  .num { font-family:var(--sans); }
+  .eyebrow { font-size:.78rem; font-weight:800; letter-spacing:.16em; color:var(--eyebrow); }
+  .prose p, .lede { line-height:1.65; }
+  .lede { color:var(--ink); }
+
+  /* masthead and navigation */
+  .mast { border-bottom:0; border-top:3px solid var(--ochre); background:var(--surface-2); }
+  .mast h1 { color:var(--accent); }
+  .lockup .logomark { color:var(--accent); }
+  nav { background:var(--surface); box-shadow:0 1px 3px rgba(22,33,31,.05); }
+  .navitem { font-weight:700; color:var(--ink); }
+  .navitem:hover { color:var(--accent); border-bottom-color:var(--ochre); }
+  .navitem[aria-current="page"], .navgroup.on > .navtoggle { color:var(--accent); border-bottom-color:var(--ochre);
+    font-weight:800; }
+  .navmenu { background:var(--surface); border-radius:0 0 8px 8px; border-top-color:var(--ochre); }
+
+  /* buttons are pills */
+  .ghost, #theme, .datagrab-btn, .mapsource button, .maplayers button, .chip, .gishare a, .gishare button,
+  #nightCard button { border-radius:999px; }
+  #theme, :root[data-theme="light"] #theme, :root[data-theme="dark"] #theme,
+  :root:not([data-theme="light"]) #theme { color:var(--accent); border:2px solid var(--accent); font-weight:800; }
+  #theme:hover { background:var(--accent-soft); }
+  .datagrab-btn { background:var(--accent); border-color:var(--accent); color:var(--on-accent); font-weight:800; }
+
+  /* plates */
+  .loststat, .homecard, .warn, .datagrab, .stakes, .defs, .gistep, .statstrip > *, #nightCard {
+    border-radius:8px; }
+  .loststat, .homecard, .gistep { background:var(--surface); border:1px solid var(--rule); box-shadow:var(--plate-shadow); }
+  .homecard { border-top:4px solid var(--ochre); }
+  .homecard .eyebrow { color:var(--eyebrow); }
+  .warn { border:1px solid var(--rule); border-top:4px solid var(--ochre); border-left-width:1px;
+    box-shadow:var(--plate-shadow); }
+  .warn h3 { color:var(--accent); font-size:1.2rem; }
+  .stakes { border-left:0; border:1px solid var(--rule); border-top:4px solid var(--ochre); background:var(--surface);
+    box-shadow:var(--plate-shadow); padding:var(--s3); }
+  .stakes p { font-size:1rem; color:var(--ink); }
+  .datagrab { border-top:4px solid var(--ochre); }
+
+  /* figures: one big number, a label a person can read */
+  .loststat b, .statstrip b, .exthero b { font-family:var(--serif); font-weight:600; color:var(--figure);
+    font-variant-numeric:lining-nums; }
+  .loststat b { font-size:2.3rem; line-height:1.05; }
+  .loststat span { font-size:.8rem; letter-spacing:.08em; color:var(--ink-2); font-weight:700; }
+
+  /* readable sizes for the small text */
+  .homecard p, .stakes p, .homemapcap, .hint, .homelede, footer p { font-size:.98rem; line-height:1.55; }
+  .homecard p { color:var(--ink); }
+  .homecaveat { font-size:.95rem !important; }
+  .homecard h4 { font-size:1.35rem; min-height:0; }
+  .homecard h4 a { color:var(--accent); }
+  .homecard .eyebrow { min-height:0; justify-content:center; }
+  /* Four across, two by two, or one: never three and an orphan, which the old auto-fit
+     grid gave at widths around 760-1010px. */
+  .homecards { gap:18px; grid-template-columns:repeat(4,1fr); }
+  @media (max-width:940px) { .homecards { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px) { .homecards { grid-template-columns:1fr; } }
+  .homecard { padding:22px 18px 18px; text-align:center; }
+  .hint { border-radius:8px; }
+  .bigbtn { border-radius:999px; background:var(--accent); color:var(--on-accent); border:2px solid var(--accent);
+    font-weight:800; }
+  .bigbtn:hover, .bigbtn:focus-visible { background:var(--accent-deep); border-color:var(--accent-deep); color:var(--on-accent); }
+  .hero h2 { color:var(--accent); }
+  .prose > .eyebrow { margin:var(--s5) 0 .2rem; }
+  .prose h3 { font-size:1.7rem; margin-bottom:.6rem; }
+  .prose p { font-size:1.06rem; }
+
+  /* new pieces: the figure on a card, tiles, plates, folds, numbered steps.
+     All centered (Scott's standing rule) except the numbered list, which is a list. */
+  .fg-fig { display:block; font-family:var(--serif); font-weight:600; font-size:2rem; line-height:1.1;
+    color:var(--figure); margin:.1rem 0 .45rem; }
+  .fg-tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:980px; margin:1.2rem auto 1.4rem; }
+  .fg-tile { background:var(--surface); border:1px solid var(--rule); border-radius:8px; padding:22px 18px 18px;
+    text-align:center; box-shadow:var(--plate-shadow); }
+  .fg-tile b { display:block; font-family:var(--serif); font-weight:600; font-size:2.6rem; line-height:1.05;
+    color:var(--figure); margin-bottom:.45rem; }
+  .fg-tile span { display:block; font-size:.98rem; line-height:1.45; color:var(--ink); }
+  .fg-tile b span { display:inline; font-size:inherit; color:inherit; }
+  .fg-plate { background:var(--surface); border:1px solid var(--rule); border-top:4px solid var(--ochre);
+    border-radius:8px; padding:26px 28px 22px; box-shadow:var(--plate-shadow); text-align:center;
+    margin:var(--s5) auto 0; }
+  .fg-narrow { max-width:46rem; }
+  .fg-plate h3 { font-size:1.5rem; margin:.2rem 0 .7rem; }
+  .fg-plate p { font-size:1.06rem; margin:.6rem auto; max-width:58ch; }
+  .fg-pull { font-family:var(--serif); font-style:italic; font-size:1.45rem !important; line-height:1.3;
+    color:var(--accent); margin:1.1rem auto .6rem !important; }
+  .fg-caveat { border-top-color:var(--clay); margin-top:var(--s3); }
+  .fg-caveat h3 { font-size:1.2rem; }
+  details.fg-more { margin:1rem auto 0; text-align:center; }
+  details.fg-more > summary { display:inline-flex; align-items:center; gap:7px; cursor:pointer; list-style:none;
+    font-size:.92rem; font-weight:800; color:var(--accent); border:1.5px solid var(--rule-2); border-radius:999px;
+    padding:6px 15px; background:var(--surface); }
+  details.fg-more > summary::-webkit-details-marker { display:none; }
+  details.fg-more > summary:before { content:"+"; font-weight:800; }
+  details.fg-more[open] > summary:before { content:"\2212"; }
+  details.fg-more > summary:hover, details.fg-more > summary:focus-visible { border-color:var(--accent); }
+  details.fg-more > p { font-size:.98rem; color:var(--ink-2); max-width:60ch; margin:.8rem auto 0; text-align:center; }
+  ol.fg-steps { list-style:none; counter-reset:step; max-width:44rem; margin:1rem auto 0; padding:0; text-align:left; }
+  ol.fg-steps li { counter-increment:step; display:flex; align-items:center; gap:14px; background:var(--surface);
+    border:1px solid var(--rule); border-radius:8px; padding:12px 16px; margin-bottom:8px; font-size:1.04rem; }
+  ol.fg-steps li:before { content:counter(step); flex:0 0 2rem; height:2rem; border-radius:50%; display:grid;
+    place-items:center; background:var(--accent); color:var(--on-accent); font-weight:800; font-size:.95rem; }
+  @media (max-width:700px) {
+    .fg-tiles { grid-template-columns:1fr; gap:12px; }
+    .fg-plate { padding:20px 16px 18px; }
+    .prose h3 { font-size:1.4rem; }
+  }
+  .fg-tile b span, .fg-fig span { line-height:inherit; }
+  .fg-tiles.fg-two { grid-template-columns:repeat(2,1fr); max-width:660px; }
+  @media (max-width:700px) { .fg-tiles.fg-two { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -1651,6 +1814,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ============================== OVERVIEW ============================== -->
 <!-- ============================ SITE OVERVIEW ============================ -->
 <section class="view" id="v-home">
+ <!-- READABILITY PASS, 2026-11-12 (Scott, to CnC2's proposal: "yes to all four, go page by
+      page"). One idea per paragraph, at most two numbers in one, a third number becomes a tile,
+      detail folds under "More information" and is never deleted, and the caveats that change
+      what a reader would do stay visible. The sentence-by-sentence key, with what was kept, cut
+      or folded, is OneDrive/Documents/Claude/sbl-theme-2026-11-12/HOME_TEXT_CHANGES.md; the
+      previous section is in build_2026/theme_backup_2026-11-12/_source.html. -->
  <div class="hero">
   <div class="wrap">
     <div class="intro">
@@ -1678,12 +1847,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
            ferns, mosses, cacti, trees and shrubs, and the invertebrates (counts in
            site/figures.json; a comment cannot carry a live figure). This
            page introduces all four bodies of work, so it takes the widest true scope, and
-           the list's own frame is stated on the list's own overview. -->
-      <p class="lede">Conservation runs on lists. Money, legal protection and recovery
-        plans all follow from a species having a name on the right list, like the IUCN's
-        Red List. This site is about the animals and plants that never made it onto those
-        lists, and what it will take to find them before an irreversible decision gets
-        made for us.</p>
+           the list's own frame is stated on the list's own overview.
+           "the right one" is the right list; the Red List is named in the cost section. -->
+      <p class="lede">Conservation runs on lists. Money, legal protection and recovery plans
+        all follow from a species having its name on the right one. This site is about the
+        animals and plants that never made it onto those lists.</p>
     </div>
 
     <!-- THE MAP, on the landing page, 2026-08-27 at Scott's asking. A STATIC render with
@@ -1706,38 +1874,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          v-map section, which 14_build_pages.py ships only to the register cluster, and
          this block ships only to the home route. -->
     <div id="mapTip" aria-hidden="true"></div>
-
-    <div class="stakes">
-      <!-- Merged 2026-08-23 at Scott's asking: the old "Why anyone should care about a
-           gap in a database" section plus a paragraph describing what the site actually
-           does. The description leads now, because a reader should know what they are
-           holding before being told why it matters. "in ways nobody has tried before" is
-           a superlative about our own work, which the style guide allows when we can
-           stand behind it: the validated restriction ranking, the cross-list checks and
-           the organization coverage measurements exist nowhere else. -->
-      <h3>Keeping Watch Over Life Overlooked</h3>
-      <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
-        Biodiversity Group</a> built this site to keep watch on the species everyone else
-        has lost sight of. We call them <strong>Life Overlooked</strong>: known from one
-        hillside, described once and never seen again, or named so recently that no
-        assessor has reached them. This site tracks them from the moment they go missing
-        to the day somebody finds one again, and it puts the data together in ways nobody
-        has tried before, so that none of them falls through the cracks.</p>
-      <p>Why does a gap in a database matter? When a species is listed as threatened,
-        things happen. Funders can point to it. Governments can be held to it. Researchers
-        can build a case around it. A species with no listing has none of that machinery,
-        and the silence reads almost like good news. It very often is not: if one of these
-        species goes extinct, it will happen without an entry, without a headline, and
-        without anybody being able to say afterwards what was lost.</p>
-      <p>Naming them is the first step. You cannot fight for something that has never
-        been counted.</p>
-    </div>
   </div>
  </div>
 
  <div class="wrap homebody">
+  <!-- EVERY ID IN THIS SECTION IS WRITTEN BY THE PAGE SCRIPT BEHIND A GUARD (overdueHead,
+       statPrev, statNext, statDots, homeMapCanvas, mapTip and the nine cost_* ids), so
+       17_check_dom_contract.py cannot see one go missing: the feature just stops. Check them
+       by eye after any rewrite of this section. -->
   <div class="prose">
+    <p class="eyebrow">Four lists</p>
     <h3>What you will find here</h3>
+  </div>
+  <p class="homelede">Four separate pieces of work, each answering a different question. They
+    are never added together.</p>
+
+  <!-- The card figures are bound (register_total, nev_total, lost_total). Rediscoveries has
+       no count on purpose: the feed republishes rediscoveries.json daily, apart from the site
+       build, so a number baked in here would lag it. -->
+  <div class="homecards">
+    <article class="homecard">
+      <p class="eyebrow">The core list</p>
+      <h4><a href="/black-list-overview/" data-goto="overview">The Black List</a></h4>
+      <b class="fg-fig"><span data-fig="register_total">3,062</span></b>
+      <p>species the Red List could not categorize, or has not yet assessed, ranked by how
+        small an area each is known from.</p>
+    </article>
+
+    <article class="homecard">
+      <p class="eyebrow">Described, then forgotten</p>
+      <h4><a href="/new-species/" data-goto="newtaxa">New Species</a></h4>
+      <b class="fg-fig"><span data-fig="nev_total">3,163</span></b>
+      <p>reptiles, amphibians, birds and mammals named by science since 2015 that still have
+        no extinction risk assessment. New ones join every week.</p>
+    </article>
+
+    <article class="homecard">
+      <p class="eyebrow">Missing, not gone</p>
+      <h4><a href="/lost-species/" data-goto="lost">Lost Species</a></h4>
+      <b class="fg-fig"><span data-fig="lost_total">2,002</span></b>
+      <p>species nobody has confirmed alive in over a decade, and nobody has been able to
+        declare extinct either.</p>
+    </article>
+
+    <article class="homecard">
+      <p class="eyebrow">Proof it can be done</p>
+      <h4><a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a></h4>
+      <b class="fg-fig">Found again</b>
+      <p>This is the hopeful part. Most species that go missing are still out there, and some
+        turn up because one person went and looked.</p>
+    </article>
   </div>
 
   <!-- A riddle rather than an instruction, at Scott's asking. It has to carry three facts
@@ -1748,61 +1934,52 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     not follow you down, so hurry past and we will never meet. Ask me once and I only change
     the light. Ask me twice and I will show you something no one has seen in a lifetime.</p>
 
-  <p class="homelede">Four separate pieces of work, each answering a different question. They
-    come from different sources and they are deliberately never added together.</p>
-
-  <div class="homecards">
-    <article class="homecard">
-      <p class="eyebrow">The core list</p>
-      <h4><a href="/black-list-overview/" data-goto="overview">The Black List</a></h4>
-      <p>Species the IUCN Red List has been unable to categorize, or has not yet
-        assessed, ranked by how narrowly restricted the published record says they are.
-        If a species here turns out to be in trouble, this is where you would have seen
-        it first.</p>
-    </article>
-
-    <article class="homecard">
-      <p class="eyebrow">Described, then forgotten</p>
-      <h4><a href="/new-species/" data-goto="newtaxa">New Species</a></h4>
-      <p>Reptiles, amphibians, birds and mammals named by science since 2015 that
-        still carry no extinction risk assessment. Nine in ten of the reptiles and
-        amphibians are known from a single country. New ones join the queue every
-        week.</p>
-    </article>
-
-    <article class="homecard">
-      <p class="eyebrow">Missing, not gone</p>
-      <h4><a href="/lost-species/" data-goto="lost">Lost Species</a></h4>
-      <p>Species nobody has confirmed alive in over a decade, and in some cases for
-        centuries, that nobody has been able to declare extinct either. Half of them have
-        not been seen since the 1960s.</p>
-    </article>
-
-    <article class="homecard">
-      <p class="eyebrow">Proof it can be done</p>
-      <h4><a href="/rediscoveries/" data-goto="redisc">Rediscoveries</a></h4>
-      <p>Species found again, gathered as they are reported. This is the hopeful part.
-        Most species that go missing are still out there, and some of them turn up
-        because one person went and looked.</p>
-    </article>
+  <!-- Merged 2026-08-23 at Scott's asking: the old "Why anyone should care about a gap in a
+       database" section plus a paragraph describing what the site does. Since 2026-11-12 the
+       question leads and the description of who built the site sits in the fold (Scott: yes
+       to folding the "who built this" paragraph). -->
+  <div class="fg-plate fg-narrow">
+    <p class="eyebrow">Why this site exists</p>
+    <h3>Why does a gap in a database matter?</h3>
+    <p>When a species is listed as threatened, things happen. Funders can point to it.
+      Governments can be held to it. Researchers can build a case around it.</p>
+    <p>A species with no listing has none of that, and the silence reads almost like good
+      news. It very often is not.</p>
+    <p class="fg-pull">You cannot fight for something that has never been counted.</p>
+    <details class="fg-more"><summary>More information: who built this, and what Life Overlooked means</summary>
+      <p><a href="https://biodiversitygroup.org" target="_blank" rel="noopener">The
+        Biodiversity Group</a> built this site to keep watch on the species everyone else has
+        lost sight of. We call them <strong>Life Overlooked</strong>: known from one hillside,
+        described once and never seen again, or named so recently that no assessor has
+        reached them.</p>
+      <p>The site tracks them from the moment they go missing to the day somebody finds one
+        again. If one of these species goes extinct, it will happen without an entry, without
+        a headline, and without anybody being able to say afterwards what was lost.</p>
+    </details>
   </div>
 
   <div class="prose">
-    <h3>The part worth holding on to</h3>
-    <p>A species being missing is not the same as a species being gone. Of the lost
-      species that researchers have traced, roughly a quarter are thought to be genuinely
-      extinct. That is a grim number read one way and a remarkable one read the other,
-      because it means most of them are alive and simply unvisited.</p>
-    <p>Some have been unseen for two hundred years and then turned up in a stream nobody
-      had surveyed. One was identified from a photograph a tourist posted online. The
-      work is not hopeless. It is just unfunded, and pointed at the wrong places.</p>
+    <p class="eyebrow">The hopeful part</p>
+    <h3>Missing is not the same as gone</h3>
+    <p>Of the lost species that researchers have traced, roughly a quarter are thought to be
+      genuinely extinct. That means most of them are alive and simply unvisited.</p>
+    <p>Some have been unseen for two hundred years and then turned up in a stream nobody had
+      surveyed. One was identified from a photograph a tourist posted online.</p>
+    <p>The work is not hopeless. It is just unfunded, and pointed at the wrong places.</p>
   </div>
 
-  <!-- The Connect & Conserve scrape, 2026-08-18. These figures come from a SISTER PROJECT
-       and not from this site's build, so 15_check_figures.py cannot anchor them the way it
-       anchors 3,062 or 2,120: there is no local artifact to check them against. The date is
-       stated in the text for that reason. If C&C re-runs the scrape, this paragraph needs
-       updating by hand.
+  <!-- The Connect & Conserve scrape, 2026-08-18. These figures come from a SISTER PROJECT.
+       Since 2026-11-12 BOTH counts are read at build time from C&C's exports (figures_def:
+       cnc_named_by_orgs from SPECIES_BLACK_LIST_named_by_orgs.csv, and cnc_unnamed_per_named
+       from that file and SPECIES_BLACK_LIST_named_by_nobody.csv), so a C&C re-run moves them.
+
+       The fishes-against-mammals ratio was a typed "roughly a sixth" from the 08-18 run. By
+       2026-11-12 C&C's own figure was "a seventh", per KNOWN species of each class (28,056
+       ray-finned fishes, 6,035 mammals), US named money, C&C's default year. Both the words in
+       the fold and the 7x tile are now read from C&C (cnc_fish_mammal_fraction,
+       cnc_mammal_fish_x). "half of the Black List" (49.8% are ray-finned fishes) and "barely
+       one percent" (birds, 1.2%) are this list's own shares, typed in words; birds are also
+       ahead of fishes on both C&C measures (total named money and money per species).
 
        The dollar figures are RATIOS on purpose. C&C's own methods note records that class
        money is not additive -- an organisation working on six classes has its whole revenue
@@ -1810,6 +1987,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        revenue. The comparison between classes survives that; the absolute per-species
        numbers do not, and are left out. -->
   <div class="prose">
+    <p class="eyebrow">We checked</p>
     <h3>Who is actually working on them?</h3>
     <!-- "all eight thousand" and not 8,100. 8,100 is the number of ROWS we sent Connect &
          Conserve; resolving synonyms makes it 8,079 species by their count and 8,089 by
@@ -1821,31 +1999,41 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
          sentence from the one written here. -->
     <!-- The condensed form of this is a headline in the rotation at the top of the page.
          This is the long form and they must not converge: a reader who has just read the
-         headline should get the detail here, not the same three sentences again. -->
-    <p>We wondered whether anybody was, so we checked. Our sister project
-      <a href="https://connectandconserve.org" target="_blank" rel="noopener">Connect &amp;
-      Conserve</a> maps every conservation organization it can find and what each one
-      says it works on, and we pointed it at all eight thousand species here.</p>
-    <p><strong>Sixty three came back.</strong> Not sixty three percent, not sixty three
-      hundred. Sixty three species, out of eight thousand, have any organization anywhere
-      that names them. For every species with somebody's name attached, <strong><span data-fig="cnc_unnamed_per_named">127</span></strong>
-      have nobody at all.</p>
-    <p>And the money follows the same shape. Ray-finned fishes are half of the Black List, by
-      far the largest group of species nobody can categorize, and per species they receive
-      roughly <strong>a sixth</strong> of what mammals do. Birds carry barely one percent of
-      that burden and are funded better than fishes on every measure. None of this is anyone
-      behaving badly. It is what happens when attention follows what people already know the
-      names of.</p>
+         headline should get the detail here, not the same sentences again. -->
+    <p>Our sister project <a href="https://connectandconserve.org" target="_blank"
+      rel="noopener">Connect &amp; Conserve</a> maps every conservation organization it can
+      find and what each one says it works on. We pointed it at all eight thousand species
+      here.</p>
+  </div>
+  <div class="fg-tiles">
+    <div class="fg-tile"><b><span data-fig="cnc_named_by_orgs">63</span></b><span>species, out
+      of eight thousand, are named by any organization anywhere</span></div>
+    <div class="fg-tile"><b><span data-fig="cnc_unnamed_per_named">127</span></b><span>species
+      have nobody at all, for every one with somebody's name attached</span></div>
+    <div class="fg-tile"><b><span data-fig="cnc_mammal_fish_x">7x</span></b><span>as much named
+      conservation money goes to a mammal species as to a ray-finned fish species</span></div>
+  </div>
+  <div class="prose">
+    <p>None of this is anyone behaving badly. It is what happens when attention follows what
+      people already know the names of.</p>
     <!-- REWRITTEN 2026-08-18, because the caveat it replaced has since been tested and is
          wrong. It said the newest list's low score was partly our own vocabulary and that we
          were fixing it. Connect & Conserve then added 1,878 common names and re-ran the
          entire search: 15,959 search surfaces against 14,085 before, and not one additional
          organization named one additional species. A caveat that has been tested is no
          longer a caveat, and leaving it up would have understated our own finding. -->
-    <p class="homecaveat">We thought the deck was stacked: a frog described in 2019
-      usually has no common name yet, so nobody can search for it. So we found 1,878 of
-      the missing names and ran the whole search again. Nothing moved. These species go
-      unmentioned in English exactly as thoroughly as they go unmentioned in Latin.</p>
+    <details class="fg-more"><summary>More information: is it only a problem of names?</summary>
+      <p>We thought the deck was stacked: a frog described in 2019 usually has no common name
+        yet, so nobody can search for it. So we found 1,878 of the missing names and ran the
+        whole search again. Nothing moved.</p>
+      <p>And the money follows the same shape. Ray-finned fishes are half of the Black List,
+        by far the largest group of species nobody can categorize, and per species they
+        receive about <strong><span data-fig="cnc_fish_mammal_fraction">a seventh</span></strong>
+        of the named conservation money mammals do. Birds carry barely one percent of that
+        burden and are funded better than fishes on every measure.</p>
+      <p>Named money is revenue tied to work an organization's own filing names for that
+        group. Work on whole habitats is not counted.</p>
+    </details>
   </div>
 
   <!-- THE COST ARGUMENT.
@@ -1874,55 +2062,82 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
        online reassessment of BIRDS, the best known group on Earth. Data Deficient is
        precisely where the cheap route is least likely to work, since the reason a species
        is Data Deficient is usually that nobody has the data. So the expensive figure is the
-       right one here, and using the cheap one would understate by a factor of five.
+       right one here, and using the cheap one would understate by a factor of five. That is
+       also why "at workshop rates" stays in the VISIBLE sentence (2026-11-12): without it the
+       $2.9 million reads as the cost of the job rather than of one way of doing it.
 
        AND THE CANDOR PARAGRAPH STAYS. The most cited cost figure in conservation is an
        unpublished personal communication from 2013. Saying so is the site's own standard,
-       and a reader who checks the citation will find it out anyway. -->
+       and a reader who checks the citation will find it out anyway. Since 2026-11-12 it is
+       its own visible plate; only its supporting detail is folded.
+
+       "would look at", not "clears", on the third tile: an assessment can come back Data
+       Deficient again, which is the caveat plate's whole point. -->
   <div class="prose">
+    <p class="eyebrow">The price</p>
     <h3>What would it cost to just go and look?</h3>
-    <div class="statstrip" aria-label="What assessment costs">
-      <div><b>$5M</b><span>runs the whole Red List for a year</span></div>
-      <div><b><span data-fig="red_list_cents_per_100usd">3</span>&cent;</b><span>of every $100 US conservation raises</span></div>
-      <div><b id="cost_months_tile">7 months</b><span>of that budget clears every Data
-        Deficient vertebrate</span></div>
-    </div>
-    <p>The whole Red List, every group, runs on roughly five million dollars a year,
-      against about <strong>$<span data-fig="us_conservation_revenue_2022_busd">15</span> billion</strong> the US conservation sector took in
-      during 2022, about $<span data-fig="us_gifts_2022_busd">8.6</span> billion of it in private gifts,
-      <span data-fig="us_giving_share_2022_pct">1.7%</span> of everything Americans gave that year. The one
-      instrument the entire field uses to decide what is endangered is a rounding
-      error on the sector's income. That is a bargain and an embarrassment at
-      the same time.</p>
-    <p>Here is the number nobody has published. There are
-      <strong id="cost_dd"><span data-fig="iucn_dd_vertebrates">8,659</span></strong> Data Deficient vertebrates on the Red List,
-      and at workshop rates, looking at every one of them comes to about
-      <strong id="cost_total">$<span data-fig="dd_assessment_cost_musd">2.9</span> million</strong>, <span id="cost_months">seven
-      months</span> of the Red List's own budget. And it would not be a shot in the
-      dark: where the record already pins a species to one small area,
-      <strong id="cost_hit"><span data-fig="validation_high_rate_pct0">56%</span></strong> came back threatened when IUCN looked again,
-      against <strong id="cost_base"><span data-fig="validation_low_rate">21%</span></strong> for the rest. Fifteen of twenty
-      seven, so read it as a direction and not a decimal.</p>
-    <p class="homecaveat">The caveat we will not bury: that per species cost traces to
-      one unpublished personal communication from 2013, and of the
-      <strong id="cost_ourdd"><span data-fig="register_dd">3,031</span></strong> Data Deficient species on our own list,
-      <strong id="cost_repeat"><span data-fig="dd_reassessed_still_dd">1,210</span></strong>, <span id="cost_repeat_frac">four in
-      ten</span>, have been assessed more than once and come back Data Deficient every
-      time. Money spent on looking is not money spent on finding out. Budgeting from
-      these numbers starts at <a href="/methods/">the methods page</a>.</p>
+  </div>
+  <div class="fg-tiles" aria-label="What assessment costs">
+    <div class="fg-tile"><b>$5M</b><span>runs the whole Red List, every group, for a
+      year</span></div>
+    <div class="fg-tile"><b><span data-fig="red_list_cents_per_100usd">3</span>&cent;</b><span>of
+      every $100 that US conservation raises</span></div>
+    <div class="fg-tile"><b id="cost_months_tile">7 months</b><span>of that budget would look
+      at every Data Deficient vertebrate</span></div>
+  </div>
+  <div class="prose">
+    <p>The US conservation sector took in about
+      <strong>$<span data-fig="us_conservation_revenue_2022_busd">15</span> billion</strong>
+      during 2022. The one instrument the entire field uses to decide what is endangered is a
+      rounding error on that income. That is a bargain and an embarrassment at the same
+      time.</p>
+    <p>Here is the number nobody has published. At workshop rates, looking at every one of
+      the <strong id="cost_dd"><span data-fig="iucn_dd_vertebrates">8,659</span></strong>
+      Data Deficient vertebrates on the Red List comes to about
+      <strong id="cost_total">$<span data-fig="dd_assessment_cost_musd">2.9</span> million</strong>.</p>
+    <p>And it would not be a shot in the dark. Where the record already pins a species to one
+      small area, <strong id="cost_hit"><span data-fig="validation_high_rate_pct0">56%</span></strong>
+      came back threatened when IUCN looked again, against
+      <strong id="cost_base"><span data-fig="validation_low_rate">21%</span></strong> for the
+      rest.</p>
+  </div>
+  <div class="fg-plate fg-narrow fg-caveat">
+    <h3>The caveat we will not bury</h3>
+    <p>The cost per species traces to one unpublished personal communication from 2013.
+      Money spent on looking is not money spent on finding out.</p>
+    <details class="fg-more"><summary>More information: what these numbers cannot tell you</summary>
+      <p>The <span data-fig="validation_high_rate_pct0">56%</span> is fifteen species of
+        twenty seven, so read it as a direction and not a decimal.</p>
+      <p>Of the <strong id="cost_ourdd"><span data-fig="register_dd">3,031</span></strong>
+        Data Deficient species on our own list,
+        <strong id="cost_repeat"><span data-fig="dd_reassessed_still_dd">1,210</span></strong>,
+        <span id="cost_repeat_frac">four in ten</span>, have been assessed more than once and
+        come back Data Deficient every time.</p>
+      <p>Of the sector's income, about $<span data-fig="us_gifts_2022_busd">8.7</span> billion
+        was private gifts, <span data-fig="us_giving_share_2022_pct">1.7%</span> of everything
+        Americans gave that year. The $<span data-fig="dd_assessment_cost_musd">2.9</span>
+        million is <span id="cost_months">seven months</span> of the Red List's own budget.
+        Budgeting from these numbers starts at <a href="/methods/">the methods page</a>.</p>
+    </details>
   </div>
 
   <div class="prose">
-    <h3>What would actually help</h3>
-    <!-- Four, in the order Get Involved lists them. It said three and skipped the
-         photography one, which is the odd omission: it is the only item a reader can act on
-         the same afternoon, and it is how the snail on this site was refound. -->
-    <p>Five things, and none of them need a degree. Tell somebody about these species.
-      Photograph anything you cannot name. Ask the people who decide where conservation
-      money goes to include them. Support the groups already doing this work. And if you
-      know a group of animals or plants well, help build the records that do not exist
-      yet.</p>
+    <p class="eyebrow">Your turn</p>
+    <h3>Five things that would actually help</h3>
+    <!-- Five, in the order Get Involved lists them, one per row since 2026-11-12. It once
+         said three and skipped the photography one, which is the odd omission: it is the
+         only item a reader can act on the same afternoon, and it is how the snail on this
+         site was refound. -->
+    <p>None of them need a degree.</p>
   </div>
+  <ol class="fg-steps">
+    <li>Tell somebody about these species.</li>
+    <li>Photograph anything you cannot name.</li>
+    <li>Ask the people who decide where conservation money goes to include them.</li>
+    <li>Support the groups already doing this work.</li>
+    <li>If you know a group of animals or plants well, help build the records that do not
+      exist yet.</li>
+  </ol>
   <p class="homecta"><a class="bigbtn" href="/get-involved/"
     data-goto="involved">How to help</a></p>
  </div>
@@ -2125,9 +2340,16 @@ matchMedia("(prefers-color-scheme:dark)").addEventListener("change", repaintCanv
 
 /* Both the field and the map are painted into canvases, so neither inherits a CSS
    variable change the way the DOM does — each needs an explicit repaint. */
+/* GUARDED 2026-11-12. On the home route MAP is loaded (for the home map) but #v-map does not
+   exist, so $("#v-map").hidden threw on every theme press there: the double press never
+   reached nightOpen, and the home map kept the old theme's colors. It also repaints the home
+   map now, which nothing did. */
 function repaintCanvases() {
   if (typeof DATA !== "undefined" && DATA && typeof drawField === "function") drawField();
-  if (typeof MAP !== "undefined" && MAP && !$("#v-map").hidden) drawMap();
+  if (typeof MAP === "undefined" || !MAP) return;
+  const vmap = $("#v-map");
+  if (vmap && !vmap.hidden) drawMap();
+  if (document.getElementById("homeMapCanvas") && typeof drawHomeMap === "function") drawHomeMap();
 }
 
 /* ---------- routing --------------------------------------------------------
@@ -3684,9 +3906,14 @@ function ampDraw() {
     : "";
 }
 
+/* GUARDED 2026-11-12. Each route ships only its own sections, but LOST and NSMAP can load
+   anywhere: the night reveal (two presses of Theme) loads LOST on every route. After that,
+   every resize on a route without #v-lost threw here, and the throw also skipped the home
+   map redraw below. viewShown() is false for a section the route does not have. */
+function viewShown(sel) { const e = $(sel); return !!e && !e.hidden; }
 addEventListener("resize", () => {
-  if (LOST && !$("#v-lost").hidden) drawLost();
-  if (NSMAP && !$("#v-newtaxa").hidden) drawNsMap();
+  if (LOST && viewShown("#v-lost")) drawLost();
+  if (NSMAP && viewShown("#v-newtaxa")) drawNsMap();
   /* The landing map sizes itself from its container, so it has to be redrawn when that
      container changes width. Looked up rather than assumed: #homeMapCanvas exists on the
      home route only, and this listener is live on all twelve. */
@@ -4586,10 +4813,12 @@ function boot() {
   const A = m.across_lists;
   if (v && v.high && v.low && v.low.rate) {
     const gain = Math.round((v.high.rate / v.low.rate - 1) * 100);
-    STATS.push(`The Black List holds every vertebrate stuck at Data Deficient and flags the
-      <strong>${n(c.priority_dd)}</strong> whose records already describe a tiny range. If
-      IUCN assessed these then threatened species are uncovered <strong>${gain}%</strong>
-      more efficiently than by choosing species with broader ranges.`);
+    /* SHORTENED 2026-11-12 (cap of about 20 words, Scott). "Data Deficient species" keeps the
+       count scoped to Data Deficient only, as above; "than among broader-ranged species" keeps
+       the comparison group named. */
+    STATS.push(`Assess the <strong>${n(c.priority_dd)}</strong> Data Deficient species with the
+      narrowest recorded ranges first, and threatened species turn up
+      <strong>${gain}%</strong> more efficiently than among broader-ranged species.`);
   }
   /* SECOND. The two headlines Scott wrote sit together: the first says what the list is for,
      this one says what the sector currently does about it.
@@ -4601,18 +4830,23 @@ function boot() {
      The derivation, so the next person can redo it: 63 species are named by at least one
      organization and 8,016 by none, and 8,016 / 63 = 127.2. NOT 8,079 / 63 = 128.2, which
      answers a different question than the sentence asks. */
-  STATS.push(`Our sister project <a href="https://connectandconserve.org" target="_blank"
+  /* SINCE 2026-11-12 THE 127 IS NO LONGER TYPED: it is read from the bound figure in the
+     section below (cnc_unnamed_per_named, computed from C&C's exports at build time), so the
+     headline and the body cannot disagree. "127" is only the fallback if that element is gone.
+     Shortened the same day to the cap of about 20 words. */
+  const UNNAMED = ((document.querySelector('.homebody [data-fig="cnc_unnamed_per_named"]') || {})
+    .textContent || "127").trim();
+  STATS.push(`<a href="https://connectandconserve.org" target="_blank"
     rel="noopener">Connect &amp; Conserve</a> maps every conservation organization worldwide.
-    We pointed it at all eight thousand species on these four lists. For every Black List
-    species an org mentions, <strong>127</strong> have no mention at all. That is Life
-    Overlooked.`);
+    For every Black List species one of them mentions, <strong>${UNNAMED}</strong> go
+    unmentioned. That is Life Overlooked.`);
   if (A && A.central) {
     // Rounded to the nearest hundred. "Roughly 2,697" claims a precision the number
     // does not have, and a headline that says roughly should look roughly.
     const approx = (Math.round(A.central / 100) * 100).toLocaleString();
     STATS.push(`Roughly <strong>${approx}</strong> species on these lists are probably
-      heading for extinction, and none are recognized as being at risk. No one was
-      targeting them, but now we can!`);
+      heading for extinction. Not one is recognized as being at risk. Now we can target
+      them!`);
   }
   if (D && D.n_overdue && D.median_time_to_resolution) {
     STATS.push(`Most Data Deficient listings are resolved within
@@ -4622,8 +4856,8 @@ function boot() {
   }
   if (D && D.n_reaffirmed) {
     STATS.push(`<strong>${n(D.n_reaffirmed)}</strong> of these species have been assessed
-      more than once, and come back Data Deficient every time. Looking again is not the
-      same as finding out.`);
+      more than once and came back Data Deficient every time. Looking again is not finding
+      out.`);
   }
   /* The two-rate sentence that used to sit here was replaced by the efficiency headline at
      the top of this array, which is built from the same two figures. Both said the same
@@ -4639,9 +4873,12 @@ function boot() {
       <strong>${n(c.dd)}</strong> of them are ranked here.`);
   }
   if (c.priority_dd) {
+    /* "somebody should evaluate them" stands in for "the Red List's own Criterion B ought to
+       be evaluated" (2026-11-12): a first-time reader does not know Criterion B, and the
+       methods page names it. */
     STATS.push(`For <strong>${n(c.priority_dd)}</strong> of them the published range is
-      narrow enough that the Red List's own Criterion B ought to be evaluated. That is an
-      argument for looking, not a finding that they are threatened.`);
+      narrow enough that somebody should evaluate them. That is an argument for looking, not
+      a finding of threat.`);
   }
 
   const head = $("#overdueHead"), dots = $("#statDots");
@@ -4963,7 +5200,7 @@ function boot() {
     clearTimeout(rz);
     rz = setTimeout(() => {
       drawField();
-      if (MAP && !$("#v-map").hidden) drawMap();
+      if (MAP && viewShown("#v-map")) drawMap();
     }, 150);
   });
 
