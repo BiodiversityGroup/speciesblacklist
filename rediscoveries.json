@@ -1,14 +1,14 @@
 {
-"built": "2026-11-11",
+"built": "2026-11-12",
 "counts": {
-"stories": 212,
-"raw_items": 557,
-"with_species": 129,
-"distinct_species": 256,
+"stories": 213,
+"raw_items": 559,
+"with_species": 130,
+"distinct_species": 257,
 "distinct_species_firm": 52,
-"multi_species_cards": 53,
-"with_image": 198,
-"syndicated": 85,
+"multi_species_cards": 55,
+"with_image": 200,
+"syndicated": 87,
 "on_tbg_list": 34,
 "on_list_breakdown": {
 "on our lost-species list": 26,
@@ -17,8 +17,8 @@
 "undated": 0,
 "newest": "Mon, 09 Nov 2026",
 "tracked_names": 8042,
-"image_local": 193,
-"archived": 135
+"image_local": 195,
+"archived": 137
 },
 "cards": [
 {
@@ -346,24 +346,16 @@
 "publisher": "New Scientist",
 "date": "Wed, 07 Oct 2026",
 "ts": 1791385273,
-"first_seen": "2026-08-31",
+"first_seen": "2026-10-08",
 "link": "https://www.newscientist.com/article/2590861-why-rediscovering-extinct-species-can-actually-be-a-bad-thing/",
-"image": "/rd-img/0135710740ad6cf4.jpg",
-"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
-"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
+"image": "/rd-img/25e43637f5b271a5.jpg",
+"wayback": "http://web.archive.org/web/20251018175425/https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/",
+"desc": "Finding that long-lost plants and animals are still alive often isn\u2019t an unmitigated cause for celebration, says evolutionary biologist Aelys Humphreys. To get to grips with the true scale of species loss, we need to completely change how we think about extinc",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 2,
 "also": [
-{
-"publisher": "SussexWorld",
-"link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032"
-},
-{
-"publisher": "news.uct.ac.za",
-"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
-},
 {
 "publisher": "SciTechDaily",
 "link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
@@ -1726,7 +1718,10 @@
 {
 "title": "Rare plant species rediscovered in Arunachal after 189 years",
 "species": [
-"Henckelia monophylla"
+"Henckelia monophylla",
+"Psoralea cataracta",
+"Polhillia ignota",
+"Aspalathus cordicarpa"
 ],
 "species_firm": [
 "Henckelia monophylla"
@@ -1744,7 +1739,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
 {
 "publisher": "mint",
@@ -1759,8 +1754,8 @@
 "link": "https://themeghalayanexpress.com/rare-plant-species-rediscovered-in-arunachal-after-189-years/"
 },
 {
-"publisher": "Nagaland Post - Nagaland Post delivers the latest breaking Nagaland news, politics, business, sports, culture, and local updates from Nagaland and the Northeast.",
-"link": "https://nagalandpost.com/rare-plant-species-rediscovered-in-arunachal-after-189-years/"
+"publisher": "news.uct.ac.za",
+"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
 }
 ]
 },
@@ -1958,9 +1953,7 @@
 "species": [
 "Melitta tricincta",
 "Bombus hypnorum",
-"Bombus vestalis",
-"Epeoloides pilosulus",
-"Lysimachia ciliata"
+"Bombus vestalis"
 ],
 "species_firm": [],
 "on_list": "",
@@ -1976,13 +1969,8 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "Government of Saskatchewan",
-"link": "https://www.saskatchewan.ca/government/news-and-media/2023/september/27/saskatchewan-scientists-rediscover-bee-species-last-seen-in-1955"
-}
-]
+"outlets": 1,
+"also": []
 },
 {
 "title": "How an app helped rediscover an \u2018extinct\u2019 plant",
@@ -2437,13 +2425,18 @@
 "first_seen": "2026-08-14",
 "link": "https://au.news.yahoo.com/14-million-plan-after-rediscovery-of-aussie-animal-thought-extinct-050058662.html",
 "image": "/rd-img/9531f7c97a8f05ed.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20260302014250/https://au.news.yahoo.com/major-update-12-years-after-extinct-aussie-animal-rediscovered-071635923.html",
 "desc": "Rediscovering the elusive creature was only the beginning. Find out more.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 1,
-"also": []
+"outlets": 2,
+"also": [
+{
+"publisher": "Yahoo News Australia",
+"link": "https://au.news.yahoo.com/major-update-12-years-after-extinct-aussie-animal-rediscovered-071635923.html"
+}
+]
 },
 {
 "title": "UofM researchers rediscover weevil believed to be extinct thanks to photos posted online",
@@ -2530,8 +2523,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Bombyx mori",
-"Moema claudiae"
+"Moema claudiae",
+"Bombyx mori"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2541,20 +2534,16 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-16",
+"first_seen": "2026-08-10",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/bf92591b41aa53d3.jpg",
-"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
-"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
+"image": "/rd-img/b73e2fd705e4740e.jpg",
+"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 6,
 "also": [
-{
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
 {
 "publisher": "Phys.org",
 "link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
@@ -2566,6 +2555,10 @@
 {
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
 }
 ]
 },
@@ -3550,26 +3543,6 @@
 "also": []
 },
 {
-"title": "Black-lored Waxbill rediscovery offers hope for conservationists",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "BirdGuides",
-"date": "Wed, 02 Apr 2025",
-"ts": 1743577200,
-"first_seen": "2026-08-31",
-"link": "https://www.birdguides.com/news/black-lored-waxbill-rediscovery-offers-hope-for-conservationists/",
-"image": "",
-"wayback": "http://web.archive.org/web/20250417052732/https://www.birdguides.com/news/black-lored-waxbill-rediscovery-offers-hope-for-conservationists/",
-"desc": "",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": []
-},
-{
 "title": "\u200b7 species that were rediscovered after many years of extinction\u200b",
 "species": [],
 "species_firm": [],
@@ -4141,6 +4114,35 @@
 ]
 },
 {
+"title": "Saskatchewan Scientists Rediscover Bee Species Last Seen In 1955",
+"species": [
+"Epeoloides pilosulus",
+"Lysimachia ciliata",
+"Macropis nuda"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Government of Saskatchewan",
+"date": "Wed, 27 Sep 2023",
+"ts": 1695798000,
+"first_seen": "2026-09-30",
+"link": "https://www.saskatchewan.ca/government/news-and-media/2023/september/27/saskatchewan-scientists-rediscover-bee-species-last-seen-in-1955",
+"image": "/rd-img/36b2797686eb740c.jpg",
+"wayback": "http://web.archive.org/web/20240630022204/https://www.discoverweyburn.com/articles/long-lost-bee-southern-saskatchewans-rare-rediscovery",
+"desc": "Researchers at the Royal Saskatchewan Museum (RSM) have uncovered a specimen of a rare bee that was last found in the province more than 65 years ago.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "DiscoverWeyburn",
+"link": "https://discoverweyburn.com/articles/long-lost-bee-southern-saskatchewans-rare-rediscovery"
+}
+]
+},
+{
 "title": "Forgotten tropical plants rediscovered after 100+ years with the help of community science",
 "species": [
 "Nasa humboldtiana",
@@ -4191,6 +4193,31 @@
 {
 "publisher": "Natural History Museum",
 "link": "https://www.nhm.ac.uk/discover/news/2023/june/australian-lizard-species-rediscovered-following-extinction-fears.html"
+}
+]
+},
+{
+"title": "\u2018Extinct\u2019 species rediscovered in UK",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "SussexWorld",
+"date": "Sun, 30 Apr 2023",
+"ts": 1682838000,
+"first_seen": "2026-08-31",
+"link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"image": "/rd-img/0135710740ad6cf4.jpg",
+"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 }
 ]
 },
