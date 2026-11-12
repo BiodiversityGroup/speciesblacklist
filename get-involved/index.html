@@ -1721,6 +1721,73 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* Rediscoveries, 2026-11-12: a common name on a card is roman (the scientific name it
      replaces stays italic), and the "Rediscoveries we expected" tile is a link. */
   .rdsp .rdcn { font-style:normal; }
+  /* ---- the Black List overview (2026-11-12, CnC2's Mockups O and P), scoped to #v-overview. */
+  #v-overview details.fg-more > p.lede { font-size:1.02rem; max-width:62ch; margin-left:auto; margin-right:auto; }
+  #v-overview .tierkey-intro, #v-overview .field-note { text-align:center; font-size:1rem; max-width:64ch;
+    margin-left:auto; margin-right:auto; }
+  #v-overview p.fg-panelp { font-family:var(--sans); font-size:1rem; color:var(--ink-2); text-align:center;
+    max-width:64ch; margin:.6rem auto 0; }
+  #v-overview p.fg-chartlabel { font-weight:700; color:var(--ink); }
+  /* CnC2's review: the field label centered like the text around it, and the panel heading
+     above its own follow-up question in size (it was 1.05rem against the h4's 1.25rem). */
+  #v-overview .field-head { display:block; text-align:center; }
+  #v-overview .panel > h3 { font-size:1.5rem; }
+  /* CnC2's review, 2026-11-12: a count row whose last line is short painted its empty cells in the
+     rule color (#ntCounts and #ampCounts at 500px). As with the Rediscoveries cards, the grid no
+     longer paints its gaps; each tile draws its own line, a 1px spread shadow over the 1px gap. */
+  .counts { background:none; border:0; }
+  .counts .count { box-shadow:0 0 0 1px var(--rule); }
+  /* and the Methods tier column kept "5 · priority" on one line once the table gained a column */
+  #tierTable td:first-child { white-space:nowrap; }
+  /* ---- the Lost Species page (2026-11-12, CnC2's Mockups M and N), scoped to #v-lost. */
+  #v-lost h4.fg-q { text-align:center; font-size:1.25rem; }
+  #v-lost .lostlede + .lostlede, #v-lost .defsrc + .defsrc { margin-top:.6rem; }
+  #v-lost #lostHowLong > p, #v-lost #rateLede > p { margin:.6rem auto; }
+  /* CnC2's review: at phone width the four stats wrapped one, two, one (the first label is the longest). */
+  @media (max-width:600px) { #v-lost .loststats { display:grid; grid-template-columns:1fr 1fr; } }
+  /* ---- the New Species page (2026-11-12, CnC2's Mockups K and L), scoped to #v-newtaxa. The
+     notes' reading size matches Rediscoveries; the rate block runs full width so its tiles fit. */
+  #v-newtaxa .siteslede { text-align:center; max-width:62ch; margin-left:auto; margin-right:auto; font-size:1rem; }
+  #v-newtaxa .mapstats { text-align:center; }
+  #v-newtaxa .ntabout { max-width:54rem; margin-left:auto; margin-right:auto; }
+  #v-newtaxa .ntdisc > summary { font-size:1rem; }
+  #v-newtaxa .ntdisc p { font-size:.98rem; max-width:62ch; margin-left:auto; margin-right:auto; }
+  #v-newtaxa .ntabout .ftable { max-width:44rem; margin-left:auto; margin-right:auto; }
+  #v-newtaxa .prose.ntrate { max-width:none; margin-top:2rem; }
+  #v-newtaxa .ntrate > h3, #v-newtaxa .ntrate > p, #v-newtaxa #ntRate > p { max-width:66ch; margin-left:auto; margin-right:auto; }
+  /* ---- the Methods page (2026-11-12, CnC2's Mockups I and J), scoped to #v-methods: a
+     68-character reading column (it ran about 130), headings above the text size, and the
+     three script-filled blocks (.mprose) read like the paragraphs around them. */
+  #v-methods .mbody > p, #v-methods .mbody > ul, #v-methods .mprose > p {
+    max-width:68ch; margin-left:auto; margin-right:auto; font-size:1.04rem; line-height:1.65; }
+  #v-methods .mbody > ul, #v-methods .mprose ol { text-align:left; }
+  #v-methods .mprose ol { max-width:64ch; margin:.4rem auto 1rem; font-size:1.04rem; line-height:1.6; }
+  #v-methods .warn { max-width:58rem; margin-left:auto; margin-right:auto; }
+  #v-methods .warn p { font-size:1rem; max-width:64ch; margin-left:auto; margin-right:auto; }
+  #v-methods h3 { font-size:1.5rem; }
+  #v-methods .ftable { max-width:56rem; margin-left:auto; margin-right:auto; font-size:.95rem; }
+  #v-methods .ftable th { font-size:.8rem; }
+  /* ---- the Rediscoveries page (2026-11-12, CnC2's Mockups G and H). The notes' reading size is
+     scoped to #v-redisc, so the New Species notes (same classes) keep their look until that
+     page's own preview. */
+  ul.fg-ticks { list-style:none; max-width:28rem; margin:.4rem auto 1rem; padding:0; text-align:left; }
+  ul.fg-ticks li { background:var(--surface); border:1px solid var(--rule); border-radius:6px;
+    padding:.45rem .8rem .45rem 2rem; margin:0 0 .4rem; position:relative; font-size:.98rem; }
+  ul.fg-ticks li::before { content:"+"; position:absolute; left:.85rem; color:var(--accent); font-weight:800; }
+  #v-redisc .ntabout { max-width:52rem; margin-left:auto; margin-right:auto; }
+  #v-redisc .ntdisc > summary { font-size:1rem; }
+  #v-redisc .ntdisc p, #v-redisc .rdpres li { font-size:.98rem; }
+  #v-redisc .ntdisc p, #v-redisc .rdpres { max-width:62ch; margin-left:auto; margin-right:auto; }
+  #v-redisc .gicall, #v-redisc .gicall .gicallwho { text-align:center; }
+  #v-redisc .gicall p { font-size:.98rem; max-width:60ch; margin-left:auto; margin-right:auto; }
+  #v-redisc .rdorder { font-size:.9rem; }
+  #v-redisc .exttable > summary.bigbtn { display:table; margin:1rem auto; color:var(--on-accent); list-style:none; }
+  #v-redisc .exttable > summary.bigbtn::-webkit-details-marker { display:none; }
+  /* S2: the grid no longer paints its gaps, so a short last row leaves no blank blocks. Each card
+     draws its own line with a 1px spread shadow, which fills the shared 1px gap exactly once. */
+  #v-redisc .rdgrid { background:none; border:0; }
+  #v-redisc .rdcard { box-shadow:0 0 0 1px var(--rule); }
+  #v-redisc #rdMoreRow { margin:1.2rem 0 var(--s4); }
   a.countlink { text-decoration:none; color:inherit; border-radius:6px; }
   a.countlink span { text-decoration:underline; text-decoration-color:var(--accent);
     text-underline-offset:3px; }
@@ -2405,18 +2472,20 @@ function renderRates() {
   const zero = rows.filter(r => r.per_1000 === 0);
 
   if (lede) {
+    /* 2026-11-12 readability pass: three paragraphs in a div, and the multiple written as Nx
+       (the writing style guide's form). Every word otherwise as before. */
     lede.innerHTML =
-      "Reptiles have the most species on this list and birds among the fewest, but there "
+      "<p>Reptiles have the most species on this list and birds among the fewest, but there "
       + "are also far more reptiles. Measured against how many species each group actually "
-      + "contains, the picture changes. <strong>" + esc(top.group) + "</strong> are the "
+      + "contains, the picture changes.</p><p><strong>" + esc(top.group) + "</strong> are the "
       + "worst affected group on earth by this measure: <strong>"
       + top.lost + " of " + top.described.toLocaleString() + "</strong> are unaccounted "
       + "for, <strong>one in " + Math.round(1000 / top.per_1000) + "</strong>, "
-      + Math.round(top.per_1000 / low.per_1000) + " times the rate for "
-      + esc(low.group.toLowerCase()) + "."
-      + (zero.length ? " At the other end, <strong>every one of the world's "
+      + Math.round(top.per_1000 / low.per_1000) + "x the rate for "
+      + esc(low.group.toLowerCase()) + ".</p>"
+      + (zero.length ? "<p>At the other end, <strong>every one of the world's "
          + zero[0].described + " " + esc(zero[0].group.toLowerCase())
-         + "</strong> is accounted for." : "");
+         + "</strong> is accounted for.</p>" : "");
   }
 
   wrap.innerHTML = '<div class="rate">' + rows.map(r => `<div class="raterow">
@@ -2493,24 +2562,28 @@ function renderLongest() {
   const dec = bdp.decade || 0, cen = bdp.century || 0;
   if (hl && m.median_last) {
     const now = new Date().getFullYear();
+    /* 2026-11-12 readability pass (CnC2's Mockups M and N): a paragraph, three tiles, a
+       paragraph, in a div. Every number still comes from the payload. */
     hl.innerHTML =
-      "The page above says <em>a very long time</em>. Here is what that means. Of the "
-      + "<strong>" + m.n_dated.toLocaleString() + "</strong> species whose last record "
-      + "carries a usable date, half have not been confirmed since <strong>"
-      + m.median_last + "</strong>, a gap of <strong>" + (now - m.median_last)
-      + " years</strong>. <strong>" + m.n_1800s.toLocaleString() + "</strong> of them "
-      + "were last seen in the <strong>1800s</strong>. The oldest, a Sierra Leone "
-      + "freshwater crab, was last recorded in <strong>" + m.oldest_record
-      + "</strong>, and has since been found again, the longest recovery anybody has "
-      + "documented."
+      "<p>The page above says <em>a very long time</em>. Here is what that means.</p>"
+      + "<div class=\"fg-tiles\">"
+      + "<div class=\"fg-tile\"><b>" + m.median_last + "</b><span>half of the "
+      + m.n_dated.toLocaleString() + " species with a usable date have not been confirmed "
+      + "since, a gap of " + (now - m.median_last) + " years</span></div>"
+      + "<div class=\"fg-tile\"><b>" + m.n_1800s.toLocaleString() + "</b><span>were last "
+      + "seen in the 1800s</span></div>"
+      + "<div class=\"fg-tile\"><b>" + m.oldest_record + "</b><span>the oldest last record, "
+      + "a Sierra Leone freshwater crab. It has since been found again, the longest recovery "
+      + "anybody has documented</span></div>"
+      + "</div>"
       /* "A usable date" now includes the ones the list gives as a decade, and the page
          says so rather than letting a reader assume every one of these is a year. The
          count moved by 96 when the parser stopped discarding "the 1980s"; a sentence that
          changed by that much without explaining itself is the kind of thing a careful
          reader is right to distrust. */
-      + (dec ? " " + dec.toLocaleString() + " of these dates are a decade rather than a "
+      + (dec ? "<p>" + dec.toLocaleString() + " of these dates are a decade rather than a "
              + "year, counted at its midpoint. A further " + cen.toLocaleString()
-             + " species are known only to a century and are left out of the total above."
+             + " species are known only to a century and are left out of the total above.</p>"
              : "");
   }
   // Deliberately no year-count for the crab. Deriving one gave 231 years against the 225
@@ -2762,7 +2835,10 @@ function renderLostStats() {
   // al.'s figures for how many come back are in the prose below, where they can carry
   // their source. A headline number cannot.
   const cells = [
-    [m.n_species.toLocaleString(), "on the list"],
+    /* 2026-11-12: the page opens on the species still missing, so this total says what
+       else it holds; read from the same payload (by_class.rediscovered). */
+    [m.n_species.toLocaleString(), "on the list" + (byc.rediscovered
+      ? ", including " + byc.rediscovered.toLocaleString() + " found again" : "")],
     [(byc["long-lost"] || 0).toLocaleString(), "lost over 50 years"],
     [m.n_places.toLocaleString(), "countries &amp; regions"],
     [m.oldest_record || "&middot;", "oldest last record"],
@@ -3266,8 +3342,11 @@ function drawNsMap() {
     const shown = nsGeom.hits.reduce((a, h) => a + (h.val || 0), 0)
                 + [...sh.values()].reduce((a, e) => a + e.n, 0);
     const where = nsGeom.hits.length + sh.size;
+    /* A mammal is counted once in each country it lives in, so with mammals in view the sum
+       is country records, not species (3,299 against the page's 3,163 on 2026-11-12). */
+    const unit = (nsClass && nsClass !== "mammal") ? "species" : "country records";
     note.textContent =
-      `${shown.toLocaleString()} species across ${where} countries`
+      `${shown.toLocaleString()} ${unit} across ${where} countries`
       + (nsYear ? ` described in ${nsYear}. ` : ". ")
       + (nsClass || nsYear || !m.unplaced ? "" : `${m.unplaced} more give a distribution this map could `
                                 + `not resolve to a single country and are not drawn.`);
@@ -3558,12 +3637,16 @@ function renderRate() {
   const r = Math.round(perYear(NT)), a = Math.round(perYear(AMP));
   if (!r && !a) return;
   const tot = r + a;
+  /* 2026-11-12 readability pass (CnC2's Mockups K and L): three tiles and a paragraph, in a div.
+     The weekly figure is rounded DOWN: it reads "N a week, or more", and Math.round turned
+     6.6 into a "more than 7" the data did not support. */
   el.innerHTML =
-    "Between " + FROM + " and " + TO + ", reptiles were described and left unassessed at "
-    + "<strong>about " + r + " a year</strong>, and amphibians at <strong>about " + a
-    + " a year</strong>. That is roughly <strong>" + tot + " species every year</strong> "
-    + "or more than <strong>" + Math.round(tot / 52) + " a week</strong>, "
-    + "joining a queue in just two of the thirty-odd classes of animal. The birds and mammals we have now added join the same queue, a few dozen more a year.";
+    `<div class="fg-tiles">`
+    + `<div class="fg-tile"><b>about ${r}</b><span>reptiles a year, described and left unassessed, ${FROM} to ${TO}</span></div>`
+    + `<div class="fg-tile"><b>about ${a}</b><span>amphibians a year</span></div>`
+    + `<div class="fg-tile"><b>${Math.floor(tot / 52)} a week</b><span>or more, roughly ${tot} species every year</span></div>`
+    + `</div>`
+    + `<p>That is the queue in just two of the thirty-odd classes of animal. Birds and mammals join the same queue, a few dozen more a year.</p>`;
 }
 
 function ampRender() {
@@ -3834,8 +3917,8 @@ function ensureReptiles() {
     NT = d; ntLoading = false; ntBoot(); mergedClassFilter(); mergedDraw();
   }).catch(() => {
     ntLoading = false;
-    $("#ntTable").innerHTML =
-      '<p class="siteslede">Could not load reptiles.json.</p>';
+    const tb = $("#ntTable");
+    if (tb) tb.innerHTML = '<p class="siteslede">Could not load reptiles.json.</p>';
   });
 }
 
@@ -3891,6 +3974,11 @@ function ntBoot() {
 function ntRender() {
   if (!NT) return;
   renderRate();          // whichever of the two lists lands second fills the rate
+  /* The list's controls and table live on /new-species-list/ only. On /new-species/ this
+     threw on #ntQ, the load promise fell into its catch, and the steps after ntBoot()
+     (class filter, map draw) were skipped on first load (found 2026-11-12, live since the
+     page split). */
+  if (!$("#ntTable")) return;
   const q = ($("#ntQ").value || "").trim().toLowerCase();
   const ev = $("#ntEv").value, rc = $("#ntRc").value, fam = $("#ntFam").value;
   const rows = NT.rows.filter(r =>
@@ -4333,8 +4421,21 @@ function rdBoot() {
     : "none of them yet";
 
   ["#rdQ", "#rdF"].forEach(s => { $(s).oninput = rdRender; $(s).onchange = rdRender; });
+  const more = $("#rdMore");
+  if (more) more.onclick = () => { RD_ALL = true; rdRender(); };
+  /* The "Rediscoveries we expected" tile, and a shared link to #rd-top100, land on the heading
+     with the Top 100 itself opened, not folded away under it. */
+  const t100 = document.getElementById("rdT100");
+  const tile = $("#rdCounts a.countlink");
+  if (tile && t100) tile.addEventListener("click", () => { t100.open = true; });
+  if (t100 && location.hash === "#rd-top100") t100.open = true;
   rdRender();
 }
+
+/* S1 (Scott, 2026-11-12): the newest twelve cards first, then a "Show all the finds" button.
+   A search or a filter shows every match, as before. */
+const RD_FIRST = 12;
+let RD_ALL = false;
 
 function rdRender() {
   if (!RD) return;
@@ -4348,11 +4449,14 @@ function rdRender() {
             (c.species || []).map(s => (RD.common || {})[s] || "").join(" ") + " " +
             c.publisher + " " + c.desc).toLowerCase().includes(q)));
 
+  const shown = (RD_ALL || q || f) ? cards : cards.slice(0, RD_FIRST);
   $("#rdShowing").textContent =
-    `Showing ${cards.length.toLocaleString()} of ${RD.cards.length.toLocaleString()}` +
+    `Showing ${shown.length.toLocaleString()} of ${RD.cards.length.toLocaleString()}` +
     (cards.length ? "" : ". Nothing matches this search.");
+  const moreRow = $("#rdMoreRow");
+  if (moreRow) moreRow.hidden = shown.length >= cards.length;
 
-  $("#rdGrid").innerHTML = cards.map(c => {
+  $("#rdGrid").innerHTML = shown.map(c => {
     const img = c.image
       ? `<div class="rdthumb"><img src="${esc(c.image)}" alt="" loading="lazy"
            referrerpolicy="no-referrer"
@@ -4847,47 +4951,60 @@ function boot() {
   if (HAS_METHODS) {
     $("#tierTable tbody").innerHTML = [5, 4, 3, 2, 1].map(t => `
       <tr><td>${t}${t >= PRI ? " ·&nbsp;priority" : ""}</td><td>${esc(DATA.tiers[t])}</td>
-      <td class="num">${(DATA.tier_counts[t] || 0).toLocaleString()}</td></tr>`).join("");
+      <td class="num">${(DATA.tier_counts[t] || 0).toLocaleString()}</td>
+      <td class="num">${((v.by_tier || {})[t] || {}).n
+        ? `${v.by_tier[t].threatened} of ${v.by_tier[t].n}` : "none yet"}</td></tr>`).join("");
 
-    $("#valprose").innerHTML = `Taken as one undifferentiated group, the
+    /* 2026-11-12 readability pass: these three blocks are divs now and each template writes
+       its own paragraphs (a p cannot hold paragraphs). Words unchanged except the splits. */
+    $("#valprose").innerHTML = `<p>Taken as one undifferentiated group, the
       <span class="num">${v.all.n}</span> reassessed species proved threatened at
       <strong>${v.all.rate}%</strong>, against ${v.baseline_matched.rate}% for vertebrates of
-      the same classes once Data Deficient species are set aside${
+      the same classes once Data Deficient species are set aside.${
         v.all.lo <= v.baseline_matched.rate && v.baseline_matched.rate <= v.all.hi
-          ? `, a gap inside this sample's uncertainty (${v.all.lo}% to ${v.all.hi}%)` : ""}.
-      Split by restriction, the priority
+          ? ` That gap is inside this sample's uncertainty (${v.all.lo}% to ${v.all.hi}%).` : ""}</p>
+      <p>Split by restriction, the priority
       stratum proved threatened at <strong>${v.high.rate}%</strong>
       (${v.high.threatened}/${v.high.n}) against <strong>${v.low.rate}%</strong>
-      (${v.low.threatened}/${v.low.n}) for the rest.`;
+      (${v.low.threatened}/${v.low.n}) for the rest.</p>`;
 
     /* Caveats carried figures typed by hand: "19 species" when the stratum is
        ${v.high.n}, and "split them at 4" when the validated cut is ${v.cut}. Both are read
        from the payload now, for the same reason the validation prose is. */
-    $("#valcaveats").innerHTML = `Three caveats belong with that number whenever it is
-      quoted. The top stratum rests on <span class="num">${v.high.n}</span> species, which
-      is thin. The five tiers were defined before any outcome was seen, but the decision to
-      split them at ${v.cut} was made after, which inflates the significance somewhat. And
-      IUCN chooses what to reassess, which is not a random draw: assessors go where new
-      data has appeared, and to taxa they already suspect are in trouble. The first pushes
-      toward species that turned out to be more widespread, the second toward species that
-      turned out to be threatened. The net direction is genuinely unknown, and this result
-      should be read as conditional on it.`;
+    /* "Three" and the list must agree if a caveat is ever added. */
+    $("#valcaveats").innerHTML = `<p>Three caveats belong with that number whenever it is
+      quoted.</p>
+      <ol>
+        <li>The top stratum rests on <span class="num">${v.high.n}</span> species, which is
+          thin.</li>
+        <li>The five tiers were defined before any outcome was seen, but the decision to
+          split them at ${v.cut} was made after, which inflates the significance
+          somewhat.</li>
+        <li>IUCN chooses what to reassess, which is not a random draw: assessors go where new
+          data has appeared, and to taxa they already suspect are in trouble. The first
+          pushes toward species that turned out to be more widespread, the second toward
+          species that turned out to be threatened.</li>
+      </ol>
+      <p>The net direction is genuinely unknown, and this result should be read as
+      conditional on it.</p>`;
 
     /* Computed by 04_validate_score.py, not asserted here. If the ocean is ever what makes
        this work, the page has to be able to say so. */
     const R = v.by_realm;
     if (R && R.non_oceanic && R.oceanic) {
-      $("#realmprose").innerHTML = `So it was tested. Dropping the Oceanic realm from the
-        labelled set does not weaken the result, it sharpens it: the priority stratum comes
+      $("#realmprose").innerHTML = `<p>So it was tested. Dropping the Oceanic realm from the
+        labeled set does not weaken the result, it sharpens it: the priority stratum comes
         out threatened at <strong>${R.non_oceanic.high_rate}%</strong>
         (${R.non_oceanic.high_k}/${R.non_oceanic.high_n}) against
         <strong>${R.non_oceanic.low_rate}%</strong> for the rest, an odds ratio of
         <strong>${R.non_oceanic.odds_ratio}</strong> where the full set gives
-        ${R.all.odds_ratio}. Inside the Oceanic realm alone there is no signal at all:
+        ${R.all.odds_ratio}.</p>
+        <p>Inside the Oceanic realm alone there is no signal at all:
         ${R.oceanic.high_rate}% against ${R.oceanic.low_rate}%, odds ratio
-        ${R.oceanic.odds_ratio}, <code>p = ${R.oceanic.p}</code>. That last figure rests on
+        ${R.oceanic.odds_ratio}, <code>p = ${R.oceanic.p}</code>.</p>
+        <p>That last figure rests on
         ${R.oceanic.high_n} high-tier species and cannot show a small effect, so read it as
-        no evidence of a signal rather than as evidence of none.`;
+        no evidence of a signal rather than as evidence of none.</p>`;
     }
 
     /* --- geocode verification figures, read from geo.json rather than typed in.
@@ -4950,7 +5067,9 @@ function boot() {
     // Parallel breakdowns of the tile above, so neither needs to name the list again.
     [c.dd.toLocaleString(), "Data Deficient"],
     [String(c.ne), "not yet assessed"],
-    [c.priority_dd.toLocaleString(), `of those in the priority stratum (tier ${PRI}–5)`],
+    /* priority_dd counts Data Deficient species only (the tier list's total also holds the
+       never-assessed), and "of those" followed the never-assessed tile. Said plainly, 2026-11-12. */
+    [c.priority_dd.toLocaleString(), `Data Deficient species in the priority stratum (tier ${PRI}–5)`],
     [v.high.rate + "%", "of reassessed priority species proved threatened"],
   ].map(([n, l]) => `<div class="count"><b>${n}</b><span>${l}</span></div>`).join("");
 
@@ -4971,8 +5090,8 @@ function boot() {
       <div class="pval" style="color:var(--${cls === "hi" ? "t5" : "t2"})">${g.rate}%</div>
     </div>`;
   $("#plot").innerHTML = `
-    ${prow("Priority<br>tier 4–5", v.high, "hi")}
-    ${prow("Rest<br>tier 1–3", v.low, "lo")}
+    ${prow(`Priority<br>tier ${PRI}–5`, v.high, "hi")}
+    ${prow(`Rest<br>tier 1–${PRI - 1}`, v.low, "lo")}
     <div class="axis"><span>0%</span><span>40%</span><span>80%</span></div>
     <p class="blegend"><i></i> vertical rule marks the rate for data-sufficient
       vertebrates of the same classes, ${v.baseline_matched.rate}%</p>`;
@@ -5008,7 +5127,7 @@ function boot() {
   /* --- composition bars: magnitude, so one hue, not eight --- */
   const maxC = Math.max(...Object.values(DATA.classes));
   $("#barsClass").innerHTML = Object.entries(DATA.classes).map(([k, n]) => `
-    <div class="bar"><div class="bl">${esc(k)}</div>
+    <div class="bar"><div class="bl" title="${esc(k)}">${esc(CLASS_PLAIN[k] || k)}</div>
       <div class="bt"><div class="bf" style="width:${n / maxC * 100}%"></div></div>
       <div class="bv">${n.toLocaleString()}</div></div>`).join("");
 
@@ -5373,11 +5492,20 @@ function startFeature() {
   const still = matchMedia("(prefers-reduced-motion:reduce)").matches;
   if (!still && fqPool.length > 1) setInterval(nextFeature, 9000);
 }
+/* Plain names for the vertebrate classes a general reader meets on the overview (2026-11-12).
+   The Latin stays on hover and in the register's own filter, whose values must match the data. */
+const CLASS_PLAIN = {Actinopterygii: "Ray-finned fishes", Reptilia: "Reptiles", Amphibia: "Amphibians",
+  Mammalia: "Mammals", Chondrichthyes: "Sharks, rays and chimaeras", Aves: "Birds",
+  Myxini: "Hagfishes", Petromyzonti: "Lampreys"};
+const CLASS_ONE = {Actinopterygii: "a ray-finned fish", Reptilia: "a reptile", Amphibia: "an amphibian",
+  Mammalia: "a mammal", Chondrichthyes: "a shark, ray or chimaera", Aves: "a bird",
+  Myxini: "a hagfish", Petromyzonti: "a lamprey"};
+
 function showFeature() {
   const s = fqPool[fqAt % fqPool.length];
   $("#fqQuote").textContent = s.e.replace(/\s*\.\s*$/, ".");
   $("#fqCap").innerHTML = `<i class="sci">${esc(s.n)}</i>
-    <span>·</span><span>${esc(s.c)}</span><span>·</span>
+    <span>·</span><span title="${esc(s.c)}">${esc(CLASS_ONE[s.c] || s.c)}</span><span>·</span>
     <span>${s.l === "ne" ? "never assessed by IUCN" : "IUCN: Data Deficient"}</span>`;
 }
 function nextFeature() {

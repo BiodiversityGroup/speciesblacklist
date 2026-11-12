@@ -943,7 +943,7 @@
   },
   "red_list_cents_per_100usd": {
    "t": "3",
-   "v": 3.385239702520696,
+   "v": 3.380313532503881,
    "src": "Red List budget $5M a year (literature, the tile beside it) / C&C figures.json us_revenue_2022_usd_b, per $100, in cents"
   },
   "redlist_accessed_nb": {
@@ -1031,15 +1031,45 @@
    "v": 40,
    "src": "phy_pd_results.json: Sahul's loss since 1500 as a share of its prehistoric loss, to the nearest 10 ('about')"
   },
+  "sens_drop_thin_high_k": {
+   "t": "15",
+   "v": 15,
+   "src": "build_2026/outcome_sensitivity.json rows[1].hi_k"
+  },
+  "sens_drop_thin_high_n": {
+   "t": "23",
+   "v": 23,
+   "src": "build_2026/outcome_sensitivity.json rows[1].hi_n"
+  },
   "sens_drop_thin_high_rate": {
    "t": "65.2%",
    "v": 65.2,
    "src": "build_2026/outcome_sensitivity.json rows[1] (scripts/16_outcome_sensitivity.py)"
   },
+  "sens_drop_thin_low_rate": {
+   "t": "22.9%",
+   "v": 22.9,
+   "src": "build_2026/outcome_sensitivity.json rows[1].lo_rate"
+  },
+  "sens_species_specific_high_k": {
+   "t": "15",
+   "v": 15,
+   "src": "build_2026/outcome_species_specific.json hi_k"
+  },
+  "sens_species_specific_high_n": {
+   "t": "17",
+   "v": 17,
+   "src": "build_2026/outcome_species_specific.json hi_n"
+  },
   "sens_species_specific_high_rate": {
    "t": "88.2%",
    "v": 88.2353,
    "src": "build_2026/outcome_species_specific.json (analysis/outcome_species_specific.py)"
+  },
+  "sens_species_specific_low_rate": {
+   "t": "49.0%",
+   "v": 48.9796,
+   "src": "build_2026/outcome_species_specific.json lo_rate"
   },
   "site_list_after": {
    "t": "127",
@@ -1103,17 +1133,17 @@
   },
   "us_conservation_revenue_2022_busd": {
    "t": "15",
-   "v": 14.770002834,
+   "v": 14.79152733,
    "src": "C&C figures.json us_revenue_2022_usd_b (CnC_root_long.csv, 2022 Revenue rows with an EIN, summed)"
   },
   "us_gifts_2022_busd": {
    "t": "8.7",
-   "v": 8.652587198069403,
+   "v": 8.66642933249235,
    "src": "C&C figures.json us_gifts_2022_usd_b2 (2022 revenue x each organization's Form 990 private-contributions share)"
   },
   "us_giving_share_2022_pct": {
    "t": "1.7%",
-   "v": 1.732839,
+   "v": 1.735612,
    "src": "C&C figures.json us_giving_share_2022_pct (us_gifts_2022 / all US giving in 2022, Giving USA 2023 edition)"
   },
   "validation_fisher_p": {
