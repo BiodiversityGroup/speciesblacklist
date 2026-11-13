@@ -1,11 +1,11 @@
 {
-"built": "2026-11-12",
+"built": "2026-11-13",
 "counts": {
 "stories": 213,
-"raw_items": 559,
+"raw_items": 560,
 "with_species": 130,
 "distinct_species": 257,
-"distinct_species_firm": 52,
+"distinct_species_firm": 51,
 "multi_species_cards": 55,
 "with_image": 200,
 "syndicated": 87,
@@ -133,6 +133,46 @@
 "top100": 0
 },
 {
+"title": "A Species Thought to Be Lost for 40 Years Has Been Rediscovered in a Delaware Meadow",
+"species": [
+"Pyractomena similis"
+],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "Men's Journal",
+"date": "Sat, 24 Oct 2026",
+"ts": 1792861928,
+"first_seen": "2026-10-24",
+"link": "https://www.mensjournal.com/news/a-species-thought-to-be-lost-for-40-years-has-been-rediscovered-in-a-delaware-meadow",
+"image": "/rd-img/415cdfcf4d44e4db.jpg",
+"wayback": "",
+"desc": "A scientist stumbled upon a bug species that was presumed extinct.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 7,
+"also": [
+{
+"publisher": "Yahoo",
+"link": "https://www.yahoo.com/news/science/articles/species-thought-lost-40-years-171208740.html"
+},
+{
+"publisher": "Re:wild",
+"link": "https://www.rewild.org/press/similar-firefly-rediscovered"
+},
+{
+"publisher": "People.com",
+"link": "https://people.com/firefly-lost-to-science-rediscovered-in-nature-preserve-in-delaware-12190438"
+},
+{
+"publisher": "The Animal Rescue Site",
+"link": "https://theanimalrescuesite.com/blogs/news/cw-lost-firefly-species-in-north-america"
+}
+],
+"top100": 0
+},
+{
 "title": "Assam records botanical rediscovery after 204 yrs",
 "species": [
 "Ardisia colorata"
@@ -166,48 +206,6 @@
 {
 "publisher": "The Sentinel - of this Land, for its People",
 "link": "https://www.sentinelassam.com/north-east-india-news/assam-news/assam-records-botanical-rediscovery-after-204-years-two-new-fish-species-found"
-}
-],
-"top100": 0
-},
-{
-"title": "FOUND: Firefly lost to science for more than 40 years rediscovered in a nature preserve in Delaware",
-"species": [
-"Pyractomena similis"
-],
-"species_firm": [
-"Pyractomena similis"
-],
-"on_list": "",
-"detail": "",
-"publisher": "Re:wild",
-"date": "Thu, 22 Oct 2026",
-"ts": 1792654380,
-"first_seen": "2026-10-24",
-"link": "https://www.rewild.org/press/similar-firefly-rediscovered",
-"image": "/rd-img/90e2c8a2f08dd678.jpg",
-"wayback": "",
-"desc": "The similar firefly was lost to science for 40+ years. Scientists rediscovered it in a Delaware nature preserve, one of Re:wild\u2019s most wanted lost species.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 6,
-"also": [
-{
-"publisher": "People.com",
-"link": "https://people.com/firefly-lost-to-science-rediscovered-in-nature-preserve-in-delaware-12190438"
-},
-{
-"publisher": "The Animal Rescue Site",
-"link": "https://theanimalrescuesite.com/blogs/news/cw-lost-firefly-species-in-north-america"
-},
-{
-"publisher": "Gizmodo",
-"link": "https://gizmodo.com/a-firefly-lost-for-43-years-is-back-and-its-far-from-the-only-one-missing-2000833227"
-},
-{
-"publisher": "Men's Journal",
-"link": "https://www.mensjournal.com/news/a-species-thought-to-be-lost-for-40-years-has-been-rediscovered-in-a-delaware-meadow"
 }
 ],
 "top100": 0
