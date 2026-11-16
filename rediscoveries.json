@@ -1,13 +1,13 @@
 {
-"built": "2026-11-15",
+"built": "2026-11-16",
 "counts": {
 "stories": 213,
-"raw_items": 562,
+"raw_items": 563,
 "with_species": 129,
-"distinct_species": 257,
+"distinct_species": 259,
 "distinct_species_firm": 51,
-"multi_species_cards": 53,
-"with_image": 198,
+"multi_species_cards": 54,
+"with_image": 199,
 "syndicated": 86,
 "on_tbg_list": 34,
 "on_list_breakdown": {
@@ -17,7 +17,7 @@
 "undated": 0,
 "newest": "Mon, 09 Nov 2026",
 "tracked_names": 8042,
-"image_local": 193,
+"image_local": 194,
 "archived": 137,
 "expected_finds": 1,
 "expected_species": [
@@ -135,7 +135,9 @@
 {
 "title": "A Species Thought to Be Lost for 40 Years Has Been Rediscovered in a Delaware Meadow",
 "species": [
-"Pyractomena similis"
+"Pyractomena similis",
+"Photuris mysticalampas",
+"Photinus pyralis"
 ],
 "species_firm": [],
 "on_list": "",
@@ -151,7 +153,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 7,
+"outlets": 8,
 "also": [
 {
 "publisher": "Yahoo",
@@ -162,12 +164,12 @@
 "link": "https://www.rewild.org/press/similar-firefly-rediscovered"
 },
 {
-"publisher": "People.com",
-"link": "https://people.com/firefly-lost-to-science-rediscovered-in-nature-preserve-in-delaware-12190438"
+"publisher": "Conservation news",
+"link": "https://news.mongabay.com/2026/11/a-lost-firefly-species-flashes-back-into-view-in-the-us/"
 },
 {
-"publisher": "The Animal Rescue Site",
-"link": "https://theanimalrescuesite.com/blogs/news/cw-lost-firefly-species-in-north-america"
+"publisher": "People.com",
+"link": "https://people.com/firefly-lost-to-science-rediscovered-in-nature-preserve-in-delaware-12190438"
 }
 ],
 "top100": 0
@@ -2640,8 +2642,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Bombyx mori",
-"Moema claudiae"
+"Moema claudiae",
+"Bombyx mori"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2651,20 +2653,16 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-16",
+"first_seen": "2026-08-10",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/bf92591b41aa53d3.jpg",
-"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
-"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
+"image": "/rd-img/b73e2fd705e4740e.jpg",
+"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 6,
 "also": [
-{
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
 {
 "publisher": "Phys.org",
 "link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
@@ -2676,6 +2674,10 @@
 {
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
 }
 ],
 "top100": 0
@@ -4194,9 +4196,9 @@
 "ts": 1708502400,
 "first_seen": "2026-11-15",
 "link": "https://www.discovermagazine.com/these-7-lost-species-havent-been-seen-for-decades-45910",
-"image": "",
+"image": "/rd-img/0a382b029eaac5d7.jpg",
 "wayback": "http://web.archive.org/web/20260810233828/https://www.discovermagazine.com/these-7-lost-species-havent-been-seen-for-decades-45910",
-"desc": "",
+"desc": "Though no one has seen them for decades, the search continues for these missing plants and animals.",
 "citation": "",
 "kind": "",
 "note": "",
@@ -5948,6 +5950,8 @@
 "Pareas formosensis": "Formosa Slug Snake",
 "Penelope perspicax": "Cauca Guan",
 "Pharotis imogene": "Thomas's Big-eared Bat",
+"Photinus pyralis": "Big Dipper Firefly",
+"Photuris mysticalampas": "Mysterious Lantern Firefly",
 "Phyllodactylus maresi": "Mares\u2019 Leaf-toed Gecko",
 "Pictilabrus brauni": "Braun's senator wrasse",
 "Pinus kesiya": "Khasia Pine",
