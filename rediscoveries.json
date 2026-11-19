@@ -1,8 +1,8 @@
 {
-"built": "2026-11-18",
+"built": "2026-11-19",
 "counts": {
 "stories": 213,
-"raw_items": 563,
+"raw_items": 564,
 "with_species": 129,
 "distinct_species": 259,
 "distinct_species_firm": 51,
@@ -362,16 +362,20 @@
 "publisher": "New Scientist",
 "date": "Wed, 07 Oct 2026",
 "ts": 1791385273,
-"first_seen": "2026-08-31",
+"first_seen": "2026-10-08",
 "link": "https://www.newscientist.com/article/2590861-why-rediscovering-extinct-species-can-actually-be-a-bad-thing/",
-"image": "/rd-img/0135710740ad6cf4.jpg",
-"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
-"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
+"image": "/rd-img/25e43637f5b271a5.jpg",
+"wayback": "http://web.archive.org/web/20251018175425/https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/",
+"desc": "Finding that long-lost plants and animals are still alive often isn\u2019t an unmitigated cause for celebration, says evolutionary biologist Aelys Humphreys. To get to grips with the true scale of species loss, we need to completely change how we think about extinc",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 4,
 "also": [
+{
+"publisher": "SciTechDaily",
+"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
+},
 {
 "publisher": "SussexWorld",
 "link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032"
@@ -379,10 +383,6 @@
 {
 "publisher": "news.uct.ac.za",
 "link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
-},
-{
-"publisher": "SciTechDaily",
-"link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
 }
 ],
 "top100": 0
@@ -1558,11 +1558,15 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 8,
+"outlets": 9,
 "also": [
 {
 "publisher": "scimex.org",
 "link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
+},
+{
+"publisher": "The Independent",
+"link": "https://www.independent.co.uk/bulletin/news/ptilotus-senarius-australia-shrub-queensland-b2903113.html"
 },
 {
 "publisher": "InDaily South Australia",
@@ -1571,10 +1575,6 @@
 {
 "publisher": "Yahoo News Australia",
 "link": "https://au.news.yahoo.com/photo-leads-to-rediscovery-of-aussie-plant-species-almost-60-years-after-extinction-130150844.html"
-},
-{
-"publisher": "Newsweek",
-"link": "https://www.newsweek.com/botany-plant-believed-extinct-half-century-found-queensland-australia-11373400"
 }
 ],
 "top100": 0
@@ -2642,8 +2642,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Moema claudiae",
-"Bombyx mori"
+"Bombyx mori",
+"Moema claudiae"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2653,16 +2653,20 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-10",
+"first_seen": "2026-08-16",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/b73e2fd705e4740e.jpg",
-"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
-"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
+"image": "/rd-img/bf92591b41aa53d3.jpg",
+"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
+"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 6,
 "also": [
+{
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
+},
 {
 "publisher": "Phys.org",
 "link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
@@ -2674,10 +2678,6 @@
 {
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
-},
-{
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
 }
 ],
 "top100": 0
