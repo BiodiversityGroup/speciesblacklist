@@ -12944,12 +12944,12 @@
 "Worm": 1
 },
 "by_redlist": {
-"CR(PE)": 620,
+"CR(PE)": 621,
 "CR": 203,
 "DD": 455,
-"EN": 97,
+"EN": 99,
 "LC": 201,
-"not in IUCN index": 261,
+"not in IUCN index": 258,
 "VU": 57,
 "NT": 21,
 "NE": 87
@@ -12988,9 +12988,9 @@
 "rl": {
 "LC": 115,
 "DD": 43,
-"not in IUCN index": 36,
+"not in IUCN index": 35,
 "CR(PE)": 23,
-"EN": 21,
+"EN": 22,
 "CR": 11
 },
 "examples": [
@@ -13022,10 +13022,11 @@
 },
 "rl": {
 "CR(PE)": 78,
-"not in IUCN index": 11,
+"not in IUCN index": 10,
 "DD": 7,
 "CR": 7,
-"NE": 4
+"NE": 4,
+"EN": 3
 },
 "examples": [
 "Aetheolaena hypoleuca",
@@ -13158,8 +13159,8 @@
 "rl": {
 "DD": 40,
 "LC": 11,
-"not in IUCN index": 9,
-"CR(PE)": 9,
+"CR(PE)": 10,
+"not in IUCN index": 8,
 "CR": 5,
 "EN": 5
 },

@@ -964,17 +964,6 @@
 "prec": "year"
 },
 {
-"sp": "Andinophryne colomai",
-"v": "",
-"grp": "Amphibian",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Ecuador",
-"reg": "South America",
-"last": 1984,
-"prec": "year"
-},
-{
 "sp": "Andrena labiatula",
 "v": "",
 "grp": "Insect",
@@ -12191,17 +12180,6 @@
 "prec": "year"
 },
 {
-"sp": "Leptolebias minimus",
-"v": "Peixe-anual",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1942,
-"prec": "year"
-},
-{
 "sp": "Leptolebias opalescens",
 "v": "",
 "grp": "Fish",
@@ -14210,7 +14188,7 @@
 "prec": ""
 },
 {
-"sp": "Mitophis leptipileptus (Mitophis leptepileptus)",
+"sp": "Mitophis leptepileptus (also spelled Mitophis leptipileptus)",
 "v": "Haitian Border Threadsnake",
 "grp": "Reptile",
 "cls": "lost",
@@ -14384,6 +14362,17 @@
 "reg": "Europe",
 "last": 1895,
 "prec": "decade"
+},
+{
+"sp": "Mugilogobius amadi (formerly Weberogobius amadi)",
+"v": "Poso Bungu",
+"grp": "Fish",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1987,
+"prec": "year"
 },
 {
 "sp": "Murina tenebrosa",
@@ -14871,6 +14860,17 @@
 "cty": "Spain",
 "reg": "Europe",
 "last": 1984,
+"prec": "year"
+},
+{
+"sp": "Notholebias minimus (formerly Leptolebias minimus)",
+"v": "Peixe-anual",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "EN",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1942,
 "prec": "year"
 },
 {
@@ -18219,6 +18219,17 @@
 "cty": "Greece",
 "reg": "Europe",
 "last": 1973,
+"prec": "year"
+},
+{
+"sp": "Rhaebo colomai (formerly Andinophryne colomai)",
+"v": "",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "EN",
+"cty": "Ecuador",
+"reg": "South America",
+"last": 1984,
 "prec": "year"
 },
 {
@@ -21892,17 +21903,6 @@
 "cty": "Madagascar",
 "reg": "Africa",
 "last": 2001,
-"prec": "year"
-},
-{
-"sp": "Weberogobius amadi",
-"v": "Poso Bungu",
-"grp": "Fish",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Indonesia",
-"reg": "Asia",
-"last": 1987,
 "prec": "year"
 },
 {

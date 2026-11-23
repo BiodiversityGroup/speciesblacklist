@@ -67,8 +67,8 @@
    "src": "build_2026/scored_dd.csv: DD vertebrates the corpus names under IUCN's own name (the scorer's direct matches)"
   },
   "data_built": {
-   "t": "2026-11-09",
-   "v": "2026-11-09",
+   "t": "2026-11-23",
+   "v": "2026-11-23",
    "src": "data.json meta.built"
   },
   "data_json_mb": {
@@ -517,8 +517,8 @@
    "src": "published payload"
   },
   "lost_not_flagged_pe": {
-   "t": "1,382",
-   "v": 1382,
+   "t": "1,381",
+   "v": 1381,
    "src": "lost-species.json: rows whose Red List category is not CR(PE)"
   },
   "lost_still_floor_100": {
@@ -537,8 +537,8 @@
    "src": "lost-species.json: rows not marked found again"
   },
   "lost_still_not_flagged_pe": {
-   "t": "1,260",
-   "v": 1260,
+   "t": "1,259",
+   "v": 1259,
    "src": "lost-species.json: rows not marked found again whose Red List category is not CR(PE)"
   },
   "lost_total": {
