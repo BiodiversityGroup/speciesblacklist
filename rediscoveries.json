@@ -1,13 +1,13 @@
 {
-"built": "2026-11-19",
+"built": "2026-11-23",
 "counts": {
-"stories": 213,
-"raw_items": 564,
+"stories": 215,
+"raw_items": 574,
 "with_species": 129,
 "distinct_species": 259,
 "distinct_species_firm": 51,
-"multi_species_cards": 54,
-"with_image": 199,
+"multi_species_cards": 55,
+"with_image": 202,
 "syndicated": 86,
 "on_tbg_list": 34,
 "on_list_breakdown": {
@@ -17,8 +17,8 @@
 "undated": 0,
 "newest": "Mon, 09 Nov 2026",
 "tracked_names": 8042,
-"image_local": 194,
-"archived": 137,
+"image_local": 196,
+"archived": 140,
 "expected_finds": 1,
 "expected_species": [
 "Nilopegamys plumbeus"
@@ -190,12 +190,12 @@
 "first_seen": "2026-10-24",
 "link": "https://nagalandpost.com/assam-records-botanical-rediscovery-after-204-yrs/",
 "image": "/rd-img/a5482ac3f24a9121.jpg",
-"wayback": "",
+"wayback": "http://web.archive.org/web/20261023065020/https://www.easternmirrornagaland.com/assam-records-botanical-rediscovery-after-204-years-two-new-fish-species-found",
 "desc": "Assam has recorded a significant development in biodiversity research with the rediscovery of a plant species after 204 years, and the identification of two",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
 {
 "publisher": "Social News XYZ",
@@ -208,6 +208,10 @@
 {
 "publisher": "The Sentinel - of this Land, for its People",
 "link": "https://www.sentinelassam.com/north-east-india-news/assam-news/assam-records-botanical-rediscovery-after-204-years-two-new-fish-species-found"
+},
+{
+"publisher": "Eastern Mirror",
+"link": "https://www.easternmirrornagaland.com/assam-records-botanical-rediscovery-after-204-years-two-new-fish-species-found"
 }
 ],
 "top100": 0
@@ -370,19 +374,11 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 2,
 "also": [
 {
 "publisher": "SciTechDaily",
 "link": "https://scitechdaily.com/meet-the-extinct-species-that-was-just-rediscovered-after-200-years/"
-},
-{
-"publisher": "SussexWorld",
-"link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032"
-},
-{
-"publisher": "news.uct.ac.za",
-"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
 }
 ],
 "top100": 0
@@ -894,31 +890,26 @@
 "top100": 0
 },
 {
-"title": "Assam: Rare plant rediscovered after 180 years",
+"title": "Rare plant lost to science for 180 years rediscovered in Jatinga Hills",
 "species": [
 "Rungia mastersii"
 ],
 "species_firm": [],
 "on_list": "",
 "detail": "",
-"publisher": "EastMojo",
-"date": "Fri, 24 Jul 2026",
-"ts": 1784876400,
-"first_seen": "2026-09-09",
-"link": "https://eastmojo.com/assam/2026/07/24/assam-rare-plant-rediscovered-after-180-years/",
+"publisher": "The Times of India",
+"date": "Tue, 28 Jul 2026",
+"ts": 1785222000,
+"first_seen": "2026-09-04",
+"link": "https://timesofindia.indiatimes.com/city/guwahati/rare-plant-lost-to-science-for-180-years-rediscovered-in-jatinga-hills/articleshow/132684423.cms",
 "image": "/rd-img/5cce75bfdd102baa.jpg",
 "wayback": "http://web.archive.org/web/20260729020007/https://timesofindia.indiatimes.com/city/guwahati/rare-plant-lost-to-science-for-180-years-rediscovered-in-jatinga-hills/articleshow/132684423.cms",
-"desc": "Guwahati: A rare endemic flowering plant, missing from scientific records for 180 years, has been rediscovered in Assam, giving botanists a second",
+"desc": "Silchar: A plant lost to science for nearly 180 years has resurfaced in Assam\u2019s Jatinga Hills, spotlighting the northeast\u2019s hidden botanical wealth.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "The Times of India",
-"link": "https://timesofindia.indiatimes.com/city/guwahati/rare-plant-lost-to-science-for-180-years-rediscovered-in-jatinga-hills/articleshow/132684423.cms"
-}
-],
+"outlets": 1,
+"also": [],
 "top100": 0
 },
 {
@@ -943,7 +934,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 7,
 "also": [
 {
 "publisher": "IndulgExpress",
@@ -1550,23 +1541,23 @@
 "publisher": "SciTechDaily",
 "date": "Sat, 25 Apr 2026",
 "ts": 1777100400,
-"first_seen": "2026-08-10",
+"first_seen": "2026-11-19",
 "link": "https://scitechdaily.com/scientists-stunned-after-finding-plant-thought-extinct-for-60-years/",
-"image": "/rd-img/378fe96dccb976db.jpg",
-"wayback": "http://web.archive.org/web/20260209175711/https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years",
-"desc": "\u2018Extinct\u2019 Queensland plant rediscovered after 58 years A plant species presumed extinct in the wild has been rediscovered in northern Queensland\u2014thanks to a sharp-eyed observer, a smartpho",
+"image": "/rd-img/0f6dc7eabd03d1df.jpg",
+"wayback": "http://web.archive.org/web/20260928093206/https://www.independent.co.uk/bulletin/news/ptilotus-senarius-australia-shrub-queensland-b2903113.html",
+"desc": "Want to bookmark your favourite articles and stories to read or reference later? Start your Independent Membership today.",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 9,
+"outlets": 10,
 "also": [
-{
-"publisher": "scimex.org",
-"link": "https://www.scimex.org/newsfeed/extinct-queensland-plant-rediscovered-after-58-years"
-},
 {
 "publisher": "The Independent",
 "link": "https://www.independent.co.uk/bulletin/news/ptilotus-senarius-australia-shrub-queensland-b2903113.html"
+},
+{
+"publisher": "The Independent",
+"link": "https://www.independent.co.uk/news/science/plant-species-extinct-rediscovery-australia-b2902923.html"
 },
 {
 "publisher": "InDaily South Australia",
@@ -1792,43 +1783,47 @@
 "top100": 0
 },
 {
-"title": "Rare plant species rediscovered in Arunachal after 189 years",
+"title": "Rare Plant Henckelia monophylla Rediscovered in Arunachal Pradesh",
 "species": [
-"Henckelia monophylla"
+"Henckelia monophylla",
+"Psoralea cataracta",
+"Polhillia ignota",
+"Aspalathus cordicarpa",
+"Rungia mastersii"
 ],
 "species_firm": [
 "Henckelia monophylla"
 ],
 "on_list": "",
 "detail": "",
-"publisher": "ThePrint",
-"date": "Sat, 14 Mar 2026",
-"ts": 1773471600,
+"publisher": "GK Today",
+"date": "Mon, 16 Mar 2026",
+"ts": 1773644400,
 "first_seen": "2026-08-10",
-"link": "https://theprint.in/india/rare-plant-species-rediscovered-in-arunachal-after-189-years/2878905/",
+"link": "https://www.gktoday.in/rare-plant-henckelia-monophylla-rediscovered-in-arunachal-pradesh/",
 "image": "/rd-img/aba6544582a7f025.jpg",
 "wayback": "http://web.archive.org/web/20260812123632/https://theprint.in/india/rare-plant-species-rediscovered-in-arunachal-after-189-years/2878905/",
 "desc": "Itanagar, Mar 14 (PTI) Scientists from the Botanical Survey of India have rediscovered a rare plant species endemic to Arunachal Pradesh nearly 189 years after it was last recorded during a field survey in Lohit district, officials said on Saturday. The specie",
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 6,
+"outlets": 8,
 "also": [
+{
+"publisher": "ThePrint",
+"link": "https://theprint.in/india/rare-plant-species-rediscovered-in-arunachal-after-189-years/2878905/"
+},
 {
 "publisher": "mint",
 "link": "https://www.livemint.com/news/india/lost-for-nearly-two-centuries-this-rare-plant-species-has-been-rediscovered-in-arunachal-pradesh-11773478771147.html"
-},
-{
-"publisher": "GK Today",
-"link": "https://www.gktoday.in/rare-plant-henckelia-monophylla-rediscovered-in-arunachal-pradesh/"
 },
 {
 "publisher": "Hub News Assam",
 "link": "https://themeghalayanexpress.com/rare-plant-species-rediscovered-in-arunachal-after-189-years/"
 },
 {
-"publisher": "Nagaland Post - Nagaland Post delivers the latest breaking Nagaland news, politics, business, sports, culture, and local updates from Nagaland and the Northeast.",
-"link": "https://nagalandpost.com/rare-plant-species-rediscovered-in-arunachal-after-189-years/"
+"publisher": "news.uct.ac.za",
+"link": "https://www.news.uct.ac.za/article/-2019-11-15-extinct-plant-rediscovered-after-200-years"
 }
 ],
 "top100": 0
@@ -1860,6 +1855,27 @@
 "top100": 0
 },
 {
+"title": "Two \"Lazarus\" Creatures Discovered Alive Thousands Of Years After They Were Thought To Have Gone Extinct",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "IFLScience",
+"date": "Fri, 06 Mar 2026",
+"ts": 1772784000,
+"first_seen": "2026-11-23",
+"link": "https://www.iflscience.com/two-tiny-marsupials-thought-extinct-for-6000-years-discovered-alive-and-well-in-new-guinea-82771",
+"image": "http://web.archive.org/web/20260722053621im_/https://assets.iflscience.com/assets/articleNo/82771/aImg/89418/marsupials-meta.png",
+"wayback": "http://web.archive.org/web/20260722053621/https://www.iflscience.com/two-tiny-marsupials-thought-extinct-for-6000-years-discovered-alive-and-well-in-new-guinea-82771",
+"desc": "Note to self: don\u2019t ever play hide and seek with these guys.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 1,
+"also": [],
+"top100": 0
+},
+{
 "title": "Tiny possum and glider thought extinct for 6,000 years found in remote West Papua",
 "species": [],
 "species_firm": [],
@@ -1876,7 +1892,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 8,
+"outlets": 9,
 "also": [
 {
 "publisher": "The Independent",
@@ -2138,7 +2154,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 4,
+"outlets": 5,
 "also": [
 {
 "publisher": "Time Out Durban",
@@ -2147,6 +2163,10 @@
 {
 "publisher": "The Witness",
 "link": "https://witness.co.za/news/2026/01/12/rare-grass-hopper/"
+},
+{
+"publisher": "News24",
+"link": "https://www.news24.com/southafrica/good-news/big-comeback-for-small-species-endangered-grasshopper-reappears-after-four-decades-20260117-0843"
 },
 {
 "publisher": "The Brighter Side of News",
@@ -2193,13 +2213,8 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 2,
-"also": [
-{
-"publisher": "StudyFinds",
-"link": "https://studyfinds.com/blind-mole-rediscovered-1936/"
-}
-],
+"outlets": 1,
+"also": [],
 "top100": 0
 },
 {
@@ -2642,8 +2657,8 @@
 "title": "Rediscovery of Lost Fish Species Offers New Hope for Conservation Efforts",
 "species": [
 "Aphyolebias claudiae",
-"Bombyx mori",
-"Moema claudiae"
+"Moema claudiae",
+"Bombyx mori"
 ],
 "species_firm": [
 "Aphyolebias claudiae"
@@ -2653,20 +2668,16 @@
 "publisher": "BIOENGINEER.ORG",
 "date": "Sat, 15 Nov 2025",
 "ts": 1763193600,
-"first_seen": "2026-08-16",
+"first_seen": "2026-08-10",
 "link": "https://bioengineer.org/rediscovery-of-lost-fish-species-offers-new-hope-for-conservation-efforts/",
-"image": "/rd-img/bf92591b41aa53d3.jpg",
-"wayback": "http://web.archive.org/web/20231104172858/https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435",
-"desc": "In a remarkable development for biodiversity conservation, researchers have triumphantly announced the rediscovery of Moema claudiae, a seasonal killifish species endemic to Bolivia that had for",
+"image": "/rd-img/b73e2fd705e4740e.jpg",
+"wayback": "http://web.archive.org/web/20260111170137/https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html",
+"desc": "Researchers have announced the rediscovery of Moema claudiae, a species of seasonal killifish in Bolivia that was previously thought to be possibly extinct. This rediscovery provides new hope for the conservation of this unique fish and the diverse wetland hab",
 "citation": "",
 "kind": "",
 "note": "",
 "outlets": 6,
 "also": [
-{
-"publisher": "kidsnews.com.au",
-"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
-},
 {
 "publisher": "Phys.org",
 "link": "https://phys.org/news/2025-11-rediscovery-lost-fish-species-chance.html"
@@ -2678,6 +2689,10 @@
 {
 "publisher": "GK Today",
 "link": "https://www.gktoday.in/rediscovery-of-moema-claudiae-in-bolivia-after-two-decades/"
+},
+{
+"publisher": "The Times of India",
+"link": "https://timesofindia.indiatimes.com/etimes/trending/rediscovery-of-moema-claudiae-a-second-chance-for-a-lost-fish-species-and-its-fragile-bolivian-habitat/articleshow/125361048.cms"
 }
 ],
 "top100": 0
@@ -3216,7 +3231,7 @@
 "citation": "",
 "kind": "",
 "note": "",
-"outlets": 15,
+"outlets": 16,
 "also": [
 {
 "publisher": "Good Things Guy",
@@ -3692,27 +3707,6 @@
 "image": "/rd-img/4655a550f89304a7.jpg",
 "wayback": "http://web.archive.org/web/20260811132842/https://www.thehindu.com/sci-tech/science/atree-researchers-rediscover-long-lost-species-after-111-years/article69442309.ece",
 "desc": "Rediscovery of ancient velvet worm species in India after 111 years sheds light on evolutionary history and biogeographic mysteries.",
-"citation": "",
-"kind": "",
-"note": "",
-"outlets": 1,
-"also": [],
-"top100": 0
-},
-{
-"title": "Black-lored Waxbill rediscovery offers hope for conservationists",
-"species": [],
-"species_firm": [],
-"on_list": "",
-"detail": "",
-"publisher": "BirdGuides",
-"date": "Wed, 02 Apr 2025",
-"ts": 1743577200,
-"first_seen": "2026-08-31",
-"link": "https://www.birdguides.com/news/black-lored-waxbill-rediscovery-offers-hope-for-conservationists/",
-"image": "",
-"wayback": "http://web.archive.org/web/20250417052732/https://www.birdguides.com/news/black-lored-waxbill-rediscovery-offers-hope-for-conservationists/",
-"desc": "",
 "citation": "",
 "kind": "",
 "note": "",
@@ -4249,6 +4243,36 @@
 "top100": 0
 },
 {
+"title": "Blind mole with hearing superpowers rediscovered for first time since 1936",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "StudyFinds",
+"date": "Fri, 08 Dec 2023",
+"ts": 1702022400,
+"first_seen": "2026-09-21",
+"link": "https://studyfinds.com/blind-mole-rediscovered-1936/",
+"image": "/rd-img/f5dd08a8153a934b.jpg",
+"wayback": "http://web.archive.org/web/20260214132638/https://www.2oceansvibe.com/2023/12/07/blind-mole-with-supersonic-hearing-thought-to-be-extinct-since-1936-found-in-south-africa/",
+"desc": "The De Winton\u2019s golden mole, a native of South Africa, has reappeared for the first time in 9 decades. It's the 11th lost species to be rediscovered since the launch of the Search for Lost Species in 2017.",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 3,
+"also": [
+{
+"publisher": "2oceansvibe News | South African and international news",
+"link": "https://www.2oceansvibe.com/2023/12/07/blind-mole-with-supersonic-hearing-thought-to-be-extinct-since-1936-found-in-south-africa/"
+},
+{
+"publisher": "FOX Weather",
+"link": "https://www.foxweather.com/earth-space/de-wintons-golden-mole-port-nolloths-beach"
+}
+],
+"top100": 0
+},
+{
 "title": "Track-a-mole: Sniffer dog and eDNA help \u2018rediscover\u2019 South African golden mole - news",
 "species": [
 "Cryptochloris wintoni",
@@ -4385,6 +4409,32 @@
 {
 "publisher": "Natural History Museum",
 "link": "https://www.nhm.ac.uk/discover/news/2023/june/australian-lizard-species-rediscovered-following-extinction-fears.html"
+}
+],
+"top100": 0
+},
+{
+"title": "\u2018Extinct\u2019 species rediscovered in UK",
+"species": [],
+"species_firm": [],
+"on_list": "",
+"detail": "",
+"publisher": "SussexWorld",
+"date": "Sun, 30 Apr 2023",
+"ts": 1682838000,
+"first_seen": "2026-08-31",
+"link": "https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"image": "/rd-img/0135710740ad6cf4.jpg",
+"wayback": "http://web.archive.org/web/20250908131753/https://www.sussexexpress.co.uk/read-this/extinct-species-rediscovered-in-uk-4125032",
+"desc": "A number of breathtaking creatures have recently been rediscovered in the British Isles",
+"citation": "",
+"kind": "",
+"note": "",
+"outlets": 2,
+"also": [
+{
+"publisher": "kidsnews.com.au",
+"link": "https://www.kidsnews.com.au/animals/hope-from-extinct-species-rediscovered/news-story/f8b7fbbff0c74077392ad9aee0e45435"
 }
 ],
 "top100": 0
