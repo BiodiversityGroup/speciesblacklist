@@ -2,7 +2,7 @@
  "rows": [
   {
    "sp": "Acaena exigua",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5371196), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5371196), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Acaena exigua",
@@ -15,12 +15,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Acaena exigua A.Gray",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5371196), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5371196), checked 2026-11-27"
    }
   },
   {
    "sp": "Achyranthes atollensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3085167), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3085167), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Achyranthes atollensis",
@@ -33,12 +33,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Achyranthes atollensis H.St.John",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3085167), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3085167), checked 2026-11-27"
    }
   },
   {
    "sp": "Amaranthus brownii",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5384352), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5384352), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Amaranthus brownii",
@@ -51,12 +51,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Amaranthus brownii Christoph. & Caum",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5384352), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5384352), checked 2026-11-27"
    }
   },
   {
    "sp": "Ameles fasciipennis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5048703), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5048703), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Ameles fasciipennis",
@@ -69,7 +69,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Ameles fasciipennis Kaltenbach, 1963",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5048703), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5048703), checked 2026-11-27"
    }
   },
   {
@@ -94,12 +94,12 @@
   },
   {
    "sp": "Angraecopsis dolabriformis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2804526), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2804526), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Angraecopsis dolabriformis",
     "group": "Plant - Orchids",
-    "country": "São Tomé",
+    "country": "Sao Tome and Principe",
     "last": 1892,
     "rl_2026": "EX",
     "gbif_usage_key": 2804526,
@@ -107,17 +107,17 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Angraecopsis dolabriformis (Rolfe) Schltr.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2804526), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2804526), checked 2026-11-27"
    }
   },
   {
    "sp": "Angraecum astroarche",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2833787), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2833787), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Angraecum astroarche",
     "group": "Plant - Orchids",
-    "country": "São Tomé",
+    "country": "Sao Tome and Principe",
     "last": 1888,
     "rl_2026": "EX",
     "gbif_usage_key": 2833787,
@@ -125,8 +125,13 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Angraecum astroarche Ridl.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2833787), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2833787), checked 2026-11-27"
    }
+  },
+  {
+   "sp": "Anisogomphus solitaris",
+   "why": "IUCN lists it as a synonym of Anisogomphus ceylonicus (IUCN CR); GBIF agrees. Checked 2026-11-23",
+   "class": "IUCN treats it as part of another species"
   },
   {
    "sp": "Anolis garridoi",
@@ -141,7 +146,7 @@
   },
   {
    "sp": "Argyroxiphium virescens",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3118116), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3118116), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Argyroxiphium virescens",
@@ -154,7 +159,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Argyroxiphium virescens Hillebr.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3118116), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3118116), checked 2026-11-27"
    }
   },
   {
@@ -183,7 +188,7 @@
   },
   {
    "sp": "Barbodes pachycheilus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 7684154), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 7684154), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Barbodes pachycheilus",
@@ -196,12 +201,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Barbodes pachycheilus (Herre, 1924)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 7684154), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 7684154), checked 2026-11-27"
    }
   },
   {
    "sp": "Belgrandiella boetersi",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4560466), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4560466), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Belgrandiella boetersi",
@@ -214,12 +219,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Belgrandiella boetersi P. Reischütz & Falkner, 1998",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4560466), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4560466), checked 2026-11-27"
    }
   },
   {
    "sp": "Blutaparon rigidum",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3674721), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3674721), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Blutaparon rigidum",
@@ -232,7 +237,25 @@
     "gbif_status": "SYNONYM",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Blutaparon rigidum (B.L.Rob. & Greenm.) Mears",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3674721), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3674721), checked 2026-11-27"
+   }
+  },
+  {
+   "sp": "Boana cymbalum (formerly Hypsiboas cymbalum)",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 10837805), checked 2026-11-27",
+   "class": "IUCN lists it Extinct or Extinct in the Wild",
+   "evidence": {
+    "sp": "Boana cymbalum (formerly Hypsiboas cymbalum)",
+    "group": "Amphibian",
+    "country": "Brazil",
+    "last": 1965,
+    "rl_2026": "EX",
+    "gbif_usage_key": 10837805,
+    "gbif_match": "EXACT",
+    "gbif_status": "ACCEPTED",
+    "gbif_iucn_category": "EXTINCT",
+    "iucn_name": "Boana cymbalum (Bokermann, 1963)",
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 10837805), checked 2026-11-27"
    }
   },
   {
@@ -247,7 +270,7 @@
   },
   {
    "sp": "Bradycellus chavesi",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 7546630), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 7546630), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Bradycellus chavesi",
@@ -260,12 +283,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Bradycellus chavesi Alluaud, 1919",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 7546630), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 7546630), checked 2026-11-27"
    }
   },
   {
    "sp": "Brunoniella neocaledonica",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3777978), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3777978), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Brunoniella neocaledonica",
@@ -278,7 +301,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Brunoniella neocaledonica (Heine) Moylan",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3777978), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3777978), checked 2026-11-27"
    }
   },
   {
@@ -288,7 +311,7 @@
   },
   {
    "sp": "Calathus extensicollis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5755300), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5755300), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Calathus extensicollis",
@@ -301,12 +324,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Calathus extensicollis Putzeys, 1863",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5755300), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5755300), checked 2026-11-27"
    }
   },
   {
    "sp": "Calathus vicenteorum",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5755306), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5755306), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Calathus vicenteorum",
@@ -319,12 +342,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Calathus vicenteorum Schatzmayr, 1939",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5755306), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5755306), checked 2026-11-27"
    }
   },
   {
    "sp": "Cambarellus alvarezi",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227430), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227430), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cambarellus alvarezi",
@@ -337,12 +360,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cambarellus alvarezi Villalobos, 1952",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227430), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227430), checked 2026-11-27"
    }
   },
   {
    "sp": "Cambarellus chihuahuae",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227431), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227431), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cambarellus chihuahuae",
@@ -355,7 +378,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cambarellus chihuahuae Hobbs, 1980",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227431), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227431), checked 2026-11-27"
    }
   },
   {
@@ -366,7 +389,7 @@
   },
   {
    "sp": "Clermontia multiflora",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5407755), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5407755), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Clermontia multiflora",
@@ -379,7 +402,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Clermontia multiflora Hillebr.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5407755), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5407755), checked 2026-11-27"
    }
   },
   {
@@ -389,7 +412,7 @@
   },
   {
    "sp": "Conus lugubris",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5728364), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5728364), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Conus lugubris",
@@ -402,7 +425,25 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Conus lugubris Reeve, 1849",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5728364), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5728364), checked 2026-11-27"
+   }
+  },
+  {
+   "sp": "Coregonus bezola (also spelled Coregonis bezola)",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2351227), checked 2026-11-27",
+   "class": "IUCN lists it Extinct or Extinct in the Wild",
+   "evidence": {
+    "sp": "Coregonus bezola (also spelled Coregonis bezola)",
+    "group": "Fish",
+    "country": "France",
+    "last": 1850,
+    "rl_2026": "EX",
+    "gbif_usage_key": 2351227,
+    "gbif_match": "EXACT",
+    "gbif_status": "ACCEPTED",
+    "gbif_iucn_category": "EXTINCT",
+    "iucn_name": "Coregonus bezola Fatio, 1888",
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2351227), checked 2026-11-27"
    }
   },
   {
@@ -413,12 +454,12 @@
   },
   {
    "sp": "Cryptoblepharus egeriae",
-   "why": "IUCN Red List lists it Extinct in the Wild; GBIF's Red List mirror returns EXTINCT_IN_THE_WILD for the exact name match (usage 2463625), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct in the Wild; GBIF's Red List mirror returns EXTINCT_IN_THE_WILD for the exact name match (usage 2463625), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cryptoblepharus egeriae",
     "group": "Reptile",
-    "country": "Indomalay",
+    "country": "Christmas Island",
     "last": 2010,
     "rl_2026": "EW",
     "gbif_usage_key": 2463625,
@@ -426,7 +467,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT_IN_THE_WILD",
     "iucn_name": "Cryptoblepharus egeriae (Boulenger, 1888)",
-    "reason": "IUCN Red List lists it Extinct in the Wild; GBIF's Red List mirror returns EXTINCT_IN_THE_WILD for the exact name match (usage 2463625), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct in the Wild; GBIF's Red List mirror returns EXTINCT_IN_THE_WILD for the exact name match (usage 2463625), checked 2026-11-27"
    }
   },
   {
@@ -436,7 +477,7 @@
   },
   {
    "sp": "Cyanea arborea",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412167), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412167), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea arborea",
@@ -449,12 +490,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea arborea Hillebr.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412167), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412167), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea comata",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412323), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412323), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea comata",
@@ -467,12 +508,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea comata Hillebr.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412323), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412323), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea cylindrocalyx",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412233), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412233), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea cylindrocalyx",
@@ -485,12 +526,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea cylindrocalyx (Gaudich.) Lammers, Givnish & Sytsma",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412233), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412233), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea dolichopoda",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412327), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412327), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea dolichopoda",
@@ -503,12 +544,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea dolichopoda Lammers & Lorence",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412327), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412327), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea eleeleensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412149), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412149), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea eleeleensis",
@@ -521,12 +562,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea eleeleensis (H.St.John) Lammers",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412149), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412149), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea giffardii",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412190), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412190), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea giffardii",
@@ -539,12 +580,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea giffardii Rock",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412190), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412190), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea linearifolia",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412133), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412133), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea linearifolia",
@@ -557,12 +598,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea linearifolia Rock",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412133), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412133), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea mauiensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412324), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412324), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea mauiensis",
@@ -575,12 +616,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea mauiensis (Rock) Lammers",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412324), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412324), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea minutiflora",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412090), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412090), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea minutiflora",
@@ -593,12 +634,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea minutiflora Lammers",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412090), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412090), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea parvifolia",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412136), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412136), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea parvifolia",
@@ -611,12 +652,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea parvifolia (C.N.Forbes) Lammers, Givnish & Sytsma",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412136), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412136), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea pohaku",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412162), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412162), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea pohaku",
@@ -629,12 +670,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea pohaku Lammers",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412162), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412162), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea pycnocarpa",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412138), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412138), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea pycnocarpa",
@@ -647,12 +688,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea pycnocarpa (Hillebr.) E.Wimm.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412138), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412138), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea quercifolia",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412334), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412334), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea quercifolia",
@@ -665,12 +706,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea quercifolia (Hillebr.) E.Wimm.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412334), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412334), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyanea sessilifolia",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412197), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412197), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyanea sessilifolia",
@@ -683,7 +724,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyanea sessilifolia (O.Deg.) Lammers",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412197), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5412197), checked 2026-11-27"
    }
   },
   {
@@ -693,7 +734,7 @@
   },
   {
    "sp": "Cyperus rockii",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2715278), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2715278), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyperus rockii",
@@ -706,12 +747,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyperus rockii Kük.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2715278), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2715278), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyprinus yilongensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2367192), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2367192), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyprinus yilongensis",
@@ -724,12 +765,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyprinus yilongensis Yang et al., 1977",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2367192), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2367192), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyrtandra olona",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5415207), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5415207), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyrtandra olona",
@@ -742,12 +783,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Cyrtandra olona C.N.Forbes",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5415207), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5415207), checked 2026-11-27"
    }
   },
   {
    "sp": "Cyrtandra waiolani",
-   "why": "IUCN Red List lists it Extinct in the Wild; GBIF's Red List mirror returns EXTINCT_IN_THE_WILD for the exact name match (usage 5415164), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct in the Wild; GBIF's Red List mirror returns EXTINCT_IN_THE_WILD for the exact name match (usage 5415164), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Cyrtandra waiolani",
@@ -760,12 +801,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT_IN_THE_WILD",
     "iucn_name": "Cyrtandra waiolani Wawra",
-    "reason": "IUCN Red List lists it Extinct in the Wild; GBIF's Red List mirror returns EXTINCT_IN_THE_WILD for the exact name match (usage 5415164), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct in the Wild; GBIF's Red List mirror returns EXTINCT_IN_THE_WILD for the exact name match (usage 5415164), checked 2026-11-27"
    }
   },
   {
    "sp": "Delilia inelegans",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3088791), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3088791), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Delilia inelegans",
@@ -778,12 +819,12 @@
     "gbif_status": "SYNONYM",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Delilia inelegans (Hook.f.) Kuntze",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3088791), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3088791), checked 2026-11-27"
    }
   },
   {
    "sp": "Delissea niihauensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164989), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164989), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Delissea niihauensis",
@@ -796,12 +837,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Delissea niihauensis H.St.John",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164989), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164989), checked 2026-11-27"
    }
   },
   {
    "sp": "Delissea sinuata",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164978), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164978), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Delissea sinuata",
@@ -814,12 +855,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Delissea sinuata Hillebr.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164978), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164978), checked 2026-11-27"
    }
   },
   {
    "sp": "Delissea undulata",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164965), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164965), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Delissea undulata",
@@ -832,7 +873,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Delissea undulata Gaudich.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164965), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3164965), checked 2026-11-27"
    }
   },
   {
@@ -847,6 +888,11 @@
    "evidence": "United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/280904565; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/319484817; United States human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/311096903"
   },
   {
+   "sp": "Disparoneura ramajana",
+   "why": "IUCN lists it as a synonym of Elattoneura leucostigma (IUCN EN); GBIF agrees. Checked 2026-11-23",
+   "class": "IUCN treats it as part of another species"
+  },
+  {
    "sp": "Eleocharis fallax",
    "why": "the list says last recorded 1919, but GBIF holds 333 records since, in 6 of the last six decades, with no silence longer than 5 years anywhere in the sequence; the species was never unaccounted for and the listing was the error",
    "class": "records all along: a species that was never lost",
@@ -859,7 +905,7 @@
   },
   {
    "sp": "Erythrolamprus perfuscus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9619895), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9619895), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Erythrolamprus perfuscus",
@@ -872,8 +918,13 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Erythrolamprus perfuscus (Cope, 1862)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9619895), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9619895), checked 2026-11-27"
    }
+  },
+  {
+   "sp": "Euphorbia pirahazo",
+   "why": "IUCN lists it as a synonym of Euphorbia elastica (IUCN CR); GBIF agrees. Checked 2026-11-23",
+   "class": "IUCN treats it as part of another species"
   },
   {
    "sp": "Eutropis macrophthalma",
@@ -888,7 +939,7 @@
   },
   {
    "sp": "Galba vancouverensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 10212133), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 10212133), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Galba vancouverensis",
@@ -901,8 +952,13 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Galba vancouverensis (Baker, 1939)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 10212133), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 10212133), checked 2026-11-27"
    }
+  },
+  {
+   "sp": "Glandulocauda melanogenys",
+   "why": "IUCN lists it as a synonym of Glandulocauda melanopleura (IUCN EN); GBIF agrees. Checked 2026-11-23",
+   "class": "IUCN treats it as part of another species"
   },
   {
    "sp": "Hesperis kurdica",
@@ -924,7 +980,7 @@
   },
   {
    "sp": "Hibiscadelphus bombycinus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152784), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152784), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Hibiscadelphus bombycinus",
@@ -937,12 +993,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Hibiscadelphus bombycinus C.N.Forbes",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152784), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152784), checked 2026-11-27"
    }
   },
   {
    "sp": "Hibiscadelphus crucibracteatus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152787), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152787), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Hibiscadelphus crucibracteatus",
@@ -955,12 +1011,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Hibiscadelphus crucibracteatus Hobdy",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152787), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152787), checked 2026-11-27"
    }
   },
   {
    "sp": "Hibiscadelphus wilderianus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152790), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152790), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Hibiscadelphus wilderianus",
@@ -973,12 +1029,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Hibiscadelphus wilderianus Rock",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152790), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3152790), checked 2026-11-27"
    }
   },
   {
    "sp": "Hypolimnus pedderensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9300059), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9300059), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Hypolimnus pedderensis",
@@ -991,7 +1047,7 @@
     "gbif_status": "SYNONYM",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Hypolimnus pedderensis (Jamieson, 1974)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9300059), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 9300059), checked 2026-11-27"
    }
   },
   {
@@ -1001,8 +1057,13 @@
    "evidence": "China human observation iNaturalist research-grade observations https://www.inaturalist.org/observations/175868116"
   },
   {
+   "sp": "Knodus calliurus",
+   "why": "IUCN lists it as a synonym of Moenkhausia lepidura (IUCN LC); GBIF agrees. Checked 2026-11-23",
+   "class": "IUCN treats it as part of another species"
+  },
+  {
    "sp": "Kokia lanceolata",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5406801), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5406801), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Kokia lanceolata",
@@ -1015,17 +1076,17 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Kokia lanceolata Lewton",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5406801), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5406801), checked 2026-11-27"
    }
   },
   {
    "sp": "Labidura herculeana",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4394021), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4394021), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Labidura herculeana",
     "group": "Insect",
-    "country": "Saint Helena, Ascension, Tristan da Cunha",
+    "country": "Saint Helena",
     "last": 1967,
     "rl_2026": "EX",
     "gbif_usage_key": 4394021,
@@ -1033,8 +1094,13 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Labidura herculeana (Fabricius, 1798)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4394021), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4394021), checked 2026-11-27"
    }
+  },
+  {
+   "sp": "Lankascincus munindradasai",
+   "why": "IUCN lists it as a synonym of Lankascincus taprobanensis (IUCN EN); GBIF agrees. Checked 2026-11-23",
+   "class": "IUCN treats it as part of another species"
   },
   {
    "sp": "Lepidophyma zongolica",
@@ -1043,7 +1109,7 @@
   },
   {
    "sp": "Leporillus apicalis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2437781), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2437781), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Leporillus apicalis",
@@ -1056,7 +1122,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Leporillus apicalis (J. Gould, 1853)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2437781), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2437781), checked 2026-11-27"
    }
   },
   {
@@ -1071,7 +1137,7 @@
   },
   {
    "sp": "Lithobates fisheri",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2427129), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2427129), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Lithobates fisheri",
@@ -1084,12 +1150,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Lithobates fisheri (Stejneger, 1893)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2427129), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2427129), checked 2026-11-27"
    }
   },
   {
    "sp": "Litoria nyakalensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2427729), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2427729), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Litoria nyakalensis",
@@ -1102,7 +1168,7 @@
     "gbif_status": "SYNONYM",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Litoria nyakalensis Liem, 1974",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2427729), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2427729), checked 2026-11-27"
    }
   },
   {
@@ -1119,7 +1185,7 @@
   },
   {
    "sp": "Megadytes ducalis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791515), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791515), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Megadytes ducalis",
@@ -1132,12 +1198,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Megadytes ducalis Sharp, 1882",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791515), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791515), checked 2026-11-27"
    }
   },
   {
    "sp": "Melicope macropus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3190277), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3190277), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Melicope macropus",
@@ -1150,12 +1216,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Melicope macropus (Hillebr.) T.G.Hartley & B.C.Stone",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3190277), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3190277), checked 2026-11-27"
    }
   },
   {
    "sp": "Melicope obovata",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3190357), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3190357), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Melicope obovata",
@@ -1168,12 +1234,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Melicope obovata (H.St.John) T.G.Hartley & B.C.Stone",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3190357), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3190357), checked 2026-11-27"
    }
   },
   {
    "sp": "Melomys rubicola",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2439012), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2439012), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Melomys rubicola",
@@ -1186,7 +1252,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Melomys rubicola Thomas, 1924",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2439012), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2439012), checked 2026-11-27"
    }
   },
   {
@@ -1197,7 +1263,7 @@
   },
   {
    "sp": "Mirogrex hulensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5787926), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5787926), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Mirogrex hulensis",
@@ -1210,7 +1276,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Mirogrex hulensis Goren, Fishelson & Trewavas, 1973",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5787926), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5787926), checked 2026-11-27"
    }
   },
   {
@@ -1221,7 +1287,7 @@
   },
   {
    "sp": "Neocnemis occidentalis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1214631), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1214631), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Neocnemis occidentalis",
@@ -1234,12 +1300,17 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Neocnemis occidentalis Crotch, 1867",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1214631), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1214631), checked 2026-11-27"
    }
   },
   {
+   "sp": "Neritina tiassalensis",
+   "why": "IUCN lists it as a synonym of Clypeolum owenianum (IUCN LC); GBIF agrees. Checked 2026-11-23",
+   "class": "IUCN treats it as part of another species"
+  },
+  {
    "sp": "Nyctophilus howensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4266175), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4266175), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Nyctophilus howensis",
@@ -1252,12 +1323,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Nyctophilus howensis McKean, 1975",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4266175), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4266175), checked 2026-11-27"
    }
   },
   {
    "sp": "Ochrosia kilaueaensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3169633), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3169633), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Ochrosia kilaueaensis",
@@ -1270,7 +1341,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Ochrosia kilaueaensis H.St.John",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3169633), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3169633), checked 2026-11-27"
    }
   },
   {
@@ -1286,7 +1357,7 @@
   },
   {
    "sp": "Pacifastacus nigrescens",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2226996), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2226996), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Pacifastacus nigrescens",
@@ -1299,12 +1370,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Pacifastacus nigrescens (Stimpson, 1857)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2226996), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2226996), checked 2026-11-27"
    }
   },
   {
    "sp": "Pantanodon madagascariensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2349775), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2349775), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Pantanodon madagascariensis",
@@ -1317,7 +1388,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Pantanodon madagascariensis (Arnoult, 1963)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2349775), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2349775), checked 2026-11-27"
    }
   },
   {
@@ -1333,7 +1404,7 @@
   },
   {
    "sp": "Partula guamensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5783032), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5783032), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Partula guamensis",
@@ -1346,12 +1417,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Partula guamensis (L. Pfeiffer, 1846)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5783032), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5783032), checked 2026-11-27"
    }
   },
   {
    "sp": "Partula sagitta",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5783058), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5783058), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Partula sagitta",
@@ -1364,12 +1435,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Partula sagitta Crampton & C.M. Cooke, 1953",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5783058), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5783058), checked 2026-11-27"
    }
   },
   {
    "sp": "Pentagenia robusta",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1409015), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1409015), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Pentagenia robusta",
@@ -1382,12 +1453,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Pentagenia robusta McDunnough, 1926",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1409015), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1409015), checked 2026-11-27"
    }
   },
   {
    "sp": "Peperomia degeneri",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3086487), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3086487), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Peperomia degeneri",
@@ -1400,7 +1471,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Peperomia degeneri Yunck.",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3086487), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3086487), checked 2026-11-27"
    }
   },
   {
@@ -1410,7 +1481,7 @@
   },
   {
    "sp": "Pieris wollastoni",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4535297), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4535297), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Pieris wollastoni",
@@ -1423,7 +1494,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Pieris wollastoni (Butler, 1886)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4535297), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 4535297), checked 2026-11-27"
    }
   },
   {
@@ -1434,7 +1505,7 @@
   },
   {
    "sp": "Platytropius siamensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2341710), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2341710), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Platytropius siamensis",
@@ -1447,12 +1518,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Platytropius siamensis (Sauvage, 1883)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2341710), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2341710), checked 2026-11-27"
    }
   },
   {
    "sp": "Plethodon ainsworthi",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2431522), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2431522), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Plethodon ainsworthi",
@@ -1465,7 +1536,7 @@
     "gbif_status": "SYNONYM",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Plethodon ainsworthi Lazell, 1998",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2431522), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2431522), checked 2026-11-27"
    }
   },
   {
@@ -1475,7 +1546,7 @@
   },
   {
    "sp": "Procambarus angustatus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227156), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227156), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Procambarus angustatus",
@@ -1488,12 +1559,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Procambarus angustatus (LeConte, 1856)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227156), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2227156), checked 2026-11-27"
    }
   },
   {
    "sp": "Prototroctes oxyrhynchus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2410419), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2410419), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Prototroctes oxyrhynchus",
@@ -1506,7 +1577,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Prototroctes oxyrhynchus Günther, 1870",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2410419), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2410419), checked 2026-11-27"
    }
   },
   {
@@ -1517,7 +1588,7 @@
   },
   {
    "sp": "Psephurus gladius",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2402078), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2402078), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Psephurus gladius",
@@ -1530,12 +1601,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Psephurus gladius (Martens, 1862)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2402078), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2402078), checked 2026-11-27"
    }
   },
   {
    "sp": "Pseudoeurycea exspectata",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2431402), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2431402), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Pseudoeurycea exspectata",
@@ -1548,12 +1619,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Pseudoeurycea exspectata Stuart, 1954",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2431402), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2431402), checked 2026-11-27"
    }
   },
   {
    "sp": "Pycnandra micrantha",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 8030973), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 8030973), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Pycnandra micrantha",
@@ -1566,12 +1637,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Pycnandra micrantha (Beauvis.) Munzinger & Swenson",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 8030973), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 8030973), checked 2026-11-27"
    }
   },
   {
    "sp": "Rhantus papuanus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791520), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791520), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Rhantus papuanus",
@@ -1584,7 +1655,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Rhantus papuanus J. Balfour-Browne, 1939",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791520), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5791520), checked 2026-11-27"
    }
   },
   {
@@ -1595,7 +1666,7 @@
   },
   {
    "sp": "Rhyacophila amabilis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5052966), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5052966), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Rhyacophila amabilis",
@@ -1608,12 +1679,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Rhyacophila amabilis Denning, 1965",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5052966), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5052966), checked 2026-11-27"
    }
   },
   {
    "sp": "Sanicula kauaiensis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3034849), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3034849), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Sanicula kauaiensis",
@@ -1626,7 +1697,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Sanicula kauaiensis H.St.John",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3034849), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3034849), checked 2026-11-27"
    }
   },
   {
@@ -1636,7 +1707,7 @@
   },
   {
    "sp": "Schiedea amplexicaulis",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5384415), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5384415), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Schiedea amplexicaulis",
@@ -1649,7 +1720,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Schiedea amplexicaulis H.Mann",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5384415), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5384415), checked 2026-11-27"
    }
   },
   {
@@ -1664,12 +1735,12 @@
   },
   {
    "sp": "Sympetrum dilatatum",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1428208), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1428208), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Sympetrum dilatatum",
     "group": "Insect",
-    "country": "Saint Helena, Ascension, Tristan da Cunha",
+    "country": "Saint Helena",
     "last": 1963,
     "rl_2026": "EX",
     "gbif_usage_key": 1428208,
@@ -1677,17 +1748,17 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Sympetrum dilatatum (Calvert, 1892)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1428208), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 1428208), checked 2026-11-27"
    }
   },
   {
    "sp": "Syzygium balfourii",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3182284), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3182284), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Syzygium balfourii",
     "group": "Plant - Trees & Shrubs",
-    "country": "Mascarene Islands (Rodrigues Island)",
+    "country": "Mauritius",
     "last": 1874,
     "rl_2026": "EX",
     "gbif_usage_key": 3182284,
@@ -1695,12 +1766,12 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Syzygium balfourii (Baker) J.Guého & A.J.Scott",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3182284), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 3182284), checked 2026-11-27"
    }
   },
   {
    "sp": "Taudactylus acutirostris",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2424611), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2424611), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Taudactylus acutirostris",
@@ -1713,7 +1784,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Taudactylus acutirostris (Andersson, 1916)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2424611), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2424611), checked 2026-11-27"
    }
   },
   {
@@ -1724,7 +1795,7 @@
   },
   {
    "sp": "Urolophus javanicus",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2419395), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2419395), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Urolophus javanicus",
@@ -1737,12 +1808,17 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Urolophus javanicus (Martens, 1864)",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2419395), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 2419395), checked 2026-11-27"
    }
   },
   {
+   "sp": "Vatica xishuangbannaensis",
+   "why": "IUCN lists it as a synonym of Vatica guangxiensis (IUCN EN); GBIF agrees. Checked 2026-11-23",
+   "class": "IUCN treats it as part of another species"
+  },
+  {
    "sp": "Wikstroemia hanalei",
-   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5420861), checked 2026-09-18",
+   "why": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5420861), checked 2026-11-27",
    "class": "IUCN lists it Extinct or Extinct in the Wild",
    "evidence": {
     "sp": "Wikstroemia hanalei",
@@ -1755,7 +1831,7 @@
     "gbif_status": "ACCEPTED",
     "gbif_iucn_category": "EXTINCT",
     "iucn_name": "Wikstroemia hanalei Wawra",
-    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5420861), checked 2026-09-18"
+    "reason": "IUCN Red List lists it Extinct; GBIF's Red List mirror returns EXTINCT for the exact name match (usage 5420861), checked 2026-11-27"
    }
   },
   {
@@ -1765,8 +1841,8 @@
   }
  ],
  "meta": {
-  "n": 132,
-  "iucn_extinct_checked": "2026-09-18",
+  "n": 142,
+  "iucn_extinct_checked": "2026-11-27",
   "note": "Species removed from the Lost Species page, each with its reason. The upstream list is unchanged. Country resolution only."
  }
 }

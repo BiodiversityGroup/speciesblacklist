@@ -155,17 +155,6 @@
 "prec": "year"
 },
 {
-"sp": "Acentronura larsonae",
-"v": "Larson's Pipehorse, Helen's Pygmy Pipehorse",
-"grp": "Fish",
-"cls": "lost",
-"rl": "DD",
-"cty": "Australia",
-"reg": "Australia",
-"last": 1984,
-"prec": "year"
-},
-{
 "sp": "Acheta gossypii",
 "v": "Puglia House-cricket",
 "grp": "Insect",
@@ -229,6 +218,17 @@
 "cty": "Indonesia",
 "reg": "Asia",
 "last": 1983,
+"prec": "year"
+},
+{
+"sp": "Adrianichthys roseni",
+"v": "",
+"grp": "Fish",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1978,
 "prec": "year"
 },
 {
@@ -535,6 +535,28 @@
 "prec": "year"
 },
 {
+"sp": "Alopoglossus eurylepis (formerly Ptychoglossus eurylepis)",
+"v": "Largescale Lizard",
+"grp": "Reptile",
+"cls": "lost",
+"rl": "NT",
+"cty": "Colombia",
+"reg": "South America",
+"last": 1984,
+"prec": "year"
+},
+{
+"sp": "Alopoglossus grandisquamatus (formerly Ptychoglossus grandisquamatus)",
+"v": "Common Largescale Lizard",
+"grp": "Reptile",
+"cls": "rediscovered",
+"rl": "DD",
+"cty": "Colombia",
+"reg": "South America",
+"last": 1981,
+"prec": "year"
+},
+{
 "sp": "Alopoglossus lehmanni",
 "v": "",
 "grp": "Reptile",
@@ -598,17 +620,6 @@
 "cty": "Thailand",
 "reg": "Asia",
 "last": 1990,
-"prec": "year"
-},
-{
-"sp": "Amietophrynus danielae",
-"v": "Ivory Coast Toad",
-"grp": "Amphibian",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Côte d'Ivoire",
-"reg": "Africa",
-"last": 1977,
 "prec": "year"
 },
 {
@@ -730,17 +741,6 @@
 "cty": "Haiti",
 "reg": "Islands",
 "last": 1971,
-"prec": "year"
-},
-{
-"sp": "Amphisbaena cerradensis",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 2006,
 "prec": "year"
 },
 {
@@ -964,6 +964,28 @@
 "prec": "year"
 },
 {
+"sp": "Andinosaura afrania (formerly Riama afrania)",
+"v": "",
+"grp": "Reptile",
+"cls": "lost",
+"rl": "DD",
+"cty": "Colombia",
+"reg": "South America",
+"last": 1989,
+"prec": "year"
+},
+{
+"sp": "Andinosaura stellae (formerly Riama stellae)",
+"v": "",
+"grp": "Reptile",
+"cls": "lost",
+"rl": "DD",
+"cty": "Colombia",
+"reg": "South America",
+"last": 1986,
+"prec": "year"
+},
+{
 "sp": "Andrena labiatula",
 "v": "",
 "grp": "Insect",
@@ -1116,17 +1138,6 @@
 "reg": "Islands",
 "last": 1962,
 "prec": "year"
-},
-{
-"sp": "Anisogomphus solitaris",
-"v": "Sri Lanka Solitaire Clubtail",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "CR(PE)",
-"cty": "Sri Lanka",
-"reg": "Islands",
-"last": 1975,
-"prec": "decade"
 },
 {
 "sp": "Anisopappus burundiensis",
@@ -1428,28 +1439,6 @@
 "prec": "year"
 },
 {
-"sp": "Apteromimus platyderoides",
-"v": "Chestnut-brown Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1967,
-"prec": "year"
-},
-{
-"sp": "Apteromimus wollastoni",
-"v": "Wollaston's Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1967,
-"prec": "year"
-},
-{
 "sp": "Aquiloeurycea praecellens",
 "v": "Admirable False Brook Salamander",
 "grp": "Amphibian",
@@ -1648,11 +1637,11 @@
 "prec": "year"
 },
 {
-"sp": "Aspidoscelis picta",
+"sp": "Aspidoscelis pictus (also spelled Aspidoscelis picta)",
 "v": "",
 "grp": "Reptile",
 "cls": "lost",
-"rl": "not in IUCN index",
+"rl": "LC",
 "cty": "Mexico",
 "reg": "Islands",
 "last": 2001,
@@ -1670,11 +1659,11 @@
 "prec": "year"
 },
 {
-"sp": "Aspidostemon manongarivense",
+"sp": "Aspidostemon manongarivensis (also spelled Aspidostemon manongarivense)",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
 "cls": "long-lost",
-"rl": "not in IUCN index",
+"rl": "CR",
 "cty": "Madagascar",
 "reg": "Africa",
 "last": 1954,
@@ -1824,17 +1813,6 @@
 "prec": "year"
 },
 {
-"sp": "Astyanacinus goyanensis",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1944,
-"prec": "year"
-},
-{
 "sp": "Astyanacinus moorii",
 "v": "",
 "grp": "Fish",
@@ -1854,6 +1832,28 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1908,
+"prec": "year"
+},
+{
+"sp": "Astyanax goyanensis (formerly Astyanacinus goyanensis)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1944,
+"prec": "year"
+},
+{
+"sp": "Astyanax gymnodontus (formerly Psalidodon gymnodontus)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1911,
 "prec": "year"
 },
 {
@@ -2805,6 +2805,17 @@
 "prec": "year"
 },
 {
+"sp": "Barbodes lindog",
+"v": "",
+"grp": "Fish",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Philippines",
+"reg": "Asia",
+"last": 2008,
+"prec": "year"
+},
+{
 "sp": "Barbodes microps",
 "v": "",
 "grp": "Fish",
@@ -2814,6 +2825,17 @@
 "reg": "Asia",
 "last": 1865,
 "prec": "decade"
+},
+{
+"sp": "Barbodes sirang",
+"v": "",
+"grp": "Fish",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Philippines",
+"reg": "Asia",
+"last": 2006,
+"prec": "year"
 },
 {
 "sp": "Barbonymus platysoma",
@@ -2970,14 +2992,146 @@
 "prec": "year"
 },
 {
-"sp": "Bembidion derelictus",
+"sp": "Bembidion derelictum (also spelled Bembidion derelictus)",
 "v": "Ground-beetle",
 "grp": "Insect",
 "cls": "long-lost",
-"rl": "not in IUCN index",
+"rl": "CR(PE)",
 "cty": "Azores",
 "reg": "Islands",
 "last": 1888,
+"prec": "year"
+},
+{
+"sp": "Bembidion dicksoniae (formerly Pseudophilochthus dicksoniae)",
+"v": "Tree Fern Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1876,
+"prec": "year"
+},
+{
+"sp": "Bembidion evanescens (formerly Pseudophilochthus evanescens)",
+"v": "Vanishing Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1967,
+"prec": "year"
+},
+{
+"sp": "Bembidion fossor (formerly Pseudophilochthus fossor)",
+"v": "Digger Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1876,
+"prec": "year"
+},
+{
+"sp": "Bembidion gemmulipenne (formerly Pseudophilochthus gemmulipennis)",
+"v": "Shiny-backed Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1967,
+"prec": "year"
+},
+{
+"sp": "Bembidion grayanum (formerly Pseudophilochthus grayanus)",
+"v": "Gray's Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1967,
+"prec": "year"
+},
+{
+"sp": "Bembidion megalops (formerly Endosomatium megalops)",
+"v": "Big-headed Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1876,
+"prec": "year"
+},
+{
+"sp": "Bembidion nubigena (formerly Pseudophilochthus nubigena)",
+"v": "Brown-clouded Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1967,
+"prec": "year"
+},
+{
+"sp": "Bembidion platyderoides (formerly Apteromimus platyderoides)",
+"v": "Chestnut-brown Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1967,
+"prec": "year"
+},
+{
+"sp": "Bembidion rufosuffusum (formerly Pseudophilochthus rufosuffusus)",
+"v": "Red-suffused Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1967,
+"prec": "year"
+},
+{
+"sp": "Bembidion shepherdae (formerly Apteromimus wollastoni)",
+"v": "Wollaston's Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "not in IUCN index",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1967,
+"prec": "year"
+},
+{
+"sp": "Bembidion sublimbatum (formerly Pseudophilochthus sublimbatus)",
+"v": "West Lodge Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1876,
+"prec": "year"
+},
+{
+"sp": "Bembidion trechoides (formerly Pseudophilochthus trechoides)",
+"v": "Trechus-like Ground Beetle",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "not in IUCN index",
+"cty": "Saint Helena",
+"reg": "Islands",
+"last": 1876,
 "prec": "year"
 },
 {
@@ -3066,6 +3220,17 @@
 "cty": "Tanzania",
 "reg": "Africa",
 "last": 1971,
+"prec": "year"
+},
+{
+"sp": "Boana claresignata",
+"v": "Rio Treefrog",
+"grp": "Amphibian",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1964,
 "prec": "year"
 },
 {
@@ -3729,17 +3894,6 @@
 "prec": ""
 },
 {
-"sp": "Cabalus lafresnayanus",
-"v": "New Caledonia Rail",
-"grp": "Bird",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "New Caledonia",
-"reg": "Islands",
-"last": 1890,
-"prec": "year"
-},
-{
 "sp": "Caecocypris basimi",
 "v": "Haditha Cavefish",
 "grp": "Fish",
@@ -3795,11 +3949,11 @@
 "prec": "year"
 },
 {
-"sp": "Calicnemis fortis",
+"sp": "Calicnemia fortis (also spelled Calicnemis fortis)",
 "v": "",
 "grp": "Insect",
 "cls": "lost",
-"rl": "not in IUCN index",
+"rl": "DD",
 "cty": "Pakistan",
 "reg": "Asia",
 "last": 2007,
@@ -4173,6 +4327,17 @@
 "prec": "year"
 },
 {
+"sp": "Carinascincus palfreymani (formerly Niveoscincus palfreymani)",
+"v": "Pedra Branca Cool-skink",
+"grp": "Reptile",
+"cls": "lost",
+"rl": "VU",
+"cty": "Australia",
+"reg": "Islands",
+"last": 2001,
+"prec": "year"
+},
+{
 "sp": "Carlia bomberai",
 "v": "",
 "grp": "Reptile",
@@ -4404,6 +4569,50 @@
 "prec": "year"
 },
 {
+"sp": "Ceylonosticta adami (formerly Drepanosticta adami)",
+"v": "",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "EN",
+"cty": "Sri Lanka",
+"reg": "Islands",
+"last": 1930,
+"prec": "year"
+},
+{
+"sp": "Ceylonosticta austeni (formerly Drepanosticta austeni)",
+"v": "",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "EN",
+"cty": "Sri Lanka",
+"reg": "Islands",
+"last": 1940,
+"prec": "year"
+},
+{
+"sp": "Ceylonosticta montana (formerly Drepanosticta montana)",
+"v": "Dark Knob-tipped Shadowdamsel",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "EN",
+"cty": "Sri Lanka",
+"reg": "Islands",
+"last": 1945,
+"prec": "decade"
+},
+{
+"sp": "Ceylonosticta submontana (formerly Drepanosticta submontana)",
+"v": "Bordered Knob-tipped Shadowdamsel",
+"grp": "Insect",
+"cls": "long-lost",
+"rl": "EN",
+"cty": "Sri Lanka",
+"reg": "Islands",
+"last": 1935,
+"prec": "decade"
+},
+{
 "sp": "Chalcides ebneri",
 "v": "",
 "grp": "Reptile",
@@ -4423,17 +4632,6 @@
 "cty": "India",
 "reg": "Asia",
 "last": 1870,
-"prec": "year"
-},
-{
-"sp": "Chamaeleon monoceras",
-"v": "Rhinoceros Chameleon",
-"grp": "Reptile",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Madagascar",
-"reg": "Africa",
-"last": 1913,
 "prec": "year"
 },
 {
@@ -4558,6 +4756,28 @@
 "prec": "year"
 },
 {
+"sp": "Chirostoma bartoni",
+"v": "Alberca Silverside",
+"grp": "Fish",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Mexico",
+"reg": "North America",
+"last": 1991,
+"prec": "year"
+},
+{
+"sp": "Chirostoma charari",
+"v": "Least Silverside",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Mexico",
+"reg": "North America",
+"last": 1957,
+"prec": "year"
+},
+{
 "sp": "Chlorocypha ghesquierei",
 "v": "Congo Red Jewel",
 "grp": "Insect",
@@ -4646,6 +4866,17 @@
 "prec": "never"
 },
 {
+"sp": "Churamiti maridadi",
+"v": "Beautiful Metallic Toad",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Tanzania",
+"reg": "Africa",
+"last": 2004,
+"prec": "year"
+},
+{
 "sp": "Cichlherminia lherminieri santaeluciae",
 "v": "St Lucia Forest Thrush",
 "grp": "Bird",
@@ -4655,6 +4886,17 @@
 "reg": "North America",
 "last": "",
 "prec": ""
+},
+{
+"sp": "Citrus undulata (formerly Oxanthera undulata)",
+"v": "",
+"grp": "Plant - Flowering plant (misc)",
+"cls": "long-lost",
+"rl": "CR",
+"cty": "New Caledonia",
+"reg": "Islands",
+"last": 1870,
+"prec": "year"
 },
 {
 "sp": "Clitoria andrei",
@@ -4965,17 +5207,6 @@
 "prec": "year"
 },
 {
-"sp": "Coregonis bezola",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "France",
-"reg": "Europe",
-"last": 1850,
-"prec": "century"
-},
-{
 "sp": "Coregonus hoferi",
 "v": "",
 "grp": "Fish",
@@ -5007,6 +5238,17 @@
 "reg": "Islands",
 "last": 2002,
 "prec": "year"
+},
+{
+"sp": "Corseria corsica (formerly Spiralix corsica)",
+"v": "",
+"grp": "Gastropod molluscs (snails and slugs)",
+"cls": "lost",
+"rl": "EN",
+"cty": "France",
+"reg": "Europe",
+"last": 1995,
+"prec": "decade"
 },
 {
 "sp": "Corydoras flaveolus",
@@ -5095,6 +5337,17 @@
 "reg": "South America",
 "last": 1974,
 "prec": "year"
+},
+{
+"sp": "Craspedaria delphinuloides (formerly Geomitra delphinuloides)",
+"v": "",
+"grp": "Gastropod molluscs (snails and slugs)",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Portugal",
+"reg": "Europe",
+"last": 1875,
+"prec": "decade"
 },
 {
 "sp": "Crataegus ideae",
@@ -5402,6 +5655,17 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1938,
+"prec": "year"
+},
+{
+"sp": "Crossodactylus dispar",
+"v": "Rio Spinythumb Frog",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1977,
 "prec": "year"
 },
 {
@@ -5717,6 +5981,17 @@
 "prec": "year"
 },
 {
+"sp": "Cycloramphus catarinensis",
+"v": "Santa Catarina Button Frog",
+"grp": "Amphibian",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1975,
+"prec": "decade"
+},
+{
 "sp": "Cycloramphus diringshofeni",
 "v": "Sao Bent Button Frog",
 "grp": "Amphibian",
@@ -5769,6 +6044,17 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1920,
+"prec": "year"
+},
+{
+"sp": "Cycloramphus stejnegeri",
+"v": "Stejneger's Button Frog",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1979,
 "prec": "year"
 },
 {
@@ -5967,6 +6253,17 @@
 "cty": "United States (Hawaii)",
 "reg": "Islands",
 "last": 1920,
+"prec": "year"
+},
+{
+"sp": "Cyprinodon latifasciatus",
+"v": "Parras Pupfish",
+"grp": "Fish",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Mexico",
+"reg": "North America",
+"last": 2012,
 "prec": "year"
 },
 {
@@ -6234,6 +6531,17 @@
 "prec": "year"
 },
 {
+"sp": "Daphniola hadei (formerly Islamia hadei)",
+"v": "",
+"grp": "Gastropod molluscs (snails and slugs)",
+"cls": "unclassified",
+"rl": "EN",
+"cty": "Greece",
+"reg": "Europe",
+"last": "",
+"prec": ""
+},
+{
 "sp": "Dasia johnsinghi",
 "v": "Barred Tree Skink",
 "grp": "Reptile",
@@ -6410,6 +6718,17 @@
 "prec": "year"
 },
 {
+"sp": "Dendrolagus mayri",
+"v": "Wondiwoi Tree-kangaroo",
+"grp": "Mammal",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1928,
+"prec": "year"
+},
+{
 "sp": "Dendromus vernayi",
 "v": "Vernay’s Climbing Mouse",
 "grp": "Mammal",
@@ -6542,17 +6861,6 @@
 "prec": "year"
 },
 {
-"sp": "Diaphananthe orientalis",
-"v": "",
-"grp": "Plant - Orchids",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Tanzania",
-"reg": "Africa",
-"last": 1933,
-"prec": "year"
-},
-{
 "sp": "Dibamus alfredi",
 "v": "Alfred's Blind Skink",
 "grp": "Reptile",
@@ -6664,17 +6972,6 @@
 "cty": "Malaysia",
 "reg": "Asia",
 "last": 1990,
-"prec": "year"
-},
-{
-"sp": "Dicoma pretoriensis",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "South Africa",
-"reg": "Africa",
-"last": 1925,
 "prec": "year"
 },
 {
@@ -6931,17 +7228,6 @@
 "prec": "decade"
 },
 {
-"sp": "Disparoneura ramajana",
-"v": "",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "CR(PE)",
-"cty": "Sri Lanka",
-"reg": "Islands",
-"last": 1970,
-"prec": "year"
-},
-{
 "sp": "Disperis bosseri",
 "v": "",
 "grp": "Plant - Orchids",
@@ -6973,17 +7259,6 @@
 "reg": "South America",
 "last": "",
 "prec": ""
-},
-{
-"sp": "Doras fimbriatus",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1855,
-"prec": "year"
 },
 {
 "sp": "Dorstenia bicaudata",
@@ -7052,50 +7327,6 @@
 "prec": "year"
 },
 {
-"sp": "Drepanosticta adami",
-"v": "",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Sri Lanka",
-"reg": "Islands",
-"last": 1930,
-"prec": "year"
-},
-{
-"sp": "Drepanosticta austeni",
-"v": "",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Sri Lanka",
-"reg": "Islands",
-"last": 1940,
-"prec": "year"
-},
-{
-"sp": "Drepanosticta montana",
-"v": "Dark Knob-tipped Shadowdamsel",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Sri Lanka",
-"reg": "Islands",
-"last": 1945,
-"prec": "decade"
-},
-{
-"sp": "Drepanosticta submontana",
-"v": "Bordered Knob-tipped Shadowdamsel",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Sri Lanka",
-"reg": "Islands",
-"last": 1935,
-"prec": "decade"
-},
-{
 "sp": "Dryophytes bocourti",
 "v": "",
 "grp": "Amphibian",
@@ -7162,17 +7393,6 @@
 "prec": "year"
 },
 {
-"sp": "Echinosaura sulcarostrum",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Guyana",
-"reg": "South America",
-"last": 1992,
-"prec": "year"
-},
-{
 "sp": "Ecnomiohyla echinata",
 "v": "Oaxacan Fringe-limbed Treefrog",
 "grp": "Amphibian",
@@ -7184,15 +7404,17 @@
 "prec": "year"
 },
 {
-"sp": "Ecnomiohyla raborum",
+"sp": "Ecnomiohyla rabborum (also spelled Ecnomiohyla raborum)",
 "v": "Rabb's Fringe-limbed Treefrog",
 "grp": "Amphibian",
 "cls": "lost",
-"rl": "not in IUCN index",
+"rl": "CR(PE)",
 "cty": "Panama",
 "reg": "North America",
 "last": 2007,
-"prec": "year"
+"prec": "year",
+"rd": 1,
+"rdfirm": 0
 },
 {
 "sp": "Ectopoglossus atopoglossus",
@@ -7637,11 +7859,11 @@
 "prec": "year"
 },
 {
-"sp": "Enallagma maldivensis",
+"sp": "Enallagma maldivense (also spelled Enallagma maldivensis)",
 "v": "",
 "grp": "Insect",
 "cls": "long-lost",
-"rl": "not in IUCN index",
+"rl": "DD",
 "cty": "Maldives",
 "reg": "Islands",
 "last": 1902,
@@ -7679,17 +7901,6 @@
 "reg": "North America",
 "last": 1935,
 "prec": "decade"
-},
-{
-"sp": "Endosomatium megalops",
-"v": "Big-headed Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1876,
-"prec": "year"
 },
 {
 "sp": "Enyalioides sophiarothschildae",
@@ -7777,6 +7988,17 @@
 "cty": "United States",
 "reg": "North America",
 "last": 1974,
+"prec": "year"
+},
+{
+"sp": "Equilabium scopulicola (formerly Plectranthus scopulicola)",
+"v": "",
+"grp": "Plant - Trees & Shrubs",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Tanzania",
+"reg": "Africa",
+"last": 1953,
 "prec": "year"
 },
 {
@@ -8099,11 +8321,11 @@
 "prec": "year"
 },
 {
-"sp": "Eugongylus unlineatus",
+"sp": "Eugongylus unilineatus (also spelled Eugongylus unlineatus)",
 "v": "",
 "grp": "Reptile",
 "cls": "lost",
-"rl": "not in IUCN index",
+"rl": "LC",
 "cty": "Australasia",
 "reg": "Australia",
 "last": 1989,
@@ -8240,17 +8462,6 @@
 "reg": "Africa",
 "last": 1942,
 "prec": "year"
-},
-{
-"sp": "Euphorbia pirahazo",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "unclassified",
-"rl": "CR(PE)",
-"cty": "Madagascar",
-"reg": "Africa",
-"last": "",
-"prec": ""
 },
 {
 "sp": "Eupropacris abbreviata",
@@ -8561,6 +8772,17 @@
 "prec": "year"
 },
 {
+"sp": "Flexiseps valhallae",
+"v": "Valhalla Skink",
+"grp": "Reptile",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "French Southern Territories",
+"reg": "Islands",
+"last": 1906,
+"prec": "year"
+},
+{
 "sp": "Fluminagrion taxaense",
 "v": "",
 "grp": "Insect",
@@ -8627,6 +8849,17 @@
 "prec": ""
 },
 {
+"sp": "Furcifer monoceras (formerly Chamaeleon monoceras)",
+"v": "Rhinoceros Chameleon",
+"grp": "Reptile",
+"cls": "long-lost",
+"rl": "not in IUCN index",
+"cty": "Madagascar",
+"reg": "Africa",
+"last": 1913,
+"prec": "year"
+},
+{
 "sp": "Gabbiella matadina",
 "v": "",
 "grp": "Gastropod molluscs (snails and slugs)",
@@ -8679,6 +8912,17 @@
 "cty": "Philippines",
 "reg": "Asia",
 "last": 1891,
+"prec": "year"
+},
+{
+"sp": "Gallirallus lafresnayanus (formerly Cabalus lafresnayanus)",
+"v": "New Caledonia Rail",
+"grp": "Bird",
+"cls": "long-lost",
+"rl": "CR",
+"cty": "New Caledonia",
+"reg": "Islands",
+"last": 1890,
 "prec": "year"
 },
 {
@@ -8803,15 +9047,26 @@
 "prec": "year"
 },
 {
-"sp": "Geomitra delphinuloides",
+"sp": "Gekko gulat (formerly Luperosaurus gulat)",
 "v": "",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Portugal",
-"reg": "Europe",
-"last": 1875,
-"prec": "decade"
+"grp": "Reptile",
+"cls": "lost",
+"rl": "DD",
+"cty": "Philippines",
+"reg": "Islands",
+"last": 2007,
+"prec": "year"
+},
+{
+"sp": "Gekko iskandari (formerly Luperosaurus iskandari)",
+"v": "",
+"grp": "Reptile",
+"cls": "lost",
+"rl": "DD",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1998,
+"prec": "year"
 },
 {
 "sp": "Geomitra grabhami",
@@ -8910,17 +9165,6 @@
 "cty": "Fiji",
 "reg": "Islands",
 "last": 1888,
-"prec": "year"
-},
-{
-"sp": "Glandulocauda melanogenys",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "NE",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1907,
 "prec": "year"
 },
 {
@@ -9826,6 +10070,17 @@
 "prec": "year"
 },
 {
+"sp": "Harpesaurus brooksi (formerly Thaumatorhynchus brooksi)",
+"v": "",
+"grp": "Reptile",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1924,
+"prec": "year"
+},
+{
 "sp": "Harpesaurus ensicauda",
 "v": "Nias Nose-horned Lizard",
 "grp": "Reptile",
@@ -10365,6 +10620,17 @@
 "prec": "year"
 },
 {
+"sp": "Hyalobagrus ornatus",
+"v": "",
+"grp": "Fish",
+"cls": "unclassified",
+"rl": "CR(PE)",
+"cty": "Malaysia",
+"reg": "Asia",
+"last": "",
+"prec": ""
+},
+{
 "sp": "Hydrobates macrodactylus",
 "v": "Guadalupe Storm-petrel",
 "grp": "Bird",
@@ -10475,6 +10741,17 @@
 "prec": "decade"
 },
 {
+"sp": "Hylodes glaber",
+"v": "Itatiaia Tree Toad",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1978,
+"prec": "year"
+},
+{
 "sp": "Hylodes mertensi",
 "v": "Merten's Tree Toad",
 "grp": "Amphibian",
@@ -10484,6 +10761,17 @@
 "reg": "South America",
 "last": 1965,
 "prec": "decade"
+},
+{
+"sp": "Hylodes vanzolinii",
+"v": "Vanzolini's Tree Toad",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1980,
+"prec": "year"
 },
 {
 "sp": "Hyloscirtus chlorosteus",
@@ -10552,6 +10840,28 @@
 "prec": "year"
 },
 {
+"sp": "Hyloxalus exasperatus",
+"v": "Yapitya Rocket Frog",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Ecuador",
+"reg": "South America",
+"last": 1984,
+"prec": "year"
+},
+{
+"sp": "Hyloxalus fallax",
+"v": "Cotopaxi Rocket Frog",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Ecuador",
+"reg": "South America",
+"last": 1988,
+"prec": "year"
+},
+{
 "sp": "Hyloxalus maquipucuna",
 "v": "",
 "grp": "Amphibian",
@@ -10565,6 +10875,28 @@
 {
 "sp": "Hyloxalus marmoreoventris",
 "v": "",
+"grp": "Amphibian",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Ecuador",
+"reg": "South America",
+"last": 1962,
+"prec": "year"
+},
+{
+"sp": "Hyloxalus peculiaris",
+"v": "Funny Rocket Frog",
+"grp": "Amphibian",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Ecuador",
+"reg": "South America",
+"last": 1962,
+"prec": "year"
+},
+{
+"sp": "Hyloxalus pumilus",
+"v": "San Vicente Rocket Fro",
 "grp": "Amphibian",
 "cls": "long-lost",
 "rl": "CR(PE)",
@@ -10681,6 +11013,17 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1916,
+"prec": "year"
+},
+{
+"sp": "Hypomasticus garmani (formerly Leporinus garmani)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1964,
 "prec": "year"
 },
 {
@@ -10893,17 +11236,6 @@
 "prec": "year"
 },
 {
-"sp": "Hypsiboas cymbalum",
-"v": "Campo Grande Treefrog",
-"grp": "Amphibian",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1965,
-"prec": "decade"
-},
-{
 "sp": "Hypsilurus nigrigularis",
 "v": "",
 "grp": "Reptile",
@@ -11025,6 +11357,17 @@
 "prec": "year"
 },
 {
+"sp": "Idiotropiscis larsonae (formerly Acentronura larsonae)",
+"v": "Larson's Pipehorse, Helen's Pygmy Pipehorse",
+"grp": "Fish",
+"cls": "lost",
+"rl": "DD",
+"cty": "Australia",
+"reg": "Australia",
+"last": 1984,
+"prec": "year"
+},
+{
 "sp": "Iglica gratulabunda",
 "v": "",
 "grp": "Gastropod molluscs (snails and slugs)",
@@ -11113,11 +11456,11 @@
 "prec": "year"
 },
 {
-"sp": "Indolestes lundqvisti",
+"sp": "Indolestes lundquisti (also spelled Indolestes lundqvisti)",
 "v": "",
 "grp": "Insect",
 "cls": "long-lost",
-"rl": "not in IUCN index",
+"rl": "DD",
 "cty": "Solomon Islands",
 "reg": "Islands",
 "last": 1941,
@@ -11322,17 +11665,6 @@
 "prec": "year"
 },
 {
-"sp": "Islamia hadei",
-"v": "",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "unclassified",
-"rl": "not in IUCN index",
-"cty": "Greece",
-"reg": "Europe",
-"last": "",
-"prec": ""
-},
-{
 "sp": "Islamia pseudorientalica",
 "v": "",
 "grp": "Gastropod molluscs (snails and slugs)",
@@ -11531,6 +11863,17 @@
 "prec": "year"
 },
 {
+"sp": "Juturnia brunei (formerly Tryonia brunei)",
+"v": "Brune's Spring Snail",
+"grp": "Gastropod molluscs (snails and slugs)",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "United States",
+"reg": "North America",
+"last": 1993,
+"prec": "year"
+},
+{
 "sp": "Kadua foliosa",
 "v": "",
 "grp": "Plant - Trees & Shrubs",
@@ -11597,6 +11940,17 @@
 "prec": "year"
 },
 {
+"sp": "Kimberleyeleotris notata",
+"v": "Drysdale Gudgeon",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Australia",
+"reg": "Australia",
+"last": 1975,
+"prec": "year"
+},
+{
 "sp": "Kinosternon hirtipes megacephalum",
 "v": "Rough-footed Mud Turtle",
 "grp": "Reptile",
@@ -11652,17 +12006,6 @@
 "prec": "year"
 },
 {
-"sp": "Knodus calliurus",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "NE",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1964,
-"prec": "year"
-},
-{
 "sp": "Kronichthys lacerta",
 "v": "",
 "grp": "Fish",
@@ -11696,6 +12039,17 @@
 "prec": "year"
 },
 {
+"sp": "Kryptopterus mononema",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1850,
+"prec": "century"
+},
+{
 "sp": "Kubaryia pilikia",
 "v": "",
 "grp": "Gastropod molluscs (snails and slugs)",
@@ -11707,15 +12061,15 @@
 "prec": "year"
 },
 {
-"sp": "Kunkeliella psilotoclada",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "lost",
+"sp": "Ladislavella kennicotti (formerly Stagnicola kennicotti)",
+"v": "Western Arctic Stagnicola",
+"grp": "Gastropod molluscs (snails and slugs)",
+"cls": "unclassified",
 "rl": "not in IUCN index",
-"cty": "Spain",
-"reg": "Europe",
-"last": 1983,
-"prec": "year"
+"cty": "Canada",
+"reg": "North America",
+"last": "",
+"prec": ""
 },
 {
 "sp": "Lampiella gibbosa",
@@ -11771,17 +12125,6 @@
 "reg": "Asia",
 "last": "",
 "prec": ""
-},
-{
-"sp": "Lankascincus munindradasai",
-"v": "Munindradasa’s Lanka Skink",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "NE",
-"cty": "Sri Lanka",
-"reg": "Islands",
-"last": 2006,
-"prec": "year"
 },
 {
 "sp": "Lankascincus sripadensis",
@@ -11880,6 +12223,17 @@
 "cty": "Togo",
 "reg": "Africa",
 "last": 1890,
+"prec": "year"
+},
+{
+"sp": "Leiocephalus endomychus",
+"v": "Central Haitian Curlytail",
+"grp": "Reptile",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Haiti",
+"reg": "Islands",
+"last": 1976,
 "prec": "year"
 },
 {
@@ -12081,17 +12435,6 @@
 "prec": "year"
 },
 {
-"sp": "Leporinus garmani",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1964,
-"prec": "year"
-},
-{
 "sp": "Leporinus steindachneri",
 "v": "",
 "grp": "Fish",
@@ -12100,6 +12443,17 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1964,
+"prec": "year"
+},
+{
+"sp": "Leposternon cerradensis (formerly Amphisbaena cerradensis)",
+"v": "",
+"grp": "Reptile",
+"cls": "lost",
+"rl": "DD",
+"cty": "Brazil",
+"reg": "South America",
+"last": 2006,
 "prec": "year"
 },
 {
@@ -12301,23 +12655,23 @@
 "prec": "year"
 },
 {
-"sp": "Leptotpyhlops telloi",
-"v": "",
-"grp": "Reptile",
-"cls": "unclassified",
-"rl": "not in IUCN index",
-"cty": "South Africa",
-"reg": "Africa",
-"last": "",
-"prec": ""
-},
-{
 "sp": "Leptotyphlops pungwensis",
 "v": "",
 "grp": "Reptile",
 "cls": "unclassified",
 "rl": "DD",
 "cty": "Mozambique",
+"reg": "Africa",
+"last": "",
+"prec": ""
+},
+{
+"sp": "Leptotyphlops telloi (also spelled Leptotpyhlops telloi)",
+"v": "",
+"grp": "Reptile",
+"cls": "unclassified",
+"rl": "NT",
+"cty": "South Africa",
 "reg": "Africa",
 "last": "",
 "prec": ""
@@ -12675,17 +13029,6 @@
 "prec": "year"
 },
 {
-"sp": "Lipinia albodorsalis",
-"v": "",
-"grp": "Reptile",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Oceania",
-"reg": "Islands",
-"last": 1974,
-"prec": "year"
-},
-{
 "sp": "Lipinia cheesmanae",
 "v": "",
 "grp": "Reptile",
@@ -12738,17 +13081,6 @@
 "cty": "Malaysia",
 "reg": "Asia",
 "last": 1999,
-"prec": "year"
-},
-{
-"sp": "Lipinia nototaenia",
-"v": "",
-"grp": "Reptile",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Oceania",
-"reg": "Islands",
-"last": 1975,
 "prec": "year"
 },
 {
@@ -12906,6 +13238,17 @@
 "prec": "year"
 },
 {
+"sp": "Lobocheilos lehat",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1858,
+"prec": "year"
+},
+{
 "sp": "Lobocheilos rohitoides",
 "v": "",
 "grp": "Fish",
@@ -12914,17 +13257,6 @@
 "cty": "Indonesia",
 "reg": "Asia",
 "last": 1857,
-"prec": "year"
-},
-{
-"sp": "Lobulia glacialis",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Indonesia",
-"reg": "Asia",
-"last": 1997,
 "prec": "year"
 },
 {
@@ -12994,28 +13326,6 @@
 "prec": "year"
 },
 {
-"sp": "Luperosaurus gulat",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Philippines",
-"reg": "Islands",
-"last": 2007,
-"prec": "year"
-},
-{
-"sp": "Luperosaurus iskandari",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Indonesia",
-"reg": "Asia",
-"last": 1998,
-"prec": "year"
-},
-{
 "sp": "Luperosaurus kubli",
 "v": "",
 "grp": "Reptile",
@@ -13060,11 +13370,11 @@
 "prec": ""
 },
 {
-"sp": "Lygisaurus abscondita",
+"sp": "Lygisaurus absconditus (also spelled Lygisaurus abscondita)",
 "v": "",
 "grp": "Reptile",
 "cls": "lost",
-"rl": "not in IUCN index",
+"rl": "DD",
 "cty": "Australasia",
 "reg": "Australia",
 "last": 2003,
@@ -13269,6 +13579,17 @@
 "prec": "year"
 },
 {
+"sp": "Macledium pretoriense (formerly Dicoma pretoriensis)",
+"v": "",
+"grp": "Plant - Flowering plant (misc)",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "South Africa",
+"reg": "Africa",
+"last": 1925,
+"prec": "year"
+},
+{
 "sp": "Macrobrachium denticulatum",
 "v": "",
 "grp": "Crustacean",
@@ -13311,6 +13632,17 @@
 "reg": "Africa",
 "last": 1957,
 "prec": "year"
+},
+{
+"sp": "Macrognathus pentophthalmos",
+"v": "Sri Lankan Spiny Eel",
+"grp": "Fish",
+"cls": "unclassified",
+"rl": "CR(PE)",
+"cty": "Sri Lanka",
+"reg": "Islands",
+"last": "",
+"prec": ""
 },
 {
 "sp": "Macromia flinti",
@@ -13535,17 +13867,6 @@
 "prec": "century"
 },
 {
-"sp": "Maytenus manabiensis",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Ecuador",
-"reg": "South America",
-"last": 1850,
-"prec": "century"
-},
-{
 "sp": "Mecistocephalus cyclops",
 "v": "",
 "grp": "Centipede",
@@ -13742,6 +14063,17 @@
 "reg": "Middle East",
 "last": 1935,
 "prec": "decade"
+},
+{
+"sp": "Melanotaenia corona",
+"v": "Corona Rainbowfish",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1911,
+"prec": "year"
 },
 {
 "sp": "Melanthera bryanii",
@@ -14100,11 +14432,11 @@
 "prec": "year"
 },
 {
-"sp": "Millepore boschmai",
+"sp": "Millepora boschmai (also spelled Millepore boschmai)",
 "v": "Fire coral",
 "grp": "Coral",
 "cls": "unclassified",
-"rl": "not in IUCN index",
+"rl": "DD",
 "cty": "Australia, India, Indonesia, Malaysia, Panama, Singapore, Thailand",
 "reg": "Global",
 "last": "",
@@ -14342,6 +14674,17 @@
 "prec": "year"
 },
 {
+"sp": "Monteverdia manabiensis (formerly Maytenus manabiensis)",
+"v": "",
+"grp": "Plant - Trees & Shrubs",
+"cls": "long-lost",
+"rl": "EN",
+"cty": "Ecuador",
+"reg": "South America",
+"last": 1850,
+"prec": "century"
+},
+{
 "sp": "Montigyra kenti",
 "v": "",
 "grp": "Coral",
@@ -14430,7 +14773,7 @@
 "prec": "year"
 },
 {
-"sp": "Myriopholis yemenicus",
+"sp": "Myriopholis yemenica (also spelled Myriopholis yemenicus)",
 "v": "",
 "grp": "Reptile",
 "cls": "unclassified",
@@ -14685,6 +15028,17 @@
 "rdfirm": 0
 },
 {
+"sp": "Neobola fluviatilis",
+"v": "Athi Sardine",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Kenya",
+"reg": "Africa",
+"last": 1961,
+"prec": "year"
+},
+{
 "sp": "Neolissochilus bovanicus",
 "v": "Bovany Barb",
 "grp": "Fish",
@@ -14696,25 +15050,14 @@
 "prec": "year"
 },
 {
-"sp": "Neonycteris pusillus",
+"sp": "Neonycteris pusilla (also spelled Neonycteris pusillus)",
 "v": "Least Big-eared Bat",
 "grp": "Mammal",
 "cls": "long-lost",
-"rl": "not in IUCN index",
+"rl": "DD",
 "cty": "Brazil",
 "reg": "South America",
 "last": 1929,
-"prec": "year"
-},
-{
-"sp": "Neritina tiassalensis",
-"v": "",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "lost",
-"rl": "CR(PE)",
-"cty": "Côte d'Ivoire",
-"reg": "Africa",
-"last": 1980,
 "prec": "year"
 },
 {
@@ -14819,17 +15162,6 @@
 "rdfirm": 0
 },
 {
-"sp": "Niveoscincus palfreymani",
-"v": "Pedra Branca Cool-skink",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Australia",
-"reg": "Islands",
-"last": 2001,
-"prec": "year"
-},
-{
 "sp": "Nomada siciliensis",
 "v": "",
 "grp": "Insect",
@@ -14849,17 +15181,6 @@
 "cty": "Papua New Guinea",
 "reg": "Islands",
 "last": 1956,
-"prec": "year"
-},
-{
-"sp": "Normania nava",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Spain",
-"reg": "Europe",
-"last": 1984,
 "prec": "year"
 },
 {
@@ -14904,6 +15225,28 @@
 "cty": "Honduras",
 "reg": "North America",
 "last": 2010,
+"prec": "year"
+},
+{
+"sp": "Notropis marhabatiensis",
+"v": "",
+"grp": "Fish",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Mexico",
+"reg": "North America",
+"last": 2002,
+"prec": "year"
+},
+{
+"sp": "Nubeoscincus glacialis (formerly Lobulia glacialis)",
+"v": "",
+"grp": "Reptile",
+"cls": "lost",
+"rl": "DD",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1997,
 "prec": "year"
 },
 {
@@ -15118,7 +15461,7 @@
 "prec": "decade"
 },
 {
-"sp": "Onobrychis lunulata",
+"sp": "Onobrychis lunata (also spelled Onobrychis lunulata)",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
 "cls": "unclassified",
@@ -15261,6 +15604,39 @@
 "prec": "year"
 },
 {
+"sp": "Oreosaurus luctuosus (formerly Riama luctuosa)",
+"v": "",
+"grp": "Reptile",
+"cls": "unclassified",
+"rl": "LC",
+"cty": "Venezuela",
+"reg": "South America",
+"last": 2005,
+"prec": "decade"
+},
+{
+"sp": "Ornithuroscincus albodorsalis (formerly Lipinia albodorsalis)",
+"v": "",
+"grp": "Reptile",
+"cls": "long-lost",
+"rl": "DD",
+"cty": "Oceania",
+"reg": "Islands",
+"last": 1974,
+"prec": "year"
+},
+{
+"sp": "Ornithuroscincus nototaenia (formerly Lipinia nototaenia)",
+"v": "",
+"grp": "Reptile",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Oceania",
+"reg": "Islands",
+"last": 1975,
+"prec": "year"
+},
+{
 "sp": "Orsinome armata",
 "v": "",
 "grp": "Arachnid",
@@ -15270,6 +15646,17 @@
 "reg": "Asia",
 "last": "",
 "prec": ""
+},
+{
+"sp": "Oryzias timorensis",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Indonesia",
+"reg": "Asia",
+"last": 1911,
+"prec": "year"
 },
 {
 "sp": "Oryzorictes tetradactylus",
@@ -15283,6 +15670,17 @@
 "prec": "year"
 },
 {
+"sp": "Ossancora fimbriata (formerly Doras fimbriatus)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1855,
+"prec": "year"
+},
+{
 "sp": "Otus siaoensis",
 "v": "Siau Scops-owl",
 "grp": "Bird",
@@ -15291,17 +15689,6 @@
 "cty": "Indonesia",
 "reg": "Asia",
 "last": 1866,
-"prec": "year"
-},
-{
-"sp": "Oxanthera undulata",
-"v": "",
-"grp": "Plant - Flowering plant (misc)",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "New Caledonia",
-"reg": "Islands",
-"last": 1870,
 "prec": "year"
 },
 {
@@ -15405,6 +15792,17 @@
 },
 {
 "sp": "Palaina pupa",
+"v": "",
+"grp": "Gastropod molluscs (snails and slugs)",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Palau",
+"reg": "Islands",
+"last": 1936,
+"prec": "year"
+},
+{
+"sp": "Palaopartula leucothoe (formerly Partula leucothoe)",
 "v": "",
 "grp": "Gastropod molluscs (snails and slugs)",
 "cls": "long-lost",
@@ -15868,17 +16266,6 @@
 "prec": "year"
 },
 {
-"sp": "Partula leucothoe",
-"v": "",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Palau",
-"reg": "Islands",
-"last": 1936,
-"prec": "year"
-},
-{
 "sp": "Partula meyeri",
 "v": "Meyer's Partula Snail",
 "grp": "Gastropod molluscs (snails and slugs)",
@@ -15890,11 +16277,11 @@
 "prec": "year"
 },
 {
-"sp": "Paruwrobates andina",
+"sp": "Paruwrobates andinus (also spelled Paruwrobates andina)",
 "v": "La Planada Poison Frog",
 "grp": "Amphibian",
 "cls": "lost",
-"rl": "not in IUCN index",
+"rl": "CR(PE)",
 "cty": "Colombia",
 "reg": "South America",
 "last": 1995,
@@ -16330,11 +16717,11 @@
 "prec": "year"
 },
 {
-"sp": "Philodromus similimus",
+"sp": "Philodromus simillimus (also spelled Philodromus similimus)",
 "v": "",
 "grp": "Arachnid",
 "cls": "long-lost",
-"rl": "not in IUCN index",
+"rl": "DD",
 "cty": "Portugal",
 "reg": "Europe",
 "last": 1963,
@@ -16382,6 +16769,28 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1925,
+"prec": "year"
+},
+{
+"sp": "Phrynomedusa marginata",
+"v": "Bi-colored Leaf Frog",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1988,
+"prec": "year"
+},
+{
+"sp": "Phrynomedusa vanzolinii",
+"v": "Vanzolini's Leaf Frog",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1983,
 "prec": "year"
 },
 {
@@ -16594,6 +17003,17 @@
 "prec": "year"
 },
 {
+"sp": "Pimelodella ignobilis (formerly Rhamdella ignobilis)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1907,
+"prec": "year"
+},
+{
 "sp": "Pimelodella itapicuruensis",
 "v": "",
 "grp": "Fish",
@@ -16613,6 +17033,17 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1907,
+"prec": "year"
+},
+{
+"sp": "Pimelodella papariae (formerly Rhamdella papariae)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "DD",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1941,
 "prec": "year"
 },
 {
@@ -16638,6 +17069,17 @@
 "prec": "year"
 },
 {
+"sp": "Pimelodella robinsoni (formerly Rhamdella robinsoni)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1941,
+"prec": "year"
+},
+{
 "sp": "Pimelodella transitoria",
 "v": "",
 "grp": "Fish",
@@ -16654,6 +17096,17 @@
 "grp": "Fish",
 "cls": "long-lost",
 "rl": "LC",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1941,
+"prec": "year"
+},
+{
+"sp": "Pimelodella wolfi (formerly Rhamdella wolfi)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "DD",
 "cty": "Brazil",
 "reg": "South America",
 "last": 1941,
@@ -16792,17 +17245,6 @@
 "prec": "year"
 },
 {
-"sp": "Plectranthus scopulicola",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Tanzania",
-"reg": "Africa",
-"last": 1953,
-"prec": "year"
-},
-{
 "sp": "Plectrohyla pycnochila",
 "v": "",
 "grp": "Amphibian",
@@ -16856,17 +17298,6 @@
 "reg": "North America",
 "last": 1995,
 "prec": "decade"
-},
-{
-"sp": "Pleurothallis mazei",
-"v": "",
-"grp": "Plant - Orchids",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Guadeloupe (French Caribbean)",
-"reg": "Islands",
-"last": 1990,
-"prec": "year"
 },
 {
 "sp": "Plexaurella obesa",
@@ -17042,6 +17473,28 @@
 "cty": "Bolivia",
 "reg": "South America",
 "last": 1921,
+"prec": "year"
+},
+{
+"sp": "Potamoglanis hasemani (formerly Trichomycterus hasemani)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1914,
+"prec": "year"
+},
+{
+"sp": "Potamoglanis johnsoni (formerly Trichomycterus johnsoni)",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "LC",
+"cty": "Brazil",
+"reg": "South America",
+"last": 1932,
 "prec": "year"
 },
 {
@@ -17573,17 +18026,6 @@
 "prec": "year"
 },
 {
-"sp": "Psalidodon gymnodontus",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1911,
-"prec": "year"
-},
-{
 "sp": "Pseudagrion azureum",
 "v": "",
 "grp": "Insect",
@@ -17826,105 +18268,6 @@
 "prec": "year"
 },
 {
-"sp": "Pseudophilochthus dicksoniae",
-"v": "Tree Fern Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1876,
-"prec": "year"
-},
-{
-"sp": "Pseudophilochthus evanescens",
-"v": "Vanishing Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1967,
-"prec": "year"
-},
-{
-"sp": "Pseudophilochthus fossor",
-"v": "Digger Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1876,
-"prec": "year"
-},
-{
-"sp": "Pseudophilochthus gemmulipennis",
-"v": "Shiny-backed Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1967,
-"prec": "year"
-},
-{
-"sp": "Pseudophilochthus grayanus",
-"v": "Gray's Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1967,
-"prec": "year"
-},
-{
-"sp": "Pseudophilochthus nubigena",
-"v": "Brown-clouded Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1967,
-"prec": "year"
-},
-{
-"sp": "Pseudophilochthus rufosuffusus",
-"v": "Red-suffused Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1967,
-"prec": "year"
-},
-{
-"sp": "Pseudophilochthus sublimbatus",
-"v": "West Lodge Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1876,
-"prec": "year"
-},
-{
-"sp": "Pseudophilochthus trechoides",
-"v": "Trechus-like Ground Beetle",
-"grp": "Insect",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Saint Helena",
-"reg": "Islands",
-"last": 1876,
-"prec": "year"
-},
-{
 "sp": "Pseudophoxinus sojuchbulagi",
 "v": "Akstafa Spring Roach",
 "grp": "Fish",
@@ -17966,6 +18309,17 @@
 "cty": "Indonesia",
 "reg": "Asia",
 "last": 1890,
+"prec": "year"
+},
+{
+"sp": "Pseudoscaphirhynchus fedtschenkoi",
+"v": "Syr-Darya Shovelnose Sturgeon",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Kazakhstan, Tajikistan, Uzbekistan",
+"reg": "Middle East",
+"last": 1968,
 "prec": "year"
 },
 {
@@ -18090,25 +18444,14 @@
 "prec": "year"
 },
 {
-"sp": "Ptychoglossus eurylepis",
-"v": "Largescale Lizard",
-"grp": "Reptile",
+"sp": "Ptychochromoides betsileanus",
+"v": "Trondo Mainty",
+"grp": "Fish",
 "cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Colombia",
-"reg": "South America",
-"last": 1984,
-"prec": "year"
-},
-{
-"sp": "Ptychoglossus grandisquamatus",
-"v": "Common Largescale Lizard",
-"grp": "Reptile",
-"cls": "rediscovered",
-"rl": "not in IUCN index",
-"cty": "Colombia",
-"reg": "South America",
-"last": 1981,
+"rl": "CR(PE)",
+"cty": "Madagascar",
+"reg": "Africa",
+"last": 1997,
 "prec": "year"
 },
 {
@@ -18222,6 +18565,17 @@
 "prec": "year"
 },
 {
+"sp": "Rhaebo caeruleostictus",
+"v": "Blue-spotted Toad",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Ecuador",
+"reg": "South America",
+"last": 1997,
+"prec": "year"
+},
+{
 "sp": "Rhaebo colomai (formerly Andinophryne colomai)",
 "v": "",
 "grp": "Amphibian",
@@ -18230,50 +18584,6 @@
 "cty": "Ecuador",
 "reg": "South America",
 "last": 1984,
-"prec": "year"
-},
-{
-"sp": "Rhamdella ignobilis",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1907,
-"prec": "year"
-},
-{
-"sp": "Rhamdella papariae",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1941,
-"prec": "year"
-},
-{
-"sp": "Rhamdella robinsoni",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1941,
-"prec": "year"
-},
-{
-"sp": "Rhamdella wolfi",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1941,
 "prec": "year"
 },
 {
@@ -18340,6 +18650,17 @@
 "cty": "Malaysia",
 "reg": "Asia",
 "last": 1996,
+"prec": "year"
+},
+{
+"sp": "Rheosaurus sulcarostrum (formerly Echinosaura sulcarostrum)",
+"v": "",
+"grp": "Reptile",
+"cls": "lost",
+"rl": "EN",
+"cty": "Guyana",
+"reg": "South America",
+"last": 1992,
 "prec": "year"
 },
 {
@@ -18433,6 +18754,17 @@
 "prec": "year"
 },
 {
+"sp": "Rhipidoglossum orientalis (formerly Diaphananthe orientalis)",
+"v": "",
+"grp": "Plant - Orchids",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Tanzania",
+"reg": "Africa",
+"last": 1933,
+"prec": "year"
+},
+{
 "sp": "Rhizopsammia wellingtoni",
 "v": "Wellington's Solitary Coral",
 "grp": "Coral",
@@ -18512,17 +18844,6 @@
 "prec": "year"
 },
 {
-"sp": "Riama afrania",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Colombia",
-"reg": "South America",
-"last": 1989,
-"prec": "year"
-},
-{
 "sp": "Riama inanis",
 "v": "",
 "grp": "Reptile",
@@ -18531,28 +18852,6 @@
 "cty": "Venezuela",
 "reg": "South America",
 "last": 1983,
-"prec": "year"
-},
-{
-"sp": "Riama luctuosa",
-"v": "",
-"grp": "Reptile",
-"cls": "unclassified",
-"rl": "not in IUCN index",
-"cty": "Venezuela",
-"reg": "South America",
-"last": 2005,
-"prec": "decade"
-},
-{
-"sp": "Riama stellae",
-"v": "",
-"grp": "Reptile",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "Colombia",
-"reg": "South America",
-"last": 1986,
 "prec": "year"
 },
 {
@@ -18996,6 +19295,17 @@
 "prec": "year"
 },
 {
+"sp": "Sclerophrys danielae (formerly Amietophrynus danielae)",
+"v": "Ivory Coast Toad",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "DD",
+"cty": "Côte d'Ivoire",
+"reg": "Africa",
+"last": 1977,
+"prec": "year"
+},
+{
 "sp": "Scolecoseps acontias",
 "v": "Sandy Limbless Skink",
 "grp": "Reptile",
@@ -19084,7 +19394,7 @@
 "prec": "year"
 },
 {
-"sp": "Sicyos pentagonus",
+"sp": "Sicyocaulis pentagonus (formerly Sicyos pentagonus)",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
 "cls": "long-lost",
@@ -19238,6 +19548,17 @@
 "prec": "year"
 },
 {
+"sp": "Solanum nava (formerly Normania nava)",
+"v": "",
+"grp": "Plant - Flowering plant (misc)",
+"cls": "lost",
+"rl": "not in IUCN index",
+"cty": "Spain",
+"reg": "Europe",
+"last": 1984,
+"prec": "year"
+},
+{
 "sp": "Solanum semicoalitum",
 "v": "",
 "grp": "Plant - Flowering plant (misc)",
@@ -19345,6 +19666,17 @@
 "cty": "Ecuador",
 "reg": "South America",
 "last": 1978,
+"prec": "year"
+},
+{
+"sp": "Specklinia mazei (formerly Pleurothallis mazei)",
+"v": "",
+"grp": "Plant - Orchids",
+"cls": "lost",
+"rl": "not in IUCN index",
+"cty": "Guadeloupe (French Caribbean)",
+"reg": "Islands",
+"last": 1990,
 "prec": "year"
 },
 {
@@ -19678,11 +20010,11 @@
 "prec": "year"
 },
 {
-"sp": "Sphenomorphus modigliani",
+"sp": "Sphenomorphus modiglianii (also spelled Sphenomorphus modigliani)",
 "v": "",
 "grp": "Reptile",
 "cls": "long-lost",
-"rl": "not in IUCN index",
+"rl": "EN",
 "cty": "Indonesia",
 "reg": "Islands",
 "last": 1894,
@@ -19865,11 +20197,11 @@
 "prec": "year"
 },
 {
-"sp": "Sphenomorphus vanhuerni",
+"sp": "Sphenomorphus vanheurni (also spelled Sphenomorphus vanhuerni)",
 "v": "",
 "grp": "Reptile",
 "cls": "long-lost",
-"rl": "not in IUCN index",
+"rl": "LC",
 "cty": "Indomalay",
 "reg": "Asia",
 "last": 1931,
@@ -19896,17 +20228,6 @@
 "reg": "Asia",
 "last": 1932,
 "prec": "year"
-},
-{
-"sp": "Spiralix corsica",
-"v": "",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "France",
-"reg": "Europe",
-"last": 1995,
-"prec": "decade"
 },
 {
 "sp": "Spirobolellus simplex",
@@ -19997,6 +20318,17 @@
 "prec": "year"
 },
 {
+"sp": "Spondylurus monitae",
+"v": "Monito Skink",
+"grp": "Reptile",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "United States (Puerto Rico)",
+"reg": "Islands",
+"last": 1993,
+"prec": "year"
+},
+{
 "sp": "Spondylurus spilonotus",
 "v": "Greater Virgin Islands Skink",
 "grp": "Reptile",
@@ -20028,17 +20360,6 @@
 "reg": "South America",
 "last": 1941,
 "prec": "year"
-},
-{
-"sp": "Stagnicola kennicotti",
-"v": "Western Arctic Stagnicola",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "unclassified",
-"rl": "not in IUCN index",
-"cty": "Canada",
-"reg": "North America",
-"last": "",
-"prec": ""
 },
 {
 "sp": "Stagnicola utahensis",
@@ -20239,6 +20560,17 @@
 "prec": "year"
 },
 {
+"sp": "Stiphodon martenstyni",
+"v": "Martenstyni's Goby",
+"grp": "Fish",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Sri Lanka",
+"reg": "Islands",
+"last": 1998,
+"prec": "year"
+},
+{
 "sp": "Stoliczkia khasiensis",
 "v": "",
 "grp": "Reptile",
@@ -20373,6 +20705,17 @@
 "rdfirm": 0
 },
 {
+"sp": "Synodontis guttatus",
+"v": "",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Nigeria",
+"reg": "Africa",
+"last": 1865,
+"prec": "year"
+},
+{
 "sp": "Systomus compressiformis",
 "v": "",
 "grp": "Fish",
@@ -20480,6 +20823,17 @@
 "cty": "Saint Helena",
 "reg": "Islands",
 "last": 1967,
+"prec": "year"
+},
+{
+"sp": "Taudactylus rheophilus",
+"v": "Northern Tinker Frog",
+"grp": "Amphibian",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Australia",
+"reg": "Australia",
+"last": 2000,
 "prec": "year"
 },
 {
@@ -20791,17 +21145,6 @@
 "prec": "year"
 },
 {
-"sp": "Thaumatorhynchus brooksi",
-"v": "",
-"grp": "Reptile",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Indonesia",
-"reg": "Asia",
-"last": 1924,
-"prec": "year"
-},
-{
 "sp": "Theganopteryx grisea",
 "v": "",
 "grp": "Insect",
@@ -20832,6 +21175,17 @@
 "cty": "Seychelles",
 "reg": "Islands",
 "last": 1908,
+"prec": "year"
+},
+{
+"sp": "Thesium psilotocladum (formerly Kunkeliella psilotoclada)",
+"v": "",
+"grp": "Plant - Trees & Shrubs",
+"cls": "lost",
+"rl": "CR(PE)",
+"cty": "Spain",
+"reg": "Europe",
+"last": 1983,
 "prec": "year"
 },
 {
@@ -20921,6 +21275,17 @@
 "reg": "South America",
 "last": "",
 "prec": ""
+},
+{
+"sp": "Torpedo suessii",
+"v": "Red Sea Torpedo",
+"grp": "Fish",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "Yemen",
+"reg": "Middle East",
+"last": 1897,
+"prec": "year"
 },
 {
 "sp": "Tournefortia obtusiflora",
@@ -21143,17 +21508,6 @@
 "prec": "year"
 },
 {
-"sp": "Trichomycterus hasemani",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1914,
-"prec": "year"
-},
-{
 "sp": "Trichomycterus iheringi",
 "v": "",
 "grp": "Fish",
@@ -21184,17 +21538,6 @@
 "cty": "Brazil",
 "reg": "South America",
 "last": 1906,
-"prec": "year"
-},
-{
-"sp": "Trichomycterus johnsoni",
-"v": "",
-"grp": "Fish",
-"cls": "long-lost",
-"rl": "not in IUCN index",
-"cty": "Brazil",
-"reg": "South America",
-"last": 1932,
 "prec": "year"
 },
 {
@@ -21363,6 +21706,17 @@
 "prec": ""
 },
 {
+"sp": "Tropidophis bucculentus",
+"v": "Navassa Dwarf Boa",
+"grp": "Reptile",
+"cls": "long-lost",
+"rl": "CR(PE)",
+"cty": "United States (Puerto Rico)",
+"reg": "Islands",
+"last": 1850,
+"prec": "century"
+},
+{
 "sp": "Tropidophorus hangnam",
 "v": "",
 "grp": "Reptile",
@@ -21437,17 +21791,6 @@
 "cty": "Saudi Arabia",
 "reg": "Middle East",
 "last": 2001,
-"prec": "year"
-},
-{
-"sp": "Tryonia brunei",
-"v": "Brune's Spring Snail",
-"grp": "Gastropod molluscs (snails and slugs)",
-"cls": "lost",
-"rl": "not in IUCN index",
-"cty": "United States",
-"reg": "North America",
-"last": 1993,
 "prec": "year"
 },
 {
@@ -21552,11 +21895,11 @@
 "prec": ""
 },
 {
-"sp": "Tytthloscincus biparietalis",
+"sp": "Tytthoscincus biparietalis (also spelled Tytthloscincus biparietalis)",
 "v": "",
 "grp": "Reptile",
 "cls": "unclassified",
-"rl": "not in IUCN index",
+"rl": "NT",
 "cty": "Indomalay",
 "reg": "Asia",
 "last": "",
@@ -21792,17 +22135,6 @@
 "reg": "Asia",
 "last": 1980,
 "prec": "year"
-},
-{
-"sp": "Vatica xishuangbannaensis",
-"v": "",
-"grp": "Plant - Trees & Shrubs",
-"cls": "unclassified",
-"rl": "CR(PE)",
-"cty": "China",
-"reg": "Asia",
-"last": "",
-"prec": ""
 },
 {
 "sp": "Vermivora bachmanii",
@@ -22074,7 +22406,7 @@
 }
 ],
 "meta": {
-"n": 2002,
+"n": 2032,
 "built": "",
 "note": "Country resolution only. Localities are deliberately not published for lost species."
 }
